@@ -1,4 +1,5 @@
 		</main>
+<?php switch_to_blog(2);?>	
 		<footer class="site-footer bg-inverse">
 			<div class="container">
 				<div class="row">
@@ -17,9 +18,7 @@
 				</div>
 			</div>
 		</footer>
-		
-<!-- DAVID JANOSIK REPLICATING UCF FOOTER -->
-<?php switch_to_blog(2);?>	 		
+		 		
 		<footer class="ucf-footer">
 			<a class="ucf-footer-title" href="/"><?php the_field('footer_college_name', 'option'); ?></a>
 				<div class="ucf-social-icons">
