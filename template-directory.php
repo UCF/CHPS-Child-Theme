@@ -15,7 +15,7 @@ Template Name: Directory
 				</header>
 			</div>
 			<div class="col-lg-6">	
-				<?php get_template_part( 'person-search'); ?>
+				<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 			</div>
 		</div>
 		

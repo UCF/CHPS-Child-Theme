@@ -11,7 +11,7 @@
 			</header>
 		</div>
 		<div class="col-lg-6">	
-			<?php get_template_part( 'person-search'); ?>
+			<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">
 			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php echo "$s"; ?></strong></span>

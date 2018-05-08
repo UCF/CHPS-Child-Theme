@@ -13,7 +13,7 @@ $tax = $wp_query->get_queried_object();
 			</header>
 		</div>
 		<div class="col-lg-6">	
-			<?php get_template_part( 'person-search'); ?>
+			<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">	
 			<i class="fa fa-user-circle-o icongrey"></i><span class="searchresults">Currently Viewing: <strong><?php echo ' '. $tax->name . ''; ?></strong></span>
