@@ -80,7 +80,7 @@ function footer_col4_sidebar() {
 }
 add_action( 'widgets_init', 'footer_col4_sidebar' );
 
-    // ADDING DIRECTORY SIDEBAR
+// ADDING DIRECTORY SIDEBAR
 function directory_sidebar() {
     register_sidebar(
         array (
@@ -95,6 +95,23 @@ function directory_sidebar() {
     );
 }
 add_action( 'widgets_init', 'directory_sidebar' );
+
+
+// ADDING FAQ SIDEBAR
+function faq_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'FAQs' ),
+            'id' => 'faq-sidebar',
+            'description' => __( 'This is sidebar for the FAQs' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'faq_sidebar' );
 
 // Adding Custom Theme Settings To Better Control Global Aspects
 // ADDED BY DAVID JANOSIK
