@@ -4,7 +4,12 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-lg-3">
-						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-1' ); ?></section>
+						<section class="primary-footer-section-center">
+							<h2 class="h6 heading-underline letter-spacing-3"><?php the_field( 'footer_column_title1', 'option' ); ?></h2>
+							<div class="menu-footer-about-container">
+								<?php the_field( 'footer_column1_links', 'option' ); ?>
+							</div>
+						</section>
 					</div>
 					<div class="col-lg-3">
 						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-2' ); ?></section>
