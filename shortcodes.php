@@ -328,7 +328,7 @@ function searchmevar( $atts ) {
     ), $atts );
 ?> 	
 <div>
-	<form id="searchform" action="/" method="get">
+	<form id="searchform" action="<?php echo get_site_url(); ?>/" method="get">
 		<div class="row">
 			<?php if ($d['size'] == 'large') { ?> 
 				<div class="col-md-9 p-1">
