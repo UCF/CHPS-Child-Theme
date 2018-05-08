@@ -22,25 +22,26 @@
 	 		
 		<footer class="ucf-footer">
 			<a class="ucf-footer-title" href="/"><?php the_field('footer_college_name', 'option'); ?></a>
-			
-			<div class="ucf-social-icons">
-				<?php if( get_field('sm_facebook_url', 'option') ): ?><a href="<?php the_field( 'sm_facebook_url', 'option' ); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-				  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
-				</span></a><?php endif; ?><?php if( get_field('sm_twitter_url', 'option') ): ?><a href="<?php the_field( 'sm_twitter_url', 'option' ); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-				  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
-				</span></a><?php endif; ?><?php if( get_field('sm_instagram_url', 'option') ): ?><a href="<?php the_field( 'sm_instagram_url', 'option' ); ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-				  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
-				</span></a><?php endif; ?><?php if( get_field('sm_youtube_url', 'option') ): ?><a href="<?php the_field( 'sm_youtube_url', 'option' ); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-				  <i class="fa fa-youtube fa-stack-1x footer-social-icon"></i>
-				</span></a><?php endif; ?><?php if( get_field('sm_linkedin_url', 'option') ): ?><a href="<?php the_field( 'sm_linkedin_url', 'option' ); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
-				  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-				  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
-				</span></a><?php endif; ?>
-			</div>
+			<?php switch_to_blog(2);?>
+				<div class="ucf-social-icons">
+					<?php if( get_field('sm_facebook_url', 'option') ): ?><a href="<?php the_field( 'sm_facebook_url', 'option' ); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?><?php if( get_field('sm_twitter_url', 'option') ): ?><a href="<?php the_field( 'sm_twitter_url', 'option' ); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?><?php if( get_field('sm_instagram_url', 'option') ): ?><a href="<?php the_field( 'sm_instagram_url', 'option' ); ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?><?php if( get_field('sm_youtube_url', 'option') ): ?><a href="<?php the_field( 'sm_youtube_url', 'option' ); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-youtube fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?><?php if( get_field('sm_linkedin_url', 'option') ): ?><a href="<?php the_field( 'sm_linkedin_url', 'option' ); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?>
+				</div>
+			<?php restore_current_blog(); ?>
 
 			<div class="ucf-footer-nav">
 				<?php the_field('footer_links', 'option'); ?>
