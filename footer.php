@@ -49,7 +49,7 @@
 				&copy; <a href="https://www.ucf.edu/">University of Central Florida</a>
 			</p>
 		</footer>
-<?php restore_current_blog(); ?>
+
 
 <style>
 
@@ -122,7 +122,7 @@
 </style>				
 <!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
 		
-		
+<?php restore_current_blog(); ?>		
 		<?php wp_footer(); ?>
 	</body>
 </html>
