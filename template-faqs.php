@@ -9,12 +9,12 @@ Template Name: FAQs
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row mb-4">
-			<div class="col-lg-6">	
+			<div class="col-lg-7">	
 				<header class="archive-header">
 					<h1 class="archive-title heading-underline">Frequently Asked Questions</h1>
 				</header>
 			</div>
-			<div class="col-lg-6">	
+			<div class="col-lg-5">	
 				<?php echo do_shortcode( ' [searchme posttype="faq" size="large" placeholder="Search"] ' ); ?>
 			</div>
 		</div>
