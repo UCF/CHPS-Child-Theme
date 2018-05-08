@@ -2,7 +2,7 @@
 		<footer class="site-footer bg-inverse">
 			<div class="container">
 			<?php switch_to_blog(2);?>
-				<div class="row">
+				<div class="row david">
 					<div class="col-lg-3">
 						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-1' ); ?></section>
 					</div>
