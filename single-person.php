@@ -32,7 +32,9 @@ $ids = get_the_ID();
 	<?php if ( has_post_thumbnail()) { ?>
 		<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo get_person_name( $post ); ?> at UCF"><img width="100%" alt="<?php $post->post_title; ?>" src="<?php echo $getimageURL ?>" /></a>
 		<?php } else { ?> 
-		<img width="100%" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" src="<?php the_field('default_profile_image', 'option'); ?>" />
+		<?php switch_to_blog(2);?>
+			<img width="100%" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" src="<?php the_field('default_profile_image', 'option'); ?>" />
+		<?php restore_current_blog(); ?>	
 	<?php } ?>
 </div>
 						

@@ -6,7 +6,9 @@
 		   <?php if ( has_post_thumbnail()) { ?>
 				<img src="<?php echo $getimageURL; ?>" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
 				<?php } else { ?> 
-				<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+					<?php switch_to_blog(2);?>
+						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+					<?php restore_current_blog(); ?>
 		<?php } ?>
 		   </a> 
 	</div>
