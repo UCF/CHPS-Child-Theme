@@ -12,13 +12,28 @@
 						</section>
 					</div>
 					<div class="col-lg-3">
-						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-2' ); ?></section>
+						<section class="primary-footer-section-center">
+							<h2 class="h6 heading-underline letter-spacing-3"><?php the_field( 'footer_column_title2', 'option' ); ?></h2>
+							<div class="menu-footer-about-container">
+								<?php the_field( 'footer_column2_links', 'option' ); ?>
+							</div>
+						</section>
 					</div>
 					<div class="col-lg-3">
-						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-3' ); ?></section>
+						<section class="primary-footer-section-center">
+							<h2 class="h6 heading-underline letter-spacing-3"><?php the_field( 'footer_column_title3', 'option' ); ?></h2>
+							<div class="menu-footer-about-container">
+								<?php the_field( 'footer_column3_links', 'option' ); ?>
+							</div>
+						</section>
 					</div>
 					<div class="col-lg-3">
-						<section class="primary-footer-section-center"><?php dynamic_sidebar( 'footer-col-4' ); ?></section>
+						<section class="primary-footer-section-center">
+							<h2 class="h6 heading-underline letter-spacing-3"><?php the_field( 'footer_column_title4', 'option' ); ?></h2>
+							<div class="menu-footer-about-container">
+								<?php the_field( 'footer_column4_links', 'option' ); ?>
+							</div>
+						</section>
 					</div>
 				</div>
 			</div>
