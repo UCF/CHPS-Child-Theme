@@ -11,11 +11,11 @@ Template Name: FAQs
 		<div class="row mb-4">
 			<div class="col-lg-6">	
 				<header class="archive-header">
-					<h1 class="archive-title heading-underline">Faculty and Staff</h1>
+					<h1 class="archive-title heading-underline">Frequently Asked Questions</h1>
 				</header>
 			</div>
 			<div class="col-lg-6">	
-				<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
+				<?php echo do_shortcode( ' [searchme posttype="faq" size="large" placeholder="Search"] ' ); ?>
 			</div>
 		</div>
 		
