@@ -83,8 +83,8 @@ function faq_sidebar() {
 }
 add_action( 'widgets_init', 'faq_sidebar' );
 
+
 // Adding Custom Theme Settings To Better Control Global Aspects
-// ADDED BY DAVID JANOSIK
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
