@@ -19,10 +19,9 @@
 		</footer>
 		
 <!-- DAVID JANOSIK REPLICATING UCF FOOTER -->
-	 		
+<?php switch_to_blog(2);?>	 		
 		<footer class="ucf-footer">
 			<a class="ucf-footer-title" href="/"><?php the_field('footer_college_name', 'option'); ?></a>
-			<?php switch_to_blog(2);?>
 				<div class="ucf-social-icons">
 					<?php if( get_field('sm_facebook_url', 'option') ): ?><a href="<?php the_field( 'sm_facebook_url', 'option' ); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
 					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
@@ -41,8 +40,6 @@
 					  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
 					</span></a><?php endif; ?>
 				</div>
-			<?php restore_current_blog(); ?>
-
 			<div class="ucf-footer-nav">
 				<?php the_field('footer_links', 'option'); ?>
 			</div>
@@ -52,6 +49,7 @@
 				&copy; <a href="https://www.ucf.edu/">University of Central Florida</a>
 			</p>
 		</footer>
+<?php restore_current_blog(); ?>
 
 <style>
 
