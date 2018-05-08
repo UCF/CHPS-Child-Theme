@@ -49,36 +49,6 @@ function my_customblog_sidebar() {
 }
 add_action( 'widgets_init', 'my_customblog_sidebar' );
 
-    // ADDING 2 ADDITIONAL FOOTER WIDGETS
-function footer_col3_sidebar() {
-    register_sidebar(
-        array (
-            'name' => __( 'Footer - Column 3' ),
-            'id' => 'footer-col-3',
-            'description' => __( 'This is 3rd column in the footer' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title'  => '<h2 class="h6 heading-underline letter-spacing-3">',
-			'after_title'   => '</h2>',
-        )
-    );
-}
-add_action( 'widgets_init', 'footer_col3_sidebar' );
-
-function footer_col4_sidebar() {
-    register_sidebar(
-        array (
-            'name' => __( 'Footer - Column 4' ),
-            'id' => 'footer-col-4',
-            'description' => __( 'This is 4th column in the footer' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s">',
-			'after_widget' => '</div>',
-			'before_title'  => '<h2 class="h6 heading-underline letter-spacing-3">',
-			'after_title'   => '</h2>',
-        )
-    );
-}
-add_action( 'widgets_init', 'footer_col4_sidebar' );
 
 // ADDING DIRECTORY SIDEBAR
 function directory_sidebar() {
