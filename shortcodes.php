@@ -107,24 +107,12 @@ $category_id = get_cat_ID($a['category']);
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 						<div class="visnews">
 							<div class="media-background-container visnews-photo mx-auto">
-								<?php if ( has_post_thumbnail()) { ?>
-									<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
-									<?php } else { ?>
-									<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
-								<?php } ?>
-							</div>
-							<div class="p-3">
-								<?php the_title(); ?>
-								<p class="newsdate"><?php the_time('F j, Y'); ?></p>
-							</div>
-						</div>
-					</a>
-				</div>
 			<?php } else { ?> 
 				<div class="col-lg-3 col-sm-6 col-xs-12">
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
 						<div class="visnews">
 							<div class="media-background-container visnews-photo mx-auto">
+			<?php } ?>
 								<?php if ( has_post_thumbnail()) { ?>
 									<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 									<?php } else { ?>
@@ -138,7 +126,6 @@ $category_id = get_cat_ID($a['category']);
 						</div>
 					</a>
 				</div>
-			<?php } ?>
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
     </div>
