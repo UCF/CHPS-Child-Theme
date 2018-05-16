@@ -22,6 +22,12 @@ function my_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
+function themeslug_enqueue_script() {
+    wp_enqueue_script( 'dropnav', get_template_directory_uri() . '/static/js/script.min.js', false );
+    // here you can enqueue more js / css files 
+}
+
+add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
 
 // CUSTOM SIDE BAR ADDONS
