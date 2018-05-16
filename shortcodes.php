@@ -1,4 +1,4 @@
-vi<?php
+<?php
 // [exnews number=""]
 function externalnewsvar( $atts ) {
     $a = shortcode_atts( array(
@@ -79,7 +79,6 @@ function newsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '0',
-		'column' => '4',
     ), $atts );
 
 $category_id = get_cat_ID($a['category']);	
