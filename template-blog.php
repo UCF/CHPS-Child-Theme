@@ -26,7 +26,7 @@ Template Name: Blog
 			<div class="col-md-9">
 				
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array( 'post_type' => 'post', 'posts_per_page' => 2, 'paged' => $paged );
+				$args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged );
 				$wp_query = new WP_Query($args);
 				while ( have_posts() ) : the_post(); 
 					$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
