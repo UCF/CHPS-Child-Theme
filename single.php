@@ -7,7 +7,7 @@ $categories = get_the_category();
     <div class="row">
 		<div class="col-md-1"></div>
         <div class="col-md-10">
-        	<div class="container">
+        	<div>
 				<?php 
 					if ( ! empty( $categories ) ) {
 						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -15,7 +15,7 @@ $categories = get_the_category();
 				?>
 				<h1 class="posttitle"><?php the_title(); ?></h1>
 			</div>
-        	<div class="container">
+        	<div>
 				<?php the_excerpt(); ?>
 				<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
 			</div>
