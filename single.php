@@ -3,29 +3,22 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
 ?>
-
-<div class="container mt-3 mt-sm-4 mt-md-5 mb-3">
-<div class="row">
-        <div class="col-md-9">
-	<?php 
-		if ( ! empty( $categories ) ) {
-			echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-		}
-	?>
-	<h1 class="posttitle"><?php the_title(); ?></h1>
-
-
-<div class="container">
-	<?php the_excerpt(); ?>
-	<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
-	</div>
-	<div class="col-md-3"></div>
-	</div></div>
-</div>
-
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
-        <div class="col-md-9">
+		<div class="col-md-2"></div>
+        <div class="col-md-8">
+        	<div class="container">
+				<?php 
+					if ( ! empty( $categories ) ) {
+						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+					}
+				?>
+				<h1 class="posttitle"><?php the_title(); ?></h1>
+			</div>
+        	<div class="container">
+				<?php the_excerpt(); ?>
+				<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
+			</div>
         	<article class="publish post-list-item">
 				 <?php while ( have_posts() ) : the_post(); ?>
                    <?php if ( has_post_thumbnail()) { ?>
@@ -68,11 +61,7 @@ $categories = get_the_category();
 				</div>
 			</div>
         </div>
-        <div class="col-md-3">
-        	<?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
-    		<?php dynamic_sidebar( 'custom-side-bar' ); ?>
-			<?php endif; ?>
-        </div>
+        <div class="col-md-2"></div>
     </div>
 </div>
 
