@@ -5,6 +5,8 @@ $categories = get_the_category();
 ?>
 
 <div class="container mt-3 mt-sm-4 mt-md-5 mb-3">
+<div class="row">
+        <div class="col-md-9">
 	<?php 
 		if ( ! empty( $categories ) ) {
 			echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -17,8 +19,8 @@ $categories = get_the_category();
 	<?php the_excerpt(); ?>
 	<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
 	
-	 
-	
+	<div class="col-md-3"></div>
+	</div></div>
 </div>
 
 <div class="container mb-5 mt-3 mt-lg-4">
