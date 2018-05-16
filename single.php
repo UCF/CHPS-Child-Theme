@@ -16,7 +16,11 @@ $categories = get_the_category();
 				<h1 class="posttitle"><?php the_title(); ?></h1>
 			</div>
         	<div>
-				<?php the_excerpt(); ?>
+				<?php if ( ! has_excerpt() ) {
+      				echo '';
+				} else { 
+      				the_excerpt();
+				} ?>
 				<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
 			</div>
         	<article class="publish post-list-item">
