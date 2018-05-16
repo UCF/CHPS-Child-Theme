@@ -5,8 +5,8 @@ $categories = get_the_category();
 ?>
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
-		<div class="col-md-2"></div>
-        <div class="col-md-8">
+		<div class="col-md-1"></div>
+        <div class="col-md-10">
         	<div class="container">
 				<?php 
 					if ( ! empty( $categories ) ) {
@@ -61,7 +61,7 @@ $categories = get_the_category();
 				</div>
 			</div>
         </div>
-        <div class="col-md-2"></div>
+        <div class="col-md-1"></div>
     </div>
 </div>
 
