@@ -7,7 +7,6 @@ function my_add_stylesheet() {
     wp_enqueue_style( 'my-style', get_stylesheet_directory_uri() . '/css/custom.css?'.rand(), false, 'all' );
 }
 
-
 function my_theme_enqueue_styles() {
 
     $parent_style = 'Colleges-Theme-style'; // This is 'Colleges-Theme-style' for the Colleges-Theme.
@@ -22,11 +21,10 @@ function my_theme_enqueue_styles() {
 add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 
-function themeslug_enqueue_script() {
+function themeslug_enqueue_script() { // This is for any 'Colleges-Theme' javascript files.
     wp_enqueue_script( 'dropnav', get_template_directory_uri() . '/static/js/script.min.js', false );
     // here you can enqueue more js / css files 
 }
-
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
 
