@@ -270,7 +270,7 @@ $category_id = get_cat_ID($c['category']);
 			$categories = get_the_category();
 		?>	
 			<!-- START THE REPEAT SECTION -->   
-			<div class="row mb-4 chpsnews">
+			<div class="row mb-5 chpsnews">
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
 					
 					   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
