@@ -12,6 +12,20 @@ Yellow Hover Color:           #cca12e;
 .icongrey {
 	color:#999 ;
 }
+.iconyellow {
+	color:#fecb2f ;
+}
+.largeGreyLink {
+    text-align:right;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+.largeGreyLink a {
+    color: #a0a0a0;
+    font-size:16px;
+    font-weight:bold;
+    text-align:right;
+}
 .heading-underline {
 	text-transform: none !important;
 }		
