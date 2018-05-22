@@ -1,4 +1,5 @@
 <?php get_header(); the_post(); 
+$project_depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
@@ -80,22 +81,17 @@ $ids = get_the_ID();
 								<a href="<?php the_field('cv'); ?>" class="btn btn-primary btn-block">Download CV</a>
 							</div>
 						</div>
-					<?php endif; ?>
-
-					<?php // echo get_person_dept_markup( $post ); ?>
-					
+					<?php endif; ?>					
 
 <!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->
 <?php if(get_field('department_tax')){ ?>
 	<div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			Department
+			Department<?php if ( count( $project_depts ) > 1 ) { echo 's'; } ?>
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<ul class="list-unstyled mb-0">
 				<?php
-				// Get a list of terms for this post's custom taxonomy.
-				$project_depts = get_the_terms($post->ID, 'departments');
 				// Renumber array.
 				$project_depts = array_values($project_depts);
 				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {  ?>
