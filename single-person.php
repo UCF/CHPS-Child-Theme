@@ -99,7 +99,7 @@ $ids = get_the_ID();
 				// Renumber array.
 				$project_depts = array_values($project_depts);
 				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {  ?>
-					<li><?php echo $dept ; ?></li>
+					<li><?php echo $project_depts[$dept_count]->name; ; ?></li>
 				<?php } ?>
 			</ul>
 		</div>
