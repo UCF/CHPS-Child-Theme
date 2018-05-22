@@ -86,7 +86,7 @@ $ids = get_the_ID();
 					
 
 <!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->
-<?php if(get_field('departments')){ ?>
+<?php if(get_field('department_tax')){ ?>
 	<div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Department
