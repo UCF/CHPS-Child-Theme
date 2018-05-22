@@ -94,9 +94,14 @@ $ids = get_the_ID();
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<ul class="list-unstyled mb-0">
-				<?php foreach ( $depts as $dept ): ?>
-				<li><?php echo $dept ; ?></li>
-				<?php endforeach; ?>
+				<?php
+				// Get a list of terms for this post's custom taxonomy.
+				$project_depts = get_the_terms($post->ID, 'departments');
+				// Renumber array.
+				$project_depts = array_values($project_depts);
+				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {  ?>
+					<li><?php echo $dept ; ?></li>
+				<?php } ?>
 			</ul>
 		</div>
 	</div>
