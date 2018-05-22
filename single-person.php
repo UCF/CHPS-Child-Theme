@@ -1,4 +1,5 @@
 <?php get_header(); the_post(); 
+$depts = get_field('departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
@@ -82,10 +83,26 @@ $ids = get_the_ID();
 						</div>
 					<?php endif; ?>
 
-					<?php echo get_person_dept_markup( $post ); ?>
+					<?php // echo get_person_dept_markup( $post ); ?>
 					
 
-<!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->			
+<!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->
+<?php if(get_field('department_tax')){ ?>
+	<div class="row">
+		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
+			Department<?php if ( count( $depts ) > 1 ) { echo 's'; } ?>
+		</div>
+		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
+			<ul class="list-unstyled mb-0">
+				<?php foreach ( $depts as $dept ): ?>
+				<li><?php echo $dept ; ?></li>
+				<?php endforeach; ?>
+			</ul>
+		</div>
+	</div>
+	<hr class="my-2">
+<?php }	?>	
+							
 <?php if(get_field('building')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
