@@ -1,5 +1,4 @@
 <?php get_header(); the_post(); 
-$depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
@@ -87,10 +86,10 @@ $ids = get_the_ID();
 					
 
 <!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->
-<?php if(get_field('department_tax')){ ?>
+<?php if(get_field('departments')){ ?>
 	<div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			Department<?php if ( count( $depts ) > 1 ) { echo 's'; } ?>
+			Department
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<ul class="list-unstyled mb-0">
