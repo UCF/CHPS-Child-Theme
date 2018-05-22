@@ -1,5 +1,5 @@
 <?php get_header(); the_post(); 
-$depts = get_field('departments');
+$depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
