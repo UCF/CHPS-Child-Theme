@@ -300,7 +300,7 @@ $row_count = count($rows);
 			THIS IS EMPTY YAS	<?php echo $affiliation_name ?>				
 <?php } ?>	
 						
-NEXT TRY: 						
+						
 						
 <?php
 if( have_rows('affiliations') )
@@ -311,10 +311,17 @@ if( have_rows('affiliations') )
 	foreach($field['value'] as $value)
 	{
 	if(!empty($value['aff_name']))
-	{
-	echo '<h2>NOT EMPTY</h2>';
+		{
+		$not_empty = 5;
+		break;
+		}
 	}
- 
+
+	if($not_empty == 5)
+	{
+	echo '<h2>' . $field['label'] . '</h2>';
+	}
+
 	echo '<ul>';
 	while ( have_rows('affiliations') )
 	{		 					
@@ -328,7 +335,7 @@ if( have_rows('affiliations') )
 	}
 	echo '</ul>';
 }
-?>					
+?>				
 						
 						
 						
