@@ -290,10 +290,10 @@ $i=1;
 echo "Slide: ". $i." of ".$row_count." Rows";
 $i++;
 ?>
-<?php if ($row_count=1||(!empty($affiliation_name))): ?>
+<?php if ($row_count='7'): ?>
 			SOMETHING IS HERE								
 <?php endif; ?>	
-<?php if ($row_count=1||(empty($affiliation_name))): ?>
+<?php if ($row_count=7): ?>
 			THIS IS EMPTY							
 <?php endif; ?>																		
 							</div>
