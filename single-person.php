@@ -283,7 +283,7 @@ $posts = get_posts(array(
 <?php
 $rows = get_field('affiliations');
 $row_count = count($rows);
-$affiliation_name = the_sub_field('aff_name');
+$affiliation_name = get_sub_field('aff_name');
 ?>
 
 <?php if ($row_count==1 && $affiliation_name!=""): ?>
