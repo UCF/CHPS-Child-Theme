@@ -290,6 +290,9 @@ $i=1;
 echo "Slide: ". $i." of ".$row_count." Rows";
 $i++;
 ?>
+<?php if (!empty($i)): ?>
+			SCORE								
+<?php endif; ?>												
 							</div>
 						</div>
 					</div></div>
