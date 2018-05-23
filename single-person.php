@@ -303,6 +303,7 @@ $row_count = count($rows);
 						
 						
 <?php
+$not_empty = 5;								
 if( have_rows('affiliations') )
 {
 	$field_key = "field_5697a1150f8e3";
@@ -312,7 +313,7 @@ if( have_rows('affiliations') )
 	{
 	if(!empty($value['aff_name']))
 		{
-		$not_empty = 5;
+		$not_empty == 6;
 		break;
 		}
 	}
