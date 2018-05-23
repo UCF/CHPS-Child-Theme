@@ -311,13 +311,6 @@ if( have_rows('affiliations') )
 	foreach($field['value'] as $value)
 	{
 	if(!empty($value['aff_name']))
-		{
-		$not_empty = true;
-		break;
-		}
-	}
-
-	if($not_empty == true)
 	{
 	echo '<h2>NOT EMPTY</h2>';
 	}
