@@ -266,8 +266,13 @@ $posts = get_posts(array(
 									 </div>
 								<?php }?>
 
-								<?php if (have_rows('affiliations') ) : 	?>
+								<?php if (have_rows('affiliations') ) : 	
+									$repeater_subfield_name = get_sub_field('aff_name');
+								?>
+									
+									<?php if( !empty($repeater_subfield_name) ): ?>
 									<h5>Affiliations</h5>
+									<?php endif; ?>
 										<ul>
 										<?php while (have_rows('affiliations') ): the_row(); ?> 
 												<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
