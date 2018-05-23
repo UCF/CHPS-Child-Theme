@@ -266,16 +266,18 @@ $posts = get_posts(array(
 									 </div>
 								<?php }?>
 
-								<?php if ( ! empty(get_sub_field('aff_name') )) { 	?>
+								
 									<?php if (have_rows('affiliations') ) { 	?>
+										<?php if ( ! empty(get_sub_field('aff_name') )) { 	?>
 										<h5>Affiliations</h5>
+										<?php }?>
 											<ul>
 											<?php while (have_rows('affiliations') ): the_row(); ?> 
 													<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
 											 <?php endwhile; ?>	
 											 </ul>
 									<?php }?>
-								<?php }?>
+								
 							</div>
 						</div>
 					</div></div>
