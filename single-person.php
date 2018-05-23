@@ -266,7 +266,7 @@ $posts = get_posts(array(
 									 </div>
 								<?php }?>
 
-								<?php if (have_rows('affiliations') ) { 	?>
+								<?php if ( ! empty(have_rows('affiliations') ) ) { 	?>
 									<h5>Affiliations</h5>
 										<ul>
 										<?php while (have_rows('affiliations') ): the_row(); ?> 
