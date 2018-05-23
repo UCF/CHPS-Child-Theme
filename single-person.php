@@ -271,15 +271,25 @@ $posts = get_posts(array(
 										<ul>
 										<?php while (have_rows('affiliations') ): the_row(); ?> 
 										
-										<?php $repeater_subfield_name = get_sub_field('aff_name');
-											if( !empty($repeater_subfield_name) ):						   
-										?>	
+										<?php $affiliation_name = get_sub_field('aff_name');
+										if( !empty($affiliation_name) ): ?>	
 												<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
 										<?php endif; ?>	
 												
 										 <?php endwhile; ?>	
 										 </ul>
 								<?php }?>
+								
+<?php
+$rows = get_field('affiliations');
+$row_count = count($rows);
+$i=1;
+?>
+
+<?php
+echo "Slide: ". $i." of ".$row_count." Rows";
+$i++;
+?>
 							</div>
 						</div>
 					</div></div>
