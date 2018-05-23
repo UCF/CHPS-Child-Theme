@@ -287,12 +287,12 @@ $affiliation_name = the_sub_field('aff_name');
 ?>
 
 <?php if ($row_count==1 && $affiliation_name!=""): ?>
-			THIS IS has content						
+			THIS IS has content	<?php echo $affiliation_name ?>							
 <?php endif; ?>
 
 
 <?php if ($row_count==1 && $affiliation_name==""){ ?>
-			THIS IS EMPTY YAYAYAYAYAY					
+			THIS IS EMPTY YAYAYAYAYAY	<?php echo $affiliation_name ?>				
 <?php } ?>	
 							</div>
 						</div>
