@@ -269,7 +269,11 @@ $posts = get_posts(array(
 									
 									
 									
-										<?php if (have_rows('affiliations') ) { 	?>
+										<?php 
+								$rows = get_field('affiliations');
+								$row_count = count($rows);
+								
+								if (have_rows('affiliations') ) { 	?>
 											<h5>Affiliations</h5>
 												<ul>
 												<?php while (have_rows('affiliations') ): the_row(); ?> 
@@ -287,12 +291,11 @@ $posts = get_posts(array(
 										
 										
 <?php
-$rows = get_field('affiliations');
-$row_count = count($rows);
+
 ?>
 
 <?php if ($row_count==1 && !empty($affiliation_name)): ?>
-			THIS IS has content:	<?php echo $affiliation_name ?>							
+			THIS IS has content 2:	<?php echo $affiliation_name ?>							
 <?php endif; ?>
 
 
