@@ -314,7 +314,7 @@ if( have_rows('affiliations') )
 	{
 	echo '<h2>NOT EMPTY</h2>';
 	}
-
+ 
 	echo '<ul>';
 	while ( have_rows('affiliations') )
 	{		 					
