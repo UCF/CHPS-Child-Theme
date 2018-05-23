@@ -269,12 +269,16 @@ $posts = get_posts(array(
 									
 									
 									
+<?php
+$rows = get_field('affiliations');
+$row_count = count($rows);
+$affiliation_name = get_sub_field('aff_name');								
+?>
 										<?php if (have_rows('affiliations') ) { 	?>
 											<h5>Affiliations</h5>
 												<ul>
 												<?php while (have_rows('affiliations') ): the_row(); ?> 
-													<?php $affiliation_name = get_sub_field('aff_name');
-													if( !empty($affiliation_name) ): ?>
+													<?php if( !empty($affiliation_name) ): ?>
 													
 														<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
 														
@@ -286,18 +290,15 @@ $posts = get_posts(array(
 										
 										
 										
-<?php
-$rows = get_field('affiliations');
-$row_count = count($rows);
-?>
+
 
 <?php if ($row_count==1 && !empty($affiliation_name)): ?>
-			THIS IS has content:	<?php echo $affiliation_name ?>							
+			THIS IS has content 2:	<?php echo $affiliation_name ?>							
 <?php endif; ?>
 
 
 <?php if ($row_count==1 && empty($affiliation_name)){ ?>
-			THIS IS EMPTY YAS	<?php echo $affiliation_name ?>				
+			THIS IS EMPTY YASSS	<?php echo $affiliation_name ?>				
 <?php } ?>	
 							</div>
 						</div>
