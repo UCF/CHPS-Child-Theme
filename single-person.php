@@ -290,10 +290,10 @@ $i=1;
 echo "Slide: ". $i." of ".$row_count." Rows";
 $i++;
 ?>
-<?php if ($row_count='6'){ ?>
+<?php if ($row_count=='6'){ ?>
 			SOMETHING IS HERE								
 <?php } ?>	
-<?php if ($row_count=7){ ?>
+<?php if ($row_count==7){ ?>
 			THIS IS EMPTY							
 <?php } ?>																		
 							</div>
