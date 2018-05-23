@@ -291,13 +291,13 @@ $rows = get_field('affiliations');
 $row_count = count($rows);
 ?>
 
-<?php if ($row_count==1 && $affiliation_name!=""): ?>
-			THIS IS has content	<?php echo $affiliation_name ?>							
+<?php if ($row_count==1 && !empty($affiliation_name)): ?>
+			THIS IS has content:	<?php echo $affiliation_name ?>							
 <?php endif; ?>
 
 
-<?php if ($row_count==1 && $affiliation_name==""){ ?>
-			THIS IS EMPTY YA	<?php echo $affiliation_name ?>				
+<?php if ($row_count==1 && empty($affiliation_name)){ ?>
+			THIS IS EMPTY YAS	<?php echo $affiliation_name ?>				
 <?php } ?>	
 							</div>
 						</div>
