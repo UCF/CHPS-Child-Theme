@@ -302,41 +302,7 @@ $row_count = count($rows);
 						
 						
 						
-<?php
-$not_empty == 5;								
-if( have_rows('affiliations') )
-{
-	$field_key = "field_5697a1150f8e3";
-	$field = get_field_object($field_key);
-
-	foreach($field['value'] as $value)
-	{
-	if(!empty($value['aff_name']))
-		{
-		$not_empty == 6;
-		break;
-		}
-	}
-
-	if($not_empty == 5)
-	{
-	echo '<h2>' . $field['label'] . '</h2>';
-	}
-
-	echo '<ul>';
-	while ( have_rows('affiliations') )
-	{		 					
-	the_row();
-	$subfield = get_sub_field('aff_name');
 				
-		if( !empty($subfield) )
-		{
-		echo '<li>' . $subfield . '</li>';
-		}
-	}
-	echo '</ul>';
-}
-?>				
 						
 						
 						
