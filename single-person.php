@@ -269,18 +269,11 @@ $posts = get_posts(array(
 									
 									
 									
-										<?php 
-								$rows = get_field('affiliations');
-								$row_count = count($rows);
-								
-								if (have_rows('affiliations') ) { 	
-								
-								$affiliation_name = get_sub_field('aff_name');	
-								?>
+										<?php if (have_rows('affiliations') ) { 	?>
 											<h5>Affiliations</h5>
 												<ul>
 												<?php while (have_rows('affiliations') ): the_row(); ?> 
-													<?php 
+													<?php $affiliation_name = get_sub_field('aff_name');
 													if( !empty($affiliation_name) ): ?>
 													
 														<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
@@ -291,9 +284,16 @@ $posts = get_posts(array(
 												 </ul>
 										<?php }?>
 										
+										
+										
+<?php
+$rows = get_field('affiliations');
+$row_count = count($rows);
+$balue = get_post_meta($post_id, 'affiliations_0_aff_name', true);
+?>
 
 <?php if ($row_count==1 && !empty($affiliation_name)): ?>
-			THIS IS has content 3:	<?php echo $affiliation_name ?>							
+			THIS IS has content:	<?php echo $affiliation_name ?>							
 <?php endif; ?>
 
 
@@ -301,9 +301,12 @@ $posts = get_posts(array(
 			THIS IS EMPTY YAS	<?php echo $affiliation_name ?>				
 <?php } ?>	
 						
-						
-						
-				
+<?php if( !empty($balue) ): ?>						
+				WE GOT CONTENT		
+<?php endif; ?>		
+<?php if( empty($balue) ): ?>						
+				NO COTENT TODAY	
+<?php endif; ?>								
 						
 						
 						
