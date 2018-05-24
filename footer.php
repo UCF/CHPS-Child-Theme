@@ -102,6 +102,7 @@
 	
 .primary-footer-section-center .heading-underline-inverse::after, .primary-footer-section-center .heading-underline::after {
     height: 1px !important;
+	border-bottom-width:1px !important;
     min-width: 30px !important;
     width: 30px !important;
 }	

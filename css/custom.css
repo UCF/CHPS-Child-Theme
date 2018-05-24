@@ -62,6 +62,30 @@ Yellow Hover Color:           #cca12e;
     font-weight: 700 !important;
 }
 
+
+
+
+/* = Homepage Title
+-------------------------------------------------------------- */
+.mainHomeTitle .evc-st-title {
+    background-color: rgba(255,204,0,.95);
+    font-family: "Archer A","Archer B","UCF Slab Serif Alt",serif !important;
+    font-weight: 400 !important;
+    font-size: 3rem !important;
+    line-height: 1;
+    margin-bottom: 0;
+    padding: 1.1rem 1.5rem;
+}
+.mainHomeSubtitle .evc-st-title {
+    background-color: rgba(0,0,0,.95);
+    font-family: "Archer A","Archer B","UCF Slab Serif Alt",serif !important;
+    font-weight: 400 !important;
+    line-height: 1.3rem !important;
+    margin-bottom: 0;
+    text-transform:none !important;
+    padding: 1.1rem 1.5rem;
+}
+
 /* = Profile Directory Search Bar
 -------------------------------------------------------------- */
 input.searchbar {
