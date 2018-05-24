@@ -398,7 +398,7 @@ function chps_get_header_default_markup( $post ) {
 }
 
 
-function get_chps_header_markup() {
+function chps_get_header_markup() {
 	global $post;
 	echo chps_get_nav_markup( $post );
 

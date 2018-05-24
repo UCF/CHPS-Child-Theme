@@ -6,6 +6,6 @@
 	<body ontouchstart <?php body_class(); ?>>
 		<?php do_action( 'after_body_open' ); ?>
 		<header class="site-header">
-			<?php echo get_chps_header_markup; ?>
+			<?php echo chps_get_header_markup; ?>
 		</header>
 		<main id="main" class="site-main">
