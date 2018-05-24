@@ -1,6 +1,7 @@
 
 <?php // ADDED BY DAVID JANOSIK
 include 'shortcodes.php';
+include 'chps-headers.php';
 
 add_action( 'wp_enqueue_scripts', 'my_add_stylesheet' );
 function my_add_stylesheet() {
