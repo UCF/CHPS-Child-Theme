@@ -400,15 +400,15 @@ function chps_get_header_default_markup( $post ) {
 
 function get_chps_header_markup() {
 	global $post;
-	echo get_nav_markup( $post );
+	echo chps_get_nav_markup( $post );
 
-	$videos = get_header_videos( $post );
-	$images = get_header_images( $post );
+	$videos = chps_get_header_videos( $post );
+	$images = chps_get_header_images( $post );
 
 	if ( $videos || $images ) {
-		echo get_header_media_markup( $post, $videos, $images );
+		echo chps_get_header_media_markup( $post, $videos, $images );
 	}
 	else {
-		echo get_header_default_markup( $post );
+		echo chps_get_header_default_markup( $post );
 	}
 }
