@@ -6,7 +6,7 @@
 /**
  * Returns the site name formatted for use in the site navbar.
  **/
-function get_sitename_formatted() {
+function chps_get_sitename_formatted() {
 	$sitename = $sitename_formatted = get_bloginfo( 'name' );
 
 	if ( strpos( $sitename, '&' ) !== false ) {
@@ -20,7 +20,7 @@ function get_sitename_formatted() {
 /**
  * Get the markup for the primary site navbar.
  **/
-function get_nav_markup() {
+function chps_get_nav_markup() {
 	ob_start();
 ?>
 	<nav class="navbar navbar-toggleable-md navbar-inverse site-navbar" role="navigation">
@@ -59,7 +59,7 @@ function get_nav_markup() {
 /**
  * Gets the header image for pages.
  **/
-function get_header_images( $post ) {
+function chps_get_header_images( $post ) {
 	$retval = array(
 		'header_image' => '',
 		'header_image_xs' => ''
@@ -87,7 +87,7 @@ function get_header_images( $post ) {
 /**
  * Gets the header video sources for pages.
  **/
-function get_header_videos( $post ) {
+function chps_get_header_videos( $post ) {
 	$retval = array(
 		'webm' => get_field( 'page_header_webm', $post->ID ),
 		'mp4'  => get_field( 'page_header_mp4', $post->ID )
@@ -104,7 +104,7 @@ function get_header_videos( $post ) {
 /**
  * Returns title text for use in the page header.
  **/
-function get_header_title( $post ) {
+function chps_get_header_title( $post ) {
 	$title = '';
 
 	if ( is_front_page() ) {
@@ -132,7 +132,7 @@ function get_header_title( $post ) {
 /**
  * Returns subtitle text for use in the page header.
  **/
-function get_header_subtitle( $post ) {
+function chps_get_header_subtitle( $post ) {
 	$subtitle = '';
 
 	if ( $post->post_type === 'person' ) {
@@ -149,7 +149,7 @@ function get_header_subtitle( $post ) {
 /**
  * Returns the header height meta value for the page header.
  **/
-function get_header_height( $post ) {
+function chps_get_header_height( $post ) {
 	$retval = 'header-media-default';
 
 	if ( $post->post_type === 'person' || $post->post_type === 'degree' ) {
@@ -167,7 +167,7 @@ function get_header_height( $post ) {
 /**
  * Returns markup for a call-to-action button in the homepage header.
  **/
-function get_homepage_header_cta( $post, $position ) {
+function chps_get_homepage_header_cta( $post, $position ) {
 	if ( $post->ID !== intval( get_option( 'page_on_front' ) ) ) { return false; }
 
 	$btn_text = get_field( 'homepage_button_' . $position . '_text', $post->ID );
@@ -188,7 +188,7 @@ function get_homepage_header_cta( $post, $position ) {
 /**
  * Returns markup for inner header contents on the homepage.
  **/
-function get_homepage_header_markup( $post ) {
+function chps_get_homepage_header_markup( $post ) {
 	$title                  = get_header_title( $post );
 	$homepage_button_left   = get_homepage_header_cta( $post, 'left' );
 	$homepage_button_center = get_homepage_header_cta( $post, 'center' );
@@ -227,7 +227,7 @@ function get_homepage_header_markup( $post ) {
  * Returns markup for inner header contents for pages using the 'inline-block'
  * or 'block' content display type.
  **/
-function get_header_media_content_markup( $post, $header_height, $header_content_display ) {
+function chps_get_header_media_content_markup( $post, $header_height, $header_content_display ) {
 	$title            = get_header_title( $post );
 	$subtitle         = get_header_subtitle( $post );
 	$extra_content    = get_field( 'page_header_extra_content', $post->ID );
@@ -302,7 +302,7 @@ function get_header_media_content_markup( $post, $header_height, $header_content
 /**
  * Returns the markup for page headers with an image or video background.
  **/
-function get_header_media_markup( $post, $videos=null, $images=null ) {
+function chps_get_header_media_markup( $post, $videos=null, $images=null ) {
 	$header_height          = get_header_height( $post );
 	$header_content_display = get_field( 'page_header_content_display', $post->ID );
 
@@ -368,7 +368,7 @@ function get_header_media_markup( $post, $videos=null, $images=null ) {
 /**
  * Returns the default markup for page headers.
  **/
-function get_header_default_markup( $post ) {
+function chps_get_header_default_markup( $post ) {
 	$title         = get_header_title( $post );
 	$subtitle      = get_header_subtitle( $post );
 	$extra_content = get_field( 'page_header_extra_content', $post->ID );
