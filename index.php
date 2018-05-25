@@ -61,6 +61,9 @@
 							<h2>HELLO</h2>
 							
 							<?php echo excerpt(30); ?>
+							
+							<h2>HELLO 2</h2>
+							<?php short_excerpt(get_the_excerpt()); ?>
 						</div>
 					</div>
 				</div>
