@@ -28,10 +28,11 @@ function themeslug_enqueue_script() { // This is for any 'Colleges-Theme' javasc
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
 /* Change Excerpt length */
-function custom_excerpt_length( $length ) {
-return 30;
+function short_excerpt($string) {
+echo substr($string, 0, 200); 
 }
-add_filter( ‘excerpt_length’, ‘custom_excerpt_length’, 999 );
+
+
 // CUSTOM SIDE BAR ADDONS
     // ADDING ONE FOR THE NEWS BLOG
 function my_customblog_sidebar() {
