@@ -145,11 +145,11 @@ input.searchsubmd {
 input.searchsubsm {
 	padding: 6px;
 }
-.lookingfor .evc-st-title{
-    font-weight:normal !important;
-    font-size:28px !important;
+.lookingfor .evc-st-title {
+    font-weight:200 !important;
+    font-size:26px !important;
     font-style: italic !important;
-    padding-top:10px;
+    padding-top:14px !important;
 }
 
 /* = Custom Post Type Results, list items 
@@ -342,9 +342,9 @@ span.searchresults	{
 }	
 @media (max-width: 1200px) and (min-width: 768px)  {
     .lookingfor .evc-st-title {
-		font-weight:normal !important;
-		font-size:19px !important;
+		font-weight:200 !important;
+		font-size:17px !important;
 		font-style: italic !important;
-		padding-top:14px;
+		padding-top:20px !important;
     }
 }
