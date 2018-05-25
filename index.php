@@ -59,8 +59,8 @@
 						<?php
 							echo wp_trim_words( get_the_content(), 30, '...' );
 						?>
-						<h1>HELLO 3</h1>
-						<?php echo wp_trim_words( get_the_excerpt(), 30, '...' ); ?>
+						<h1>HELLO 1</h1>
+						<?php the_excerpt(); ?>
 						</div>
 					</div>
 				</div>
