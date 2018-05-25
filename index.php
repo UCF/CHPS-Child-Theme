@@ -56,7 +56,7 @@
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 
 						<div class="entry">
-							<?php short_excerpt(get_the_excerpt()); ?>
+							<?php echo excerpt(30); ?>
 						</div>
 					</div>
 				</div>
