@@ -60,7 +60,9 @@
 							echo wp_trim_words( get_the_content(), 30, '...' );
 						?>
 						<h1>HELLO</h1>
-						<?php strip_shortcodes( $content ); ?>
+						<?php 
+							$content = wp_trim_words( get_the_content(), 30, '...' );
+							strip_shortcodes( $content ); ?>
 						</div>
 					</div>
 				</div>
