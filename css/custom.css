@@ -145,6 +145,12 @@ input.searchsubmd {
 input.searchsubsm {
 	padding: 6px;
 }
+.lookingfor .evc-st-title{
+    font-weight:normal !important;
+    font-size:28px !important;
+    font-style: italic !important;
+    padding-top:10px;
+}
 
 /* = Custom Post Type Results, list items 
 -------------------------------------------------------------- */
@@ -334,3 +340,11 @@ span.searchresults	{
 	}
 
 }	
+@media (max-width: 1200px) and (min-width: 768px)  {
+    .lookingfor .evc-st-title {
+		font-weight:normal !important;
+		font-size:19px !important;
+		font-style: italic !important;
+		padding-top:14px;
+    }
+}
