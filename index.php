@@ -30,10 +30,44 @@
 				$categories = get_the_category();
 				?>
 				
-				<?php if( 'person' == get_post_type() ): ?>      
+				<?php if( 'person' == get_post_type() ) { ?>      
 					<?php get_template_part( 'person-result'); ?>
-				<?php // for any other post type ?>
-				<?php else : ?>
+					
+				<?php }	elseif ( 'page' == get_post_type()){ ?>
+				<?php $u_time = get_the_time('U'); 
+					  $u_modified_time = get_the_modified_time('U'); ?>
+				<div class="row mb-4 cat-border">
+					<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
+
+						   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+						   <?php if ( has_post_thumbnail()) { ?>
+							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+							<?php } else { ?>
+							<?php switch_to_blog(2);?>	
+								<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
+							<?php restore_current_blog(); ?>
+						<?php } ?>
+						   </a>
+
+					</div>
+
+					<div class="col-lg-9 p-4"> 
+						<?php 
+							if ( ! empty( $categories ) ) {
+								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+							}
+						?>
+						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
+						<span class="authortext">Last Updated: <?php the_modified_time('F jS, Y'); ?></span>
+
+						<div class="entry">
+							<?php the_excerpt(); ?>
+							
+						</div>
+					</div>
+				</div>	
+				<?php } else { ?>
 				<div class="row mb-4 cat-border">
 					<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
 
@@ -65,7 +99,7 @@
 						</div>
 					</div>
 				</div>
-				<?php endif; ?>	
+				<?php } ?>	
 				<?php endwhile; ?>
 
 				<!-- then the pagination links -->
@@ -75,7 +109,7 @@
 		
 		<?php else : ?>
  
-            Sorry No News Posts Match Your Search
+            Sorry No Pages or News Posts Match Your Search
  
         <?php endif; ?>
 			</div>
