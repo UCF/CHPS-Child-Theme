@@ -100,7 +100,7 @@ input.searchmd {
 input.searchsm {
 	padding: 4px;
 }
-input.searchsubmit {
+input.searchsubmit-yellow {
 	width: 100%;
 	background: #fecb2f;
 	border: 0px solid #fecb2f;
@@ -114,9 +114,27 @@ input.searchsubmit {
 	-webkit-transition:.2s;
 	transition:.2s;
 }
-input.searchsubmit:hover {
+input.searchsubmit-yellow:hover {
 	background: #cca12e;
 	color: #fff;
+}
+input.searchsubmit-black {
+	width: 100%;
+	background: #000;
+	border: 0px solid #000;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+    text-align: center;
+	letter-spacing: .1em;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+input.searchsubmit-black:hover {
+	background: #404040;
 }
 input.searchsublg {
 	padding: 12px;

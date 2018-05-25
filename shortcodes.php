@@ -327,12 +327,13 @@ add_shortcode( 'chpsnews', 'chpsnewsvar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
 //
-// [searchme posttype="" size="" placeholder=""]
+// [searchme posttype="" size="" placeholder="" color=""]
 function searchmevar( $atts ) {
     $d = shortcode_atts( array(
         'posttype' => 'person',
         'size' => 'large',
 		'placeholder' => 'Search',
+		'color' => 'yellow',
     ), $atts );
 ?> 	
 <div>
@@ -344,7 +345,7 @@ function searchmevar( $atts ) {
 					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
 				</div>
 				<div class="col-md-3 p-1">
-					<input class="searchsubmit searchsublg" id="searchsubmit" type="submit" alt="Search" value="Search" />
+					<input class="searchsubmit-<?php echo $d['color'] ?> searchsublg" id="searchsubmit" type="submit" alt="Search" value="Search" />
 				</div>
 			<?php } elseif ($d['size'] == 'medium'){ ?> 
 				<div class="col-md-10 col-sm-10 p-0">
@@ -352,7 +353,7 @@ function searchmevar( $atts ) {
 					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
 				</div>
 				<div class="col-md-2 col-sm-2 p-0">
-					<input class="searchsubmit searchsubmd" id="searchsubmit" type="submit" alt="Search" value="Search" />
+					<input class="searchsubmit-<?php echo $d['color'] ?> searchsubmd" id="searchsubmit" type="submit" alt="Search" value="Search" />
 				</div>
 			<?php } elseif ($d['size'] == 'small'){ ?> 
 				<div class="col-sm-11 col-xs-6 p-0">
@@ -360,7 +361,7 @@ function searchmevar( $atts ) {
 					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
 				</div>
 				<div class="col-sm-1 col-xs-6 p-0">
-					<input class="searchsubmit searchsubsm" id="searchsubmit" type="submit" alt="Search" value="Search" />
+					<input class="searchsubmit-<?php echo $d['color'] ?> searchsubsm" id="searchsubmit" type="submit" alt="Search" value="Search" />
 				</div>
 			<?php } else { ?> 
 				Size Error
