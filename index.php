@@ -60,7 +60,7 @@
 							echo wp_trim_words( get_the_content(), 30, '...' );
 						?>
 						<h1>HELLO 2</h1>
-						<?php echo the_content() ?>
+						<?php the_excerpt(); ?>
 						</div>
 					</div>
 				</div>
