@@ -40,9 +40,9 @@ $modified_time = get_the_modified_time('U');
 if ($modified_time >= $original_time + 86400) {
 $updated_time = get_the_modified_time('h:i a');
 $updated_day = get_the_modified_time('F jS, Y');
-$modified_content .= '';
+$modified_content = '';
 }
-$modified_content .= $content;
+$modified_content = $content;
 return $modified_content;
 }
 add_filter( 'the_content', 'show_last_modified_date' );
