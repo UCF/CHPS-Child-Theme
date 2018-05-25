@@ -308,11 +308,11 @@ span.searchresults	{
 	}	
 	.mainHomeTitle .evc-st-title {
     	font-size: 1.8rem !important;
-		line-height: .8rem !important;
+		line-height: 1.1rem !important;
 	}
 	.mainHomeSubtitle .evc-st-title {
-		line-height: .5rem !important;
-		line-height: 1.3rem !important;
+		font-size: .8rem !important;
+		line-height: 1.1rem !important;
 	}
 
 }	
