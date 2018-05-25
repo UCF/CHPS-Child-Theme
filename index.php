@@ -31,7 +31,7 @@
 				?>
 				
 				<?php if( 'person' == get_post_type() ): ?>      
-					HELLO this is <h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<?php get_template_part( 'person-result'); ?>
 				<?php // for any other post type ?>
 				<?php else : ?>
 				<div class="row mb-4 cat-border">
