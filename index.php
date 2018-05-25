@@ -6,7 +6,7 @@
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">Archived News</h1>
+				<h1 class="archive-title heading-underline">Search Results</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
@@ -45,7 +45,7 @@
 
 					</div>
 
-					<div class="col-lg-9 p-4">
+					<div class="col-lg-9 p-4"> 
 						<?php 
 							if ( ! empty( $categories ) ) {
 								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
