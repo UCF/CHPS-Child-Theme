@@ -314,5 +314,9 @@ span.searchresults	{
 		font-size: 1.2rem !important;
 		line-height: 1.1rem !important;
 	}
+	.homepagephoto {
+		padding-top: 10px !important;
+		padding-bottom: 10px !important;
+	}
 
 }	
