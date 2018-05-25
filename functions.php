@@ -30,11 +30,6 @@ add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 /* Change Excerpt length */
 
 
-
-function short_excerpt($string) {
-echo substr($string, 0, 200); 
-}
-
 // CUSTOM SIDE BAR ADDONS
     // ADDING ONE FOR THE NEWS BLOG
 function my_customblog_sidebar() {
