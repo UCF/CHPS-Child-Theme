@@ -34,14 +34,18 @@ function custom_excerpt_length( $length ) {
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 /* Get Last Updated Info */
-function wpb_last_updated_date( $content ) {
-$u_time = get_the_time('U'); 
-$u_modified_time = get_the_modified_time('U'); 
-if ($u_modified_time >= $u_time + 86400) { 
-$updated_date = get_the_modified_time('F jS, Y');
-$updated_time = get_the_modified_time('h:i a'); 
-} 
-add_filter( 'the_content', 'wpb_last_updated_date' );
+function show_last_modified_date( $content ) {
+$original_time = get_the_time('U');
+$modified_time = get_the_modified_time('U');
+if ($modified_time >= $original_time + 86400) {
+$updated_time = get_the_modified_time('h:i a');
+$updated_day = get_the_modified_time('F jS, Y');
+$modified_content .= '';
+}
+$modified_content .= $content;
+return $modified_content;
+}
+add_filter( 'the_content', 'show_last_modified_date' );
 
 
 // CUSTOM SIDE BAR ADDONS
