@@ -327,13 +327,14 @@ add_shortcode( 'chpsnews', 'chpsnewsvar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
 //
-// [searchme posttype="" size="" placeholder="" color=""]
+// [searchme posttype="" size="" placeholder="" color="" addposts=""]
 function searchmevar( $atts ) {
     $d = shortcode_atts( array(
         'posttype' => 'person',
         'size' => 'large',
 		'placeholder' => 'Search',
 		'color' => 'yellow',
+		'addposts' => 'true',
     ), $atts );
 ?> 	
 <div>
@@ -343,6 +344,9 @@ function searchmevar( $atts ) {
 				<div class="col-md-9 p-1">
 					<input class="searchbar searchlg" type="text" name="s" placeholder="<?php echo $d['placeholder'] ?>" onfocus="this.placeholder = ''" onblur="this.placeholder = '<?php echo $d['placeholder'] ?>'" />
 					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
+					<?php if ($d['addposts'] == 'true') { ?>
+						<input type="hidden" name="post_type" value="posts" />
+					<?php } ?>
 				</div>
 				<div class="col-md-3 p-1">
 					<input class="searchsubmit-<?php echo $d['color'] ?> searchsublg" id="searchsubmit" type="submit" alt="Search" value="Search" />
