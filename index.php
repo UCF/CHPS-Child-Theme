@@ -30,6 +30,10 @@
 				$categories = get_the_category();
 				?>
 				
+				<?php if( 'person' == get_post_type() ): ?>      
+					HELLO this is <h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+				<?php // for any other post type ?>
+				<?php else : ?>
 				<div class="row mb-4 cat-border">
 					<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
 
@@ -61,7 +65,7 @@
 						</div>
 					</div>
 				</div>
-					
+				<?php endif; ?>	
 				<?php endwhile; ?>
 
 				<!-- then the pagination links -->
