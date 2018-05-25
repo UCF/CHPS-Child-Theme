@@ -59,10 +59,8 @@
 						<?php
 							echo wp_trim_words( get_the_content(), 30, '...' );
 						?>
-						<h1>HELLO</h1>
-						<?php 
-							$content = wp_trim_words( get_the_content(), 30, '...' );
-							strip_shortcodes( $content ); ?>
+						<h1>HELLO 2</h1>
+						<?php echo the_content() ?>
 						</div>
 					</div>
 				</div>
