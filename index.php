@@ -56,11 +56,7 @@
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 
 						<div class="entry">
-						<?php
-							echo wp_trim_words( get_the_content(), 30, '...' );
-						?>
-						<h1>HELLO 1</h1>
-						<?php the_excerpt(); ?>
+							<?php the_excerpt(); ?>
 						</div>
 					</div>
 				</div>
