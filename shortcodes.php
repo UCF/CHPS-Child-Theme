@@ -334,7 +334,7 @@ function searchmevar( $atts ) {
         'size' => 'large',
 		'placeholder' => 'Search',
 		'color' => 'yellow',
-		'addposts' => 'true',
+		'addposts' => 'false',
     ), $atts );
 ?> 	
 <div>
