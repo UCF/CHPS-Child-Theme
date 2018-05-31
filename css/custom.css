@@ -354,7 +354,8 @@ span.searchresults	{
 
 @supports (-ms-ime-align: auto) {
    /* Microsoft EdgeV13&14 CSS styles go here */
-  .catlist-photo {
-	  display: none !important;
-  }
+	  .media-background, .media-background-container>picture {
+		width: 100% !important;
+		height:auto !important;
+	}
 }
