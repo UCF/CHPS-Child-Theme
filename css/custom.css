@@ -356,9 +356,8 @@ span.searchresults	{
    /* Microsoft EdgeV13&14 CSS styles go here */
 	  .media-background, .media-background-container>picture {
 		  width: calc(100% + 1px);
-		  height: auto;
-		  height: calc(100% + 1px);
-   	 	  
+		  height: auto !important;
+  	 	  
 		/* 
 		  height: 120% !important;
 		width: auto !important;
