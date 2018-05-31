@@ -351,6 +351,10 @@ span.searchresults	{
 
 /* = STUPID MICROSOFT EDGE BROWSER
 -------------------------------------------------------------- */
-@supports (-ms-ime-align:auto)  {
-	.catlist-photo {diplay:none !important;}
+
+@supports (-ms-ime-align: auto) {
+   /* Microsoft EdgeV13&14 CSS styles go here */
+  .catlist-photo {
+	  display: none !important;
+  }
 }
