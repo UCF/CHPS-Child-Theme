@@ -355,7 +355,11 @@ span.searchresults	{
 @supports (-ms-ime-align: auto) {
    /* Microsoft EdgeV13&14 CSS styles go here */
 	  .media-background, .media-background-container>picture {
+		height: calc(100% + 1px);
+		left: 0;
+		position: absolute;
+		top: 0;
 		width: 100% !important;
-		height:auto !important;
+		z-index: -1;
 	}
 }
