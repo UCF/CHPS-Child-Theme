@@ -357,6 +357,11 @@ span.searchresults	{
 	  .media-background, .media-background-container>picture {
 		  width: calc(100% + 1px);
 		  height: auto !important;
+		  top: -9999px !important;
+    	bottom: -9999px !important;
+    	left: -9999px !important;
+    	right: -9999px !important;
+    	margin: auto !important;
   	 	  
 		/* 
 		  height: 120% !important;
