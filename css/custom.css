@@ -351,6 +351,6 @@ span.searchresults	{
 
 /* = STUPID MICROSOFT EDGE BROWSER
 -------------------------------------------------------------- */
-@supports (-ms-accelerator:true) {
-.catlist-photo (diplay:none !important;)
+@supports (-ms-ime-align:auto)  {
+	.catlist-photo {diplay:none !important;}
 }
