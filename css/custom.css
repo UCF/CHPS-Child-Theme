@@ -362,13 +362,5 @@ span.searchresults	{
     	left: -9999px !important;
     	right: -9999px !important;
     	margin: auto !important;
-  	 	  
-		/* 
-		  height: 120% !important;
-		width: auto !important;
-		  left: 0;
-		position: absolute;
-		top: 0;
-		z-index: -1; */
 	}
 }
