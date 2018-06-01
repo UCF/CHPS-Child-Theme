@@ -71,68 +71,9 @@ $categories = get_the_category();
 
 
 <style>
-.site-header .container h1 {
-	display: none !important;
-}
-.cattitle-single {
-	color: #999;
-	font-size: 16px;
-	font-weight: 700;
-	letter-spacing: .5;
-	margin-bottom: 12px;
-	text-transform: uppercase;
-}
-.cattitle-single:hover {
-	color: #fdc831;
-}
-.authortext {
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #777;
-	margin-top: 20px;
-}
-#postIMG {
-	margin-bottom: 20px;
-}
-#imgRight {
-	max-width: 480px;
-	float: right;
-	margin: 0px 0px 20px 20px;
-}
-#imgLeft {
-	max-width: 480px;
-	float: left;
-	margin: 0px 20px 20px 0px;
-}	
-.recborder {
-	border-right: solid 2px #eee;
-}
-.featcaption {
-	color: #777;
-	font-size: 13px;
-	line-height: 14px;
-	font-style: italic;
-	margin-top:12px;
-}
-h3.widget-title {
-	font-size: 18px;
-}
-div.widget-content ul {
-	margin-left: 10px;
-	padding-left: 0px;
-}
-div.widget-content ul li {
-	list-style: none;
-	border-bottom: 1px solid #eee;
-	padding:6px 0px;
-	font-size: 14px !important;
-}
-.postmission {
-	font-size:14px;
-	line-height: 16px;
-}
+.site-header .container h1 {display: none !important;}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
-<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111"></script>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
 
 <?php get_footer(); ?>
