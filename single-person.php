@@ -13,7 +13,7 @@ $ids = get_the_ID();
 			</header>
 		</div>
 		<div class="col-lg-6">	
-			<?php get_template_part( 'person-search'); ?>
+			<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">	
 			<a href="/directory/" title="Back to the Directory"><i class="fa fa-chevron-circle-left icongrey"></i><span class="searchresults">Back to the Full Directory</strong></span></a>

@@ -60,12 +60,20 @@ h2 {
 #yellow-textlinks a:hover {
 	color: #cca12e;
 }
-
 .megaTITLE .evc-st-title {
 	font-size: 45px !important;
     font-weight: 700 !important;
 }
-
+.btnhover-yellow .vc_btn3.vc_btn3-style-custom, .btnhover-black .vc_btn3.vc_btn3-style-custom {
+    background-image: none !important;
+}
+.btnhover-yellow a:hover {
+    background: #cca12e !important;
+	color: #fff !important;
+}
+.btnhover-black a:hover {
+	background: #404040 !important;
+}
 
 
 
@@ -274,8 +282,6 @@ figcaption, .featcaption {
 	min-height: 190px; 
 }	
 
-
-
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
 .profile-social-web {
@@ -300,6 +306,9 @@ figcaption, .featcaption {
 
 /* = Widgets
 -------------------------------------------------------------- */
+.widgetFix {
+	margin-bottom: 30px;
+}
 .widgetFix ul {
 	margin-left: 10px;
 	padding-left: 0px;
@@ -398,7 +407,7 @@ figcaption, .featcaption {
 @media (max-width: 1200px) and (min-width: 768px)  {
     .lookingfor .evc-st-title {
 		font-weight:200 !important;
-		font-size:17px !important;
+		font-size: 17px !important;
 		font-style: italic !important;
 		padding-top:20px !important;
     }
@@ -410,9 +419,9 @@ figcaption, .featcaption {
 @supports (-ms-ime-align: auto) {
    /* Microsoft EdgeV13&14 CSS styles go here */
 	  .media-background, .media-background-container>picture {
-		  width: 130% !important;
-		  height: auto !important;
-		  top: -9999px !important;
+		width: 130% !important;
+		height: auto !important;
+		top: -9999px !important;
     	bottom: -9999px !important;
     	left: -9999px !important;
     	right: -9999px !important;
