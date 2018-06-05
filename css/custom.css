@@ -189,6 +189,9 @@ span.searchresults	{
 
 /* = NEWS Posts, BLOG, shortcode news results 
 -------------------------------------------------------------- */
+.spotlight-vertical .spotlight-header {
+    font-style:normal !important;
+}
 .category-title {
 	background-color: #fc0;
 	color: #000 !important;
