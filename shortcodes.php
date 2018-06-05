@@ -382,7 +382,7 @@ add_shortcode( 'searchme', 'searchmevar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 //
-// [socialicons fb="" tw="" ig="" yt="" in=""]
+// [socialicons fb="" tw="" ig="" yt="" in="" align=""]
 function socialiconvar( $atts ) {
     $s = shortcode_atts( array(
         'fb' => '',
@@ -390,14 +390,15 @@ function socialiconvar( $atts ) {
 		'ig' => '',
 		'yt' => '',
 		'in' => '',
+		'align' => '',
     ), $atts );
 	
 ?>	
 <div class="socialicons">
 	<div class="ucf-social-icons">
 		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-		  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
+		  <i class="fa fa-circle fa-stack-2x fb-socialicon"></i>
+		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 		  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
