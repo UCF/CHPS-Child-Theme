@@ -400,8 +400,8 @@ function socialiconvar( $atts ) {
 		  <i class="fa fa-circle fa-stack-2x fb-socialicon"></i>
 		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-		  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
+		  <i class="fa fa-circle fa-stack-2x tw-socialicon"></i>
+		  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
 		</span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 		  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
