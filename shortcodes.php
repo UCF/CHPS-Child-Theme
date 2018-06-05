@@ -390,11 +390,11 @@ function socialiconvar( $atts ) {
 		'ig' => '',
 		'yt' => '',
 		'in' => '',
-		'align' => '',
+		'align' => 'left',
     ), $atts );
 	
 ?>	
-<div class="socialicons" style="text-align: right !important;">
+<div class="socialicons" style="text-align: center !important;">
 	<div class="ucf-social-icons">
 		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x fb-socialicon"></i>
