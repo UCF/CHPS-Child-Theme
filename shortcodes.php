@@ -316,13 +316,6 @@ add_shortcode( 'chpsnews', 'chpsnewsvar' );
 ?>
 
 
-
-
-
-
-
-
-
 <?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
@@ -385,7 +378,46 @@ add_shortcode( 'searchme', 'searchmevar' );
 ?>
 
 
-
+<?php
+//  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
+//
+// [socialicons fb="" tw="" ig="" yt="" in=""]
+function socialiconvar( $atts ) {
+    $s = shortcode_atts( array(
+        'fb' => '',
+        'tw' => '',
+		'ig' => '',
+		'yt' => '',
+		'in' => '',
+    ), $atts );
+	
+?>	
+<div class="socialicons">
+	<div class="ucf-social-icons">
+		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+		  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
+		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+		  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
+		</span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+		  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
+		</span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+		  <i class="fa fa-youtube fa-stack-1x footer-social-icon"></i>
+		</span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+		  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
+		</span></a><?php } ?>
+	</div>
+</div>
+<?php	
+}
+add_shortcode( 'socialicons', 'socialiconvar' );
+//  ------------------------------------------------------------------------
+?>
 
 
 
