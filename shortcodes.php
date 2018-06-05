@@ -394,7 +394,7 @@ function socialiconvar( $atts ) {
     ), $atts );
 	
 ?>	
-<div class="socialicons">
+<div class="socialicons" style="text-align: right !important;">
 	<div class="ucf-social-icons">
 		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x fb-socialicon"></i>
