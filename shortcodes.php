@@ -396,8 +396,8 @@ function socialiconvar( $atts ) {
 ?>	
 <div class="socialicons" style="text-align: center !important;">
 	<div class="scode-socialicons">
-		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x fb-socialicon"></i>
+		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
 		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x tw-socialicon"></i>
@@ -414,6 +414,14 @@ function socialiconvar( $atts ) {
 		</span></a><?php } ?>
 	</div>
 </div>
+<style>
+	a.fb-socialicon {
+		color:red;
+	}
+	a.fb-socialicon:hover {
+		color:blue;
+	}
+</style>
 <?php	
 }
 add_shortcode( 'socialicons', 'socialiconvar' );
