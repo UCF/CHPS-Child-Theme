@@ -424,10 +424,13 @@ function socialiconvar( $atts ) {
 	a.yt-socialicon {
 	color: #ff0000;
 }
+	a.ig-socialicon {
+	color: #e4405f;
+}
 	a.in-socialicon {
 	color: #007bb5;
 }
-	a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.in-socialicon:hover {
+	a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.ig-socialicon:hover, a.in-socialicon:hover {
 		color:#fc0;
 	}
 </style>
