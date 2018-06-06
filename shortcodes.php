@@ -419,7 +419,7 @@ function socialiconvar( $atts ) {
 		color:red;
 	}
 	a.fb-socialicon:hover {
-		color:rgba(0, 0, 0, 0.4);
+		background-color:rgba(0, 0, 0, 0.4);
 	}
 </style>
 <?php	
