@@ -4,10 +4,10 @@
 
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
-				<img src="<?php echo $getimageURL; ?>" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+				<img src="<?php echo $getimageURL; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
 				<?php } else { ?> 
 					<?php switch_to_blog(2);?>
-						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php $post->post_title; ?>" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
 					<?php restore_current_blog(); ?>
 		<?php } ?>
 		   </a> 
@@ -62,6 +62,7 @@
 						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
 					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
+					if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
 					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
 					if ($buildingMap == 'UCF Cocoa') {echo 'http://map.ucf.edu/locations/cocoa/cocoa/';}
@@ -118,7 +119,7 @@
 			<?php endif; ?>
 			<?php if (get_field('linkedin_url')): ?>
 			<div class="person-label">
-				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('website_url'); ?>">Linkedin</a>
+				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>">Linkedin</a>
 			</div>
 			<?php endif; ?>
 
