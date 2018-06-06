@@ -416,10 +416,10 @@ function socialiconvar( $atts ) {
 </div>
 <style>
 	a.fb-socialicon {
-		background:red;
+		color:red;
 	}
 	a.fb-socialicon:hover {
-		background:rgba(0, 0, 0, 0.2);
+		filter: brightness(85%);
 	}
 </style>
 <?php	
