@@ -399,17 +399,17 @@ function socialiconvar( $atts ) {
 		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack fa-lg">
 		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x tw-socialicon"></i>
+		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x ig-socialicon"></i>
+		</span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x yt-socialicon"></i>
+		</span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x in-socialicon"></i>
+		</span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack fa-lg">
+		  <i class="fa fa-circle fa-stack-2x"></i>
 		  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
 		</span></a><?php } ?>
 	</div>
