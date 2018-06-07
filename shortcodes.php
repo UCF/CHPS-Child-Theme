@@ -527,6 +527,19 @@ $args = array(
 					</div>
 				</div>
 		<?php }	?>
+		
+			<div class="row">
+				<?php $termswer = get_field('research_interests');
+					if( $termswer ): 
+						echo '<h5>Research Interests</h5>';
+				?>
+					<ul id="capitalText">
+						<?php foreach( $termswer as $term ): ?>
+							<li><?php echo $term->name; ?></li>
+						<?php endforeach; ?>
+					</ul>
+					<?php endif; ?>
+				</div>
 
 	</div>
 </div>
