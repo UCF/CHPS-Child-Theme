@@ -473,7 +473,7 @@ $args = array(
 
 		<?php
 		if(get_field('job_titles_tax')){ ?>
-			<div class="profilejobtitle mb-3">
+			<div class="profilejobtitle mb-2">
 				<?php
 				// Get a list of terms for this post's custom taxonomy.
 				$project_cats = get_the_terms(get_the_ID(), 'job_titles');
@@ -499,7 +499,7 @@ $args = array(
 		<?php }	?>	
 
 		<?php if(get_field('phone_number')){ ?>
-			<div class="row">
+			<div class="row mb-2">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
 						<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
 					</div>
