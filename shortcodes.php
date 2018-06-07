@@ -473,7 +473,7 @@ $args = array(
 
 		<?php
 		if(get_field('job_titles_tax')){ ?>
-			<div class="profilejobtitle">
+			<div class="profilejobtitle mb-3">
 				<?php
 				// Get a list of terms for this post's custom taxonomy.
 				$project_cats = get_the_terms(get_the_ID(), 'job_titles');
@@ -489,29 +489,7 @@ $args = array(
 				}?>
 			</div>
 		<?php }	?>
-
-		<?php if(get_field('building')){ ?>
-			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
-					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
-					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-					if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
-					if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
-					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
-					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
-					?>" target="_blank" title="Map to <?php the_field('building'); ?>">
-							<?php the_field('building'); ?>
-						</a>
-						<?php if(get_field('room_number')){ ?>
-						<span>
-							<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
-						</span>
-						<?php }
-						?>	
-					</div>
-				</div>
-		<?php }	?>	
+	
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
@@ -529,17 +507,15 @@ $args = array(
 		<?php }	?>
 		
 			<div class="row">
-				<?php $termswer = get_field('research_interests');
-					if( $termswer ): 
-						echo '<h5>Research Interests</h5>';
-				?>
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+					<h5>Research Interests</h5>
 					<ul id="capitalText">
 						<?php foreach( $termswer as $term ): ?>
 							<li><?php echo $term->name; ?></li>
 						<?php endforeach; ?>
 					</ul>
-					<?php endif; ?>
 				</div>
+			</div>
 
 	</div>
 </div>
