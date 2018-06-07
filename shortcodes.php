@@ -454,7 +454,7 @@ $args = array(
           
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); ?>
 <div class="row mb-4 personlist-ht">
-	<div class="col-lg-3 col-md-3 col-sm-4 col-4 p-0">
+	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0">
 
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
@@ -467,7 +467,7 @@ $args = array(
 		   </a> 
 	</div>
 
-	<div class="col-lg-9 col-md-9 col-sm-8 col-8 p-3">
+	<div class="col-lg-10 col-md-9 col-sm-8 col-8 px-3 pt-0 pb-3">
 
 		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 
