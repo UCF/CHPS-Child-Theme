@@ -447,10 +447,8 @@ $args = array(
         ),
      );
 
-     $loop = new WP_Query($args);
-     if($loop->have_posts()) {
-
-        while($loop->have_posts()) : $loop->the_post(); ?>
+     $wp_query = new WP_Query($args);
+	while ( have_posts() ) : the_post(); ?>
           
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 <div class="row mb-4 cat-border personlist-ht">
