@@ -422,5 +422,42 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 
 
 
+<?php
+//  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
+//
+// [researchlist department=""]
+function researchlistvar( $atts ) {
+    $r = shortcode_atts( array(
+        'department' => '',
+    ), $atts );
+
+	
+$custom_terms = get_terms($r['department']);
+$args = array('post_type' => 'person',
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'departments',
+                'field' => 'slug',
+                'terms' => $custom_term->slug,
+            ),
+        ),
+     );
+
+     $loop = new WP_Query($args);
+     if($loop->have_posts()) {
+        echo '<h2>'.$custom_term->name.'</h2>';
+
+        while($loop->have_posts()) : $loop->the_post();
+            echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
+        endwhile;
+     }
+?>	
+
+<?php	
+}
+add_shortcode( 'researchlist', 'researchlistvar' );
+//  ------------------------------------------------------------------------
+?>
 
 
