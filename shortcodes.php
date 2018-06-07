@@ -475,6 +475,7 @@ $args = array(
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle">
 				<?php
+			$term = get_queried_object();
 				// Get a list of terms for this post's custom taxonomy.
 				$project_cats = get_field('job_titles', $term);
 				// Renumber array.
