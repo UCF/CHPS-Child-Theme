@@ -432,14 +432,12 @@ function researchlistvar( $atts ) {
         'department' => '',
     ), $atts );
 
-	
-$custom_terms = get_terms($r['department']);
 $args = array('post_type' => 'person',
         'tax_query' => array(
             array(
                 'taxonomy' => 'departments',
                 'field' => 'slug',
-                'terms' => $custom_term->slug,
+                'terms' => $r['department'],
             ),
         ),
      );
