@@ -490,26 +490,6 @@ $args = array(
 			</div>
 		<?php }	?>
 
-		<?php
-		if(get_the_terms($post->ID, 'departments')){ ?>
-			<div class="profiledepartments">
-				<?php
-				// Get a list of terms for this post's custom taxonomy.
-				$project_depts = get_the_terms($post->ID, 'departments');
-				// Renumber array.
-				$project_depts = array_values($project_depts);
-				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
-					// Each array item is an object. Display its 'name' value.
-					echo $project_depts[$dept_count]->name;
-					// If there is more than one term, comma separate them.
-					if ($dept_count<count($project_depts)-1){
-						echo ', ';
-					}
-				}?>
-			</div>
-		<?php }	?>
-
-
 		<?php if(get_field('building')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
