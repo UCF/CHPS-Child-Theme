@@ -450,7 +450,9 @@ $args = array(
      $loop = new WP_Query($args);
      if($loop->have_posts()) {
 
-        while($loop->have_posts()) : $loop->the_post(); ?>
+        while($loop->have_posts()) : $loop->the_post(); 
+		if (get_field('research_interests')):				
+						?>
           
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); ?>
 <div class="row mb-4 personlist-ht">
@@ -521,7 +523,7 @@ $args = array(
 </div>
 <?php
 echo do_shortcode('[vc_separator style="shadow" border_width="2"]');		 
-		 
+		 endif;
 		 endwhile;
      }
 ?>	
