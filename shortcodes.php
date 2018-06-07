@@ -449,11 +449,10 @@ $args = array(
 
      $loop = new WP_Query($args);
      if($loop->have_posts()) {
-$getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
-        
-		 while($loop->have_posts()) : $loop->the_post(); ?>
-          
 
+        while($loop->have_posts()) : $loop->the_post(); ?>
+          
+<?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">
 
