@@ -454,7 +454,7 @@ $args = array(
           
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 <div class="row mb-4 cat-border personlist-ht">
-	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">
+	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 catlist-photo mx-auto">
 
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
@@ -475,9 +475,8 @@ $args = array(
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle">
 				<?php
-			$term = get_queried_object();
 				// Get a list of terms for this post's custom taxonomy.
-				$project_cats = get_field('job_titles', $term);
+				$project_cats = get_the_terms($post->ID, 'job_titles');
 				// Renumber array.
 				$project_cats = array_values($project_cats);
 				for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
