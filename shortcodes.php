@@ -545,10 +545,7 @@ $args = array(
    
    
    
-   <?php
-		 endwhile;
-     }
-?>	
+<?php endwhile; ?>
 
 <?php	
 }
