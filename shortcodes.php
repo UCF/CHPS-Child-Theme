@@ -424,7 +424,7 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 
 <?php
 //  ------------------------------------------------------------------------
-// SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
+// SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
 function researchlistvar( $atts ) {
@@ -432,7 +432,12 @@ function researchlistvar( $atts ) {
         'department' => '',
     ), $atts );
 
-$args = array('post_type' => 'person',
+$args = array(
+		'post_type' => 'person',
+		'posts_per_page' => -1,
+		'meta_key' => 'profile_L_name',
+		'orderby' => 'meta_value',
+		'order' => 'ASC',
         'tax_query' => array(
             array(
                 'taxonomy' => 'departments',
@@ -444,7 +449,6 @@ $args = array('post_type' => 'person',
 
      $loop = new WP_Query($args);
      if($loop->have_posts()) {
-        echo '<h2>'.$custom_term->name.'</h2>';
 
         while($loop->have_posts()) : $loop->the_post();
             echo '<a href="'.get_permalink().'">'.get_the_title().'</a><br>';
