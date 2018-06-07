@@ -519,11 +519,9 @@ $args = array(
 
 	</div>
 </div>
- 
-   
-   
-   
-   <?php
+<?php
+echo do_shortcode('[vc_separator style="shadow" border_width="2"]');		 
+		 
 		 endwhile;
      }
 ?>	
