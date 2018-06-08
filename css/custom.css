@@ -185,6 +185,9 @@ span.searchresults	{
 		height:225px;
 	}
 }
+#researchIntList {
+	padding-left: 20px;
+}
 #researchIntList li{
 	list-style: none;
 }
