@@ -190,7 +190,9 @@ span.searchresults	{
 }
 #researchIntList li{
 	list-style: none;
-	font-size: 16px;
+	font-size: 15px;
+	margin-bottom: 8px;
+	
 }
 
 /* = NEWS Posts, BLOG, shortcode news results 
