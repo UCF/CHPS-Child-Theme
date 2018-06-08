@@ -48,7 +48,7 @@ $ids = get_the_ID();
 							endwhile;
 							$degreeIDs = implode(', ', $arrayDegree);
 
-						   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+						   echo '<span class"">, ' . $degreeIDs . '</span>';
 						}
 						?>		
 					</h1>

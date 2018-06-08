@@ -2,6 +2,7 @@
 /* =Theme customization starts here
 Yellow Color:                 #fecb2f;
 Yellow Hover Color:           #cca12e;
+Light Gray:                   #f2f2f2;
 -------------------------------------------------------------- */
 
 
@@ -194,7 +195,10 @@ span.searchresults	{
 	margin-bottom: 5px;
 	
 }
-
+directoryDegrees {
+	font-weight:200;
+	font-size:18px;
+}
 /* = NEWS Posts, BLOG, shortcode news results 
 -------------------------------------------------------------- */
 .spotlight-vertical .spotlight-header {
