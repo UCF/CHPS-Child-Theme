@@ -481,14 +481,14 @@ else {
 
 	<div class="col-lg-9 col-md-9 col-sm-8 col-8 px-4 py-0">
 
-		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><?php if( get_field('degrees') ) {
+		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><?php if( get_field(get_the_ID(), 'degrees') ) :
 							while ( have_rows('degrees') ) : the_row();
 							 $arrayDegree[] = get_sub_field('degree'); 
 							endwhile;
 							$degreeIDs = implode(', ', $arrayDegree);
 
 						   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
-						}
+						endif;
 						?></a></h2>
 
 		<?php
