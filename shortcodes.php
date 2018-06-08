@@ -432,12 +432,13 @@ function researchlistvar( $atts ) {
         'department' => '',
     ), $atts );
 
+if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
 		'posts_per_page' => -1,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
-		'order' => 'ASC',
+		'order' => 'ASC', 
         'tax_query' => array(
             array(
                 'taxonomy' => 'departments',
@@ -446,7 +447,16 @@ $args = array(
             ),
         ),
      );
-
+}
+else {
+	$args = array(
+		'post_type' => 'person',
+		'posts_per_page' => -1,
+		'meta_key' => 'profile_L_name',
+		'orderby' => 'meta_value',
+		'order' => 'ASC', 
+     );
+}
      $loop = new WP_Query($args);
      if($loop->have_posts()) {
 
