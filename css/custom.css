@@ -185,7 +185,9 @@ span.searchresults	{
 		height:225px;
 	}
 }
-
+#researchIntList li{
+	list-style: none;
+}
 
 /* = NEWS Posts, BLOG, shortcode news results 
 -------------------------------------------------------------- */
