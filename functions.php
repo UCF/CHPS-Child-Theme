@@ -82,6 +82,22 @@ function directory_sidebar() {
 }
 add_action( 'widgets_init', 'directory_sidebar' );
 
+// ADDING FACULTY RESEARCH SIDEBAR
+function facresearch_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Faculty Research' ),
+            'id' => 'facresearch-sidebar',
+            'description' => __( 'This is sidebar for the Faculty Research' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'facresearch_sidebar' );
+
 
 // ADDING FAQ SIDEBAR
 function faq_sidebar() {
