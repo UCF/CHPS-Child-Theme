@@ -513,7 +513,7 @@ $args = array(
 				<?php $termswer = get_field('research_interests');?>
 					<ul id="researchIntList">
 						<?php foreach( $termswer as $term ): ?>
-							<li><i class="fa fa-check iconyellow"></i> <?php echo $term->name; ?></li>
+							<li><i class="fa fa-check fa-lg iconyellow"></i> <?php echo $term->name; ?></li>
 						<?php endforeach; ?>
 					</ul>
 				</div>
