@@ -477,7 +477,7 @@ $args = array(
 							endwhile;
 							$degreeIDs = implode(', ', $arrayDegree);
 
-						   echo '<span class"directoryDegrees">, ' . $degreeIDs . '</span>';
+						   echo '<span class="directoryDegrees">, ' . $degreeIDs . '</span>';
 						}
 						?></a></h2>
 
