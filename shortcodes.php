@@ -431,11 +431,12 @@ function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
-
+	
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
-		'posts_per_page' => -1,
+		'posts_per_page' => 2,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -451,7 +452,7 @@ $args = array(
 else {
 	$args = array(
 		'post_type' => 'person',
-		'posts_per_page' => -1,
+		'posts_per_page' => 2,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -537,7 +538,10 @@ echo do_shortcode('[vc_separator style="shadow" border_width="2"]');
 		 endwhile;
      }
 ?>	
-
+<!-- then the pagination links -->
+				<div class="mt-5">
+					<?php wpbeginner_numeric_posts_nav(); ?>
+				</div>
 <?php	
 }
 add_shortcode( 'researchlist', 'researchlistvar' );
