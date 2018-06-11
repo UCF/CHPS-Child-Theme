@@ -6,14 +6,14 @@
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">TAX Search Results</h1>
+				<h1 class="archive-title heading-underline">Search Results</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
 			<?php echo do_shortcode( ' [wd_asp id=1] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">
-			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php echo "$s"; ?></strong></span>
+			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php echo ' '. $tax->name . ''; ?></strong></span>
 		</div>
 	</div>
 		
