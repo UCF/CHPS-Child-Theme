@@ -432,8 +432,7 @@ function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
-	
-if ( have_posts() ) :
+
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 if (!empty($r['department'])) { 
@@ -468,9 +467,9 @@ else {
 ?>
  
     <?php   
-     $wp_query = new WP_Query($args);
-	 while ( have_posts() ) : the_post();
-	?>
+     $loop = new WP_Query($args);
+
+        while($loop->have_posts()) : $loop->the_post(); ?>
 				
 					
 <?php if (get_field('research_interests')):	?>          
@@ -484,7 +483,6 @@ else {
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
 </div>
-<?php endif; ?>
 <?php	
 }
 add_shortcode( 'researchlist', 'researchlistvar' );
