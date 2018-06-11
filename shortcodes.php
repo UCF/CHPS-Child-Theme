@@ -440,7 +440,7 @@ if (!empty($r['department'])) {
 $args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
-		'posts_per_page' => 5,
+		'posts_per_page' => -1,
 	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
@@ -458,7 +458,7 @@ else {
 	$args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
-		'posts_per_page' => 5,
+		'posts_per_page' => -1,
 	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
