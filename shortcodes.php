@@ -435,7 +435,9 @@ function researchlistvar( $atts ) {
 if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
-		//'posts_per_page' => 5,
+	    'post_status' => 'publish',
+		'posts_per_page' => 5,
+	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -451,7 +453,9 @@ $args = array(
 else {
 	$args = array(
 		'post_type' => 'person',
-		//'posts_per_page' => 5,
+	    'post_status' => 'publish',
+		'posts_per_page' => 5,
+	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
