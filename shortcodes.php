@@ -427,17 +427,15 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
-					
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
-	
 
-if (!empty($r['department'])) { 	
+if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
-		'posts_per_page' => 3,
+		'posts_per_page' => -1,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -450,10 +448,10 @@ $args = array(
         ),
      );
 }
-else {	
+else {
 	$args = array(
 		'post_type' => 'person',
-		'posts_per_page' => 3,
+		'posts_per_page' => -1,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -539,13 +537,11 @@ echo do_shortcode('[vc_separator style="shadow" border_width="2"]');
 		 endwhile;
      }
 ?>	
-<!-- then the pagination links -->
-				<div class="mt-5">
-					<?php wpbeginner_numeric_posts_nav(); ?>
-				</div>
+
 <?php	
 }
 add_shortcode( 'researchlist', 'researchlistvar' );
 //  ------------------------------------------------------------------------
 ?>
+
 
