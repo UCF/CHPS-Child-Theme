@@ -22,9 +22,9 @@ $tax = $wp_query->get_queried_object();
 		<div class="row">
 			<div class="col-lg-9 col-md-12">
 			<?php if ( have_posts() ) : ?>
-			
+		
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				query_posts($query_string . '&post_type=person&posts_per_page=3&orderby=title&order=asc&paged='.$paged);				
+				query_posts($query_string . '&post_type=person&posts_per_page=5&meta_key=profile_L_name&orderby=meta_value&order=asc&paged='.$paged);				
 				
 				while ( have_posts() ) : the_post();
 
