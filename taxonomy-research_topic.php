@@ -10,7 +10,7 @@
 			</header>
 		</div>
 		<div class="col-lg-6">	
-			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
+			<?php echo do_shortcode( ' [wd_asp id=1] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">
 			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php echo "$s"; ?></strong></span>
