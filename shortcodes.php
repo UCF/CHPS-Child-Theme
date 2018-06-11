@@ -467,18 +467,19 @@ else {
 ?>
  
     <?php   
-     $wp_query = new WP_Query($args);
-				while ( have_posts() ) : the_post(); ?>
+     $loop = new WP_Query($args);
+     if($loop->have_posts()) {
+
+        while($loop->have_posts()) : $loop->the_post(); ?>
 				
 					
-<?php if (get_field('research_interests')):	?>
-          
+<?php if (get_field('research_interests')):	?>          
 <?php get_template_part( 'research-result'); ?>
 
 <?php	 
 		 endif;
 		 endwhile;
-   
+     }
 ?>	
 <!-- then the pagination links -->
 <div class="mt-5">
