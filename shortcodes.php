@@ -559,7 +559,7 @@ function topresearchvar( $atts ) {
     ), $atts );
 ?>      
 
-<?php wp_list_categories('number=5&show_count=0&orderby=count&order=DESC&title_li=&hierarchical=0&taxonomy=researchitems') ?>
+<?php wp_list_categories('number=5&show_count=1&orderby=count&order=DESC&title_li=&hierarchical=0&taxonomy=researchitems') ?>
 
 <?php	
 }
