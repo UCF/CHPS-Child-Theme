@@ -434,9 +434,7 @@ function researchlistvar( $atts ) {
     ), $atts );
 	
 
-if (!empty($r['department'])) { 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	
+if (!empty($r['department'])) { 	
 $args = array(
 		'post_type' => 'person',
 		'posts_per_page' => 3,
@@ -452,9 +450,7 @@ $args = array(
         ),
      );
 }
-else {
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	
+else {	
 	$args = array(
 		'post_type' => 'person',
 		'posts_per_page' => 3,
