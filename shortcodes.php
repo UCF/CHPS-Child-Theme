@@ -454,22 +454,12 @@ $args = array(
      );
 }
 else {
-	$args = array(
-		'post_type' => 'person',
-	    'post_status' => 'publish',
-		'posts_per_page' => -1,
-	    'paged' => $paged,
-		'meta_key' => 'profile_L_name',
-		'orderby' => 'meta_value',
-		'order' => 'ASC', 
-     );
+	query_posts($query_string . '&post_type=person&posts_per_page=3&meta_key=profile_L_name&orderby=meta_value&order=asc&paged='.$paged);
 }
 ?>
  
     <?php   
-     $loop = new WP_Query($args);
-
-        while($loop->have_posts()) : $loop->the_post(); ?>
+     while ( have_posts() ) : the_post(); ?>
 				
 					
 <?php if (get_field('research_interests')):	?>          
