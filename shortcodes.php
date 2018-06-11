@@ -431,45 +431,21 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
-    ), $atts );
+    ), $atts ); ?>
 
-$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	
-if (!empty($r['department'])) { 
-$args = array(
-		'post_type' => 'person',
-	    'post_status' => 'publish',
-		'posts_per_page' => -1,
-	    'paged' => $paged,
-		'meta_key' => 'profile_L_name',
-		'orderby' => 'meta_value',
-		'order' => 'ASC', 
-        'tax_query' => array(
-            array(
-                'taxonomy' => 'departments',
-                'field' => 'slug',
-                'terms' => $r['department'],
-            ),
-        ),
-     );
-}
-else {
-	$args = array(
-		'post_type' => 'person',
-	    'post_status' => 'publish',
-		'posts_per_page' => 3,
-	    'paged' => $paged,
-		'meta_key' => 'profile_L_name',
-		'orderby' => 'meta_value',
-		'order' => 'ASC', 
-     );
-}
-?>
- 
-    <?php   
-     $loop = new WP_Query($args);
-
-        while($loop->have_posts()) : $loop->the_post(); ?>
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$args = array( 
+					'post_type' => 'person', 
+					'post_status' => 'publish',
+					'posts_per_page' => 10, 
+					'paged' => $paged,
+					'meta_key' => 'profile_L_name',
+					'orderby' => 'meta_value',
+					'order' => 'ASC'
+				);
+				$wp_query = new WP_Query($args);
+				while ( have_posts() ) : the_post(); 
+				?>
 				
 					
 <?php if (get_field('research_interests')):	?>          
