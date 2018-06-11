@@ -116,7 +116,7 @@ $tax = $wp_query->get_queried_object();
         <?php endif; ?>
 			</div>
 			<div class="col-lg-3 profilesidebar">
-				<?php dynamic_sidebar( 'custom-side-bar' ); ?>
+				<?php dynamic_sidebar( 'facresearch-sidebar' ); ?>
 			</div>
 		</div>
 	</article>
