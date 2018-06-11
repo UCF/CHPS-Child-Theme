@@ -26,10 +26,7 @@ $tax = $wp_query->get_queried_object();
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				
 				while ( have_posts() ) : the_post();
-				
-				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
-				$display_name = get_the_author_meta( 'display_name', $post->post_author );
-				$categories = get_the_category();
+
 				?>
 				
 				<?php if( 'person' == get_post_type() ) { ?>      
