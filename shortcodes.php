@@ -432,14 +432,14 @@ function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
-}
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
-		'posts_per_page' => 4,
+		'posts_per_page' => -1,
 	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
@@ -457,25 +457,28 @@ else {
 	$args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
-		'posts_per_page' => 4,
+		'posts_per_page' => -1,
 	    'paged' => $paged,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
-     );						
-     $loop = new WP_Query($args);
-     if($loop->have_posts()) {
-
-        while($loop->have_posts()) : $loop->the_post(); 
-		if (get_field('research_interests')):				
-						?>
+     );
+}
+?>
+ 
+    <?php   
+     $wp_query = new WP_Query($args);
+				while ( have_posts() ) : the_post(); ?>
+				
+					
+<?php if (get_field('research_interests')):	?>
           
 <?php get_template_part( 'research-result'); ?>
 
 <?php	 
 		 endif;
 		 endwhile;
-     }
+   
 ?>	
 <!-- then the pagination links -->
 <div class="mt-5">
