@@ -432,6 +432,7 @@ function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
+}
 	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 if (!empty($r['department'])) { 
@@ -461,8 +462,7 @@ else {
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
-     );
-}
+     );						
      $loop = new WP_Query($args);
      if($loop->have_posts()) {
 
