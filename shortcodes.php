@@ -432,7 +432,8 @@ function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
-
+	
+if ( have_posts() ) :
 $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 if (!empty($r['department'])) { 
@@ -454,12 +455,20 @@ $args = array(
      );
 }
 else {
-	query_posts($query_string . '&post_type=person&posts_per_page=3&meta_key=profile_L_name&orderby=meta_value&order=asc&paged='.$paged);
+	$args = array(
+		'post_type' => 'person',
+	    'post_status' => 'publish',
+		'posts_per_page' => 3,
+	    'paged' => $paged,
+		'meta_key' => 'profile_L_name',
+		'orderby' => 'meta_value',
+		'order' => 'ASC', 
+     );
 }
 ?>
  
     <?php   
-     while ( have_posts() ) : the_post(); ?>
+     while ( have_posts() ) : the_post();?>
 				
 					
 <?php if (get_field('research_interests')):	?>          
@@ -473,6 +482,7 @@ else {
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
 </div>
+<?php endif; ?>
 <?php	
 }
 add_shortcode( 'researchlist', 'researchlistvar' );
