@@ -468,7 +468,9 @@ else {
 ?>
  
     <?php   
-     while ( have_posts() ) : the_post();?>
+     $wp_query = new WP_Query($args);
+	 while ( have_posts() ) : the_post();
+	?>
 				
 					
 <?php if (get_field('research_interests')):	?>          
