@@ -427,12 +427,13 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+						
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts );
 
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 	
 if (!empty($r['department'])) { 
 $args = array(
