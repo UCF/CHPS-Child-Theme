@@ -437,7 +437,7 @@ function researchlistvar( $atts ) {
 				$args = array( 
 					'post_type' => 'person', 
 					'post_status' => 'publish',
-					'posts_per_page' => 10, 
+					'posts_per_page' => 3, 
 					'paged' => $paged,
 					'meta_key' => 'profile_L_name',
 					'orderby' => 'meta_value',
