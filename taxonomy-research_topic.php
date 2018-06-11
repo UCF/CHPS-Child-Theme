@@ -33,7 +33,7 @@ $tax = $wp_query->get_queried_object();
 				?>
 				
 				<?php if( 'person' == get_post_type() ) { ?>      
-					<?php get_template_part( 'person-result'); ?>
+					<?php get_template_part( 'research-result'); ?>
 					
 				<?php }		
 				endwhile; ?>
