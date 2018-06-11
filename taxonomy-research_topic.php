@@ -15,7 +15,7 @@ $tax = $wp_query->get_queried_object();
 			<?php echo do_shortcode( ' [wd_asp id=1] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">
-			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong class="capitalText"><?php echo ' '. $tax->name . ''; ?></strong></span>
+			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong id="capitalText"><?php echo ' '. $tax->name . ''; ?></strong></span>
 		</div>
 	</div>
 		
