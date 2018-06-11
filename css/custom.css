@@ -41,7 +41,7 @@ h2 {
 .text-white {
 	color: #fff !important;
 }
-#capitalText, .tlw-list li {
+#capitalText, .tlw-list li a {
 	text-transform:capitalize;
 }
 .listnone {
