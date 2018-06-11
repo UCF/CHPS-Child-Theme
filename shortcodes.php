@@ -434,17 +434,10 @@ function researchlistvar( $atts ) {
     ), $atts ); ?>
 
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array( 
-					'post_type' => 'person', 
-					'post_status' => 'publish',
-					'posts_per_page' => 3, 
-					'paged' => $paged,
-					'meta_key' => 'profile_L_name',
-					'orderby' => 'meta_value',
-					'order' => 'ASC'
-				);
-				$wp_query = new WP_Query($args);
-				while ( have_posts() ) : the_post(); 
+				query_posts($query_string . '&post_type=person&posts_per_page=10&meta_key=profile_L_name&orderby=meta_value&order=asc&paged='.$paged);				
+				
+				while ( have_posts() ) : the_post();
+
 				?>
 				
 					
