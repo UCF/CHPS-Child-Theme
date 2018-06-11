@@ -436,7 +436,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
-		'posts_per_page' => 2,
+		'posts_per_page' => 3,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
@@ -452,7 +452,7 @@ $args = array(
 else {
 	$args = array(
 		'post_type' => 'person',
-		'posts_per_page' => 2,
+		'posts_per_page' => 3,
 		'meta_key' => 'profile_L_name',
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
