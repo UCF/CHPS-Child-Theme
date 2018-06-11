@@ -75,7 +75,10 @@ h2 {
 .btnhover-black a:hover {
 	background: #404040 !important;
 }
-
+#height0FIX {
+    height:0px !important;
+    overflow: hidden !important;
+}
 
 
 /* = Homepage Title
