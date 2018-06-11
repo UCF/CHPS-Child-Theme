@@ -427,7 +427,6 @@ add_shortcode( 'socialicons', 'socialiconvar' );
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
-	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 						
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
@@ -436,6 +435,8 @@ function researchlistvar( $atts ) {
 
 	
 if (!empty($r['department'])) { 
+	$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+	
 $args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
@@ -454,6 +455,8 @@ $args = array(
      );
 }
 else {
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
 	$args = array(
 		'post_type' => 'person',
 	    'post_status' => 'publish',
