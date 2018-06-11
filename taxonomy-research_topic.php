@@ -1,4 +1,6 @@
-<?php get_header();?>
+<?php get_header();
+$tax = $wp_query->get_queried_object();
+?>
 
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
