@@ -544,28 +544,3 @@ add_shortcode( 'researchlist', 'researchlistvar' );
 //  ------------------------------------------------------------------------
 ?>
 
-
-
-
-
-<?php
-//  ------------------------------------------------------------------------
-// SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
-//
-// [topresearch]
-function topresearchvar( $atts ) {
-    $t = shortcode_atts( array(
-        'department' => '',
-    ), $atts );
-?>      
-
-<?php wp_list_categories('number=5&show_count=1&orderby=count&order=DESC&title_li=&hierarchical=0&taxonomy=researchitems') ?>
-
-<?php	
-}
-add_shortcode( 'topresearch', 'topresearchvar' );
-//  ------------------------------------------------------------------------
-?>
-
-
-
