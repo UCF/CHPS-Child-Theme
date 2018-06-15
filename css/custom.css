@@ -383,7 +383,7 @@ a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.ig-social
 	color: #fff;
 	font-weight: 400;
 }
-.ucf-events-classic .ucf-events-subheadings, .ucf-events-classic .ucf-event-location {
+.ucf-events-classic .ucf-events-subheadings, .ucf-events-classic .ucf-event-location, .nodescrip .ucf-event-description-wrapper {
 	display: none;
 }
 #events-section-title {
