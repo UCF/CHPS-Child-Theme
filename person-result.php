@@ -1,7 +1,6 @@
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">
-
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
 				<img src="<?php echo $getimageURL; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
@@ -12,11 +11,8 @@
 		<?php } ?>
 		   </a> 
 	</div>
-
 	<div class="col-lg-7 col-md-9 col-sm-8 col-8 p-3">
-
 		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
 		<?php
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle">
@@ -35,7 +31,6 @@
 				}?>
 			</div>
 		<?php }	?>
-
 		<?php
 		if(get_the_terms($post->ID, 'departments')){ ?>
 			<div class="profiledepartments">
@@ -54,8 +49,6 @@
 				}?>
 			</div>
 		<?php }	?>
-
-
 		<?php if(get_field('building')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
@@ -85,7 +78,6 @@
 					</div>
 				</div>
 		<?php }	?>	
-
 		<?php if(get_field('phone_number')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
@@ -93,9 +85,6 @@
 					</div>
 				</div>
 		<?php }	?>
-
-
-
 	</div>
 	<div class="col-lg-3 p-3 extraprofile">
 		<div class="row mt-3 mb-5 pl-3 leftborder">
@@ -114,7 +103,6 @@
 				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>">Linkedin</a>
 			</div>
 			<?php endif; ?>
-
 		</div>
 	</div>
 </div>

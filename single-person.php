@@ -4,7 +4,6 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' )
 $buildingMap = get_field('building');
 $ids = get_the_ID();
 ?>
-
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
 		<div class="col-lg-6">	
@@ -19,16 +18,12 @@ $ids = get_the_ID();
 			<a href="/directory/" title="Back to the Directory"><i class="fa fa-chevron-circle-left icongrey"></i><span class="searchresults">Back to the Full Directory</strong></span></a>
 		</div>
 	</div>
-
 <article class="<?php echo $post->post_status; ?> post-list-item">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-4 mb-5">
-
 				<aside class="person-contact-container">
-
 					<div class="mb-4" style="text-align: center;">
-		
 <div id="profileIMG">
 	<?php if ( has_post_thumbnail()) { ?>
 		<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo get_person_name( $post ); ?> at UCF" ><img width="100%" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php echo $getimageURL ?>" /></a>
@@ -38,22 +33,17 @@ $ids = get_the_ID();
 		<?php restore_current_blog(); ?>	
 	<?php } ?>
 </div>
-						
 					</div>
-
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 							 $arrayDegree[] = get_sub_field('degree'); 
 							endwhile;
 							$degreeIDs = implode(', ', $arrayDegree);
-
 						   echo '<span class"">, ' . $degreeIDs . '</span>';
 						}
 						?>		
 					</h1>
-
-					
 					<div class="person-job-title text-center mb-4">
 						<?php
 						if(get_field('job_titles_tax')){ ?>
@@ -74,7 +64,6 @@ $ids = get_the_ID();
 							</div>
 						<?php }	?>
 					</div>
-					
 					<?php if (get_field('cv')): ?>	
 						<div class="row mt-3 mb-5">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
@@ -82,8 +71,6 @@ $ids = get_the_ID();
 							</div>
 						</div>
 					<?php endif; ?>					
-
-<!-- DAVID's REWORKED LOCATION, EMAIL, PHONE -->
 <?php if(get_field('department_tax')){ ?>
 	<div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
@@ -92,7 +79,6 @@ $ids = get_the_ID();
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<ul class="list-unstyled mb-0">
 				<?php
-				// Renumber array.
 				$project_depts = array_values($project_depts);
 				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {  ?>
 					<li><?php echo $project_depts[$dept_count]->name; ; ?></li>
@@ -102,7 +88,6 @@ $ids = get_the_ID();
 	</div>
 	<hr class="my-2">
 <?php }	?>	
-							
 <?php if(get_field('building')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
@@ -188,7 +173,6 @@ $ids = get_the_ID();
 <?php }
 ?>	
 <style>
-
 #profileIMG {
 	text-align: center;
 	max-width: 250px;
@@ -197,27 +181,12 @@ $ids = get_the_ID();
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
 }
 header div.container{display: none;}	
-
-
-
-
-					
-					</style>				
-<!-- END DAVID's REWORKED LOCATION, EMAIL, PHONE -->						
-
-
-					<!-- TODO office hours?? -->
-
+</style>				
 				</aside>
-
 			</div>
-
 			<div class="col-md-8 pl-md-5">
-
 				<section class="person-content">
-
 <?php 
-
 $posts = get_posts(array(
 	'numberposts'	=> -1,
 	'post_type'		=> 'post',
@@ -230,21 +199,15 @@ $posts = get_posts(array(
 			'compare' => 'LIKE'
 			  )
 		 )
-						
 ));
 ?>
-		
 		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-square vc_tta-spacing-1 vc_tta-o-no-fill vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><?php if (get_field('biography')||get_field('degrees')||get_field('affiliations')): ?><li class="vc_tta-tab vc_active" data-vc-tab><a href="#biography" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Biography</span></a></li><?php endif; ?><?php if (get_field('research_info')||get_field('research_interests')): ?><li class="vc_tta-tab" data-vc-tab><a href="#research" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Research</span></a></li><?php endif; ?><?php if (have_rows('add_courses')):?><li class="vc_tta-tab" data-vc-tab><a href="#courses" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Courses</span></a></li><?php endif; ?><?php if ($posts): ?><li class="vc_tta-tab" data-vc-tab><a href="#news" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">News</span></a></li><?php endif; ?>	
-
-					   
 					</ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels">
-
 					<?php if (get_field('biography')||get_field('degrees')||get_field('affiliations')): ?>
 					<div class="vc_tta-panel vc_active" id="biography" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#biography" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Biography</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
 								<span class="mb-4"><?php the_field('biography'); ?></span>
-
 								<?php if (have_rows('degrees') ) { 	?>
 									<div class="mb-4">
 										<h5>Credentials</h5>
@@ -258,7 +221,6 @@ $posts = get_posts(array(
 										 </ul>
 									 </div>
 								<?php }?>
-
 								<?php if (have_rows('affiliations') ) { ?>
 									<h5>Affiliations</h5>
 										<ul>
@@ -271,13 +233,11 @@ $posts = get_posts(array(
 						</div>
 					</div></div>
 					<?php endif; ?>
-
 					<?php if (get_field('research_info')||get_field('research_interests')): ?> <!-- THIS NEEDS FIXING tax? -->
 					<div class="vc_tta-panel" id="research" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#research" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Research</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
 								<?php the_field('research_info'); ?>
-
 								<?php $termswer = get_field('research_interests');
 									if( $termswer ): 
 										echo '<h5>Research Interests</h5>';
@@ -292,7 +252,6 @@ $posts = get_posts(array(
 						</div>
 					</div></div>
 					<?php endif; ?>
-
 					<?php if (have_rows('add_courses')):?>
 					<div class="vc_tta-panel" id="courses" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#courses" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Courses</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
@@ -328,7 +287,6 @@ $posts = get_posts(array(
 										?>
 									</li>
 									<?php endforeach; ?>
-									
 								<?php wp_reset_postdata(); ?>      	
 							</div>
 						</div>
@@ -341,7 +299,6 @@ $posts = get_posts(array(
 			$( "ul.vc_tta-tabs-list li" ).first().addClass( "vc_active" );
 			$( ".vc_tta-panels .vc_tta-panel" ).first().addClass( "vc_active" );
 			</script>	
-
 		</div>
 	</article>
 </div>   

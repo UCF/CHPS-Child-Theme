@@ -1,10 +1,8 @@
 <?php get_header();
 $tax = $wp_query->get_queried_object();
 ?>
-
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
-	
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
@@ -18,33 +16,22 @@ $tax = $wp_query->get_queried_object();
 			<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong id="capitalText"><?php echo ' '. $tax->name . ''; ?></strong></span>
 		</div>
 	</div>
-		
 		<div class="row">
 			<div class="col-lg-9 col-md-12">
 			<?php if ( have_posts() ) : ?>
-		
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				query_posts($query_string . '&post_type=person&posts_per_page=10&meta_key=profile_L_name&orderby=meta_value&order=asc&paged='.$paged);				
-				
 				while ( have_posts() ) : the_post();
-
 				?>
-				
 				<?php if( 'person' == get_post_type() ) { ?>      
 					<?php get_template_part( 'research-result'); ?>
-					
 				<?php }		
 				endwhile; ?>
-
-				<!-- then the pagination links -->
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
-		
 		<?php else : ?>
- 
             Sorry No Pages or News Posts Match Your Search
- 
         <?php endif; ?>
 			</div>
 			<div class="col-lg-3 profilesidebar">
@@ -57,7 +44,6 @@ $tax = $wp_query->get_queried_object();
 header div.container {
 	display: none;
 }	
-
 .authortext {
 	text-transform: uppercase;
 	font-size: 12px;
@@ -80,7 +66,5 @@ div.widget-content ul li {
 	padding:6px 0px;
 	font-size: 14px !important;
 }
-
 </style>
 <?php get_footer(); ?>
-

@@ -1,7 +1,6 @@
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); ?>
 <div class="row mb-4 personlist-ht">
 	<div class="col-lg-3 col-md-3 col-sm-4 col-4 px-2 py-0">
-
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
 				<img src="<?php echo $getimageURL; ?>" width="100%" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="">
@@ -12,11 +11,8 @@
 		<?php } ?>
 		   </a> 
 	</div>
-
 	<div class="col-lg-9 col-md-9 col-sm-8 col-8 px-4 py-0">
-
 		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
 		<?php
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle mb-2">
@@ -35,7 +31,6 @@
 				}?>
 			</div>
 		<?php }	?>
-	
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
@@ -43,7 +38,6 @@
 					</div>
 				</div>
 		<?php }	?>	
-
 		<?php if(get_field('phone_number')){ ?>
 			<div class="row mb-2">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
@@ -51,7 +45,6 @@
 					</div>
 				</div>
 		<?php }	?>
-		
 			<div class="row">
 				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
 				<?php $termswer = get_field('research_interests');?>
@@ -62,8 +55,6 @@
 					</ul>
 				</div>
 			</div>
-
 	</div>
 </div>
-
 <?php echo do_shortcode('[vc_separator style="shadow" border_width="2"]'); ?>	

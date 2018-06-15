@@ -4,8 +4,6 @@ Template Name: Directory
 */
 ?>
 <?php get_header(); the_post(); ?>
-
-
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row mb-4">
@@ -18,10 +16,8 @@ Template Name: Directory
 				<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 			</div>
 		</div>
-		
 		<div class="row">
 			<div class="col-lg-9 col-md-12">
-				
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array( 
 					'post_type' => 'person', 
@@ -35,16 +31,12 @@ Template Name: Directory
 				$wp_query = new WP_Query($args);
 				while ( have_posts() ) : the_post(); 
 				?>
-				
 				<?php get_template_part( 'person-result'); ?>
-				
 				<?php endwhile; ?>
-
 				<!-- then the pagination links -->
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
-		
 			</div>
 			<div class="col-lg-3 profilesidebar">
 				<?php dynamic_sidebar( 'directory-sidebar' ); ?>

@@ -4,8 +4,6 @@ Template Name: Blog
 */
 ?>
 <?php get_header(); the_post(); ?>
-
-
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		
@@ -19,12 +17,8 @@ Template Name: Blog
 			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
 	</div>
-		
-		
-		
 		<div class="row">
 			<div class="col-md-9">
-				
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				$args = array( 'post_type' => 'post', 'posts_per_page' => 10, 'paged' => $paged );
 				$wp_query = new WP_Query($args);
@@ -33,10 +27,8 @@ Template Name: Blog
 					$display_name = get_the_author_meta( 'display_name', $post->post_author );
 					$categories = get_the_category();
 				?>
-				
 					<div class="row mb-4 cat-border">
 						<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
-							
 							   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 							   <?php if ( has_post_thumbnail()) { ?>
 								<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
@@ -46,9 +38,7 @@ Template Name: Blog
 								<?php restore_current_blog(); ?>
 							<?php } ?>
 							   </a>
-							 
 						</div>
-
 						<div class="col-lg-9 p-4">
 							<?php 
 								if ( ! empty( $categories ) ) {
@@ -56,9 +46,7 @@ Template Name: Blog
 								}
 							?>
 							<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
 							<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
-
 							<div class="entry">
 							<?php
 								echo wp_trim_words( get_the_content(), 30, '...' );
@@ -67,12 +55,9 @@ Template Name: Blog
 						</div>
 					</div>
 				<?php endwhile; ?>
-
-				<!-- then the pagination links -->
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
-		
 			</div>
 			<div class="col-md-3">
 				<?php if ( is_active_sidebar( 'custom-side-bar' ) ) : ?>
@@ -80,16 +65,9 @@ Template Name: Blog
 				<?php endif; ?>
 			</div>
 		</div>
-	
-	
-	
-		
 	</article>
 </div>
 <style>
-	
-	
-	
 .site-header .container h1 {
 	display: none !important;
 }
@@ -115,7 +93,5 @@ div.widget-content ul li {
 	padding:6px 0px;
 	font-size: 14px !important;
 }
-
-
 </style>
 <?php get_footer(); ?>

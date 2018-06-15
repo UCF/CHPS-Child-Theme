@@ -1,4 +1,4 @@
-		</main>
+</main>
 <?php switch_to_blog(2);?>	
 		<footer class="site-footer bg-inverse">
 			<div class="container">
@@ -38,7 +38,6 @@
 				</div>
 			</div>
 		</footer>
-		 		
 		<footer class="ucf-footer">
 			<a class="ucf-footer-title" href="/"><?php the_field('footer_college_name', 'option'); ?></a>
 				<div class="ucf-social-icons">
@@ -68,20 +67,12 @@
 				&copy; <a href="https://www.ucf.edu/">University of Central Florida</a>
 			</p>
 		</footer>
-
-
 <style>
-
 .ucf-footer{background-color:#3e3e3e;box-sizing:border-box;display:block;margin:0;padding:30px 15px;text-align:center;width:100%}
-
 .ucf-footer a,.ucf-footer p,.ucf-footer-title,.ucf-footer span{color:#fff;font-family:"Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;-moz-osx-font-smoothing:auto;-webkit-font-smoothing:auto}
 .ucf-footer-title{display:block;font-size:18px;font-weight:300;letter-spacing:3px;line-height:1.4;margin-bottom:12px;text-transform:uppercase}@media (min-width:768px){.ucf-footer{padding:60px}.ucf-footer-title{font-size:22px}}
-
 .ucf-footer-address{font-size:10px;font-weight:300;line-height:1.8;margin-bottom:0;margin-top:25px}@media (min-width:768px){.ucf-footer-address{font-size:12px}}
-	
-	
 	.ucf-footer-nav p {font-size:12px;font-weight:lighter!important;line-height:1.4;color:#E2E2E2;letter-spacing:1px;}
-	
 	a.ucf-footer-nav{font-size:inherit;font-weight:inherit}a.ucf-footer-nav,a.ucf-footer-nav:active,a.ucf-footer-nav:focus,a.ucf-footer-nav:hover{color:#fff}a.ucf-footer-nav:active,a.ucf-footer-nav:focus,a.ucf-footer-nav:hover{text-decoration:underline}
 	.ucf-social-icons .ucf-social-link.grey {color: #3e3e3e;background: #ffffff;}
 .site-footer {
@@ -97,9 +88,7 @@
 			display: none;
 		}		
 	}
-
 .primary-footer-section-center h2, .primary-footer-section-center h6 {font-weight: 300 !important; font-size: 14px !important;}
-	
 .primary-footer-section-center .heading-underline-inverse::after, .primary-footer-section-center .heading-underline::after {
     height: 1px !important;
 	border-bottom-width:1px !important;
@@ -141,7 +130,6 @@
 	}
 </style>				
 <!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
-		
 <?php restore_current_blog(); ?>		
 		<?php wp_footer(); ?>
 	</body>

@@ -1,14 +1,7 @@
-<?php
-$display_name = get_the_author_meta( 'display_name', $post->post_author );
-?>
-<?php get_header();?>
-
+<?php $display_name = get_the_author_meta( 'display_name', $post->post_author ); get_header();?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
-		<?php 
-			// Check if there are any posts to display
-			if ( have_posts() ) : ?>
-			
+		<?php if ( have_posts() ) : ?>
 	<div class="row mb-4">
 		<div class="col-lg-7">	
 			<header class="archive-header">
@@ -19,15 +12,12 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
 			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
 	</div>			
-
-		
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
         <div class="col-md-9">
         	<?php while ( have_posts() ) : the_post(); 
 			$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 			?>
-			
 			<div class="row mb-4 cat-border">
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
 					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -40,20 +30,14 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
 						<?php } ?>
 				   </a>
 				</div>
-				
 				<div class="col-lg-9 p-4">
 					<h2 class="h5"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-			
 					<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
-
 					<div class="entry">
-					<?php
-						echo wp_trim_words( get_the_content(), 30, '...' );
-					?>
+					<?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
 					</div>
 				</div>
 			</div>
-
 			<?php endwhile; 
 			else: ?>
 			<p>Sorry, no posts matched your criteria.</p>
@@ -69,13 +53,8 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
         </div>
     </div>
 </div>
-		
-		
-		
-			
 	</article>
 </div>
-
 <style>
 .site-header .container h1 {
 	display: none !important;
@@ -121,11 +100,9 @@ div.widget-content ul li {
     color: #fff;
     text-decoration:none;
 }
- 
 .navigation li {
     display: inline;
 }
- 
 .navigation li a,
 .navigation li a:hover,
 .navigation li.active a,
@@ -136,7 +113,6 @@ div.widget-content ul li {
     padding: 12px;
     padding: 0.75rem;
 }
- 
 .navigation li a:hover,
 .navigation li.active a {
     background-color: #3C8DC5;

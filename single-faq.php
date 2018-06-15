@@ -3,7 +3,6 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
 ?>
-
 <div class="container mt-3 mt-sm-4 mt-md-5 mb-3">
 	<?php 
 		if ( ! empty( $categories ) ) {
@@ -12,12 +11,9 @@ $categories = get_the_category();
 	?>
 	<h1 class="posttitle"><?php the_title(); ?></h1>
 </div>
-
 <div class="container">
 	<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>
-
 </div>
-
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
         <div class="col-md-9">
@@ -30,14 +26,12 @@ $categories = get_the_category();
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
-
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
 							<div id="imgRight">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
-
 					   <?php if( get_field('featimg_location') == 'Left Aligned' ): ?>
 							<div id="imgLeft">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
@@ -57,8 +51,6 @@ $categories = get_the_category();
         </div>
     </div>
 </div>
-
-
 <style>
 .site-header .container h1 {
 	display: none !important;
@@ -123,5 +115,4 @@ div.widget-content ul li {
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111"></script>
-
 <?php get_footer(); ?>

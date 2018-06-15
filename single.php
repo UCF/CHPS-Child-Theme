@@ -32,14 +32,12 @@ $categories = get_the_category();
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
-
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
 							<div id="imgRight">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
-
 					   <?php if( get_field('featimg_location') == 'Left Aligned' ): ?>
 							<div id="imgLeft">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
@@ -53,7 +51,6 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-       
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
@@ -68,12 +65,9 @@ $categories = get_the_category();
         <div class="col-md-1"></div>
     </div>
 </div>
-
-
 <style>
 .site-header .container h1 {display: none !important;}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
-
 <?php get_footer(); ?>
