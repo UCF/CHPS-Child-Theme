@@ -1,10 +1,8 @@
-<?php
-// [exnews number=""]
+<?php // [exnews number=""] 
 function externalnewsvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '12',
     ), $atts );
-	
 		$externalnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
@@ -64,8 +62,7 @@ function externalnewsvar( $atts ) {
     font-style: italic;
 }
 </style>
-<?php	
-}
+<?php }
 add_shortcode( 'exnews', 'externalnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
@@ -78,9 +75,7 @@ function newsvisualvar( $atts ) {
         'category' => '0',
 		'column' => '4',
     ), $atts );
-
 $category_id = get_cat_ID($a['category']);	
-	
 		$visualnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
@@ -89,14 +84,11 @@ $category_id = get_cat_ID($a['category']);
 				'posts_per_page' => $a['number'],
 				'cat' => $category_id,
 				)
-			);
-			
-?> 							
+			); ?> 							
  <div class="container newsmedia">
     <div class="row narrow-gutter row-flex">
 		<?php while($visualnews->have_posts()) : $visualnews->the_post();
-	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-		?><!-- START THE REPEAT SECTION -->   
+	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];	?><!-- START THE REPEAT SECTION -->   
 			<?php if ($a['column'] == '3') { ?> 
 				<div class="col-lg-4 col-sm-6 col-xs-12">
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
@@ -147,11 +139,6 @@ $category_id = get_cat_ID($a['category']);
 .newsmedia .visnews:hover {
   background: #eee;
 }	
-/* ----------------------- */	
-/*                         */
-/* START RECURRING STYLING */
-/*                         */	
-/* ----------------------- */	
 .newsmedia .col-xs-12 a {
     color:#000;
     text-decoration:none !important;
@@ -175,8 +162,7 @@ $category_id = get_cat_ID($a['category']);
     font-style: italic;
 } /* START RECURRING STYLING */	
 </style>
-<?php	
-}
+<?php }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ------------------------------------------------------------------------
 ?><?php
@@ -189,7 +175,6 @@ function recnewsvar( $atts ) {
         'number' => '10',
         //'category' => 'something else',
     ), $atts );
-	
 		$recnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
@@ -214,8 +199,7 @@ function recnewsvar( $atts ) {
     </div>
 </div>
 <?php wp_reset_query(); ?> 
-<?php	
-}
+<?php }
 add_shortcode( 'recentnews', 'recnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
@@ -227,9 +211,7 @@ function chpsnewsvar( $atts ) {
         'number' => '3',
         'category' => '0',
     ), $atts );
-	
 $category_id = get_cat_ID($c['category']);	
-	
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
@@ -244,8 +226,7 @@ $category_id = get_cat_ID($c['category']);
 		<?php while($chpsnews->have_posts()) : $chpsnews->the_post();
 			$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 			$display_name = get_the_author_meta( 'display_name')[0];
-			$categories = get_the_category();
-		?>	
+			$categories = get_the_category(); 	?>	
 			<!-- START THE REPEAT SECTION -->   
 			<div class="row mb-5 chpsnews">
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
@@ -258,24 +239,19 @@ $category_id = get_cat_ID($c['category']);
 					   </a>
 				</div>
 				<div class="col-lg-9 px-4 py-0">
-					<?php 
-						if ( ! empty( $categories ) ) {
+					<?php if ( ! empty( $categories ) ) {
 							echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-						}
-					?>
+						} ?>
 					<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<div class="entry">
-					<?php
-						echo wp_trim_words( get_the_content(), 30, '...' );
-					?>
+					<?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
 					</div>
 				</div>
 			</div>	<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
     </div>
 </div>
-<?php wp_reset_query(); ?> <?php	
-}
+<?php wp_reset_query(); ?> <?php }
 add_shortcode( 'chpsnews', 'chpsnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
@@ -362,8 +338,7 @@ function socialiconvar( $atts ) {
 		</span></a><?php } ?>
 	</div>
 </div>
-<?php	
-}
+<?php }
 add_shortcode( 'socialicons', 'socialiconvar' );
 //  ------------------------------------------------------------------------
 ?><?php
@@ -380,12 +355,8 @@ function minisocialvar( $atts ) {
 		'in' => '',
 		'align' => 'left',
 		'size' => '',
-    ), $atts );
-	
-?>	
-<div style="text-align: <?php echo $s['align']; ?>;"><?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></span><?php } ?>
-<?php	
-}
+    ), $atts ); ?>	
+<div style="text-align: <?php echo $s['align']; ?>;"><?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack <?php echo $s['size']; ?>"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a></span><?php } ?><?php }
 add_shortcode( 'minisocial', 'minisocialvar' );
 //  ------------------------------------------------------------------------
 ?><?php
@@ -426,22 +397,16 @@ else {
 		'orderby' => 'meta_value',
 		'order' => 'ASC', 
      );
-}
-?>
-    <?php   
+} ?><?php   
      $loop = new WP_Query($args);
         while($loop->have_posts()) : $loop->the_post(); ?>
 <?php if (get_field('research_interests')):	?>          
 <?php get_template_part( 'research-result'); ?>
-<?php	 
-		 endif;
-		 endwhile;
-?>	<!-- then the pagination links -->
+<?php	 endif;
+		 endwhile; ?>	<!-- then the pagination links -->
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
 </div>
-<?php	
-}
-add_shortcode( 'researchlist', 'researchlistvar' );
+<?php } add_shortcode( 'researchlist', 'researchlistvar' );
 //  ------------------------------------------------------------------------
 ?>
