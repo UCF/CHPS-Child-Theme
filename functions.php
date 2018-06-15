@@ -1,4 +1,3 @@
-
 <?php // ADDED BY DAVID JANOSIK
 include 'shortcodes.php';
 
