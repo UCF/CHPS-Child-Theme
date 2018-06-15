@@ -67,10 +67,7 @@ function externalnewsvar( $atts ) {
 <?php	
 }
 add_shortcode( 'exnews', 'externalnewsvar' );
-?>
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS VERTICALLY IN BOXES 
 //
@@ -98,10 +95,8 @@ $category_id = get_cat_ID($a['category']);
  <div class="container newsmedia">
     <div class="row narrow-gutter row-flex">
 		<?php while($visualnews->have_posts()) : $visualnews->the_post();
-		
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-		?>	
-			<!-- START THE REPEAT SECTION -->   
+		?><!-- START THE REPEAT SECTION -->   
 			<?php if ($a['column'] == '3') { ?> 
 				<div class="col-lg-4 col-sm-6 col-xs-12">
 					<a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
@@ -125,8 +120,7 @@ $category_id = get_cat_ID($a['category']);
 							</div>
 						</div>
 					</a>
-				</div>
-			<!-- END OF THE REPEAT SECTION -->		
+				</div><!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
     </div>
 </div>
@@ -169,7 +163,6 @@ $category_id = get_cat_ID($a['category']);
 [class*="col-"] {
   margin-bottom: 12px;
 }
-
 .newsmedia .narrow-gutter [class*='col-'] {
   padding-right:6px;
   padding-left:6px;
@@ -180,19 +173,13 @@ $category_id = get_cat_ID($a['category']);
     font-weight:normal;
     color: #aaa;
     font-style: italic;
-}
-/* START RECURRING STYLING */	
+} /* START RECURRING STYLING */	
 </style>
 <?php	
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ------------------------------------------------------------------------
-?>
-
-
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
 //
@@ -227,20 +214,10 @@ function recnewsvar( $atts ) {
     </div>
 </div>
 <?php wp_reset_query(); ?> 
-<style>	
-
-</style>
 <?php	
 }
 add_shortcode( 'recentnews', 'recnewsvar' );
-?>
-
-
-
-
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS HORIZONTAL ON HOMEPAGE
 //
@@ -272,7 +249,6 @@ $category_id = get_cat_ID($c['category']);
 			<!-- START THE REPEAT SECTION -->   
 			<div class="row mb-5 chpsnews">
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
-					
 					   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 					   <?php if ( has_post_thumbnail()) { ?>
 							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
@@ -281,7 +257,6 @@ $category_id = get_cat_ID($c['category']);
 						<?php } ?>
 					   </a>
 				</div>
-
 				<div class="col-lg-9 px-4 py-0">
 					<?php 
 						if ( ! empty( $categories ) ) {
@@ -289,34 +264,20 @@ $category_id = get_cat_ID($c['category']);
 						}
 					?>
 					<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
-					<!--
-					<span class="authortext">Written By: <?php //if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php //the_time('F j, Y'); ?></span> -->
-
 					<div class="entry">
 					<?php
 						echo wp_trim_words( get_the_content(), 30, '...' );
 					?>
 					</div>
 				</div>
-			</div>
-			<!-- END OF THE REPEAT SECTION -->		
+			</div>	<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
     </div>
-    
 </div>
-<?php wp_reset_query(); ?> 
-<style>	
-
-	
-</style>
-<?php	
+<?php wp_reset_query(); ?> <?php	
 }
 add_shortcode( 'chpsnews', 'chpsnewsvar' );
-?>
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
 //
@@ -328,8 +289,7 @@ function searchmevar( $atts ) {
 		'placeholder' => 'Search',
 		'color' => 'yellow',
 		'addposts' => 'false',
-    ), $atts );
-?> 	
+    ), $atts ); ?> 	
 <div>
 	<form id="searchform" action="<?php echo get_site_url(); ?>/" method="get">
 		<div class="row">
@@ -366,19 +326,9 @@ function searchmevar( $atts ) {
 		</div>
 	</form>
 </div>
-
-
 <?php wp_reset_query(); ?> 
-<style>	
-
-</style>
-<?php	
-}
-add_shortcode( 'searchme', 'searchmevar' );
-?>
-
-
-<?php
+<?php	}
+add_shortcode( 'searchme', 'searchmevar' ); ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 //
@@ -391,9 +341,7 @@ function socialiconvar( $atts ) {
 		'yt' => '',
 		'in' => '',
 		'align' => 'left',
-    ), $atts );
-	
-?>	
+    ), $atts ); ?>	
 <div class="socialicons" style="text-align: <?php echo $s['align']; ?> !important;">
 	<div class="scode-socialicons">
 		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack fa-lg">
@@ -418,10 +366,7 @@ function socialiconvar( $atts ) {
 }
 add_shortcode( 'socialicons', 'socialiconvar' );
 //  ------------------------------------------------------------------------
-?>
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 //
@@ -443,24 +388,16 @@ function minisocialvar( $atts ) {
 }
 add_shortcode( 'minisocial', 'minisocialvar' );
 //  ------------------------------------------------------------------------
-?>
-
-
-
-
-<?php
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
-						
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
         'department' => '',
     ), $atts ); ?>
-
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-	
 if (!empty($r['department'])) { 
 $args = array(
 		'post_type' => 'person',
@@ -491,21 +428,15 @@ else {
      );
 }
 ?>
- 
     <?php   
      $loop = new WP_Query($args);
-
         while($loop->have_posts()) : $loop->the_post(); ?>
-				
-					
 <?php if (get_field('research_interests')):	?>          
 <?php get_template_part( 'research-result'); ?>
-
 <?php	 
 		 endif;
 		 endwhile;
-?>	
-<!-- then the pagination links -->
+?>	<!-- then the pagination links -->
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
 </div>
@@ -514,5 +445,3 @@ else {
 add_shortcode( 'researchlist', 'researchlistvar' );
 //  ------------------------------------------------------------------------
 ?>
-
-
