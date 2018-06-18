@@ -428,7 +428,7 @@ a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.ig-social
 -------------------------------------------------------------- */
 @media (max-width: 600px) {
 	.navbar-brand {
-		font-size: 14px !important;
+		font-size: 13px !important;
 	}	
 }
 @media (max-width: 991px) {
