@@ -426,6 +426,11 @@ a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.ig-social
 
 /* = MAKE THINGS DISAPPEAR ON MOBILE
 -------------------------------------------------------------- */
+@media (max-width: 600px) {
+	.navbar-brand {
+		font-size: 12px;
+	}	
+}
 @media (max-width: 991px) {
 	.extraprofile, .profilesidebar {
 		display: none;
