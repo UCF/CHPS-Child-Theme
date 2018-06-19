@@ -35,7 +35,7 @@ Template Name: FAQs
 				<div class="mb-4">
 					<h2 class="h5 titleFIX"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<div class="entry">
-						<?php echo wp_trim_words( get_the_content(), 45, '...' ); ?>
+						<?php echo wp_trim_words( the_content(), 45, '...' ); ?>
 					</div>
 				</div>
 				
