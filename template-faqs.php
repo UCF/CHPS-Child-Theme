@@ -36,9 +36,8 @@ Template Name: FAQs
 					<h2 class="h5 titleFIX"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<div class="entry">
 						<?php 
-						$david = get_the_content();
-						$content = strip_shortcodes( $david );
-						echo wp_trim_words( $content, 45, '...' ); ?>
+						$david = the_content();
+						echo wp_trim_words( $david, 45, '...' ); ?>
 					</div>
 				</div>
 				
