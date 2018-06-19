@@ -432,7 +432,7 @@ a.fb-socialicon:hover, a.tw-socialicon:hover, a.yt-socialicon:hover, a.ig-social
 	}	
 }
 @media (max-width: 991px) {
-	.extraprofile, .profilesidebar {
+	.extraprofile, .profilesidebar, .hidemobile {
 		display: none;
 	}	
 	.mainHomeTitle .evc-st-title {
