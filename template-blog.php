@@ -48,9 +48,12 @@ Template Name: Blog
 							<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 							<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 							<div class="entry">
-							<?php
-								echo wp_trim_words( get_the_content(), 30, '...' );
-							?>
+							<?php 			
+								$content = get_the_content();
+								$content = preg_replace('#\[[^\]]+\]#', '',$content);
+								$content = apply_filters('the_content', $content);
+								echo wp_trim_words( $content, 45, '...' );
+								?>
 							</div>
 						</div>
 					</div>
