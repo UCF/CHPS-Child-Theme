@@ -37,9 +37,9 @@ Template Name: FAQs
 					<div class="entry">
 						<?php echo wp_trim_words( get_the_content(), 45, '...' ); 
 						
-						$content = get_the_content();
-$content = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', $content);
-	echo wp_trim_words( $content, 45, '...' );
+						$content=get_the_content();
+            $content = preg_replace('#\[[^\]]+\]#', '',$content);
+            echo apply_filters('the_content', $content);
 						?>
 					</div>
 				</div>
