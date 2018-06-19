@@ -38,8 +38,8 @@ Template Name: FAQs
 						<?php echo wp_trim_words( get_the_content(), 45, '...' ); 
 						
 						$content = get_the_content();
-$content = strip_tags($content);
-echo substr($content, 0, 100);
+$content = preg_replace( '|\[(.+?)\](.+?\[/\\1\])?|s', '', $content);
+	echo wp_trim_words( $content, 45, '...' );
 						?>
 					</div>
 				</div>
