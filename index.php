@@ -35,7 +35,7 @@
 							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 							<?php } else { ?>
 							<?php switch_to_blog(2);?>	
-								<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
+								<img src="<?php the_field('default_page_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
 							<?php restore_current_blog(); ?>
 						<?php } ?>
 						   </a>
