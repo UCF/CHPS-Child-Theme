@@ -52,7 +52,7 @@ Template Name: Blog
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 45, '...' );
+								echo wp_trim_words( $content, 30, '...' );
 								?>
 							</div>
 						</div>
