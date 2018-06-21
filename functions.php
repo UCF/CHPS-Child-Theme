@@ -217,7 +217,7 @@ function wpbeginner_numeric_posts_nav() {
  
 }
 function mychildtheme_person_post_type_args( $args ) {
-	$args['rewrite'] => array( 'with_front' => false );
+	$args['rewrite'] = array( 'with_front' => false );
 	return $args;
 }
 
