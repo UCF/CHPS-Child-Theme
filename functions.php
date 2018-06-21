@@ -216,5 +216,10 @@ function wpbeginner_numeric_posts_nav() {
     echo '</ul></div>' . "\n";
  
 }
+function mychildtheme_person_post_type_args( $args ) {
+	$args['rewrite'] => array( 'with_front' => false );
+	return $args;
+}
 
+add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 10, 1 );
 ?>
