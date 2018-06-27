@@ -278,7 +278,12 @@ $category_id = get_cat_ID($c['category']);
 						} ?>
 					<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 					<div class="entry">
-					<?php echo wp_trim_words( get_the_content(), 30, '...' ); ?>
+					<?php 			
+								$content = get_the_content();
+								$content = preg_replace('#\[[^\]]+\]#', '',$content);
+								$content = apply_filters('the_content', $content);
+								echo wp_trim_words( $content, 25, '...' );
+								?>
 					</div>
 				</div>
 			</div>	<!-- END OF THE REPEAT SECTION -->		
