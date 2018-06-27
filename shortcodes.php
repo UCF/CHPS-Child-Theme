@@ -282,7 +282,7 @@ $category_id = get_cat_ID($c['category']);
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 25, '...' );
+								echo wp_trim_words( $content, 30, '...' );
 								?>
 					</div>
 				</div>
