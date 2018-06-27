@@ -203,6 +203,42 @@ function recnewsvar( $atts ) {
 add_shortcode( 'recentnews', 'recnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
+//
+// [recentexnews category="" number=""]
+function recexnewsvar( $atts ) {
+    $b = shortcode_atts( array(
+        'number' => '10',
+        //'category' => 'something else',
+    ), $atts );
+		$recexnews = new WP_Query(array(
+				'post_type'	=> 'inthemedia',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $b['number'],
+				)
+			);?> 	
+ <div class="container">
+    <div class="row">
+    	<ul>
+		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
+			<!-- START THE REPEAT SECTION -->   
+			<li class="mb-3 recnews">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				  <?php the_title(); ?>
+				</a>
+			</li>
+			<!-- END OF THE REPEAT SECTION -->		
+		<?php endwhile; ?>
+   		</ul>
+    </div>
+</div>
+<?php wp_reset_query(); ?> 
+<?php }
+add_shortcode( 'recentexnews', 'recexnewsvar' );
+?><?php
+//  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS HORIZONTAL ON HOMEPAGE
 //
 // [chpsnews category="" number=""]
