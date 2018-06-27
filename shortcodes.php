@@ -222,7 +222,7 @@ function recexnewsvar( $atts ) {
     	<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
-			<li class="mb-3 recnews">
+			<li class="cat-item">
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				  <?php the_title(); ?>
 				</a>
