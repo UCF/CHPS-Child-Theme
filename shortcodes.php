@@ -224,7 +224,7 @@ function recexnewsvar( $atts ) {
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
 			<li class="cat-item">
-				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>">
+				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank">
 				  <?php the_title(); ?>
 				</a>
 			</li>
