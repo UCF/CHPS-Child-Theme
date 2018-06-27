@@ -219,8 +219,6 @@ function recexnewsvar( $atts ) {
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
- <div class="container">
-    <div class="row">
     	<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
@@ -232,8 +230,6 @@ function recexnewsvar( $atts ) {
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
    		</ul>
-    </div>
-</div>
 <?php wp_reset_query(); ?> 
 <?php }
 add_shortcode( 'recentexnews', 'recexnewsvar' );
