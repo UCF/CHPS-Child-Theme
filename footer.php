@@ -56,6 +56,9 @@
 					</span></a><?php endif; ?><?php if( get_field('sm_linkedin_url', 'option') ): ?><a href="<?php the_field( 'sm_linkedin_url', 'option' ); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
 					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 					  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
+					</span></a><?php endif; ?><?php if( get_field('sm_flickr_url', 'option') ): ?><a href="<?php the_field( 'sm_flickr_url', 'option' ); ?>" title="View Us On Flickr" target="_blank"><span class="fa-stack fa-lg">
+					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
+					  <i class="fa fa-flickr fa-stack-1x footer-social-icon"></i>
 					</span></a><?php endif; ?>
 				</div>
 			<div class="ucf-footer-nav">
@@ -132,5 +135,16 @@
 <!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
 <?php restore_current_blog(); ?>		
 		<?php wp_footer(); ?>
+<!-- Hotjar Tracking Code for https://healthprofessions.ucf.edu -->
+<script>
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:934323,hjsv:6};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
 	</body>
 </html>
