@@ -61,7 +61,7 @@ $categories = get_the_category();
 							</figure>
 						</div>
 					</div>
-					<div class="col-md-4 mt-3 pt-4">
+					<div class="col-md-4 mt-3 pt-5">
 						<a href="/person/david-janosik/" target="_blank"><b>David Janosik, MBA, PMP</b></a><br>
 						Web Applications Developer<br>
 						407-823-5884<br>
