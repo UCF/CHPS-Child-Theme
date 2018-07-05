@@ -8,11 +8,15 @@ $categories = get_the_category();
 		<div class="col-md-1"></div>
         <div class="col-md-10">
         	<div>
-				<?php 
-					if ( ! empty( $categories ) ) {
-						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-					}
-				?>
+        	<?php
+				if ( ! empty( $terms ) ) {
+				foreach ( $terms as $term ) {
+				$term_link = get_term_link( $term, 'code_cat' );
+						if( is_wp_error( $term_link ) )
+						continue;
+					echo '<a class="cattitle-single" href="' . $term_link . '">' . $term->name . '</a>';
+					} 
+				}?>
 				<h1 class="posttitle"><?php the_title(); ?></h1>
 			</div>
         	<div>
