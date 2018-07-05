@@ -411,6 +411,42 @@ add_shortcode( 'minisocial', 'minisocialvar' );
 //  ------------------------------------------------------------------------
 ?><?php
 //  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY RECENT LIST OF TEXT LINKS
+//
+// [recentlist class="" posttype="" number=""]
+function reclistvar( $atts ) {
+    $b = shortcode_atts( array(
+        'class' => 'recentlist',
+		'number' => '5',
+		'posttype' => 'post',
+        //'category' => 'something else',
+    ), $atts );
+		$reclist = new WP_Query(array(
+				'post_type'	=> $b['posttype'],
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $b['number'],
+				)
+			);?> 	
+    <div class="<?php echo $b['class'] ?>">
+    	<ul>
+		<?php while($reclist->have_posts()) : $reclist->the_post();?>	
+			<!-- START THE REPEAT SECTION -->   
+			<li class="mb-3">
+				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+				  <?php the_title(); ?>
+				</a>
+			</li>
+			<!-- END OF THE REPEAT SECTION -->		
+		<?php endwhile; ?>
+   		</ul>
+   	</div>
+<?php wp_reset_query(); ?> 
+<?php }
+add_shortcode( 'recentlist', 'reclistvar' );
+?><?php
+//  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
 //
 // [researchlist department=""]
