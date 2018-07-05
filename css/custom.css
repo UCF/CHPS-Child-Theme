@@ -256,7 +256,10 @@ span.searchresults	{
 	background: #f2f2f2;
 	padding-top:35px;
 }
-
+.codesignature {
+	font-size: 14px;
+	line-height: 16px;
+}
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */
 .cattitle-single {
