@@ -39,7 +39,7 @@
 <?php
 if ( ! empty( $terms ) ) {
 foreach ( $terms as $term ) {
-$term_link = get_term_link( $term, 'yourtaxonomyhere' );
+$term_link = get_term_link( $term, 'code_cat' );
 		if( is_wp_error( $term_link ) )
 		continue;
 	echo '<a class="category-title" href="' . $term_link . '">' . $term->name . '</a>';
