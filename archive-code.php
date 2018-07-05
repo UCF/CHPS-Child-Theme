@@ -43,8 +43,11 @@
 <?php
 $terms = get_the_terms( $post->ID , 'code_cat' );
 foreach ( $terms as $term ) {
-echo $term->name;
-}
+$term_link = get_term_link( $term, 'yourtaxonomyhere' );
+		if( is_wp_error( $term_link ) )
+		continue;
+	echo '<a class="category-title" href="' . $term_link . '">' . $term->name . '</a>';
+	} 
 ?>
 						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
