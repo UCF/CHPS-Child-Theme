@@ -54,7 +54,7 @@
 				</div>
 			</div>
 			<div class="col-lg-3 profilesidebar">
-				<?php dynamic_sidebar( 'directory-sidebar' ); ?>
+				<?php dynamic_sidebar( 'custom-side-bar' ); ?>
 			</div>
 		</div>
 	</article>
