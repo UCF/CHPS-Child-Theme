@@ -58,6 +58,13 @@ $categories = get_the_category();
 				   </div>
 			   </div>
 			</div>
+      		<section id="intro-section" class="auto-section jumbotron jumbotron-fluid mb-0" style="background: red;">
+				<div class="container">			
+					<div class="row" >
+							HERE IS SOME TEXT
+					</div>
+				</div>
+			</section>
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
 					<div class="col-md-2 mt-3 pt-4">
