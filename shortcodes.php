@@ -397,7 +397,6 @@ function minisocialvar( $atts ) {
 		'align' => 'left',
 		'size' => '',
     ), $atts ); 
-$r = '<span class="' . esc_attr($s['id']) . '">' . $content . '</span>';
 $r = '<div id="' . esc_attr($s['id']) . '" style="text-align: ' . esc_attr($s['align']) . '">';
 if (!empty($s['fb'])) { 
 $r = '<a href="' . esc_attr($s['fb']) . '" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>';
