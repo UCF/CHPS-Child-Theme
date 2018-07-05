@@ -51,20 +51,22 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-      		<div class="container-fluid" style="background: red;">
-				<div class="container p-4" >
-					<div class="row" >
-						<p><strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, WordPress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding!</p>
-				   </div>
-			   </div>
-			</div>
-      		<section id="intro-section" class="auto-section jumbotron jumbotron-fluid mb-0" style="background: red;">
-				<div class="container">			
-					<div class="row" >
-							HERE IS SOME TEXT
-					</div>
-				</div>
-			</section>
+      		<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section vc_section-has-fill disclaimerText">
+      			<div class="vc_row wpb_row vc_row-fluid">
+      				<div class="wpb_column vc_column_container vc_col-sm-12">
+      					<div class="vc_column-inner ">
+      						<div class="wpb_wrapper">
+								<div class="wpb_text_column wpb_content_element" >
+									<div class="wpb_wrapper">
+										<p><strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, WordPress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding!</p>
+
+									</div>
+								</div>
+							</div>
+      					</div>
+      				</div>
+      			</div>
+      		</section>
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
 					<div class="col-md-2 mt-3 pt-4">
