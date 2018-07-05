@@ -51,7 +51,7 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-      		<div class="container-fluid" style="background:red;">
+      		<div class="mb-0 d-flex flex-column" style="background:red;">
       			I'm in a container-fluid
 			</div>	
        		<div class="row">
@@ -63,7 +63,7 @@ $categories = get_the_category();
 							</figure>
 						</div>
 					</div>
-					<div class="col-md-4 mt-3 pt-5">
+					<div class="col-md-4 mt-3 pt-4">
 						<a href="/person/david-janosik/" target="_blank"><b>David Janosik, MBA, PMP</b></a><br>
 						Web Applications Developer<br>
 						407-823-5884<br>
