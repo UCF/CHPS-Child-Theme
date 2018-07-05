@@ -51,12 +51,12 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-      		<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section vc_section-has-fill disclaimerText">
+      		<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section vc_custom_1530750679686 vc_section-has-fill">
       			<div class="vc_row wpb_row vc_row-fluid">
       				<div class="wpb_column vc_column_container vc_col-sm-12">
       					<div class="vc_column-inner ">
       						<div class="wpb_wrapper">
-								<div class="wpb_text_column wpb_content_element" >
+								<div class="wpb_text_column wpb_content_element vc_custom_1530747171818" >
 									<div class="wpb_wrapper">
 										<p><strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, WordPress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding!</p>
 
