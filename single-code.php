@@ -51,7 +51,7 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-       		<div class="row mt-5">
+       		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
 					<div class="col-md-2 pt-3">
 						<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1530809241075">
@@ -67,7 +67,7 @@ $categories = get_the_category();
 						<a href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a>
 					</div>
 				<!--</div>-->
-				<div class="col-md-6">
+				<div class="col-md-6 lBorder">
 					<h5 class="mb-3">Other Recent Articles</h5>
 					<?php echo do_shortcode('[recentlist class="recentcode" posttype="code"]'); ?>
 				</div>

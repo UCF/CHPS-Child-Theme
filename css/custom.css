@@ -244,6 +244,9 @@ span.searchresults	{
 	line-height: 16px;
 	margin-bottom:5px;
 }
+.lBorder {
+	border-left: solid 2px #eee;
+}
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */
 .cattitle-single {
