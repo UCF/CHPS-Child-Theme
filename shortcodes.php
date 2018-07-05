@@ -419,11 +419,12 @@ function reclistvar( $atts ) {
         'class' => 'recentlist',
 		'number' => '5',
 		'posttype' => 'post',
-        //'category' => 'something else',
+        'category' => '',
     ), $atts );
 		$reclist = new WP_Query(array(
 				'post_type'	=> $b['posttype'],
 				'post_status' => 'publish',
+				'category_name' => $b['category'],
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $b['number'],
