@@ -53,21 +53,21 @@ $categories = get_the_category();
 			</article>
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
-					<div class="col-md-2 pt-3">
+					<div class="col-md-2 pt-4">
 						<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1530809241075">
 							<figure class="wpb_wrapper vc_figure">
 								<a href="/person/david-janosik/" target="_blank" class="vc_single_image-wrapper vc_box_shadow_border_circle  vc_box_border_grey"><img class="vc_single_image-img " src="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2018/04/david-headshot-1-533x533.jpg" width="533" height="533" alt="david-headshot (1)" title="David Janosik, MBA, PMP" /></a>
 							</figure>
 						</div>
 					</div>
-					<div class="col-md-4 pt-4">
+					<div class="col-md-4 pt-5">
 						<a href="/person/david-janosik/" target="_blank"><b>David Janosik, MBA, PMP</b></a><br>
 						Web Applications Developer<br>
 						407-823-5884<br>
 						<a href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a>
 					</div>
 				<!--</div>-->
-				<div class="col-md-6 lBorder">
+				<div class="col-md-6 lBorder py-3">
 					<h5 class="mb-3">Other Recent Articles</h5>
 					<?php echo do_shortcode('[recentlist class="recentcode" posttype="code"]'); ?>
 				</div>
