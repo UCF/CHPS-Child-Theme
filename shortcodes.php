@@ -398,18 +398,17 @@ function minisocialvar( $atts ) {
 		'size' => '',
     ), $atts ); 
 return '<div id="' . $s['id'] . '" style="text-align: ' . $s['align'] . '">';
-if (!empty($s['fb'])) { 
-return '<a href="' . esc_attr($s['fb']) . '" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>';
-} if (!empty($s['tw'])) { 
-return '<a href="' . esc_attr($s['tw']) . '" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>';
+if (!empty($s['fb'])) { return '<a href="' . $s['fb'] . '" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>'; } 
+if (!empty($s['tw'])) { 
+return '<a href="' . $s['tw'] . '" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>';
 } if (!empty($s['ig'])) { 
-return '<a href="' . esc_attr($s['ig']) . '" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>';
+return '<a href="' . $s['ig'] . '" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>';
 } if (!empty($s['yt'])) { 
-return '<a href="' . esc_attr($s['yt']) . '" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a>';
+return '<a href="' . $s['yt'] . '" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a>';
 } if (!empty($s['in'])) { 
-return '<a href="' . esc_attr($s['in']) . '" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>';
+return '<a href="' . $s['in'] . '" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>';
 } if (!empty($s['fk'])) { 
-return '<a href="' . esc_attr($s['fk']) . '" title="View Us On Flickr" target="_blank" class="fk-socialicon"><span class="fa-stack ' . esc_attr($s['size']) . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-flickr fa-stack-1x fa-inverse"></i></span></a>';
+return '<a href="' . $s['fk'] . '" title="View Us On Flickr" target="_blank" class="fk-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-flickr fa-stack-1x fa-inverse"></i></span></a>';
 } return '</div>'; }
 add_shortcode( 'minisocial', 'minisocialvar' );
 //  ------------------------------------------------------------------------
