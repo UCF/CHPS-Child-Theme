@@ -79,6 +79,14 @@ h2 {
     height:0px !important;
     overflow: hidden !important;
 }
+.parallax-wrapper {
+    position: relative;
+}
+.parallax-container {
+    width: 100vw;
+    margin-left: calc(-50vw + 50% - 8px);
+    position: relative;
+}
 
 /* = Homepage Title
 -------------------------------------------------------------- */
