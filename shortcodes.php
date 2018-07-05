@@ -173,18 +173,17 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 function recnewsvar( $atts ) {
     $b = shortcode_atts( array(
         'number' => '10',
+		'posttype' => 'post',
         //'category' => 'something else',
     ), $atts );
 		$recnews = new WP_Query(array(
-				'post_type'	=> 'post',
+				'post_type'	=> $b['posttype'],
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
- <div class="container">
-    <div class="row">
     	<ul>
 		<?php while($recnews->have_posts()) : $recnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
@@ -196,8 +195,6 @@ function recnewsvar( $atts ) {
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
    		</ul>
-    </div>
-</div>
 <?php wp_reset_query(); ?> 
 <?php }
 add_shortcode( 'recentnews', 'recnewsvar' );
