@@ -51,7 +51,7 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-     		<div class="jumbotron jumbotron-fluid"	style="margin-bottom:0;">
+     		<div class="jumbotron jumbotron-fluid disclaimerText"	style="margin-bottom:0;">
 				<div class="container" >
 					<div class="row" >
 						<div class="col-12" style="padding:0;">
