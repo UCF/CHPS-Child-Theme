@@ -40,11 +40,12 @@
 								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 							}
 						?>
-						<?php $terms = get_the_terms( $post->ID , 'code_cat' ); 
-                    foreach ( $terms as $term ) {
-                    echo '<a href="' . $term_link . '">' . $term->name . '</a>';
-                    } 
-                ?>
+<?php
+$terms = get_the_terms( $post->ID , 'code_cat' );
+foreach ( $terms as $term ) {
+echo $term->name;
+}
+?>
 						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 						<div class="entry">
