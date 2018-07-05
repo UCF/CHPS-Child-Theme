@@ -69,7 +69,7 @@ $categories = get_the_category();
 				<!--</div>-->
 				<div class="col-md-6">
 					<h5 class="mb-3">Other Recent Articles</h5>
-					<?php echo do_shortcode('[recentlist posttype="code"]'); ?>
+					<?php echo do_shortcode('[recentlist class="recentcode" posttype="code"]'); ?>
 				</div>
 			</div>
         </div>

@@ -239,6 +239,11 @@ span.searchresults	{
 	line-height: 16px;
 	margin-bottom:16px;
 }
+.recentcode li {
+	font-size:14px;
+	line-height: 16px;
+	margin-bottom:5px;
+}
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */
 .cattitle-single {
