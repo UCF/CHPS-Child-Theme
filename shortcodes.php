@@ -412,7 +412,6 @@ add_shortcode( 'minisocial', 'minisocialvar' );
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT LIST OF TEXT LINKS
-//
 // [recentlist class="" posttype="" number="" category="" tax="" taxterm=""]
 function reclistvar( $atts ) {
     $b = shortcode_atts( array(
@@ -451,9 +450,9 @@ function reclistvar( $atts ) {
    ));
 }
 $list = '<div class="' . $b['class'] . '"><ul>';				
-while($reclist->have_posts()) : $reclist->the_post();
-$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';	
-endwhile;
+	while($reclist->have_posts()) : $reclist->the_post();
+	$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';	
+	endwhile;
 $list .= '</ul></div>';						
 wp_reset_query(); 
 return $list;

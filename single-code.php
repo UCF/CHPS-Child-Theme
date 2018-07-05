@@ -53,12 +53,14 @@ $categories = get_the_category();
 			</article>
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
-					<h5 class="mb-4">Other Recent News Articles</h5>
-					<?php echo do_shortcode('[recentnews number="5"]'); ?>
+						<a href="/person/david-janosik/" target="_blank"><b>David Janosik, MBA, PMP</b></a><br>
+						Web Applications Developer<br>
+						407-823-5884<br>
+						<a href="mailto:djanosik@ucf.edu">djanosik@ucf.edu</a>
 				</div>
 				<div class="col-md-6">
-					<h5 class="mb-4">Our Mission</h5>
-					<span class="postmission">The College of Health Professions and Sciences prepares students to promote, preserve, and enrich the health and wellness of diverse populations, through innovative and collaborative education, research, service, and practice.</span>
+					<h5 class="mb-3">Other Recent Articles</h5>
+					<?php echo do_shortcode('[recentlist posttype="code"]'); ?>
 				</div>
 			</div>
         </div>
