@@ -172,7 +172,8 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 // [recentnews category="" number=""]
 function recnewsvar( $atts ) {
     $b = shortcode_atts( array(
-        'number' => '10',
+        'class' => 'recentlist',
+		'number' => '5',
 		'posttype' => 'post',
         //'category' => 'something else',
     ), $atts );
@@ -184,6 +185,7 @@ function recnewsvar( $atts ) {
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
+    <div class="<?php echo $b['class'] ?>">
     	<ul>
 		<?php while($recnews->have_posts()) : $recnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
@@ -195,6 +197,7 @@ function recnewsvar( $atts ) {
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
    		</ul>
+   	</div>
 <?php wp_reset_query(); ?> 
 <?php }
 add_shortcode( 'recentnews', 'recnewsvar' );
