@@ -51,9 +51,11 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
-      		<div class="mb-0 d-flex flex-column" style="background:red;">
-      			I'm in a container-fluid
-			</div>	
+      		<div class="parallax-wrapper">          
+				<div class="parallax-container">
+					fwefwefwe
+				</div>
+			</div>
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
 					<div class="col-md-2 mt-3 pt-4">

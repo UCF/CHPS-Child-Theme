@@ -247,6 +247,16 @@ span.searchresults	{
 .lBorder {
 	border-left: solid 2px #eee;
 }
+.parallax-wrapper {
+    position: relative;
+}
+.parallax-container {
+    background-color: #0f0;
+    width: 100vw;
+    margin-left: calc(-50vw + 50% - 8px);
+    position: relative;
+    text-align:center;
+}
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */
 .cattitle-single {
