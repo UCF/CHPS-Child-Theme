@@ -397,7 +397,7 @@ function minisocialvar( $atts ) {
 		'align' => 'left',
 		'size' => '',
     ), $atts ); 
-$list .= '<div id="' . $s['id'] . '" style="text-align: ' . $s['align'] . '">';
+$list .= '<div id="' . $s['id'] . '" style="text-align: ' . $s['align'] . ';">';
 if (!empty($s['fb'])) { $list .= '<a href="' . $s['fb'] . '" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></span></a>'; } 
 if (!empty($s['tw'])) { $list .= '<a href="' . $s['tw'] . '" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-twitter fa-stack-1x fa-inverse"></i></span></a>'; } 
 if (!empty($s['ig'])) { $list .= '<a href="' . $s['ig'] . '" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i></span></a>'; } 
