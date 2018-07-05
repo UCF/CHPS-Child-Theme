@@ -53,9 +53,9 @@ $categories = get_the_category();
 			</article>
       		<div class="parallax-wrapper">          
 				<div class="parallax-container disclaimerText">
-					<div class="container" >
-						<div class="row p-4" >
-							<strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, WordPress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding!
+					<div class="container p-4" >
+						<div class="row" >
+							<p><strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, WordPress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding!</p>
 					   </div>
 				   </div>
 				</div>
