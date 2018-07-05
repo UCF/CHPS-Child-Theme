@@ -54,14 +54,14 @@ $categories = get_the_category();
 <?php echo do_shortcode('[vc_section full_width="stretch_row" el_class="disclaimerText"][vc_row][vc_column][vc_column_text]<strong>DISCLAIMER:</strong> While I am happy to share code and various solutions that I have created that work the sites that I am working on, your situation, Wordpress Theme, or other plugins may cause conflicts. The information I have provided is for educational purposes only.  Unfortunately, I will not be able to provide support beyond what I have shared here. Thank you for your understanding![/vc_column_text][/vc_column][/vc_row][/vc_section]'); ?>
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
-					<div class="col-md-2 mt-3 pt-4 hidemobile">
+					<div class="col-md-2 mt-2 pt-4 hidemobile">
 						<div  class="wpb_single_image wpb_content_element vc_align_left  vc_custom_1530809241075">
 							<figure class="wpb_wrapper vc_figure">
 								<a href="/person/david-janosik/" target="_blank" class="vc_single_image-wrapper vc_box_shadow_border_circle  vc_box_border_grey"><img class="vc_single_image-img " src="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2018/04/david-headshot-1-533x533.jpg" width="533" height="533" alt="david-headshot (1)" title="David Janosik, MBA, PMP" /></a>
 							</figure>
 						</div>
 					</div>
-					<div class="col-md-4 mt-3 pt-5">
+					<div class="col-md-4 mt-2 pt-5">
 						<a href="/person/david-janosik/" target="_blank"><b>David Janosik, MBA, PMP</b></a><br>
 						Web Applications Developer<br>
 						407-823-5884<br>
