@@ -21,6 +21,7 @@
 				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 				$display_name = get_the_author_meta( 'display_name', $post->post_author );
 				$categories = get_the_category();
+				$terms = get_the_terms( $post->ID , 'code_cat' );
 				?>
 				<div class="row mb-4 cat-border">
 					<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
@@ -35,20 +36,15 @@
 						   </a>
 					</div>
 					<div class="col-lg-9 p-4"> 
-						<?php 
-							if ( ! empty( $categories ) ) {
-								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-							}
-						?>
 <?php
-$terms = get_the_terms( $post->ID , 'code_cat' );
+if ( ! empty( $terms ) ) {
 foreach ( $terms as $term ) {
 $term_link = get_term_link( $term, 'yourtaxonomyhere' );
 		if( is_wp_error( $term_link ) )
 		continue;
 	echo '<a class="category-title" href="' . $term_link . '">' . $term->name . '</a>';
 	} 
-?>
+}?>
 						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 						<div class="entry">
