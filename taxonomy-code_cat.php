@@ -6,14 +6,14 @@ $tax = $wp_query->get_queried_object();
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">Search Results</h1>
+				<h1 class="archive-title heading-underline">Category</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
 			<?php echo do_shortcode( ' [searchme posttype="code" size="large" placeholder="Search by Keyword"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">	
-			<i class="fa fa-user-circle-o icongrey"></i><span class="searchresults">Currently Viewing: <strong><?php echo ' '. $tax->name . ''; ?></strong></span>
+			<i class="fa fa-code icongrey"></i><span class="searchresults">Currently Viewing: <strong><?php echo ' '. $tax->name . ''; ?></strong></span>
 		</div>
 	</div>
 		<div class="row">
