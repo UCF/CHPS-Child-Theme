@@ -413,33 +413,33 @@ add_shortcode( 'minisocial', 'minisocialvar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT LIST OF TEXT LINKS
 //
-// [recentlist class="" posttype="" number=""]
+// [recentlist class="" posttype="" number="" category="" tax="" taxterm=""]
 function reclistvar( $atts ) {
     $b = shortcode_atts( array(
         'class' => 'recentlist',
-		'number' => '5',
 		'posttype' => 'post',
-        'category' => '',
+		'number' => '5',
+		'category' => '',
 		'tax' => '',
 		'taxterm' => '',
     ), $atts );
 	if (!empty($b['tax'])) { 
 		$reclist = new WP_Query(array(
-				'post_type'	=> $b['posttype'],
-				'post_status' => 'publish',
-				'category_name' => $b['category'],
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $b['number'],
-				'tax_query' => array(
-				array(
-					'taxonomy' => $b['tax'],
-					'field' => 'slug',
-					'terms' => $b['taxterm'],
-					),
+			'post_type'	=> $b['posttype'],
+			'post_status' => 'publish',
+			'category_name' => $b['category'],
+			'orderby' => 'publish_date',
+			'order' => 'DESC',
+			'posts_per_page' => $b['number'],
+			'tax_query' => array(
+			array(
+				'taxonomy' => $b['tax'],
+				'field' => 'slug',
+				'terms' => $b['taxterm'],
 				),
-			)
-		);}
+			),
+		)
+	);}
 	else {
 	$reclist = new WP_Query(array(
 		'post_type'	=> $b['posttype'],
@@ -450,22 +450,14 @@ function reclistvar( $atts ) {
 		'posts_per_page' => $b['number'],
    ));
 }
-?> 	
-    <div class="<?php echo $b['class'] ?>">
-    	<ul>
-		<?php while($reclist->have_posts()) : $reclist->the_post();?>	
-			<!-- START THE REPEAT SECTION -->   
-			<li>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				  <?php the_title(); ?>
-				</a>
-			</li>
-			<!-- END OF THE REPEAT SECTION -->		
-		<?php endwhile; ?>
-   		</ul>
-   	</div>
-<?php wp_reset_query(); ?> 
-<?php }
+$list = '<div class="' . $b['class'] . '"><ul>';				
+while($reclist->have_posts()) : $reclist->the_post();
+$list .= '<li><a href="' . the_permalink() . '" title="' . the_title() . '">' . the_title() . '</a></li>';	
+endwhile;
+$list .= '</ul></div>';						
+wp_reset_query(); 
+return $list;
+}
 add_shortcode( 'recentlist', 'reclistvar' );
 ?><?php
 //  ------------------------------------------------------------------------
