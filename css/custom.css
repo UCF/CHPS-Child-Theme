@@ -227,9 +227,17 @@ span.searchresults	{
 .mainnews a:hover {
 	color:#444;
 }
+
 .recnews {
 	font-size:14px;
 	line-height: 16px;
+}
+/* = RECENT LIST TEXT SHORTCODE 
+-------------------------------------------------------------- */
+.recentlist li {
+	font-size:14px;
+	line-height: 16px;
+	margin-bottom:16px;
 }
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */

@@ -433,7 +433,7 @@ function reclistvar( $atts ) {
     	<ul>
 		<?php while($reclist->have_posts()) : $reclist->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
-			<li class="mb-3">
+			<li>
 				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
 				  <?php the_title(); ?>
 				</a>
