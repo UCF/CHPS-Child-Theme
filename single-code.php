@@ -51,6 +51,9 @@ $categories = get_the_category();
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
+      		<div class="container-fluid" style="background:red;">
+      			I'm in a container-fluid
+			</div>	
        		<div class="row">
 				<!--<div class="col-md-6 recborder">-->
 					<div class="col-md-2 mt-3 pt-4">
