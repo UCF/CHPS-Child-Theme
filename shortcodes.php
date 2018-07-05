@@ -452,7 +452,7 @@ function reclistvar( $atts ) {
 }
 $list = '<div class="' . $b['class'] . '"><ul>';				
 while($reclist->have_posts()) : $reclist->the_post();
-$list .= '<li><a href="#" title="Name">' . get_the_title() . '</a></li>';	
+$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';	
 endwhile;
 $list .= '</ul></div>';						
 wp_reset_query(); 
