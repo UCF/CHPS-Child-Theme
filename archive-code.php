@@ -4,7 +4,7 @@
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">Coding Posts</h1>
+				<h1 class="archive-title heading-underline">Shared Code</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
