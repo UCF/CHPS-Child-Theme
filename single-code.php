@@ -2,6 +2,7 @@
 $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
+$terms = get_the_terms( $post->ID , 'code_cat' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
