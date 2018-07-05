@@ -420,6 +420,8 @@ function reclistvar( $atts ) {
 		'number' => '5',
 		'posttype' => 'post',
         'category' => '',
+		'tax' => '',
+		'taxterm' => '',
     ), $atts );
 		$reclist = new WP_Query(array(
 				'post_type'	=> $b['posttype'],
@@ -428,8 +430,15 @@ function reclistvar( $atts ) {
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $b['number'],
-				)
-			);?> 	
+				'tax_query' => array(
+				array(
+					'taxonomy' => $b['tax'],
+					'field' => 'slug',
+					'terms' => $b['taxterm'],
+					),
+				),
+			)
+		);?> 	
     <div class="<?php echo $b['class'] ?>">
     	<ul>
 		<?php while($reclist->have_posts()) : $reclist->the_post();?>	
