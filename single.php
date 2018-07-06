@@ -45,6 +45,7 @@ $categories = get_the_category();
 							</div>
 					   <?php endif; ?>
                    <?php } ?>
+                   <?php the_field('featimg_size'); ?>
                     <?php the_content(); ?> 
                 <?php
                 	endwhile; //resetting the page loop
