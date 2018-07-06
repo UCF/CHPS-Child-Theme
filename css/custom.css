@@ -282,23 +282,23 @@ span.searchresults	{
 #postIMG {
 	margin-bottom: 20px;
 }
-#imgRight {
+#imgRight-large {
 	max-width: 440px;
 	float: right;
 	margin: 0px 0px 20px 20px;
 }
-#imgLeft {
+#imgLeft-large {
 	max-width: 440px;
 	float: left;
 	margin: 0px 20px 20px 0px;
 }
 #imgRight-small {
-	max-width: 220px;
+	max-width: 250px;
 	float: right;
 	margin: 0px 0px 20px 20px;
 }
 #imgLeft-small {
-	max-width: 220px;
+	max-width: 250px;
 	float: left;
 	margin: 0px 20px 20px 0px;
 }	
