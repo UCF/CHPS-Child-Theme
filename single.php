@@ -33,13 +33,13 @@ $categories = get_the_category();
 							</div>
 					   <?php endif; ?>
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
-							<div id="imgRight">
+							<div id="imgRight-<?php the_field('featimg_size'); ?>">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
 					   <?php if( get_field('featimg_location') == 'Left Aligned' ): ?>
-							<div id="imgLeft">
+							<div id="imgLeft-<?php the_field('featimg_size'); ?>">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
