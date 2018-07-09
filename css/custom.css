@@ -259,9 +259,6 @@ span.searchresults	{
   display: flex;
   flex-wrap: wrap;
 }
-[class*="col-"] {
-  
-}
 .newsmedia .narrow-gutter [class*='col-'] {
   padding-right:6px;
   padding-left:6px;
