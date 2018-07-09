@@ -101,9 +101,9 @@ if ( has_post_thumbnail()) {
 	$listnews .= '</div><div class="p-3">' . the_title() . '<p class="newsdate">' . the_time('F j, Y') . '</p></div></div></a></div>';
 endwhile;
 	$listnews .= '</div></div>';
-return $listnews;
 wp_reset_query();	
 restore_current_blog();	
+return $listnews;	
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ---------------------------------------
