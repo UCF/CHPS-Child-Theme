@@ -128,17 +128,7 @@ $category_id = get_cat_ID($a['category']);
 [class*="col-"] {
   margin-bottom: 12px;
 }
-.newsmedia .narrow-gutter [class*='col-'] {
-  padding-right:6px;
-  padding-left:6px;
-}
-.newsmedia .newsdate {
-    margin-top:15px;
-    display:block;
-    font-weight:normal;
-    color: #aaa;
-    font-style: italic;
-} /* START RECURRING STYLING */	
+/* START RECURRING STYLING */	
 </style>
 <?php }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
