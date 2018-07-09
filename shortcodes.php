@@ -119,9 +119,6 @@ $category_id = get_cat_ID($a['category']);
 </div>
 <?php wp_reset_query(); ?> 
 <?php restore_current_blog(); ?>
-<style>	
-/* START RECURRING STYLING */	
-</style>
 <?php }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ------------------------------------------------------------------------
