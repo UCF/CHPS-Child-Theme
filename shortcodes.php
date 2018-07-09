@@ -74,7 +74,8 @@ function newsvisualvar( $atts ) {
         'number' => '4',
         'category' => '0',
 		'column' => '4',
-    ), $atts );
+    ), $atts ); 
+	switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);	
 		$visualnews = new WP_Query(array(
 				'post_type'	=> 'post',
@@ -84,7 +85,7 @@ $category_id = get_cat_ID($a['category']);
 				'posts_per_page' => $a['number'],
 				'cat' => $category_id,
 				)
-			); ?><?php switch_to_blog(2); ?> 							
+			); ?>							
  <div class="container newsmedia">
     <div class="row narrow-gutter row-flex">
 		<?php while($visualnews->have_posts()) : $visualnews->the_post();
@@ -116,8 +117,8 @@ $category_id = get_cat_ID($a['category']);
 		<?php endwhile; ?>
     </div>
 </div>
-<?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?> 
+<?php restore_current_blog(); ?>
 <style>	
 .visnews-photo {
     height: 200px;
