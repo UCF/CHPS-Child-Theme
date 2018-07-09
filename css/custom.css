@@ -260,11 +260,12 @@ span.searchresults	{
   flex-wrap: wrap;
 }
 [class*="col-"] {
-  margin-bottom: 12px;
+  
 }
 .newsmedia .narrow-gutter [class*='col-'] {
   padding-right:6px;
   padding-left:6px;
+  margin-bottom: 12px;
 }
 .newsmedia .newsdate {
     margin-top:15px;
