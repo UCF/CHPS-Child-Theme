@@ -96,7 +96,7 @@ if ($a['column'] == '3') {
 if ( has_post_thumbnail()) {
 	$list .= '<img src="' . $getimgURL .'" alt="' . get_the_title() . '" title="' . get_the_title() .'" class="media-background object-fit-cover">';
 } else {
-	$list .= '<img src="' . the_field('default_news_image', 'option') . '" alt="' . the_title_attribute() . '" title="' . the_title_attribute() . '" class="media-background object-fit-cover">';
+	$list .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 }
 	$list .= '</div><div class="p-3">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';
 endwhile;
