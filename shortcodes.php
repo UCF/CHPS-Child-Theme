@@ -87,7 +87,14 @@ $category_id = get_cat_ID($a['category']);
 			); 
 	$list = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
 while($visualnews->have_posts()) : $visualnews->the_post();
-
+$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+if ($a['column'] == '3') {	
+	$list .= '<div class="col-lg-4 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+} else {
+	$list .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+}	
+	
+	$list .= '</div></a></div>';
 endwhile;
 	$list .= '</div></div>';
 wp_reset_query();
