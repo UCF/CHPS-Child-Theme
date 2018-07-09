@@ -84,7 +84,7 @@ $category_id = get_cat_ID($a['category']);
 				'posts_per_page' => $a['number'],
 				'cat' => $category_id,
 				)
-			); ?> 							
+			); ?><?php switch_to_blog(2); ?> 							
  <div class="container newsmedia">
     <div class="row narrow-gutter row-flex">
 		<?php while($visualnews->have_posts()) : $visualnews->the_post();
@@ -103,9 +103,7 @@ $category_id = get_cat_ID($a['category']);
 								<?php if ( has_post_thumbnail()) { ?>
 									<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 									<?php } else { ?>
-									<?php switch_to_blog(2); ?>
 									<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
-									<?php restore_current_blog(); ?>
 								<?php } ?>
 							</div>
 							<div class="p-3">
@@ -118,6 +116,7 @@ $category_id = get_cat_ID($a['category']);
 		<?php endwhile; ?>
     </div>
 </div>
+<?php restore_current_blog(); ?>
 <?php wp_reset_query(); ?> 
 <style>	
 .visnews-photo {
