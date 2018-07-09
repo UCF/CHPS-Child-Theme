@@ -103,7 +103,9 @@ $category_id = get_cat_ID($a['category']);
 								<?php if ( has_post_thumbnail()) { ?>
 									<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 									<?php } else { ?>
+									<?php switch_to_blog(2); ?>
 									<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
+									<?php restore_current_blog(); ?>
 								<?php } ?>
 							</div>
 							<div class="p-3">
@@ -344,43 +346,6 @@ function searchmevar( $atts ) {
 <?php wp_reset_query(); ?> 
 <?php	}
 add_shortcode( 'searchme', 'searchmevar' ); ?><?php
-//  ------------------------------------------------------------------------
-// SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
-//
-// [socialicons fb="" tw="" ig="" yt="" in="" align=""]
-function socialiconvar( $atts ) {
-    $s = shortcode_atts( array(
-        'fb' => '',
-        'tw' => '',
-		'ig' => '',
-		'yt' => '',
-		'in' => '',
-		'align' => 'left',
-    ), $atts ); ?>	
-<div class="socialicons" style="text-align: <?php echo $s['align']; ?> !important;">
-	<div class="scode-socialicons">
-		<?php if (!empty($s['fb'])) { ?><a href="<?php echo $s['fb']; ?>" title="Follow Us On Facebook" target="_blank" class="fb-socialicon"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x"></i>
-		  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['tw'])) { ?><a href="<?php echo $s['tw']; ?>" title="Follow Us On Twitter" target="_blank" class="tw-socialicon"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x"></i>
-		  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['ig'])) { ?><a href="<?php echo $s['ig']; ?>" title="Follow Us On Instagram" target="_blank" class="ig-socialicon"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x"></i>
-		  <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['yt'])) { ?><a href="<?php echo $s['yt']; ?>" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x"></i>
-		  <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?><?php if (!empty($s['in'])) { ?><a href="<?php echo $s['in']; ?>" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack fa-lg">
-		  <i class="fa fa-circle fa-stack-2x"></i>
-		  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
-		</span></a><?php } ?>
-	</div>
-</div>
-<?php }
-add_shortcode( 'socialicons', 'socialiconvar' );
-//  ------------------------------------------------------------------------
-?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 //
