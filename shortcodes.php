@@ -120,31 +120,7 @@ $category_id = get_cat_ID($a['category']);
 <?php wp_reset_query(); ?> 
 <?php restore_current_blog(); ?>
 <style>	
-.visnews-photo {
-    height: 200px;
-}
-@media screen and (max-width: 992px) {
-	.visnews-photo {
-		width: 100%;
-		height:225px;
-	}
-}	
-.newsmedia .visnews {
-  height: 100%;
-  padding: 0px; 
-  color: #000;
-  border: solid 1px #ddd;
-  line-height:17px;
-  font-size: 15px !important;
-  font-weight:500;
-}
-.newsmedia .visnews:hover {
-  background: #eee;
-}	
-.newsmedia .col-xs-12 a {
-    color:#000;
-    text-decoration:none !important;
-}
+
 .row-flex {
   display: flex;
   flex-wrap: wrap;
