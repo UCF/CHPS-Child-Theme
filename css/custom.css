@@ -256,6 +256,13 @@ span.searchresults	{
     text-decoration:none !important;
 }
 
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+[class*="col-"] {
+  margin-bottom: 12px;
+}
 
 
 

@@ -120,14 +120,6 @@ $category_id = get_cat_ID($a['category']);
 <?php wp_reset_query(); ?> 
 <?php restore_current_blog(); ?>
 <style>	
-
-.row-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-[class*="col-"] {
-  margin-bottom: 12px;
-}
 /* START RECURRING STYLING */	
 </style>
 <?php }
