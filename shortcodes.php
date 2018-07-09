@@ -89,16 +89,16 @@ $category_id = get_cat_ID($a['category']);
 while($visualnews->have_posts()) : $visualnews->the_post();
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 if ($a['column'] == '3') {	
-	$list .= '<div class="col-lg-4 col-sm-6 col-xs-12"><a href="' . the_permalink() . '" title="' . the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	$list .= '<div class="col-lg-4 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
 } else {
-	$list .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . the_permalink() . '" title="' . the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	$list .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
 }
 if ( has_post_thumbnail()) {
-	$list .= '<img src="' . $getimgURL .'" alt="' . the_title() . '" title="' . the_title() .'" class="media-background object-fit-cover">';
+	$list .= '<img src="' . $getimgURL .'" alt="' . get_the_title() . '" title="' . get_the_title() .'" class="media-background object-fit-cover">';
 } else {
 	$list .= '<img src="' . the_field('default_news_image', 'option') . '" alt="' . the_title_attribute() . '" title="' . the_title_attribute() . '" class="media-background object-fit-cover">';
 }
-	$list .= '</div><div class="p-3">' . the_title() . '<p class="newsdate">' . the_time('F j, Y') . '</p></div></div></a></div>';
+	$list .= '</div><div class="p-3">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';
 endwhile;
 	$list .= '</div></div>';
 return $list;
