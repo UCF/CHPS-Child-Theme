@@ -429,7 +429,7 @@ function showpersonvar( $atts ) {
 ?>
 <?php 
 $mypost = get_page_by_title( 'John Doe', OBJECT, 'person' );
-	echo $mypost->ID; 
+	echo $mypost->post_title; 
 ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
