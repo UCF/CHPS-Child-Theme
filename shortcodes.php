@@ -428,7 +428,7 @@ function showpersonvar( $atts ) {
      );
 ?>
 <?php 
-$mypost = get_page_by_title( 'David Janosik', $output = 'OBJECT', $post_type = 'person' );
+$mypost = get_page_by_title( 'david-janosik', $output = 'OBJECT', $post_type = 'person' );
 echo $mypost->post_title;
 echo $mypost->ID;
 ?>
