@@ -429,7 +429,7 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
 $ellebell = '';	
-if ($peeps == '1') {$ellebell = 'col-2';}
+if ($peeps == '1') {$ellebell = 'col-1';}
 if ($peeps == '2') {$ellebell = 'col-3';}
 if ($peeps == '3') {$ellebell = 'col-5';}
 ?>
