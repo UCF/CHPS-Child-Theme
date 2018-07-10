@@ -435,7 +435,7 @@ $buildingMap = get_field('building', $post->ID);
 				<img src="<?php echo $getimageURL; ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="">
 				<?php } else { ?> 
 					<?php switch_to_blog(2);?>
-						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
+						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="">
 					<?php restore_current_blog(); ?>
 		<?php } ?>
 		   </a>  
