@@ -428,13 +428,9 @@ function showpersonvar( $atts ) {
      );
 ?>
 <?php 
-//$fieldemail = get_field( 'email_address', $post->ID );
-//echo $post->post_title; 
-//echo $fieldemail;
-//the_field('phone_number', $post->ID);
-//echo 'HERE IS THE END OF THIS';	
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
+$buildingMap = get_field('building', $post->ID);	
 ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<div class="col-lg-2 col-md-3 col-sm-4 p-0 media-background-container catlist-photo mx-auto">
