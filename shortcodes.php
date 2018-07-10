@@ -427,7 +427,7 @@ function showpersonvar( $atts ) {
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
-$peeps = $r['name'];
+$peeps = $r['column'];
 if ($peeps == '1') {echo 'col-2';}
 if ($peeps == '2') {echo 'col-3';}
 if ($peeps == '3') {echo 'col-5';}
