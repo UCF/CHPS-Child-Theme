@@ -432,14 +432,13 @@ $ellebell = '';
 if ($peeps == '1') {$ellebell = 'col-2';}
 if ($peeps == '2') {$ellebell = 'col-3';}
 if ($peeps == '3') {$ellebell = 'col-5';}
-$post_thumbnail_id = get_post_thumbnail_id($post->ID);	
 ?>
 <?php echo $getimageURL; ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
 	<div class="<?php echo $ellebell; ?> p-0 media-background-container catlist-photo mx-auto">
 		   <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" >
-		   <?php if ( has_post_thumbnail()) { ?>
+		   <?php if ( has_post_thumbnail($post->ID)) { ?>
 				<img src="<?php echo $getimageURL; ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
 				<?php } else { ?> 
 					<?php switch_to_blog(2);?>
