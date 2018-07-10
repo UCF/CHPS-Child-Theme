@@ -449,7 +449,7 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 		   </a> 
 	</div>
 	<div class="col-lg-7 col-md-9 col-sm-8 col-8 p-3">
-		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
 		<?php
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle">
