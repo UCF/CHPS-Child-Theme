@@ -428,7 +428,8 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 $buildingMap = get_field('building', $post->ID);	
 ?>
 <div class="row mb-4 cat-border personlist-ht">
-	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">
+	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
+	<div class="col-4 p-0 media-background-container catlist-photo mx-auto">
 		   <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
 				<img src="<?php echo $getimageURL; ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
@@ -439,7 +440,8 @@ $buildingMap = get_field('building', $post->ID);
 		<?php } ?>
 		   </a>  
 	</div>
-	<div class="col-lg-10 col-md-9 col-sm-8 p-3">
+	<!-- <div class="col-lg-10 col-md-9 col-sm-8 col-8 p-3"> -->
+	<div class="col p-3">
 		<h2 class="h4"><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
 		<?php
 		if(get_field('job_titles_tax', $post->ID)){ ?>
