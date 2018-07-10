@@ -429,13 +429,15 @@ function showpersonvar( $atts ) {
 ?>
 <?php 
 $post = get_page_by_title( 'John Doe', OBJECT, 'person' );
-$fieldemail = get_field( 'email_address', $post->ID );
-echo $post->post_title; 
-echo $fieldemail;
-the_field('phone_number', $post->ID);
-echo 'HERE IS THE END OF THIS';	
+//$fieldemail = get_field( 'email_address', $post->ID );
+//echo $post->post_title; 
+//echo $fieldemail;
+//the_field('phone_number', $post->ID);
+//echo 'HERE IS THE END OF THIS';	
+while($post->have_posts()) : $post->the_post();
 ?>
 <?php get_template_part( 'person-result'); ?>
+<?php endwhile; ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
 ?>
