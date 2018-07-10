@@ -428,13 +428,13 @@ $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['name'];
-if ($peeps == '1') {$ellebell = 'col-2';}
-if ($peeps == '2') {$ellebell = 'col-3';}
-if ($peeps == '3') {$ellebell = 'col-5';}
+if ($peeps == '1') {echo 'col-2';}
+if ($peeps == '2') {echo 'col-3';}
+if ($peeps == '3') {echo 'col-5';}
 ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
-	<div class="<?php echo $ellebell; ?> p-0 media-background-container catlist-photo mx-auto">
+	<div class="<?php echo $peeps; ?> p-0 media-background-container catlist-photo mx-auto">
 		   <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
 				<img src="<?php echo $getimageURL; ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
