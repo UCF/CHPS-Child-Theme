@@ -431,7 +431,7 @@ function showpersonvar( $atts ) {
 $mypost = get_page_by_title( 'John Doe', OBJECT, 'person' );
 	$fieldemail = get_field( 'email_address', $mypost->ID );
 	echo $mypost->post_title; 
-	echo "<p>" . $fieldemail . "</p>" ;
+	$fieldemail;
 ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
