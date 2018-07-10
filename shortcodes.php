@@ -428,8 +428,7 @@ function showpersonvar( $atts ) {
      );
 ?>
 <?php 
-$mypost = get_page_by_title('David Janosik', OBJECT, 'person');
-print_r($mypost);
+echo 'asdasdasdasd';
 ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
