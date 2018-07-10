@@ -451,7 +451,7 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 	<div class="col-lg-10 col-md-9 col-sm-8 col-8 p-3">
 		<h2 class="h4"><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
 		<?php
-		if(get_field('job_titles_tax')){ ?>
+		if(get_field('job_titles_tax', $post->ID)){ ?>
 			<div class="profilejobtitle">
 				<?php
 				// Get a list of terms for this post's custom taxonomy.
