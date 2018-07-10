@@ -426,14 +426,11 @@ function showpersonvar( $atts ) {
 	    'post_status' => 'publish',
 		'name' => $r['name'],
      );
-?><?php   
-     $loop = new WP_Query($args);
-     while($loop->have_posts()) : $loop->the_post(); ?>       
-<?php echo the_title() ?>
-<?php endwhile; ?>	<!-- then the pagination links -->
-<div class="mt-5">
-	<?php wpbeginner_numeric_posts_nav(); ?>
-</div>
+?>
+<?php 
+$mypost = get_page_by_title('David Janosik', OBJECT, 'person');
+print_r($mypost);
+?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
 ?>
