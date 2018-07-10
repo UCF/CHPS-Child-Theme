@@ -433,7 +433,7 @@ $mypost = get_page_by_title( 'John Doe', OBJECT, 'person' );
 	echo 'regular';
 	the_field('email_address', $mypost->ID);
 	echo 'get the field';
-	get_the_field('email_address', $mypost->ID);
+	//get_the_field('email_address', $mypost->ID);
 ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
