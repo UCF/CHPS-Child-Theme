@@ -429,7 +429,8 @@ function showpersonvar( $atts ) {
 ?>
 <?php 
 $mypost = get_page_by_title( 'David Janosik', $output = 'OBJECT', $post_type = 'person' );
-print_r($mypost);
+echo $mypost->post_title;
+echo $mypost->ID;
 ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
