@@ -433,7 +433,9 @@ $fieldemail = get_field( 'email_address', $post->ID );
 echo $post->post_title; 
 echo $fieldemail;
 the_field('phone_number', $post->ID);
+echo 'HERE IS THE END OF THIS';	
 ?>
+<?php get_template_part( 'person-result'); ?>
 <?php } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
 ?>
