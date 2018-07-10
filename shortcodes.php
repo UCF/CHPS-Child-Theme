@@ -486,7 +486,7 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 				}?>
 			</div>
 		<?php }	?>
-		<?php if(get_field('building')){ ?>
+		<?php if(get_field('building', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
 						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
@@ -497,11 +497,11 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
 					?>" target="_blank" title="Map to <?php the_field('building'); ?>">
-							<?php the_field('building'); ?>
+							<?php the_field('building', $post->ID); ?>
 						</a>
-						<?php if(get_field('room_number')){ ?>
+						<?php if(get_field('room_number', $post->ID)){ ?>
 						<span>
-							<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
+							<?php the_field('office_type', $post->ID); ?>: <?php the_field('room_number', $post->ID); ?>
 						</span>
 						<?php }
 						?>	
@@ -511,14 +511,14 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a>
+						<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address'); ?></a>
 					</div>
 				</div>
 		<?php }	?>	
 		<?php if(get_field('phone_number')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
+						<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number'); ?></a>
 					</div>
 				</div>
 		<?php }	?>
