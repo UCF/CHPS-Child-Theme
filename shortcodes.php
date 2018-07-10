@@ -433,7 +433,7 @@ function showpersonvar( $atts ) {
 //echo $fieldemail;
 //the_field('phone_number', $post->ID);
 //echo 'HERE IS THE END OF THIS';	
-$post = get_page_by_title( 'John Doe', OBJECT, 'person' );
+$post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 ?>
 <div class="row mb-4 cat-border personlist-ht">
