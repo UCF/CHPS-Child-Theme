@@ -428,9 +428,9 @@ $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
-if ($peeps == '1') {echo 'col-2';}
-if ($peeps == '2') {echo 'col-3';}
-if ($peeps == '3') {echo 'col-5';}
+//if ($peeps == '1') {return 'col-2';}
+//if ($peeps == '2') {return 'col-3';}
+//if ($peeps == '3') {return 'col-5';}
 ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
