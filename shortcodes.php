@@ -102,8 +102,8 @@ $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-
 	endwhile;
 $listnews .= '</div></div>';
 return $listnews;	
-wp_reset_query();
 restore_current_blog();	
+wp_reset_query();	
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ---------------------------------------
@@ -281,7 +281,6 @@ return $listsearch;
 add_shortcode( 'searchme', 'searchmevar' );	?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
-//
 // [minisocial fb="" tw="" ig="" yt="" in="" fk="" align="" size="fa-lg"]
 function minisocialvar( $atts ) {
     $s = shortcode_atts( array(
