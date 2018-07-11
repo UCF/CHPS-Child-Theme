@@ -431,7 +431,7 @@ $peeps = $r['column'];
 $ellebell = '';	
 $profilelabel = '';	
 if ($peeps == '1') {$ellebell = 'col-2';}
-if ($peeps == '2') {$ellebell = 'col-3';}
+if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 ?>
@@ -448,7 +448,6 @@ if ($peeps == '3') {$profilelabel ='style="display:none;"';}
 		<?php } ?>
 		   </a>  
 	</div>
-	<!-- <div class="col-lg-10 col-md-9 col-sm-8 col-8 p-3"> -->
 	<div class="col p-3">
 		<h2 class="h4"><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
 		<?php
