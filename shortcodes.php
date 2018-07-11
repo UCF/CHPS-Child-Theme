@@ -510,14 +510,14 @@ if ($peeps == '3') {$ellebell = 'col-5';}
 		<?php if(get_field('email_address', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address', $post->ID); ?></a>
+						<span class="profilelabel"><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address', $post->ID); ?></a>
 					</div>
 				</div>
 		<?php }	?>	
 		<?php if(get_field('phone_number', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number', $post->ID); ?></a>
+						<span class="profilelabel"><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number', $post->ID); ?></a>
 					</div>
 				</div>
 		<?php }	?>
