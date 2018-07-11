@@ -116,7 +116,7 @@ input.searchmd {
 input.searchsm {
 	padding: 4px;
 }
-input.searchsubmit-yellow {
+.searchsubmit-yellow {
 	width: 100%;
 	background: #fecb2f;
 	border: 0px solid #fecb2f;
@@ -130,7 +130,7 @@ input.searchsubmit-yellow {
 	-webkit-transition:.2s;
 	transition:.2s;
 }
-input.searchsubmit-yellow:hover {
+.searchsubmit-yellow:hover {
 	background: #cca12e;
 	color: #fff;
 }
