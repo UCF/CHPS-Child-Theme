@@ -432,7 +432,7 @@ $ellebell = '';
 $profilelabel = '';	
 if ($peeps == '1') {$ellebell = 'col-2';}
 if ($peeps == '2') {$ellebell = 'col-3';}
-if ($peeps == '3') {$ellebell = 'col-lg-5 col-sm-12 col-xs-5';}
+if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 ?>
 <div class="row mb-4 cat-border personlist-ht">
