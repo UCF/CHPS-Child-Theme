@@ -276,6 +276,7 @@ if ($d['addposts'] == 'true') {
 }		
 $listsearch .= '</div></form></div>';		
 wp_reset_query();
+return $listsearch;	
 }
 add_shortcode( 'searchme', 'searchmevar' );	?><?php
 //  ------------------------------------------------------------------------
