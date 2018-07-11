@@ -104,16 +104,16 @@ h2 {
 
 /* = Profile Directory Search Bar
 -------------------------------------------------------------- */
-input.searchbar {
+.searchbar {
 	width: 100%;
 }
-input.searchlg {
+.searchlg {
 	padding: 10px;
 }
-input.searchmd {
+.searchmd {
 	padding: 4px;
 }
-input.searchsm {
+.searchsm {
 	padding: 4px;
 }
 .searchsubmit-yellow {
@@ -134,7 +134,7 @@ input.searchsm {
 	background: #cca12e;
 	color: #fff;
 }
-input.searchsubmit-black {
+.searchsubmit-black {
 	width: 100%;
 	background: #000;
 	border: 0px solid #000;
@@ -149,16 +149,16 @@ input.searchsubmit-black {
 	-webkit-transition:.2s;
 	transition:.2s;
 }
-input.searchsubmit-black:hover {
+.searchsubmit-black:hover {
 	background: #404040;
 }
-input.searchsublg {
+.searchsublg {
 	padding: 12px;
 }
-input.searchsubmd {
+.searchsubmd {
 	padding: 6px;
 }
-input.searchsubsm {
+.searchsubsm {
 	padding: 6px;
 }
 .lookingfor .evc-st-title {
