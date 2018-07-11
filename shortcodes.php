@@ -102,8 +102,8 @@ $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-
 	endwhile;
 $listnews .= '</div></div>';
 return $listnews;	
+wp_reset_query();
 restore_current_blog();	
-wp_reset_query();	
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ---------------------------------------
@@ -187,6 +187,7 @@ function chpsnewsvar( $atts ) {
         'number' => '3',
         'category' => '0',
     ), $atts );
+switch_to_blog(2); 	
 $category_id = get_cat_ID($c['category']);	
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
@@ -232,7 +233,8 @@ $category_id = get_cat_ID($c['category']);
 		<?php endwhile; ?>
     </div>
 </div>
-<?php wp_reset_query(); ?> <?php }
+<?php wp_reset_query();
+restore_current_blog(); ?> <?php }
 add_shortcode( 'chpsnews', 'chpsnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
