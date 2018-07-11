@@ -265,12 +265,12 @@ if ($d['addposts'] == 'true') {
 	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';	
 	$listsearch .= '</div><div class="col-md-2 col-sm-2 p-1"><input class="searchsubmit-' . $d['color'] . ' searchsubmd" id="searchsubmit" type="submit" alt="Search" value="Search" /></div>';	
 } elseif ($d['size'] == 'small'){	
-	$listsearch .= '<div class="col-sm-11 col-xs-6 py-1"><input class="searchbar searchsm" type="text" name="s" placeholder="' . $d['placeholder'] . '" onfocus="this.placeholder = ';	
+	$listsearch .= '<div class="col-sm-11 col-xs-6 py-1 pl-1 pr-0"><input class="searchbar searchsm" type="text" name="s" placeholder="' . $d['placeholder'] . '" onfocus="this.placeholder = ';	
 	$listsearch .= "''";	
 	$listsearch .= '" onblur="this.placeholder = ';		
 	$listsearch .= "'" . $d['placeholder'] . "'";	
 	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';
-	$listsearch .= '</div><div class="col-sm-1 col-xs-6 py-1"><button class="searchsubmit-' . $d['color'] . ' searchsubsm" id="searchsubmit" alt="Search" type="submit"><i class="fa fa-search fa-lg"></i></button></div>';	
+	$listsearch .= '</div><div class="col-sm-1 col-xs-6 py-1 pl-0 pr-1"><button class="searchsubmit-' . $d['color'] . ' searchsubsm" id="searchsubmit" alt="Search" type="submit"><i class="fa fa-search fa-lg"></i></button></div>';	
 } else {	
 	$listsearch .= 'Size Error';
 }		
