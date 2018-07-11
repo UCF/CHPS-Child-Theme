@@ -237,7 +237,6 @@ add_shortcode( 'chpsnews', 'chpsnewsvar' );
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
-//
 // [searchme posttype="" size="" placeholder="" color="" addposts=""]
 function searchmevar( $atts ) {
     $d = shortcode_atts( array(
@@ -246,46 +245,39 @@ function searchmevar( $atts ) {
 		'placeholder' => 'Search',
 		'color' => 'yellow',
 		'addposts' => 'false',
-    ), $atts ); ?> 	
-<div>
-	<form id="searchform" action="<?php echo get_site_url(); ?>/" method="get">
-		<div class="row">
-			<?php if ($d['size'] == 'large') { ?> 
-				<div class="col-md-9 p-1">
-					<input class="searchbar searchlg" type="text" name="s" placeholder="<?php echo $d['placeholder'] ?>" onfocus="this.placeholder = ''" onblur="this.placeholder = '<?php echo $d['placeholder'] ?>'" />
-					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
-					<?php if ($d['addposts'] == 'true') { ?>
-						<input type="hidden" name="post_type" value="posts" />
-					<?php } ?>
-				</div>
-				<div class="col-md-3 p-1">
-					<input class="searchsubmit-<?php echo $d['color'] ?> searchsublg" id="searchsubmit" type="submit" alt="Search" value="Search" />
-				</div>
-			<?php } elseif ($d['size'] == 'medium'){ ?> 
-				<div class="col-md-10 col-sm-10 p-0">
-					<input class="searchbar searchmd" type="text" name="s" placeholder="<?php echo $d['placeholder'] ?>" onfocus="this.placeholder = ''" onblur="this.placeholder = '<?php echo $d['placeholder'] ?>'" />
-					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
-				</div>
-				<div class="col-md-2 col-sm-2 p-0">
-					<input class="searchsubmit-<?php echo $d['color'] ?> searchsubmd" id="searchsubmit" type="submit" alt="Search" value="Search" />
-				</div>
-			<?php } elseif ($d['size'] == 'small'){ ?> 
-				<div class="col-sm-11 col-xs-6 p-0">
-					<input class="searchbar searchsm" type="text" name="s" placeholder="<?php echo $d['placeholder'] ?>" onfocus="this.placeholder = ''" onblur="this.placeholder = '<?php echo $d['placeholder'] ?>'" />
-					<input type="hidden" name="post_type" value="<?php echo $d['posttype'] ?>" />
-				</div>
-				<div class="col-sm-1 col-xs-6 p-0">
-					<input class="searchsubmit-<?php echo $d['color'] ?> searchsubsm" id="searchsubmit" type="submit" alt="Search" value="Search" />
-				</div>
-			<?php } else { ?> 
-				Size Error
-			<?php } ?>
-		</div>
-	</form>
-</div>
-<?php wp_reset_query(); ?> 
-<?php	}
-add_shortcode( 'searchme', 'searchmevar' ); ?><?php
+    ), $atts ); 
+$listsearch = '<div><form id="searchform" action="' . get_site_url() . '/" method="get"><div class="row">';
+if ($d['size'] == 'large') {
+	$listsearch .= '<div class="col-md-9 p-1"><input class="searchbar searchlg" type="text" name="s" placeholder="' . $d['placeholder'] . '" onfocus="this.placeholder = ';	
+	$listsearch .= "''";	
+	$listsearch .= '" onblur="this.placeholder = ';		
+	$listsearch .= "'" . $d['placeholder'] . "'";	
+	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';
+if ($d['addposts'] == 'true') {	
+	$listsearch .= '<input type="hidden" name="post_type" value="posts" />';
+}
+	$listsearch .= '</div><div class="col-md-3 p-1"><input class="searchsubmit-' . $d['color'] . ' searchsublg" id="searchsubmit" type="submit" alt="Search" value="Search" /></div>';	
+} elseif ($d['size'] == 'medium'){
+	$listsearch .= '<div class="col-md-10 col-sm-10 p-0"><input class="searchbar searchmd" type="text" name="s" placeholder="' . $d['placeholder'] . '" onfocus="this.placeholder = ';	
+	$listsearch .= "''";	
+	$listsearch .= '" onblur="this.placeholder = ';		
+	$listsearch .= "'" . $d['placeholder'] . "'";	
+	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';	
+	$listsearch .= '</div><div class="col-md-2 col-sm-2 p-0"><input class="searchsubmit-' . $d['color'] . ' searchsubmd" id="searchsubmit" type="submit" alt="Search" value="Search" /></div>';	
+} elseif ($d['size'] == 'small'){	
+	$listsearch .= '<div class="col-sm-11 col-xs-6 p-0"><input class="searchbar searchsm" type="text" name="s" placeholder="' . $d['placeholder'] . '" onfocus="this.placeholder = ';	
+	$listsearch .= "''";	
+	$listsearch .= '" onblur="this.placeholder = ';		
+	$listsearch .= "'" . $d['placeholder'] . "'";	
+	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';
+	$listsearch .= '</div><div class="col-sm-1 col-xs-6 p-0"><input class="searchsubmit-' . $d['color'] . ' searchsubsm" id="searchsubmit" type="submit" alt="Search" value="Search" /></div>';	
+} else {	
+	$listsearch .= 'Size Error';
+}		
+$listsearch .= '</div></form></div>';		
+wp_reset_query();
+}
+add_shortcode( 'searchme', 'searchmevar' );	?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 //
@@ -366,7 +358,6 @@ add_shortcode( 'recentlist', 'reclistvar' );
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RESEARCH INTERNEST BY DEPARTMENT
-//
 // [researchlist department=""]
 function researchlistvar( $atts ) {
     $r = shortcode_atts( array(
