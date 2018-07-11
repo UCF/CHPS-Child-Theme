@@ -429,10 +429,11 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' 
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
 $ellebell = '';	
+$profilelabel = '';	
 if ($peeps == '1') {$ellebell = 'col-2';}
 if ($peeps == '2') {$ellebell = 'col-3';}
 if ($peeps == '3') {$ellebell = 'col-5';}
-if ($peeps == '3') { ?><style>.profilelabel{display:none;}</style><?php }	
+if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
@@ -489,7 +490,7 @@ if ($peeps == '3') { ?><style>.profilelabel{display:none;}</style><?php }
 		<?php if(get_field('building', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span class="profilelabel"><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="<?php 
+						<span <?php echo $profilelabel; ?>><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="<?php 
 					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
 					if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
@@ -511,14 +512,14 @@ if ($peeps == '3') { ?><style>.profilelabel{display:none;}</style><?php }
 		<?php if(get_field('email_address', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span class="profilelabel"><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address', $post->ID); ?></a>
+						<span <?php echo $profilelabel; ?>><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address', $post->ID); ?></a>
 					</div>
 				</div>
 		<?php }	?>	
 		<?php if(get_field('phone_number', $post->ID)){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span class="profilelabel"><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number', $post->ID); ?></a>
+						<span <?php echo $profilelabel; ?>><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number', $post->ID); ?></a>
 					</div>
 				</div>
 		<?php }	?>
