@@ -432,7 +432,7 @@ $ellebell = '';
 if ($peeps == '1') {$ellebell = 'col-2';}
 if ($peeps == '2') {$ellebell = 'col-3';}
 if ($peeps == '3') {$ellebell = 'col-5';}
-if ($peeps == '3') {echo '<stryle>.profilelabel{display:none;}</style>';}	
+if ($peeps == '3') { ?><style>.profilelabel{display:none;}</style><?php }	
 ?>
 <div class="row mb-4 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
