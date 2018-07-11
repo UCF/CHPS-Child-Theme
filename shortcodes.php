@@ -435,7 +435,7 @@ if ($peeps == '2') {$ellebell = 'col-3';}
 if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 ?>
-<div class="row mb-4 cat-border personlist-ht">
+<div class="row mb-3 cat-border personlist-ht">
 	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
 	<div class="<?php echo $ellebell; ?> p-0 media-background-container catlist-photo mx-auto">
 		   <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" >
