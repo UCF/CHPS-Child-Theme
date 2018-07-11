@@ -270,7 +270,7 @@ if ($d['addposts'] == 'true') {
 	$listsearch .= '" onblur="this.placeholder = ';		
 	$listsearch .= "'" . $d['placeholder'] . "'";	
 	$listsearch .= '" /><input type="hidden" name="post_type" value="' . $d['posttype'] . '" />';
-	$listsearch .= '</div><div class="col-sm-1 col-xs-6 p-0"><input class="searchsubmit-' . $d['color'] . ' searchsubsm" id="searchsubmit" type="submit" alt="Search" value="Search" /></div>';	
+	$listsearch .= '</div><div class="col-sm-1 col-xs-6 p-0"><button class="searchsubmit-' . $d['color'] . ' searchsubsm" id="searchsubmit" alt="Search" type="submit"><i class="fa fa-search fa-lg"></i></button></div>';	
 } else {	
 	$listsearch .= 'Size Error';
 }		
