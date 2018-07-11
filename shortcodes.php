@@ -430,7 +430,7 @@ $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
 $ellebell = '';	
 $profilelabel = '';	
-if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-4 col-sm-5 col-4';}
+if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-3 col-sm-5 col-4';}
 if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
