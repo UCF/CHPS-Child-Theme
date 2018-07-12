@@ -65,48 +65,106 @@ function externalnewsvar( $atts ) {
 <?php }
 add_shortcode( 'exnews', 'externalnewsvar' );
 ?><?php
-//  ---------------------------------------
+//  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS VERTICALLY IN BOXES 
-// [newsvisual column="" number="" category=""]
+//
+// [newsvisual number="" category=""]
 function newsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '0',
-		'column' => '4',
-    ), $atts ); 
-switch_to_blog(2);
-$category_id = get_cat_ID($a['category']);	
-		$visualnews = new WP_Query(array(
-				'post_type'	=> 'post',
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $a['number'],
-				'cat' => $category_id,
-				)
-			); 
-$listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
-	while($visualnews->have_posts()) : $visualnews->the_post();
-	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-		if ($a['column'] == '3') {	
-			$listnews .= '<div class="col-lg-4 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
-		} else {
-			$listnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
-		}
-		if ( has_post_thumbnail()) {
-			$listnews .= '<img src="' . $getimgURL .'" alt="' . get_the_title() . '" title="' . get_the_title() .'" class="media-background object-fit-cover">';
-		} else {
-			$listnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
-		}
-		$listnews .= '</div><div class="p-3">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';
-	endwhile;
-$listnews .= '</div></div>';
-return $listnews;	
-wp_reset_query();
-restore_current_blog();	
+        'column' => '4',
+    ), $atts );
+$category_id = get_cat_ID($a['category']);  
+        $visualnews = new WP_Query(array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
+                'cat' => $category_id,
+                )
+            ); ?>                            
+ <div class="container newsmedia">
+    <div class="row narrow-gutter row-flex">
+        <?php while($visualnews->have_posts()) : $visualnews->the_post();
+    $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0]; ?><!-- START THE REPEAT SECTION -->   
+            <?php if ($a['column'] == '3') { ?> 
+                <div class="col-lg-4 col-sm-6 col-xs-12">
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                        <div class="visnews">
+                            <div class="media-background-container visnews-photo mx-auto">
+            <?php } else { ?> 
+                <div class="col-lg-3 col-sm-6 col-xs-12">
+                    <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>">
+                        <div class="visnews">
+                            <div class="media-background-container visnews-photo mx-auto">
+            <?php } ?>
+                                <?php if ( has_post_thumbnail()) { ?>
+                                    <img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+                                    <?php } else { ?>
+                                    <img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
+                                <?php } ?>
+                            </div>
+                            <div class="p-3">
+                                <?php the_title(); ?>
+                                <p class="newsdate"><?php the_time('F j, Y'); ?></p>
+                            </div>
+                        </div>
+                    </a>
+                </div><!-- END OF THE REPEAT SECTION -->        
+        <?php endwhile; ?>
+    </div>
+</div>
+<?php wp_reset_query(); ?> 
+<style>   
+.visnews-photo {
+    height: 200px;
 }
+@media screen and (max-width: 992px) {
+    .visnews-photo {
+        width: 100%;
+        height:225px;
+    }
+}   
+.newsmedia .visnews {
+  height: 100%;
+  padding: 0px; 
+  color: #000;
+  border: solid 1px #ddd;
+  line-height:17px;
+  font-size: 15px !important;
+  font-weight:500;
+}
+.newsmedia .visnews:hover {
+  background: #eee;
+}   
+.newsmedia .col-xs-12 a {
+    color:#000;
+    text-decoration:none !important;
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+[class*="col-"] {
+  margin-bottom: 12px;
+}
+.newsmedia .narrow-gutter [class*='col-'] {
+  padding-right:6px;
+  padding-left:6px;
+}
+.newsmedia .newsdate {
+    margin-top:15px;
+    display:block;
+    font-weight:normal;
+    color: #aaa;
+    font-style: italic;
+} /* START RECURRING STYLING */
+</style>
+<?php }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
-//  ---------------------------------------
+//  ------------------------------------------------------------------------
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
