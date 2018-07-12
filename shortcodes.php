@@ -198,6 +198,13 @@ $category_id = get_cat_ID($c['category']);
 				'cat' => $category_id,
 				)
 			);
+?><?php
+    // Get the URL of this category
+    $category_link = get_category_link( $category_id );
+?>
+<!-- Print a link to this category -->
+<a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Category Name</a>	
+<?php
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
@@ -211,7 +218,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( ! empty( $categories ) ) {
-		$listhnews .= '<a class="category-title" href="' . get_category_link() . '">' . esc_html( $categories[0]->name ) . '</a>';
+		$listhnews .= '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
