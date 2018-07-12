@@ -198,6 +198,8 @@ $category_id = get_cat_ID($c['category']);
 				'cat' => $category_id,
 				)
 			);
+$hellome = get_option( 'category_base' );
+	echo $hellome;
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
