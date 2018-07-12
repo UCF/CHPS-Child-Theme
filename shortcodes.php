@@ -207,7 +207,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	if ( has_post_thumbnail()) {	
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
 	} else { 
-		$listhnews .= '<img src="' . get_the_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+		$listhnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( ! empty( $categories ) ) {
