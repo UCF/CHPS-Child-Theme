@@ -223,7 +223,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$listhnews .= '</div></div></div>';	
 endwhile;	
 $listhnews .= '</div></div>';
-	echo $categories[0]->term_id;
+	echo $categories[0]->slug;
 wp_reset_query();	
 restore_current_blog();
 return $listhnews;	
