@@ -213,7 +213,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( ! empty( $categories ) ) {
-		$listhnews .= '<a class="category-title" href="/' . $hellome . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+		$listhnews .= '<a class="category-title" href="/' . $hellome . esc_html( get_category_link( $categories[0]->slug ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
