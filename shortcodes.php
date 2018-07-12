@@ -204,8 +204,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$display_name = get_the_author_meta( 'display_name')[0];
 	$categories = get_the_category(); 
 	$hellome = get_option( 'category_base' );
-	$blog_details = get_blog_details(2);
-	echo $blog_details->siteurl;
+	$blog_site = get_blog_details(2);
 	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
 	if ( has_post_thumbnail()) {	
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
@@ -214,7 +213,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( ! empty( $categories ) ) {
-		$listhnews .= '<a class="category-title" href="/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
+		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
