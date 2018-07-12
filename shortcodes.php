@@ -204,6 +204,8 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$display_name = get_the_author_meta( 'display_name')[0];
 	$categories = get_the_category(); 
 	$hellome = get_option( 'category_base' );
+	$blog_details = get_blog_details(2);
+	echo $blog_details->siteurl;
 	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
 	if ( has_post_thumbnail()) {	
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
