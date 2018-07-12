@@ -198,13 +198,12 @@ $category_id = get_cat_ID($c['category']);
 				'cat' => $category_id,
 				)
 			);
-$hellome = get_option( 'category_base' );
-
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	$display_name = get_the_author_meta( 'display_name')[0];
-	$categories = get_the_category(); 		
+	$categories = get_the_category(); 
+	$hellome = get_option( 'category_base' );
 	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
 	if ( has_post_thumbnail()) {	
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
@@ -213,7 +212,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( ! empty( $categories ) ) {
-		$listhnews .= '<a class="category-title" href="/' . $hellome . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
+		$listhnews .= '<a class="category-title" href="/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
