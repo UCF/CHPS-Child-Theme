@@ -72,9 +72,10 @@ add_shortcode( 'exnews', 'externalnewsvar' );
 function newsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
-        'category' => '0',
+        'category' => '',
         'column' => '4',
     ), $atts );
+switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
         $visualnews = new WP_Query(array(
                 'post_type' => 'post',
@@ -116,7 +117,8 @@ $category_id = get_cat_ID($a['category']);
         <?php endwhile; ?>
     </div>
 </div>
-<?php wp_reset_query(); ?> 
+<?php wp_reset_query(); 
+restore_current_blog();	?> 
 <?php }
 add_shortcode( 'newsvisual', 'newsvisualvar' );
 //  ------------------------------------------------------------------------
