@@ -217,7 +217,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 		$content = get_the_content();
 		$content = preg_replace('#\[[^\]]+\]#', '',$content);
 		$content = apply_filters('the_content', $content);
-		echo wp_trim_words( $content, 30, '...' );	
+		wp_trim_words( $content, 30, '...' );	
 	$listhnews .= '</div></div></div>';	
 endwhile;	
 $listhnews .= '</div></div>';		
