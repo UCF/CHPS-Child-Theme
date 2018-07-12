@@ -198,13 +198,6 @@ $category_id = get_cat_ID($c['category']);
 				'cat' => $category_id,
 				)
 			);
-?><?php
-    // Get the URL of this category
-    $category_link = get_category_link( $category_id );
-?>
-<!-- Print a link to this category -->
-<a href="<?php echo esc_url( $category_link ); ?>" title="Category Name">Category Name</a>	
-<?php
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
