@@ -222,7 +222,9 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$listhnews .= wp_trim_words( $content, 30, '...' );		
 	$listhnews .= '</div></div></div>';	
 endwhile;	
-$listhnews .= '</div></div>';		
+$listhnews .= '</div></div>';	
+echo $category_id->slug;
+echo $categories->slug,		
 wp_reset_query();	
 restore_current_blog();
 return $listhnews;	
