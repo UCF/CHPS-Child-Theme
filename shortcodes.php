@@ -65,7 +65,7 @@ function externalnewsvar( $atts ) {
 <?php }
 add_shortcode( 'exnews', 'externalnewsvar' );
 ?><?php
-//  ------------------------------------------------------------------------
+//  ----------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS VERTICALLY IN BOXES 
 // [newsvisual number="" category=""]
 function newsvisualvar( $atts ) {
@@ -107,7 +107,7 @@ return $listnews;
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );	
 ?><?php
-//  ------------------------------------------------------------------------
+//  --------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
 //
 // [recentnews category="" number=""]
