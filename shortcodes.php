@@ -185,7 +185,7 @@ add_shortcode( 'recentexnews', 'recexnewsvar' );
 function chpsnewsvar( $atts ) {
     $c = shortcode_atts( array(
         'number' => '3',
-        'category' => '0',
+        'category' => '',
     ), $atts );
 switch_to_blog(2); 	
 $category_id = get_cat_ID($c['category']);	
@@ -197,45 +197,35 @@ $category_id = get_cat_ID($c['category']);
 				'posts_per_page' => $c['number'],
 				'cat' => $category_id,
 				)
-			);?> 	
- <div class="container">
-    <div class="row">
-		<?php while($chpsnews->have_posts()) : $chpsnews->the_post();
-			$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-			$display_name = get_the_author_meta( 'display_name')[0];
-			$categories = get_the_category(); 	?>	
-			<!-- START THE REPEAT SECTION -->   
-			<div class="row mb-5 chpsnews">
-				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
-					   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
-					   <?php if ( has_post_thumbnail()) { ?>
-							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
-							<?php } else { ?>
-							<img src="<?php the_field('default_news_image', 'option'); ?>" alt="<?php the_title_attribute(); ?>" title="<?php the_title_attribute(); ?>" class="media-background object-fit-cover">
-						<?php } ?>
-					   </a>
-				</div>
-				<div class="col-lg-9 px-4 py-0">
-					<?php if ( ! empty( $categories ) ) {
-							echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-						} ?>
-					<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-					<div class="entry">
-					<?php 			
-								$content = get_the_content();
-								$content = preg_replace('#\[[^\]]+\]#', '',$content);
-								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 30, '...' );
-								?>
-					</div>
-				</div>
-			</div>	<!-- END OF THE REPEAT SECTION -->		
-		<?php endwhile; ?>
-    </div>
-</div>
-<?php wp_reset_query();
-restore_current_blog(); ?> <?php }
-add_shortcode( 'chpsnews', 'chpsnewsvar' );
+			);
+$listhnews = '<div class="container"><div class="row">';
+while($chpsnews->have_posts()) : $chpsnews->the_post();
+	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+	$display_name = get_the_author_meta( 'display_name')[0];
+	$categories = get_the_category(); 		
+	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
+	if ( has_post_thumbnail()) {	
+		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
+	} else { 
+		$listhnews .= '<img src="' . get_the_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	}
+	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
+	if ( ! empty( $categories ) ) {
+		$listhnews .= '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+	}
+	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
+		$content = get_the_content();
+		$content = preg_replace('#\[[^\]]+\]#', '',$content);
+		$content = apply_filters('the_content', $content);
+		echo wp_trim_words( $content, 30, '...' );	
+	$listhnews .= '</div></div></div>';	
+endwhile;	
+$listhnews .= '</div></div>';		
+wp_reset_query();	
+restore_current_blog();
+return $listhnews;	
+}
+add_shortcode( 'chpsnews', 'chpsnewsvar' );	
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
