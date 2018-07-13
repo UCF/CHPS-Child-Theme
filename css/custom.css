@@ -347,8 +347,8 @@ span.searchresults	{
 	border-right: solid 2px #eee;
 }
 .postmission p {
-	font-size:14px;
-	line-height: 16px;
+	font-size:14px !important;
+	line-height: 16px !important;
 }
 figure.alignleft {
     margin-right: 20px;
