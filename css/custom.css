@@ -346,7 +346,7 @@ span.searchresults	{
 .recborder {
 	border-right: solid 2px #eee;
 }
-.postmission {
+.postmission p {
 	font-size:14px;
 	line-height: 16px;
 }
