@@ -58,7 +58,7 @@ $categories = get_the_category();
 				</div>
 				<div class="col-md-6">
 					<h5 class="mb-4">Our Mission</h5>
-					<span class="postmission"><?php the_field('mission_statement', 'option'); ?></span>
+					<span class="postmission">The College of Health Professions and Sciences prepares students to promote, preserve, and enrich the health and wellness of diverse populations, through innovative and collaborative education, research, service, and practice.</span>
 				</div>
 			</div>
         </div>
