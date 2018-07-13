@@ -58,7 +58,7 @@ $categories = get_the_category();
 				</div>
 				<div class="col-md-6">
 					<h5 class="mb-4">Our Mission</h5>
-					<span class="postmission"><?php get_field('mission_statement', 'option'); ?></span>
+					<span class="postmission"><?php the_field('mission_statement', 'option'); ?></span>
 				</div>
 			</div>
         </div>
