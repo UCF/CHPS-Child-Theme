@@ -346,9 +346,9 @@ span.searchresults	{
 .recborder {
 	border-right: solid 2px #eee;
 }
-.postmission p {
-	font-size:14px !important;
-	line-height: 16px !important;
+.postmission {
+	font-size:14px;
+	line-height: 16px;
 }
 figure.alignleft {
     margin-right: 20px;
