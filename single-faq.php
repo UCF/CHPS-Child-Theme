@@ -6,7 +6,7 @@ $categories = get_the_category();
 <?php if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 <div class="breadcrumbnav">
 	<div class="container">
-		<a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a> > <a href="<?php echo get_site_url(); ?>" title="UCF <?php bloginfo( 'name' ); ?>"><?php bloginfo( 'name' ); ?></a> > <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> at UCF"><?php the_title(); ?></a>
+		<a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a> > <a href="<?php echo get_site_url(); ?>" title="<?php bloginfo( 'name' ); ?> at the College of Health Professions and Sciences"><?php bloginfo( 'name' ); ?></a> > <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> at UCF"><?php the_title(); ?></a>
     </div>
 </div>
 <?php } ?>
