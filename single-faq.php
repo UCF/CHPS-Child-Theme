@@ -3,7 +3,7 @@ $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
 ?>
-<?php if ( get_field( 'breadcrumb' ) == 1 ) { ?>
+<?php if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 <div class="breadcrumbnav">
 	<div class="container">
 		<a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a> > <a href="<?php echo get_site_url(); ?>" title="UCF <?php echo get_site_url(); ?>"><?php bloginfo( 'name' ); ?></a> > <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> at UCF"><?php the_title(); ?></a>
