@@ -95,9 +95,9 @@
 	</article>
 </div>
 <style>	
-header div.container {
-	display: none;
-}	
+header .container .h1 {
+	display: none !important;
+}		
 .authortext {
 	text-transform: uppercase;
 	font-size: 12px;
