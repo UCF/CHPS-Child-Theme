@@ -180,7 +180,7 @@ $ids = get_the_ID();
 	padding: 6px;
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
 }
-header .container h1, header .container .lead {
+header .container .h1, header .container .lead {
 	display: none !important;
 }	
 </style>				
