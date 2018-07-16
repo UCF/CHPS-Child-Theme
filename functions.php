@@ -224,10 +224,19 @@ add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 1
 
 
 // TRYING TO FIGURE THIS OUT
-add_filter('get_nav_markup', 'extra_content' , 999, 1 ) ; 
+function get_header_markup_dave() {
+	global $post;
+	echo get_nav_markup( $post );
 
-function extra_content ($post) {
-$extra_stuff = " <div> Some Stuff </div> " ;
-return $post.$extra_stuff ;
+	$videos = get_header_videos( $post );
+	$images = get_header_images( $post );
+
+	if ( $videos || $images ) {
+		echo get_header_media_markup( $post, $videos, $images );
+	}
+	else {
+		echo get_header_default_markup( $post );
+	}
 }
+
 ?>
