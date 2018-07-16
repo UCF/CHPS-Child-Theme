@@ -228,9 +228,9 @@ function get_header_markup_dave() {
 	global $post;
 	echo get_nav_markup( $post ); 
 if ( get_field( 'breadcrumb', 'option' ) == 1 ) { 
-	$listbcrumb = '<div class="breadcrumbnav"><div class="container"><a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a><span class="hidemobile"> > <a href="' . get_site_url() . '" title="' . bloginfo( 'name' ) . ' at the UCF College of Health Professions and Sciences">' . bloginfo( 'name' ) . '</a>';
+	$listbcrumb = '<div class="breadcrumbnav"><div class="container"><a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a><span class="hidemobile"> > <a href="' . get_site_url() . '" title="' . get_bloginfo( 'name' ) . ' at the UCF College of Health Professions and Sciences">' . get_bloginfo( 'name' ) . '</a>';
 if ( !is_front_page() ) {
-	$listbcrumb .= '> <a href="' . get_the_permalink() . '" title="' . get_the_title() . ' at the UCF ' . bloginfo( 'name' ) . '">' . get_the_title() . '</a></span>';
+	$listbcrumb .= '> <a href="' . get_the_permalink() . '" title="' . get_the_title() . ' at the UCF ' . get_bloginfo( 'name' ) . '">' . get_the_title() . '</a></span>';
 }
 $listbcrumb .= '</div></div>';	
 }
