@@ -18,17 +18,6 @@ endwhile;
 $showexnews .= '</div></div>';
 ?> 
 <style>	
-.newsmedia .col-xs-12 a {
-    color:#000;
-    text-decoration:none !important;
-}
-.row-flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-[class*="col-"] {
-  margin-bottom: 12px;
-}
 .newsmedia .content {
   height: 100%;
   padding: 12px;
@@ -40,17 +29,6 @@ $showexnews .= '</div></div>';
 }
 .newsmedia .content:hover {
   background: #eee;
-}
-.newsmedia .narrow-gutter [class*='col-'] {
-  padding-right:6px;
-  padding-left:6px;
-}
-.newsmedia .newsdate {
-    margin-top:15px;
-    display:block;
-    font-weight:normal;
-    color: #aaa;
-    font-style: italic;
 }
 </style>
 <?php 
