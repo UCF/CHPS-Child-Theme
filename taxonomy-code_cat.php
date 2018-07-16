@@ -67,6 +67,8 @@ $term_link = get_term_link( $term, 'code_cat' );
 	</article>
 </div>
 <style>
-header div.container{display: none;}	
+.site-header .container h1 {
+	display: none !important;
+}
 </style>
 <?php get_footer(); ?>
