@@ -34,8 +34,8 @@
 	</article>
 </div>
 <style>	
-header div.container {
-	display: none;
-}	
+header .container h1 {
+	display: none !important;
+}		
 </style>
 <?php get_footer(); ?>
