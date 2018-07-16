@@ -224,7 +224,7 @@ add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 1
 
 
 // TRYING TO FIGURE THIS OUT
-add_filter('the_content', 'extra_content' , 999, 1 ) ; 
+add_filter('get_nav_markup', 'extra_content' , 999, 1 ) ; 
 
 function extra_content ($content) {
 $extra_stuff = " <div> Some Stuff </div> " ;
