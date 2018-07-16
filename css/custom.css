@@ -285,6 +285,18 @@ span.searchresults	{
     color: #aaa;
     font-style: italic;
 }
+.newsmedia .exInfo {
+  height: 100%;
+  padding: 12px;
+  color: #000;
+  border: solid 1px #ddd;
+  line-height:15px;
+  font-size: 13px !important;
+  font-weight:500;
+}
+.newsmedia .exInfo:hover {
+  background: #eee;
+}
 /* = RECENT LIST TEXT SHORTCODE 
 -------------------------------------------------------------- */
 .recentlist li {
