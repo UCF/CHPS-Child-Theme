@@ -95,7 +95,7 @@
 	</article>
 </div>
 <style>	
-header .container .h1 {
+header .container h1 {
 	display: none !important;
 }		
 .authortext {
