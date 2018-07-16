@@ -54,7 +54,7 @@ $categories = get_the_category();
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
-					<?php echo do_shortcode('[recentnews number="5"]'); ?>
+					<?php echo do_shortcode('[recentlist number="5"]'); ?>
 				</div>
 				<div class="col-md-6">
 					<h5 class="mb-4">Our Mission</h5>
