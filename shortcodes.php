@@ -10,22 +10,15 @@ function externalnewsvar( $atts ) {
 				'order' => 'DESC',
 				'posts_per_page' => $a['number'],
 				)
-			);?> 	
- <div class="container newsmedia">
-    <div class="row narrow-gutter row-flex">
-		<?php while($externalnews->have_posts()) : $externalnews->the_post();?>	
-			<!-- START THE REPEAT SECTION -->   
-			<div class="col-lg-3 col-sm-6 col-xs-12">
-				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank"><div class="content">
-				  <?php the_title(); ?>
-				  <p class="newsdate"><?php the_time('F j, Y'); ?></p>
-				  </div></a>
-			</div>
-			<!-- END OF THE REPEAT SECTION -->		
-		<?php endwhile; ?>
-    </div>
-</div>
-<?php wp_reset_query(); ?> 
+			);
+$showexnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
+while($externalnews->have_posts()) : $externalnews->the_post();
+$showexnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '" target="_blank"><div class="content">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></a></div>';
+endwhile;
+$showexnews .= '</div></div>';
+wp_reset_query();
+return $showexnews;	
+?> 	
 <style>	
 .newsmedia .col-xs-12 a {
     color:#000;
