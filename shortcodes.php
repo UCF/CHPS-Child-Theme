@@ -261,7 +261,7 @@ function reclistvar( $atts ) {
 }
 $list = '<div class="' . $b['class'] . '"><ul>';				
 	while($reclist->have_posts()) : $reclist->the_post();
-	if ($post->post_type == "inthemedia") {
+	if ($b['posttype'] == "inthemedia") {
 		$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">HELLO</a></li>';
 }
 	else {
