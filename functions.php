@@ -220,6 +220,14 @@ function mychildtheme_person_post_type_args( $args ) {
 	$args['rewrite'] = array( 'with_front' => false );
 	return $args;
 }
-
 add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 10, 1 );
+
+
+// TRYING TO FIGURE THIS OUT
+add_filter('get_nav_markup', 'extra_content') ; 
+
+function extra_content ($get_nav_markup) {
+$extra_stuff = " <div> Some Stuff </div> " ;
+return $get_nav_markup.$extra_stuff ;
+}
 ?>
