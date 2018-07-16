@@ -269,7 +269,7 @@ function get_nav_markup() {
 <?php
 	return ob_get_clean();
 }
-add_action('after_setup_theme', 'get_nav_markup', 20);
+add_action( 'init', 'get_nav_markup', 20);
 
 
 
