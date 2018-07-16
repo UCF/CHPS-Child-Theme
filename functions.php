@@ -226,8 +226,18 @@ add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 1
 // TRYING TO FIGURE THIS OUT
 function get_header_markup_dave() {
 	global $post;
-	echo get_nav_markup( $post );
-
+	echo get_nav_markup( $post ); ?>
+<?php 
+if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
+<div class="breadcrumbnav">
+	<div class="container">
+		<a href="/" title="UCF College of Health Professions and Sciences" class="yellow">College of Health Professions and Sciences</a><span class="hidemobile"> > <a href="<?php echo get_site_url(); ?>" title="<?php bloginfo( 'name' ); ?> at the UCF College of Health Professions and Sciences"><?php bloginfo( 'name' ); ?></a>
+       	<?php if ( !is_front_page() ) { ?>
+         	> <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?> at the UCF <?php bloginfo( 'name' ); ?>"><?php the_title(); ?></a></span>
+    	<?php } ?>
+    </div>
+</div>
+<?php } 
 	$videos = get_header_videos( $post );
 	$images = get_header_images( $post );
 
