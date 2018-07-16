@@ -262,7 +262,7 @@ function reclistvar( $atts ) {
 $list = '<div class="' . $b['class'] . '"><ul>';				
 	while($reclist->have_posts()) : $reclist->the_post();
 	if ($b['posttype'] == "inthemedia") {
-		$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">HELLO</a></li>';
+		$list .= '<li><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
 }
 	else {
 		$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
