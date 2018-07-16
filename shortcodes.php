@@ -107,42 +107,6 @@ return $listnews;
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );	
 ?><?php
-//  --------------------------------------------
-// SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
-//
-// [recentnews category="" number=""]
-function recnewsvar( $atts ) {
-    $b = shortcode_atts( array(
-        'class' => 'recentlist',
-		'number' => '5',
-		'posttype' => 'post',
-        //'category' => 'something else',
-    ), $atts );
-		$recnews = new WP_Query(array(
-				'post_type'	=> $b['posttype'],
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $b['number'],
-				)
-			);?> 	
-    <div class="<?php echo $b['class'] ?>">
-    	<ul>
-		<?php while($recnews->have_posts()) : $recnews->the_post();?>	
-			<!-- START THE REPEAT SECTION -->   
-			<li class="mb-3 recnews">
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-				  <?php the_title(); ?>
-				</a>
-			</li>
-			<!-- END OF THE REPEAT SECTION -->		
-		<?php endwhile; ?>
-   		</ul>
-   	</div>
-<?php wp_reset_query(); ?> 
-<?php }
-add_shortcode( 'recentnews', 'recnewsvar' );
-?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
 //
