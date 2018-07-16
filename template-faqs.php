@@ -59,6 +59,8 @@ Template Name: FAQs
 	</article>
 </div>
 <style>
-header div.container{display: none;}	
+.site-header .container h1 {
+	display: none !important;
+}	
 </style>
 <?php get_footer(); ?>
