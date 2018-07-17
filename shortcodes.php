@@ -333,7 +333,7 @@ function showpersonvar( $atts ) {
 	), $atts );
 switch_to_blog(2);	
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
-$getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
+$getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
 $ellebell = '';	
