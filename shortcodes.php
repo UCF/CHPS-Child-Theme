@@ -363,7 +363,7 @@ if(get_field('job_titles_tax', $post->ID)){
 	$project_cats = array_values($project_cats);
 	for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
 		// Each array item is an object. Display its 'name' value.
-		$project_cats[$cat_count]->name;
+		$listpeeps .= $project_cats[$cat_count]->name;	 
 		// If there is more than one term, comma separate them.
 		if ($cat_count<count($project_cats)-1){
 			$listpeeps .= ', ';	 
