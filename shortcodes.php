@@ -331,8 +331,6 @@ function showpersonvar( $atts ) {
         'name' => '',
 		'column' =>'1',
 	), $atts );
-?>
-<?php 
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
@@ -343,96 +341,77 @@ if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-3 col-sm-5 col-4';}
 if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
-?>
-<div class="row mb-1 cat-border personlist-ht">
-	<!--<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">-->
-	<div class="<?php echo $ellebell; ?> p-0 media-background-container catlist-photo mx-auto">
-		   <a href="<?php echo get_permalink($post->ID); ?>" title="<?php echo $post->post_title; ?>" >
-		   <?php if ( has_post_thumbnail($post->ID)) { ?>
-				<img src="<?php echo $getimageURL; ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
-				<?php } else { ?> 
-					<?php switch_to_blog(2);?>
-						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo $post->post_title; ?>'s profile picture at UCF" title="<?php echo $post->post_title; ?>" class="media-background object-fit-cover">
-					<?php restore_current_blog(); ?>
-		<?php } ?>
-		   </a>  
-	</div>
-	<div class="col p-3">
-		<h2 class="h4"><a href="<?php echo get_permalink($post->ID); ?>" rel="bookmark" title="<?php echo $post->post_title; ?>"><?php echo $post->post_title; ?></a></h2>
-		<?php
-		if(get_field('job_titles_tax', $post->ID)){ ?>
-			<div class="profilejobtitle">
-				<?php
-				// Get a list of terms for this post's custom taxonomy.
-				$project_cats = get_the_terms($post->ID, 'job_titles');
-				// Renumber array.
-				$project_cats = array_values($project_cats);
-				for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
-					// Each array item is an object. Display its 'name' value.
-					echo $project_cats[$cat_count]->name;
-					// If there is more than one term, comma separate them.
-					if ($cat_count<count($project_cats)-1){
-						echo ', ';
-					}
-				}?>
-			</div>
-		<?php }	?>
-		<?php
-		if(get_the_terms($post->ID, 'departments')){ ?>
-			<div class="profiledepartments">
-				<?php
-				// Get a list of terms for this post's custom taxonomy.
-				$project_depts = get_the_terms($post->ID, 'departments');
-				// Renumber array.
-				$project_depts = array_values($project_depts);
-				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
-					// Each array item is an object. Display its 'name' value.
-					echo $project_depts[$dept_count]->name;
-					// If there is more than one term, comma separate them.
-					if ($dept_count<count($project_depts)-1){
-						echo ', ';
-					}
-				}?>
-			</div>
-		<?php }	?>
-		<?php if(get_field('building', $post->ID)){ ?>
-			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span <?php echo $profilelabel; ?>><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="<?php 
-					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
-					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-					if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
-					if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
-					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
-					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
-					?>" target="_blank" title="Map to <?php the_field('building', $post->ID); ?>">
-							<?php the_field('building', $post->ID); ?>
-						</a>
-						<?php if(get_field('room_number', $post->ID)){ ?>
-						<span>
-							<?php the_field('office_type', $post->ID); ?>: <?php the_field('room_number', $post->ID); ?>
-						</span>
-						<?php }
-						?>	
-					</div>
-				</div>
-		<?php }	?>	
-		<?php if(get_field('email_address', $post->ID)){ ?>
-			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span <?php echo $profilelabel; ?>><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:<?php the_field('email_address', $post->ID); ?>"><?php the_field('email_address', $post->ID); ?></a>
-					</div>
-				</div>
-		<?php }	?>	
-		<?php if(get_field('phone_number', $post->ID)){ ?>
-			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<span <?php echo $profilelabel; ?>><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:<?php the_field('phone_number', $post->ID); ?>"><?php the_field('phone_number', $post->ID); ?></a>
-					</div>
-				</div>
-		<?php }	?>
-	</div>
-</div>
-<?php } add_shortcode( 'showperson', 'showpersonvar' );
+	
+$listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
+if ( has_post_thumbnail($post->ID)) {
+	$listpeeps .= '<img src="' . $getimageURL . '" alt="' . $post->post_title . '';
+	$listpeeps .= "'s profile picture at UCF";
+	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
+} else { 
+switch_to_blog(2);	
+	$listpeeps .= '<img src="' . get_field('default_profile_image', 'option') . '" alt="' . $post->post_title . '';
+	$listpeeps .= "'s profile picture at UCF";
+	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
+restore_current_blog();	
+}
+$listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '</a></h2>';	
+if(get_field('job_titles_tax', $post->ID)){	
+	$listpeeps .= '<div class="profilejobtitle">';	
+	// Get a list of terms for this post's custom taxonomy.
+	$project_cats = get_the_terms($post->ID, 'job_titles');
+	// Renumber array.
+	$project_cats = array_values($project_cats);
+	for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
+		// Each array item is an object. Display its 'name' value.
+		echo $project_cats[$cat_count]->name;
+		// If there is more than one term, comma separate them.
+		if ($cat_count<count($project_cats)-1){
+			echo ', ';
+		}
+	}	
+$listpeeps .= '</div>';	
+}	
+if(get_the_terms($post->ID, 'departments')){ 	
+	$listpeeps .= '<div class="profiledepartments">';	
+	// Get a list of terms for this post's custom taxonomy.
+	$project_depts = get_the_terms($post->ID, 'departments');
+	// Renumber array.
+	$project_depts = array_values($project_depts);
+	for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
+		// Each array item is an object. Display its 'name' value.
+		echo $project_depts[$dept_count]->name;
+		// If there is more than one term, comma separate them.
+		if ($dept_count<count($project_depts)-1){
+			echo ', ';
+		}
+	}	
+$listpeeps .= '</div>';		
+}	
+if(get_field('building', $post->ID)){
+	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="';
+	if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
+	if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
+	if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
+	if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
+	if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
+	if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
+	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
+	the_field('building', $post->ID);	
+	$listpeeps .= '</a>';
+		if(get_field('room_number', $post->ID)){
+		$listpeeps .= '<span>' . get_field('office_type', $post->ID) . ': ' . get_field('room_number', $post->ID) . '';
+		$listpeeps .= '</span>';
+	}
+	$listpeeps .= '</div></div>';	
+}	
+if(get_field('email_address', $post->ID)){
+	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:' . get_field('email_address', $post->ID) . '">' . get_field('email_address', $post->ID) . '</a></div></div>';	
+}
+if(get_field('phone_number', $post->ID)){	
+	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:' . get_field('phone_number', $post->ID) . '">' . get_field('phone_number', $post->ID) . '</a></div></div>';	
+}
+$listpeeps .= '</div></div>';
+return $listpeeps;
+} add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
 ?>
