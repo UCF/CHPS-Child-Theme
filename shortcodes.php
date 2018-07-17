@@ -399,7 +399,7 @@ if(get_field('building', $post->ID)){
 	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';
 		if(get_field('room_number', $post->ID)){
-		$listpeeps .= '<span>' . get_field('office_type', $post->ID) . ': ' . get_field('room_number', $post->ID) . '';
+		$listpeeps .= ' <span>' . get_field('office_type', $post->ID) . ': ' . get_field('room_number', $post->ID) . '';
 		$listpeeps .= '</span>';
 	}
 	$listpeeps .= '</div></div>';	
