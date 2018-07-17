@@ -225,8 +225,15 @@ add_filter( 'ucf_people_post_type_args', 'mychildtheme_person_post_type_args', 1
 
 // TRYING TO FIGURE THIS OUT
 function get_header_markup_dave() {
-	global $post;
-	echo get_nav_markup( $post ); ?>
+	$videos = $images = null;
+	$obj = get_queried_object();
+
+	if ( is_single() || is_page() ) {
+		$videos = get_header_videos( $obj );
+		$images = get_header_images( $obj );
+	}
+
+	echo get_nav_markup(); ?>
 <?php 
 if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 <div class="breadcrumbnav">
@@ -239,14 +246,11 @@ if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 </div>
 <?php } 
 	
-	$videos = get_header_videos( $post );
-	$images = get_header_images( $post );
-
 	if ( $videos || $images ) {
-		echo get_header_media_markup( $post, $videos, $images );
+		echo get_header_media_markup( $obj, $videos, $images );
 	}
 	else {
-		echo get_header_default_markup( $post );
+		echo get_header_default_markup( $obj );
 	}
 }
 ?>
