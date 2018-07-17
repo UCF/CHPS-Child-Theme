@@ -389,12 +389,12 @@ $listpeeps .= '</div>';
 }	
 if(get_field('building', $post->ID)){
 	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="';
-	if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
-	if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-	if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
-	if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
-	if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
-	if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
+	if ($buildingMap == 'HPA I') {$listpeeps .= 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
+	if ($buildingMap == 'HPA II') {$listpeeps .= 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
+	if ($buildingMap == 'Education') {$listpeeps .= 'https://map.ucf.edu/locations/21/education-complex-gym/';}
+	if ($buildingMap == 'Wayne Densch Center 1') {$listpeeps .= 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
+	if ($buildingMap == 'Orlando Tech Center') {$listpeeps .= 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
+	if ($buildingMap == 'Research Pavilion') {$listpeeps .= 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
 	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
 	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';
