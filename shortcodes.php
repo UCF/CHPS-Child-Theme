@@ -331,6 +331,7 @@ function showpersonvar( $atts ) {
         'name' => '',
 		'column' =>'1',
 	), $atts );
+switch_to_blog(2);	
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
@@ -348,11 +349,9 @@ if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= "'s profile picture at UCF";
 	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
 } else { 
-switch_to_blog(2);	
 	$listpeeps .= '<img src="' . get_field('default_profile_image', 'option') . '" alt="' . $post->post_title . '';
 	$listpeeps .= "'s profile picture at UCF";
 	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
-restore_current_blog();	
 }
 $listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '</a></h2>';	
 if(get_field('job_titles_tax', $post->ID)){	
@@ -411,6 +410,7 @@ if(get_field('phone_number', $post->ID)){
 	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:' . get_field('phone_number', $post->ID) . '">' . get_field('phone_number', $post->ID) . '</a></div></div>';	
 }
 $listpeeps .= '</div></div>';
+restore_current_blog();		
 return $listpeeps;
 } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
