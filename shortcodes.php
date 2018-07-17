@@ -340,7 +340,7 @@ $ellebell = '';
 $profilelabel = '';	
 if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-3 col-sm-5 col-4';}
 if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
-if ($peeps == '3') {$ellebell = 'col-lg-5 col-md-12 col-sm-5 col-4';}
+if ($peeps == '3') {$ellebell = 'col-lg-4 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 	
 $listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
