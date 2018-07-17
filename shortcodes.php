@@ -396,7 +396,7 @@ if(get_field('building', $post->ID)){
 	if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 	if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
 	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
-	get_field('building', $post->ID);	
+	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';
 		if(get_field('room_number', $post->ID)){
 		$listpeeps .= '<span>' . get_field('office_type', $post->ID) . ': ' . get_field('room_number', $post->ID) . '';
