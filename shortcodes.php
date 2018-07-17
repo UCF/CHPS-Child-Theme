@@ -394,6 +394,7 @@ if(get_field('building', $post->ID)){
 	if ($buildingMap == 'Wayne Densch Center 1') {$listpeeps .= 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
 	if ($buildingMap == 'Orlando Tech Center') {$listpeeps .= 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 	if ($buildingMap == 'Research Pavilion') {$listpeeps .= 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
+	if ($buildingMap == 'BSBS') {$listpeeps .= 'https://med.ucf.edu/biomed/';}
 	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
 	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';

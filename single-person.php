@@ -101,6 +101,7 @@ $ids = get_the_ID();
 	    if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
 		if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 		if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
+		if ($buildingMap == 'BSBS') {echo 'https://med.ucf.edu/biomed/';}
 		?>" target="_blank" title="Map to <?php the_field('building'); ?>">
 				<?php the_field('building'); ?>
 			</a>
