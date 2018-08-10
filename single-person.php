@@ -285,9 +285,12 @@ $posts = get_posts(array(
 									?>
 									<li class="listnone mb-4">
 										<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-										<?php
-											echo wp_trim_words( get_the_content(), 30, '...' );
-										?>
+										<?php 			
+								$content = get_the_content();
+								$content = preg_replace('#\[[^\]]+\]#', '',$content);
+								$content = apply_filters('the_content', $content);
+								echo wp_trim_words( $content, 25, '...' );
+								?>
 									</li>
 									<?php endforeach; ?>
 								<?php wp_reset_postdata(); ?>      	
