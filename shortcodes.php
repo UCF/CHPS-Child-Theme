@@ -388,13 +388,17 @@ $listpeeps .= '</div>';
 }	
 if(get_field('building', $post->ID)){
 	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="';
-	if ($buildingMap == 'HPA I') {$listpeeps .= 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
-	if ($buildingMap == 'HPA II') {$listpeeps .= 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-	if ($buildingMap == 'Education') {$listpeeps .= 'https://map.ucf.edu/locations/21/education-complex-gym/';}
+	if ($buildingMap == 'HPA I') {$listpeeps .= 'https://map.ucf.edu/locations/80/health-public-affairs-i/';}
+	if ($buildingMap == 'HPA II') {$listpeeps .= 'https://map.ucf.edu/locations/80/health-public-affairs-ii/';}
+	if ($buildingMap == 'Education Complex') {$listpeeps .= 'https://map.ucf.edu/locations/21/education-complex-gym/';}
 	if ($buildingMap == 'Wayne Densch Center 1') {$listpeeps .= 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
-	if ($buildingMap == 'Orlando Tech Center') {$listpeeps .= 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
-	if ($buildingMap == 'Research Pavilion') {$listpeeps .= 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
-	if ($buildingMap == 'BSBS') {$listpeeps .= 'https://med.ucf.edu/biomed/';}
+	if ($buildingMap == 'Orlando Tech Center') {$listpeeps .= 'https://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
+	if ($buildingMap == 'Research Pavilion') {$listpeeps .= 'https://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
+	if ($buildingMap == 'Partnership 1') {$listpeeps .= 'https://map.ucf.edu/locations/8111/partnership-i-cps/';}
+	if ($buildingMap == 'Engineering 1') {$listpeeps .= 'https://map.ucf.edu/locations/40/engineering-i-eng1/';}
+	if ($buildingMap == 'Millican Hall') {$listpeeps .= 'https://map.ucf.edu/locations/1/millican-hall-mh/';}
+	if ($buildingMap == 'Innovative Center') {$listpeeps .= 'https://map.ucf.edu/locations/8112/innovative-center-ic/';}
+	if ($buildingMap == 'Biomedical Sciences Building') {$listpeeps .= 'https://med.ucf.edu/biomed/about/ourlocations/biomedical-sciences-building/';}
 	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
 	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';

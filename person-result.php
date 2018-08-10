@@ -1,4 +1,6 @@
-<?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
+<?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
+$buildingMap = get_field('building');
+?>
 <div class="row mb-4 cat-border personlist-ht">
 	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto">
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
@@ -55,11 +57,15 @@
 						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
 					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
 					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-					if ($buildingMap == 'Education') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
+					if ($buildingMap == 'Education Complex') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
 					if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
 					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
 					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
-					if ($buildingMap == 'BSBS') {echo 'https://med.ucf.edu/biomed/';}
+					if ($buildingMap == 'Partnership 1') {echo 'https://map.ucf.edu/locations/8111/partnership-i-cps/';}
+					if ($buildingMap == 'Engineering 1') {echo 'https://map.ucf.edu/locations/40/engineering-i-eng1/';}
+					if ($buildingMap == 'Millican Hall') {echo 'https://map.ucf.edu/locations/1/millican-hall-mh/';}
+					if ($buildingMap == 'Innovative Center') {echo 'https://map.ucf.edu/locations/8112/innovative-center-ic/';}
+					if ($buildingMap == 'Biomedical Sciences Building') {echo 'https://med.ucf.edu/biomed/about/ourlocations/biomedical-sciences-building/';}
 					?>" target="_blank" title="Map to <?php the_field('building'); ?>">
 							<?php the_field('building'); ?>
 						</a>
