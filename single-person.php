@@ -172,6 +172,24 @@ $ids = get_the_ID();
 	</div>
 	<hr class="my-2">			
 <?php }
+?>
+<?php if (have_rows('additional_links') ) { 	?>
+<div class="row">
+		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
+			Links
+		</div>
+		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
+			<ul class="list-unstyled mb-0">
+				<?php while (have_rows('additional_links') ): the_row(); ?> 
+					<li>
+						<a href="<?php the_sub_field('link_url'); ?>" target="_blank" title="<?php the_sub_field('link_title');?>"><?php the_sub_field('link_title');?></a>
+					</li>
+				<?php endwhile; ?>
+			</ul>
+		</div>
+	</div>
+	<hr class="my-2">			
+<?php }
 ?>	
 <style>
 #profileIMG {
@@ -289,7 +307,7 @@ $posts = get_posts(array(
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 25, '...' );
+								echo wp_trim_words( $content, 30, '...' );
 								?>
 									</li>
 									<?php endforeach; ?>
