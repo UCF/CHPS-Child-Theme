@@ -81,7 +81,7 @@ $buildingMap = get_field('building');
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a>
+						<i class="fa fa-envelope icongrey"></i> E-mail: <?php if( get_field( 'hide_email' )) { ?><a href="mailto:<?php the_field('alternate_email'); ?>"><?php the_field('alternate_email'); ?></a><? } else { ?><a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a><?php } ?>
 					</div>
 				</div>
 		<?php }	?>	
