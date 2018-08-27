@@ -409,7 +409,13 @@ if(get_field('building', $post->ID)){
 	$listpeeps .= '</div></div>';	
 }	
 if(get_field('email_address', $post->ID)){
-	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-envelope icongrey"></i> E-mail: </span><a href="mailto:' . get_field('email_address', $post->ID) . '">' . get_field('email_address', $post->ID) . '</a></div></div>';	
+	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-envelope icongrey"></i> E-mail: </span>';
+	if(get_field('hide_email', $post->ID)){
+		$listpeeps .= '<a href="mailto:' . get_field('alternate_email', $post->ID) . '">' . get_field('alternate_email', $post->ID) . '</a>';
+	} else {
+		$listpeeps .= '<a href="mailto:' . get_field('email_address', $post->ID) . '">' . get_field('email_address', $post->ID) . '</a>';
+	}
+	$listpeeps .= '</div></div>';	
 }
 if(get_field('phone_number', $post->ID)){	
 	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-phone icongrey"></i> Phone: </span><a href="tel:' . get_field('phone_number', $post->ID) . '">' . get_field('phone_number', $post->ID) . '</a></div></div>';	
