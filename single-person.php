@@ -123,7 +123,7 @@ $ids = get_the_ID();
 <?php if(get_field('email_address')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			E-mail 333
+			E-mail 444
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<?php if( get_field( 'hide_email' )) {  ?>
