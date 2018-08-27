@@ -126,9 +126,16 @@ $ids = get_the_ID();
 			E-mail
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
+			<?php if ('Yes' == get_field('hide_email')) { ?>  
+			 <a href="mailto:<?php the_field('alternate_email'); ?>">
+				<?php the_field('alternate_email'); ?>
+			</a>
+			<?php }
+			 else { ?>
 			<a href="mailto:<?php the_field('email_address'); ?>">
 				<?php the_field('email_address'); ?>
-			</a>
+			</a>	 
+			<?php } ?>
 		</div>
 	</div>
 	<hr class="my-2">			
