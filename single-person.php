@@ -123,18 +123,19 @@ $ids = get_the_ID();
 <?php if(get_field('email_address')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			E-mail 2222<?php the_field('hide_email'); ?>
+			E-mail 333
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<?php if (the_field('hide_email') == 'Yes') { ?>  
-			 <a href="mailto:<?php the_field('alternate_email'); ?>">
+			<?php
+			  if( in_array( "Yes", get_field( 'hide_email' ) ) ) {
+			?>
+			<a href="mailto:<?php the_field('alternate_email'); ?>">
 				<?php the_field('alternate_email'); ?>
-			</a>
-			<?php }
-			 else { ?>
+			</a>			
+			<? } else { ?>
 			<a href="mailto:<?php the_field('email_address'); ?>">
 				<?php the_field('email_address'); ?>
-			</a>	 
+			</a>	
 			<?php } ?>
 		</div>
 	</div>
