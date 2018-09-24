@@ -325,11 +325,12 @@ else {
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO INDIVIDUAL PERSON
-// [showperson name="" column=""]
+// [showperson name="" column="" pic=""]
 function showpersonvar( $atts ) {
     $r = shortcode_atts( array(
         'name' => '',
 		'column' =>'1',
+		'pic' => 'true',
 	), $atts );
 switch_to_blog(2);	
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
@@ -343,6 +344,7 @@ if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-4 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
 	
+$listpeeps = '<div class="row mb-1 cat-border personlist-ht">';	
 $listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
 if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= '<img src="' . $getimageURL . '" alt="' . $post->post_title . '';
@@ -353,7 +355,8 @@ if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= "'s profile picture at UCF";
 	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
 }
-$listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '</a></h2>';	
+$listpeeps .= '</a></div>';	
+$listpeeps .= '<div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '</a></h2>';	
 if(get_field('job_titles_tax', $post->ID)){	
 	$listpeeps .= '<div class="profilejobtitle">';	
 	// Get a list of terms for this post's custom taxonomy.
