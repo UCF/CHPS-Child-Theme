@@ -337,15 +337,15 @@ $post = get_page_by_title( $r['name'], OBJECT, 'person' );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building', $post->ID);
 $peeps = $r['column'];
+$withpic = $r['pic'];	
 $ellebell = '';	
 $profilelabel = '';	
 if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-3 col-sm-5 col-4';}
 if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-4 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
-	
 $listpeeps = '<div class="row mb-1 cat-border personlist-ht">';	
-$listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
+$listpeeps = '<div id="showpic' . $withpic . '" class="' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
 if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= '<img src="' . $getimageURL . '" alt="' . $post->post_title . '';
 	$listpeeps .= "'s profile picture at UCF";
