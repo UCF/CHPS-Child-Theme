@@ -420,6 +420,9 @@ figcaption, .featcaption {
 .personlist-ht {
 	min-height: 190px; 
 }	
+.personlist-ht .showpicfalse {
+	display:none !important;
+}
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
 .profile-social-web {
