@@ -370,11 +370,10 @@ if(get_field('job_titles_tax', $post->ID)){
 	}	
 $listpeeps .= '</div>';	
 }	
-$project_depts = get_the_terms($post->ID, 'departments');	
 if(get_the_terms($post->ID, 'departments')){ 	
 	$listpeeps .= '<div class="profiledepartments">';	
 	// Get a list of terms for this post's custom taxonomy.
-	
+	$project_depts = get_the_terms($post->ID, 'departments');
 	// Renumber array.
 	$project_depts = array_values($project_depts);
 	for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
