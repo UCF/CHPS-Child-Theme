@@ -325,7 +325,7 @@ else {
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO INDIVIDUAL PERSON
-// [showperson name="" column=""]
+// [showperson name="" column="" pic=""]
 function showpersonvar( $atts ) {
     $r = shortcode_atts( array(
         'name' => '',
@@ -344,7 +344,7 @@ if ($peeps == '1') {$ellebell = 'col-lg-2 col-md-3 col-sm-5 col-4';}
 if ($peeps == '2') {$ellebell = 'col-lg-3 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$ellebell = 'col-lg-4 col-md-12 col-sm-5 col-4';}
 if ($peeps == '3') {$profilelabel ='style="display:none;"';}	
-$listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="showpic ' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
+$listpeeps = '<div class="row mb-1 cat-border personlist-ht"><div class="showpic' . $showpic . ' ' . $ellebell . ' p-0 media-background-container catlist-photo mx-auto"><a href="' . get_permalink($post->ID) . '" title="' . $post->post_title . '" >';	
 if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= '<img src="' . $getimageURL . '" alt="' . $post->post_title . '';
 	$listpeeps .= "'s profile picture at UCF";
