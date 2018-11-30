@@ -112,16 +112,28 @@ switch_to_blog(2);
 $category_id = get_cat_ID($c['category']);
 $cat2_id = get_cat_ID($c['cat2']);
 $cat3_id = get_cat_ID($c['cat3']);
+	if (!empty($c['cat2'])) { 	
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
+				'category__in' => array( $category_id, $cat2_id, $cat3_id ),
+				)
+			);	
+	}
+	else {
+	$chpsnews = new WP_Query(array(
+				'post_type'	=> 'post',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $c['number'],
 				'cat' => $category_id,
-				//'category__in' => array( $category_id, $cat2_id, $cat3_id ),
 				)
 			);
+	}
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
