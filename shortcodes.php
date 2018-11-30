@@ -100,25 +100,25 @@ add_shortcode( 'recentexnews', 'recexnewsvar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS HORIZONTAL ON HOMEPAGE
 //
-// [chpsnews category="" cattwo="" catthree="" number=""]
+// [chpsnews category="" cat2="" cat3="" number=""]
 function chpsnewsvar( $atts ) {
     $c = shortcode_atts( array(
         'number' => '3',
         'category' => '',
-		'cattwo' => '',
-		'catthree' => '',
+		'cat2' => '',
+		'cat3' => '',
     ), $atts );
 switch_to_blog(2); 	
 $category_id = get_cat_ID($c['category']);
-$cattwo_id = get_cat_ID($c['cattwo']);
-$catthree_id = get_cat_ID($c['catthree']);
+$cat2_id = get_cat_ID($c['cat2']);
+$cat3_id = get_cat_ID($c['cat3']);
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'category__in' => array( $category_id, $cattwo_id, $catthree_id ),
+				'category__in' => array( $category_id, $cat2_id, $cat3_id ),
 				)
 			);
 $listhnews = '<div class="container"><div class="row">';
