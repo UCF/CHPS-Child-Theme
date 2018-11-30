@@ -118,7 +118,7 @@ $cat3_id = get_cat_ID($c['cat3']);
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'category__and' => array( $category_id, $cat2_id, $cat3_id ),
+				'category__in' => array( $category_id, $cat2_id, $cat3_id ),
 				)
 			);
 $listhnews = '<div class="container"><div class="row">';
