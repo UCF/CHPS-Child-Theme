@@ -64,7 +64,7 @@ h2 {
 	font-size: 45px !important;
     font-weight: 700 !important;
 }
-.btnhover-yellow .vc_btn3.vc_btn3-style-custom, .btnhover-black .vc_btn3.vc_btn3-style-custom {
+.btnhover-yellow .vc_btn3.vc_btn3-style-custom, .btnhover-black .vc_btn3.vc_btn3-style-custom, .btnhover-white .vc_btn3.vc_btn3-style-custom, .btnhover-gray .vc_btn3.vc_btn3-style-custom {
     background-image: none !important;
 }
 .btnhover-yellow a:hover {
@@ -73,6 +73,12 @@ h2 {
 }
 .btnhover-black a:hover {
 	background: #404040 !important;
+}
+.btnhover-white a:hover {
+    background: #dddddd !important;
+}
+.btnhover-gray a:hover {
+    background: #424242 !important;
 }
 #height0FIX {
     height:0px !important;
