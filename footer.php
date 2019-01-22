@@ -131,7 +131,8 @@
 .footer-social-icon:hover {
 		color: #fc0;
 	}
-</style>				
+</style>		
+<?php the_field('bonus_scripts', 'option'); ?>		
 <!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
 <?php restore_current_blog(); ?>		
 		<?php wp_footer(); ?>
@@ -146,6 +147,5 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-<?php the_field('bonus_scripts', 'option'); ?>
 	</body>
 </html>
