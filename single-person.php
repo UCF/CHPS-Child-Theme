@@ -8,7 +8,7 @@ $ids = get_the_ID();
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">Faculty and Staff 2.0</h1>
+				<h1 class="archive-title heading-underline">Faculty and Staff</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
@@ -312,7 +312,7 @@ $posts = get_posts(array(
 										setup_postdata( $post );
 									?>
 									<li class="listnone mb-4">
-										HELLO <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+										<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
 										<?php 			
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
