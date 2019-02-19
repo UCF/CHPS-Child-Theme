@@ -321,7 +321,7 @@ $posts = get_posts(array(
 								?>
 									</li>
 									<?php endforeach; ?>
-									
+									<?php wp_reset_postdata(); ?>  
 									
 								<?php if (have_rows('degrees') ) { 	?>
 									<div class="mb-4">
@@ -340,7 +340,7 @@ $posts = get_posts(array(
 									
 									
 									
-								<?php wp_reset_postdata(); ?>      	
+								    	
 							</div>
 						</div>
 					</div></div>
