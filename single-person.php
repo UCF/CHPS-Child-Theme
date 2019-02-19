@@ -323,13 +323,13 @@ $posts = get_posts(array(
 									<?php endforeach; ?>
 									
 									
-								<?php if (have_rows('external_news') ) { 	?>
+								<?php if (have_rows('degrees') ) { 	?>
 									<div class="mb-4">
-										<h5>External News Articles</h5>
+										<h5>Credentials</h5>
 										<ul>
-											<?php while (have_rows('external_news') ): the_row(); ?> 
+											<?php while (have_rows('degrees') ): the_row(); ?> 
 
-											<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>
+													<li><?php the_sub_field('degree'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
