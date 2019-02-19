@@ -312,7 +312,7 @@ $posts = get_posts(array(
 										setup_postdata( $post );
 									?>
 									<li class="listnone mb-4">
-										HELLO 2 <a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+										<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
 										<?php 			
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
@@ -321,15 +321,15 @@ $posts = get_posts(array(
 								?>
 									</li>
 									<?php endforeach; ?>
-									<?php wp_reset_postdata(); ?>  
+									<?php wp_reset_postdata(); ?>
 									
-								<?php if (have_rows('degrees') ) { 	?>
+								<?php if (have_rows('external_news') ) { 	?>
 									<div class="mb-4">
-										<h5>Credentials</h5>
+										<h5>External News Articles</h5>
 										<ul>
-											<?php while (have_rows('degrees') ): the_row(); ?> 
+											<?php while (have_rows('external_news') ): the_row(); ?> 
 
-													<li><?php the_sub_field('degree'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+											<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>
 													</li>
 
 											 <?php endwhile; ?>	
@@ -340,7 +340,7 @@ $posts = get_posts(array(
 									
 									
 									
-								    	
+								      	
 							</div>
 						</div>
 					</div></div>
