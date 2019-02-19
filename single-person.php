@@ -321,6 +321,25 @@ $posts = get_posts(array(
 								?>
 									</li>
 									<?php endforeach; ?>
+									
+									
+								<?php if (have_rows('external_news') ) { 	?>
+									<div class="mb-4">
+										<h5>External News Articles</h5>
+										<ul>
+											<?php while (have_rows('external_news') ): the_row(); ?> 
+
+											<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>
+													</li>
+
+											 <?php endwhile; ?>	
+										 </ul>
+									 </div>
+								<?php }?>	
+									
+									
+									
+									
 								<?php wp_reset_postdata(); ?>      	
 							</div>
 						</div>
