@@ -26,6 +26,9 @@ $tax = $wp_query->get_queried_object();
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
 				<div class="mt-5">
+				<!-- START PART TIME FACULTY -->
+					HELLO
+				<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
 				</div>
 			</div>
