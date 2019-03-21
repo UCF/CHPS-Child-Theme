@@ -99,6 +99,14 @@ if( $parttimers->have_posts() ) :
 }	
 .parttimers strong {
 	font-size: 16px;
-}		
+}
+.parttimers	.row [class*="col-"]{
+  margin-bottom: -99999px;
+  padding-bottom: 99999px;
+}
+
+.parttimers .row{
+  overflow: hidden; 
+}
 </style>
 <?php get_footer(); ?>
