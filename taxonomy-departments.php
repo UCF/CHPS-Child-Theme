@@ -25,7 +25,7 @@ $tax = $wp_query->get_queried_object();
 				<?php get_template_part( 'person-result'); ?>	
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
-				<div class="mt-5 pt-5">
+				<div class="mt-5 pt-3">
 				<!-- START PART TIME FACULTY -->
 <?php
 $argsPT = array(
