@@ -33,7 +33,7 @@ $argsPT = array(
   'post_status' => 'publish',
  );
  
-$parttimers = new WP_Query( $argsPT );
+$parttimers = new WP_Query( $argsPT."&meta_key=lname&orderby=meta_value&order=ASC&nopaging=1");
 if( $parttimers->have_posts() ) :
 ?>
 <h1 class="archive-title heading-underline mb-5">Part Time Faculty</h1>
@@ -88,7 +88,7 @@ if( $parttimers->have_posts() ) :
 	text-align: center;
 }	
 .parttimers strong {
-	font-size: 17px;
+	font-size: 16px;
 }		
 </style>
 <?php get_footer(); ?>
