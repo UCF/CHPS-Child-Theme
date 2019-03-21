@@ -44,7 +44,7 @@ $argsPT = array(
 $parttimers = new WP_Query( $argsPT );				
 if( $parttimers->have_posts() ) :
 ?>
-<h1 class="archive-title heading-underline mb-5">Part Time Faculty</h1>
+<h1 class="archive-title heading-underline mt-5 mb-4">Part Time Faculty</h1>
 <div class="row parttimers">   
     <?php
       while( $parttimers->have_posts() ) :
