@@ -51,7 +51,7 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-6 col-sm-12 mb-4 cat-border">
+<div class="col-md-4 col-sm-12 mb-4 cat-border">
 	<div class="mt-2 pb-5">
 		<?php if(get_field('email')){ ?>
 			<div class="person-label">
