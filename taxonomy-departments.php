@@ -64,7 +64,7 @@ if( $parttimers->have_posts() ) :
 	<div class="mt-2">
 		<?php if(get_field('email')){ ?>
 			<div class="person-label">
-				<i class="fa-lg fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+				<i class="fa fa-envelope iconlink"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
 			</div>
 		<?php }	?>
 		<?php if(get_field('phone')){ ?>
@@ -103,6 +103,9 @@ if( $parttimers->have_posts() ) :
 }
 .parttime-photo {
 	height: 200px;
-}	
+}
+	.iconlink {
+		font-size: 18px !important;
+	}
 </style>
 <?php get_footer(); ?>
