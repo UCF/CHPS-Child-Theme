@@ -25,9 +25,10 @@ $tax = $wp_query->get_queried_object();
 				<?php get_template_part( 'person-result'); ?>	
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
-				<div class="row mt-5">
+				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
 					<h1 class="archive-title heading-underline">Part Time Faculty</h1>
+					<div class="row">
 						<div class="col-lg-3 col-sm-12">
 							Picture
 							Full Name
@@ -56,6 +57,7 @@ $tax = $wp_query->get_queried_object();
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
+					</div>
 				<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
 				</div>
