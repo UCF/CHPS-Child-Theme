@@ -27,8 +27,28 @@ $tax = $wp_query->get_queried_object();
 				<!-- then the pagination links -->
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
+				<?php
+					$args = array(
+					  'post_type'   => 'parttimers',
+					  'post_status' => 'publish',
+					  'tax_query'   => array(
+						array(
+							'taxonomy' => 'departments',
+							'field'    => 'slug',
+							'terms'    => $tax ,
+						)
+					  )
+					 );
+
+					$parttimers = new WP_Query( $args );
+					if( $parttimers->have_posts() ) :
+				?>
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
+					
+					<?php while( $parttimers->have_posts() ) :
+						$parttimers->the_post();
+					?>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
 							<strong><?php the_title(); ?></strong></br>
@@ -50,33 +70,9 @@ $tax = $wp_query->get_queried_object();
 								<?php }	?>	
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-							Picture</br>
-							<strong>Full Name</strong></br>
-							Job Title
-							<div class="mt-2">
-								Phone: 123-123-1234</br>
-								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-							Picture</br>
-							<strong>Full Name</strong></br>
-							Job Title
-							<div class="mt-2">
-								Phone: 123-123-1234</br>
-								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
-							</div>
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-							Picture</br>
-							<strong>Full Name</strong></br>
-							Job Title
-							<div class="mt-2">
-								Phone: 123-123-1234</br>
-								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
-							</div>
-						</div>
+					<?php endwhile;
+					  wp_reset_postdata();
+					?>
 					</div>
 				<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
