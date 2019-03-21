@@ -37,7 +37,7 @@ $argsPT = array(
   	array(
   		'taxonomy' => 'departments',
   		'field'    => 'slug',
-  		'terms'    => 'deans-office'
+  		'terms'    => 'health-professions'
   	)
   )
  );
