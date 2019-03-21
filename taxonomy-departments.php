@@ -44,9 +44,9 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-		<div class="col-lg-6 mb-4 cat-border personlist-ht">
+		<div class="container mb-4 cat-border personlist-ht">
 			<div class="col-sm-6" style="background-color: blue;">
-			 Picture 2
+			 Picture 1
 			</div>
           <div class="col-sm-6">
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
