@@ -36,6 +36,8 @@ $argsPT = array(
 $parttimers = new WP_Query( $argsPT );
 if( $parttimers->have_posts() ) :
 ?>
+<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
+<div class="row parttimers">   
     <?php
       while( $parttimers->have_posts() ) :
         $parttimers->the_post();
@@ -65,14 +67,9 @@ if( $parttimers->have_posts() ) :
       endwhile;
       wp_reset_postdata();
     ?>
+</div>
 <?php endif; ?>
-					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
-					<div class="row parttimers">
-					
-						
-						
-					</div>
-				<!-- END PART TIME FACULTY -->
+<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
 				</div>
 			</div>
