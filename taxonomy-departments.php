@@ -46,7 +46,7 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-6 col-sm-12 mb-5">
 	<div class="row">
-      <div class="col-xs-3 col-sm-3 p-0 media-background-container catlist-photo mx-auto" style="min-height: 150px;">
+      <div class="col-xs-3 col-sm-3 p-0 media-background-container catlist-photo mx-auto">
         <?php if ( has_post_thumbnail()) { ?>
 			<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 			<?php } else { ?> 
@@ -58,7 +58,7 @@ if( $parttimers->have_posts() ) :
       <div class="col-xs-9 col-sm-9">
         <strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
-     	<div class="mt-2">
+     	<div class="mt-2 pb-5">
 			<?php if(get_field('email')){ ?>
 					<div class="person-label">
 						<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
