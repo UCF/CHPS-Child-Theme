@@ -59,11 +59,9 @@ if( $parttimers->have_posts() ) :
 					</div>
 			<?php }	?>
 			<?php if(get_field('phone')){ ?>
-				<div class="row">
 					<div class="person-label">
 						<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
 					</div>
-				</div>
 			<?php }	?>	
 		</div>
       </div>
