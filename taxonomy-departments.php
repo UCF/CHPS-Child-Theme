@@ -44,7 +44,7 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-6 col-sm-12 mb-5 cat-border">
+<div class="col-md-6 col-sm-12 mb-5 mr-1 cat-border">
 	<div class="row">
       <div class="col-sm-4 col-md-4 p-0" style="background-color: blue;">
         Picture 1
