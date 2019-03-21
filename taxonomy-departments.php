@@ -108,5 +108,10 @@ if( $parttimers->have_posts() ) :
 	min-height: 100px;
 	}
 }	
+@media (max-width: 500px) {
+	.parttime-photo {
+	min-height: 500px;
+	}
+}	
 </style>
 <?php get_footer(); ?>
