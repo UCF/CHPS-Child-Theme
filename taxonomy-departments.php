@@ -51,9 +51,9 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-4 col-sm-6 col-xs-12 mb-4 cat-border">
+<div class="col-md-4 col-sm-6 col-xs-6 mb-4 cat-border">
 
-<div class="col-4 col-xs-4 col-sm-4 p-0 media-background-container parttime-photo mx-auto">
+<div class="col-8 col-xs-8 col-sm-8 p-0 media-background-container parttime-photo mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
 		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 		<?php } else { ?> 
