@@ -44,7 +44,21 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-		<div class="container mb-4 cat-border personlist-ht">
+<div class="row">
+  <div class="col-sm-6 cat-border">
+    Level 1: .col-sm-9
+    <div class="row">
+      <div class="col-xs-8 col-sm-6 cat-border">
+        Level 2: .col-xs-8 .col-sm-6
+      </div>
+      <div class="col-xs-4 col-sm-6 cat-border">
+        Level 2: .col-xs-4 .col-sm-6
+      </div>
+    </div>
+  </div>
+</div>
+		
+		<div class="mb-4 cat-border personlist-ht">
 			<div class="col-sm-6" style="background-color: blue;">
 			 Picture 1
 			</div>
