@@ -31,11 +31,23 @@ $tax = $wp_query->get_queried_object();
 					<div class="row parttimers">
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
-							<strong>Full Name</strong></br>
-							Job Title
+							<strong><?php the_title(); ?></strong></br>
+							<?php the_field('jobtitle'); ?>
 							<div class="mt-2">
-								Phone: 123-123-1234</br>
-								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
+								<?php if(get_field('email')){ ?>
+									<div class="row">
+										<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+											<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+										</div>
+									</div>
+								<?php }	?>
+								<?php if(get_field('phone')){ ?>
+									<div class="row">
+										<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+											<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
+										</div>
+									</div>
+								<?php }	?>	
 							</div>
 						</div>
 						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
