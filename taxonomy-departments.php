@@ -44,11 +44,11 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-		<div class="row mb-4 cat-border personlist-ht">
-			<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0 media-background-container catlist-photo mx-auto" style="background-color: blue;">
+		<div class="col-lg-6 mb-4 cat-border personlist-ht">
+			<div class="" style="background-color: blue;">
 			 Picture 2
 			</div>
-          <div class="col-lg-7 col-md-9 col-sm-8 col-8">
+          <div class="">
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
 			<div class="mt-2">
