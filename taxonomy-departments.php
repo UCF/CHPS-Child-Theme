@@ -101,16 +101,16 @@ if( $parttimers->have_posts() ) :
 	font-size: 16px;
 }
 .parttime-photo {
-	min-height: 150px;
+	height: 150px;
 }
 @media (max-width: 991px) {
 	.parttime-photo {
-	min-height: 100px;
+		height: 100px;
 	}
 }	
 @media (max-width: 500px) {
 	.parttime-photo {
-	min-height: 500px;
+	 	height: 500px;
 	}
 }	
 </style>
