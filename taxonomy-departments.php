@@ -45,30 +45,14 @@ if( $parttimers->have_posts() ) :
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
 <div class="row">
-  <div class="col-lg-6 cat-border">
+  <div class="col-sm-9">
+    Level 1: .col-sm-9
     <div class="row">
-      <div class="col-lg-6 cat-border" style="background-color: blue;">
-        Picture 2
+      <div class="col-xs-8 col-sm-6">
+        Level 2: .col-xs-8 .col-sm-6
       </div>
-      <div class="col-lg-6 cat-border">
-        <strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
-			<?php the_field('jobtitle'); ?>
-     	<div class="mt-2">
-			<?php if(get_field('email')){ ?>
-				<div class="row">
-					<div class="person-label">
-						<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
-					</div>
-				</div>
-			<?php }	?>
-			<?php if(get_field('phone')){ ?>
-				<div class="row">
-					<div class="person-label">
-						<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
-					</div>
-				</div>
-			<?php }	?>	
-		</div>
+      <div class="col-xs-4 col-sm-6">
+        Level 2: .col-xs-4 .col-sm-6
       </div>
     </div>
   </div>
