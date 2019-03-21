@@ -64,7 +64,7 @@ if( $parttimers->have_posts() ) :
 	<div class="mt-2">
 		<?php if(get_field('email')){ ?>
 			<div class="person-label">
-				<a href="mailto:<?php the_field('email'); ?>"><i class="fa-lg fa-envelope"></i></a>
+				<i class="fa-lg fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
 			</div>
 		<?php }	?>
 		<?php if(get_field('phone')){ ?>
