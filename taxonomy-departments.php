@@ -96,6 +96,7 @@ if( $parttimers->have_posts() ) :
 .parttimers {
 	font-size: 14px;
 	text-align: left;
+	min-height: 190px;
 }	
 .parttimers strong {
 	font-size: 16px;
