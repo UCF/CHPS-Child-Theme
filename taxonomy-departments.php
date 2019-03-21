@@ -53,7 +53,7 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-4 col-sm-6 col-xs-12 mb-4 cat-border">
 
-<div class="col-3 col-xs-3 col-sm-3 p-0 media-background-container parttime-photo mx-auto">
+<div class="col-4 col-xs-4 col-sm-4 p-0 media-background-container parttime-photo mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
 		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 		<?php } else { ?> 
