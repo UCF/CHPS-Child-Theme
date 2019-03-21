@@ -46,10 +46,10 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-6 col-sm-12 mb-5 cat-border">
 	<div class="row">
-      <div class="col-sm-8 col-md-6">
+      <div class="col-sm-8 col-md-6 cat-border" style="background-color: blue;">
         Level 2: .col-sm-8 .col-md-6
       </div>
-      <div class="col-sm-4 col-md-6">
+      <div class="col-sm-4 col-md-6 cat-border">
         Level 2: .col-sm-4 .col-md-6
       </div>
     </div>
