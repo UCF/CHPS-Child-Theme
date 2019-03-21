@@ -46,7 +46,7 @@ if( $parttimers->have_posts() ) :
         ?>
 		<div class="col-lg-6 mb-4 cat-border personlist-ht">
 			<div class="col-lg-2" style="background-color: blue;">
-			 Picture 2
+			 Picture 1
 			</div>
           <div class="col-lg-4">
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
@@ -54,14 +54,14 @@ if( $parttimers->have_posts() ) :
 			<div class="mt-2">
 				<?php if(get_field('email')){ ?>
 					<div class="row">
-						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+						<div class="person-label">
 							<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
 						</div>
 					</div>
 				<?php }	?>
 				<?php if(get_field('phone')){ ?>
 					<div class="row">
-						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+						<div class="person-label">
 							<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
 						</div>
 					</div>
