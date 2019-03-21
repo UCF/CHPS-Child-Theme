@@ -29,28 +29,28 @@ $tax = $wp_query->get_queried_object();
 				<!-- START PART TIME FACULTY -->
 					<h1 class="archive-title heading-underline">Part Time Faculty</h1>
 					<div class="row">
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-4 col-sm-12">
 							Picture
 							Full Name
 							Job Title
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-4 col-sm-12">
 							Picture
 							Full Name
 							Job Title
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-4 col-sm-12">
 							Picture
 							Full Name
 							Job Title
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
-						<div class="col-lg-3 col-sm-12">
+						<div class="col-lg-4 col-sm-12">
 							Picture
 							Full Name
 							Job Title
