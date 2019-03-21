@@ -51,34 +51,8 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-6 col-sm-12 mb-4">
-	<div class="row">
-      <div class="col-xs-3 col-sm-3 p-0 media-background-container parttime-photo mx-auto">
-        <?php if ( has_post_thumbnail()) { ?>
-			<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
-			<?php } else { ?> 
-				<?php switch_to_blog(2);?>
-					<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
-				<?php restore_current_blog(); ?>
-		<?php } ?>
-      </div>
-      <div class="col-xs-9 col-sm-9">
-        <strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
-			<?php the_field('jobtitle'); ?>
-     	<div class="mt-2 pb-5">
-			<?php if(get_field('email')){ ?>
-					<div class="person-label">
-						<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
-					</div>
-			<?php }	?>
-			<?php if(get_field('phone')){ ?>
-					<div class="person-label">
-						<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
-					</div>
-			<?php }	?>	
-		</div>
-      </div>
-    </div>
+<div class="col-md-6 col-sm-12 mb-4 cat-border">
+
 </div>
         <?php
       endwhile;
