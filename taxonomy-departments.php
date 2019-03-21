@@ -44,13 +44,11 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-  <?php if ( has_post_thumbnail()) { ?>
-		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="">
-		<?php } else { ?> 
-				<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="">
-	<?php } ?>
-			Picture 2</br>
+		<div class="col-lg-6 mb-5 cat-border">
+			<div class="col-lg-4" style="background-color: blue;">
+			 Picture 2
+			</div>
+          <div class="col-lg-8">
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
 			<div class="mt-2">
@@ -68,6 +66,7 @@ if( $parttimers->have_posts() ) :
 						</div>
 					</div>
 				<?php }	?>	
+				</div>
 			</div>
 		</div>
         <?php
