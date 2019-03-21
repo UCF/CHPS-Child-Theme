@@ -28,59 +28,49 @@ $tax = $wp_query->get_queried_object();
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
 <?php
-$args123 = array(
+$argsPT = array(
   'post_type'   => 'parttimers',
   'post_status' => 'publish',
  );
  
-$testimonials = new WP_Query( $args123 );
-if( $testimonials->have_posts() ) :
+$parttimers = new WP_Query( $argsPT );
+if( $parttimers->have_posts() ) :
 ?>
-  <ul>
     <?php
-      while( $testimonials->have_posts() ) :
-        $testimonials->the_post();
+      while( $parttimers->have_posts() ) :
+        $parttimers->the_post();
         ?>
-          <li><?php the_title(); ?></li>
+          <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
+			Picture</br>
+			<strong><?php the_title(); ?></strong></br>
+			<?php the_field('jobtitle'); ?>
+			<div class="mt-2">
+				<?php if(get_field('email')){ ?>
+					<div class="row">
+						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+							<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+						</div>
+					</div>
+				<?php }	?>
+				<?php if(get_field('phone')){ ?>
+					<div class="row">
+						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+							<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
+						</div>
+					</div>
+				<?php }	?>	
+			</div>
+		</div>
         <?php
       endwhile;
       wp_reset_postdata();
     ?>
-  </ul>
-<?php
-else :
-  esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
-endif;
-?>
+<?php endif; ?>
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
-					<?php while( $parttimers->have_posts() ) :
-						$parttimers->the_post();
-					?>
-						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-							Picture</br>
-							<strong><?php the_title(); ?></strong></br>
-							<?php the_field('jobtitle'); ?>
-							<div class="mt-2">
-								<?php if(get_field('email')){ ?>
-									<div class="row">
-										<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-											<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
-										</div>
-									</div>
-								<?php }	?>
-								<?php if(get_field('phone')){ ?>
-									<div class="row">
-										<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-											<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
-										</div>
-									</div>
-								<?php }	?>	
-							</div>
-						</div>
-					<?php endwhile;
-					  wp_reset_postdata();
-					?>
+					
+						
+						
 					</div>
 				<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
