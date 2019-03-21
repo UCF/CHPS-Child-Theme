@@ -52,7 +52,18 @@ if( $parttimers->have_posts() ) :
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
 <div class="col-md-6 col-sm-12 mb-4 cat-border">
-
+	<div class="mt-2 pb-5">
+		<?php if(get_field('email')){ ?>
+			<div class="person-label">
+				<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+			</div>
+		<?php }	?>
+		<?php if(get_field('phone')){ ?>
+				<div class="person-label">
+					<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
+				</div>
+		<?php }	?>	
+	</div>
 </div>
         <?php
       endwhile;
@@ -76,7 +87,7 @@ if( $parttimers->have_posts() ) :
 }	
 .parttimers {
 	font-size: 14px;
-	text-align: left;
+	text-align: center;
 }	
 .parttimers strong {
 	font-size: 16px;
