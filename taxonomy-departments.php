@@ -34,7 +34,6 @@ $argsPT = array(
   'orderby' => 'meta_value',
   'order' => 'ASC',
  );
-$getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $parttimers = new WP_Query( $argsPT );				
 if( $parttimers->have_posts() ) :
 ?>
@@ -43,16 +42,15 @@ if( $parttimers->have_posts() ) :
     <?php
       while( $parttimers->have_posts() ) :
         $parttimers->the_post();
+	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
-          <?php if ( has_post_thumbnail()) { ?>
-				<img src="<?php echo $getimageURL; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
-				<?php } else { ?> 
-					<?php switch_to_blog(2);?>
-						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
-					<?php restore_current_blog(); ?>
-		<?php } ?>
-			Picture</br>
+  <?php if ( has_post_thumbnail()) { ?>
+		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="">
+		<?php } else { ?> 
+				<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="">
+	<?php } ?>
+			Picture 2</br>
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
 			<div class="mt-2">
