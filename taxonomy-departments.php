@@ -30,7 +30,6 @@ $tax = $wp_query->get_queried_object();
 				<?php
 					$args = array(
 					  'post_type'   => 'parttimers',
-					  'post_status' => 'publish',
 					 );
 					$parttimers = new WP_Query( $args );
 					if( $parttimers->have_posts() ) :
