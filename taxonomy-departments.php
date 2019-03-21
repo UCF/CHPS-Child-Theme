@@ -28,11 +28,8 @@ $tax = $wp_query->get_queried_object();
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
 				<?php
-					$getargs = array(
-					  'post_type'   => 'parttimers',
-					 );
-					$parttimers = new WP_Query( $getargs );
-					if( $parttimers->have_posts() ) :
+					
+					
 				?>
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
