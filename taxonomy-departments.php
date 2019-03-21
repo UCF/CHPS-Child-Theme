@@ -28,29 +28,29 @@ $tax = $wp_query->get_queried_object();
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
 					<h1 class="archive-title heading-underline">Part Time Faculty</h1>
-					<div class="row">
-						<div class="col-lg-4 col-sm-12">
+					<div class="row parttimers">
+						<div class="col-lg-4 col-sm-12 mb-4">
+							Picture</br>
+							<strong>Full Name</strong></br>
+							Job Title</br>
+							Phone: 123-123-1234</br>
+							Email: myemail@ucf.edu</br>
+						</div>
+						<div class="col-lg-4 col-sm-12 mb-4">
 							Picture
 							Full Name
 							Job Title
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
-						<div class="col-lg-4 col-sm-12">
+						<div class="col-lg-4 col-sm-12 mb-4">
 							Picture
 							Full Name
 							Job Title
 							Phone: 123-123-1234
 							Email: myemail@ucf.edu
 						</div>
-						<div class="col-lg-4 col-sm-12">
-							Picture
-							Full Name
-							Job Title
-							Phone: 123-123-1234
-							Email: myemail@ucf.edu
-						</div>
-						<div class="col-lg-4 col-sm-12">
+						<div class="col-lg-4 col-sm-12 mb-4">
 							Picture
 							Full Name
 							Job Title
@@ -71,6 +71,10 @@ $tax = $wp_query->get_queried_object();
 <style>
 .site-header .container h1 {
 	display: none !important;
+}	
+.parttimers {
+	font-size: 14px;
+	text-align: center;
 }	
 </style>
 <?php get_footer(); ?>
