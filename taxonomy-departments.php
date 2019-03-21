@@ -33,6 +33,13 @@ $argsPT = array(
   'meta_key' => 'lname',
   'orderby' => 'meta_value',
   'order' => 'ASC',
+  'tax_query'   => array(
+  	array(
+  		'taxonomy' => 'departments',
+  		'field'    => 'slug',
+  		'terms'    => 'deans-office'
+  	)
+  )
  );
 $parttimers = new WP_Query( $argsPT );				
 if( $parttimers->have_posts() ) :
