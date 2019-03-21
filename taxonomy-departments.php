@@ -48,7 +48,7 @@ if( $parttimers->have_posts() ) :
 			<div class="col-lg-4 p-0 media-background-container catlist-photo mx-auto" style="background-color: blue;">
 			 Picture 2
 			</div>
-          <div class="col-lg-8 p-3">
+          <div class="col-lg-8 p-0">
 			<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
 			<div class="mt-2">
