@@ -27,10 +27,16 @@ $tax = $wp_query->get_queried_object();
 				<!-- then the pagination links -->
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
-				
+				<?php
+					$args = array(
+					  'post_type'   => 'parttimers',
+					  'post_status' => 'publish',
+					 );
+					$parttimers = new WP_Query( $args );
+					if( $parttimers->have_posts() ) :
+				?>
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
-					
 					<?php while( $parttimers->have_posts() ) :
 						$parttimers->the_post();
 					?>
