@@ -30,9 +30,9 @@ $tax = $wp_query->get_queried_object();
 <?php
 $argsPT = array(
   'post_type'   => 'parttimers',
-  'meta_key' => 'lname',
-  'orderby' => 'meta_value',
-  'order' => 'ASC',
+ // 'meta_key' => 'lname',
+ // 'orderby' => 'meta_value',
+ // 'order' => 'ASC',
  );
 $parttimers = new WP_Query( $argsPT );
 if( $parttimers->have_posts() ) :
