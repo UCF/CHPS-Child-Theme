@@ -36,7 +36,7 @@ $argsPT = array(
 $parttimers = new WP_Query( $argsPT );
 if( $parttimers->have_posts() ) :
 ?>
-<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
+<h1 class="archive-title heading-underline mb-5">Part Time Faculty</h1>
 <div class="row parttimers">   
     <?php
       while( $parttimers->have_posts() ) :
@@ -50,14 +50,14 @@ if( $parttimers->have_posts() ) :
 				<?php if(get_field('email')){ ?>
 					<div class="row">
 						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-							<i class="fa fa-envelope icongrey"></i> <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
+							<i class="fa fa-envelope icongrey"></i> E-mail: <a href="mailto:<?php the_field('email'); ?>"><?php the_field('email'); ?></a>
 						</div>
 					</div>
 				<?php }	?>
 				<?php if(get_field('phone')){ ?>
 					<div class="row">
 						<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-							<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
+							<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
 						</div>
 					</div>
 				<?php }	?>	
