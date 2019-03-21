@@ -51,7 +51,7 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-4 col-sm-6 col-xs-6 mb-4 cat-border">
+<div class="col-md-4 col-sm-6 col-xs-6 col-6 mb-4 cat-border">
 
 <div class="col-8 col-xs-8 col-sm-8 p-0 media-background-container parttime-photo mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
@@ -112,7 +112,7 @@ if( $parttimers->have_posts() ) :
 }
 @media (max-width: 991px) {
 	.parttime-photo {
-		height: 160px;
+		height: 200px;
 	}
 }	
 @media (max-width: 575px) {
