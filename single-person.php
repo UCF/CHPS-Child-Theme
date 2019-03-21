@@ -308,39 +308,33 @@ $posts = get_posts(array(
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
 								<?php 
-									foreach( $posts as $post ): 
-										setup_postdata( $post );
-									?>
-									<li class="listnone mb-4">
-										<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
-										<?php 			
+								foreach( $posts as $post ): 
+									setup_postdata( $post );
+								?>
+								<li class="listnone mb-4">
+									<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+									<?php 			
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
 								echo wp_trim_words( $content, 30, '...' );
 								?>
-									</li>
-									<?php endforeach; ?>
-									<?php wp_reset_postdata(); ?>
-									
+								</li>
+								<?php endforeach; ?>
+								<?php wp_reset_postdata(); ?>
 								<?php if (have_rows('external_news') ) { 	?>
-									<div class="mb-4">
-										<h5>External News Articles</h5>
-										<ul>
-											<?php while (have_rows('external_news') ): the_row(); ?> 
+								<div class="mb-4">
+									<h5>External News Articles</h5>
+									<ul>
+										<?php while (have_rows('external_news') ): the_row(); ?> 
 
-											<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>
-													</li>
+										<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>
+												</li>
 
-											 <?php endwhile; ?>	
-										 </ul>
-									 </div>
+										 <?php endwhile; ?>	
+									 </ul>
+								 </div>
 								<?php }?>	
-									
-									
-									
-									
-								      	
 							</div>
 						</div>
 					</div></div>

@@ -27,13 +27,42 @@ $tax = $wp_query->get_queried_object();
 				<!-- then the pagination links -->
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
-					HELLO
+					<h1 class="archive-title heading-underline">Part Time Faculty</h1>
+					
 				<!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
 				</div>
 			</div>
 			<div class="col-lg-3 profilesidebar">
 				<?php dynamic_sidebar( 'directory-sidebar' ); ?>
+				<div class="col-lg-3 col-sm-12">
+					Picture
+					Full Name
+					Job Title
+					Phone: 123-123-1234
+					Email: myemail@ucf.edu
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					Picture
+					Full Name
+					Job Title
+					Phone: 123-123-1234
+					Email: myemail@ucf.edu
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					Picture
+					Full Name
+					Job Title
+					Phone: 123-123-1234
+					Email: myemail@ucf.edu
+				</div>
+				<div class="col-lg-3 col-sm-12">
+					Picture
+					Full Name
+					Job Title
+					Phone: 123-123-1234
+					Email: myemail@ucf.edu
+				</div>
 			</div>
 		</div>
 	</article>
