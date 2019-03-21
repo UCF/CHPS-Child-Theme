@@ -44,7 +44,16 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-  <div class="col-md-6 col-sm-12 cat-border">.col-sm-12</div>
+<div class="col-md-6 col-sm-12 mb-5 cat-border">
+	<div class="row">
+      <div class="col-sm-8 col-md-6">
+        Level 2: .col-sm-8 .col-md-6
+      </div>
+      <div class="col-sm-4 col-md-6">
+        Level 2: .col-sm-4 .col-md-6
+      </div>
+    </div>
+</div>
         <?php
       endwhile;
       wp_reset_postdata();
