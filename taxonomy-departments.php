@@ -33,7 +33,7 @@ $argsPT = array(
   'post_status' => 'publish',
   'meta_key' => 'lname',
   'orderby' => 'meta_value',
-  'order' => 'ASC'
+  'order' => 'ASC',
  );
 $parttimers = new WP_Query( $argsPT );
 if( $parttimers->have_posts() ) :
