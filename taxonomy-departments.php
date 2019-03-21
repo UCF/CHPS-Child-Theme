@@ -51,20 +51,14 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-4 col-sm-6 col-xs-6 col-6 mb-4 cat-border">
-
-<div class="col-8 col-xs-8 col-sm-8 col-10 p-0 mb-2 media-background-container parttime-photo mx-auto">
-	<?php if ( has_post_thumbnail()) { ?>
-		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
-		<?php } else { ?> 
-			<?php switch_to_blog(2);?>
-				<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
-			<?php restore_current_blog(); ?>
-	<?php } ?>
-</div>
-
-
-
+<div class="col-md-4 col-sm-6 col-xs-6 col-6 mb-4">
+	<div class="col-8 col-xs-8 col-sm-8 col-10 p-0 mb-2 media-background-container parttime-photo mx-auto">
+		<?php if ( has_post_thumbnail()) { ?>
+			<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+			<?php } else { ?> 
+					<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+		<?php } ?>
+	</div>
 	<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 		<?php the_field('jobtitle'); ?>
 	<div class="mt-2">
