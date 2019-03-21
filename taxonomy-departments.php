@@ -46,10 +46,10 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-6 col-sm-12 mb-5">
 	<div class="row">
-      <div class="col-xs-3 p-0" style="background-color: blue;">
+      <div class="col-xs-3 col-sm-3 p-0" style="background-color: blue;">
         Picture 1
       </div>
-      <div class="col-xs-9">
+      <div class="col-xs-9 col-sm-9">
         <strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 			<?php the_field('jobtitle'); ?>
      	<div class="mt-2">
