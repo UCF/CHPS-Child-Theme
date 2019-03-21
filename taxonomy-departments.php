@@ -36,8 +36,8 @@ $argsPT = array(
   'tax_query'   => array(
   	array(
   		'taxonomy' => 'departments',
-  		'field'    => 'slug',
-  		'terms'    => 'health-professions'
+  		'field'    => 'name',
+  		'terms'    => $tax->name
   	)
   )
  );
