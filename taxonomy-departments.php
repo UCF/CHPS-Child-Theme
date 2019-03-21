@@ -31,9 +31,11 @@ $tax = $wp_query->get_queried_object();
 $argsPT = array(
   'post_type'   => 'parttimers',
   'post_status' => 'publish',
+  'meta_key' => 'lname',
+  'orderby' => 'meta_value',
+  'order' => 'ASC'
  );
- 
-$parttimers = new WP_Query( $argsPT."&meta_key=lname&orderby=meta_value&order=ASC&nopaging=1");
+$parttimers = new WP_Query( $argsPT );
 if( $parttimers->have_posts() ) :
 ?>
 <h1 class="archive-title heading-underline mb-5">Part Time Faculty</h1>
