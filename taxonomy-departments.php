@@ -27,10 +27,31 @@ $tax = $wp_query->get_queried_object();
 				<!-- then the pagination links -->
 				<div class="mt-5">
 				<!-- START PART TIME FACULTY -->
-				<?php
-					
-					
-				?>
+<?php
+$args123 = array(
+  'post_type'   => 'parttimers',
+  'post_status' => 'publish',
+ );
+ 
+$testimonials = new WP_Query( $args123 );
+if( $testimonials->have_posts() ) :
+?>
+  <ul>
+    <?php
+      while( $testimonials->have_posts() ) :
+        $testimonials->the_post();
+        ?>
+          <li><?php the_title(); ?></li>
+        <?php
+      endwhile;
+      wp_reset_postdata();
+    ?>
+  </ul>
+<?php
+else :
+  esc_html_e( 'No testimonials in the diving taxonomy!', 'text-domain' );
+endif;
+?>
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
 					<?php while( $parttimers->have_posts() ) :
