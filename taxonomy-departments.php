@@ -110,7 +110,7 @@ if( $parttimers->have_posts() ) :
 }	
 @media (max-width: 575px) {
 	.parttime-photo {
-	 	height: 500px;
+	 	height: 150px;
 	}
 }	
 </style>
