@@ -46,7 +46,7 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-6 col-sm-12 mb-5">
 	<div class="row">
-      <div class="col-xs-3 col-sm-3 p-0 media-background-container catlist-photo mx-auto">
+      <div class="col-xs-3 col-sm-3 p-0 media-background-container parttime-photo mx-auto">
         <?php if ( has_post_thumbnail()) { ?>
 			<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 			<?php } else { ?> 
@@ -100,13 +100,8 @@ if( $parttimers->have_posts() ) :
 .parttimers strong {
 	font-size: 16px;
 }
-.parttimers	.row [class*="col-"]{
-  margin-bottom: -99999px;
-  padding-bottom: 99999px;
-}
-
-.parttimers .row{
-  overflow: hidden; 
+.parttime-photo {
+	min-height: 150px;
 }
 </style>
 <?php get_footer(); ?>
