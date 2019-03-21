@@ -30,7 +30,6 @@ $tax = $wp_query->get_queried_object();
 <?php
 $argsPT = array(
   'post_type'   => 'parttimers',
-  'post_status' => 'publish',
   'meta_key' => 'lname',
   'orderby' => 'meta_value',
   'order' => 'ASC',
