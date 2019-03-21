@@ -51,7 +51,7 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-<div class="col-md-4 col-sm-12 mb-4 cat-border">
+<div class="col-md-3 col-sm-12 mb-4 cat-border">
 	<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
 		<?php the_field('jobtitle'); ?>
 	<div class="mt-2 pb-5">
