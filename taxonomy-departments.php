@@ -44,7 +44,7 @@ if( $parttimers->have_posts() ) :
         $parttimers->the_post();
 	$getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         ?>
-		<div class="col-lg-6 mb-5 cat-border personlist-ht">
+		<div class="col-lg-6 mb-5">
 			<div class="col-lg-4 p-0 media-background-container catlist-photo mx-auto" style="background-color: blue;">
 			 Picture 2
 			</div>
