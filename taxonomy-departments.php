@@ -44,7 +44,7 @@ if( $parttimers->have_posts() ) :
         ?>
           <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 			Picture</br>
-			<h5><?php the_title(); ?></h5></br>
+			<h5><?php the_title(); ?></h5>
 			<?php the_field('jobtitle'); ?>
 			<div class="mt-2">
 				<?php if(get_field('email')){ ?>
