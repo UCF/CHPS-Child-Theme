@@ -108,7 +108,7 @@ if( $parttimers->have_posts() ) :
 		height: 130px;
 	}
 }	
-@media (max-width: 600px) {
+@media (max-width: 550px) {
 	.parttime-photo {
 	 	height: 500px;
 	}
