@@ -29,7 +29,7 @@ $tax = $wp_query->get_queried_object();
 				<!-- START PART TIME FACULTY -->
 					<h1 class="archive-title heading-underline mb-3">Part Time Faculty</h1>
 					<div class="row parttimers">
-						<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
 							<strong>Full Name</strong></br>
 							Job Title
@@ -38,7 +38,7 @@ $tax = $wp_query->get_queried_object();
 								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
 							<strong>Full Name</strong></br>
 							Job Title
@@ -47,7 +47,7 @@ $tax = $wp_query->get_queried_object();
 								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
 							<strong>Full Name</strong></br>
 							Job Title
@@ -56,7 +56,7 @@ $tax = $wp_query->get_queried_object();
 								Email: <a href="mailto:myemail@ucf.edu">myemail@ucf.edu</a>
 							</div>
 						</div>
-						<div class="col-lg-4 col-md-4 col-sm-12 mb-5">
+						<div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 mb-5">
 							Picture</br>
 							<strong>Full Name</strong></br>
 							Job Title
