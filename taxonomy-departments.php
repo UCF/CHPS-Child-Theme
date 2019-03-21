@@ -53,7 +53,7 @@ if( $parttimers->have_posts() ) :
         ?>
 <div class="col-md-4 col-sm-6 col-xs-6 col-6 mb-4 cat-border">
 
-<div class="col-8 col-xs-8 col-sm-8 col-10 p-0 media-background-container parttime-photo mx-auto">
+<div class="col-8 col-xs-8 col-sm-8 col-10 p-0 mb-2 media-background-container parttime-photo mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
 		<img src="<?php echo $getPTimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 		<?php } else { ?> 
@@ -109,16 +109,6 @@ if( $parttimers->have_posts() ) :
 }
 .parttime-photo {
 	height: 200px;
-}
-@media (max-width: 991px) {
-	.parttime-photo {
-		height: 200px;
-	}
-}	
-@media (max-width: 575px) {
-	.parttime-photo {
-	 	height: 200px;
-	}
 }	
 </style>
 <?php get_footer(); ?>
