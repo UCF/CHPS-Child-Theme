@@ -59,7 +59,7 @@ if( $parttimers->have_posts() ) :
 					<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
 		<?php } ?>
 	</div>
-	<strong><?php the_title(); ?></strong><?php if(get_field('degrees')){ ?>, <?php the_field('degrees'); ?><?php } ?></br>
+	<strong><?php the_title(); ?></strong></br>
 		<?php the_field('jobtitle'); ?>
 	<div class="mt-2">
 		<?php if(get_field('email')){ ?>
@@ -69,7 +69,7 @@ if( $parttimers->have_posts() ) :
 		<?php }	?>
 		<?php if(get_field('phone')){ ?>
 			<!--	<div class="person-label">
-					<i class="fa fa-phone icongrey"></i> <a href="tel:<?php the_field('phone'); ?>"><?php the_field('phone'); ?></a>
+					<i class="fa fa-phone icongrey"></i> <a href="tel:<?php // the_field('phone'); ?>"><?php // the_field('phone'); ?></a>
 				</div> -->
 		<?php }	?>	
 	</div>
