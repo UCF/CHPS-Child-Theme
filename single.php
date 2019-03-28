@@ -2,6 +2,8 @@
 $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
+$primary_term_id = yoast_get_primary_term_id('category');
+$postTerm = get_term( $primary_term_id );
 ?>
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
@@ -9,8 +11,10 @@ $categories = get_the_category();
         <div class="col-md-10">
         	<div>
 				<?php 
-					if ( ! empty( $categories ) ) {
-						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
+					if ( $postTerm && ! is_wp_error( $postTerm ) ) {
+						echo '<a class="cattitle-single" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
+					} else { 
+						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 					}
 				?>
 				<h1 class="posttitle"><?php the_title(); ?></h1>
