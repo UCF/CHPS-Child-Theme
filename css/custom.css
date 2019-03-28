@@ -85,10 +85,10 @@ h2 {
     overflow: hidden !important;
 }
 .alignleft {
-	margin: 0px 20px 20px 0px;
+	margin: 0px 20px 20px 0px !important;
 }
 .alignright {
-	margin: 0px 0px 20px 20px;
+	margin: 0px 0px 20px 20px !important;
 }
 /* = Homepage Title
 -------------------------------------------------------------- */
