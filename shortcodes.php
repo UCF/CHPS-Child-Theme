@@ -141,7 +141,6 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$categories = get_the_category();
 	$primary_term_id = yoast_get_primary_term_id('category');
 	$postTerm = get_term( $primary_term_id );
-	$hellome = get_option( 'category_base' );
 	$blog_site = get_blog_details(2);
 	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
 	if ( has_post_thumbnail()) {	
@@ -153,7 +152,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 		$listhnews .= '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
 	} else { 
-		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
+		$listhnews .= '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
