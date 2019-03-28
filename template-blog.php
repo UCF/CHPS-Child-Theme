@@ -26,6 +26,8 @@ Template Name: Blog
 					$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 					$display_name = get_the_author_meta( 'display_name', $post->post_author );
 					$categories = get_the_category();
+					$primary_term_id = yoast_get_primary_term_id('category');
+					$postTerm = get_term( $primary_term_id );
 				?>
 					<div class="row mb-4 cat-border">
 						<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
