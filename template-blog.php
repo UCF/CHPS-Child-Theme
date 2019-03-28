@@ -46,7 +46,7 @@ Template Name: Blog
 								if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 									echo '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
 								} else { 
-									echo '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
+									echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 								}
 							?>
 							<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
