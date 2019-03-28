@@ -84,10 +84,10 @@ h2 {
     height:0px !important;
     overflow: hidden !important;
 }
-img .alignleft {
+.alignleft {
 	margin: 0px 20px 20px 0px;
 }
-img .alignright {
+.alignright {
 	margin: 0px 0px 20px 20px;
 }
 /* = Homepage Title
