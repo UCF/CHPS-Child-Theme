@@ -150,7 +150,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 		$listhnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
-	if ( ! empty( $postTerm ) ) {
+	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">HELLO</a>';
 	} else { 
 		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
