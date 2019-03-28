@@ -151,7 +151,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
 	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
-		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">HELLO</a>';
+		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $postTerm->name . '</a>';
 	} else { 
 		$listhnews .= '<a class="category-title" href="' . $blog_site->siteurl . '/' . $hellome . '/' . $categories[0]->slug . '">' . $categories[0]->name . '</a>';
 	}
