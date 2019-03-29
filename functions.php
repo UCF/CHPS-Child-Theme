@@ -22,8 +22,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
 function themeslug_enqueue_script() { // This is for any 'Colleges-Theme' javascript files.
     //OLD WAY --  wp_enqueue_script( 'dropnav', get_template_directory_uri() . '/static/js/script.min.js', false );
-	//TETHER -- wp_enqueue_script( 'dropnav', get_template_directory_uri() . '/static/js/script.min.js', array( 'jquery', 'tether' ), null, true );
-	include( get_template_directory() . '/static/js/script.min.js');
+	wp_enqueue_script( 'dropnav', get_template_directory_uri() . '/static/js/script.min.js', array( 'jquery', 'tether' ), null, true );
     // here you can enqueue more js / css files 
 }
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
