@@ -17,7 +17,7 @@ $postTerm = get_term( $primary_term_id );
 						echo '<a class="cattitle-single" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 					}
 				?>
-				<h1 class="posttitle"><?php the_title(); ?> <?php echo get_template_directory(); ?></h1>
+				<h1 class="posttitle"><?php the_title(); ?></h1>
 			</div>
         	<div>
 				<?php if ( ! has_excerpt() ) {
