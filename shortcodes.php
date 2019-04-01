@@ -459,7 +459,8 @@ function rootcodevar( $atts ) {
 switch_to_blog(2);
 // Use shortcodes from Main blog.
 echo do_shortcode( '[wd_asp id=1]' );	
-restore_current_blog();	
+wp_reset_query();	
+restore_current_blog();
 }
 add_shortcode( 'rootcode', 'rootcodevar' );	
 ?>
