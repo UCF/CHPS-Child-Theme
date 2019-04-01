@@ -447,3 +447,19 @@ return $listpeeps;
 } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
 ?>
+<?php
+//  ----------------------------------------------------
+// SHORTCODE TO DISPLAY SHORTCODES FROM MAIN BLOG 
+// [rootcode name="" id=""]
+function rootcodevar( $atts ) {
+    $r = shortcode_atts( array(
+        'name' => '',
+        'id' => '',
+    ), $atts );
+switch_to_blog(2);
+// Use shortcodes from Main blog.
+echo do_shortcode( '[wd_asp id=1]' );	
+restore_current_blog();	
+}
+add_shortcode( 'rootcode', 'rootcodevar' );	
+?>
