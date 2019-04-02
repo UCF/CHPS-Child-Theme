@@ -461,8 +461,8 @@ $rcid = $rc['id'];
 // Use shortcodes from Main blog.
 $listrc = do_shortcode( '[' . $rcname . ' id=' . $rcid . ']' );	
 wp_reset_query();	
+restore_current_blog();
 return $listrc;	
-restore_current_blog();	
 }
 add_shortcode( 'rootcode', 'rootcodevar' );	
 //  ------------------------------------------------------------------------
