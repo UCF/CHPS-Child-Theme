@@ -459,7 +459,7 @@ switch_to_blog(2);
 $rcname = $rc['name'];
 $rcid = $rc['id'];		
 // Use shortcodes from Main blog.
-$listrc .= do_shortcode( '[' . $rcname . ' id=' . $rcid . ']' );	
+$listrc = do_shortcode( '"[' . $rcname . ' id=' . $rcid . ']"' );	
 wp_reset_query();	
 restore_current_blog();
 return $listrc;	
