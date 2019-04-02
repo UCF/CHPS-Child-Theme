@@ -446,4 +446,24 @@ restore_current_blog();
 return $listpeeps;
 } add_shortcode( 'showperson', 'showpersonvar' );
 //  ------------------------------------------------------------------------
-?>
+?><?php
+//  ----------------------------------------------------
+// SHORTCODE TO DISPLAY SHORTCODES FROM MAIN BLOG 
+// [rootcode name="" id=""]
+function rootcodevar( $atts ) {
+    $rc = shortcode_atts( array(
+        'name' => 'wd_asp',
+        'id' => '1',
+    ), $atts );
+switch_to_blog(2);
+$rcname = $rc['name'];
+$rcid = $rc['id'];		
+// Use shortcodes from Main blog.
+$listrc .= do_shortcode( '[' . $rcname . ' id=' . $rcid . ']' );	
+wp_reset_query();	
+restore_current_blog();
+return $listrc;	
+}
+add_shortcode( 'rootcode', 'rootcodevar' );	
+//  ------------------------------------------------------------------------
+?> 
