@@ -115,7 +115,7 @@ h2 {
 -------------------------------------------------------------- */
 .unit-blocks a {
     display: flex;
-    text-decoration:none;
+    text-decoration:none !important;
     color: #FFF !important;
     padding:20px;
     -webkit-box-flex: 0;
@@ -123,6 +123,7 @@ h2 {
     flex: 0 0 16.66666%;
     max-width: 16.66666%;
     min-height: 16.66666vw;
+	cursor: pointer !important;
 }
 .unit-blocks a span {
   -webkit-box-pack: end!important;
