@@ -139,6 +139,7 @@ h2 {
   line-height: .9;
   text-shadow: 0 0 10px rgba(0,0,0,.7);
   text-transform: uppercase!important;
+  text-decoration:none !important;
   z-index: 2 !important;
 }
 .filter-sepia {
