@@ -111,6 +111,76 @@ h2 {
     text-transform:none !important;
     padding: 1.1rem 1.5rem;
 }
+/* = HOMEPAGE BLOCKS
+-------------------------------------------------------------- */
+.unit-blocks a {
+    display: flex;
+    text-decoration:none;
+    color: #FFF !important;
+    padding:20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666%;
+    flex: 0 0 16.66666%;
+    max-width: 16.66666%;
+    min-height: 16.66666vw;
+}
+.unit-blocks a span {
+  -webkit-box-pack: end!important;
+  -ms-flex-pack: end!important;
+  justify-content: flex-end!important;
+  align-self: flex-end;
+  font-size: 2vw;
+  font-family: "Knockout 49 A","Knockout 49 B","UCF Condensed Alt",sans-serif;
+  font-weight: 400!important;
+  line-height: .9;
+  text-shadow: 0 0 10px rgba(0,0,0,.7);
+  text-transform: uppercase!important;
+  z-index: 2 !important;
+}
+.filter-sepia {
+  transition: filter .5s ease-in-out;  
+  -webkit-filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65);
+    filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65);
+}
+.filter-sepia:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0) sepia(0) contrast(1) brightness(1);
+    filter: grayscale(0) sepia(0) contrast(1) brightness(1);
+}
+.filter-pride {
+  transition: filter .5s ease-in-out;  
+  -webkit-filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65) opacity(.8);
+    filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65) opacity(.8); 
+}
+.filter-pride:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0) sepia(0) contrast(1) brightness(1) opacity(1);
+    filter: grayscale(0) sepia(0) contrast(1) brightness(1) opacity(1);
+}
+    @media (max-width: 1199.98px) {
+       .unit-blocks a {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            min-height: 33.333vw;
+        } 
+        .unit-blocks a span {
+          font-size: 4vw;
+        }
+    }
+    @media (max-width: 767.98px) {
+       .unit-blocks a {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            min-height: 50vw;
+        } 
+        .unit-blocks a span {
+          font-size: 6vw;
+        }
+    }
 /* = NAVIGATION
 -------------------------------------------------------------- */
 .breadcrumbnav {
