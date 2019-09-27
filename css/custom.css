@@ -125,6 +125,10 @@ h2 {
     min-height: 16.66666vw;
 	cursor: pointer !important;
 }
+.unit-blocks a:hover {
+    text-decoration:none !important;
+	cursor: pointer !important;
+}
 .unit-blocks a span {
   -webkit-box-pack: end!important;
   -ms-flex-pack: end!important;
