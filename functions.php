@@ -148,6 +148,23 @@ if( function_exists('acf_add_options_page') ) {
 }
 
 
+function wpcf_author_filter_terms_order( $orderby, $query_vars, $taxonomies ) {
+    if ( ! empty( $query_vars['object_ids'] )
+        && ! empty( $taxonomies[0] )
+        && ( 1 === count( $taxonomies ) )
+        && 'job_titles' === $taxonomies[0] )
+        {
+            $orderby = 'tr.term_order';
+        }
+    return $orderby;
+}
+
+add_filter( 'get_terms_orderby', 'wpcf_author_filter_terms_order', 10, 3 );
+
+
+
+
+
 
 function wpbeginner_numeric_posts_nav() {
  
