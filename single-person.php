@@ -51,7 +51,8 @@ $ids = get_the_ID();
 								<?php
 								// Get a list of terms for this post's custom taxonomy.
 								//$project_cats = get_the_terms($post->ID, 'job_titles');
-								$project_cats = wp_get_post_terms( $post->ID, 'job_titles', array( 'orderby' => 'term_order' ) );
+								//$project_cats = wp_get_post_terms( $post->ID, 'job_titles', array( 'orderby' => 'term_order' ) );
+								$project_cats = wp_get_object_terms( $post->ID, 'job_titles', array( 'orderby' => 'term_order' ) );
 								// Renumber array.
 								$project_cats = array_values($project_cats);
 								for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
