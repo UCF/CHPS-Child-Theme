@@ -306,7 +306,7 @@ span.searchresults	{
 /* = NEWS Posts, BLOG, shortcode news results 
 -------------------------------------------------------------- */
 #storyPost h2 {
-	font-size: 10px;
+	font-size: 10px !important;
 }
 .spotlight-vertical .spotlight-header {
     font-style:normal !important;
