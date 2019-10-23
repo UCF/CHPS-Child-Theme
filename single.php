@@ -74,7 +74,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 </div>
 <style>
 .site-header .container h1 {display: none !important;}
-article h2 { font-size: 10px !important; color: red; }	
+article h2 { font-size: 10px; }	
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
