@@ -4,8 +4,12 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' )
 $categories = get_the_category();
 $primary_term_id = yoast_get_primary_term_id('category');
 $postTerm = get_term( $primary_term_id );
+
+$thumb_id = get_post_thumbnail_id(get_the_ID());
+$alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
+if(count($alt)) echo $alt;
 ?>
-<div class="container mb-5 mt-3 mt-lg-4">
+<div class="container mb-5 mt-3 mt-lg-4" id="storyPost">
     <div class="row">
 		<div class="col-md-1"></div>
         <div class="col-md-10">
@@ -38,7 +42,7 @@ $postTerm = get_term( $primary_term_id );
 					   <?php endif; ?>
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
 							<div id="imgRight-<?php the_field('featimg_size'); ?>">
-								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo the_title(); ?>" src="<?php echo $getimageURL ?>" /></a>
+								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo the_title(); ?>"><img width="100%" alt="<?php echo $alt; ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
