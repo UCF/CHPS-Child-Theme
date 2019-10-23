@@ -41,7 +41,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 					   <?php endif; ?>
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
 							<div id="imgRight-<?php the_field('featimg_size'); ?>">
-								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="Enlarge the image for the CHPS News story about <?php echo the_title(); ?>"><img width="100%" alt="<?php if(count($alt)) { echo $alt; } else { echo the_title(); } ?>" src="<?php echo $getimageURL ?>" /></a>
+								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="Enlarge the image for the CHPS News story about <?php echo the_title(); ?>"><img width="100%" alt="<?php if (!empty($alt)) { echo $alt; } else { echo the_title(); } ?>" src="<?php echo $getimageURL ?>" /></a>
 								<div class="featcaption"><?php the_field('featimg_caption'); ?></div>
 							</div>
 					   <?php endif; ?>
