@@ -8,19 +8,16 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
-<?php if ( get_field( 'updatenewstype' ) == 1 ) { 
- // echo 'true';
-	echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />';
-
-	
-} else { 
- // echo 'false'; 
-	echo 'internal news article';
-} ?>
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
 		<div class="col-md-1"></div>
-        <div class="col-md-10" id="storyPost">
+        <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
+		 // echo 'true';
+			echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />';
+
+
+		} else { ?>
+		<div class="col-md-10" id="storyPost">
         	<div>
 				<?php 
 					if ( $postTerm && ! is_wp_error( $postTerm ) ) {
@@ -78,6 +75,8 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 				</div>
 			</div>
         </div>
+		<?php } ?>
+        
         <div class="col-md-1"></div>
     </div>
 </div>
