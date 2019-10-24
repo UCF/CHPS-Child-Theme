@@ -1,4 +1,5 @@
 <?php get_header(); 
+$redirectURL = the_field('updatenewsURL');
 $display_name = get_the_author_meta( 'display_name', $post->post_author );
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $categories = get_the_category();
@@ -10,7 +11,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
 <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
  // echo 'true';
-	echo '<meta http-equiv="refresh" content="3;url="' . the_field('updatenewsURL') . '" />';
+	echo '<meta http-equiv="refresh" content="3;url="' . $redirectURL . '" />';
 	
 } else { 
  // echo 'false'; 
