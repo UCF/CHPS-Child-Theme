@@ -13,12 +13,13 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 		<div class="col-md-1"></div>
         <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
 		 // echo 'true';
-			echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />'; ?>
+			echo '<meta http-equiv="refresh" content="10;url=' . get_field('updatenewsURL') . '" />'; ?>
 		<div class="col-md-10">
 			<div>
 			You are now leaving our website in order to read the news article titled:<br>
-			<h1 class="posttitle"><?php the_title(); ?></h1><br>
-			You will be redirected in 3 seconds. 
+			<h1 class="posttitle"><?php the_title(); ?></h1>
+			<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>	
+			You will be redirected in 10 seconds. 
 			</div>
 		</div>
 
