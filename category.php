@@ -25,7 +25,6 @@
 					<?php } else { ?>
 					 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 					<?php } ?>
-					
 					   <?php if ( has_post_thumbnail()) { ?>
 							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 							<?php } else { ?>
@@ -36,7 +35,13 @@
 				   </a>
 				</div>
 				<div class="col-lg-9 p-4">
-					<h2 class="h5"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+					<h2 class="h5">
+					<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
+					 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
+					<?php } else { ?>
+					 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+					<?php } ?>
+					<?php the_title(); ?></a></h2>
 					<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 					<div class="entry">
 					<?php 			
