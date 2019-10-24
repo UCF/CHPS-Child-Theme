@@ -10,7 +10,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
 <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
  // echo 'true';
-	header("https://youtube.com");
+	header("Location: https://youtube.com");
 	
 } else { 
  // echo 'false'; 
