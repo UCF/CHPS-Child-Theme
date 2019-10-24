@@ -16,7 +16,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			echo '<meta http-equiv="refresh" content="10;url=' . get_field('updatenewsURL') . '" />'; ?>
 		<div class="col-md-10" id="redirectPost">
 			<div>
-			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/loading4.gif" width="75" alt="spinning loading icon"><br>
+			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/loading4.gif" width="50" alt="spinning loading icon"><br>
 			You are now leaving our website in order to read the news article titled:<br>
 			<h1 class="posttitle"><?php the_title(); ?></h1>
 			<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>	
@@ -96,6 +96,9 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 	text-align: center;
 	padding: 80px 0px 200px 0px;
 }	
+#redirectPost img{ 
+	margin-bottom:50px;
+}		
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
