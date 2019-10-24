@@ -135,7 +135,6 @@ div.widget-content ul li {
 #exLinkIcon { 
   background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIcon.png');
   background-repeat: no-repeat;
-  background-attachment: fixed;
   background-position: top right; 
 }	
 </style>
