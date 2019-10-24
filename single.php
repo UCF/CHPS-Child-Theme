@@ -16,7 +16,9 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />'; ?>
 		<div class="col-md-10">
 			<div>
-			You are now leaving our website...
+			You are now leaving our website in order to read the news article titled:<br>
+			<h1 class="posttitle"><?php the_title(); ?></h1><br>
+			You will be redirected in 3 seconds. 
 			</div>
 		</div>
 
