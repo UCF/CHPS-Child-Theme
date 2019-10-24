@@ -10,7 +10,8 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
 <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
  // echo 'true';
-	the_field( 'updatenewsURL' );
+	header("the_field( 'updatenewsURL' );");
+	
 } else { 
  // echo 'false'; 
 	echo 'internal news article';
