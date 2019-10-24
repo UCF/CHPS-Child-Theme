@@ -10,7 +10,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
 <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
  // echo 'true';
-	header("Location: http://www.redirect.to.url.com/");
+	echo '<meta http-equiv="refresh" content="3;url=http://www.google.com/" />';
 	
 } else { 
  // echo 'false'; 
