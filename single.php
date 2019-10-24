@@ -94,7 +94,7 @@ article h2 { font-size: 26px; margin-bottom: 16px;}
 article h3 { font-size: 20px; margin-bottom: 16px;}	
 #redirectPost { 
 	text-align: center;
-	padding: 80px 0px 200px 0px;
+	padding: 50px 0px 200px 0px;
 }	
 #redirectPost img{ 
 	margin-bottom:25px;
