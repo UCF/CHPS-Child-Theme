@@ -13,10 +13,14 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 		<div class="col-md-1"></div>
         <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
 		 // echo 'true';
-			echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />';
+			echo '<meta http-equiv="refresh" content="2;url=' . get_field('updatenewsURL') . '" />'; ?>
+		<div class="col-md-10">
+			<div>
+			You are now leaving our website...
+			</div>
+		</div>
 
-
-		} else { ?>
+		<?php } else { ?>
 		<div class="col-md-10" id="storyPost">
         	<div>
 				<?php 
