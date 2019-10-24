@@ -14,7 +14,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
         <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
 		 // echo 'true';
 			echo '<meta http-equiv="refresh" content="10;url=' . get_field('updatenewsURL') . '" />'; ?>
-		<div class="col-md-10">
+		<div class="col-md-10" id="redirectPost">
 			<div>
 			You are now leaving our website in order to read the news article titled:<br>
 			<h1 class="posttitle"><?php the_title(); ?></h1>
@@ -90,7 +90,10 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <style>
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
-article h3 { font-size: 20px; margin-bottom: 16px;}		
+article h3 { font-size: 20px; margin-bottom: 16px;}	
+#redirectPost { 
+	text-align: center;
+}	
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
