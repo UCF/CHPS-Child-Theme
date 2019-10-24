@@ -20,7 +20,12 @@
 			?>
 			<div class="row mb-4 cat-border">
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+					<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
+					 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" target="_blank">
+					<?php } else { ?>
+					 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
+					<?php } ?>
+					
 					   <?php if ( has_post_thumbnail()) { ?>
 							<img src="<?php echo $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
 							<?php } else { ?>
