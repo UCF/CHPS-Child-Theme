@@ -133,7 +133,7 @@ div.widget-content ul li {
     background-color: #3C8DC5;
 }
 #exLinkIcon { 
-  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIcon.png');
+  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
   background-repeat: no-repeat;
   background-position: top right; 
 }	
