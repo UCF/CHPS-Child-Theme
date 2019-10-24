@@ -11,14 +11,14 @@
 		<div class="col-lg-5">	
 			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
-	</div>			
+	</div>				
 <div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
         <div class="col-md-9">
         	<?php while ( have_posts() ) : the_post(); 
 			$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 			?>
-			<div class="row mb-4 cat-border">
+			<div class="row mb-4 cat-border" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>>
 				<div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">
 					<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
 					 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" target="_blank">
@@ -132,7 +132,7 @@ div.widget-content ul li {
 .navigation li.active a {
     background-color: #3C8DC5;
 }
-.cat-border { 
+#exLinkIcon { 
   background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/externalCorner.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
