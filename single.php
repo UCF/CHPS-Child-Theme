@@ -10,9 +10,8 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 ?>
 <?php if ( get_field( 'updatenewstype' ) == 1 ) { 
  // echo 'true';
-	echo '<meta http-equiv="refresh" content="3;url=';
-	echo the_field('updatenewsURL');
-	echo '" />';
+	echo '<meta http-equiv="refresh" content="3;url=' . get_field('updatenewsURL') . '" />';
+
 	
 } else { 
  // echo 'false'; 
