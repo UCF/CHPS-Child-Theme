@@ -20,7 +20,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			You are now leaving our website in order to read the news article titled:<br>
 			<h1 class="posttitle"><?php the_title(); ?></h1>
 			<p class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></p>	
-			You will be redirected in 5 seconds. 
+			You will be redirected in 4 seconds. 
 			</div>
 		</div>
 
