@@ -49,7 +49,7 @@ Template Name: Blog
 									echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 								}
 							?>
-							<h2 class="h5 pt-2 mainnews x">
+							<h2 class="h5 pt-2 mainnews">
 								<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
 								 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
 								<?php } else { ?>

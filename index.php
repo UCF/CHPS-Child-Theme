@@ -40,7 +40,7 @@
 						<?php } ?>
 						   </a>
 					</div>
-					<div class="col-lg-9 p-4"> 
+					<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>> 
 						<?php 
 							if ( ! empty( $categories ) ) {
 								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -119,6 +119,11 @@ div.widget-content ul li {
 	border-bottom: 1px solid #eee;
 	padding:6px 0px;
 	font-size: 14px !important;
+}
+#exLinkIcon { 
+  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
+  background-repeat: no-repeat;
+  background-position: top right; 
 }
 </style>
 <?php get_footer(); ?>
