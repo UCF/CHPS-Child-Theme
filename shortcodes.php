@@ -148,7 +148,11 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	} else { 
 		$listhnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}
-	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0">';
+	$listhnews .= '</a></div><div class="col-lg-9 px-4 py-0"';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		$listhnews .= 'id="exLinkIcon"'; 
+	}
+	$listhnews .= '>';
 	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 		$listhnews .= '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
 	} else { 
