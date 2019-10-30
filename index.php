@@ -40,7 +40,7 @@
 						<?php } ?>
 						   </a>
 					</div>
-					<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>> 
+					<div class="col-lg-9 p-4"> 
 						<?php 
 							if ( ! empty( $categories ) ) {
 								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
@@ -66,7 +66,7 @@
 						<?php } ?>
 						   </a>
 					</div>
-					<div class="col-lg-9 p-4"> 
+					<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>> 
 						<?php 
 							if ( ! empty( $categories ) ) {
 								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
