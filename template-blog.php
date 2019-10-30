@@ -41,7 +41,7 @@ Template Name: Blog
 							<?php } ?>
 							   </a>
 						</div>
-						<div class="col-lg-9 p-4">
+						<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>>
 							<?php 
 								if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 									echo '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
@@ -99,6 +99,11 @@ div.widget-content ul li {
 	border-bottom: 1px solid #eee;
 	padding:6px 0px;
 	font-size: 14px !important;
+}
+#exLinkIcon { 
+  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
+  background-repeat: no-repeat;
+  background-position: top right; 
 }
 </style>
 <?php get_footer(); ?>
