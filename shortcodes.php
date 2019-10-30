@@ -158,7 +158,13 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	} else { 
 		$listhnews .= '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 	}
-	$listhnews .= '<h2 class="h5 pt-2 mainnews"><a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">' . get_the_title() . '</a></h2><div class="entry">';
+	$listhnews .= '<h2 class="h5 pt-2 mainnews">';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		$listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+	} else { 
+		$listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+	}
+	$listhnews .= '</h2><div class="entry">';
 		$content = get_the_content();
 		$content = preg_replace('#\[[^\]]+\]#', '',$content);
 		$content = apply_filters('the_content', $content);
