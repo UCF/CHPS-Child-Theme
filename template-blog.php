@@ -49,7 +49,14 @@ Template Name: Blog
 									echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 								}
 							?>
-							<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+							<h2 class="h5 pt-2 mainnews x">
+								<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
+								 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
+								<?php } else { ?>
+								 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+								<?php } ?>
+								<?php the_title(); ?></a>
+							</h2>
 							<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 							<div class="entry">
 							<?php 			
