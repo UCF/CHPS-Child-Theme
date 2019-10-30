@@ -164,7 +164,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	} else { 
 		$listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 	}
-	$listhnews .= '</h2><div class="entry">';
+	$listhnews .= '' . get_the_title() . '</a></h2><div class="entry">';
 		$content = get_the_content();
 		$content = preg_replace('#\[[^\]]+\]#', '',$content);
 		$content = apply_filters('the_content', $content);
