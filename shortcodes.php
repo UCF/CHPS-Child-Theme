@@ -142,7 +142,12 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	$primary_term_id = yoast_get_primary_term_id('category');
 	$postTerm = get_term( $primary_term_id );
 	$blog_site = get_blog_details(2);
-	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '" >';
+	$listhnews .= '<div class="row mb-5 chpsnews"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		 $listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+	} else { 
+		 $listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+	}
 	if ( has_post_thumbnail()) {	
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
 	} else { 
