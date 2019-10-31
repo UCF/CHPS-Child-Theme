@@ -3,7 +3,7 @@ include 'shortcodes.php';
 
 add_action( 'wp_enqueue_scripts', 'my_add_stylesheet' );
 function my_add_stylesheet() {
-    wp_enqueue_style( 'my-style', get_stylesheet_directory_uri() . '/css/custom.css?'.rand(), false, 'all' );
+    wp_enqueue_style( 'my-style', get_stylesheet_directory_uri() . '/css/custom.css?'.rand(111,9999), 'all' );
 }
 
 function my_theme_enqueue_styles() {
