@@ -1,0 +1,680 @@
+
+/* =Theme customization starts here Hello
+Yellow Color:                 #fecb2f;
+Yellow Hover Color:           #cca12e;
+Light Gray:                   #f2f2f2;
+-------------------------------------------------------------- */
+
+
+/* = Generic Fixes
+-------------------------------------------------------------- */
+h2 {
+    text-transform: none !important;
+}
+/* = USED GLOBALLY 
+-------------------------------------------------------------- */
+.icongrey {
+	color:#bbb ;
+}
+.iconyellow {
+	color:#fecb2f ;
+}
+.largeGreyLink {
+    text-align:right;
+    padding-bottom:0px;
+    margin-bottom:0px;
+}
+.largeGreyLink a {
+    color: #a0a0a0;
+    font-size:16px;
+    font-weight:bold;
+    text-align:right;
+}
+.heading-underline {
+	text-transform: none !important;
+}		
+.titleFIX {
+	margin-bottom: 0px !important;
+	padding-bottom: 0px !important;
+}
+.text-white {
+	color: #fff !important;
+}
+#capitalText, .tlw-list li a {
+	text-transform:capitalize;
+}
+.listnone {
+	list-style: none;
+}
+#yellow-textlinks {
+	color: #fff;
+}
+#yellow-textlinks a {
+	color: #fecb2f;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+#yellow-textlinks a:hover {
+	color: #cca12e;
+}
+.megaTITLE .evc-st-title {
+	font-size: 45px !important;
+    font-weight: 700 !important;
+}
+.btnhover-yellow .vc_btn3.vc_btn3-style-custom, .btnhover-black .vc_btn3.vc_btn3-style-custom, .btnhover-white .vc_btn3.vc_btn3-style-custom, .btnhover-gray .vc_btn3.vc_btn3-style-custom {
+    background-image: none !important;
+}
+.btnhover-yellow a:hover {
+    background: #cca12e !important;
+	color: #fff !important;
+}
+.btnhover-black a:hover {
+	background: #404040 !important;
+}
+.btnhover-white a:hover {
+    background: #dddddd !important;
+}
+.btnhover-gray a:hover {
+    background: #424242 !important;
+}
+#height0FIX {
+    height:0px !important;
+    overflow: hidden !important;
+}
+.alignleft {
+	margin: 0px 20px 20px 0px !important;
+}
+.alignright {
+	margin: 0px 0px 20px 20px !important;
+}
+/* = Homepage Title
+-------------------------------------------------------------- */
+.mainHomeTitle .evc-st-title {
+    background-color: rgba(255,204,0,.95);
+    font-family: "Archer A","Archer B","UCF Slab Serif Alt",serif !important;
+    font-weight: 400 !important;
+    font-size: 50px !important;
+    line-height: 45px !important;
+    margin-bottom: 0;
+    padding: 1.1rem 1.5rem;
+}
+.mainHomeSubtitle .evc-st-title {
+    background-color: rgba(0,0,0,.95);
+    font-family: "Archer A","Archer B","UCF Slab Serif Alt",serif !important;
+    font-weight: 400 !important;
+	font-size: 24px !important;
+    line-height: 20px !important;
+    margin-bottom: 0;
+    text-transform:none !important;
+    padding: 1.1rem 1.5rem;
+}
+/* = HOMEPAGE BLOCKS
+-------------------------------------------------------------- */
+.unit-blocks a {
+    display: flex;
+    text-decoration:none;
+    color: #FFF !important;
+    padding:20px;
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 16.66666%;
+    flex: 0 0 16.66666%;
+    max-width: 16.66666%;
+    min-height: 16.66666vw;
+}
+.unit-blocks a:hover {
+    text-decoration:none !important;
+	cursor: pointer !important;
+}
+.unit-blocks a span {
+  -webkit-box-pack: end!important;
+  -ms-flex-pack: end!important;
+  justify-content: flex-end!important;
+  align-self: flex-end;
+  font-size: 2vw;
+  font-family: "Knockout 49 A","Knockout 49 B","UCF Condensed Alt",sans-serif;
+  font-weight: 400!important;
+  line-height: .9;
+  text-shadow: 0 0 10px rgba(0,0,0,.7);
+  text-transform: uppercase!important;
+  text-decoration:none !important;
+  z-index: 2 !important;
+}
+.filter-sepia {
+  transition: filter .5s ease-in-out;  
+  -webkit-filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65);
+    filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65);
+}
+.filter-sepia:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0) sepia(0) contrast(1) brightness(1);
+    filter: grayscale(0) sepia(0) contrast(1) brightness(1);
+}
+.filter-pride {
+  transition: filter .5s ease-in-out;  
+  -webkit-filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65) opacity(.8);
+    filter: grayscale(1) sepia(.15) contrast(.65) brightness(.65) opacity(.8); 
+}
+.filter-pride:hover {
+    transition: filter .5s ease-in-out;
+    -webkit-filter: grayscale(0) sepia(0) contrast(1) brightness(1) opacity(1);
+    filter: grayscale(0) sepia(0) contrast(1) brightness(1) opacity(1);
+}
+    @media (max-width: 1199.98px) {
+       .unit-blocks a {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 33.33333%;
+            flex: 0 0 33.33333%;
+            max-width: 33.33333%;
+            min-height: 33.333vw;
+        } 
+        .unit-blocks a span {
+          font-size: 4vw;
+        }
+    }
+    @media (max-width: 767.98px) {
+       .unit-blocks a {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+            max-width: 50%;
+            min-height: 50vw;
+        } 
+        .unit-blocks a span {
+          font-size: 6vw;
+        }
+    }
+/* = NAVIGATION
+-------------------------------------------------------------- */
+.breadcrumbnav {
+	background: #2f2f2f;
+	color: #929292;
+	font-size:11px;
+	padding:8px 0px;
+}
+.breadcrumbnav a{
+	color: #929292;
+}
+.breadcrumbnav a.yellow{
+	color: #fecb2f;
+}
+.breadcrumbnav a:hover{
+	color: #fff;
+}
+/* = Profile Directory Search Bar
+-------------------------------------------------------------- */
+.searchbar {
+	width: 100%;
+}
+.searchlg {
+	padding: 10px;
+}
+.searchmd {
+	padding: 4px;
+}
+.searchsm {
+	padding: 4px;
+}
+.searchsubmit-yellow {
+	width: 100%;
+	background: #fecb2f;
+	border: 0px solid #fecb2f;
+	cursor: pointer;
+	font-weight: 600;
+    text-align: center;
+	letter-spacing: .1em;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+.searchsubmit-yellow:hover {
+	background: #cca12e;
+	color: #fff;
+}
+.searchsubmit-black {
+	width: 100%;
+	background: #000;
+	border: 0px solid #000;
+	color: #fff;
+	cursor: pointer;
+	font-weight: 600;
+    text-align: center;
+	letter-spacing: .1em;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+.searchsubmit-black:hover {
+	background: #404040;
+}
+.searchsublg {
+	padding: 12px;
+}
+.searchsubmd {
+	padding: 7px;
+	font-size: 14px;
+}
+.searchsubsm {
+	padding: 6px;
+}
+.lookingfor .evc-st-title {
+    font-weight:200 !important;
+    font-size:26px !important;
+    font-style: italic !important;
+    padding-top:14px !important;
+}
+/* = Custom Post Type Results, list items 
+-------------------------------------------------------------- */
+.cat-border {
+	border: solid 1px #ddd;
+}
+.cat-border h2 {
+	text-transform: none !important;
+}
+.catlist-photo {
+    width: 55px;
+}
+span.searchresults	{
+	padding-left:10px;
+}
+@media screen and (max-width: 992px) {
+	.catlist-photo {
+		width: 100%;
+		height:225px;
+	}
+}
+#researchIntList {
+	padding-left: 0px;
+}
+#researchIntList li{
+	list-style: none;
+	font-size: 15px;
+	margin-bottom: 6px;
+	text-transform:capitalize;
+	
+}
+.directoryDegrees {
+	font-weight:300 !important;
+	font-size:18px !important;
+}
+#exLinkIcon { 
+  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
+  background-repeat: no-repeat;
+  background-position: top right; 
+}
+/* = NEWS Posts, BLOG, shortcode news results 
+-------------------------------------------------------------- */
+.spotlight-vertical .spotlight-header {
+    font-style:normal !important;
+}
+.category-title {
+	background-color: #fc0;
+	color: #000 !important;
+	text-decoration: none !important;
+	padding: .35em .8em;
+    font-size: 75%;
+}
+.mainnews a {
+	color:#000;
+	text-transform: none !important;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}	
+.mainnews a:hover {
+	color:#444;
+}
+.recnews {
+	font-size:14px;
+	line-height: 16px;
+}
+.visnews-photo {
+    height: 200px;
+}
+@media screen and (max-width: 992px) {
+	.visnews-photo {
+		width: 100%;
+		height:225px;
+	}
+}	
+.newsmedia .visnews {
+  height: 100%;
+  padding: 0px; 
+  color: #000;
+  border: solid 1px #ddd;
+  line-height:17px;
+  font-size: 15px !important;
+  font-weight:500;
+}
+.newsmedia .visnews:hover {
+  background: #eee;
+}	
+.newsmedia .col-xs-12 a {
+    color:#000;
+    text-decoration:none !important;
+}
+.row-flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+.newsmedia .narrow-gutter [class*='col-'] {
+  padding-right:6px;
+  padding-left:6px;
+  margin-bottom: 12px;
+}
+.newsmedia .newsdate {
+    margin-top:15px;
+    display:block;
+    font-weight:normal;
+    color: #aaa;
+    font-style: italic;
+}
+.newsmedia .exInfo {
+  height: 100%;
+  padding: 12px;
+  color: #000;
+  border: solid 1px #ddd;
+  line-height:15px;
+  font-size: 13px !important;
+  font-weight:500;
+}
+.newsmedia .exInfo:hover {
+  background: #eee;
+}
+article blockquote {
+    border-bottom: 1px solid #000;
+    border-left: 0;
+    border-top: 10px solid #000;
+    clear: both;
+    float: left;
+    margin: 5px 30px 20px -40px;
+    padding-left: 0;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 40%;
+}
+article blockquote p {
+  font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+}   
+/* = RECENT LIST TEXT SHORTCODE 
+-------------------------------------------------------------- */
+.recentlist li {
+	font-size:14px;
+	line-height: 16px;
+	margin-bottom:16px;
+}
+.recentcode li {
+	font-size:14px;
+	line-height: 16px;
+	margin-bottom:5px;
+}
+.lBorder {
+	border-left: solid 2px #eee;
+}
+/* = Websupport Website 
+-------------------------------------------------------------- */
+.disclaimerText {
+    color:#aaa;
+    font-size:13px;
+    text-align:center;
+	background: #f2f2f2;
+	padding-top:35px;
+}
+.codesignature {
+	font-size: 14px;
+	line-height: 19px;
+}
+/* = SINGLE NEWS STORY POST 
+-------------------------------------------------------------- */
+.cattitle-single {
+	color: #999;
+	font-size: 16px;
+	font-weight: 700;
+	letter-spacing: .5;
+	margin-bottom: 12px;
+	text-transform: uppercase;
+}
+.cattitle-single:hover {
+	color: #fdc831;
+}
+.authortext {
+	text-transform: uppercase;
+	font-size: 12px;
+	color: #777;
+	margin-top: 20px;
+}
+#postIMG {
+	margin-bottom: 20px;
+}
+#imgRight-large {
+	max-width: 440px;
+	float: right;
+	margin: 0px 0px 20px 20px;
+}
+#imgLeft-large {
+	max-width: 440px;
+	float: left;
+	margin: 0px 20px 20px 0px;
+}
+#imgRight-small {
+	max-width: 250px;
+	float: right;
+	margin: 0px 0px 20px 20px;
+}
+#imgLeft-small {
+	max-width: 250px;
+	float: left;
+	margin: 0px 20px 20px 0px;
+}	
+.recborder {
+	border-right: solid 2px #eee;
+}
+.postmission {
+	font-size:14px;
+	line-height: 24px;
+}
+figure.alignleft {
+    margin-right: 20px;
+}
+figure.alignright {
+    margin-left: 20px;
+}
+figcaption, .featcaption {
+    font-size: 12px;
+    color: #666;
+    font-style:italic;
+    font-weight:400;
+	margin-top:12px;
+}
+/* = Profile Directory Results, list items 
+-------------------------------------------------------------- */
+.profilejobtitle {
+	font-weight: 500;
+	line-height: 18px;
+}
+.profiledepartments {
+	margin-bottom: 10px;
+}
+.leftborder {
+	border-left: solid 1px #ddd;
+	height: 100px;
+}
+.personlist-ht {
+	min-height: 190px; 
+}	
+.personlist-ht .showpicfalse {
+	display:none !important;
+}
+/* = Profile Directory Single Person
+-------------------------------------------------------------- */
+.profile-social-web {
+	color: #fc0;
+}
+.profile-social-fb {
+	color: #3b5998;
+}
+.profile-social-tw {
+	color: #1da1f2;
+}
+.profile-social-yt {
+	color: #ff0000;
+}
+.profile-social-lk {
+	color: #007bb5;
+}
+.profile-social-icon {
+	color: #fff !important;
+}
+/* = SOCIAL MEDIA ICONS
+-------------------------------------------------------------- */
+a.fb-socialicon {
+	color:#3b5998;
+}
+a.tw-socialicon {
+	color: #1da1f2;
+}
+a.yt-socialicon {
+	color: #ff0000;
+}
+a.ig-socialicon {
+	color: #bc2a8d;
+}
+a.in-socialicon {
+	color: #007bb5;
+}
+a.fk-socialicon {
+	color: #ff0084;
+}
+#minisocial a:hover {
+	color:#fc0;
+}
+/* = Widgets
+-------------------------------------------------------------- */
+.widgetFix {
+	margin-bottom: 30px;
+}
+.widgetFix ul {
+	margin-left: 10px;
+	padding-left: 0px;
+}
+.widgetFix ul li {
+	list-style: none;
+	border-bottom: 1px solid #eee;
+	padding:6px 0px;
+	font-size: 14px !important;
+}
+/* = UCF EVENTS
+-------------------------------------------------------------- */
+.ucf-events-modern .ucf-event-when, .ucf-events-classic .ucf-event-when {
+    margin-bottom: 6px;
+	font-size: 20px;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.ucf-events-modern .ucf-event-start-time::before, .ucf-events-classic .ucf-event-start-time::before {
+    content: ' - ';
+}
+.ucf-events-modern .ucf-event-title-wrapper {
+	margin-bottom: 6px;
+	font-size: 20px;
+	font-weight: 600;
+}
+.ucf-events-classic div.ucf-event-col.ucf-event-content {
+	margin-bottom: 25px;
+	font-size: 18px;
+	font-weight: 600;
+}
+.ucf-events-modern .ucf-event-description-wrapper {
+	font-size: 14px;
+	color: #fff;
+	font-weight: 400;
+}
+.ucf-events-classic .ucf-events-subheadings, .ucf-events-classic .ucf-event-location, .nodescrip .ucf-event-description-wrapper {
+	display: none;
+}
+#events-section-title {
+	background-color: #fecb2f;
+	padding: 5px 12px;
+	font-size: 15px;
+	display: inline-block;
+    font-weight: 700;
+    line-height: 1;
+}
+/* = PAGINATION STYLE, paging
+-------------------------------------------------------------- */
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    color: #fff;
+    text-decoration:none;
+}
+.navigation li {
+    display: inline;
+}
+.navigation li a,
+.navigation li a:hover,
+.navigation li.active a,
+.navigation li.disabled {
+    background-color: #6FB7E9;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 12px;
+    padding: 0.75rem;
+}
+.navigation li a:hover,
+.navigation li.active a {
+    background-color: #3C8DC5;
+}	
+/* = MAKE THINGS DISAPPEAR ON MOBILE
+-------------------------------------------------------------- */
+@media (max-width: 500px) {
+	.navbar-brand {
+		font-size: 11px !important;
+	}	
+}
+@media (max-width: 991px) {
+	.extraprofile, .profilesidebar, .hidemobile {
+		display: none;
+	}	
+	.mainHomeTitle .evc-st-title {
+    	font-size: 1.8rem !important;
+		line-height: 1.6rem !important;
+	}
+	.mainHomeSubtitle .evc-st-title {
+		font-size: 1.2rem !important;
+		line-height: 1.1rem !important;
+	}
+}	
+@media (max-width: 1200px) and (min-width: 768px)  {
+    .lookingfor .evc-st-title {
+		font-weight:200 !important;
+		font-size: 17px !important;
+		font-style: italic !important;
+		padding-top:20px !important;
+    }
+}
+/* = STUPID MICROSOFT EDGE BROWSER
+-------------------------------------------------------------- */
+@supports (-ms-ime-align: auto) {
+   /* Microsoft EdgeV13&14 CSS styles go here */
+	  .media-background, .media-background-container>picture {
+		width: 130% !important;
+		height: auto !important;
+		top: -9999px !important;
+    	bottom: -9999px !important;
+    	left: -9999px !important;
+    	right: -9999px !important;
+    	margin: auto !important;
+	}
+}
