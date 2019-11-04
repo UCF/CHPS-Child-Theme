@@ -186,6 +186,67 @@ h2 {
           font-size: 6vw;
         }
     }
+/* = SOCIAL MEDIA FEEDS
+-------------------------------------------------------------- */
+.fts-jal-fb-user-thumb {
+    width: 40px !important;
+    height: 40px !important;
+}
+.fts-jal-fb-message p {
+    font-size:14px !important;
+}
+.fts-jal-single-fb-post {
+    border: 1px solid #ccc !important;
+}
+.fts-mashup-media-top .fts-likes-shares-etc-wrap {
+    border-top: 1px solid #ccc !important;
+}
+a.fts-jal-fb-see-more { 
+    color:#aaa !important;
+}
+a.ft-gallery-link-popup {
+    color:#666 !important;
+}
+.fts-slicker-facebook-posts, .fts-slicker-twitter-posts {
+    width:100% !important;
+}
+@media screen and (min-width:640px) {
+   .fts-jal-single-fb-post, .fts-tweeter-wrap {
+        width: calc(50% - 20px) !important;
+        margin:10px !important;
+    }
+}
+@media screen and (min-width:960px) {
+   .fts-jal-single-fb-post, .fts-tweeter-wrap {
+        width: calc(33.333% - 20px) !important;
+        margin:10px !important;
+    }
+}
+.fts-jal-single-fb-post {
+   margin-bottom:10px !important;
+}
+.fts-jal-fb-user-name {
+    font-weight: 500 !important;
+    padding-top: 0px !important;
+    padding-right: 5px;
+    font-size: 14px !important;
+    line-height: 14px !important;
+}
+.ft-gallery-share-wrap a.ft-galleryfacebook-icon, .ft-gallery-share-wrap a.ft-gallerytwitter-icon, .ft-gallery-share-wrap a.ft-gallerygoogle-icon, .ft-gallery-share-wrap a.ft-gallerylinkedin-icon, .ft-gallery-share-wrap a.ft-galleryemail-icon {
+    color: #ffcc00 !important;
+}
+
+.ft-gallery-share-wrap a.ft-galleryfacebook-icon:hover, .ft-gallery-share-wrap a.ft-gallerytwitter-icon:hover, .ft-gallery-share-wrap a.ft-gallerygoogle-icon:hover, .ft-gallery-share-wrap a.ft-gallerylinkedin-icon:hover, .ft-gallery-share-wrap a.ft-galleryemail-icon:hover {
+    color: #cca12e !important;
+}
+
+.ft-gallery-share-wrap {
+    background: #000000 !important;
+}
+.fts-fb-load-more-wrapper .fts-fb-load-more {
+    background: #eeeeee !important;
+}
+
 /* = NAVIGATION
 -------------------------------------------------------------- */
 .breadcrumbnav {
