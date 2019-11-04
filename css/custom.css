@@ -197,7 +197,7 @@ h2 {
 }
 .fts-jal-single-fb-post {
     border: 1px solid #ccc !important;
-	margin-bottom: 30px !important;
+	margin-bottom:20px !important;
 }
 .fts-mashup-media-top .fts-likes-shares-etc-wrap {
     border-top: 1px solid #ccc !important;
@@ -222,9 +222,6 @@ a.ft-gallery-link-popup {
         width: calc(33.333% - 20px) !important;
         margin:10px !important;
     }
-}
-.fts-jal-single-fb-post {
-   margin-bottom:10px !important;
 }
 .fts-jal-fb-user-name {
     font-weight: 500 !important;
