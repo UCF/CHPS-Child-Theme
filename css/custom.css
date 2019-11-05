@@ -413,7 +413,7 @@ span.searchresults	{
   font-size: 15px !important;
   font-weight:500;
 }
-.newsmedia .visnews:hover {
+.newsmedia .visnews, .chpsnews:hover {
   background: #eee;
 }	
 .newsmedia .col-xs-12 a {
