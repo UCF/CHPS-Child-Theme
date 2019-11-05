@@ -41,7 +41,7 @@ $category_id = get_cat_ID($a['category']);
                 'cat' => $category_id,
                 )
             ); 
-$listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
+$listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">HELLO';
 while($visualnews->have_posts()) : $visualnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '3') {	
