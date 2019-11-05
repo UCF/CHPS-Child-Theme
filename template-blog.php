@@ -111,10 +111,5 @@ div.widget-content ul li {
 	padding:6px 0px;
 	font-size: 14px !important;
 }
-#exLinkIcon { 
-  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
-  background-repeat: no-repeat;
-  background-position: top right; 
-}
 </style>
 <?php get_footer(); ?>
