@@ -131,11 +131,6 @@ div.widget-content ul li {
 .navigation li a:hover,
 .navigation li.active a {
     background-color: #3C8DC5;
-}
-#exLinkIcon { 
-  background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
-  background-repeat: no-repeat;
-  background-position: top right; 
 }	
 </style>
 <?php get_footer(); ?>
