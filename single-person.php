@@ -319,7 +319,8 @@ $posts = get_posts(array(
 									<?php } ?>
 											<h5><?php the_title(); ?></h5>
 										 </a>
-									<?php 			
+								<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
+								<?php 			
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
