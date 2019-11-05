@@ -46,11 +46,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '3') {	
 		$listnews .= '<div class="col-lg-4 col-sm-6 col-xs-12">';
-			if ( get_field( 'updatenewstype' ) == 1 ) { 
-				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
-			} else { 
-				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
-			}
+		$listnews .= '<a href="' . get_the_permalink() . '" title="' . get_the_title() . '">';
 		$listnews .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
 	} else {	
 		$listnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_the_permalink() . '" title="' . get_the_title() . '"><div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
@@ -60,7 +56,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	} else { 	
 		$listnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}	
-	$listnews .= '</div><div class="p-3">HELLOx2 ' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';	
+	$listnews .= '</div><div class="p-3">HELLOx3 ' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';	
 endwhile;
 $listnews .= '</div></div>';	
 wp_reset_query();
