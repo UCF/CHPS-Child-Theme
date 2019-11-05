@@ -312,7 +312,13 @@ $posts = get_posts(array(
 									setup_postdata( $post );
 								?>
 								<li class="listnone mb-4">
-									<a href="<?php the_permalink(); ?>"><h5><?php the_title(); ?></h5></a>
+									<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
+										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
+										<?php } else { ?>
+										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+									<?php } ?>
+											<h5><?php the_title(); ?></h5>
+										 </a>
 									<?php 			
 								$content = get_the_content();
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
