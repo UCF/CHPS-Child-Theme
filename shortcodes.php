@@ -409,7 +409,7 @@ if( get_field('degrees', $post->ID) ) {
 	$degreeIDs = implode(', ', $arrayDegree);
    $listpeeps .= '<span class"">, ' . $degreeIDs . '</span>';
 }
-$listpeeps .= '333</a></h2>';
+$listpeeps .= '</a></h2>';
 if(get_field('job_titles_tax', $post->ID)){	
 	$listpeeps .= '<div class="profilejobtitle">';	
 	// Get a list of terms for this post's custom taxonomy.
