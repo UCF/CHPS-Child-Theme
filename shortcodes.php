@@ -401,7 +401,15 @@ if ( has_post_thumbnail($post->ID)) {
 	$listpeeps .= "'s profile picture at UCF";
 	$listpeeps .= '" title="' . $post->post_title . '" class="media-background object-fit-cover">';
 }
-$listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '</a></h2>';	
+$listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '';	
+if( get_field('degrees') ) {
+	while ( have_rows('degrees') ) : the_row();
+	 $arrayDegree[] = get_sub_field('degree'); 
+	endwhile;
+	$degreeIDs = implode(', ', $arrayDegree);
+   $listpeeps .= '<span class"">, ' . $degreeIDs . '</span>';
+}
+$listpeeps .= '</a></h2>';
 if(get_field('job_titles_tax', $post->ID)){	
 	$listpeeps .= '<div class="profilejobtitle">';	
 	// Get a list of terms for this post's custom taxonomy.
