@@ -245,7 +245,7 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 <?php
-$field = get_field_object('degree_select');
+$field = get_sub_field_object('degree_select');
 if( $field['choices'] ): ?>
         <?php foreach( $field['choices'] as $value => $label ): ?>
             <li>HELLO: <?php echo $label; ?></li>
