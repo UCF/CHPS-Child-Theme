@@ -3,7 +3,9 @@ $project_depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
-$degreefield = get_sub_field( 'degree_select' );
+$degreefield = get_sub_field_object( 'degree_select' );
+$degreevalue = $degreefield['value'];
+$degreelabel = $degreefield['choices'][ $degreevalue ];
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
@@ -246,7 +248,7 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 
-													<li><?php echo esc_attr($degreefield['value']); ?>-----<?php echo esc_html($degreefield['label']); ?>-----ZZZZ<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li><?php echo esc_attr($degreevalue); ?>-----<?php echo esc_html($degreelabel); ?>-----XXXXXX<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
