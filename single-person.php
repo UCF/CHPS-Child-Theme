@@ -247,9 +247,9 @@ $posts = get_posts(array(
 <?php
 $field = get_sub_field_object('degree_select');
 $value = get_sub_field('degree_select');
-$label = $field['choices'][ $value ];
+$label = $field['choices'];
 ?>
-											<li>VALUE: <?php echo $value; ?>--11---<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+											<li>VALUE: <?php echo $label; ?>--22---<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
