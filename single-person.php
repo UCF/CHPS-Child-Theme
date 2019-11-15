@@ -245,12 +245,12 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 <?php 
-$select = get_sub_field_object('degree_select');
-$value = get_sub_field('degree_select');
-$label = $select[‘choices’][ $value ];
+$select123 = get_sub_field_object('degree_select');
+$value123 = get_sub_field('degree_select');
+$label123 = $select123[‘choices’][ $value123 ];
 
 ?>
-													<li>Value is:<?php echo $value; ?>-----Choice is:<?php echo $label; ?>-----XXXXXX<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li>Value is:<?php echo $value123; ?>-----Choice is:<?php echo $label123; ?>-----XXXXXX<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
