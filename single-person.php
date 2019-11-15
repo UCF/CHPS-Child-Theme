@@ -249,7 +249,7 @@ $field = get_sub_field_object('degree_select');
 $value = get_sub_field('degree_select');
 $label = $field['choices'][ $value ];
 ?>
-											<li>VALUE: <?php echo $label; ?>--zz---<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+											<li>VALUE: <?php echo $value; ?>--11---<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
