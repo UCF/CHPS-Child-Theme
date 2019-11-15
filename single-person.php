@@ -246,7 +246,7 @@ $posts = get_posts(array(
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 <?php 
 $select123 = get_sub_field_object('degree_select');
-$value123 = get_sub_field('degree_select');
+$value123 = the_sub_field('degree_select');
 $label123 = $select123[‘choices’][ $value123 ];
 
 ?>
