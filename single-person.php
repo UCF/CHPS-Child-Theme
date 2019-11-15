@@ -244,12 +244,9 @@ $posts = get_posts(array(
 										<h5>Credentials</h5>
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
-<?php
-$value = get_sub_field('degree_select');
-?>
-											<li>LABEL: <?php echo $value['label']; ?>--VALUE: <?php echo $value['value']; ?>--<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+											<?php $value = get_sub_field('degree_select'); ?>
+											<li><?php echo $value['label']; ?>, <?php echo $value['value']; ?>, <?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
-
 											 <?php endwhile; ?>	
 										 </ul>
 									 </div>
