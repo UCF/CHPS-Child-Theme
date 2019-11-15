@@ -245,9 +245,9 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 <?php 
-$value123 = the_sub_field('degree_select');
+
 ?>
-													<li>Value is:<?php echo $value123['value']; ?>--Choice is:<?php echo $value123['choice']; ?>--<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li><?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
