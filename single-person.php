@@ -245,11 +245,11 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 <?php
-$field = get_sub_field_object('degree_select');
-$value = $field['value'];
-$label = $field['choices'];
+$field = get_field_object('field_5dcdb34dd0159');
+$value = get_field('field_myfield');
+$label = $field['choices'][ $value ];
 ?>
-											<li>LABEL: <?php echo $value['choice']; ?>---33-<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+											<li>LABEL: <?php echo $label; ?>---33-<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
