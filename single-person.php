@@ -250,7 +250,7 @@ $value123 = the_sub_field('degree_select');
 $label123 = $select123[‘choices’][ $value123 ];
 
 ?>
-													<li>Value is:<?php echo $value123; ?>-----Choice is:<?php echo $label123; ?>-----XXXXXX<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li>Value is:<?php echo $value123; ?>-----Choice is:<?php echo $label123; ?>-----0000000<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
