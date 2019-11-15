@@ -37,7 +37,7 @@ $ids = get_the_ID();
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
-							 $arrayDegree[] = get_sub_field('degree_select'); 
+							 $arrayDegree[] = get_sub_field('degree'); 
 							endwhile;
 							$degreeIDs = implode(', ', $arrayDegree);
 						   echo '<span class"">, ' . $degreeIDs . '</span>';
@@ -245,7 +245,7 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 
-													<li><?php the_sub_field('degree'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li><?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
