@@ -246,7 +246,7 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 
-													<li><?php echo esc_attr($degreefield['value']); ?>-----<?php echo esc_html($degreefield['label']); ?>-----XXXXXX<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+													<li><?php echo esc_attr($degreefield['value']); ?>-----<?php echo esc_html($degreefield['label']); ?>-----ZZZZ<?php the_sub_field('degree_select'); ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
 													</li>
 
 											 <?php endwhile; ?>	
