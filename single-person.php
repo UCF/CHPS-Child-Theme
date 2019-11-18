@@ -44,7 +44,9 @@ $ids = get_the_ID();
 // Create a comma-separated list from selected values.
 if( $saveme ): ?>
 <p>Degree: <?php echo implode( ', ', $saveme ); ?></p>
-<?php endif; ?>
+<?php endif;
+						
+						endwhile;?>
 						
 						
 					</h1>
