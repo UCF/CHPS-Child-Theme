@@ -47,12 +47,11 @@ $ids = get_the_ID();
 					
 <?php
 if( get_field('degrees') ) {
-    echo '<strong>Jobs123: </strong>'; 
+    echo '<strong>Jobs: </strong>'; 
     while ( have_rows('degrees') ) : the_row();
      $array[] = get_sub_field('degree_select'); 
-	$test = $array['label'];
     endwhile;
-    $foo = implode(', ', $test);
+    $foo = implode(', ', $array);
 
     echo $foo;
 }
