@@ -39,8 +39,9 @@ $ids = get_the_ID();
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
 							 $saveme = $value['label'];	
-							endwhile;
-							 echo implode( ', ', $saveme );
+							 $degreeIDs = implode( ', ', $saveme );
+								echo '<span class"">, ' . $degreeIDs . '</span>';
+						endwhile;
 						}
 						?>		
 					</h1>
