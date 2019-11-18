@@ -43,9 +43,9 @@ $ids = get_the_ID();
 $colors = get_sub_field('degree_select');
 
 // Create a comma-separated list from selected values.
-if( $colors ): ?>
+?>
 <p>Color: <?php echo implode( ', ', $colors ); ?></p>
-<?php endif; ?>
+
 						
 						
 					</h1>
