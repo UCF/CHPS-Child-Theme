@@ -38,8 +38,8 @@ $ids = get_the_ID();
 						<?php echo get_person_name( $post ); ?> <?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
-							$saveme = $value['label'];
-							echo $saveme . ', ';						
+							 $saveme = $value['label'];	
+							 echo implode( ', ', $saveme );
 						endwhile;
 						}
 						?>		
