@@ -55,8 +55,18 @@ if( get_field('degrees') ) {
 	
     echo $foo;
 }
+	
+echo 'NEW TRY';					
+$knight = get_sub_field('degree_select');
+$pizzas = $knight['label'];
+if( count($pizzas)){
+    foreach($pizzas as $k=>$pizza){
+        if($k) echo ', ';
+        echo $pizza;
+    }
+}
+echo 'end';
 ?>				
-					
 					
 					
 					<div class="person-job-title text-center mb-4">
