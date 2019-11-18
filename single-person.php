@@ -38,8 +38,9 @@ $ids = get_the_ID();
 						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
+							 $kaitlyndegree = $value['label'];
 							endwhile;
-							$degreeIDs = implode(', ', $value['label']);
+							$degreeIDs = implode(', ', $kaitlyndegree);
 						   echo '<span class"">, ' . $degreeIDs . '</span>';
 						}
 						?>		
