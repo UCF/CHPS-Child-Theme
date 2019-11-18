@@ -44,6 +44,15 @@ $ids = get_the_ID();
    echo '<span class"">, ' . $degreeIDs . '</span>';
 }
 ?>	
+<?php
+$colors = get_sub_field('degree_select');
+
+// Create a comma-separated list from selected values.
+if( $colors ): ?>
+<p>Color: <?php echo implode( ', ', $colors ); ?></p>
+<?php endif; ?>
+						
+						
 					</h1>
 					<div class="person-job-title text-center mb-4">
 						<?php
