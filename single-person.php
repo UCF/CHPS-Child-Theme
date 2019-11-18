@@ -47,15 +47,31 @@ $ids = get_the_ID();
 					
 <?php
 if( get_field('degrees') ) {
-    echo '<strong>Jobs: </strong>'; 
+    echo '<strong>Jobs123: </strong>'; 
     while ( have_rows('degrees') ) : the_row();
      $array[] = get_sub_field('degree_select'); 
     endwhile;
-    $foo = implode(', ', $array['label']);
+    $foo = implode(', ', $array);
 
     echo $foo;
 }
 ?>
+					
+<?php
+// Get a list of terms for this post's custom taxonomy.
+$project_degree = get_sub_field('degree_select');
+// Renumber array.
+$project_degree = array_values($project_degree);
+for($degree_count=0; $degree_count<count($project_degree); $degree_count++) {
+	// Each array item is an object. Display its 'name' value.
+	echo $project_degree[$degree_count]->label;
+	// If there is more than one term, comma separate them.
+	if ($degree_count<count($project_degree)-1){
+		echo ', ';
+	}
+}?>					
+					
+					
 					
 					<div class="person-job-title text-center mb-4">
 						<?php
