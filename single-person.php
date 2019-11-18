@@ -39,13 +39,7 @@ $ids = get_the_ID();
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
 							$saveme = $value['label'];
-							// echo $saveme . ', ';	
-							if( count($saveme)){
-								foreach($saveme as $k=>$king){
-									if($k) echo ', ';
-									echo $king;
-								}
-							}
+							echo $saveme . ', ';						
 						endwhile;
 						}
 						?>		
@@ -62,6 +56,13 @@ if( get_field('degrees') ) {
     echo $foo;
 }					
 ?>				
+		<?php
+$field = get_sub_field_object('degree_select');
+?>
+<p>HELLO <?php echo $field['label']; ?>: <?php echo $field['value']; ?></p>
+					
+					
+					
 					
 					
 					<div class="person-job-title text-center mb-4">
