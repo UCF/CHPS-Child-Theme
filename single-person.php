@@ -39,16 +39,10 @@ $ids = get_the_ID();
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
 							$saveme = $value['label'];
-
-
-// Create a comma-separated list from selected values.
-if( $saveme ): ?>
-<p>Degree: <?php echo implode( ', ', $saveme ); ?></p>
-<?php endif;
-						
-						endwhile;?>
-						
-						
+							echo $saveme . ', ';						
+						endwhile;
+						}
+						?>		
 					</h1>
 					<div class="person-job-title text-center mb-4">
 						<?php
