@@ -36,12 +36,7 @@ $ids = get_the_ID();
 					</div>
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?> <?php if( get_field('degrees') ) {
-							while ( have_rows('degrees') ) : the_row();
-							 $value = get_sub_field('degree_select');
-							$saveme = $value['label'];
-	endwhile;
-	$degreeIDs = implode(', ', $saveme);
-   echo '<span class"">, ' . $degreeIDs . '</span>';
+
 }
 ?>	
 <?php
