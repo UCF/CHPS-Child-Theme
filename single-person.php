@@ -56,15 +56,13 @@ if( get_field('degrees') ) {
     echo $foo;
 }
 	
-echo '222222';					
-$knights = get_sub_field('degree_select');
-if( count($knights)){
-    foreach($knights as $k=>$knight){
+$values = get_sub_field('degree_select');
+if( count($values)){
+    foreach($values as $k=>$value){
         if($k) echo ', ';
-        echo $knight;
+        echo $value;
     }
 }
-echo 'end';
 ?>				
 					
 					
