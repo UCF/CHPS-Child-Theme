@@ -44,6 +44,19 @@ $ids = get_the_ID();
 						}
 						?>		
 					</h1>
+					
+<?php
+if( get_field('degrees') ) {
+    echo '<strong>Jobs: </strong>'; 
+    while ( have_rows('degrees') ) : the_row();
+     $array[] = get_sub_field('degree_select'); 
+    endwhile;
+    $foo = implode(', ', $array);
+
+    echo $foo;
+}
+?>
+					
 					<div class="person-job-title text-center mb-4">
 						<?php
 						if(get_field('job_titles_tax')){ ?>
