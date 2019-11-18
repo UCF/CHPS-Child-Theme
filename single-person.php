@@ -40,11 +40,10 @@ $ids = get_the_ID();
 							 $value = get_sub_field('degree_select');
 							$saveme = $value['label'];
 	endwhile;
-							echo $saveme . ', ';	
-							echo implode( 'xxx ', $saveme );
-						
-						}
-						?>		
+	$degreeIDs = implode(', ', $saveme);
+   echo '<span class"">, ' . $degreeIDs . '</span>';
+}
+?>	
 					</h1>
 					<div class="person-job-title text-center mb-4">
 						<?php
