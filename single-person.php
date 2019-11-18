@@ -39,9 +39,10 @@ $ids = get_the_ID();
 							while ( have_rows('degrees') ) : the_row();
 							 $value = get_sub_field('degree_select');
 							 $kaitlyndegree = $value['label'];
-							endwhile;
+							
 							$degreeIDs = implode(', ', $kaitlyndegree);
 						   echo '<span class"">, ' . $degreeIDs . '</span>';
+						endwhile;
 						}
 						?>		
 					</h1>
