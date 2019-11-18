@@ -55,20 +55,7 @@ if( get_field('degrees') ) {
 	
     echo $foo;
 }					
-?>				
-		<?php
-$field = get_field_object('field_5dcdb34dd0159');
-
-if( $field ){
-	foreach( $field['labels'] as $k => $v ){
-		echo $k . ': ' .  $v;
-	}
-}
-					?>	
-					
-					
-					
-					
+?>						
 					
 					<div class="person-job-title text-center mb-4">
 						<?php
