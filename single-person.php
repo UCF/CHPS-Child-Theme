@@ -37,7 +37,7 @@ $ids = get_the_ID();
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?> <?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
-							 $value = get_sub_field('degree_select');
+							 //$value = get_sub_field('degree_select');
 							$saveme = $value['label'];
 							echo $saveme . ', ';						
 						endwhile;
@@ -55,14 +55,17 @@ if( get_field('degrees') ) {
 	
     echo $foo;
 }
-	
-$values = get_sub_field('degree_select');
+
+while ( have_rows('degrees') ) : the_row();
+$king = get_sub_field('degree_select');					
+$values = $king['label'];
 if( count($values)){
     foreach($values as $k=>$value){
         if($k) echo ', ';
         echo $value;
     }
 }
+endwhile;					
 ?>				
 					
 					
