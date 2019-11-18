@@ -47,7 +47,7 @@ $ids = get_the_ID();
 					
 <?php
 if( get_field('degrees') ) {
-    echo '<strong>Degrees: </strong>'; 
+    echo '<strong>Degrees123: </strong>'; 
     while ( have_rows('degrees') ) : the_row();
      $array[] = get_sub_field('degree_select'); 
     endwhile;
@@ -57,9 +57,14 @@ if( get_field('degrees') ) {
 }					
 ?>				
 		<?php
-$field = get_sub_field_object('degree_select');
-?>
-<p>HELLO <?php echo $field['label']; ?>: <?php echo $field['value']; ?></p>
+$field = get_field_object('field_5dcdb34dd0159');
+
+if( $field ){
+	foreach( $field['labels'] as $k => $v ){
+		echo $k . ': ' .  $v;
+	}
+}
+					?>	
 					
 					
 					
