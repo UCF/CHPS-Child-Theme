@@ -53,7 +53,7 @@ if( get_field('degrees') ) {
     endwhile;
     $foo = implode(', ', $array['label']);
 	
-    echo $foo;
+    print_r($array);
 }				
 ?>						
 					
