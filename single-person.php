@@ -51,7 +51,7 @@ if( get_field('degrees') ) {
     while ( have_rows('degrees') ) : the_row();
      $array[] = get_sub_field('degree_select'); 
     endwhile;
-    $foo = implode(', ', $array);
+    $foo = implode(', ', $array['choices']);
 	
     echo $foo;
 }
@@ -60,7 +60,7 @@ if( get_field('degrees') ) {
 $field = get_field_object('field_5dcdb34dd0159');
 echo '<strong>TEST: </strong>';
 if( $field ){
-	foreach( $field['label'] as $k => $v ){
+	foreach( $field['choices'] as $k => $v ){
 		echo $k . ': ' .  $v;
 	}
 }					
