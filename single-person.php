@@ -37,27 +37,13 @@ $ids = get_the_ID();
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?> <?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
-							 $value = get_sub_field('degree_select');
-							$saveme = $value['label'];
-							echo $saveme . ', ';						
-						endwhile;
-						}
+							 $array[] = get_sub_field('degree_select'); 
+							endwhile;
+							$foo = implode(', ', array_column($array, 'label'));
+							echo $foo;
+							}								
 						?>		
 					</h1>
-					
-<?php
-if( get_field('degrees') ) {
-    echo '<strong>Degrees123: </strong>'; 
-    while ( have_rows('degrees') ) : the_row();
-     $array[] = get_sub_field('degree_select'); 
-    endwhile;
-    $foo = implode(', ', array_column($array, 'label'));
-	
-    echo $foo;
-}
-									
-?>						
-					
 					<div class="person-job-title text-center mb-4">
 						<?php
 						if(get_field('job_titles_tax')){ ?>
