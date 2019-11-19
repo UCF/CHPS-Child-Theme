@@ -54,6 +54,15 @@ if( get_field('degrees') ) {
     $foo = implode(', ', $array);
 	
     echo $foo;
+}
+					
+					
+$field = get_field_object('field_5dcdb34dd0159');
+echo '<strong>TEST: </strong>';
+if( $field ){
+	foreach( $field['choices'] as $k => $v ){
+		echo $k . ': ' .  $v;
+	}
 }					
 ?>						
 					
