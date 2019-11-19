@@ -60,7 +60,7 @@ if( get_field('degrees') ) {
 $field = get_field_object('field_5dcdb34dd0159');
 echo '<strong>TEST: </strong>';
 if( $field ){
-	foreach( $field['choices'] as $k => $v ){
+	foreach( $field['labels'] as $k => $v ){
 		echo $k . ': ' .  $v;
 	}
 }					
