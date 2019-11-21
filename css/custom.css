@@ -358,6 +358,10 @@ span.searchresults	{
 	text-transform:capitalize;
 	
 }
+.researchIMG {
+	width: 100%;
+	height: auto;
+}
 .directoryDegrees {
 	font-weight:300 !important;
 	font-size:18px !important;
