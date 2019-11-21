@@ -62,17 +62,14 @@ $buildingMap = get_field('building');
 			<div class="row">
 					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
 						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
-					if ($buildingMap == 'HPA I') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-i/';}
-					if ($buildingMap == 'HPA II') {echo 'http://map.ucf.edu/locations/80/health-public-affairs-ii/';}
-					if ($buildingMap == 'Education Complex') {echo 'https://map.ucf.edu/locations/21/education-complex-gym/';}
-					if ($buildingMap == 'Wayne Densch Center 1') {echo 'https://map.ucf.edu/locations/38/wayne-densch-center-i-wd1/';}
-					if ($buildingMap == 'Orlando Tech Center') {echo 'http://map.ucf.edu/locations/8113/orlando-tech-center-otc3/';}
-					if ($buildingMap == 'Research Pavilion') {echo 'http://map.ucf.edu/locations/8102/research-pavilion-pvl/';}
-					if ($buildingMap == 'Partnership 1') {echo 'https://map.ucf.edu/locations/8111/partnership-i-cps/';}
-					if ($buildingMap == 'Engineering 1') {echo 'https://map.ucf.edu/locations/40/engineering-i-eng1/';}
-					if ($buildingMap == 'Millican Hall') {echo 'https://map.ucf.edu/locations/1/millican-hall-mh/';}
-					if ($buildingMap == 'Innovative Center') {echo 'https://map.ucf.edu/locations/8112/innovative-center-ic/';}
-					if ($buildingMap == 'Biomedical Sciences Building') {echo 'https://med.ucf.edu/biomed/about/ourlocations/biomedical-sciences-building/';}
+					if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
+					if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
+					if ($buildingMap == 'Education Complex') {echo 'https://www.ucf.edu/location/education-complex-and-gym/';}
+					if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
+					if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
+					if ($buildingMap == 'Partnership 1') {echo 'https://www.ucf.edu/location/partnership-1/';}
+					if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
+					if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
 					?>" target="_blank" title="Map to <?php the_field('building'); ?>">
 							<?php the_field('building'); ?>
 						</a>
