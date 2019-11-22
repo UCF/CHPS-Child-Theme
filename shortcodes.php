@@ -137,7 +137,7 @@ $tag_id = get_the_tags($c['tag']);
 				)
 			);	
 	}
-	if (!empty($c['tagme'])) { 
+	elseif (!empty($c['tagme'])) { 
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
