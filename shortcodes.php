@@ -214,7 +214,7 @@ $cat3_id = get_cat_ID($c['cat3']);
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'tag' => 'Neurologic Residency',
+				'cat' => 'Academics',
 				)
 			);
 $listtags = '<div class="container"><div class="row">';
