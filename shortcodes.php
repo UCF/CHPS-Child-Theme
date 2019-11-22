@@ -112,18 +112,20 @@ add_shortcode( 'recentexnews', 'recexnewsvar' );
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS HORIZONTAL ON HOMEPAGE
 //
-// [chpsnews category="" cat2="" cat3="" number=""]
+// [chpsnews category="" cat2="" cat3="" tag="" number=""]
 function chpsnewsvar( $atts ) {
     $c = shortcode_atts( array(
         'number' => '3',
         'category' => '',
 		'cat2' => '',
 		'cat3' => '',
+		'tag' => '',
     ), $atts );
 switch_to_blog(2); 	
 $category_id = get_cat_ID($c['category']);
 $cat2_id = get_cat_ID($c['cat2']);
 $cat3_id = get_cat_ID($c['cat3']);
+$tag_id = $c['tag'];	
 	if (!empty($c['cat2'])) { 	
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
@@ -134,6 +136,17 @@ $cat3_id = get_cat_ID($c['cat3']);
 				'category__in' => array( $category_id, $cat2_id, $cat3_id ),
 				)
 			);	
+	}
+	elseif (!empty($c['tag'])) { 
+		$chpsnews = new WP_Query(array(
+				'post_type'	=> 'post',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $c['number'],
+				'tag' => $tag_id,
+				)
+			);
 	}
 	else {
 	$chpsnews = new WP_Query(array(
