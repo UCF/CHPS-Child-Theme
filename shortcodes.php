@@ -144,7 +144,7 @@ $tag_id = get_the_tags($c['tag']);
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'tag' => 'Neurologic Residency',
+				'cat' => 'Announcement',
 				)
 			);
 	}
