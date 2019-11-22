@@ -125,7 +125,7 @@ switch_to_blog(2);
 $category_id = get_cat_ID($c['category']);
 $cat2_id = get_cat_ID($c['cat2']);
 $cat3_id = get_cat_ID($c['cat3']);
-$tag_id = $c['tag'];	
+$tag_id = get_the_tags($c['tag']);	
 	if (!empty($c['cat2'])) { 	
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
