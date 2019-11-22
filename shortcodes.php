@@ -126,18 +126,7 @@ $category_id = get_cat_ID($c['category']);
 $cat2_id = get_cat_ID($c['cat2']);
 $cat3_id = get_cat_ID($c['cat3']);
 $tag_id = get_the_tags($c['tag']);	
-	if (!empty($c['cat2'])) { 	
-		$chpsnews = new WP_Query(array(
-				'post_type'	=> 'post',
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $c['number'],
-				'category__in' => array( $category_id, $cat2_id, $cat3_id ),
-				)
-			);	
-	}
-	elseif (!empty($c['tagme'])) { 
+	if (!empty($c['tagme'])) { 
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
