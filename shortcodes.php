@@ -119,7 +119,7 @@ function chpsnewsvar( $atts ) {
         'category' => '',
 		'cat2' => '',
 		'cat3' => '',
-		'tag' => '',
+		'tagme' => '',
     ), $atts );
 switch_to_blog(2); 	
 $category_id = get_cat_ID($c['category']);
@@ -137,7 +137,7 @@ $tag_id = get_the_tags($c['tag']);
 				)
 			);	
 	}
-	if (!empty($c['tag'])) { 
+	if (!empty($c['tagme'])) { 
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
