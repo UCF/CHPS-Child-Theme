@@ -137,17 +137,6 @@ $tag_id = get_tag_ID($c['tag']);
 				)
 			);	
 	}
-	elseif (!empty($c['tag'])) { 
-		$chpsnews = new WP_Query(array(
-				'post_type'	=> 'post',
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $c['number'],
-				'tag' => $tag_id,
-				)
-			);
-	}
 	else {
 	$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
