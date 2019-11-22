@@ -196,6 +196,77 @@ return $listhnews;
 add_shortcode( 'chpsnews', 'chpsnewsvar' );	
 ?><?php
 //  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY RECENT NEWS HORIZONTAL ON HOMEPAGE
+//
+// [chpstags tag="" number=""]
+function chpstagsvar( $atts ) {
+    $c = shortcode_atts( array(
+        'number' => '3',
+        'tag' => '',
+    ), $atts );
+switch_to_blog(2); 	
+$category_id = get_cat_ID($c['category']);
+$cat2_id = get_cat_ID($c['cat2']);
+$cat3_id = get_cat_ID($c['cat3']);
+	$chpstags = new WP_Query(array(
+				'post_type'	=> 'post',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $c['number'],
+				'tag' => 'Neurologic Residency',
+				)
+			);
+$listtags = '<div class="container"><div class="row">';
+while($chpstags->have_posts()) : $chpstags->the_post();
+	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+	$display_name = get_the_author_meta( 'display_name')[0];
+	$categories = get_the_category();
+	$primary_term_id = yoast_get_primary_term_id('category');
+	$postTerm = get_term( $primary_term_id );
+	$blog_site = get_blog_details(2);
+	$listtags .= '<div class="row mb-5 chpstags"><div class="col-lg-3 p-0 media-background-container catlist-photo mx-auto">';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+	} else { 
+		 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+	}
+	if ( has_post_thumbnail()) {	
+		$listtags .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
+	} else { 
+		$listtags .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	}
+	$listtags .= '</a></div><div class="col-lg-9 px-4 py-0"';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		$listtags .= 'id="exLinkIcon"'; 
+	}
+	$listtags .= '>';
+	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
+		$listtags .= '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
+	} else { 
+		$listtags .= '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
+	}
+	$listtags .= '<h2 class="h5 pt-2 mainnews">';
+	if ( get_field( 'updatenewstype' ) == 1 ) { 
+		$listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+	} else { 
+		$listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+	}
+	$listtags .= '' . get_the_title() . '</a></h2><div class="entry">';
+		$content = get_the_content();
+		$content = preg_replace('#\[[^\]]+\]#', '',$content);
+		$content = apply_filters('the_content', $content);
+	$listtags .= wp_trim_words( $content, 30, '...' );		
+	$listtags .= '</div></div></div>';	
+endwhile;	
+$listtags .= '</div></div>';
+wp_reset_query();	
+restore_current_blog();
+return $listtags;	
+}
+add_shortcode( 'chpstags', 'chpstagsvar' );	
+?><?php
+//  ------------------------------------------------------------------------
 // SHORTCODE TO SEARCH FIELD
 // [searchme posttype="" size="" placeholder="" color="" addposts=""]
 function searchmevar( $atts ) {
