@@ -144,7 +144,7 @@ $tag_id = $c['tag'];
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'tag' => $tag_id,
+				'tag' => 'Neurologic Residency',
 				)
 			);
 	}
