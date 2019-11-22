@@ -137,14 +137,14 @@ $tag_id = get_the_tags($c['tag']);
 				)
 			);	
 	}
-	elseif (!empty($c['tag'])) { 
+	if (!empty($c['tag'])) { 
 		$chpsnews = new WP_Query(array(
 				'post_type'	=> 'post',
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
 				'posts_per_page' => $c['number'],
-				'cat' => 'Announcement',
+				'cat' => 'Academics',
 				)
 			);
 	}
