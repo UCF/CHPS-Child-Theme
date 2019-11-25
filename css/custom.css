@@ -580,6 +580,7 @@ figcaption, .featcaption {
 }
 .person-label {
 	display: block;
+	width: 100%;
 }
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
