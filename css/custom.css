@@ -578,6 +578,9 @@ figcaption, .featcaption {
 .personlist-ht .showpicfalse {
 	display:none !important;
 }
+.person-label {
+	display: block;
+}
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
 .profile-social-web {
