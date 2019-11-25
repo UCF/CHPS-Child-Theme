@@ -114,6 +114,11 @@ $buildingMap = get_field('building');
 				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>">Linkedin</a>
 			</div>
 			<?php endif; ?>
+			<?php if (get_field('twitter_url')): ?>
+			<div class="person-label">
+				<i class="fa fa-twitter-square icongrey"></i> <a href="<?php the_field('twitter_url'); ?>">Twitter</a>
+			</div>
+			<?php endif; ?>
 		</div>
 	</div>
 </div>
