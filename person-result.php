@@ -139,3 +139,4 @@ $buildingMap = get_field('building');
 		</div>
 	</div>
 </div>
+<?php echo do_shortcode('[vc_separator style="shadow" border_width="2"]'); ?>		
