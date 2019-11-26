@@ -5,10 +5,10 @@ $buildingMap = get_field('building');
 	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0">
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
-				<img src="<?php echo $getimageURL; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="">
+				<img src="<?php echo $getimageURL; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="researchIMG">
 				<?php } else { ?> 
 					<?php switch_to_blog(2);?>
-						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="">
+						<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="researchIMG">
 					<?php restore_current_blog(); ?>
 		<?php } ?>
 		   </a> 
