@@ -13,7 +13,7 @@ $buildingMap = get_field('building');
 		<?php } ?>
 		   </a> 
 	</div>
-	<div class="col-lg-7 col-md-9 col-sm-8 col-8 p-3 pt-0">
+	<div class="col-lg-7 col-md-9 col-sm-8 col-8 pt-0 pl-3 pb-3 pr-3">
 		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 							 $array[] = get_sub_field('degree_select'); 
