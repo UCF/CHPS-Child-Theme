@@ -1,7 +1,7 @@
 <?php $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 $buildingMap = get_field('building');
 ?>
-<div class="row mb-4 cat-border personlist-ht">
+<div class="row mb-4 personlist-ht">
 	<div class="col-lg-2 col-md-3 col-sm-4 col-4 p-0">
 		   <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" >
 		   <?php if ( has_post_thumbnail()) { ?>
