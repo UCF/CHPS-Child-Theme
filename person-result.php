@@ -101,7 +101,7 @@ $buildingMap = get_field('building');
 				<div class="col-xl-12 col-md-12 col-sm-12 person-label mt-2">
 					<strong>Research Interests:</strong>
 					<?php $termswer = get_field('research_interests');?>
-					<ul id="" class="listnone">
+					<ul id="" class="personResearchList">
 						<?php foreach( $termswer as $term ): ?>
 							<li><i class="fa fa-check fa-lg iconyellow"></i> <?php echo $term->name; ?></li>
 					<?php endforeach; ?>
