@@ -60,41 +60,52 @@ $buildingMap = get_field('building');
 		<?php }	?>
 		<?php if(get_field('building')){ ?>
 			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
-					if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
-					if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
-					if ($buildingMap == 'Education Complex') {echo 'https://www.ucf.edu/location/education-complex-and-gym/';}
-					if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
-					if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
-					if ($buildingMap == 'Partnership 1') {echo 'https://www.ucf.edu/location/partnership-1/';}
-					if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
-					if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
-					?>" target="_blank" title="Map to <?php the_field('building'); ?>">
-							<?php the_field('building'); ?>
-						</a>
-						<?php if(get_field('room_number')){ ?>
-						<span>
-							<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
-						</span>
-						<?php }
-						?>	
-					</div>
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+					<i class="fa fa-map-marker icongrey"></i> Location: <a href="<?php 
+				if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
+				if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
+				if ($buildingMap == 'Education Complex') {echo 'https://www.ucf.edu/location/education-complex-and-gym/';}
+				if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
+				if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
+				if ($buildingMap == 'Partnership 1') {echo 'https://www.ucf.edu/location/partnership-1/';}
+				if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
+				if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
+				?>" target="_blank" title="Map to <?php the_field('building'); ?>">
+						<?php the_field('building'); ?>
+					</a>
+					<?php if(get_field('room_number')){ ?>
+					<span>
+						<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
+					</span>
+					<?php }
+					?>	
 				</div>
+			</div>
 		<?php }	?>	
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-envelope icongrey"></i> E-mail: <?php if( get_field( 'hide_email' )) { ?><a href="mailto:<?php the_field('alternate_email'); ?>"><?php the_field('alternate_email'); ?></a><? } else { ?><a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a><?php } ?>
-					</div>
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+					<i class="fa fa-envelope icongrey"></i> E-mail: <?php if( get_field( 'hide_email' )) { ?><a href="mailto:<?php the_field('alternate_email'); ?>"><?php the_field('alternate_email'); ?></a><? } else { ?><a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a><?php } ?>
 				</div>
+			</div>
 		<?php }	?>	
 		<?php if(get_field('phone_number')){ ?>
 			<div class="row">
-					<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-						<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
-					</div>
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+					<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
 				</div>
+			</div>
+		<?php }	?>
+		<?php if(get_field('research_interests')){ ?>
+			<div class="row">
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
+					<?php $termswer = get_field('research_interests');?>
+					<ul id="researchIntList" class="mt-2">
+						<?php foreach( $termswer as $term ): ?>
+							<li><i class="fa fa-check fa-lg iconyellow"></i> <?php echo $term->name; ?></li>
+					<?php endforeach; ?>
+				</div>
+			</div>
 		<?php }	?>
 	</div>
 	<div class="col-lg-3 p-3 extraprofile">
