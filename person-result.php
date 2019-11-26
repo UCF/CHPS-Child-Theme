@@ -98,7 +98,7 @@ $buildingMap = get_field('building');
 		<?php }	?>
 		<?php if(get_field('research_interests')){ ?>
 			<div class="row">
-				<div class="col-xl-12 col-md-12 col-sm-12 person-label mt-2">
+				<div class="col-xl-12 col-md-12 col-sm-12 person-label mt-3">
 					<strong>Research Interests:</strong>
 					<?php $termswer = get_field('research_interests');?>
 					<ul id="" class="personResearchList">
