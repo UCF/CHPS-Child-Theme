@@ -96,7 +96,7 @@ $tags_id = get_cat_ID($a['tag']);
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => $tags_id,
+						'terms'    => 'Neurologic Residency',
 					),
 				),
                 )
