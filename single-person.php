@@ -269,14 +269,14 @@ $posts = get_posts(array(
 									if( $termswer ): 
 										echo '<h5>Research Interests</h5>';
 								?>
-									<ul id="capitalText" class="mb-5">
+									<ul id="capitalText" class="mb-3">
 										<?php foreach( $termswer as $term ): ?>
 											<li><?php echo $term->name; ?></li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
 								<?php if(get_field('google_scholar')) { ?>
-								<div class="btnhover-black" style="margin-top: 20px;">
+								<div class="btnhover-black" style="margin-top: 40px;">
 										<a style="background-color:#000000; color:#ffffff; padding: 18px 25px; font-size: 16px; text-decoration: none;" class="" href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Bibliography" target="_blank"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Bibliography</a>
 								</div>
 								<?php }?>
