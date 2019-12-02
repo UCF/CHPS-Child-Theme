@@ -276,7 +276,7 @@ $posts = get_posts(array(
 									</ul>
 								<?php endif; ?>
 								<?php if(get_field('google_scholar')) { ?>
-								<div class="btnhover-black">
+								<div class="btnhover-black" style="height: 300px;">
 										<a style="background-color:#000000; color:#ffffff; padding: 18px 25px; font-size: 16px; text-decoration: none;" class="" href="<?php the_field('google_scholar'); ?>" title="" target="_blank"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Bibliography</a>
 								</div>
 								<?php }?>
