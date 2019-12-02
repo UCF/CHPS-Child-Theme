@@ -110,7 +110,8 @@ $buildingMap = get_field('building');
 		<?php }	?>
 	</div>
 	<div class="col-lg-3 p-3 extraprofile">
-		<div class="mt-3 mb-3 pl-3 leftborder">
+		<div class="mt-3 mb-3 pl-3 <?php if(get_field('google_scholar')||get_field('cv')||get_field('website_url')||get_field('linkedin_url')||get_field('twitter_url')){ ?>
+leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
 			<div class="person-label">
 				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View Bibliography</a>
