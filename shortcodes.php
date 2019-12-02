@@ -33,7 +33,8 @@ function newsvisualvar( $atts ) {
     ), $atts );
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
-        $visualnews = new WP_Query(array(
+	if (!empty($a['tag'])) { 	
+	 $visualnews = new WP_Query(array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
                 'orderby' => 'publish_date',
@@ -48,7 +49,19 @@ $category_id = get_cat_ID($a['category']);
 					),
 				),
                 )
+            ); 	
+	}
+	else {
+	 $visualnews = new WP_Query(array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
+                'cat' => $category_id,
+                )
             ); 
+	}
 $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
 while($visualnews->have_posts()) : $visualnews->the_post();
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
