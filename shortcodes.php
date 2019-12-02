@@ -23,11 +23,12 @@ add_shortcode( 'exnews', 'externalnewsvar' );
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS VERTICALLY IN BOXES 
-// [newsvisual number="" category=""]
+// [newsvisual number="" category="" tag=""]
 function newsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '',
+		'tag' => '',
         'column' => '4',
     ), $atts );
 switch_to_blog(2);
@@ -39,6 +40,13 @@ $category_id = get_cat_ID($a['category']);
                 'order' => 'DESC',
                 'posts_per_page' => $a['number'],
                 'cat' => $category_id,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'name',
+						'terms'    => $a['tag'],
+					),
+				),
                 )
             ); 
 $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
@@ -77,11 +85,11 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO DISPLAY chpstags
-// [chpstags number="" tag=""]
+// [chpstags number="" column="" tag=""]
 function tagsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
-        'tag' => 'Neurologic Residency',
+        'tag' => '',
         'column' => '4',
     ), $atts );
 switch_to_blog(2); 
