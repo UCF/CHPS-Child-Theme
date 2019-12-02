@@ -84,8 +84,7 @@ function tagsvisualvar( $atts ) {
         'tag' => 'Neurologic Residency',
         'column' => '4',
     ), $atts );
-switch_to_blog(2);
-$tags_id = get_cat_ID($a['tag']);  
+switch_to_blog(2); 
         $visualtags = new WP_Query(array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
@@ -96,7 +95,7 @@ $tags_id = get_cat_ID($a['tag']);
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => 'Neurologic Residency',
+						'terms'    => $a['tag'],
 					),
 				),
                 )
