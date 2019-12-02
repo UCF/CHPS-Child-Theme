@@ -75,6 +75,66 @@ return $listnews;
 }
 add_shortcode( 'newsvisual', 'newsvisualvar' );	
 ?><?php
+//  ----------------------------------------------------
+// SHORTCODE TO DISPLAY chpstags
+// [chpstags number="" tag=""]
+function tagsvisualvar( $atts ) {
+    $a = shortcode_atts( array(
+        'number' => '4',
+        'tag' => 'Neurologic Residency',
+        'column' => '4',
+    ), $atts );
+switch_to_blog(2);
+$tags_id = get_cat_ID($a['tag']);  
+        $visualtags = new WP_Query(array(
+                'post_type' => 'post',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'name',
+						'terms'    => $tags_id,
+					),
+				),
+                )
+            ); 
+$listtags = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
+while($visualtags->have_posts()) : $visualtags->the_post();
+	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+	if ($a['column'] == '3') {	
+		$listtags .= '<div class="col-lg-4 col-sm-6 col-xs-12">';
+			if ( get_field( 'updatenewstype' ) == 1 ) { 
+				 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+			} else { 
+				 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+			}
+		$listtags .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	} else {	
+		$listtags .= '<div class="col-lg-3 col-sm-6 col-xs-12">';
+			if ( get_field( 'updatenewstype' ) == 1 ) { 
+				 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+			} else { 
+				 $listtags .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+			}
+		$listtags .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	}	
+	if ( has_post_thumbnail()) {	
+		$listtags .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	} else { 	
+		$listtags .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	}	
+	$listtags .= '</div><div class="p-3">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></div></a></div>';	
+endwhile;
+$listtags .= '</div></div>';	
+wp_reset_query();
+restore_current_blog();
+return $listtags;		
+}
+add_shortcode( 'chpstags', 'tagsvisualvar' );	
+?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS TEXT LINKS
 //
