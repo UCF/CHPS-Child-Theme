@@ -571,7 +571,6 @@ figcaption, .featcaption {
 }
 .leftborder {
 	border-left: solid 1px #ddd;
-	height: 200px !important;
 }
 .personlist-ht {
 	min-height: 190px; 
