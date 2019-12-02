@@ -109,7 +109,7 @@ $buildingMap = get_field('building');
 			</div>
 		<?php }	?>
 	</div>
-	<div class="col-lg-3 p-3 extraprofile">
+	<div class="col-lg-3 pl-3 pr-3 extraprofile">
 		<div class="mt-0 mb-3 pl-3 <?php if(get_field('google_scholar')||get_field('cv')||get_field('website_url')||get_field('linkedin_url')||get_field('twitter_url')){ ?>
 leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
