@@ -274,11 +274,12 @@ $posts = get_posts(array(
 											<li><?php echo $term->name; ?></li>
 										<?php endforeach; ?>
 									</ul>
-									<?php endif; ?>
-									<br>
-									<?php if(get_field('google_scholar')) { 
-echo do_shortcode( '[vc_btn title="View Bibliography" style="custom" custom_background="#000000" custom_text="#ffffff" shape="square" size="lg" align="left" i_icon_fontawesome="fa fa-bookmark" add_icon="true" link="url:https%3A%2F%2Fgoogle.com||target:%20_blank|" el_class="btnhover-black"]' );
-									}?>
+								<?php endif; ?>
+								<?php if(get_field('google_scholar')) { ?>
+								<div class="vc_btn3-container  btnhover-black vc_btn3-left" >
+									<a style="background-color:#000000; color:#ffffff;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="https://google.com" title="" target="_blank"><i class="vc_btn3-icon fa fa-bookmark"></i> View Bibliography</a>
+								</div>
+								<?php }?>
 							</div>
 						</div>
 					</div></div>
