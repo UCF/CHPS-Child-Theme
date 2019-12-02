@@ -275,6 +275,9 @@ $posts = get_posts(array(
 										<?php endforeach; ?>
 									</ul>
 									<?php endif; ?>
+									<?php if(get_field('google_scholar')) { 
+										echo do_shortcode( '[vc_btn title="View Bibliography" style="custom" custom_background="#000000" custom_text="#ffffff" shape="square" size="lg" align="left" i_icon_fontawesome="fa fa-bookmark" add_icon="true" link="url:https%3A%2F%2Fgoogle.com||target:%20_blank|" el_class="btnhover-black"]' );
+									}?>
 							</div>
 						</div>
 					</div></div>
