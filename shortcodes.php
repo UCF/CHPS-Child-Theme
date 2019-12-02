@@ -40,13 +40,13 @@ $category_id = get_cat_ID($a['category']);
                 'order' => 'DESC',
                 'posts_per_page' => $a['number'],
                 'cat' => $category_id,
-				//'tax_query' => array(
-				//	array(
-				//		'taxonomy' => 'post_tag',
-				//		'field'    => 'name',
-				//		'terms'    => $a['tag'],
-				//	),
-				//),
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'name',
+						'terms'    => $a['tag'],
+					),
+				),
                 )
             ); 
 $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
