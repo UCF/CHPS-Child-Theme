@@ -277,7 +277,7 @@ $posts = get_posts(array(
 								<?php endif; ?>
 								<?php if(get_field('google_scholar')) { ?>
 								<div class="vc_btn3-container  btnhover-black vc_btn3-left" >
-									<a style="background-color:#000000; color:#ffffff; font-size: 16px; padding: 18px 25px; text-decoration: none;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="https://google.com" title="" target="_blank"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 25px;"></i> View Bibliography</a>
+									<a style="background-color:#000000; color:#ffffff; font-size: 16px; padding: 18px 25px; text-decoration: none;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="https://google.com" title="" target="_blank"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Bibliography</a>
 								</div>
 								<?php }?>
 							</div>
