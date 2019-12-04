@@ -36,13 +36,16 @@ $ids = get_the_ID();
 					</div>
 					<h1 class="h5 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
-							while ( have_rows('degrees') ) : the_row();
-							 $array[] = get_sub_field('degree_select'); 
-							endwhile;
-								$foo = implode(', ', array_column($array, 'label'));
-								echo '<span class"">, ' . $foo . '</span>';
-							}								
-						?>		
+	while ( have_rows('degrees') ) : the_row();
+          if (!get_sub_field('degree_aftername')) {
+            continue;
+          }
+	 $array[] = get_sub_field('degree_select'); 
+	endwhile;
+		$foo = implode(', ', array_column($array, 'label'));
+		echo '<span class"">, ' . $foo . '</span>';
+	}								
+?>	
 					</h1>
 					<div class="person-job-title text-center mb-4">
 						<?php
