@@ -35,12 +35,14 @@ $ids = get_the_ID();
 </div>
 					</div>
 					<h1 class="h5 person-title text-center mb-2">
-						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees')&&get_field('degree_aftername') ) {
+						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 							 $array[] = get_sub_field('degree_select'); 
 							endwhile;
-							$foo = implode(', ', array_column($array, 'label'));
-							echo '<span class"">, ' . $foo . '</span>';
+								if(get_field('degree_aftername')){
+									$foo = implode(', ', array_column($array, 'label'));
+									echo '<span class"">, ' . $foo . '</span>';
+								}
 							}								
 						?>		
 					</h1>
