@@ -16,12 +16,15 @@ $buildingMap = get_field('building');
 	<div class="col-lg-7 col-md-9 col-sm-8 col-8 pt-0 pl-3 pb-0 pr-3">
 		<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
+								  if (!get_sub_field('degree_aftername')) {
+									continue;
+								  }
 							 $array[] = get_sub_field('degree_select'); 
 							endwhile;
-							$foo = implode(', ', array_column($array, 'label'));
-							echo '<span class"">, ' . $foo . '</span>';
+								$foo = implode(', ', array_column($array, 'label'));
+								echo '<span class"">, ' . $foo . '</span>';
 							}								
-						?></a></h2>
+						?>	</a></h2>
 		<?php
 		if(get_field('job_titles_tax')){ ?>
 			<div class="profilejobtitle">
@@ -114,7 +117,7 @@ $buildingMap = get_field('building');
 leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
 			<div class="person-label">
-				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View Bibliography</a>
+				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View Publications</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('cv')): ?>
