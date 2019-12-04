@@ -39,10 +39,8 @@ $ids = get_the_ID();
 							while ( have_rows('degrees') ) : the_row();
 							 $array[] = get_sub_field('degree_select'); 
 							endwhile;
-								if(get_field('degree_aftername')){
-									$foo = implode(', ', array_column($array, 'label'));
-									echo '<span class"">, ' . $foo . '</span>';
-								}
+								$foo = implode(', ', array_column($array, 'label'));
+								echo '<span class"">, ' . $foo . '</span>';
 							}								
 						?>		
 					</h1>
