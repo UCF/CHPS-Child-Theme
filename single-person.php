@@ -245,15 +245,13 @@ $posts = get_posts(array(
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 											<?php $value = get_sub_field('degree_select'); ?>
-											<li><?php echo $value['label']; ?>, <?php echo $value['value']; ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
-													</li>
-											<?php 
-											if (($value['label'] == $value['value'])){ 
-   												echo "there is only 1 because they are the same";
-												} else {
-												echo "there are 2 unique values ";
-												}
-											?>
+											<li><?php 
+											if (($value['label'] == $value['value'])){ ?>
+   												<?php echo $value['value']; ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+												<?php } else { ?>
+												<?php echo $value['label']; ?>, <?php echo $value['value']; ?><?php if(get_sub_field('degree_discipline')) { ?>, <?php the_sub_field('degree_discipline'); }?><?php if(get_sub_field('degree_location')) { ?>, <?php the_sub_field('degree_location'); }?>
+												<?php } ?>
+											</li>
 											 <?php endwhile; ?>	
 										 </ul>
 									 </div>
