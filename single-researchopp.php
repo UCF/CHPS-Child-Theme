@@ -67,7 +67,7 @@ $research_facultymember = get_field( 'research_facultymember' );
 				<li>NAME UNIT</li>
 				<?php if ( $research_facultymember ): ?>
 					<?php foreach ( $research_facultymember as $p ): ?>
-						<i class="fa fa-user-circle iconyellow"></i> <a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a></li>
+						<i class="fa fa-user iconyellow"></i> <a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
