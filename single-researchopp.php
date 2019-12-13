@@ -21,10 +21,10 @@ $research_unit_terms = get_field( 'research_unit' );
 				<?php the_content(); ?> 
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
-			<div class="mb-3 researchOpp-quals">
+			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
-			<div class="mt-4" id="getinvolved participationForm">
+			<div class="mt-5" id="getinvolved participationForm">
 				INSERT GRAVITY FORM HERE
 			</div>
 		</div>
