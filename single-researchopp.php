@@ -108,10 +108,11 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }
 .researchOpp-relateLink:hover {
 	background-color: #000;
-}	
-.researchOpp-relateLink a:hover {
 	text-decoration: none;
 	color:#ffcc00;
+}	
+.researchOpp-relateLink a:hover {
+
 }		
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
