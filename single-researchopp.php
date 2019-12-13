@@ -35,7 +35,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				INSERT BUTTON HERE  <!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-bell icongrey"></i> <strong>Recruitment Deadline:</strong><br>
+				<i class="fa fa-bell iconyellow"></i> <strong>Recruitment Deadline:</strong><br>
 				<span style="font-size: 25px;"><?php the_field('research_enddate'); ?></span>  <!-- responsive size? -->
 			</div>
 			<div class="researchOpp-dblock"> 
@@ -50,7 +50,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-money icongrey"></i> <strong>Compensation:</strong><br>
+				<i class="fa fa-money icongreen"></i> <strong>Compensation:</strong><br>
 				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
 				Format: <?php the_field('research_payment_format'); ?>
 			</div>
