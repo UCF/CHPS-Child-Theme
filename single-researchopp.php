@@ -71,7 +71,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 	<div class="row">
 		<?php echo do_shortcode('[vc_separator style="shadow" border_width="5"]'); ?>
 		<div>
-			<h2 class="heading-underline">Related Research Participation Opportunities</h2> <!-- style this size -->	
+			<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
 		</div>
 	</div>	
 	<div class="row">	
@@ -86,9 +86,11 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			</div>	
 		</div>
 		<div class="col-md-4" style="padding:10px;">
+			<a href="#">
 			<div style="border:1px #d8d8d8 solid; padding:25px;">
-				<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
-			</div>	
+				This is a title of a related research opportunity connected by Unit which could be a long title still
+			</div>
+			</a>	
 		</div>
 	</div>
 	</article>
