@@ -32,7 +32,9 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
-				<?php echo do_shortcode('[vc_btn title="Participate!" style="custom" custom_background="#ffcc00" custom_text="#000000" shape="square" size="lg" align="center" button_block="true" link="url:%23getinvolved|||" el_class="btnhover-yellow"]'); ?>
+				<div class="vc_btn3-container  btnhover-yellow vc_btn3-center" >
+					<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block" href="#getinvolved" title="">Participate!</a>
+				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
