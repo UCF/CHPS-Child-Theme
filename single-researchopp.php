@@ -21,7 +21,7 @@ $research_facultymember = get_field( 'research_facultymember' );
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
 			<div class="mb-4">
-				INSERT BULLET POINTS
+				<?php the_field('research_qualifications'); ?>
 			</div>
 			<div id="participationForm">
 				INSERT GRAVITY FORM HERE
