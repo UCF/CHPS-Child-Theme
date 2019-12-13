@@ -14,13 +14,13 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			<h1><?php the_title(); ?></h1>
 		</div>
 	</div>
-	<div class="row mb-4">
-		<div class="col-md-8 pl-2 pr-2"> <!-- padding 15px on left and right -->
+	<div class="row mb-5">
+		<div class="col-md-8 pl-3 pr-3"> <!-- padding 15px on left and right -->
 			<div class="mb-3">
 				<?php the_content(); ?> 
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
-			<div class="mb-3">
+			<div class="mb-4">
 				INSERT BULLET POINTS
 			</div>
 			<div id="participationForm">
