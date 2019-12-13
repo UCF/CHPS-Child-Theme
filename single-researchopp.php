@@ -89,7 +89,6 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
 article h3 { font-size: 20px; margin-bottom: 16px;}	
-	
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
 	padding: 15px;
