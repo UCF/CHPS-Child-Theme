@@ -75,15 +75,19 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 		</div>
 	</div>	
 	<div class="row">	
-		<div class="col-md-4" style="padding:10px;">
-			<div style="border:1px #d8d8d8 solid; padding:25px;">
-				<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
-			</div>	
+		<div class="col-md-4 researchOpp-relateLink">
+			<a href="#">
+			<div class="researchOpp-relateCard">
+				This is a title of a related research opportunity connected by Unit which could be a long title still
+			</div>
+			</a>	
 		</div>
-		<div class="col-md-4" style="padding:10px;">
-			<div style="border:1px #d8d8d8 solid; padding:25px;">
-				<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
-			</div>	
+		<div class="col-md-4 researchOpp-relateLink">
+			<a href="#">
+			<div class="researchOpp-relateCard">
+				This is a title of a related research opportunity connected by Unit which could be a long title still
+			</div>
+			</a>	
 		</div>
 		<div class="col-md-4 researchOpp-relateLink">
 			<a href="#">
