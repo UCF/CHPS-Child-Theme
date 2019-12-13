@@ -66,17 +66,17 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			<div>
 				<h3 class="heading-underline">Related Research Participation Opportunities</h3> <!-- style this size -->	
 			</div>
-			<div class="col-md-4" style="">
+			<div class="col-md-4" style="padding:10px;">
 				<div style="border:1px #d8d8d8 solid; padding:25px;">
 					<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
 				</div>	
 			</div>
-			<div class="col-md-4" style="">
+			<div class="col-md-4" style="padding:10px;">
 				<div style="border:1px #d8d8d8 solid; padding:25px;">
 					<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
 				</div>	
 			</div>
-			<div class="col-md-4" style="">
+			<div class="col-md-4" style="padding:10px;">
 				<div style="border:1px #d8d8d8 solid; padding:25px;">
 					<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
 				</div>	
@@ -85,6 +85,11 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 	</div>
 	</article>
 </div>
+<style>
+.site-header .container h1 {display: none !important;}
+article h2 { font-size: 26px; margin-bottom: 16px;}	
+article h3 { font-size: 20px; margin-bottom: 16px;}		
+</style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
 <?php get_footer(); ?>
