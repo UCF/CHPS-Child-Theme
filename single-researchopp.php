@@ -45,12 +45,12 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				<?php the_field('research_city'); ?>, <?php the_field('research_state'); ?> <?php the_field('research_zip'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-clock icongrey"></i> <strong>Time Commitment:</strong><br>
+				<i class="fa fa-calendar icongrey"></i> <strong>Time Commitment:</strong><br>
 				Number of visits: <?php the_field('research_visits'); ?><br>
 				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-money-bill-alt icongrey"></i> <strong>Compensation:</strong><br>
+				<i class="fa fa-money icongrey"></i> <strong>Compensation:</strong><br>
 				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
 				Format: <?php the_field('research_payment_format'); ?>
 			</div>
