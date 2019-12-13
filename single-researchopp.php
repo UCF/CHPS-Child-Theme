@@ -106,9 +106,11 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 .researchOpp-relateLink {
 	padding:10px;
 }
+.researchOpp-relateLink:hover {
+	background-color: #000;
+}	
 .researchOpp-relateLink a:hover {
 	text-decoration: none;
-	background-color: #000;
 	color:#ffcc00;
 }		
 </style>
