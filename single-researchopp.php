@@ -17,14 +17,14 @@ $research_unit_terms = get_field( 'research_unit' );
 	</div>
 	<div class="row mb-5">
 		<div class="col-md-8 pl-3 pr-3"> <!-- padding 15px on left and right -->
-			<div class="mb-3">
+			<div class="mb-4">
 				<?php the_content(); ?> 
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
-			<div class="mb-4 researchOpp-quals">
+			<div class="mb-3 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
-			<div id="participationForm">
+			<div class="mt-4" id="getinvolved participationForm">
 				INSERT GRAVITY FORM HERE
 			</div>
 		</div>
@@ -120,7 +120,7 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 	content: "\f058";
 	font-family: "FontAwesome";
 	padding: 0 10px 0 0;
-	color:red;
+	color:#ffcc00;
 }	
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
