@@ -5,6 +5,7 @@ $primary_term_id = yoast_get_primary_term_id('category');
 $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
+$research_unit_terms = get_field( 'research_unit' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -64,7 +65,11 @@ $research_facultymember = get_field( 'research_facultymember' );
 				<?php the_field('research_contactname'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<li>NAME UNIT</li>
+				<?php if ( $research_unit_terms ): ?>
+					<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
+						<i class="fa fa-briefcase iconyellow"></i> <?php echo $research_unit_term->name; ?><br>
+					<?php endforeach; ?>
+				<?php endif; ?>
 				<?php if ( $research_facultymember ): ?>
 					<?php foreach ( $research_facultymember as $p ): ?>
 						<i class="fa fa-user iconyellow"></i> <a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
