@@ -35,7 +35,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				INSERT BUTTON HERE  <!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-map-marker icongrey"></i> <strong>Recruitment Deadline:</strong><br>
+				<i class="fa fa-bell icongrey"></i> <strong>Recruitment Deadline:</strong><br>
 				<span style="font-size: 25px;"><?php the_field('research_enddate'); ?></span>  <!-- responsive size? -->
 			</div>
 			<div class="researchOpp-dblock"> 
@@ -45,17 +45,17 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				<?php the_field('research_city'); ?>, <?php the_field('research_state'); ?> <?php the_field('research_zip'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-map-marker icongrey"></i> <strong>Time Commitment:</strong><br>
+				<i class="fa fa-clock icongrey"></i> <strong>Time Commitment:</strong><br>
 				Number of visits: <?php the_field('research_visits'); ?><br>
 				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-map-marker icongrey"></i> <strong>Compensation:</strong><br>
+				<i class="fa fa-money-bill-alt icongrey"></i> <strong>Compensation:</strong><br>
 				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
 				Format: <?php the_field('research_payment_format'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-map-marker icongrey"></i> <strong>Contact:</strong><br>
+				<i class="fa fa-user-circle icongrey"></i> <strong>Contact:</strong><br>
 				<?php the_field('research_contactname'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
