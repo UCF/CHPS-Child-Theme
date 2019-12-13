@@ -72,7 +72,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 		<div class="col-md-12">
 			<?php echo do_shortcode('[vc_separator style="shadow" border_width="5"]'); ?>
 			<div>
-				<h3 class="heading-underline">Related Research Participation Opportunities</h3> <!-- style this size -->	
+				<h2 class="heading-underline">Related Research Participation Opportunities</h2> <!-- style this size -->	
 			</div>
 			<div class="col-md-4" style="padding:10px;">
 				<div style="border:1px #d8d8d8 solid; padding:25px;">
