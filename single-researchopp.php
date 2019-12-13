@@ -29,29 +29,34 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 		</div>
 		<div class="col-md-4" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
-				<strong>IRB#:</strong> 171987349782
+				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
 				INSERT BUTTON HERE  <!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
 				<strong>Recruitment Deadline:</strong><br>
-				<span style="font-size: 25px;">December 15, 2020</span>  <!-- responsive size? -->
+				<span style="font-size: 25px;"><?php the_field('research_enddate'); ?></span>  <!-- responsive size? -->
 			</div>
 			<div class="researchOpp-dblock"> 
 				<strong>Location:</strong><br>
-				Name of Building<br>   <!-- add link to map maybe? -->
-				12805 Pegasus Drive.<br>
-				Orlando, FL 32816
+				<?php the_field('research_building'); ?><br>   <!-- add link to map maybe? -->
+				<?php the_field('research_address'); ?><br>
+				<?php the_field('research_city'); ?>, <?php the_field('research_state'); ?> <?php the_field('research_zip'); ?>
+			</div>
+			<div class="researchOpp-dblock"> 
+				<strong>Time Commitment:</strong><br>
+				Number of visits: <?php the_field('research_visits'); ?><br>
+				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
 				<strong>Compensation:</strong><br>
-				Amount: $20.00 (USD)<br>
-				Format: Gift Card
+				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
+				Format: <?php the_field('research_payment_format'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
 				<strong>Contact:</strong><br>
-				Name of Person
+				<?php the_field('research_time'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
 				<li>NAME UNIT</li>
