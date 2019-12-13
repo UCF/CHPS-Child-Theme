@@ -88,7 +88,12 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 <style>
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
-article h3 { font-size: 20px; margin-bottom: 16px;}		
+article h3 { font-size: 20px; margin-bottom: 16px;}	
+	
+.researchOpp-dblock {
+	border-bottom: 1px #dddddd solid;
+	padding: 15px;
+}	
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
