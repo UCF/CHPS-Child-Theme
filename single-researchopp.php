@@ -3,8 +3,8 @@ $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' )
 $categories = get_the_category();
 $primary_term_id = yoast_get_primary_term_id('category');
 $postTerm = get_term( $primary_term_id );
-
 $thumb_id = get_post_thumbnail_id(get_the_ID());
+$research_facultymember = get_field( 'research_facultymember' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -65,8 +65,11 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			</div>
 			<div class="researchOpp-dblock"> 
 				<li>NAME UNIT</li>
-				<li>NAME FACULTY MEMBERS</li>
-				<li>NAME FACULTY MEMBERS</li>
+				<?php if ( $research_facultymember ): ?>
+					<?php foreach ( $research_facultymember as $p ): ?>
+						<li><a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a></li>
+					<?php endforeach; ?>
+				<?php endif; ?>
 			</div>
 		</div>
 	</div>
