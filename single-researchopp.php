@@ -118,8 +118,9 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }
 .researchOpp-quals ul li::before {
 	content: "\f058";
-	font-family: "Font Awesome 5 Free";
+	font-family: "FontAwesome";
 	padding: 0 10px 0 0;
+	color:red;
 }	
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
