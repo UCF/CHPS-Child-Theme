@@ -27,7 +27,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				INSERT GRAVITY FORM HERE
 			</div>
 		</div>
-		<div class="col-md-4" style="background-color: #f2f2f2">
+		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
