@@ -1,3 +1,11 @@
+<?php get_header(); 
+$getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
+$categories = get_the_category();
+$primary_term_id = yoast_get_primary_term_id('category');
+$postTerm = get_term( $primary_term_id );
+
+$thumb_id = get_post_thumbnail_id(get_the_ID());
+?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
 	<div class="row">
@@ -77,4 +85,6 @@
 	</div>
 	</article>
 </div>
-
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
+<?php get_footer(); ?>
