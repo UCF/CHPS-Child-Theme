@@ -56,7 +56,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-map-marker icongrey"></i> <strong>Contact:</strong><br>
-				<?php the_field('research_time'); ?>
+				<?php the_field('research_contactname'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
 				<li>NAME UNIT</li>
