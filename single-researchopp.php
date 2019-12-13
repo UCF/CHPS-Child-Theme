@@ -121,7 +121,9 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 .researchOpp-relateCard:hover {
 	background-color: #000;
 }		
-.r	
+.vc_btn3-container {
+	margin-bottom: 0px !important;
+}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
