@@ -85,7 +85,7 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 				<a href="#">This is a title of a related research opportunity connected by Unit which could be a long title still</a>
 			</div>	
 		</div>
-		<div class="col-md-4" style="padding:10px;">
+		<div class="col-md-4 researchOpp-relateLink">
 			<a href="#">
 			<div style="border:1px #d8d8d8 solid; padding:25px;">
 				This is a title of a related research opportunity connected by Unit which could be a long title still
@@ -102,7 +102,15 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
 	padding: 15px;
-}	
+}
+.researchOpp-relateLink {
+	padding:10px;
+}
+.researchOpp-relateLink a:hover {
+	text-decoration: none;
+	background-color: #000;
+	color:#ffcc00;
+}		
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
