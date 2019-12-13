@@ -31,8 +31,9 @@ $thumb_id = get_post_thumbnail_id(get_the_ID());
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
-			<div class="researchOpp-dblock"> 
-				INSERT BUTTON HERE  <!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
+			<div class="researchOpp-dblock hidemobile"> 
+				<?php echo do_shortcode('[vc_btn title="Participate!" style="custom" custom_background="#ffcc00" custom_text="#000000" shape="square" size="lg" align="center" button_block="true" link="url:%23getinvolved|||" el_class="btnhover-yellow"]'); ?>
+				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-bell icongrey"></i> <strong>Recruitment Deadline:</strong><br>
