@@ -21,7 +21,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				<?php the_content(); ?> 
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
-			<div class="mb-4">
+			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
 			<div id="participationForm">
@@ -113,6 +113,14 @@ $research_unit_terms = get_field( 'research_unit' );
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
 article h3 { font-size: 20px; margin-bottom: 16px;}	
+.researchOpp-quals ul {
+	list-style-type: none;
+}
+.researchOpp-quals ul li::before {
+	content: "\f058";
+	font-family: "Font Awesome 5 Free";
+	padding: 0 10px 0 0;
+}	
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
 	padding: 15px;
