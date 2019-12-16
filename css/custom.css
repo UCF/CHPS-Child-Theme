@@ -736,6 +736,7 @@ a.fk-socialicon {
 	}
 	#imgRight-medium {
 		width: 100%;
+		margin: 0px 0px 20px 0px;
 	}
 }	
 @media (max-width: 1200px) and (min-width: 768px)  {
