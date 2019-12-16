@@ -25,7 +25,11 @@ $research_unit_terms = get_field( 'research_unit' );
 				<?php the_field('research_qualifications'); ?>
 			</div>
 			<div class="mt-5" id="getinvolved participationForm">
-				INSERT GRAVITY FORM HERE
+				<div id="researchOpp-particiForm">
+					<h2>Participate in this Research</h2>
+					<span style="font-size: 13px;">Submitting this form will put you in contact with the main point of contact for this project. They will provide more information and determine if you meet all of the qualifications needed.</span>
+					<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=david@reviewmetoday.com&amp;opportunity_titlename=This Is The Title...."]' ); ?>
+				</div>
 			</div>
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
@@ -143,6 +147,35 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 .vc_btn3-container {
 	margin-bottom: 0px !important;
 }
+#researchOpp-particiForm {
+    background-color:#ffcc00;
+    padding:25px 25px 5px 25px;
+    min-height:100px;
+}
+#researchOpp-particiForm h2{
+    margin-bottom:0px !important;
+}
+.gform_wrapper {
+    margin-top:0px !important;
+}
+#researchOpp-particiForm .gfield_label {
+    display:none;
+}
+#researchOpp-particiForm .gform_button {
+    padding: 10px 35px;
+    font-size: 20px;
+    background:#000;
+    color:#fff;
+    border: 0px solid;
+    cursor: pointer;
+}
+#researchOpp-particiForm .gform_button:hover {
+    background:#666;
+}
+#researchOpp-particiForm .validation_error {
+    color:red !important;
+    font-size:15px !important;
+}	
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
