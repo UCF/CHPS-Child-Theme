@@ -52,7 +52,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<div class="btnhover-yellow" style="width: 100%;" >
-					<a href="#getStarted" title="" style="width: 100%; font-size: 16px;  padding: 18px 25px; text-align: center; background-color:#ffcc00; color:#000000;">Participate!</a>
+					<a href="#getStarted" title="" style="display: block; font-size: 16px;  padding: 18px 25px; text-align: center; background-color:#ffcc00; color:#000000;">Participate!</a>
 				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
