@@ -24,7 +24,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
-			<div id="getStarted" style="height: 80px;">
+			<div class="pt-5" id="getStarted">
 				<div id="participationForm">
 				<div id="researchOpp-particiForm">
 					<h2>Participate in this Research</h2>
