@@ -95,14 +95,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				<?php endif; ?>
 			</div>
 		</div>
-	</div>
-	<div class="row">
-		<?php echo do_shortcode('[vc_separator style="shadow" border_width="5"]'); ?>
-		<div>
-			<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
-		</div>
 	</div>	
-	<div class="row">	
 		<?php
 			// get the custom post type's taxonomy terms
 			$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
@@ -123,7 +116,15 @@ $research_unit_terms = get_field( 'research_unit' );
 			);
 			$related_items = new WP_Query( $args );
 			// loop over query
-			if ($related_items->have_posts()) :
+			if ($related_items->have_posts()) : ?>
+		<div class="row">
+		<?php echo do_shortcode('[vc_separator style="shadow" border_width="5"]'); ?>
+			<div>
+				<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
+			</div>
+		</div>	
+		<div class="row">
+		<?php
 			while ( $related_items->have_posts() ) : $related_items->the_post();
 		?>
 			<div class="col-md-4 researchOpp-relateLink">
@@ -133,6 +134,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>		
 		<?php
 			endwhile;
+			echo '</div>';
 			endif;
 			// Reset Post Data
 			wp_reset_postdata();
