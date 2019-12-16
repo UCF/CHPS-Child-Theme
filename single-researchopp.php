@@ -24,7 +24,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
-			<div class="mt-5" id="getinvolved participationForm">
+			<div class="mt-5" id="participationForm">
 				<div id="researchOpp-particiForm">
 					<h2>Participate in this Research</h2>
 					<span style="font-size: 13px;">Submitting this form will put you in contact with the main point of contact for this project. They will provide more information and determine if you meet all of the qualifications needed.</span>
@@ -38,7 +38,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<div class="vc_btn3-container  btnhover-yellow vc_btn3-center" >
-					<a href="#participateForm" title="" style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Participate!</a>
+					<a href="#participationForm" title="" style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Participate!</a>
 				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
@@ -88,7 +88,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
 		</div>
 	</div>	
-	<div class="row" id="participateForm">	
+	<div class="row">	
 		<div class="col-md-4 researchOpp-relateLink">
 			<a href="#">
 			<div class="researchOpp-relateCard">
