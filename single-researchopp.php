@@ -50,22 +50,20 @@ $deadline = get_field( 'research_enddate' );
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
-				<strong>IRB#:</strong> <?php the_field('research_irb'); ?><br>
-				TODAY: <?php echo $today; ?><br>
-				DEADLINE: <?php echo $deadline; ?><br><br>
-				<?php
-					if ($today<$deadline) {
-						echo 'post is LIVE';
-					}
-					else {
-						echo 'post has expired';
-					}
-				?>
+				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
-				<div class="btnhover-yellow">
-					<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate!</a>
-				</div>
+				<?php
+					if ($today<$deadline) {  ?>
+						<div class="btnhover-yellow">
+							<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate!</a>
+						</div>
+					<?php } else { ?>
+						<div class="btnhover-red">
+							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity has Closed</a>
+						</div>
+				<?php } ?>
+				
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
@@ -169,7 +167,22 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }
 .yellowBTN-full:hover {
 	text-decoration: none;
-}		
+}
+.redBTN-full {
+	display: block; 
+	font-size: 16px;  
+	padding: 18px 25px; 
+	text-align: center; 
+	background-color:#990000; 
+	color:#fff;
+}
+.redBTN-full:hover {
+	text-decoration: none;
+}
+.btnhover-red a:hover {
+    background: #830101 !important;
+	background-image: none !important;
+}	
 .researchOpp-quals ul {
 	list-style-type: none;
 }
