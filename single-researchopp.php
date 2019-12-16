@@ -117,7 +117,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			$related_items = new WP_Query( $args );
 			// loop over query
 			if ($related_items->have_posts()) : ?>
-		<div class="row">
+		<div class="row row-flex">
 		<?php echo do_shortcode('[vc_separator style="shadow" border_width="5"]'); ?>
 			<div>
 				<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
