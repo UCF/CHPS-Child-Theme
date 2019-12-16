@@ -18,6 +18,18 @@ $research_unit_terms = get_field( 'research_unit' );
 	<div class="row mb-5">
 		<div class="col-md-8 pl-3 pr-3"> <!-- padding 15px on left and right -->
 			<div class="mb-4">
+				<?php if ( has_post_thumbnail()) { ?>
+					   <?php if( get_field('featimg_location') == 'Full Width' ): ?>
+							<div id="postIMG">
+									<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="Enlarge the image for the CHPS News story titled: <?php echo the_title(); ?>"><img width="100%" alt="<?php if (!empty($alt)) { echo $alt; } else { echo the_title(); } ?>" src="<?php echo $getimageURL ?>" /></a>
+							</div>
+					   <?php endif; ?>
+					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
+							<div id="imgRight-<?php the_field('featimg_size'); ?>">
+								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="Enlarge the image for the CHPS News story titled: <?php echo the_title(); ?>"><img width="100%" alt="<?php if (!empty($alt)) { echo $alt; } else { echo the_title(); } ?>" src="<?php echo $getimageURL ?>" /></a>
+							</div>
+					   <?php endif; ?>
+				<?php } ?>
 				<?php the_content(); ?> 
 			</div>
 			<h2>Minimum Qualifications:</h2> <!-- style this size -->
