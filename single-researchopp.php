@@ -54,12 +54,11 @@ $deadline = get_field( 'research_enddate' );
 				TODAY: <?php echo $today; ?><br>
 				DEADLINE: <?php echo $deadline; ?><br><br>
 				<?php
-					if ($today>$deadline)
-					{
-					echo 'post is LIVE';
+					if ($today<$deadline) {
+						echo 'post is LIVE';
 					}
 					else {
-					echo 'post has expired';
+						echo 'post has expired';
 					}
 				?>
 			</div>
