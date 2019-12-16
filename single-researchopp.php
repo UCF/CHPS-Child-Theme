@@ -170,7 +170,7 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
     cursor: pointer;
 }
 #researchOpp-particiForm .gform_button:hover {
-    background:#666;
+    background:#404040;
 }
 #researchOpp-particiForm .validation_error {
     color:red !important;
