@@ -119,6 +119,16 @@ $deadline = get_field( 'research_enddate' );
 			'post_status' => 'publish',
 			'posts_per_page' => 3, // you may edit this number
 			'orderby' => 'rand',
+			'meta_query' => array(
+				array(
+					'key' => 'research_enddate'
+				),
+				array(
+					'key' => 'research_enddate',
+					'value' => $today,
+					'compare' => '>='
+				)
+			),	
 			'tax_query' => array(
 				array(
 					'taxonomy' => 'researchopp_unit',
