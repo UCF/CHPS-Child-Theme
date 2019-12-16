@@ -130,7 +130,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			?>
 				<div class="col-md-4">
 					<a href="<?php the_permalink(); ?>">
-						<div class=""><?php the_title(); ?></div>
+						<div class="exInfo"><?php the_title(); ?></div>
 					</a>	
 				</div>		
 			<?php
