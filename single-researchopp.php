@@ -51,8 +51,8 @@ $research_unit_terms = get_field( 'research_unit' );
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
-				<div class="btnhover-yellow" style="width: 100%;" >
-					<a href="#getStarted" title="" style="display: block; font-size: 16px;  padding: 18px 25px; text-align: center; background-color:#ffcc00; color:#000000;">Participate!</a>
+				<div class="btnhover-yellow">
+					<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate!</a>
 				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
@@ -147,6 +147,17 @@ $research_unit_terms = get_field( 'research_unit' );
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
 article h3 { font-size: 20px; margin-bottom: 16px;}	
+.yellowBTN-full {
+	display: block; 
+	font-size: 16px;  
+	padding: 18px 25px; 
+	text-align: center; 
+	background-color:#ffcc00; 
+	color:#000000;
+}
+.yellowBTN-full:hover {
+	text-decoration: none;
+}		
 .researchOpp-quals ul {
 	list-style-type: none;
 }
