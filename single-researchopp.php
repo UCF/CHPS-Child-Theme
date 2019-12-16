@@ -51,7 +51,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
-				<div class="vc_btn3-container  btnhover-yellow vc_btn3-center" >
+				<div class="btnhover-yellow" style="width: 100%; font-size: 16px; padding: 18px 25px; text-align: center;" >
 					<a href="#getStarted" title="" style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Participate!</a>
 				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
