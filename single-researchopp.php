@@ -38,7 +38,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<div class="vc_btn3-container  btnhover-yellow vc_btn3-center" >
-					<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block" href="#getinvolved" title="">Participate!</a>
+					<a href="#participateForm" title="" style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-lg vc_btn3-shape-square vc_btn3-style-custom vc_btn3-block">Participate!</a>
 				</div>
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
@@ -88,7 +88,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
 		</div>
 	</div>	
-	<div class="row">	
+	<div class="row" id="participateForm">	
 		<div class="col-md-4 researchOpp-relateLink">
 			<a href="#">
 			<div class="researchOpp-relateCard">
