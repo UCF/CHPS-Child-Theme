@@ -62,7 +62,7 @@ $deadline = get_field( 'research_enddate' );
 						<div class="btnhover-red">
 							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity has Closed</a>
 						</div>
-						<span class="missedOut">Please search our other <a href="../">open opportunities</a> to participate in research studies</span>
+						<div class="missedOut">Please search our other <a href="../">open opportunities</a> to participate in research studies</div>
 				<?php } ?>
 				
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
@@ -187,6 +187,7 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }
 .missedOut {
 	text-align: center;
+	font-size: 14px;
 }	
 .researchOpp-quals ul {
 	list-style-type: none;
