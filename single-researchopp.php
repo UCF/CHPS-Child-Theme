@@ -52,7 +52,16 @@ $deadline = get_field( 'research_enddate' );
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?><br>
 				TODAY: <?php echo $today; ?><br>
-				DEADLINE: <?php echo $deadline; ?>
+				DEADLINE: <?php echo $deadline; ?><br><br>
+				<?php
+					if ($today>$deadline)
+					{
+					echo 'post is LIVE';
+					}
+					else {
+					echo 'post has expired';
+					}
+				?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<div class="btnhover-yellow">
