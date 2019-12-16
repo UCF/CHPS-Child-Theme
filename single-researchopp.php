@@ -6,27 +6,6 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
-
-//Get array of terms
-$terms = get_the_terms( $post->ID , 'departments', 'string');
-//Pluck out the IDs to get an array of IDS
-$term_ids = wp_list_pluck($terms,'term_id');
-//Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
-//Chose 'AND' if you want to query for posts with all terms
-  $second_query = new WP_Query( array(
-      'post_type' => 'researchopp',
-      'tax_query' => array(
-                    array(
-                        'taxonomy' => 'departments',
-                        'field' => 'id',
-                        'terms' => $term_ids,
-                        'operator'=> 'IN' //Or 'AND' or 'NOT IN'
-                     )),
-      'posts_per_page' => 3,
-      'ignore_sticky_posts' => 1,
-      'orderby' => 'rand',
-      'post__not_in'=>array($post->ID)
-   ) );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -146,6 +125,26 @@ $term_ids = wp_list_pluck($terms,'term_id');
 			</a>	
 		</div>
 	<?php
+	//Get array of terms
+$terms = get_the_terms( $post->ID , 'departments', 'string');
+//Pluck out the IDs to get an array of IDS
+$term_ids = wp_list_pluck($terms,'term_id');
+//Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
+//Chose 'AND' if you want to query for posts with all terms
+  $second_query = new WP_Query( array(
+      'post_type' => 'researchopp',
+      'tax_query' => array(
+                    array(
+                        'taxonomy' => 'departments',
+                        'field' => 'id',
+                        'terms' => $term_ids,
+                        'operator'=> 'IN' //Or 'AND' or 'NOT IN'
+                     )),
+      'posts_per_page' => 3,
+      'ignore_sticky_posts' => 1,
+      'orderby' => 'rand',
+      'post__not_in'=>array($post->ID)
+   ) );
 	//Loop through posts and display...
     if($second_query->have_posts()) {
      while ($second_query->have_posts() ) : $second_query->the_post(); ?>
