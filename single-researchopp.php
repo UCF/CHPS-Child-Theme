@@ -11,7 +11,7 @@ $research_unit_terms = get_field( 'research_unit' );
 	<article class="publish post-list-item">
 	<div class="row">
 		<div class="col-md-12 mb-4">
-			<a class="cattitle-single" href="../research-opp/">CHPS RESEARCH OPPORTUNITIES</a>
+			<a class="cattitle-single" href="../researchopp/">CHPS RESEARCH OPPORTUNITIES</a>
 			<h1><?php the_title(); ?></h1>
 		</div>
 	</div>
@@ -41,7 +41,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				<div id="researchOpp-particiForm">
 					<h2>Participate in this Research</h2>
 					<span style="font-size: 13px;">Submitting this form will put you in contact with the main point of contact for this project. They will provide more information and determine if you meet all of the qualifications needed.</span>
-					<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=david@reviewmetoday.com&amp;opportunity_titlename=This Is The Title...."]' ); ?>
+					<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=This Is The Title...."]' ); ?>
 				</div>
 				</div>	
 			</div>
