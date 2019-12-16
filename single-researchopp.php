@@ -127,7 +127,7 @@ $research_unit_terms = get_field( 'research_unit' );
 	<?php
 		// get the custom post type's taxonomy terms
  
-$custom_taxterms = wp_get_object_terms( $post->ID, 'departments', array('fields' => 'ids') );
+$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
 // arguments
 $args = array(
 'post_type' => 'researchopp',
@@ -136,7 +136,7 @@ $args = array(
 'orderby' => 'rand',
 'tax_query' => array(
     array(
-        'taxonomy' => 'departments',
+        'taxonomy' => 'researchopp_unit',
         'field' => 'id',
         'terms' => $custom_taxterms
     )
