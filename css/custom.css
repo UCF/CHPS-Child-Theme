@@ -538,6 +538,11 @@ article blockquote p {
 	float: right;
 	margin: 0px 0px 20px 20px;
 }
+#imgRight-medium {
+	max-width: 350px;
+	float: right;
+	margin: 0px 0px 20px 20px;
+}
 #imgLeft-small {
 	max-width: 250px;
 	float: left;

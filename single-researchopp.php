@@ -25,7 +25,7 @@ $research_unit_terms = get_field( 'research_unit' );
 							</div>
 					   <?php endif; ?>
 					   <?php if( get_field('featimg_location') == 'Right Aligned' ): ?>
-							<div id="imgRight-small">
+							<div id="imgRight-medium">
 								<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="Enlarge the image for the CHPS News story titled: <?php echo the_title(); ?>"><img width="100%" alt="<?php if (!empty($alt)) { echo $alt; } else { echo the_title(); } ?>" src="<?php echo $getimageURL ?>" /></a>
 							</div>
 					   <?php endif; ?>
