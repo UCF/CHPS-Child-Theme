@@ -103,60 +103,40 @@ $research_unit_terms = get_field( 'research_unit' );
 		</div>
 	</div>	
 	<div class="row">	
-		<div class="col-md-4 researchOpp-relateLink">
-			<a href="#">
-			<div class="researchOpp-relateCard">
-				This is a title of a related research opportunity connected by Unit which could be a long title still
-			</div>
-			</a>	
-		</div>
-		<div class="col-md-4 researchOpp-relateLink">
-			<a href="#">
-			<div class="researchOpp-relateCard">
-				This is a title of a related research opportunity connected by Unit which could be a long title still
-			</div>
-			</a>	
-		</div>
-		<div class="col-md-4 researchOpp-relateLink">
-			<a href="#">
-			<div class="researchOpp-relateCard">
-				This is a title of a related research opportunity connected by Unit which could be a long title still
-			</div>
-			</a>	
-		</div>
-	<?php
-		// get the custom post type's taxonomy terms
- 
-$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
-// arguments
-$args = array(
-'post_type' => 'researchopp',
-'post_status' => 'publish',
-'posts_per_page' => 3, // you may edit this number
-'orderby' => 'rand',
-'tax_query' => array(
-    array(
-        'taxonomy' => 'researchopp_unit',
-        'field' => 'id',
-        'terms' => $custom_taxterms
-    )
-),
-'post__not_in' => array ($post->ID),
-);
-$related_items = new WP_Query( $args );
-// loop over query
-if ($related_items->have_posts()) :
-echo '<ul>';
-while ( $related_items->have_posts() ) : $related_items->the_post();
-?>
-    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
-<?php
-endwhile;
-echo '</ul>';
-endif;
-// Reset Post Data
-wp_reset_postdata();
-	?>
+		<?php
+			// get the custom post type's taxonomy terms
+			$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
+			// arguments
+			$args = array(
+			'post_type' => 'researchopp',
+			'post_status' => 'publish',
+			'posts_per_page' => 3, // you may edit this number
+			'orderby' => 'rand',
+			'tax_query' => array(
+				array(
+					'taxonomy' => 'researchopp_unit',
+					'field' => 'id',
+					'terms' => $custom_taxterms
+				)
+			),
+			'post__not_in' => array ($post->ID),
+			);
+			$related_items = new WP_Query( $args );
+			// loop over query
+			if ($related_items->have_posts()) :
+			while ( $related_items->have_posts() ) : $related_items->the_post();
+		?>
+			<div class="col-md-4 researchOpp-relateLink">
+				<a href="<?php the_permalink(); ?>">
+					<div class="researchOpp-relateCard"><?php the_title(); ?></div>
+				</a>	
+			</div>		
+		<?php
+			endwhile;
+			endif;
+			// Reset Post Data
+			wp_reset_postdata();
+		?>
 	</div>
 	</article>
 </div>
