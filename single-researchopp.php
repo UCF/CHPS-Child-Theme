@@ -124,22 +124,22 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>
 		</div>	
 		<div class="container">
-		<div class="row row-flex">
-		<?php
-			while ( $related_items->have_posts() ) : $related_items->the_post();
-		?>
-			<div class="col-md-4 researchOpp-relateLink">
-				<a href="<?php the_permalink(); ?>">
-					<div class="researchOpp-relateCard"><?php the_title(); ?></div>
-				</a>	
-			</div>		
-		<?php
-			endwhile;
-			echo '</div></div>';
-			endif;
-			// Reset Post Data
-			wp_reset_postdata();
-		?>
+			<div class="row">
+			<?php
+				while ( $related_items->have_posts() ) : $related_items->the_post();
+			?>
+				<div class="col-md-4 researchOpp-relateLink">
+					<a href="<?php the_permalink(); ?>">
+						<div class="researchOpp-relateCard"><?php the_title(); ?></div>
+					</a>	
+				</div>		
+			<?php
+				endwhile;
+				echo '</div></div>';
+				endif;
+				// Reset Post Data
+				wp_reset_postdata();
+			?>
 	</div>
 	</article>
 </div>
