@@ -128,9 +128,9 @@ $research_unit_terms = get_field( 'research_unit' );
 			<?php
 				while ( $related_items->have_posts() ) : $related_items->the_post();
 			?>
-				<div class="col-md-4 researchOpp-relateLink">
+				<div class="col-md-4">
 					<a href="<?php the_permalink(); ?>">
-						<div class="researchOpp-relateCard"><?php the_title(); ?></div>
+						<div class=""><?php the_title(); ?></div>
 					</a>	
 				</div>		
 			<?php
