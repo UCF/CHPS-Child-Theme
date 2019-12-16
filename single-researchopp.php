@@ -111,7 +111,12 @@ $deadline = get_field( 'research_enddate' );
 		</div>
 	</div>	
 		<?php
-			// get the custom post type's taxonomy terms
+		$today_date = date("Y/m/d");		
+		$format_in = 'F j, Y'; // the format your value is saved in (set in the field options)
+		$format_out = 'Y/m/d'; // the format you want to end up with
+		$newdate = DateTime::createFromFormat($format_in, get_field('research_enddate'));
+		$finaldate = $newdate->format( $format_out );	
+		// get the custom post type's taxonomy terms
 			$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
 			// arguments
 			$args = array(
@@ -128,11 +133,11 @@ $deadline = get_field( 'research_enddate' );
 			),
 			'meta_query' => array(
 				array(
-					'key' => 'research_enddate',
+					'key' => $finaldate,
 				),
 				array(
-					'key' => 'research_enddate',
-					'value' => $today,
+					'key' => $finaldate,
+					'value' => $today_date,
 					'compare' => '>'
 				)
 			),		
