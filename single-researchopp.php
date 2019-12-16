@@ -60,7 +60,7 @@ $deadline = get_field( 'research_enddate' );
 						</div>
 					<?php } else { ?>
 						<div class="btnhover-red">
-							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity has Closed</a>
+							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity Has Closed</a>
 						</div>
 						<div class="missedOut">Please search our other <a href="../">open opportunities</a> to participate in research studies</div>
 				<?php } ?>
@@ -187,7 +187,9 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }
 .missedOut {
 	text-align: center;
-	font-size: 14px;
+	font-size: 13px;
+	line-height: 13px;
+	margin-top: 5px;
 }	
 .researchOpp-quals ul {
 	list-style-type: none;
