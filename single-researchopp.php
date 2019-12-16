@@ -123,6 +123,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				<h2 class="heading-underline">Related Research Participation Opportunities</h2> 	
 			</div>
 		</div>	
+		<div class="container">
 		<div class="row row-flex">
 		<?php
 			while ( $related_items->have_posts() ) : $related_items->the_post();
@@ -134,7 +135,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			</div>		
 		<?php
 			endwhile;
-			echo '</div>';
+			echo '</div></div>';
 			endif;
 			// Reset Post Data
 			wp_reset_postdata();
