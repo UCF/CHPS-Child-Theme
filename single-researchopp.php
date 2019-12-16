@@ -126,7 +126,7 @@ $deadline = get_field( 'research_enddate' );
 				array(
 					'key' => 'research_enddate',
 					'value' => $today,
-					'compare' => '>='
+					'compare' => '<='
 				)
 			),	
 			'tax_query' => array(
