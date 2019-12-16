@@ -111,7 +111,7 @@ $deadline = get_field( 'research_enddate' );
 		</div>
 	</div>	
 		<?php
-		// get the custom post type's taxonomy terms
+			// get the custom post type's taxonomy terms
 			$custom_taxterms = wp_get_object_terms( $post->ID, 'researchopp_unit', array('fields' => 'ids') );
 			// arguments
 			$args = array(
@@ -125,7 +125,17 @@ $deadline = get_field( 'research_enddate' );
 					'field' => 'id',
 					'terms' => $custom_taxterms
 				)
-			),	
+			),
+			'meta_query' => array(
+				array(
+					'key' => 'research_enddate',
+				),
+				array(
+					'key' => 'research_enddate',
+					'value' => $today,
+					'compare' => '>'
+				)
+			),		
 			'post__not_in' => array ($post->ID),
 			);
 			$related_items = new WP_Query( $args );
