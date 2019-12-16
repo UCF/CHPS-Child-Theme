@@ -6,6 +6,8 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
+$today = strtotime(get_the_date("F j, Y"));
+$deadline = get_field( 'research_enddate' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -48,7 +50,9 @@ $research_unit_terms = get_field( 'research_unit' );
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
-				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
+				<strong>IRB#:</strong> <?php the_field('research_irb'); ?><br>
+				TODAY: <?php echo $today; ?><br>
+				DEADLINE: <?php echo $deadline; ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<div class="btnhover-yellow">
