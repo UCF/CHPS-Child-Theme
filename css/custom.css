@@ -735,8 +735,8 @@ a.fk-socialicon {
 		line-height: 1.1rem !important;
 	}
 	#imgRight-medium {
-		width: 100%;
-		margin: 0px 0px 20px 0px;
+		width: 100% !important;
+		margin: 0px 0px 20px 0px !important;
 	}
 }	
 @media (max-width: 1200px) and (min-width: 768px)  {
