@@ -6,7 +6,7 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
-$today = strtotime(get_the_date("F j, Y"));
+$today = date("F j, Y");  
 $deadline = get_field( 'research_enddate' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
