@@ -130,7 +130,7 @@ $research_unit_terms = get_field( 'research_unit' );
 			?>
 				<div class="col-md-4">
 					<a href="<?php the_permalink(); ?>">
-						<div class="exInfo"><?php the_title(); ?></div>
+						<div class="researchOpp-relateCard"><?php the_title(); ?></div>
 					</a>	
 				</div>		
 			<?php
@@ -168,8 +168,11 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 	color:#ffcc00;
 }
 .researchOpp-relateCard {
-	border:1px #d8d8d8 solid; 
+	border:1px #ddd solid; 
 	padding:25px;
+	height: 100%;
+    line-height:18px;
+    font-size: 16px !important;
 }
 .researchOpp-relateCard:hover {
 	background-color: #000;
