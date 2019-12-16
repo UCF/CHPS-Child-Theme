@@ -126,16 +126,6 @@ $deadline = get_field( 'research_enddate' );
 					'terms' => $custom_taxterms
 				)
 			),
-			'meta_query' => array(
-				array(
-					'key' => 'research_enddate',
-				),
-				array(
-					'key' => 'research_enddate',
-					'value' => $today,
-					'compare' => '>'
-				)
-			),		
 			'post__not_in' => array ($post->ID),
 			);
 			$related_items = new WP_Query( $args );
