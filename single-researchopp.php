@@ -133,7 +133,7 @@ $deadline = get_field( 'research_enddate' );
 				array(
 					'key' => 'research_enddate',
 					'value' => $today,
-					'compare' => '>='
+					'compare' => '>'
 				)
 			),		
 			'post__not_in' => array ($post->ID),
