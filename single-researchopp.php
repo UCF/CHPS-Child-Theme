@@ -38,15 +38,18 @@ $deadline = get_field( 'research_enddate' );
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
-			<div class="pt-4" id="getStarted">
-				<div id="participationForm">
-				<div id="researchOpp-particiForm">
-					<h2>Participate in this Research</h2>
-					<span style="font-size: 13px;">Submitting this form will put you in contact with the main point of contact for this project. They will provide more information and determine if you meet all of the qualifications needed.</span>
-					<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
-				</div>
-				</div>	
-			</div>
+			<?php
+				if ($today<$deadline) {  ?>
+					<div class="pt-4" id="getStarted">
+						<div id="participationForm">
+						<div id="researchOpp-particiForm">
+							<h2>Participate in this Research</h2>
+							<span style="font-size: 13px;">Submitting this form will put you in contact with the main point of contact for this project. They will provide more information and determine if you meet all of the qualifications needed.</span>
+							<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
+						</div>
+						</div>	
+					</div>
+				<?php } else { } ?>
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
