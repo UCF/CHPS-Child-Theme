@@ -125,40 +125,38 @@ $research_unit_terms = get_field( 'research_unit' );
 			</a>	
 		</div>
 	<?php
-	//Get array of terms
-$terms = get_the_terms( $post->ID , 'departments', 'string');
-//Pluck out the IDs to get an array of IDS
-$term_ids = wp_list_pluck($terms,'term_id');
-//Query posts with tax_query. Choose in 'IN' if want to query posts with any of the terms
-//Chose 'AND' if you want to query for posts with all terms
-  $second_query = new WP_Query( array(
-      'post_type' => 'researchopp',
-      'tax_query' => array(
-                    array(
-                        'taxonomy' => 'departments',
-                        'field' => 'id',
-                        'terms' => $term_ids,
-                        'operator'=> 'IN' //Or 'AND' or 'NOT IN'
-                     )),
-      'posts_per_page' => 3,
-      'ignore_sticky_posts' => 1,
-      'orderby' => 'rand',
-      'post__not_in'=>array($post->ID)
-   ) );
-	//Loop through posts and display...
-    if($second_query->have_posts()) {
-     while ($second_query->have_posts() ) : $second_query->the_post(); ?>
-      <div class="single_related">
-           <?php if (has_post_thumbnail()) { ?>
-            <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"> <?php the_post_thumbnail( 'related_sm', array('alt' => get_the_title()) ); ?> </a>
-            <?php } else { ?>
-                 <a href="<?php the_permalink() ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-            <?php } ?>
-       </div>
-   <?php endwhile; wp_reset_query();
-   }	
+		// get the custom post type's taxonomy terms
+ 
+$custom_taxterms = wp_get_object_terms( $post->ID, 'departments', array('fields' => 'ids') );
+// arguments
+$args = array(
+'post_type' => 'researchopp',
+'post_status' => 'publish',
+'posts_per_page' => 3, // you may edit this number
+'orderby' => 'rand',
+'tax_query' => array(
+    array(
+        'taxonomy' => 'departments',
+        'field' => 'id',
+        'terms' => $custom_taxterms
+    )
+),
+'post__not_in' => array ($post->ID),
+);
+$related_items = new WP_Query( $args );
+// loop over query
+if ($related_items->have_posts()) :
+echo '<ul>';
+while ( $related_items->have_posts() ) : $related_items->the_post();
+?>
+    <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
+<?php
+endwhile;
+echo '</ul>';
+endif;
+// Reset Post Data
+wp_reset_postdata();
 	?>
-		
 	</div>
 	</article>
 </div>
