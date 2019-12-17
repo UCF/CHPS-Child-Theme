@@ -104,6 +104,7 @@
 	font-size: 16px !important;
 	padding:8px !important;
 	border: 0px solid #f2f2f2 !important;
+	width: 100% !important;	
 }	
 /* repeated CSS code */
 .researchOpp-quals ul {
