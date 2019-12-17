@@ -120,7 +120,8 @@ function recexnewsvar( $atts ) {
 			<li class="cat-item">
 				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank">
 				  <?php the_title(); ?>
-				</a>
+				</a><br>
+				<?php the_field('external_newsmedia_name'); ?>
 			</li>
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
