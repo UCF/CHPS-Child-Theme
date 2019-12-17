@@ -41,7 +41,7 @@
 				$payment = get_field('research_money'); 
 				?>
 				<div class="row mb-1">
-					<div class="col-lg-12 p-3"> 
+					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 							<i class="fa fa-briefcase iconyellow"></i> 
 							<?php
