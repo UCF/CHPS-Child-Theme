@@ -43,7 +43,7 @@
 							<i class="fa fa-briefcase iconyellow"></i> 
 							<?php
 							// Get a list of terms for this post's custom taxonomy.
-							$project_depts = get_the_terms('research_unit');
+							$project_depts = get_field( 'research_unit' );
 							// Renumber array.
 							$project_depts = array_values($project_depts);
 							for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
