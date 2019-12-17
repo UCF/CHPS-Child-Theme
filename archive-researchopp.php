@@ -109,6 +109,11 @@
 	border: 0px solid #f2f2f2 !important;
 	width: 100% !important;	
 }	
+.searchandfilter li[data-sf-field-input-type="select"] label{
+	width: 100% !important;	
+	background-color: red !important;
+	}	
+	
 /* repeated CSS code */
 .researchOpp-quals ul {
 	list-style-type: none;
