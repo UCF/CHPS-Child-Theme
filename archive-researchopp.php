@@ -29,7 +29,7 @@
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 
 		<div class="row">
-			<div class="col-lg-8 col-md-12">
+			<div class="col-lg-8 col-md-12 pt-4">
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
