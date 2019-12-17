@@ -57,7 +57,7 @@
 									echo ', ';
 								}
 							}?>
-							<i class="fa fa-clock iconyellow" style="margin-left:30px;"></i> Deadline: <?php echo $deadlineShort; ?>
+							<i class="fas fa-clock iconyellow" style="margin-left:30px;"></i> Deadline: <?php echo $deadlineShort; ?>
 							<i class="fa fa-dollar-sign iconyellow" style="margin-left:30px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
 						<h3 class="h6 mt-2 ml-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
