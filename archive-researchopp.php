@@ -59,7 +59,7 @@
 							}?>
 							<i class="fa fa-clock-o iconyellow" style="margin-left:25px;"></i> Deadline: <?php echo $deadlineShort; ?>
 							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
-						<h3 class="h6 mt-2 ml-2">Minimum Qualifications:</h3> <!-- style this size -->
+						<h3 class="h6 mt-2 ml-3">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-2 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
 						</div>
@@ -71,7 +71,7 @@
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
 			</div>
-			<div class="col-lg-4 profilesidebar pt-4" style="background-color: #f2f2f2;">
+			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'custom-side-bar' ); ?>
 			</div>
 		</div>
