@@ -57,7 +57,7 @@ $deadlineShort = date("M j, Y", strtotime($deadline));
 									echo ', ';
 								}
 							}?>
-							<i class="fa fa-briefcase iconyellow"></i> Deadline: <?php echo $deadlineShort; ?>
+							<i class="fa fa-briefcase iconyellow" style="margin-left:30px;"></i> Deadline: <?php echo $deadlineShort; ?>
 						<h3 class="h6 mt-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
