@@ -1,6 +1,4 @@
 <?php get_header();?>
-<div class="container mb-5 mt-3 mt-lg-5">
-	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -27,6 +25,9 @@
 				</div>
 			</div>
 		</div>
+<div class="container mb-5 mt-3 mt-lg-5">
+	<article class="<?php echo $post->post_status; ?> post-list-item">
+
 		<div class="row">
 			<div class="col-lg-8 col-md-12">
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
