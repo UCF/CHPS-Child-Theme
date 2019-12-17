@@ -121,7 +121,7 @@ function recexnewsvar( $atts ) {
 				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank">
 				  <?php the_title(); ?>
 				</a><br>
-				<?php the_field('external_newsmedia_name'); ?>
+				<span class="newsdate"><?php the_field('external_newsmedia_name'); ?></span>
 			</li>
 			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
