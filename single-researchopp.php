@@ -6,7 +6,7 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
-$today = date("F j, Y");  
+$today = date("Ymd"); 
 $deadline = get_field( 'research_enddate' );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
@@ -126,6 +126,13 @@ $deadline = get_field( 'research_enddate' );
 					'terms' => $custom_taxterms
 				)
 			),
+			'meta_query' => array(
+			   array(
+				 'key' => 'research_enddate',
+				 'value' => $today,
+				 'compare' => '>='
+			   )
+			 ),	
 			'post__not_in' => array ($post->ID),
 			);
 			$related_items = new WP_Query( $args );
