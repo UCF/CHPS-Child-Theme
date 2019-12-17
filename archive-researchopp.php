@@ -1,6 +1,4 @@
-<?php get_header();
-$research_unit_terms = get_field( 'research_unit' );
-?>
+<?php get_header();?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -41,12 +39,21 @@ $research_unit_terms = get_field( 'research_unit' );
 				?>
 				<div class="row mb-3">
 					<div class="col-lg-12 p-3"> 
-						<h2 class="h4 pt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-						<?php if ( $research_unit_terms ): ?>
-							<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
-								<i class="fa fa-briefcase iconyellow"></i> <?php echo $research_unit_term->name; ?>
-							<?php endforeach; ?>
-						<?php endif; ?>
+						<h2 class="h4"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+							<i class="fa fa-briefcase iconyellow"></i> 
+							<?php
+							// Get a list of terms for this post's custom taxonomy.
+							$project_depts = get_the_terms($post->ID, 'research_unit');
+							// Renumber array.
+							$project_depts = array_values($project_depts);
+							for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
+								// Each array item is an object. Display its 'name' value.
+								echo $project_depts[$dept_count]->name;
+								// If there is more than one term, comma separate them.
+								if ($dept_count<count($project_depts)-1){
+									echo ', ';
+								}
+							}?>
 						<h3 class="h6">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
