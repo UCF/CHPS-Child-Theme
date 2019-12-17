@@ -72,7 +72,7 @@
 				</div>
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'custom-side-bar' ); ?>
+				<?php dynamic_sidebar( 'research-participation' ); ?>
 			</div>
 		</div>
 	</article>
