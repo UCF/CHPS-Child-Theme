@@ -8,6 +8,7 @@ $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
 $today = date("Ymd"); 
 $deadline = get_field( 'research_enddate' );
+$deadlineShort = date("Ymd", strtotime($deadline));	
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -57,7 +58,7 @@ $deadline = get_field( 'research_enddate' );
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<?php
-					if ($today<$deadline) {  ?>
+					if ($today<$deadlineShort) {  ?>
 						<div class="btnhover-yellow">
 							<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate!</a>
 						</div>
