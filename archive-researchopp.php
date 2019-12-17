@@ -1,4 +1,7 @@
-<?php get_header();?>
+<?php get_header();
+$deadline = get_field('research_enddate');
+$deadlineShort = date("M j, Y", strtotime($deadline));	
+?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -54,7 +57,7 @@
 									echo ', ';
 								}
 							}?>
-							<i class="fa fa-briefcase iconyellow"></i> Deadline: <?php the_field('research_enddate'); ?>
+							<i class="fa fa-briefcase iconyellow"></i> Deadline: <?php echo $deadlineShort; ?>
 						<h3 class="h6 mt-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
