@@ -59,8 +59,20 @@
 	</article>
 </div>
 <style>	
-header div.container {
-	display: none;
+.container {
+    margin-top: 0px !important;
+}
+.container h1.mt-sm-4 {
+    display: none !important;
+}
+
+.header-title-wrapper {
+    max-width: 600px;
+}
+@media (min-width: 576px) {
+    .header-media-default {
+        min-height: 500px;
+    }
 }	
 </style>
 <?php get_footer(); ?>
