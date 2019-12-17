@@ -112,7 +112,12 @@
 .searchandfilter li[data-sf-field-input-type="select"] label{
 	width: 100% !important;	
 	background-color: red !important;
-	}	
+}
+.searchandfilter li[data-sf-field-input-type="select"] label select{
+	width: 100% !important;
+	font-size: 16px !important;
+	padding:8px !important;
+}		
 	
 /* repeated CSS code */
 .researchOpp-quals ul {
