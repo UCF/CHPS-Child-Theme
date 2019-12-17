@@ -1,7 +1,4 @@
-<?php get_header();
-$deadline = get_field('research_enddate');
-$deadlineShort = date("M j, Y", strtotime($deadline));	
-?>
+<?php get_header();?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -39,6 +36,8 @@ $deadlineShort = date("M j, Y", strtotime($deadline));
 				$display_name = get_the_author_meta( 'display_name', $post->post_author );
 				$categories = get_the_category();
 				$terms = get_the_terms( $post->ID , 'code_cat' );
+				$deadline = get_field('research_enddate'); 
+				$deadlineShort = date("M j, Y", strtotime($deadline));	
 				?>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3"> 
