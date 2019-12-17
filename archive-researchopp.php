@@ -99,6 +99,7 @@
 }
 .searchandfilter input[name="_sf_search[]"]{
 width: 100%;
+	background-color: red !important;
 }	
 /* repeated CSS code */
 .researchOpp-quals ul {
