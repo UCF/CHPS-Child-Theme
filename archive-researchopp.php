@@ -54,7 +54,7 @@
 									echo ', ';
 								}
 							}?>
-						<h3 class="h6">Minimum Qualifications:</h3> <!-- style this size -->
+						<h3 class="h6 mt-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
 						</div>
