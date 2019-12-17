@@ -40,7 +40,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php the_field('research_qualifications'); ?>
 			</div>
 			<?php
-				if ($today<$deadline) {  ?>
+				if ($today<$deadlineShort) {  ?>
 					<div class="pt-4" id="getStarted">
 						<div id="participationForm">
 						<div id="researchOpp-particiForm">
