@@ -37,7 +37,8 @@
 				$categories = get_the_category();
 				$terms = get_the_terms( $post->ID , 'code_cat' );
 				$deadline = get_field('research_enddate'); 
-				$deadlineShort = date("M j, Y", strtotime($deadline));	
+				$deadlineShort = date("M j, Y", strtotime($deadline));
+				$payment = get_field('research_money'); 
 				?>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3"> 
@@ -57,6 +58,7 @@
 								}
 							}?>
 							<i class="fa fa-briefcase iconyellow" style="margin-left:30px;"></i> Deadline: <?php echo $deadlineShort; ?>
+							<i class="fa fa-briefcase iconyellow" style="margin-left:30px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
 						<h3 class="h6 mt-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
