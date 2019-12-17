@@ -41,7 +41,7 @@
 					<div class="col-lg-12 p-3"> 
 						<h2 class="h5 pt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
-						<h3>Minimum Qualifications:</h3> <!-- style this size -->
+						<h3 class="h6">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
 						</div>
