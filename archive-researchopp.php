@@ -57,8 +57,8 @@
 									echo ', ';
 								}
 							}?>
-							<i class="fa fa-clock-o iconyellow" style="margin-left:30px;"></i> Deadline: <?php echo $deadlineShort; ?>
-							<i class="fa fa-usd iconyellow" style="margin-left:30px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
+							<i class="fa fa-clock-o iconyellow" style="margin-left:25px;"></i> Deadline: <?php echo $deadlineShort; ?>
+							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
 						<h3 class="h6 mt-2 ml-2">Minimum Qualifications:</h3> <!-- style this size -->
 						<div class="mb-4 researchOpp-quals">
 							<?php the_field('research_qualifications'); ?>
