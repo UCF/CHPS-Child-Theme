@@ -30,6 +30,7 @@
 
 		<div class="row">
 			<div class="col-lg-8 col-md-12 pt-4">
+				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
@@ -70,6 +71,9 @@
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
+				<?php else : ?>
+            Sorry No Pages or News Posts Match Your Search
+        <?php endif; ?>
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'research-participation' ); ?>
