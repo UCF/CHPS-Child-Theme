@@ -97,7 +97,7 @@
         min-height: 500px;
     }
 }
-.searchandfilter label {
+.searchandfilter .sf-field-search label {
 	width: 100% !important;	
 }
 .searchandfilter input[name="_sf_search[]"]{
