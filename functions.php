@@ -99,7 +99,7 @@ function facresearch_sidebar() {
 add_action( 'widgets_init', 'facresearch_sidebar' );
 
 // ADDING RESEARCH OPPORTUNITY SIDEBAR
-function facresearch_sidebar() {
+function research_participation() {
     register_sidebar(
         array (
             'name' => __( 'Research Opportunities' ),
@@ -112,7 +112,7 @@ function facresearch_sidebar() {
         )
     );
 }
-add_action( 'widgets_init', 'research-participation' );
+add_action( 'widgets_init', 'research_participation' );
 
 // ADDING FAQ SIDEBAR
 function faq_sidebar() {
