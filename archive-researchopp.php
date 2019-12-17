@@ -52,7 +52,7 @@
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
 			</div>
-			<div class="col-lg-4 profilesidebar" style="background-color: #f2f2f2;">
+			<div class="col-lg-4 profilesidebar pt-4" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'custom-side-bar' ); ?>
 			</div>
 		</div>
