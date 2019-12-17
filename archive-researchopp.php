@@ -41,7 +41,7 @@ $research_unit_terms = get_field( 'research_unit' );
 				?>
 				<div class="row mb-3">
 					<div class="col-lg-12 p-3"> 
-						<h2 class="h5 pt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						<h2 class="h4 pt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<?php if ( $research_unit_terms ): ?>
 							<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
 								<i class="fa fa-briefcase iconyellow"></i> <?php echo $research_unit_term->name; ?>
