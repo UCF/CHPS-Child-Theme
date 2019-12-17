@@ -97,6 +97,9 @@
         min-height: 500px;
     }
 }
+.searchandfilter ul {
+	margin-left: 0px !important;		
+}	
 .searchandfilter .sf-field-search label {
 	width: 100% !important;	
 }
