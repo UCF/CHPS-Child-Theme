@@ -97,7 +97,9 @@
         min-height: 500px;
     }
 }
-	
+.searchandfilter input[name="_sf_search[]"]{
+width: 100%;
+}	
 /* repeated CSS code */
 .researchOpp-quals ul {
 	list-style-type: none;
