@@ -98,8 +98,10 @@
     }
 }
 .searchandfilter input[name="_sf_search[]"]{
-width: 100%;
-	background-color: red !important;
+width: 100% !important;
+	font-size: 16px !important;
+	padding:8px !important;
+	background-color: green !important;
 }	
 /* repeated CSS code */
 .researchOpp-quals ul {
