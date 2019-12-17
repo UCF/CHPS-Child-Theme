@@ -13,7 +13,7 @@ function externalnewsvar( $atts ) {
 			);
 $showexnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
 while($externalnews->have_posts()) : $externalnews->the_post();
-	$showexnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '" target="_blank"><div class="exInfo">' . get_the_title() . '<p class="newsdate">' . get_the_time('F j, Y') . '</p></div></a></div>';
+	$showexnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '" target="_blank"><div class="exInfo">' . get_the_title() . '<p class="newsdate">' . get_the_field( 'external_newsmedia_name' ) . '</p></div></a></div>';
 endwhile;
 $showexnews .= '</div></div>';
 wp_reset_query();
