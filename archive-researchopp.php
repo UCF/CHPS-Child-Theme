@@ -97,11 +97,13 @@
         min-height: 500px;
     }
 }
+.searchandfilter label {
+	width: 100% !important;	
+}
 .searchandfilter input[name="_sf_search[]"]{
-width: 100% !important;
 	font-size: 16px !important;
 	padding:8px !important;
-	background-color: green !important;
+	border: 0px solid #f2f2f2 !important;
 }	
 /* repeated CSS code */
 .researchOpp-quals ul {
