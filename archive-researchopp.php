@@ -37,7 +37,7 @@
 				$categories = get_the_category();
 				$terms = get_the_terms( $post->ID , 'code_cat' );
 				?>
-				<div class="row mb-4 cat-border">
+				<div class="row mb-4">
 					<div class="col-lg-12 p-4"> 
 						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
