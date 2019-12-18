@@ -121,17 +121,15 @@ function recexnewsvar( $atts ) {
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
-    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2><br>	
+    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
     	<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
-			<!-- START THE REPEAT SECTION -->   
 			<li class="cat-item">
 				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank">
 				  <?php the_title(); ?>
 				</a><br>
 				<span class="newsdate-blog mb-2"><?php the_field('external_newsmedia_name'); ?></span>
 			</li>
-			<!-- END OF THE REPEAT SECTION -->		
 		<?php endwhile; ?>
    		</ul>
 	</div>
