@@ -284,6 +284,7 @@ html {
     background-color:#000;
     padding:25px 25px 5px 25px;
     min-height:100px;
+	color: #fff;
 }
 #researchOpp-missedForm h2{
     margin-bottom:0px !important;
