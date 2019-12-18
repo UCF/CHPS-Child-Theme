@@ -50,7 +50,17 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						</div>
 						</div>	
 					</div>
-				<?php } else { } ?>
+				<?php } else { ?>
+					<div class="pt-4" id="getStarted">
+						<div id="participationForm">
+						<div id="researchOpp-missedForm">
+							<h2>Get Notified of Future Opportunities</h2>
+							<span style="font-size: 13px;">Submitting this form will add you to our list to be notified of future research participation opportunities.</span>
+							<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
+						</div>
+						</div>	
+					</div>		
+				<?php } ?>
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
@@ -238,6 +248,9 @@ html {
 .vc_btn3-container {
 	margin-bottom: 0px !important;
 }
+.gform_wrapper {
+    margin-top:0px !important;
+}
 #researchOpp-particiForm {
     background-color:#ffcc00;
     padding:25px 25px 5px 25px;
@@ -245,9 +258,6 @@ html {
 }
 #researchOpp-particiForm h2{
     margin-bottom:0px !important;
-}
-.gform_wrapper {
-    margin-top:0px !important;
 }
 #researchOpp-particiForm .gfield_label {
     display:none;
@@ -264,6 +274,35 @@ html {
     background:#404040;
 }
 #researchOpp-particiForm .validation_error {
+    color:red !important;
+    font-size:15px !important;
+}
+	
+	
+	
+#researchOpp-missedForm {
+    background-color:#000;
+    padding:25px 25px 5px 25px;
+    min-height:100px;
+}
+#researchOpp-missedForm h2{
+    margin-bottom:0px !important;
+}
+#researchOpp-missedForm .gfield_label {
+    display:none;
+}
+#researchOpp-missedForm .gform_button {
+    padding: 10px 35px;
+    font-size: 20px;
+    background:#ffcc00;
+    color:#000;
+    border: 0px solid;
+    cursor: pointer;
+}
+#researchOpp-missedForm .gform_button:hover {
+    background:#cca12e;
+}
+#researchOpp-missedForm .validation_error {
     color:red !important;
     font-size:15px !important;
 }	
