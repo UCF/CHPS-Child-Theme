@@ -176,6 +176,7 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 	text-align: center; 
 	background-color:#ffcc00; 
 	color:#000000;
+	scroll-behavior: smooth;
 }
 .yellowBTN-full:hover {
 	text-decoration: none;
