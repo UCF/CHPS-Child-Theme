@@ -104,6 +104,7 @@ function recexnewsvar( $atts ) {
 	$cattitle = single_cat_title();
     $b = shortcode_atts( array(
         'number' => '10',
+		'category' => $cattitle,
         //'category' => 'something else',
     ), $atts );
 		$recexnews = new WP_Query(array(
@@ -111,11 +112,11 @@ function recexnewsvar( $atts ) {
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
+				'category_name' => $b['category'],
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
-    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2><br>
-<p><?php echo $cattitle; ?>!!!!!!</p>		
+    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2><br>	
     	<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
