@@ -101,18 +101,17 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 //
 // [recentexnews category="" number=""]
 function recexnewsvar( $atts ) {
-	$cattitle = single_cat_title();
+	//$cattitle = single_cat_title();
     $b = shortcode_atts( array(
         'number' => '10',
-		'category' => $cattitle,
-        //'category' => 'something else',
+		//'category' => $cattitle,
     ), $atts );
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
-				'category_name' => 'academics',
+				'tax' => 'academics',
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
