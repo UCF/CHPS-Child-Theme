@@ -334,7 +334,7 @@ $list = '<div class="' . $b['class'] . '"><ul>';
 		$list .= '<li><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
 }
 	else {
-		$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li>';
+		$list .= '<li><a href="' . get_the_permalink() . '" title="' . get_the_title() . '">' . get_the_title() . '</a></li><br><span class="newsdate-blog">' . get_field('external_newsmedia_name') . '</span>';
 	}
 	endwhile;
 $list .= '</ul></div>';						
