@@ -123,7 +123,7 @@ $category = get_queried_object();
 			);?> 	
     <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
 		<?php 
-		echo $category->term_id;
+		echo $category->term_name;
 		?>
 		<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
