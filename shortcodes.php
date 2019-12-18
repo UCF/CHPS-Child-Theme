@@ -101,11 +101,11 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 //
 // [recentexnews category="" number=""]
 function recexnewsvar( $atts ) {
-	//$cattitle = single_cat_title();
     $b = shortcode_atts( array(
         'number' => '10',
 		//'category' => $cattitle,
     ), $atts );
+	$cattitle = single_cat_title();
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
@@ -122,7 +122,8 @@ function recexnewsvar( $atts ) {
 				)
 			);?> 	
     <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
-    	<ul>
+    <?php echo $cattitle;?>		
+		<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<li class="cat-item">
 				<a href="<?php the_field('external_newsmedia_link'); ?>" title="<?php the_title(); ?>" target="_blank">
