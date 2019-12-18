@@ -112,7 +112,7 @@ function recexnewsvar( $atts ) {
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
-				'category_name' => $b['category'],
+				'category_name' => 'Academics',
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
