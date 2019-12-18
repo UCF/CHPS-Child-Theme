@@ -115,7 +115,7 @@ function recexnewsvar( $atts ) {
 					array (
 						'taxonomy' => 'externalnews_unit',
 						'field' => 'name',
-						'terms' => single_cat_title(),
+						'terms' => 'Health Sciences',
 					)
 				),
 				'posts_per_page' => $b['number'],
