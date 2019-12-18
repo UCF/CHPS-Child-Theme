@@ -113,7 +113,8 @@ function recexnewsvar( $atts ) {
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
-    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>		
+    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2><br>
+<p><?php single_cat_title('Currently browsing '); ?>.</p>		
     	<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<!-- START THE REPEAT SECTION -->   
