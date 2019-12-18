@@ -169,6 +169,9 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 .site-header .container h1 {display: none !important;}
 article h2 { font-size: 26px; margin-bottom: 16px;}	
 article h3 { font-size: 20px; margin-bottom: 16px;}	
+html {
+	scroll-behavior: smooth;
+}	
 .yellowBTN-full {
 	display: block; 
 	font-size: 16px;  
@@ -176,7 +179,6 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 	text-align: center; 
 	background-color:#ffcc00; 
 	color:#000000;
-	scroll-behavior: smooth;
 }
 .yellowBTN-full:hover {
 	text-decoration: none;
