@@ -113,7 +113,7 @@ function recexnewsvar( $atts ) {
 				'order' => 'DESC',
 				'tax_query' => array(
 					array (
-						'taxonomy' => 'researchopp_unit',
+						'taxonomy' => 'externalnews_unit',
 						'field' => 'name',
 						'terms' => 'Academics',
 					)
