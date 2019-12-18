@@ -444,6 +444,13 @@ span.searchresults	{
     color: #aaa;
     font-style: italic;
 }
+.newsdate-blog {
+    margin-top:15px;
+    display:block;
+    font-weight:normal;
+    color: #ddd;
+    font-style: italic;
+}
 .newsmedia .exInfo {
   height: 100%;
   padding: 12px;
