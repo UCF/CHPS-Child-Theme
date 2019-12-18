@@ -103,9 +103,10 @@ add_shortcode( 'newsvisual', 'newsvisualvar' );
 function recexnewsvar( $atts ) {
     $b = shortcode_atts( array(
         'number' => '10',
-		//'category' => $cattitle,
+		//'category' => $catname,
     ), $atts );
 $category = get_queried_object();
+$catname = $category->name;
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
@@ -115,16 +116,13 @@ $category = get_queried_object();
 					array (
 						'taxonomy' => 'externalnews_unit',
 						'field' => 'name',
-						'terms' => 'Health Sciences',
+						'terms' => $catname,
 					)
 				),
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
     <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
-		<?php 
-		echo $category->name;
-		?>
 		<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<li class="cat-item">
