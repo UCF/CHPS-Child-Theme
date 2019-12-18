@@ -55,7 +55,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						<div id="participationForm">
 						<div id="researchOpp-missedForm">
 							<h2>Get Notified of Future Opportunities</h2>
-							<span style="font-size: 13px;">Submitting this form will add you to our list to be notified of future research participation opportunities.</span>
+							<span style="font-size: 13px;">Subscribe to our email list to be automatically notified of all future research participation opportunities as soon as they become available.</span>
 							<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
 						</div>
 						</div>	
@@ -76,7 +76,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						<div class="btnhover-red">
 							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity Has Closed</a>
 						</div>
-						<div class="missedOut">Please search our other <a href="../">open opportunities</a> to participate in research studies</div>
+						<div class="missedOut">Please consider <a href="#getStarted">subscribing to get notified</a> about future research participation opportunities</div>
 				<?php } ?>
 				
 				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
@@ -198,7 +198,7 @@ html {
 	font-size: 16px;  
 	padding: 18px 25px; 
 	text-align: center; 
-	background-color:#990000; 
+	background-color:#cc0000; 
 	color:#fff;
 }
 .redBTN-full:hover {
