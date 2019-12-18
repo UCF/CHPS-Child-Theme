@@ -105,7 +105,7 @@ function recexnewsvar( $atts ) {
         'number' => '10',
 		//'category' => $cattitle,
     ), $atts );
-	//$cattitle = single_cat_title();
+	$cattitle = 'Academics';
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
