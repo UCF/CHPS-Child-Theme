@@ -121,11 +121,10 @@ $catname = $category->name;
 				),
 				'posts_per_page' => $b['number'],
 				)
-			);
-$loop = new WP_Query( $recexnews );	
-if ( $loop->have_posts() ) : 
-?>
-    <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
+			);?> 
+<?php if ($recexnews->have_posts()){?>	
+    <div id="categories-4" class="widget widget_categories widgetFix">
+		<h2 class="h5 heading-underline">In the Media</h2>	
 		<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<li class="cat-item">
@@ -137,7 +136,7 @@ if ( $loop->have_posts() ) :
 		<?php endwhile; ?>
    		</ul>
 	</div>
-<?php endif; ?>
+<?php } ?>
 <?php wp_reset_query(); ?> 
 <?php }
 add_shortcode( 'recentexnews', 'recexnewsvar' );
