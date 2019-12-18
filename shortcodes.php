@@ -105,7 +105,7 @@ function recexnewsvar( $atts ) {
         'number' => '10',
 		//'category' => $cattitle,
     ), $atts );
-	$cattitle = single_cat_title();
+	//$cattitle = single_cat_title();
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
@@ -115,14 +115,13 @@ function recexnewsvar( $atts ) {
 					array (
 						'taxonomy' => 'externalnews_unit',
 						'field' => 'name',
-						'terms' => '',
+						'terms' => single_cat_title(),
 					)
 				),
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
     <div id="categories-4" class="widget widget_categories widgetFix"><h2 class="h5 heading-underline">In the Media</h2>	
-    <?php echo $cattitle;?>		
 		<ul>
 		<?php while($recexnews->have_posts()) : $recexnews->the_post();?>	
 			<li class="cat-item">
