@@ -445,10 +445,10 @@ span.searchresults	{
     font-style: italic;
 }
 .newsdate-blog {
-    margin-top:15px;
+    margin-top:5px;
     display:block;
     font-weight:normal;
-    color: #ddd;
+    color: #777;
     font-style: italic;
 }
 .newsmedia .exInfo {
