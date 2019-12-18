@@ -111,7 +111,13 @@ function recexnewsvar( $atts ) {
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
 				'order' => 'DESC',
-				'tax' => 'academics',
+				'tax_query' => array(
+					array (
+						'taxonomy' => 'researchopp_unit',
+						'field' => 'slug',
+						'terms' => 'academics',
+					)
+				),
 				'posts_per_page' => $b['number'],
 				)
 			);?> 	
