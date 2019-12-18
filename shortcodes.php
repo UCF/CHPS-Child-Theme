@@ -114,8 +114,8 @@ function recexnewsvar( $atts ) {
 				'tax_query' => array(
 					array (
 						'taxonomy' => 'researchopp_unit',
-						'field' => 'slug',
-						'terms' => 'academics',
+						'field' => 'name',
+						'terms' => 'Academics',
 					)
 				),
 				'posts_per_page' => $b['number'],
