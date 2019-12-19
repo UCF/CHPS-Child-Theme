@@ -6,7 +6,6 @@ function externalnewsvar( $atts ) {
     ), $atts );
 switch_to_blog(2);
 	if (!empty($a['category'])) { 	
-	$catname = get_field( 'external_newsmedia_unit' );	
 	$externalnews = new WP_Query(array(
 			'post_type'	=> 'inthemedia',
 			'post_status' => 'publish',
@@ -17,7 +16,7 @@ switch_to_blog(2);
 					array (
 						'taxonomy' => 'externalnews_unit',
 						'field' => 'name',
-						'terms' => $catname,
+						'terms' => $a['category'],
 					)
 				),
 			)
