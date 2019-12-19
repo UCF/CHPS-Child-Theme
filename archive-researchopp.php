@@ -117,6 +117,9 @@
 	font-size: 16px !important;
 	padding:8px !important;
 }
+.searchandfilter li.sf-field-post-meta-research_money {
+	float: right;
+}
 /*overwrite header styling */	
 .header-title-wrapper {
     max-width: 1100px !important;
