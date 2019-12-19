@@ -110,7 +110,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	} else { 	
 		$listnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}	
-	$listnews .= '</div><div class="p-3"><a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a><div class="mt-3">' . get_the_title() . '</div></div></div></a></div>';	
+	$listnews .= '</div><div class="p-3"><a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a><div class="mt-2">' . get_the_title() . '</div></div></div></a></div>';	
 endwhile;
 $listnews .= '</div></div>';	
 wp_reset_query();
