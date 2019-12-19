@@ -596,7 +596,7 @@ figcaption, .featcaption {
 	display: block;
 	width: 100%;
 }
-.personResearchList {
+ul.personResearchList {
 	list-style: none !important;
 	padding-left: 6px;
 }
