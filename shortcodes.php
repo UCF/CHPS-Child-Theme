@@ -52,7 +52,7 @@ function newsvisualvar( $atts ) {
         'category' => '',
 		'tag' => '',
         'column' => '4',
-		'showcats' => 'Yes',
+		'showcats' => '',
     ), $atts );
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
