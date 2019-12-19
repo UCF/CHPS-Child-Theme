@@ -17,7 +17,7 @@
 					<div class="row no-gutters w-100">
 						<div class="col-xl-10">
 							<div class="header-title-wrapper">
-								<h1 class="header-title">Research Participation</h1>
+								<h1 class="header-title">Research Participation Opportunities</h1>
 								<p class="header-subtitle">College of Health Professions and Sciences</p>
 							</div>
 						</div>
