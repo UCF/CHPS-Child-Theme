@@ -117,8 +117,13 @@
 	font-size: 16px !important;
 	padding:8px !important;
 }
+.searchandfilter li.sf-field-post-meta-research_sex {
+	float: left;
+	width:50%;
+}
 .searchandfilter li.sf-field-post-meta-research_money {
 	float: right;
+	width:50%;
 }
 /*overwrite header styling */	
 .header-title-wrapper {
