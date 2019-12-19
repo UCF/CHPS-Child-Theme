@@ -10,7 +10,7 @@ Template Name: Blog
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">News Archive</h1>
+				<h1 class="archive-title heading-underline">CHPS News</h1>
 			</header>
 		</div>
 		<div class="col-lg-6">	
