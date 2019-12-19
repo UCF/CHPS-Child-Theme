@@ -125,7 +125,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}	
 	$listnews .= '</div><div class="p-3">';
 	if ( !empty($a['showcats'])) {
-		$listnews .= '<div class="mb-2"><a class="category-title" href="' . $category_link . '">' . $category_name . '</a></div>';
+		$listnews .= '<div class="mb-2"><span class="category-title" href="' . $category_link . '">' . $category_name . '</span></div>';
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '</div></div></a></div>';
