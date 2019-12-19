@@ -148,17 +148,8 @@ function recexnewsvar( $atts ) {
     ), $atts );
 $category = get_queried_object();
 $catname = $category->name;
-if ( is_page( array( 'blog', 'ccsp', 'news' ) ) ) {
+if ( is_category() ) {
      $recexnews = new WP_Query(array(
-				'post_type'	=> 'inthemedia',
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $b['number'],
-				)
-			);
-} else {	
-		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
 				'orderby' => 'publish_date',
@@ -170,6 +161,15 @@ if ( is_page( array( 'blog', 'ccsp', 'news' ) ) ) {
 						'terms' => $catname,
 					)
 				),
+				'posts_per_page' => $b['number'],
+				)
+			);
+} else {	
+		$recexnews = new WP_Query(array(
+				'post_type'	=> 'inthemedia',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
 				'posts_per_page' => $b['number'],
 				)
 			);
