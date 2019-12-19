@@ -125,6 +125,10 @@
 	float: right;
 	width:50%;
 }
+	
+.searchandfilter .sf-range-max, .searchandfilter .sf-meta-range-number .sf-range-values-seperator {
+		display:none;
+}	
 /*overwrite header styling */	
 .header-title-wrapper {
     max-width: 1100px !important;
