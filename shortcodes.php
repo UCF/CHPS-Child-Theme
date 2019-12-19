@@ -45,13 +45,14 @@ add_shortcode( 'exnews', 'externalnewsvar' );
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO DISPLAY RECENT NEWS VERTICALLY IN BOXES 
-// [newsvisual number="" category="" tag="" column=""]
+// [newsvisual number="4" category="" tag="" column="4" showcats="Yes"]
 function newsvisualvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '',
 		'tag' => '',
         'column' => '4',
+		'showcats' => 'Yes',
     ), $atts );
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
@@ -110,7 +111,9 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	} else { 	
 		$listnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}	
-	$listnews .= '</div><div class="p-3"><div class="mb-2"><a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a></div>' . get_the_title() . '</div></div></a></div>';	
+	$listnews .= '</div><div class="p-3">';
+	$listnews .= '<div class="mb-2"><a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a></div>';
+	$listnews .= '' . get_the_title() . '</div></div></a></div>';
 endwhile;
 $listnews .= '</div></div>';	
 wp_reset_query();
