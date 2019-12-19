@@ -454,13 +454,13 @@ span.searchresults	{
   height: 100%;
   padding: 12px;
   color: #000;
-  border: solid 1px #ddd;
+  border: solid 1px #ccc;
   line-height:15px;
   font-size: 13px !important;
   font-weight:500;
 }
 .newsmedia .exInfo:hover {
-  background: #eee;
+  background: #ddd;
 }
 article blockquote {
     border-bottom: 1px solid #000;
