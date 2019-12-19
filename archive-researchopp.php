@@ -116,8 +116,11 @@
 	width: 100% !important;
 	font-size: 16px !important;
 	padding:8px !important;
-}		
-	
+}
+/*overwrite header styling */	
+.header-title-wrapper {
+    max-width: 1100px !important;
+}	
 /* repeated CSS code */
 .researchOpp-quals ul {
 	list-style-type: none;
