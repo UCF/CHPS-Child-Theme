@@ -115,7 +115,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}	
 	$listnews .= '</div><div class="p-3">';
 	if ( !empty($a['showcats'])) {
-		$listnews .= '<div class="mb-2"><a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a></div>';
+		$listnews .= '<div class="mb-2"><a class="category-title" href="' .  esc_url( get_term_link( $postTerm->term_id ) ) . $postTerm->slug . '">' . $postTerm->name . '</a></div>';
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '</div></div></a></div>';
