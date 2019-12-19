@@ -88,8 +88,6 @@ $category_id = get_cat_ID($a['category']);
 $listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
 while($visualnews->have_posts()) : $visualnews->the_post();
 	$categories = get_the_category();
-	$primary_term_id = yoast_get_primary_term_id('category');
-	$postTerm = get_term( $primary_term_id );
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '3') {	
 		$listnews .= '<div class="col-lg-4 col-sm-6 col-xs-12">';
@@ -115,7 +113,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}	
 	$listnews .= '</div><div class="p-3">';
 	if ( !empty($a['showcats'])) {
-		$listnews .= '<div class="mb-2"><a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a></div>';
+		$listnews .= '<div class="mb-2"><a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a></div>';
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '</div></div></a></div>';
