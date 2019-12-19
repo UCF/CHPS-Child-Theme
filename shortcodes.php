@@ -1,22 +1,46 @@
-<?php // [exnews number=""] 
+<?php // [exnews number="" category=""] 
 function externalnewsvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '12',
+		'category' => '',
     ), $atts );
-		$externalnews = new WP_Query(array(
-				'post_type'	=> 'inthemedia',
-				'post_status' => 'publish',
-				'orderby' => 'publish_date',
-				'order' => 'DESC',
-				'posts_per_page' => $a['number'],
-				)
-			);
+switch_to_blog(2);
+$category = get_queried_object();
+$catname = $category->name; 
+	if (!empty($a['category'])) { 	
+	 $externalnews = new WP_Query(array(
+			'post_type'	=> 'inthemedia',
+			'post_status' => 'publish',
+			'orderby' => 'publish_date',
+			'order' => 'DESC',
+			'posts_per_page' => $a['number'],
+		 	'tax_query' => array(
+					array (
+						'taxonomy' => 'externalnews_unit',
+						'field' => 'name',
+						'terms' => $catname,
+					)
+				),
+			)
+		);	
+	}
+	else {
+	$externalnews = new WP_Query(array(
+			'post_type'	=> 'inthemedia',
+			'post_status' => 'publish',
+			'orderby' => 'publish_date',
+			'order' => 'DESC',
+			'posts_per_page' => $a['number'],
+			)
+		);
+	}
 $showexnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
 while($externalnews->have_posts()) : $externalnews->the_post();
 	$showexnews .= '<div class="col-lg-3 col-sm-6 col-xs-12"><a href="' . get_field('external_newsmedia_link') . '" title="' . get_the_title() . '" target="_blank"><div class="exInfo">' . get_the_title() . '<p class="newsdate">' . get_field( 'external_newsmedia_name' ) . '</p></div></a></div>';
 endwhile;
 $showexnews .= '</div></div>';
 wp_reset_query();
+restore_current_blog();	
 return $showexnews;	
 }
 add_shortcode( 'exnews', 'externalnewsvar' );
