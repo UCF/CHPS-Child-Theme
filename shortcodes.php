@@ -5,10 +5,9 @@ function externalnewsvar( $atts ) {
 		'category' => '',
     ), $atts );
 switch_to_blog(2);
-$category = get_queried_object();
-$catname = $category->name; 
 	if (!empty($a['category'])) { 	
-	 $externalnews = new WP_Query(array(
+	$catname = get_field( 'external_newsmedia_unit' );	
+	$externalnews = new WP_Query(array(
 			'post_type'	=> 'inthemedia',
 			'post_status' => 'publish',
 			'orderby' => 'publish_date',
