@@ -121,6 +121,9 @@
 .header-title-wrapper {
     max-width: 1100px !important;
 }	
+.header-media-default {
+    min-height: 350px !important;
+}	
 /* repeated CSS code */
 .researchOpp-quals ul {
 	list-style-type: none;
