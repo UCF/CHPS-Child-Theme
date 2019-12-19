@@ -148,7 +148,7 @@ function recexnewsvar( $atts ) {
     ), $atts );
 $category = get_queried_object();
 $catname = $category->name;
-if ( is_page( array( 'blog', 'news' ) ) ) {
+if ( is_page( array( 'blog', 'ccsp', 'news' ) ) ) {
      $recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
