@@ -363,7 +363,7 @@ span.searchresults	{
 	
 }
 .researchIMG {
-	width: 100%;
+	max-width: 231px;
 	height: auto;
 }
 .directoryDegrees {
