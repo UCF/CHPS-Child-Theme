@@ -148,6 +148,16 @@ function recexnewsvar( $atts ) {
     ), $atts );
 $category = get_queried_object();
 $catname = $category->name;
+if ( is_page( array( 'blog', 'news' ) ) ) {
+     $recexnews = new WP_Query(array(
+				'post_type'	=> 'inthemedia',
+				'post_status' => 'publish',
+				'orderby' => 'publish_date',
+				'order' => 'DESC',
+				'posts_per_page' => $b['number'],
+				)
+			);
+} else {	
 		$recexnews = new WP_Query(array(
 				'post_type'	=> 'inthemedia',
 				'post_status' => 'publish',
@@ -162,7 +172,9 @@ $catname = $category->name;
 				),
 				'posts_per_page' => $b['number'],
 				)
-			);?> 
+			);
+}
+?> 
 <?php if ($recexnews->have_posts()){?>	
     <div id="categories-4" class="widget widget_categories widgetFix">
 		<h2 class="h5 heading-underline">In the Media</h2>	
