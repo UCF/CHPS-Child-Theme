@@ -90,10 +90,9 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$primary_term_id = yoast_get_primary_term_id('category');
 	$postTerm = get_term( $primary_term_id );
 	//here is the new code
-	$perma_cat = get_post_meta($post->ID , '_category_permalink', true);
+	$perma_cat = yoast_get_primary_term_id('category');
   if ( $perma_cat != null ) {
-    $cat_id = $perma_cat['category'];
-    $category = get_category($cat_id);
+    $category = get_term( $perma_cat );
   } else {
     $categories = get_the_category();
     $category = $categories[0];
