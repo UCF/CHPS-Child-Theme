@@ -597,7 +597,7 @@ figcaption, .featcaption {
 	width: 100%;
 }
 .personResearchList {
-	list-style: none;
+	list-style: none !important;
 	padding-left: 6px;
 }
 /* = Profile Directory Single Person
