@@ -489,6 +489,7 @@ if ( has_post_thumbnail($post->ID)) {
 $listpeeps .= '</a></div><div class="col p-3"><h2 class="h4"><a href="' . get_permalink($post->ID) . '" rel="bookmark" title="' . $post->post_title . '">' . $post->post_title . '';	
 if( get_field('degrees', $post->ID) ) {
 	while ( have_rows('degrees', $post->ID) ) : the_row();
+	if (!get_sub_field('degree_aftername', $post->ID)) { continue; }
 	 $array[] = get_sub_field('degree_select', $post->ID); 
 	endwhile;
 	$foo = implode(', ', array_column($array, 'label'));
