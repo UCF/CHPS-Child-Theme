@@ -133,8 +133,8 @@
 	float: right;
 	width:50%;
 }	
-.searchandfilter ul li ul li {
-	padding 0px !important;
+.searchandfilter ul li li {
+	padding: 0px !important;
 }	
 .searchandfilter .sf-range-max, .searchandfilter .sf-meta-range-number .sf-range-values-seperator {
 		display:none;
