@@ -64,7 +64,8 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 		</div>
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
-				<strong>IRB#:</strong> <?php the_field('research_irb'); ?>
+				<strong>IRB#:</strong> <?php the_field('research_irb'); ?><br>
+				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
 				<?php
@@ -78,8 +79,6 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						</div>
 						<div class="missedOut">Please consider <a href="#getStarted">subscribing to get notified</a> about future research participation opportunities</div>
 				<?php } ?>
-				
-				<!-- hopefully with GLIDE ALSO MAKE THIS GO AWAY ON MOBILE-->
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-bell icongrey"></i> <strong>Recruitment Deadline:</strong><br>
