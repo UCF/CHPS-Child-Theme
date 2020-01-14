@@ -155,6 +155,9 @@
 .searchandfilter .sf-range-max, .searchandfilter .sf-meta-range-number .sf-range-values-seperator {
 		display:none;
 }
+.yellowBTN-full {
+	line-height: 16px;
+}		
 .yellowBTN-full strong {
 	font-size:20px;
 }		
