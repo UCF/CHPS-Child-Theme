@@ -120,22 +120,22 @@
 .searchandfilter li.sf-field-post-meta-research_sex {
 	float: left;
 	width:50%;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .searchandfilter li.sf-field-post-meta-research_money {
 	float: right;
 	width:50%;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .searchandfilter li.sf-field-post-meta-research_format {
 	float: left;
 	width:50%;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }
 .searchandfilter li.sf-field-post-meta-research_minage {
 	float: right;
 	width:50%;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
 }	
 .searchandfilter ul li li {
 	padding: 0px !important;
