@@ -141,8 +141,8 @@
 	clear: both;
 }	
 .searchandfilter li.sf-field-reset input{
-	font-size: 16px;
-	padding: 5px 20px;
+	font-size: 14px;
+	padding: 5px 30px;
 	background-color: #ccc;
 	color: #000;
 	border: 0px solid !important;
