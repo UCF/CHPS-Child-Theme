@@ -124,8 +124,8 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php endif; ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<div class="btnhover-red">
-					<a href="#" title="What it means to be a research participant" class="redBTN-full">What it means to be a<br>Research Participant</a>
+				<div class="btnhover-black">
+					<a href="#" title="What it means to be a research participant" class="blackBTN-full">What it means to be a<br><span style="color:#ffcc00;font-size:35px;">Research Participant</span></a>
 				</div>
 			</div>
 		</div>
@@ -213,11 +213,27 @@ html {
 .redBTN-full:hover {
 	text-decoration: none;
 }
+.blackBTN-full {
+	display: block; 
+	font-size: 16px;  
+	padding: 18px 25px; 
+	text-align: center; 
+	background-color:#000; 
+	color:#fff;
+}
+.blackBTN-full:hover {
+	text-decoration: none;
+}
 .btnhover-red a:hover {
     background: #830101 !important;
 	background-image: none !important;
 	color:#fff;
 }
+.btnhover-black a:hover {
+    background: #222 !important;
+	background-image: none !important;
+	color:#fff;
+}	
 .missedOut {
 	text-align: center;
 	font-size: 13px;
