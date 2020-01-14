@@ -216,7 +216,7 @@ html {
 .blackBTN-full {
 	display: block; 
 	font-size: 16px;  
-	line-height: 16px;
+	line-height: 20px;
 	padding: 18px 25px; 
 	text-align: center; 
 	background-color:#000; 
