@@ -125,7 +125,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 			<div class="researchOpp-dblock"> 
 				<div class="btnhover-red">
-					<a href="#" title="What it means to be a research participant" class="redBTN-full">What it means to be a research participant</a>
+					<a href="#" title="What it means to be a research participant" class="redBTN-full">What it means to be a<br>Research Participant</a>
 				</div>
 			</div>
 		</div>
