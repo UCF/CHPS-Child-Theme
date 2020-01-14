@@ -87,9 +87,15 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-map-marker icongrey"></i> <strong>Location:</strong><br>
+				<?php
+					if( get_field('research_format') == 'Online' ) { ?>
+					Online
+				<?php } else { ?>
 				<?php the_field('research_building'); ?><br>   <!-- add link to map maybe? -->
 				<?php the_field('research_address'); ?><br>
 				<?php the_field('research_city'); ?>, <?php the_field('research_state'); ?> <?php the_field('research_zip'); ?>
+				<?php } ?>
+				
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-calendar icongrey"></i> <strong>Time Commitment:</strong><br>
