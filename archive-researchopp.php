@@ -108,9 +108,11 @@
 	padding:8px !important;
 	border: 0px solid #f2f2f2 !important;
 	width: 100% !important;	
+	margin-bottom: 15px;
 }	
 .searchandfilter li[data-sf-field-input-type="select"] label{
 	width: 100% !important;	
+	margin-bottom: 15px;
 }
 .searchandfilter li[data-sf-field-input-type="select"] label select{
 	width: 100% !important;
