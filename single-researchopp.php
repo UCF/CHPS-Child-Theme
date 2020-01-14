@@ -117,7 +117,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 			<div class="researchOpp-dblock"> 
 				<?php if ( $research_unit_terms ): ?>
-					<i class="fa fa-briefcase icongrey"></i> Associated Unit:
+					<i class="fa fa-briefcase icongrey"></i> <strong>Associated Unit:</strong><br>
 					<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
 						<?php echo $research_unit_term->name; ?><br>
 					<?php endforeach; ?>
