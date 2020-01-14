@@ -167,6 +167,9 @@
 .gform_wrapper ul li.gfield {
     margin-top: 5px !important;
 }	
+.gform_wrapper li.hidden_label input {
+    margin-top: 0px !important;
+}	
 /*overwrite header styling */	
 .header-title-wrapper {
     max-width: 1100px !important;
