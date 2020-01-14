@@ -137,9 +137,10 @@
 	width:50%;
 	margin-bottom: 15px;
 }	
-	
-.searchandfilter li.sf-field-reset input{
+.searchandfilter li.sf-field-reset{
 	clear: both;
+}	
+.searchandfilter li.sf-field-reset input{
 	font-size: 20px;
 	background-color: red;
 	color: #fff;
