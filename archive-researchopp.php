@@ -177,5 +177,16 @@
 	font-style: italic;
 	line-height: 13px;
 }	
+.yellowBTN-full {
+	display: block; 
+	font-size: 16px;  
+	padding: 18px 25px; 
+	text-align: center; 
+	background-color:#ffcc00; 
+	color:#000000;
+}
+.yellowBTN-full:hover {
+	text-decoration: none;
+}	
 </style>
 <?php get_footer(); ?>
