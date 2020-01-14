@@ -109,7 +109,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 			<div class="researchOpp-dblock"> 
 				<?php if ( $research_facultymember ): ?>
-					<i class="fa fa-user icongrey"></i> <strong>Faculty Advisors:</strong><br>
+					<i class="fa fa-user iconyellow"></i> <strong>Faculty Advisors:</strong><br>
 					<?php foreach ( $research_facultymember as $p ): ?>
 						<a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
 					<?php endforeach; ?>
