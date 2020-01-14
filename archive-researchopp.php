@@ -120,24 +120,22 @@
 .searchandfilter li.sf-field-post-meta-research_sex {
 	float: left;
 	width:50%;
-	padding: 0px 0px;
 }
 .searchandfilter li.sf-field-post-meta-research_money {
 	float: right;
 	width:50%;
-	padding: 0px 0px;
 }
 .searchandfilter li.sf-field-post-meta-research_format {
 	float: left;
 	width:50%;
-	padding: 0px 0px;
 }
 .searchandfilter li.sf-field-post-meta-research_minage {
 	float: right;
 	width:50%;
-	padding: 0px 0px;
 }	
-	
+.searchandfilter ul li ul li {
+	padding 0px !important;
+}	
 .searchandfilter .sf-range-max, .searchandfilter .sf-meta-range-number .sf-range-values-seperator {
 		display:none;
 }	
