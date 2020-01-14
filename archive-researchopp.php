@@ -140,6 +140,9 @@
 	
 .searchandfilter li.sf-field-reset input{
 	clear: both;
+	font-size: 20px;
+	background-color: red;
+	color: #fff;
 }
 .searchandfilter ul li li {
 	padding: 0px !important;
