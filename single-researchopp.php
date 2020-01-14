@@ -101,7 +101,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				Number of visits: <?php the_field('research_visits'); ?><br>
 				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
 			</div>
-		<?php if(get_field('research_amount')){ ?>
+		<?php if( get_field('research_money') == 'Yes' ) { ?>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-money icongreen"></i> <strong>Compensation:</strong><br>
 				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
