@@ -56,7 +56,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						<div id="researchOpp-missedForm">
 							<h2>Get Notified of Future Opportunities</h2>
 							<span style="font-size: 13px;">Subscribe to our email list to be automatically notified of all future research participation opportunities as soon as they become available.</span>
-							<?php echo do_shortcode( '[gravityform id=5 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
+							<?php echo do_shortcode( '[gravityform id=6 title=false description=false ajax=true field_values="research_me=' . get_field('research_contactemail') . '&amp;opportunity_titlename=' . get_the_title() . '"]' ); ?>
 						</div>
 						</div>	
 					</div>		
