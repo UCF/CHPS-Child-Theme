@@ -108,15 +108,18 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php the_field('research_contactname'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<?php if ( $research_unit_terms ): ?>
-					<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
-						<i class="fa fa-briefcase iconyellow"></i> <?php echo $research_unit_term->name; ?><br>
-					<?php endforeach; ?>
-				<?php endif; ?>
 				<?php if ( $research_facultymember ): ?>
-					<i class="fa fa-user iconyellow"></i> <strong>Faculty Advisors:</strong><br>
+					<i class="fa fa-user icongrey"></i> <strong>Faculty Advisors:</strong><br>
 					<?php foreach ( $research_facultymember as $p ): ?>
 						<a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</div>
+			<div class="researchOpp-dblock"> 
+				<?php if ( $research_unit_terms ): ?>
+					<i class="fa fa-briefcase icongrey"></i> Associated Unit:
+					<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
+						<?php echo $research_unit_term->name; ?><br>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
