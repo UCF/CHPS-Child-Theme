@@ -35,7 +35,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php } ?>
 				<?php the_content(); ?> 
 			</div>
-			<h2>Minimum Qualifications:</h2> <!-- style this size -->
+			<h2>Inclusion Qualifications:</h2> <!-- style this size -->
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
@@ -74,7 +74,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 						</div>
 					<?php } else { ?>
 						<div class="btnhover-red">
-							<a href="../" title="Participate in this Research Project" class="redBTN-full">This Opportunity Has Closed</a>
+							<a href="../" title="Recruitment Has Ended" class="redBTN-full">Recruitment Has Ended</a>
 						</div>
 						<div class="missedOut">Please consider <a href="#getStarted">subscribing to get notified</a> about future research participation opportunities</div>
 				<?php } ?>
@@ -114,8 +114,9 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 					<?php endforeach; ?>
 				<?php endif; ?>
 				<?php if ( $research_facultymember ): ?>
+					<i class="fa fa-user iconyellow"></i> <strong>Faculty Advisors:</strong><br>
 					<?php foreach ( $research_facultymember as $p ): ?>
-						<i class="fa fa-user iconyellow"></i> <a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
+						<a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
