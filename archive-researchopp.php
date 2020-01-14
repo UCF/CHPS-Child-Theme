@@ -137,6 +137,10 @@
 	width:50%;
 	margin-bottom: 15px;
 }	
+	
+.searchandfilter li.sf-field-reset input{
+	clear: both;
+}
 .searchandfilter ul li li {
 	padding: 0px !important;
 }	
