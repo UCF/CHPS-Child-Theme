@@ -348,6 +348,7 @@ html {
 .dislcaimerForm {
 	font-size: 11px;
 	font-style: italic;
+	line-height: 13px;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
