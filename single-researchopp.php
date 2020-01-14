@@ -318,9 +318,6 @@ html {
 #researchOpp-particiForm .gfield_checkbox label {
     padding-top: 10px !important;
 }	
-	
-	
-	
 #researchOpp-missedForm {
     background-color:#000;
     padding:25px 25px 5px 25px;
@@ -348,6 +345,10 @@ html {
     color:red !important;
     font-size:15px !important;
 }	
+.dislcaimerForm {
+	font-size: 11px;
+	font-style: italic;
+}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
