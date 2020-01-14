@@ -123,6 +123,11 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
+			<div class="researchOpp-dblock"> 
+				<div class="btnhover-red">
+					<a href="#" title="What it means to be a research participant" class="redBTN-full">What it means to be a research participant</a>
+				</div>
+			</div>
 		</div>
 	</div>	
 		<?php
