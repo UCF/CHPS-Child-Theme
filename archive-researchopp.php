@@ -163,6 +163,9 @@
 }
 .gform_wrapper {
 	margin-top: 0px !important;
+}
+.gform_wrapper ul li.gfield {
+    margin-top: 5px !important;
 }	
 /*overwrite header styling */	
 .header-title-wrapper {
