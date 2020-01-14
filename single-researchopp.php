@@ -107,7 +107,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<i class="fa fa-user-circle icongrey"></i> <strong>Point of Contact:</strong><br>
 				<?php the_field('research_contactname'); ?>
 			</div>
-			<?php if ( $research_unit_terms ): ?>
+			<?php if ( $research_faculty_name ): ?>
 				<div class="researchOpp-dblock"> 
 					<i class="fa fa-user iconyellow"></i> <strong>Faculty Advisors:</strong><br>
 					<?php foreach ( $research_facultymember as $p ): ?>
