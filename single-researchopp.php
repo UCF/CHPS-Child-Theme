@@ -177,7 +177,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<div class="col-md-4 researchOpp-relateLink">
 					<a href="<?php the_permalink(); ?>">
 						<div class="researchOpp-relateCard">
-							<?php the_title(); ?><br>
+							<strong><?php the_title(); ?></strong><br>
 							<?php the_excerpt(); ?>
 						</div>
 					</a>	
@@ -279,7 +279,10 @@ html {
 }
 .researchOpp-relateCard:hover {
 	background-color: #000;
-}		
+}
+.researchOpp-relateCard strong{
+    font-size: 20px !important;
+}	
 .vc_btn3-container {
 	margin-bottom: 0px !important;
 }
