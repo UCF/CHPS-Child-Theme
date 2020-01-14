@@ -171,6 +171,11 @@
 	font-family: "FontAwesome";
 	padding: 0 10px 0 0;
 	color:#ffcc00;
+}
+.dislcaimerForm {
+	font-size: 11px;
+	font-style: italic;
+	line-height: 13px;
 }	
 </style>
 <?php get_footer(); ?>
