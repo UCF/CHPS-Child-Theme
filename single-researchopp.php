@@ -104,7 +104,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 		<?php }	?>	
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-user-circle icongrey"></i> <strong>Contact:</strong><br>
+				<i class="fa fa-user-circle icongrey"></i> <strong>Lead Investigator:</strong><br>
 				<?php the_field('research_contactname'); ?>
 			</div>
 			<div class="researchOpp-dblock"> 
