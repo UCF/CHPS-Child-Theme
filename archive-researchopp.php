@@ -156,7 +156,7 @@
 		display:none;
 }
 .yellowBTN-full {
-	line-height: 16px;
+	line-height: 18px;
 }		
 .yellowBTN-full strong {
 	font-size:20px;
