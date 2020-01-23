@@ -205,6 +205,23 @@
 }
 .yellowBTN-full:hover {
 	text-decoration: none;
-}	
+}
+.blackBTN-full {
+	display: block; 
+	font-size: 16px;  
+	line-height: 20px;
+	padding: 18px 25px; 
+	text-align: center; 
+	background-color:#000; 
+	color:#fff;
+}
+.blackBTN-full:hover {
+	text-decoration: none;
+}
+.btnhover-black a:hover {
+    background: #222 !important;
+	background-image: none !important;
+	color:#fff;
+}		
 </style>
 <?php get_footer(); ?>
