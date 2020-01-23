@@ -107,8 +107,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 		<?php if( get_field('research_money') == 'Yes' ) { ?>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-money icongreen"></i> <strong>Compensation:</strong><br>
-				Amount: $<?php the_field('research_amount'); ?>.00 (USD)<br>
-				Format: <?php the_field('research_payment_format'); ?>
+				Type: <?php the_field('research_amount'); ?>
 			</div>
 		<?php }	?>	
 			<div class="researchOpp-dblock"> 
