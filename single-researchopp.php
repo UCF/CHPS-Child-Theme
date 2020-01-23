@@ -67,7 +67,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<strong>IRB#:</strong> <?php the_field('research_irb'); ?><br>
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
-				<strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
+				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
