@@ -93,7 +93,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 					if( get_field('research_format') == 'Online' ) { ?>
 					Online
 				<?php } else { ?>
-				<?php the_field('research_building'); ?><br>   <!-- add link to map maybe? -->
+				<!-- <?php //the_field('research_building'); ?><br>-->    <!-- add link to map maybe? -->
 				<?php the_field('research_address'); ?><br>
 				<?php the_field('research_city'); ?>, <?php the_field('research_state'); ?> <?php the_field('research_zip'); ?>
 				<?php } ?>
