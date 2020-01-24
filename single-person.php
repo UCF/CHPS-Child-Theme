@@ -155,7 +155,7 @@ $ids = get_the_ID();
 	<hr class="my-2">			
 <?php }
 ?>
-<?php if(get_field('website_url')||get_field('facebook_url')||get_field('twitter_url')||get_field('youtube_url')||get_field('linkedin_url')){ ?>
+<?php if(get_field('website_url')||get_field('facebook_url')||get_field('twitter_url')||get_field('instagram_url')||get_field('youtube_url')||get_field('linkedin_url')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Connect
@@ -171,6 +171,9 @@ $ids = get_the_ID();
 				</span></a><?php endif; ?><?php if (get_field('twitter_url')): ?><a href="<?php the_field('twitter_url'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-tw"></i>
 				  <i class="fa fa-twitter fa-stack-1x profile-social-icon"></i>
+				</span></a><?php endif; ?><?php if (get_field('instagram_url')): ?><a href="<?php the_field('instagram_url'); ?>" title="Follow me on Instagram" target="_blank"><span class="fa-stack">
+				  <i class="fa fa-circle fa-stack-2x profile-social-ig"></i>
+				  <i class="fa fa-instagram fa-stack-1x profile-social-icon"></i>
 				</span></a><?php endif; ?><?php if (get_field('youtube_url')): ?><a href="<?php the_field('youtube_url'); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-yt"></i>
 				  <i class="fa fa-youtube fa-stack-1x profile-social-icon"></i>
