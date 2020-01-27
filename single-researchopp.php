@@ -74,7 +74,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php
 					if ($today<$deadlineShort) {  ?>
 						<div class="btnhover-yellow">
-							<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate!</a>
+							<a href="#getStarted" title="Participate in this Research Project" class="yellowBTN-full">Participate in this Study!</a>
 						</div>
 					<?php } else { ?>
 						<div class="btnhover-red">
