@@ -14,7 +14,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 	<article class="publish post-list-item">
 	<div class="row">
 		<div class="col-md-12 mb-4">
-			<a class="cattitle-single" href="../">CHPS RESEARCH OPPORTUNITIES</a>
+			<a class="cattitle-single" href="../">CHPS RESEARCH STUDIES</a>
 			<h1><?php the_title(); ?></h1>
 		</div>
 	</div>
