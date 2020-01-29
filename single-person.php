@@ -155,17 +155,13 @@ $ids = get_the_ID();
 	<hr class="my-2">			
 <?php }
 ?>
-<?php if(get_field('website_url')||get_field('facebook_url')||get_field('twitter_url')||get_field('instagram_url')||get_field('youtube_url')||get_field('linkedin_url')){ ?>
+<?php if(get_field('facebook_url')||get_field('twitter_url')||get_field('instagram_url')||get_field('youtube_url')||get_field('linkedin_url')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Connect
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<?php if (get_field('website_url')): ?>
-				<a href="<?php the_field('website_url'); ?>" title="Visit My Personal Website" target="_blank"><span class="fa-stack">
-					  <i class="fa fa-circle fa-stack-2x profile-social-web"></i>
-					  <i class="fa fa-link fa-flip-horizontal fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('facebook_url')): ?><a href="<?php the_field('facebook_url'); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack">
+			<?php if (get_field('facebook_url')): ?><a href="<?php the_field('facebook_url'); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-fb"></i>
 				  <i class="fa fa-facebook fa-stack-1x profile-social-icon"></i>
 				</span></a><?php endif; ?><?php if (get_field('twitter_url')): ?><a href="<?php the_field('twitter_url'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
