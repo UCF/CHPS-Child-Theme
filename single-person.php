@@ -256,6 +256,14 @@ $posts = get_posts(array(
 										 </ul>
 									 </div>
 								<?php }?>
+								<?php if (have_rows('accolades') ) { ?>
+									<h5>Accolades</h5>
+										<ul>
+										<?php while (have_rows('accolades') ): the_row(); ?> 
+												<li><?php the_sub_field('accolade');?></li>
+										 <?php endwhile; ?>	
+										 </ul>
+								<?php }?>
 								<?php if (have_rows('affiliations') ) { ?>
 									<h5>Affiliations</h5>
 										<ul>
