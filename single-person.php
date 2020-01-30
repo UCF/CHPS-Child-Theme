@@ -322,7 +322,7 @@ $posts = get_posts(array(
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (($posts)||get_field('google_scholar')): ?>
+					<?php if (($posts)||get_field('external_news')): ?>
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
