@@ -351,7 +351,7 @@ $posts = get_posts(array(
 								<?php wp_reset_postdata(); ?>
 								<?php if (have_rows('external_news') ) { 	?>
 									
-								<div class="mb-4" style="border-top: 1px #999 solid; ">
+								<div class="mb-4 pt-3" style="border-top: 1px #ccc solid; ">
 									<h5>External News Media</h5>
 									<ul>
 										<?php while (have_rows('external_news') ): the_row(); ?> 
