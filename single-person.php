@@ -355,7 +355,7 @@ $posts = get_posts(array(
 									<ul>
 										<?php while (have_rows('external_news') ): the_row(); ?> 
 
-										<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>, <span class="newsdate-blog"><?php the_sub_field('exnews_platform'); ?></span>
+										<li><a href="<?php the_sub_field('exnews_link'); ?>" title="<?php the_sub_field('exnews_title'); ?>" target="_blank"><?php the_sub_field('exnews_title'); ?></a>, <span class="authortext"><?php the_sub_field('exnews_platform'); ?></span>
 												</li>
 
 										 <?php endwhile; ?>	
