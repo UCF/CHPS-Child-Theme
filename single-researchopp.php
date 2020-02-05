@@ -105,7 +105,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-calendar icongrey"></i> <strong>Time Commitment:</strong><br>
 				<?php if (get_field('research_visits')){ ?>Number of visits: <?php the_field('research_visits'); ?><br><?php } ?>
-				Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?>
+				<?php if (get_field('research_time')){ ?>Expected time per visit: <?php the_field('research_time'); ?> <?php the_field('research_timemeasure'); ?><?php } ?>
 			</div>
 		<?php if( get_field('research_money') == 'Yes' ) { ?>
 			<div class="researchOpp-dblock"> 
