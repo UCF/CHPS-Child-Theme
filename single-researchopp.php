@@ -65,7 +65,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 		<div class="col-md-4 pl-0 pr-0" style="background-color: #f2f2f2">
 			<div class="researchOpp-dblock"> <!-- add a 1px bottom border & padding to the div -->
 				<strong>UCF IRB#:</strong> <?php the_field('research_irb'); ?><br>
-				<?php if (get_field('research_trialsURL')){ ?><a href="<?php the_field('research_trialsURL'); ?>" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">ClinicalTrials.gov ID</a><?php } ?>
+				<?php if (get_field('research_trialsURL')){ ?><a href="<?php the_field('research_trialsURL'); ?>" target="_blank" data-wpel-link="external" rel="nofollow external noopener noreferrer">ClinicalTrials.gov ID</a><br><?php } ?>
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
