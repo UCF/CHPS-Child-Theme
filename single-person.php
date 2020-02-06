@@ -104,6 +104,7 @@ $ids = get_the_ID();
 		if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
 		if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
 		if ($buildingMap == 'Partnership 1') {echo 'https://www.ucf.edu/location/partnership-1/';}
+		if ($buildingMap == 'Partnership 2') {echo 'https://www.ucf.edu/location/partnership-2/';}	
 		if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
 		if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
 		if ($buildingMap == 'Classroom Building I') {echo 'https://www.ucf.edu/location/classroom-building-i/';}
