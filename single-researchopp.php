@@ -85,7 +85,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock"> 
-				<i class="fa fa-bell icongrey"></i> <strong>Recruitment Deadline:</strong><br>
+				<i class="fa fa-bell icongrey"></i> <strong>Recruitment End Date:</strong><br>
 				<span style="font-size: 25px;"><?php the_field('research_enddate'); ?></span>  <!-- responsive size? -->
 			</div>
 			<div class="researchOpp-dblock"> 
