@@ -79,13 +79,13 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                             foreach( $categories as $category ) {
 								if ( $category->name !== 'UCF News' ) {
                                 $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
-                            } }
+                            } 
 						}
 						if ( ! empty( $tags ) ) { 
 						foreach ( $tags as $tag ) {
 						$output .= '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '" class="chpsTAGS">' . esc_html( $tag->name ) . '</a>' . $separator;
                             }	
-						
+						}
                             echo trim( $output, $separator );
                         } ?> 
 					</div> 
