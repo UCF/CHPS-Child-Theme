@@ -121,6 +121,17 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 }	
 #redirectPost img{ 
 	margin-bottom:25px;
+}
+.chpsTAGS {
+    background: #eee;
+    border: 2px solid #d6d6d6;
+    border-radius: .5rem;
+    color: #5f5f5f;
+    display: inline-block;
+    font-size: 85%;
+    margin-bottom: .5rem;
+    margin-right: .5rem;
+    padding: .3rem .7rem;
 }		
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
