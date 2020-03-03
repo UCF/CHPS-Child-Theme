@@ -131,7 +131,8 @@ $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', 
 // End loop
 endforeach;
 // Reset post data
-wp_reset_postdata(); ?>           
+wp_reset_postdata(); ?> 
+<?php echo do_shortcode('[newsvisual]'); ?>          
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
