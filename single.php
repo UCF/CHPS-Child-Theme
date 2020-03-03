@@ -72,7 +72,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 						<h2 class="h6 text-uppercase text-default-aw mb-4">More Topics</h2>
                         <?php 
 						$categories = get_the_category();
-						$tags = get_tags();
+						$tags = get_the_tags();
                         $separator = ' ';
                         $output = '';
                         if ( ! empty( $categories ) ) {
@@ -80,7 +80,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                                 $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
                             }
 						}
-						if (  ! empty( $tags ) ) { 
+						if ( ! empty( $tags ) ) { 
 						foreach ( $tags as $tag ) {
 						$output .= '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '" class="chpsTAGS">' . esc_html( $tag->name ) . '</a>' . $separator;
                             }	
