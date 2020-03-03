@@ -93,6 +93,8 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
+<hr class="mb-5" />
+<h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>            
 <?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
