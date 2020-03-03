@@ -93,45 +93,6 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
-<?php
-// Default arguments
-$args = array(
-	'posts_per_page' => 8, // How many items to display
-	'post__not_in'   => array( get_the_ID() ), // Exclude current post
-	'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
-);
-// Check for current post category and add tax_query to the query arguments
-$cats = wp_get_post_terms( get_the_ID(), 'category' ); 
-$cats_ids = array();  
-foreach( $cats as $wpex_related_cat ) {
-	$cats_ids[] = $wpex_related_cat->term_id; 
-}
-if ( ! empty( $cats_ids ) ) {
-	$args['category__in'] = $cats_ids;
-}
-// Query posts
-$wpex_query = new wp_query( $args );
-// Loop through posts
-foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
-$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-?>
-	<div class="col-lg-3 col-sm-6 col-xs-12">
-		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>">
-        	<div class="visnews">
-            	<div class="media-background-container visnews-photo mx-auto">
-					<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
-            	</div>
-                <div class="p-3">
-            		<?php the_title(); ?>
-            	</div>
-           </div>
-        </a>
-	</div>
-<?php
-// End loop
-endforeach;
-// Reset post data
-wp_reset_postdata(); ?> 
 <?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
