@@ -75,10 +75,11 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 						$tags = get_the_tags();
                         $separator = ' ';
                         $output = '';
-                        if ( ! empty( $categories ) && ( $category->name !== 'UCF News' ) ) {
+                        if ( ! empty( $categories ) ) {
                             foreach( $categories as $category ) {
+								if ( $category->name !== 'UCF News' ) {
                                 $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
-                            }
+                            } }
 						}
 						if ( ! empty( $tags ) ) { 
 						foreach ( $tags as $tag ) {
