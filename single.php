@@ -67,7 +67,6 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 					   <?php endif; ?>
                    <?php } ?>
                     <?php the_content(); ?> 
-                    
                    	<div class="chps-tag-cloud mb-4 mb-md-5 mt-4 mt-md-5">
 						<h2 class="h6 text-uppercase text-default-aw mb-4">More Topics</h2>
                         <?php 
@@ -89,12 +88,49 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                             echo trim( $output, $separator );
                         } ?> 
 					</div> 
-                    
                 <?php
                 	endwhile; //resetting the page loop
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article>
+            
+            
+            
+<?php
+// Default arguments
+$args = array(
+	'posts_per_page' => 4, // How many items to display
+	'post__not_in'   => array( get_the_ID() ), // Exclude current post
+	'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
+);
+
+// Check for current post category and add tax_query to the query arguments
+$cats = wp_get_post_terms( get_the_ID(), 'category' ); 
+$cats_ids = array();  
+foreach( $cats as $wpex_related_cat ) {
+	$cats_ids[] = $wpex_related_cat->term_id; 
+}
+if ( ! empty( $cats_ids ) ) {
+	$args['category__in'] = $cats_ids;
+}
+
+// Query posts
+$wpex_query = new wp_query( $args );
+
+// Loop through posts
+foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
+	
+	<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>"><?php the_title(); ?></a>
+
+<?php
+// End loop
+endforeach;
+
+// Reset post data
+wp_reset_postdata(); ?>           
+            
+            
+            
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
