@@ -133,6 +133,11 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
     margin-right: .5rem;
     padding: .3rem .7rem;
 }		
+.chpsTAGS:hover{
+	background:#d6d6d6;
+	color:#3d3d3d;
+	text-decoration:none;
+}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
