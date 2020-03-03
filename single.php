@@ -98,7 +98,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
-					<h5 class="mb-4">Other Recent News Articles</h5>
+					<h5 class="mb-4">Other Recent News</h5>
 					<?php echo do_shortcode('[recentlist number="5"]'); ?>
 				</div>
 				<div class="col-md-6">
