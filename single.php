@@ -126,7 +126,7 @@ $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', 
                 	<?php if ( has_post_thumbnail()) { ?>
 						<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
-                    	<img src="<?php get_field('default_news_image', 'option') ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
+                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
                     <?php } ?>
             	</div>
                 <div class="p-3">
