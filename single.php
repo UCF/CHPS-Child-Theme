@@ -96,7 +96,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <?php
 // Default arguments
 $args = array(
-	'posts_per_page' => 8, // How many items to display
+	'posts_per_page' => 6, // How many items to display
 	'post__not_in'   => array( get_the_ID() ), // Exclude current post
 	'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
 );
