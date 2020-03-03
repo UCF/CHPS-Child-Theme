@@ -111,11 +111,13 @@ if ( ! empty( $cats_ids ) ) {
 }
 // Query posts
 $wpex_query = new wp_query( $args );
-// Loop through posts
+// Loop through posts ?>
+<div class="container newsmedia"><div class="row narrow-gutter row-flex">
+<?php
 foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
 $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 ?>
-  	<div class="col-lg-3 col-sm-6 col-xs-12">
+  	<div class="col-lg-4 col-sm-6 col-xs-12">
 		<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
         	<div class="visnews">
             	<div class="media-background-container visnews-photo mx-auto">
@@ -132,6 +134,7 @@ $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', 
 endforeach;
 // Reset post data
 wp_reset_postdata(); ?>
+</div></div>
 <hr class="mb-5" />
 <h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>  
 <?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
