@@ -112,6 +112,8 @@ if ( ! empty( $cats_ids ) ) {
 // Query posts
 $wpex_query = new wp_query( $args );
 // Loop through posts ?>
+<hr class="mb-5" />
+<h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>
 <div class="container newsmedia"><div class="row narrow-gutter row-flex">
 <?php
 foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
@@ -134,10 +136,7 @@ $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', 
 endforeach;
 // Reset post data
 wp_reset_postdata(); ?>
-</div></div>
-<hr class="mb-5" />
-<h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>  
-<?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
+</div></div>        
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
