@@ -92,10 +92,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	endwhile; //resetting the page loop
                 	wp_reset_query(); //resetting the page query
                 ?>
-			</article>
-            
-            
-            
+			</article> 
 <?php
 // Default arguments
 $args = array(
@@ -103,7 +100,6 @@ $args = array(
 	'post__not_in'   => array( get_the_ID() ), // Exclude current post
 	'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
 );
-
 // Check for current post category and add tax_query to the query arguments
 $cats = wp_get_post_terms( get_the_ID(), 'category' ); 
 $cats_ids = array();  
@@ -113,10 +109,8 @@ foreach( $cats as $wpex_related_cat ) {
 if ( ! empty( $cats_ids ) ) {
 	$args['category__in'] = $cats_ids;
 }
-
 // Query posts
 $wpex_query = new wp_query( $args );
-
 // Loop through posts
 foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
 	
@@ -125,12 +119,8 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
 <?php
 // End loop
 endforeach;
-
 // Reset post data
 wp_reset_postdata(); ?>           
-            
-            
-            
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News Articles</h5>
