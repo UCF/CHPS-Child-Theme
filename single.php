@@ -76,7 +76,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                         $output = '';
                         if ( ! empty( $categories ) ) {
                             foreach( $categories as $category ) {
-								if ( $category->name !== 'Homepage' || 'UCF News' ) {
+								if ( $category->name !== 'Homepage' || $category->name !== 'UCF News' ) {
                                 $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
                             } 
 						}
