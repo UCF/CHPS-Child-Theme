@@ -70,13 +70,21 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                     
                    	<div class="chps-tag-cloud mb-4 mb-md-5 mt-4 mt-md-5">
 						<h2 class="h6 text-uppercase text-default-aw mb-4">More Topics</h2>
-                        <?php $categories = get_the_category();
+                        <?php 
+						$categories = get_the_category();
+						$tags = get_tags();
                         $separator = ' ';
                         $output = '';
                         if ( ! empty( $categories ) ) {
                             foreach( $categories as $category ) {
-                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>' . $separator;
+                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
                             }
+						}
+						if (  ! empty( $tags ) ) { 
+						foreach ( $tags as $tag ) {
+						$output .= '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '" class="chpsTAGS">' . esc_html( $tag->name ) . '</a>' . $separator;
+                            }	
+						
                             echo trim( $output, $separator );
                         } ?> 
 					</div> 
