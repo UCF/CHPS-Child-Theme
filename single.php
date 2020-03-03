@@ -113,7 +113,7 @@ if ( ! empty( $cats_ids ) ) {
 $wpex_query = new wp_query( $args );
 // Loop through posts ?>
 <hr class="mb-5" />
-<h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>
+<h2 class="text-center h6 text-uppercase mb-4 pb-2">Related News Articles</h2>
 <div class="container newsmedia"><div class="row narrow-gutter row-flex">
 <?php
 foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
@@ -139,7 +139,7 @@ wp_reset_postdata(); ?>
 </div></div>        
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
-					<h5 class="mb-4">Other Recent News Articles</h5>
+					<h5 class="mb-4">Recent CHPS News</h5>
 					<?php echo do_shortcode('[recentlist number="5"]'); ?>
 				</div>
 				<div class="col-md-6">
