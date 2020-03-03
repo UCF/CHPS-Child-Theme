@@ -95,7 +95,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			</article> 
 <hr class="mb-5" />
 <h2 class="text-center h6 text-uppercase mb-4 pb-2">Other Recent News Articles</h2>            
-<?php echo do_shortcode('[newsvisual column="3" number="6"]'); ?>          
+<?php echo do_shortcode('[newsvisual column="3" number="6" category="' . $categories[0]->name . '"]'); ?>          
        		<div class="row mt-5">
 				<div class="col-md-6 recborder">
 					<h5 class="mb-4">Other Recent News</h5>
