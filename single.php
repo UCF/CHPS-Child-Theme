@@ -111,14 +111,15 @@ if ( ! empty( $cats_ids ) ) {
 }
 // Query posts
 $wpex_query = new wp_query( $args );
-$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 // Loop through posts
-foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); ?>
+foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
+$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+?>
 	<div class="col-lg-3 col-sm-6 col-xs-12">
 		<a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( the_title_attribute( 'echo=0' ) ); ?>">
         	<div class="visnews">
             	<div class="media-background-container visnews-photo mx-auto">
-					<img src="<?php $getimgURL; ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+					<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
             	</div>
                 <div class="p-3">
             		<?php the_title(); ?>
