@@ -96,7 +96,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <?php
 // set the category ID (or multiple category IDs)
 // you want to ignore in the following array
-$cats_to_ignore = array(654,8);
+$cats_to_ignore = array(654);
 $categories = wp_get_post_categories( get_the_ID() );
 $category_in = array_diff( $categories, $cats_to_ignore );
 // ignore only if we have any category left after ignoring
