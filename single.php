@@ -67,7 +67,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 					   <?php endif; ?>
                    <?php } ?>
                     <?php the_content(); ?> 
-                   	<div class="chps-tag-cloud mb-4 mb-md-5 mt-4 mt-md-5">
+                   	<div class="chps-tag-cloud mb-4 mb-md-5 mt-4 mt-md-5" style="clear:both;">
 						<h2 class="h6 text-uppercase text-default-aw mb-4">More Topics</h2>
                         <?php 
 						$categories = get_the_category();
