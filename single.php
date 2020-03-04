@@ -110,15 +110,6 @@ $args = array(
 	'post__not_in'   => array( get_the_ID() ), // Exclude current post
 	'no_found_rows'  => true, // We don't ned pagination so this speeds up the query
 );
-// Check for current post category and add tax_query to the query arguments
-$cats = wp_get_post_terms( get_the_ID(), 'category' ); 
-$cats_ids = array();  
-foreach( $cats as $wpex_related_cat ) {
-	$cats_ids[] = $wpex_related_cat->term_id; 
-}
-if ( ! empty( $cats_ids ) ) {
-	$args['category__in'] = $cats_ids;
-}
 // Query posts
 $wpex_query = new wp_query( $args );
 // Loop through posts ?>
