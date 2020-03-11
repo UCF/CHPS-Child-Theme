@@ -267,7 +267,7 @@ $hero = get_field('top_alert', 'option');
 ?>
 <div class="topAlert" style="background-color:<?php echo $hero['bgcolor']; ?>; color:<?php echo $hero['textcolor']; ?>;">
 	<div class="container">
-		<?php echo $hero['caption']; ?>
+		<i class="<?php echo $hero['icon']; ?>"></i> <?php echo $hero['message']; ?>
     </div>
 </div>
 <?php restore_current_blog(); ?>
