@@ -265,6 +265,12 @@ if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 switch_to_blog(2);
 $hero = get_field('top_alert', 'option');
 ?>
+<style>
+.topAlert a{
+	color: <?php echo $hero['textcolor']; ?>;
+	text-decoration:underline;
+}
+</style>
 <div class="topAlert" style="background-color:<?php echo $hero['bgcolor']; ?>; color:<?php echo $hero['textcolor']; ?>;">
 	<div class="container">
 		<i class="<?php echo $hero['icon']; ?>"></i> <?php echo $hero['message']; ?>
