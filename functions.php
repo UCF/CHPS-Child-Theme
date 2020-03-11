@@ -266,10 +266,6 @@ switch_to_blog(2);
 $hero = get_field('top_alert', 'option');
 ?>
 <style>
-.topAlert {
-	font-size:11px;
-	padding:8px 0px;
-}
 .topAlert a {
 	color: <?php echo $hero['textcolor']; ?> !important;
 	text-decoration:underline;
