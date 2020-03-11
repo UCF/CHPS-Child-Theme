@@ -271,11 +271,14 @@ $hero = get_field('top_alert', 'option');
 	text-decoration:underline;
 }
 </style>
+<?php
+if( $hero['activation'] ) { ?>
 <div class="topAlert" style="background-color:<?php echo $hero['bgcolor']; ?>; color:<?php echo $hero['textcolor']; ?>;">
 	<div class="container">
 		<i class="<?php echo $hero['icon']; ?>"></i> <?php echo $hero['message']; ?>
     </div>
 </div>
+<?php } ?>
 <?php restore_current_blog(); ?>
 <?php 
 	if ( $videos || $images ) {
