@@ -266,6 +266,12 @@ a.ft-gallery-link-popup {
 .breadcrumbnav a:hover{
 	color: #fff;
 }
+/* = TOP ALERT STYLE
+-------------------------------------------------------------- */
+.topAlert {
+	font-size:11px;
+	padding:8px 0px;
+}
 /* = Profile Directory Search Bar
 -------------------------------------------------------------- */
 .searchbar {

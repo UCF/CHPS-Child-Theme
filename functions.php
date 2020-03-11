@@ -260,8 +260,18 @@ if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
     	<?php } ?>
     </div>
 </div>
-<?php } 
-	
+<?php } ?>
+<?php 
+switch_to_blog(2);
+$hero = get_field('top_alert', 'option');
+?>
+<div class="topAlert" style="background-color:<?php echo $hero['bgcolor']; ?>; color:<?php echo $hero['textcolor']; ?>;">
+	<div class="container">
+		<i class="<?php echo $hero['icon']; ?>"></i> <?php echo $hero['caption']; ?>
+    </div>
+</div>
+<?php restore_current_blog(); ?>
+<?php 
 	if ( $videos || $images ) {
 		echo get_header_media_markup( $obj, $videos, $images );
 	}
