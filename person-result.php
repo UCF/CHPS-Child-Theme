@@ -115,16 +115,11 @@ $buildingMap = get_field('building');
 		<?php }	?>
 	</div>
 	<div class="col-lg-3 pl-3 pr-3 extraprofile">
-		<div class="mt-0 mb-3 pl-3 <?php if(get_field('google_scholar')||get_field('cv')||get_field('linkedin_url')||get_field('twitter_url')){ ?>
+		<div class="mt-0 mb-3 pl-3 <?php if(get_field('google_scholar')||get_field('linkedin_url')||get_field('twitter_url')){ ?>
 leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
 			<div class="person-label">
 				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View Publications</a>
-			</div>
-			<?php endif; ?>
-			<?php if (get_field('cv')): ?>
-			<div class="person-label">
-				<i class="fa fa-file-text icongrey"></i> <a href="<?php the_field('cv'); ?>">Download CV</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('linkedin_url')): ?>

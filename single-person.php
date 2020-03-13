@@ -67,13 +67,13 @@ $ids = get_the_ID();
 							</div>
 						<?php }	?>
 					</div>
-					<?php if (get_field('cv')): ?>	
+					<?php if (get_field('google_scholar')): ?>	
 						<div class="row mt-3 mb-5">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
-								<a href="<?php the_field('cv'); ?>" class="btn btn-primary btn-block">Download CV</a>
+								<a href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank" class="btn btn-primary btn-block"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
 							</div>
 						</div>
-					<?php endif; ?>					
+					<?php endif; ?>	
 <?php if(get_field('department_tax')){ ?>
 	<div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
@@ -233,7 +233,7 @@ $posts = get_posts(array(
 		 )
 ));
 ?>
-		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-square vc_tta-spacing-1 vc_tta-o-no-fill vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><?php if (get_field('biography')||get_field('degrees')||get_field('affiliations')): ?><li class="vc_tta-tab vc_active" data-vc-tab><a href="#biography" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Biography</span></a></li><?php endif; ?><?php if (get_field('research_info')||get_field('research_interests')||get_field('google_scholar')): ?><li class="vc_tta-tab" data-vc-tab><a href="#research" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Research</span></a></li><?php endif; ?><?php if (have_rows('add_courses')):?><li class="vc_tta-tab" data-vc-tab><a href="#courses" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Courses</span></a></li><?php endif; ?><?php if (($posts)||get_field('external_news')): ?><li class="vc_tta-tab" data-vc-tab><a href="#news" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">News</span></a></li><?php endif; ?>	
+		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-square vc_tta-spacing-1 vc_tta-o-no-fill vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><?php if (get_field('biography')||get_field('degrees')||get_field('affiliations')): ?><li class="vc_tta-tab vc_active" data-vc-tab><a href="#biography" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Biography</span></a></li><?php endif; ?><?php if (get_field('research_info')||get_field('research_interests')): ?><li class="vc_tta-tab" data-vc-tab><a href="#research" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Research</span></a></li><?php endif; ?><?php if (have_rows('add_courses')):?><li class="vc_tta-tab" data-vc-tab><a href="#courses" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Courses</span></a></li><?php endif; ?><?php if (($posts)||get_field('external_news')): ?><li class="vc_tta-tab" data-vc-tab><a href="#news" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">News</span></a></li><?php endif; ?>	
 					</ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels">
 					<?php if (get_field('biography')||get_field('degrees')||get_field('accolades')||get_field('affiliations')): ?>
 					<div class="vc_tta-panel vc_active" id="biography" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#biography" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Biography</span></a></h4></div><div class="vc_tta-panel-body">
@@ -279,7 +279,7 @@ $posts = get_posts(array(
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (get_field('research_info')||get_field('research_interests')||get_field('google_scholar')): ?> <!-- THIS NEEDS FIXING tax? -->
+					<?php if (get_field('research_info')||get_field('research_interests')): ?> <!-- THIS NEEDS FIXING tax? -->
 					<div class="vc_tta-panel" id="research" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#research" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Research</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
@@ -294,11 +294,6 @@ $posts = get_posts(array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-								<?php if(get_field('google_scholar')) { ?>
-								<div class="btnhover-black" style="margin-top: 40px;">
-										<a style="background-color:#000000; color:#ffffff; padding: 18px 25px; font-size: 16px; text-decoration: none;" class="" href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
-								</div>
-								<?php }?>
 							</div>
 						</div>
 					</div></div>
