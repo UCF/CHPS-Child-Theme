@@ -77,9 +77,7 @@ $buildingMap = get_field('building');
 				if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
 				if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
 				if ($buildingMap == 'Classroom Building I') {echo 'https://www.ucf.edu/location/classroom-building-i/';}
-				?>" target="_blank" title="Map to <?php the_field('building'); ?>">
-						<?php the_field('building'); ?>
-					</a>
+				?>" target="_blank" title="Map to <?php the_field('building'); ?>"><?php the_field('building'); ?></a>
 					<?php if(get_field('room_number')){ ?>
 					<span>
 						<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
