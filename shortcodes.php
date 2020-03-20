@@ -532,12 +532,16 @@ if(get_field('building', $post->ID)){
 	$listpeeps .= '<div class="row"><div class="col-xl-12 col-md-12 col-sm-12 person-label"><span ' . $profilelabel . '><i class="fa fa-map-marker icongrey"></i> Location: </span><a href="';
 	if ($buildingMap == 'HPA I') {$listpeeps .= 'https://www.ucf.edu/location/health-public-affairs-i/';}
 	if ($buildingMap == 'HPA II') {$listpeeps .= 'https://www.ucf.edu/location/health-public-affairs-ii/';}
+	if ($buildingMap == 'HS I') {$listpeeps .= 'https://www.ucf.edu/location/health-sciences-i/';}
+	if ($buildingMap == 'HS II') {$listpeeps .= 'https://www.ucf.edu/location/health-sciences-ii/';}
 	if ($buildingMap == 'Education Complex') {$listpeeps .= 'https://www.ucf.edu/location/education-complex-and-gym/';}
 	if ($buildingMap == 'Orlando Tech Center') {$listpeeps .= 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
 	if ($buildingMap == 'Research Pavilion') {$listpeeps .= 'https://www.ucf.edu/location/research-pavilion/';}
 	if ($buildingMap == 'Partnership 1') {$listpeeps .= 'https://www.ucf.edu/location/partnership-1/';}
+	if ($buildingMap == 'Partnership 2') {$listpeeps .= 'https://www.ucf.edu/location/partnership-2/';}
 	if ($buildingMap == 'Innovative Center') {$listpeeps .= 'https://www.ucf.edu/location/innovative-center/';}
 	if ($buildingMap == 'Barbara Ying Center - CMMS') {$listpeeps .= 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
+	if ($buildingMap == 'Classroom Building I') {$listpeeps .= 'https://www.ucf.edu/location/classroom-building-i/';}
 	$listpeeps .= '" target="_blank" title="Map to ' . get_field('building', $post->ID) . '">';
 	$listpeeps .= get_field('building', $post->ID);	
 	$listpeeps .= '</a>';

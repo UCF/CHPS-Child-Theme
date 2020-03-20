@@ -98,8 +98,10 @@ $ids = get_the_ID();
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<a href="<?php 
-		if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-sciences-i/';}
-		if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-sciences-ii/';}
+		if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
+		if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
+		if ($buildingMap == 'HS I') {echo 'https://www.ucf.edu/location/health-sciences-i/';}
+		if ($buildingMap == 'HS II') {echo 'https://www.ucf.edu/location/health-sciences-ii/';}
 		if ($buildingMap == 'Education Complex') {echo 'https://www.ucf.edu/location/education-complex-and-gym/';}
 		if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
 		if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
