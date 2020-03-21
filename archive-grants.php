@@ -60,13 +60,13 @@
 							}?>
 							<i class="fa fa-clock-o iconyellow" style="margin-left:25px;"></i> Deadline: <?php echo $deadlineShort; ?>
 							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
-						<div class="mb-1">
+						<div>
 							$<?php the_field('money'); ?>
 						</div>
-                        <div class="mb-1">
+                        <div>
 							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
-                        <div class="mb-1">
+                        <div>
 							<?php the_content(); ?>
 						</div>
 					</div>
