@@ -45,10 +45,7 @@
                 <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?></li>
             <?php endwhile; ?>
 						<div>
-							$<?php the_field('money'); ?>
-						</div>
-                        <div>
-							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
+							$<?php the_field('money'); ?>, <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
                         <div>
 							<?php the_content(); ?>
