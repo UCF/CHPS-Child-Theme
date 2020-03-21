@@ -43,7 +43,7 @@
 						<h2 class="h5 mt-2"><?php the_title(); ?></h2>
 			<?php 
 			while(has_sub_field('grant_people')): 
-			$grant_facultymember = get_field( 'grant_faculty' ); 
+			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
 			?>
                 <li><?php the_sub_field('title'); ?>: <?php echo $grant_facultymember; ?><?php the_sub_field('regular_person'); ?></li>
             <?php endwhile; ?>
