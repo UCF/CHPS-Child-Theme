@@ -37,15 +37,22 @@
 				$terms = get_the_terms( $post->ID , 'code_cat' );
 				$deadline = get_field('research_enddate'); 
 				$deadlineShort = date("M j, Y", strtotime($deadline));
-				$grant_facultymember = get_sub_field( 'grant_faculty' );
 				?>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h2 class="h5 mt-2"><?php the_title(); ?></h2>
 			<?php 
-			while(has_sub_field('grant_people')): 
+			while(has_sub_field('grant_people')):
+			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
 			?>
-                <li><?php the_sub_field('title'); ?>: <?php echo get_the_title( $grant_facultymember ); ?><?php the_sub_field('regular_person'); ?></li>
+                <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
+				
+				<?php foreach( $grant_facultymember as $post_object): ?>
+					<?php echo get_the_title($post_object->ID); ?>
+                <?php endforeach; ?>
+                
+                
+                </li>
             <?php endwhile; ?>
 						<div>
 							$<?php the_field('money'); ?>, <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
