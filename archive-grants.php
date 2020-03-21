@@ -42,7 +42,7 @@
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h3 class="h5 mt-2"><?php the_title(); ?></h3>
 			<?php while(has_sub_field('grant_people')): ?>
-                <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?><?php the_sub_field('grant_faculty'); ?></li>
+                <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?></li>
             <?php endwhile; ?>
 						<div>
 							$<?php the_field('money'); ?>
