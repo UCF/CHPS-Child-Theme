@@ -33,33 +33,17 @@
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
-				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
-				$display_name = get_the_author_meta( 'display_name', $post->post_author );
 				$categories = get_the_category();
 				$terms = get_the_terms( $post->ID , 'code_cat' );
 				$deadline = get_field('research_enddate'); 
 				$deadlineShort = date("M j, Y", strtotime($deadline));
-				$payment = get_field('research_money'); 
 				?>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h3 class="h5 mt-2"><?php the_title(); ?></h3>
-							<i class="fa fa-briefcase iconyellow"></i> 
-							<?php
-							// Get a list of terms for this post's custom taxonomy.
-							$project_depts = get_field( 'research_unit' );
-							// Renumber array.
-							$project_depts = array_values($project_depts);
-							for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
-								// Each array item is an object. Display its 'name' value.
-								echo $project_depts[$dept_count]->name;
-								// If there is more than one term, comma separate them.
-								if ($dept_count<count($project_depts)-1){
-									echo ', ';
-								}
-							}?>
-							<i class="fa fa-clock-o iconyellow" style="margin-left:25px;"></i> Deadline: <?php echo $deadlineShort; ?>
-							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
+			<?php while(has_sub_field('grant_people')): ?>
+                <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?><?php the_sub_field('grant_faculty'); ?></li>
+            <?php endwhile; ?>
 						<div>
 							$<?php the_field('money'); ?>
 						</div>
