@@ -48,7 +48,7 @@
                 <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
 				
 				<?php foreach( $grant_facultymember as $post_object): ?>
-					<?php echo get_the_title($post_object->ID); ?>
+					<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
                 <?php endforeach; ?>
                 
                 
