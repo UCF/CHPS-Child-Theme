@@ -38,7 +38,7 @@
 				$deadline = get_field('research_enddate'); 
 				$deadlineShort = date("M j, Y", strtotime($deadline));
 				?>
-				<div class="row mb-1">
+				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h2 class="h5 mt-2"><?php the_title(); ?></h2>
 			<?php 
@@ -78,6 +78,9 @@
 	</article>
 </div>
 <style>	
+.grant-result ul {
+	list-style-type: none;
+}
 .container {
     margin-top: 0px !important;
 }
@@ -156,18 +159,6 @@
 }		
 .yellowBTN-full strong {
 	font-size:20px;
-}
-.gform_wrapper {
-	margin-top: 0px !important;
-}
-.gform_wrapper ul li.gfield {
-    margin-top: 5px !important;
-}	
-.gform_wrapper li.hidden_label input {
-    margin-top: 0px !important;
-}	
-.gform_wrapper .gform_footer {
-    margin: 0px !important;
 }	
 /*overwrite header styling */	
 .header-title-wrapper {
@@ -180,17 +171,6 @@
 .researchOpp-quals ul {
 	list-style-type: none;
 }
-.researchOpp-quals ul li::before {
-	content: "\f058";
-	font-family: "FontAwesome";
-	padding: 0 10px 0 0;
-	color:#ffcc00;
-}
-.dislcaimerForm {
-	font-size: 11px;
-	font-style: italic;
-	line-height: 13px;
-}	
 .yellowBTN-full {
 	display: block; 
 	font-size: 16px;  
