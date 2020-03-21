@@ -78,8 +78,8 @@
 	</article>
 </div>
 <style>	
-.grant-result ul {
-	list-style-type: none;
+.grant-result li{
+	list-style:none;
 }
 .container {
     margin-top: 0px !important;
