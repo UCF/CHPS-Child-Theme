@@ -45,7 +45,7 @@
 			while(has_sub_field('grant_people')): 
 			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
 			?>
-                <li><?php the_sub_field('title'); ?>: <?php echo $grant_facultymember; ?><?php the_sub_field('regular_person'); ?></li>
+                <li><?php the_sub_field('title'); ?>: <a href="<?php echo get_permalink( $grant_facultymember ); ?>"><?php echo get_the_title( $grant_facultymember ); ?></a<?php the_sub_field('regular_person'); ?></li>
             <?php endwhile; ?>
 						<div>
 							$<?php the_field('money'); ?>, <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
