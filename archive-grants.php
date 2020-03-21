@@ -43,7 +43,7 @@
 				?>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
-						<h2 class="h4 mt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+						<h3 class="h5 mt-2"><?php the_title(); ?></h3>
 							<i class="fa fa-briefcase iconyellow"></i> 
 							<?php
 							// Get a list of terms for this post's custom taxonomy.
