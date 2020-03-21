@@ -65,7 +65,7 @@
 							$<?php the_field('money'); ?> | <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
                         <div class="mb-2">
-							<?php the_content; ?>
+							<?php the_content(); ?>
 						</div>
 					</div>
 				</div>
