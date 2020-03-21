@@ -62,10 +62,10 @@
 							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
 						<h3 class="h6 mt-2 ml-3">DETAILS:</h3> <!-- style this size -->
 						<div class="mb-2 researchOpp-quals">
-							<?php the_field('money'); ?> | <?php the_field('start_date'); ?> | <?php the_field('end_date'); ?>
+							$<?php the_field('money'); ?> | <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
                         <div class="mb-2">
-							<?php the_field('money'); ?>
+							<?php the_content; ?>
 						</div>
 					</div>
 				</div>
