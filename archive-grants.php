@@ -60,8 +60,11 @@
 							}?>
 							<i class="fa fa-clock-o iconyellow" style="margin-left:25px;"></i> Deadline: <?php echo $deadlineShort; ?>
 							<i class="fa fa-usd iconyellow" style="margin-left:25px;"></i> <?php if ($payment == 'Yes') { echo 'Paid'; } else { echo 'None'; } ?>
-						<div class="mb-1 researchOpp-quals">
-							$<?php the_field('money'); ?> | <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
+						<div class="mb-1">
+							$<?php the_field('money'); ?>
+						</div>
+                        <div class="mb-1">
+							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
                         <div class="mb-1">
 							<?php the_content(); ?>
@@ -74,7 +77,7 @@
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
 				<?php else : ?>
-            Sorry No Pages or News Posts Match Your Search
+            Sorry No Grants Match Your Search
         <?php endif; ?>
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
