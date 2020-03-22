@@ -47,6 +47,7 @@
                                 <?php 
                                 while(has_sub_field('grant_people')):
                                 $grant_facultymember = get_sub_field( 'grant_faculty' ); 
+								$money_output = get_field('grant_money');
                                 ?>
                                     <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
                                     <?php foreach( $grant_facultymember as $post_object): ?>
@@ -55,7 +56,7 @@
                                     </li>
                                 <?php endwhile; ?>
                               </div>
-                              <div class="col-4 pr-4"><span class="grant-money">$<?php the_field('grant_money'); ?></span></div>
+                              <div class="col-4 pr-4"><span class="grant-money">$<?php echo $money_output; ?></span></div>
                             </div>
                         <?php if( get_field('start_date')) {  ?>    
 						<div>
