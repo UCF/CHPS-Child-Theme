@@ -309,18 +309,17 @@ $grantposts = get_posts(array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-                                
-                                <?php 
-								foreach( $grantposts as $post ): 
-									setup_postdata( $post );
-								?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-                                    <li class="listnone mb-4">
-                                        <h5><?php the_title(); ?></h5>
-                                    </li>
-                                </div>
-								<?php endforeach; ?>
-								<?php wp_reset_postdata(); ?>
+									<?php 
+                                    foreach( $grantposts as $post ): 
+                                        setup_postdata( $post );
+                                    ?>
+                                        <li class="listnone mb-4">
+                                            <h5><?php the_title(); ?></h5>
+                                        </li>
+                                    <?php endforeach; ?>
+                                    <?php wp_reset_postdata(); ?>
+                            	</div>
 							</div>
 						</div>
 					</div></div>
