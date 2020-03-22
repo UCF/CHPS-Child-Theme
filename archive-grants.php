@@ -94,7 +94,7 @@
 	font-size:22px;
 	background-color:#f2f2f2;
 	border:1px solid #cccccc;
-	padding:6px 12px;
+	padding:4px 12px;
 	float:right;
 	border-radius: 5px;
 }
