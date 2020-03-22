@@ -322,11 +322,11 @@ add_filter('posts_where', 'my_posts_where');
 	$the_query = new WP_Query( $grantlist );
 	?>
 
-	<?php if( $the_query->have_posts() ): 
-	$grant_facultymember = get_sub_field( 'grant_faculty' ); 
-	$money_output = get_field('grant_money');
-	?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+	<?php if( $the_query->have_posts() ): ?>
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
+			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
+			$money_output = get_field('grant_money'); 
+		?>
 				<strong><?php the_title(); ?></strong>
                 <div class="nobullets" style="font-size:12px !important;">
                     <span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span>
