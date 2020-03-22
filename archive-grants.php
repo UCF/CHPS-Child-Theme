@@ -170,9 +170,6 @@
 .searchandfilter ul li li {
 	padding: 0px !important;
 }	
-.searchandfilter .sf-range-max, .searchandfilter .sf-meta-range-number .sf-range-values-seperator {
-		display:none;
-}
 .yellowBTN-full {
 	line-height: 20px;
 }		
