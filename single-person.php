@@ -310,15 +310,14 @@ $grantposts = get_posts(array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
+									new
 									<?php 
-                                    foreach( $grantposts as $post ): 
-                                        setup_postdata( $post );
+                                    foreach( $grantposts as $p ): 
                                     ?>
                                         <li class="listnone mb-4">
-                                            <h5><?php the_title(); ?></h5>
+                                            <h5>TITLE</h5>
                                         </li>
                                     <?php endforeach; ?>
-                                    <?php wp_reset_postdata(); ?>
                             	</div>
 							</div>
 						</div>
