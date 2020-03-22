@@ -295,9 +295,9 @@ $posts = get_posts(array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new3333
+									newssss
 									<?php 
-									$grantlists = get_posts(array(
+									$grantlistss = get_posts(array(
 										'numberposts'	=> 10,
 										'post_type'		=> 'grants',
 										'order'         => 'DESC',
@@ -312,7 +312,7 @@ $posts = get_posts(array(
 									));
 									?>
 									<?php 
-                                    foreach( $grantlists as $grantlist ): 
+                                    foreach( $grantlistss as $grantlists ): 
                                     ?>
                                         <li class="listnone mb-4">
                                             <h5>TITLE</h5>
