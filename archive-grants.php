@@ -1,7 +1,4 @@
-<?php get_header(); 
-$project_depts = the_terms( $post->ID, 'departments');	
-$term = get_term_by( 'departments', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
-?>
+<?php get_header(); ?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -39,7 +36,8 @@ $term = get_term_by( 'departments', get_query_var( 'term' ), get_query_var( 'tax
 				?>
 				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
-						<span class="grant-unit"><?php echo $term->name; ?></span>  <?php the_terms( $post->ID, 'departments'); ?>
+						<span class="grant-unit"><?php echo $term->name; ?></span>  <?php the_terms( $post->ID, 'departments'); ?> final=<?php $terms = get_terms("departments"); $count = count($terms); if ( $count > 0 ){ foreach ( $terms as $term ) { echo $term->name; } } ?>
+
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
                               <div class="col-8">
