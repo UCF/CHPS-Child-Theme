@@ -280,13 +280,13 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new aaaa
+									new bbb
 							
    
 <?php
 // filter
 function my_posts_where( $where ) {
-	$where = str_replace("meta_key = 'grant_people_%", "meta_key LIKE 'grant_people_%", $where);
+	$where = str_replace("meta_key = 'grant_people_", "meta_key LIKE 'grant_people_", $where);
 	return $where;
 }
 add_filter('posts_where', 'my_posts_where');
@@ -297,7 +297,7 @@ add_filter('posts_where', 'my_posts_where');
 		'post_type'		=> 'grants',
 		'meta_query' => array(
 			array(
-				'key' => 'grant_people_%_grant_faculty', // this should be the first sub-field
+				'key' => 'grant_people_%_grant_faculty', // this is repeater field and then the sub field
 				'value' => get_the_ID(),
 				'compare' => 'LIKE'
 			),
