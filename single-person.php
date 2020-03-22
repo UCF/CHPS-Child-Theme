@@ -280,31 +280,48 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new444
+									newXXX
 									<?php 
-									$grantlists = get_posts(array(
-										'numberposts'	=> 10,
-										'post_type'		=> 'grants',
-										'order'         => 'DESC',
-										'orderby'       => 'date',
-										'meta_query' => array(
-											array(  
-												'key' => 'tag_person', // slug of custom field
-												'value' => $ids, // keep this to match current profile
-												'compare' => 'LIKE'
-												  )
-											 )
-									));
-									?>
-									<?php 
-                                    foreach( $grantlists as $grantlist ):
-									setup_postdata( $grantlist ); 
-                                    ?>
-                                        <li class="listnone mb-4">
-                                            <h5>TITLE</h5>
-                                        </li>
-                                    <?php endforeach; ?>
-                                    <?php wp_reset_postdata(); ?>
+
+						/*
+						*  Query posts for a relationship value.
+						*  This method uses the meta_query LIKE to match the string "123" to the database value a:1:{i:0;s:3:"123";} (serialized array)
+						*/
+
+						$doctors = get_posts(array(
+							'post_type' => 'grants',
+							'meta_query' => array(
+								array(
+									'key' => 'tag_person', // name of custom field
+									'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+									'compare' => 'LIKE'
+								)
+							)
+						));
+
+						?>
+						<?php if( $doctors ): ?>
+							<ul>
+							<?php foreach( $doctors as $doctor ): ?>
+								<?php 
+
+								$photo = get_field('photo', $doctor->ID);
+
+								?>
+								<li>
+									<a href="<?php echo get_permalink( $doctor->ID ); ?>">
+										<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" width="30" />
+										<?php echo get_the_title( $doctor->ID ); ?>
+									</a>
+								</li>
+							<?php endforeach; ?>
+							</ul>
+						<?php endif; ?>
+                        
+                        
+                        
+                        
+                        
                             	</div>
 							</div>
 						</div>
