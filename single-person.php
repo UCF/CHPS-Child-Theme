@@ -306,12 +306,8 @@ $grantlist = array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-                                <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									<div class="heading-underline">
-                                    	<h5>Recent Grants</h5>
-                                    </div>
-							
-   
+                                <div class="mb-4 pt-3">
+                                    	<h5>Recent Grants</h5>							
 <?php
 // filter
 function my_posts_where( $where ) {
