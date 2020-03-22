@@ -42,21 +42,23 @@
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<span class="grant-unit">Social Work</span>
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
-			<?php 
-			while(has_sub_field('grant_people')):
-			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
-			?>
-                <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
-				
-				<?php foreach( $grant_facultymember as $post_object): ?>
-					<a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
-                <?php endforeach; ?>
-                
-                
-                </li>
-            <?php endwhile; ?>
+                            <div class="row">
+                              <div class="col-8">
+                                <?php 
+                                while(has_sub_field('grant_people')):
+                                $grant_facultymember = get_sub_field( 'grant_faculty' ); 
+                                ?>
+                                    <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
+                                    <?php foreach( $grant_facultymember as $post_object): ?>
+                                        <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+                                    <?php endforeach; ?>
+                                    </li>
+                                <?php endwhile; ?>
+                              </div>
+                              <div class="col-4">$<?php the_field('money'); ?></div>
+                            </div>
 						<div>
-							$<?php the_field('money'); ?>, <?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
+							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
 						</div>
                         <div>
 							<?php the_content(); ?>
