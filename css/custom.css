@@ -94,6 +94,9 @@ h2 {
 .alignright {
 	margin: 0px 0px 20px 20px !important;
 }
+.nobullets li{
+	list-style:none;
+}
 /* = Homepage Title
 -------------------------------------------------------------- */
 .mainHomeTitle .evc-st-title {
@@ -512,6 +515,22 @@ article blockquote p {
 .codesignature {
 	font-size: 14px;
 	line-height: 19px;
+}
+/* = GRANT DISPLAYS 
+-------------------------------------------------------------- */
+.grant-unit {
+	background-color:#ffcc00;
+	font-size:12px;
+	padding:3px 8px;
+}
+.grant-money {
+	color:#999999;
+	font-size:20px;
+	background-color:#f2f2f2;
+	border:1px solid #cccccc;
+	padding:3px 12px;
+	float:right;
+	border-radius: 5px;
 }
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */

@@ -34,7 +34,7 @@
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				?>
-				<div class="row mb-1 grant-result">
+				<div class="row mb-1 nobullets">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<span class="grant-unit"><?php 
 						$terms = get_the_terms( $post->ID , 'grant_cats' );
@@ -84,23 +84,6 @@
 	</article>
 </div>
 <style>	
-.grant-result li{
-	list-style:none;
-}
-.grant-unit {
-	background-color:#ffcc00;
-	font-size:12px;
-	padding:3px 8px;
-}
-.grant-money {
-	color:#999999;
-	font-size:20px;
-	background-color:#f2f2f2;
-	border:1px solid #cccccc;
-	padding:3px 12px;
-	float:right;
-	border-radius: 5px;
-}
 .container {
     margin-top: 0px !important;
 }
