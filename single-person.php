@@ -280,7 +280,7 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									newXXX
+									newZZZ
 									<?php 
 
 						/*
@@ -289,7 +289,7 @@ header .container .h1, header .container .lead {
 						*/
 
 						$doctors = get_posts(array(
-							'post_type' => 'grant',
+							'post_type' => 'grants',
 							'meta_query' => array(
 								array(
 									'key' => 'tag_person', // name of custom field
@@ -303,16 +303,8 @@ header .container .h1, header .container .lead {
 						<?php if( $doctors ): ?>
 							<ul>
 							<?php foreach( $doctors as $doctor ): ?>
-								<?php 
-
-								$photo = get_field('photo', $doctor->ID);
-
-								?>
 								<li>
-									<a href="<?php echo get_permalink( $doctor->ID ); ?>">
-										<img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" width="30" />
-										<?php echo get_the_title( $doctor->ID ); ?>
-									</a>
+									<?php echo get_the_title( $doctor->ID ); ?>
 								</li>
 							<?php endforeach; ?>
 							</ul>
@@ -353,7 +345,7 @@ header .container .h1, header .container .lead {
 							<div class="wpb_wrapper">
 								<?php 
 								$posts = get_posts(array(
-									'numberposts'	=> 2,
+									'numberposts'	=> 10,
 									'post_type'		=> 'post',
 									'order'         => 'DESC',
 									'orderby'       => 'date',
