@@ -280,7 +280,7 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new XX
+									new LIKE
 									<?php 
 						// filter
 						function my_posts_where( $where ) {
@@ -306,7 +306,7 @@ header .container .h1, header .container .lead {
 								array(
 									'key' => 'grant_people_%_grant_faculty', // name of custom sub field
 									'value' => $ids, // keep this to match current profile
-									'compare' => '='
+									'compare' => 'LIKE'
 								)
 							)
 						));
