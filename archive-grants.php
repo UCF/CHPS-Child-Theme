@@ -57,9 +57,11 @@
                               </div>
                               <div class="col-4 pr-4"><span class="grant-money">$<?php the_field('money'); ?></span></div>
                             </div>
+                        <?php if( get_field('start_date')) {  ?>    
 						<div>
-							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
+							<?php the_field('start_date'); ?> <?php if( get_field('end_date')) {  ?>- <?php the_field('end_date'); ?><?php } ?>
 						</div>
+                        <?php } ?>
                         <div>
 							<?php the_content(); ?>
 						</div>
