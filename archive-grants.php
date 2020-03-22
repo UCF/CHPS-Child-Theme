@@ -55,7 +55,7 @@
                                     </li>
                                 <?php endwhile; ?>
                               </div>
-                              <div class="col-4">$<?php the_field('money'); ?></div>
+                              <div class="col-4 grant-money">$<?php the_field('money'); ?></div>
                             </div>
 						<div>
 							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
@@ -89,7 +89,15 @@
 	font-size:12px;
 	padding:3px 8px;
 }
-
+.grant-money {
+	color:#999999;
+	font-size:22px;
+	background-color:#f2f2f2;
+	border:1px solid #cccccc;
+	padding:6px 12px;
+	text-align:center;
+	float:left;
+}
 .container {
     margin-top: 0px !important;
 }
