@@ -310,9 +310,9 @@ $grantposts = get_posts(array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new
+									new22222
 									<?php 
-                                    foreach( $grantposts as $p ): 
+                                    foreach( $grantposts as $grantpost ): 
                                     ?>
                                         <li class="listnone mb-4">
                                             <h5>TITLE</h5>
