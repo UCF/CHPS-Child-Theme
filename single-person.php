@@ -291,26 +291,21 @@ function my_posts_where( $where ) {
 }
 add_filter('posts_where', 'my_posts_where');
 
-	// checks if there's a department head
-	// if so, displays that person
-
 	// args
-	$args_faculty_head = array(
+	$grantlist = array(
 		'posts_per_page'	=> -1,
 		'post_type'		=> 'grants',
-		'orderby' => 'date',
-		'order' => 'ASC',
 		'meta_query' => array(
 			array(
 				'key' => 'grant_people_%_grant_faculty', // this should be the first sub-field
-				'value' => $ids,
-				'compare' => '='
+				'value' => get_the_ID(),
+				'compare' => 'LIKE'
 			),
 		)
 	);
 
 	// query
-	$the_query = new WP_Query( $args_faculty_head );
+	$the_query = new WP_Query( $grantlist );
 	?>
 
 	<?php if( $the_query->have_posts() ): ?>
