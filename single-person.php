@@ -228,7 +228,19 @@ $posts = get_posts(array(
 			  )
 		 )
 ));
-?>				
+
+$grantlist = array(
+	'posts_per_page' => 10,
+	'post_type'	 => 'grants',
+	'meta_query' => array(
+		array(
+			'key' => 'grant_people_%_grant_faculty', // this is repeater field and then the sub field
+			'value' => $ids, // keep this to match current profile
+			'compare' => 'LIKE'
+		),
+	)
+);
+?>    				
 				</aside>
 			</div>
 			<div class="col-md-8 pl-md-5">
@@ -295,7 +307,7 @@ $posts = get_posts(array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									<h5>Recent Grants abc</h5>
+									<h5>Recent Grants xyz</h5>
 							
    
 <?php
@@ -305,19 +317,6 @@ function my_posts_where( $where ) {
 	return $where;
 }
 add_filter('posts_where', 'my_posts_where');
-
-	// args
-	$grantlist = array(
-		'posts_per_page'	=> -1,
-		'post_type'		=> 'grants',
-		'meta_query' => array(
-			array(
-				'key' => 'grant_people_%_grant_faculty', // this is repeater field and then the sub field
-				'value' => get_the_ID(),
-				'compare' => 'LIKE'
-			),
-		)
-	);
 
 	// query
 	$the_query = new WP_Query( $grantlist );
