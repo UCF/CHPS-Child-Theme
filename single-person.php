@@ -326,9 +326,15 @@ add_filter('posts_where', 'my_posts_where');
 
 		<ul>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			<li>
+			
 				<?php the_title(); ?>
-			</li>
+                <?php if( get_field('start_date')) {  ?>    
+                    <div>
+                        <?php the_field('start_date'); ?> <?php if( get_field('end_date')) {  ?>- <?php the_field('end_date'); ?><?php } ?>
+                    </div>
+                <?php } ?>
+                <?php the_content(); ?>
+			
 		<?php endwhile; ?>
 		</ul>
 	<?php endif; ?>
