@@ -1,6 +1,4 @@
-<?php get_header(); 
-$project_depts = get_the_terms($post->ID, 'departments');
-?>
+<?php get_header(); ?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/UndergradResearch-Header.webm" type="video/webm">
@@ -35,10 +33,12 @@ $project_depts = get_the_terms($post->ID, 'departments');
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
+				$project_depts = get_the_terms($post->ID, 'departments');
+				$grant_unit = $project_depts->name;
 				?>
 				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
-						<span class="grant-unit"><?php echo $project_depts->name; ?></span> 
+						<span class="grant-unit"><?php echo $grant_unit; ?></span> 
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
                               <div class="col-8">
