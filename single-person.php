@@ -328,7 +328,7 @@ add_filter('posts_where', 'my_posts_where');
 			$money_output = get_field('grant_money'); 
 		?>
 				<strong><?php the_title(); ?></strong>
-                <div class="nobullets" style="font-size:12px !important;">
+                <div class="nobullets" style="font-size:14px !important;">
                     <span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span>
                         <?php 
                         while(has_sub_field('grant_people')):
