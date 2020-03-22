@@ -280,8 +280,17 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									newaaaaa
+									newCCCC
 									<?php 
+						// filter
+						function my_posts_where( $where ) {
+							
+							$where = str_replace("meta_key = 'grant_people_$", "meta_key LIKE 'grant_people_%", $where);
+						
+							return $where;
+						}
+						
+						add_filter('posts_where', 'my_posts_where');			
 
 						/*
 						*  Query posts for a relationship value.
@@ -292,23 +301,27 @@ header .container .h1, header .container .lead {
 							'post_type' => 'grants',
 							'meta_query' => array(
 								array(
-									'key' => 'grant_people_%_grant_faculty', // name of custom sub field
+									'key' => 'grant_people_$_grant_faculty', // name of custom sub field
 									'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
 									'compare' => 'LIKE'
 								)
 							)
 						));
 
+						$the_query = new WP_Query( $doctors );
+
 						?>
-						<?php if( $doctors ): ?>
+						<?php if( $the_query->have_posts() ): ?>
 							<ul>
-							<?php foreach( $doctors as $doctor ): ?>
+							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 								<li>
-									<?php echo get_the_title( $doctor->ID ); ?>
+									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 								</li>
-							<?php endforeach; ?>
+							<?php endwhile; ?>
 							</ul>
 						<?php endif; ?>
+						
+						<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
                         
                         
                         
