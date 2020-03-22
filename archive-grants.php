@@ -52,7 +52,7 @@
                                     </li>
                                 <?php endwhile; ?>
                               </div>
-                              <div class="col-4 pr-2"><span class="grant-money">$<?php the_field('money'); ?></span></div>
+                              <div class="col-4 pr-4"><span class="grant-money">$<?php the_field('money'); ?></span></div>
                             </div>
 						<div>
 							<?php the_field('start_date'); ?> - <?php the_field('end_date'); ?>
