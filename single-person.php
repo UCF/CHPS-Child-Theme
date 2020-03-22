@@ -213,7 +213,22 @@ $ids = get_the_ID();
 header .container .h1, header .container .lead {
 	display: none !important;
 }	
-</style>				
+</style>
+<?php 
+$posts = get_posts(array(
+	'numberposts'	=> 10,
+	'post_type'		=> 'post',
+	'order'         => 'DESC',
+	'orderby'       => 'date',
+	'meta_query' => array(
+		array(  
+			'key' => 'tag_person', // slug of custom field
+			'value' => $ids, // keep this to match current profile
+			'compare' => 'LIKE'
+			  )
+		 )
+));
+?>				
 				</aside>
 			</div>
 			<div class="col-md-8 pl-md-5">
@@ -264,7 +279,7 @@ header .container .h1, header .container .lead {
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (get_field('research_info')||get_field('research_interests')): ?> <!-- THIS NEEDS FIXING tax? -->
+					<?php if (get_field('research_info')||get_field('research_interests')||($grantlist)): ?> <!-- THIS NEEDS FIXING tax? -->
 					<div class="vc_tta-panel" id="research" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#research" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Research</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
@@ -280,7 +295,7 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									<h5>Recent Grants</h5>
+									<h5>Recent Grants 123</h5>
 							
    
 <?php
@@ -355,21 +370,6 @@ add_filter('posts_where', 'my_posts_where');
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
-								<?php 
-								$posts = get_posts(array(
-									'numberposts'	=> 10,
-									'post_type'		=> 'post',
-									'order'         => 'DESC',
-									'orderby'       => 'date',
-									'meta_query' => array(
-										array(  
-											'key' => 'tag_person', // slug of custom field
-											'value' => $ids, // keep this to match current profile
-											'compare' => 'LIKE'
-											  )
-										 )
-								));
-								?>
 								<?php 
 								foreach( $posts as $post ): 
 									setup_postdata( $post );
