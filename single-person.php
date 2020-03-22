@@ -325,11 +325,27 @@ add_filter('posts_where', 'my_posts_where');
 	<?php if( $the_query->have_posts() ): ?>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
 				<strong><?php the_title(); ?></strong>
-                <?php if( get_field('start_date')) {  ?>    
+                <div class="row">
+                  <div class="col-8">
+                    <?php 
+                    while(has_sub_field('grant_people')):
+                    $grant_facultymember = get_sub_field( 'grant_faculty' ); 
+                    $money_output = get_field('grant_money');
+                    ?>
+                        <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
+                        <?php foreach( $grant_facultymember as $post_object): ?>
+                            <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
+                        <?php endforeach; ?>
+                        </li>
+                    <?php endwhile; ?>
+                    <?php if( get_field('start_date')) {  ?>    
                     <div>
                         <?php the_field('start_date'); ?> <?php if( get_field('end_date')) {  ?>- <?php the_field('end_date'); ?><?php } ?>
                     </div>
-                <?php } ?>
+                    <?php } ?>
+                  </div>
+                  <div class="col-4 pr-4"><span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span></div>
+                </div>
                 <?php the_content(); ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
