@@ -77,7 +77,7 @@
         <?php endif; ?>
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'research-participation' ); ?>
+				<?php dynamic_sidebar( 'grants-sidebar' ); ?>
 			</div>
 		</div>
 	</article>
