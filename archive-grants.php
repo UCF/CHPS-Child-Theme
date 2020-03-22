@@ -40,7 +40,8 @@
 				?>
 				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
-						<h2 class="h5 mt-2"><?php the_title(); ?></h2>
+						<div class="grant-unit">Social Work</div>
+                        <h2 class="h5 mt-2"><?php the_title(); ?></h2>
 			<?php 
 			while(has_sub_field('grant_people')):
 			$grant_facultymember = get_sub_field( 'grant_faculty' ); 
@@ -81,6 +82,12 @@
 .grant-result li{
 	list-style:none;
 }
+.grant-unit {
+	background-color:#ffcc00;
+	font-size:12px;
+	padding:3px 8px;
+}
+
 .container {
     margin-top: 0px !important;
 }
