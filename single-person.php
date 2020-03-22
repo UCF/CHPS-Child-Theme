@@ -218,21 +218,6 @@ header .container .h1, header .container .lead {
 			</div>
 			<div class="col-md-8 pl-md-5">
 				<section class="person-content">
-<?php 
-$posts = get_posts(array(
-	'numberposts'	=> -1,
-	'post_type'		=> 'post',
-	'order'         => 'DESC',
-	'orderby'       => 'date',
-	'meta_query' => array(
-		array(  
-			'key' => 'tag_person', // slug of custom field
-			'value' => $ids, // keep this to match current profile
-			'compare' => 'LIKE'
-			  )
-		 )
-));
-?>
 		<div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-8"><div class="vc_column-inner "><div class="wpb_wrapper"><div class="vc_tta-container" data-vc-action="collapse"><div class="vc_general vc_tta vc_tta-tabs vc_tta-color-grey vc_tta-style-classic vc_tta-shape-square vc_tta-spacing-1 vc_tta-o-no-fill vc_tta-tabs-position-top vc_tta-controls-align-left"><div class="vc_tta-tabs-container"><ul class="vc_tta-tabs-list"><?php if (get_field('biography')||get_field('degrees')||get_field('affiliations')): ?><li class="vc_tta-tab vc_active" data-vc-tab><a href="#biography" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Biography</span></a></li><?php endif; ?><?php if (get_field('research_info')||get_field('research_interests')): ?><li class="vc_tta-tab" data-vc-tab><a href="#research" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Research</span></a></li><?php endif; ?><?php if (have_rows('add_courses')):?><li class="vc_tta-tab" data-vc-tab><a href="#courses" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">Courses</span></a></li><?php endif; ?><?php if (($posts)||get_field('external_news')): ?><li class="vc_tta-tab" data-vc-tab><a href="#news" data-vc-tabs data-vc-container=".vc_tta"><span class="vc_tta-title-text">News</span></a></li><?php endif; ?>	
 					</ul></div><div class="vc_tta-panels-container"><div class="vc_tta-panels">
 					<?php if (get_field('biography')||get_field('degrees')||get_field('accolades')||get_field('affiliations')): ?>
@@ -295,9 +280,9 @@ $posts = get_posts(array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									newssss
+									new444
 									<?php 
-									$grantlistss = get_posts(array(
+									$grantlists = get_posts(array(
 										'numberposts'	=> 10,
 										'post_type'		=> 'grants',
 										'order'         => 'DESC',
@@ -312,12 +297,14 @@ $posts = get_posts(array(
 									));
 									?>
 									<?php 
-                                    foreach( $grantlistss as $grantlists ): 
+                                    foreach( $grantlists as $grantlist ):
+									setup_postdata( $grantlist ); 
                                     ?>
                                         <li class="listnone mb-4">
                                             <h5>TITLE</h5>
                                         </li>
                                     <?php endforeach; ?>
+                                    <?php wp_reset_postdata(); ?>
                             	</div>
 							</div>
 						</div>
@@ -347,6 +334,21 @@ $posts = get_posts(array(
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
+								<?php 
+								$posts = get_posts(array(
+									'numberposts'	=> -1,
+									'post_type'		=> 'post',
+									'order'         => 'DESC',
+									'orderby'       => 'date',
+									'meta_query' => array(
+										array(  
+											'key' => 'tag_person', // slug of custom field
+											'value' => $ids, // keep this to match current profile
+											'compare' => 'LIKE'
+											  )
+										 )
+								));
+								?>
 								<?php 
 								foreach( $posts as $post ): 
 									setup_postdata( $post );
