@@ -328,10 +328,11 @@ add_filter('posts_where', 'my_posts_where');
 		?>
                 <div class="nobullets" style="font-size:14px !important;">
                 	<strong><?php the_title(); ?></strong>
-                    <span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span>
-                        <?php 
+                    <div>
+                        <span class="grant-money" style="font-size:16px !important;">$<?php echo number_format($money_output, 0, '.', ','); ?></span>
+						<?php 
                         while(has_sub_field('grant_people')):
-						$grant_facultymember = get_sub_field( 'grant_faculty' ); 
+                        $grant_facultymember = get_sub_field( 'grant_faculty' ); 
                         ?>
                             <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
                             <?php foreach( $grant_facultymember as $post_object): ?>
@@ -343,6 +344,7 @@ add_filter('posts_where', 'my_posts_where');
                             <?php the_field('start_date'); ?> <?php if( get_field('end_date')) {  ?>- <?php the_field('end_date'); ?><?php } ?>
                         <?php } ?>
                         <?php the_content(); ?>
+                 	</div>
                  </div>
 		<?php endwhile; ?>
 	<?php endif; ?>
