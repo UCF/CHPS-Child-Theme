@@ -56,7 +56,7 @@
                                     </li>
                                 <?php endwhile; ?>
                               </div>
-                              <div class="col-4 pr-4"><span class="grant-money">$<?php echo number_format($money_output, 2, '.', ','); ?></span></div>
+                              <div class="col-4 pr-4"><span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span></div>
                             </div>
                         <?php if( get_field('start_date')) {  ?>    
 						<div>
