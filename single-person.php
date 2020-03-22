@@ -289,7 +289,7 @@ header .container .h1, header .container .lead {
 						*/
 
 						$doctors = get_posts(array(
-							'post_type' => 'grants',
+							'post_type' => 'grant',
 							'meta_query' => array(
 								array(
 									'key' => 'tag_person', // name of custom field
@@ -353,7 +353,7 @@ header .container .h1, header .container .lead {
 							<div class="wpb_wrapper">
 								<?php 
 								$posts = get_posts(array(
-									'numberposts'	=> -1,
+									'numberposts'	=> 2,
 									'post_type'		=> 'post',
 									'order'         => 'DESC',
 									'orderby'       => 'date',
