@@ -37,7 +37,7 @@
 				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<span class="grant-unit"><?php 
-						$terms = get_the_terms( $post->ID , 'departments' );
+						$terms = get_the_terms( $post->ID , 'grant_cats' );
 							foreach ( $terms as $term ) {
 							echo $term->name;
 						} ?></span>
