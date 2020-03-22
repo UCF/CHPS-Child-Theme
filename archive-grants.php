@@ -88,10 +88,10 @@
 }
 .grant-money {
 	color:#999999;
-	font-size:22px;
+	font-size:20px;
 	background-color:#f2f2f2;
 	border:1px solid #cccccc;
-	padding:4px 12px;
+	padding:3px 12px;
 	float:right;
 	border-radius: 5px;
 }
