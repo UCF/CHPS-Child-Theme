@@ -311,7 +311,7 @@ $grantposts = get_posts(array(
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
 									<?php 
-                                    foreach( $grantposts as $post ): 
+                                    foreach( $posts as $post ): 
                                         setup_postdata( $post );
                                     ?>
                                         <li class="listnone mb-4">
