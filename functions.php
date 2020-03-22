@@ -119,7 +119,7 @@ function research_participation() {
     register_sidebar(
         array (
             'name' => __( 'Grants' ),
-            'id' => 'research-participation',
+            'id' => 'grants_sidebar',
             'description' => __( 'This is sidebar for the Grants Archive' ),
             'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
 			'after_widget' => '</div>',
