@@ -280,52 +280,53 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new LIKE
-									<?php 
-						// filter
-						function my_posts_where( $where ) {
-							global $wpdb;
-							$where = str_replace(
-									  "meta_key = 'grant_people_%", 
-									  "meta_key LIKE 'grant_people_%",
-									  $wpdb->remove_placeholder_escape($where)
-							);
-							return $where;
-						}
-						
-						add_filter('posts_where', 'my_posts_where');			
+									new QQQQ
+							
+   
+<?php
+// filter
+function my_posts_where( $where ) {
+	$where = str_replace("meta_key = 'grant_people_%", "meta_key LIKE 'grant_people_%", $where);
+	return $where;
+}
+add_filter('posts_where', 'my_posts_where');
 
-						/*
-						*  Query posts for a relationship value.
-						*  This method uses the meta_query LIKE to match the string "123" to the database value a:1:{i:0;s:3:"123";} (serialized array)
-						*/
+	// checks if there's a department head
+	// if so, displays that person
 
-						$doctors = get_posts(array(
-							'post_type' => 'grants',
-							'meta_query' => array(
-								array(
-									'key' => 'grant_people_%_grant_faculty', // name of custom sub field
-									'value' => $ids, // keep this to match current profile
-									'compare' => 'LIKE'
-								)
-							)
-						));
+	// args
+	$args_faculty_head = array(
+		'posts_per_page'	=> -1,
+		'post_type'		=> 'grants',
+		'orderby' => 'date',
+		'order' => 'ASC',
+		'meta_query'	=> array(
+			array(
+				'key' => 'grant_people_%_grant_faculty', // this should be the first sub-field
+				'value' => $ids,
+				'compare' => 'LIKE'
+			),
+		)
+	);
 
-						$the_query = new WP_Query( $doctors );
+	// query
+	$the_query = new WP_Query( $args_faculty_head );
+	?>
 
-						?>
-						<?php if( $the_query->have_posts() ): ?>
-							<ul>
-							<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-								<li>
-									<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-								</li>
-							<?php endwhile; ?>
-							</ul>
-						<?php endif; ?>
-						
-						<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
-                        
+	<?php if( $the_query->have_posts() ): ?>
+
+		<ul>
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+			<li>
+				<?php the_title(); ?>
+			</li>
+		<?php endwhile; ?>
+		</ul>
+	<?php endif; ?>
+	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
+    
+    
+    
                         
                         
                         
