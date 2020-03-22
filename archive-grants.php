@@ -95,7 +95,7 @@
 	background-color:#f2f2f2;
 	border:1px solid #cccccc;
 	padding:6px 12px;
-	text-align:right;
+	float:right;
 	border-radius: 5px;
 }
 .container {
