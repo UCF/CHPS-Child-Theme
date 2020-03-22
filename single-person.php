@@ -307,7 +307,7 @@ $grantlist = array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									<h5>Recent Grants xyz</h5>
+									<h5>Recent Grants</h5>
 							
    
 <?php
@@ -323,20 +323,15 @@ add_filter('posts_where', 'my_posts_where');
 	?>
 
 	<?php if( $the_query->have_posts() ): ?>
-
-		<ul>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-			
-				<?php the_title(); ?>
+				<strong><?php the_title(); ?></strong>
                 <?php if( get_field('start_date')) {  ?>    
                     <div>
                         <?php the_field('start_date'); ?> <?php if( get_field('end_date')) {  ?>- <?php the_field('end_date'); ?><?php } ?>
                     </div>
                 <?php } ?>
                 <?php the_content(); ?>
-			
 		<?php endwhile; ?>
-		</ul>
 	<?php endif; ?>
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
     
