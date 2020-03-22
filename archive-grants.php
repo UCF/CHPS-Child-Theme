@@ -55,7 +55,7 @@
                                     </li>
                                 <?php endwhile; ?>
                               </div>
-                              <div class="col-4 pr-4"><span class="grant-money">$<?php the_field('money'); ?></span></div>
+                              <div class="col-4 pr-4"><span class="grant-money">$<?php the_field('grant_money'); ?></span></div>
                             </div>
                         <?php if( get_field('start_date')) {  ?>    
 						<div>
