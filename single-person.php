@@ -343,44 +343,7 @@ header .container .h1, header .container .lead {
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
-								<?php 
-								$posts = get_posts(array(
-									'numberposts'	=> 10,
-									'post_type'		=> 'post',
-									'order'         => 'DESC',
-									'orderby'       => 'date',
-									'meta_query' => array(
-										array(  
-											'key' => 'tag_person', // slug of custom field
-											'value' => $ids, // keep this to match current profile
-											'compare' => 'LIKE'
-											  )
-										 )
-								));
-								?>
-								<?php 
-								foreach( $posts as $post ): 
-									setup_postdata( $post );
-								?>
-								<li class="listnone mb-4">
-									<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
-										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
-										<?php } else { ?>
-										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-									<?php } ?>
-											<h5><?php the_title(); ?></h5>
-										 </a>
-								<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { the_author(); }?> | <?php the_time('F j, Y'); ?></span>
-								<br>
-								<?php 			
-								$content = get_the_content();
-								$content = preg_replace('#\[[^\]]+\]#', '',$content);
-								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 30, '...' );
-								?>
-								</li>
-								<?php endforeach; ?>
-								<?php wp_reset_postdata(); ?>
+								
 								<?php if (have_rows('external_news') ) { 	?>
 									
 								<div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
