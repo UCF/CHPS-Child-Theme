@@ -36,7 +36,11 @@
 				?>
 				<div class="row mb-1 grant-result">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
-						<span class="grant-unit"><?php echo $term->name; ?></span>  <?php the_terms( $post->ID, 'departments'); ?> final=<?php $terms = get_terms("departments"); $count = count($terms); if ( $count > 0 ){ foreach ( $terms as $term ) { echo $term->name; } } ?>
+						<span class="grant-unit"><?php echo $term->name; ?></span>  <?php the_terms( $post->ID, 'departments'); ?> final=<?php 
+						$terms = get_the_terms( $post->ID , 'departments' );
+							foreach ( $terms as $term ) {
+							echo $term->name;
+						} ?>
 
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
