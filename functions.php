@@ -114,6 +114,22 @@ function research_participation() {
 }
 add_action( 'widgets_init', 'research_participation' );
 
+// ADDING GRANTS SIDEBAR
+function research_participation() {
+    register_sidebar(
+        array (
+            'name' => __( 'Grants' ),
+            'id' => 'research-participation',
+            'description' => __( 'This is sidebar for the Grants Archive' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'grants_sidebar' );
+
 // ADDING FAQ SIDEBAR
 function faq_sidebar() {
     register_sidebar(
