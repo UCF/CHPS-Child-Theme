@@ -280,7 +280,7 @@ header .container .h1, header .container .lead {
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									new QQQQ
+									new aaaa
 							
    
 <?php
@@ -300,11 +300,11 @@ add_filter('posts_where', 'my_posts_where');
 		'post_type'		=> 'grants',
 		'orderby' => 'date',
 		'order' => 'ASC',
-		'meta_query'	=> array(
+		'meta_query' => array(
 			array(
 				'key' => 'grant_people_%_grant_faculty', // this should be the first sub-field
 				'value' => $ids,
-				'compare' => 'LIKE'
+				'compare' => '='
 			),
 		)
 	);
