@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
-				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grant-header-2.webm" type="video/webm">
-				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grant-header-2.mp4" type="video/mp4">
+				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants3.webm" type="video/webm">
+				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants3.mp4" type="video/mp4">
 			</video>
 			<button class="media-background-video-toggle btn play-enabled hidden-xs-up" type="button" data-toggle="button" aria-pressed="false" aria-label="Play or pause background videos">
 				<span class="fa fa-pause media-background-video-pause" aria-hidden="true"></span>
