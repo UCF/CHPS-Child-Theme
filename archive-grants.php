@@ -1,18 +1,4 @@
-<?php get_header(); 
-add_filter( 'posts_orderby' , 'custom_cpt_order' );
-
-function custom_cpt_order( $orderby ) {
-	global $wpdb;
-	
-	// Check if the query is for an archive
-	if ( is_archive() && get_query_var("post_type") == "my_custom_post_type" ) {
-		// Query was for archive, then set order
-		return "$wpdb->posts.post_title ASC";
-	}
-	
-	return $orderby;
-}
-?>
+<?php get_header(); ?>
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants-3.webm" type="video/webm">
