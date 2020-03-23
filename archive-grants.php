@@ -55,9 +55,9 @@
                                     <?php endforeach; ?>
                                     </li>
                                 <?php endwhile; ?>
-                                <?php if( get_field('start_date')) {  ?>    
+                                <?php if( get_field('grant_start_date')) {  ?>    
                                 <div>
-                                    <?php the_field('start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
+                                    <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 </div>
                                 <?php } ?>
                               </div>

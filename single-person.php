@@ -338,8 +338,8 @@ add_filter('posts_where', 'my_posts_where');
                             <?php endforeach; ?>
                             </li>
                         <?php endwhile; ?>
-                        <?php if( get_field('start_date')) {  ?>    
-                            <?php the_field('start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
+                        <?php if( get_field('grant_start_date')) {  ?>    
+                            <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                         <?php } ?>
                         <?php the_content(); ?>
                  	</div>
