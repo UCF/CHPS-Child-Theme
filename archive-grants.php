@@ -55,16 +55,16 @@
                                     <?php endforeach; ?>
                                     </li>
                                 <?php endwhile; ?>
+                                Amount: $<?php echo number_format($money_output, 0, '.', ','); ?>
                                 <?php if( get_field('grant_start_date')) {  ?>    
                                 <div>
-                                    <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
+                                    Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 </div>
                                 <?php } ?>
                               </div>
-                              <div class="col-4 pr-4"><span class="grant-money">$<?php echo number_format($money_output, 0, '.', ','); ?></span></div>
                             </div>
                         <div>
-							<?php the_content(); ?>
+							Funding Agency: <?php the_content(); ?>
 						</div>
 					</div>
 				</div>
