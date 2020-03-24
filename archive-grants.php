@@ -64,7 +64,13 @@
                               </div>
                             </div>
                         <div>
-							Funding Agency: <?php the_content(); ?>
+							Funding Agency: <?php add_filter('the_content','prepend_this');
+											function prepend_this($content)
+											{
+												$content = "string to prepend" . $content;
+											return $content;
+											
+											} ?>
 						</div>
 					</div>
 				</div>
