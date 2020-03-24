@@ -43,6 +43,7 @@
 						} ?></span>
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
+                              <div class="col-12">
                                 <?php 
                                 while(has_sub_field('grant_people')):
                                 $grant_facultymember = get_sub_field( 'grant_faculty' ); 
@@ -60,6 +61,7 @@
                                     Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 </div>
                                 <?php } ?>
+                              </div>
                             </div>
                         <div>
 							Funding Agency: <?php the_content(); ?>
