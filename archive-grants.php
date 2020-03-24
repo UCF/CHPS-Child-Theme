@@ -43,7 +43,6 @@
 						} ?></span>
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
-                              <div class="col-8">
                                 <?php 
                                 while(has_sub_field('grant_people')):
                                 $grant_facultymember = get_sub_field( 'grant_faculty' ); 
@@ -61,18 +60,9 @@
                                     Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 </div>
                                 <?php } ?>
-                              </div>
                             </div>
                         <div>
-							Funding Agency: <?php function prefix_add_content ($content){
-	
-        $before = "This comes before the content.";
-	$after = "This comes after the content (like my Podcast badge).";
-	$content = $before . $content . $after;
- 
-	return $content;
-}
-add_filter ('the_content', 'prefix_add_content');?>
+							Funding Agency: <?php the_content(); ?>
 						</div>
 					</div>
 				</div>
