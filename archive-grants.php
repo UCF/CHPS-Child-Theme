@@ -64,13 +64,15 @@
                               </div>
                             </div>
                         <div>
-							Funding Agency: <?php add_filter('the_content','prepend_this');
-											function prepend_this($content)
-											{
-												$content = "string to prepend" . $content;
-											return $content;
-											
-											} ?>
+							Funding Agency: <?php function prefix_add_content ($content){
+	
+        $before = "This comes before the content.";
+	$after = "This comes after the content (like my Podcast badge).";
+	$content = $before . $content . $after;
+ 
+	return $content;
+}
+add_filter ('the_content', 'prefix_add_content');?>
 						</div>
 					</div>
 				</div>
