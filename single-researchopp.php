@@ -94,6 +94,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
 			<div class="researchOpp-dblock"> 
 				<i class="fa fa-map-marker icongrey"></i> <strong>Location:</strong><br>
+                <?php if (get_field('research_building_name')){ ?><?php the_field('research_building_name'); ?><br><?php } ?>
 				<?php
 					if( get_field('research_format') == 'Online' ) { ?>
 					Online
