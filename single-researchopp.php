@@ -39,6 +39,10 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
+            <h2>Exclusion Qualifications:</h2> <!-- style this size -->
+			<div class="mb-4 researchOpp-quals">
+				<?php the_field('research_exclusion'); ?>
+			</div>
 			<?php
 				if ($today<$deadlineShort) {  ?>
 					<div class="pt-4" id="getStarted">
