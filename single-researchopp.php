@@ -35,14 +35,18 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php } ?>
 				<?php the_content(); ?> 
 			</div>
-			<h2>Inclusion Qualifications:</h2> <!-- style this size -->
+			<?php if (get_field('research_qualifications')){ ?>
+            <h2>Inclusion Qualifications:</h2> <!-- style this size -->
 			<div class="mb-4 researchOpp-quals">
 				<?php the_field('research_qualifications'); ?>
 			</div>
+            <?php } ?>
+            <?php if (get_field('research_exclusion')){ ?>
             <h2>Exclusion Qualifications:</h2> <!-- style this size -->
 			<div class="mb-4 researchOpp-exquals">
 				<?php the_field('research_exclusion'); ?>
 			</div>
+            <?php } ?>
 			<?php
 				if ($today<$deadlineShort) {  ?>
 					<div class="pt-4" id="getStarted">
