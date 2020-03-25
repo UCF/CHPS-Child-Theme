@@ -40,7 +40,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<?php the_field('research_qualifications'); ?>
 			</div>
             <h2>Exclusion Qualifications:</h2> <!-- style this size -->
-			<div class="mb-4 researchOpp-quals">
+			<div class="mb-4 researchOpp-exquals">
 				<?php the_field('research_exclusion'); ?>
 			</div>
 			<?php
@@ -262,7 +262,7 @@ html {
 	line-height: 13px;
 	margin-top: 5px;
 }	
-.researchOpp-quals ul {
+.researchOpp-quals ul, .researchOpp-exquals ul {
 	list-style-type: none;
 }
 .researchOpp-quals ul li::before {
@@ -271,6 +271,12 @@ html {
 	padding: 0 10px 0 0;
 	color:#ffcc00;
 }	
+.researchOpp-exquals ul li::before {
+	content: "\f057";
+	font-family: "FontAwesome";
+	padding: 0 10px 0 0;
+	color:#000;
+}
 .researchOpp-dblock {
 	border-bottom: 1px #dddddd solid;
 	padding: 15px;
