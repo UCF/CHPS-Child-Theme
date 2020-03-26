@@ -60,10 +60,10 @@
                               </div>
                             </div>
                         <div>
-							<strong>Category:</strong> <?php 
-						$cterms = get_the_terms( $post->ID , 'grant_category' );
-							foreach ( $cterms as $cterm ) {
-							echo $cterm->name;
+							<strong>Categories:</strong> <?php 
+						$terms = get_the_terms( $post->ID , 'grant_category' );
+							foreach ( $terms as $term ) {
+							echo $term->name;
 						} ?>
 						</div>    
                         <div>
