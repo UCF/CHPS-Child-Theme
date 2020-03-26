@@ -49,18 +49,18 @@
                                 $grant_facultymember = get_sub_field( 'grant_faculty' ); 
 								$money_output = get_field('grant_money');
                                 ?>
-                                    <li><?php the_sub_field('title'); ?>: <?php the_sub_field('regular_person'); ?>
+                                    <li><strong><?php the_sub_field('title'); ?>:</strong> <?php the_sub_field('regular_person'); ?>
                                     <?php foreach( $grant_facultymember as $post_object): ?>
                                         <a href="<?php echo get_permalink($post_object->ID); ?>"><?php echo get_the_title($post_object->ID); ?></a>
                                     <?php endforeach; ?>
                                     </li>
                                 <?php endwhile; ?>
-                                Amount: $<?php echo number_format($money_output, 0, '.', ','); ?><?php if( get_field('grant_start_date')) {  ?> | Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
+                                <strong>Amount:</strong> $<?php echo number_format($money_output, 0, '.', ','); ?><?php if( get_field('grant_start_date')) {  ?> | <strong>Timeframe:</strong> <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 <?php } ?>
                               </div>
                             </div>
                         <div>
-							Funding Agency: <?php the_field('grant_agency'); ?>
+							<strong>Funding Agency:</strong> <?php the_field('grant_agency'); ?>
 						</div>
 					</div>
 				</div>
