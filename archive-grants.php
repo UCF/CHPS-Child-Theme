@@ -36,11 +36,11 @@
 				?>
 				<div class="row mb-1 nobullets">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB;"> 
-						<span class="grant-unit"><?php 
+						<?php 
 						$terms = get_the_terms( $post->ID , 'grant_units' );
 							foreach ( $terms as $term ) {
-							echo $term->name;
-						} ?></span>
+							echo '<span class="grant-unit">' . $term->name . '</span>';
+						} ?>
                         <h2 class="h5 mt-1"><?php the_title(); ?></h2>
                             <div class="row">
                               <div class="col-12">
