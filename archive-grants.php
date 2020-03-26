@@ -60,7 +60,11 @@
                               </div>
                             </div>
                         <div>
-							<strong>Category:</strong> <?php the_field('grant_category'); ?>
+							<strong>Category:</strong> <?php 
+						$cterms = get_the_terms( $post->ID , 'grant_category' );
+							foreach ( $cterms as $cterm ) {
+							echo $cterm->name;
+						} ?>
 						</div>    
                         <div>
 							<strong>Funding Agency:</strong> <?php the_field('grant_agency'); ?>
