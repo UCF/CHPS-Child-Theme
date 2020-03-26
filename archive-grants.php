@@ -37,7 +37,7 @@
 				<div class="row mb-1 nobullets">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB;"> 
 						<span class="grant-unit"><?php 
-						$terms = get_the_terms( $post->ID , 'grant_cats' );
+						$terms = get_the_terms( $post->ID , 'grant_units' );
 							foreach ( $terms as $term ) {
 							echo $term->name;
 						} ?></span>
@@ -60,7 +60,7 @@
                               </div>
                             </div>
                         <div>
-							Funding Agency: <?php the_content(); ?>
+							Funding Agency: <?php the_field('grant_agency'); ?>
 						</div>
 					</div>
 				</div>
