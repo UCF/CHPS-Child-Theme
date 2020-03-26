@@ -60,6 +60,9 @@
                               </div>
                             </div>
                         <div>
+							<strong>Category:</strong> <?php the_field('grant_category'); ?>
+						</div>    
+                        <div>
 							<strong>Funding Agency:</strong> <?php the_field('grant_agency'); ?>
 						</div>
 					</div>
