@@ -324,7 +324,7 @@ add_filter('posts_where', 'my_posts_where');
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
 			$money_output = get_field('grant_money'); 
 		?>
-                <div class="nobullets pl-3" style="font-size:14px !important; border-bottom:1px solid #EBEBEB;">
+                <div class="nobullets pl-3 pb-3" style="font-size:14px !important; border-bottom:1px solid #EBEBEB;">
                 	<h6 class="mb-1 mt-3"><?php the_title(); ?></h6>
                     <div>
 						<?php 
