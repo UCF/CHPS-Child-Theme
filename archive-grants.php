@@ -55,17 +55,14 @@
                                     <?php endforeach; ?>
                                     </li>
                                 <?php endwhile; ?>
-                                <strong>Amount:</strong> $<?php echo number_format($money_output, 0, '.', ','); ?><?php if( get_field('grant_start_date')) {  ?> | <strong>Timeframe:</strong> <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
-                                <?php } ?>
-                              </div>
-                            </div>
-                        <div>
-							<strong>Categories:</strong> <?php 
+                                <strong>Categories:</strong> <?php 
 						$terms = get_the_terms( $post->ID , 'grant_cats' );
 							foreach ( $terms as $term ) {
 							echo $term->name;
-						} ?>
-						</div>    
+						} ?> | <strong>Amount:</strong> $<?php echo number_format($money_output, 0, '.', ','); ?><?php if( get_field('grant_start_date')) {  ?> | <strong>Timeframe:</strong> <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
+                                <?php } ?>
+                              </div>
+                            </div>   
                         <div>
 							<strong>Funding Agency:</strong> <?php the_field('grant_agency'); ?>
 						</div>
