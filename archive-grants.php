@@ -61,7 +61,7 @@
                             </div>
                         <div>
 							<strong>Categories:</strong> <?php 
-						$terms = get_the_terms( $post->ID , 'grant_category' );
+						$terms = get_the_terms( $post->ID , 'grant_cats' );
 							foreach ( $terms as $term ) {
 							echo $term->name;
 						} ?>
