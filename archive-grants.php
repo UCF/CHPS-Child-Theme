@@ -55,11 +55,7 @@
                                     <?php endforeach; ?>
                                     </li>
                                 <?php endwhile; ?>
-                                Amount: $<?php echo number_format($money_output, 0, '.', ','); ?>
-                                <?php if( get_field('grant_start_date')) {  ?>    
-                                <div>
-                                    Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
-                                </div>
+                                Amount: $<?php echo number_format($money_output, 0, '.', ','); ?><?php if( get_field('grant_start_date')) {  ?> | Timeframe: <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
                                 <?php } ?>
                               </div>
                             </div>
