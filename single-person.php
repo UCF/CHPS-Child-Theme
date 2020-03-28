@@ -321,7 +321,7 @@ add_filter('posts_where', 'my_posts_where');
 	// query
 	$the_query = new WP_Query( $grantlist );
 	?>
-<div class="grantSmall">
+<div class="grantResult grantSmall">
 	<?php if( $the_query->have_posts() ): ?>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         
