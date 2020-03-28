@@ -228,10 +228,12 @@ $posts = get_posts(array(
 			  )
 		 )
 ));
-
 $grantlist = array(
 	'posts_per_page' => 10,
 	'post_type'	 => 'grants',
+	'meta_key' => 'grant_start_date',
+	'orderby' => 'meta_value',
+	'order' => 'DESC',
 	'meta_query' => array(
 		array(
 			'key' => 'grant_people_%_grant_faculty', // this is repeater field and then the sub field
