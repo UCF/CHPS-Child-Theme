@@ -646,16 +646,16 @@ $listgrants .= '</li>';
 	endwhile;
 $listgrants .= '<strong>Amount:</strong> $' . $gmoney . '';
 	if( get_field('grant_start_date', $post->ID)) {     
-$listgrants .= ' | <strong>Timeframe:</strong> ' . the_field('grant_start_date', $post->ID) . ''; 
+$listgrants .= ' | <strong>Timeframe:</strong> ' . get_field('grant_start_date', $post->ID) . ''; 
 	if( get_field('grant_end_date')) {  
-$listgrants .= '-' . the_field('grant_end_date', $post->ID) . ''; 
+$listgrants .= '-' . get_field('grant_end_date', $post->ID) . ''; 
 	}} 
 $listgrants .= '<div><strong>Categories:</strong>'; 
 	$terms = get_the_terms( $post->ID , 'grant_cats' );
 		foreach ( $terms as $term ) {
 		echo $term->name;
 	} 
-$listgrants .= '</div><div><strong>Funding Agency:</strong> ' . the_field('grant_agency', $post->ID) . '</div></div></div>';
+$listgrants .= '</div><div><strong>Funding Agency:</strong> ' . get_field('grant_agency', $post->ID) . '</div></div></div>';
 	endwhile;
 	return $listgrants;	
 ?>
