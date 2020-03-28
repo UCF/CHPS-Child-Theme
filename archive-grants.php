@@ -29,8 +29,8 @@
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 
 		<div class="row">
-			<div>
-            <?php echo do_shortcode( ' [showgrants] ' ); ?>
+			<div class="col-lg-8 col-md-12 pt-4">
+			<?php echo do_shortcode( ' [showgrants] ' ); ?>	
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'grants-sidebar' ); ?>
