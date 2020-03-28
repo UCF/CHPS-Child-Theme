@@ -632,7 +632,7 @@ $loop = new WP_Query($args);
 while($loop->have_posts()) : $loop->the_post(); 
 $money_output = get_field('grant_money'); 
 ?>
-<?php get_template_part( 'grant-result'); ?>
+<?php get_template_part( 'grant-results'); ?>
 <?php endwhile; ?>
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
