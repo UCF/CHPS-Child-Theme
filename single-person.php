@@ -323,7 +323,7 @@ add_filter('posts_where', 'my_posts_where');
 	?>
 	<?php if( $the_query->have_posts() ): ?>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-        <div class="grantResult grantSmall">
+        <div class="pt-3 pb-3 grantResult grantSmall">
         <?php get_template_part( 'grant-results'); ?>
         </div>
 		<?php endwhile; ?>

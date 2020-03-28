@@ -519,7 +519,7 @@ article blockquote p {
 /* = GRANT DISPLAYS 
 -------------------------------------------------------------- */
 .grantResult {
-	border-bottom:1px solid #EBEBEB !important;
+	border-bottom:1px solid #EBEBEB;
 }
 .grantResult h3{
 	font-size:20px;
