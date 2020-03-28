@@ -321,12 +321,15 @@ add_filter('posts_where', 'my_posts_where');
 	// query
 	$the_query = new WP_Query( $grantlist );
 	?>
-
+<div class="grantSmall">
 	<?php if( $the_query->have_posts() ): ?>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+        
         <?php get_template_part( 'grant-results'); ?>
+        
 		<?php endwhile; ?>
 	<?php endif; ?>
+</div>
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>
                             	</div>
 							</div>
