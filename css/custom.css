@@ -518,20 +518,21 @@ article blockquote p {
 }
 /* = GRANT DISPLAYS 
 -------------------------------------------------------------- */
+.grantResult {
+	border-bottom:1px solid #EBEBEB;
+}
+.grantSmall {
+	padding-left:30px;
+	font-size:14px !important; 
+}
+.grantSmall h3{
+	font-size:16px !important; 
+}
 .grant-unit {
 	background-color:#ffcc00;
 	font-size:12px;
 	padding:3px 8px;
 	margin-right:8px;
-}
-.grant-money {
-	color:#999999;
-	font-size:20px;
-	background-color:#f2f2f2;
-	border:1px solid #cccccc;
-	padding:3px 12px;
-	float:right;
-	border-radius: 5px;
 }
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */

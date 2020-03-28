@@ -591,13 +591,15 @@ add_shortcode( 'rootcode', 'rootcodevar' );
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY GRANTS
-// [showgrants unit="" num=""]
+// [showgrants unit="" num="" style="grantSmall"]
 function grantlistvar( $atts ) {
     $g = shortcode_atts( array(
         'unit' => '',
 		'num' => '-1',
+		'style' => '',
     ), $atts ); ?>
 <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+//$grantSmall = $g['style'];
 if (!empty($g['unit'])) { 
 $args = array(
 		'post_type' => 'grants',
@@ -631,7 +633,9 @@ else {
 $loop = new WP_Query($args);
 while($loop->have_posts()) : $loop->the_post(); 
 ?>
+<div class="pb-3 grantResult <?php echo $g['style']; ?>">
 <?php get_template_part( 'grant-results'); ?>
+</div>
 <?php endwhile; ?>
 <div class="mt-5">
 	<?php wpbeginner_numeric_posts_nav(); ?>
