@@ -321,9 +321,7 @@ add_filter('posts_where', 'my_posts_where');
 	?>
 
 	<?php if( $the_query->have_posts() ): ?>
-		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); 
-			$money_output = get_field('grant_money'); 
-		?>
+		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <?php get_template_part( 'grant-results'); ?>
 		<?php endwhile; ?>
 	<?php endif; ?>
