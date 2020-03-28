@@ -606,7 +606,7 @@ $args = array(
 	    'paged' => $paged,
 		'meta_key' => 'grant_start_date',
 		'orderby' => 'meta_value',
-		'order' => 'ASC', 
+		'order' => 'DESC', 
         'tax_query' => array(
             array(
                 'taxonomy' => 'grant_units',
@@ -624,7 +624,7 @@ else {
 	    'paged' => $paged,
 		'meta_key' => 'grant_start_date',
 		'orderby' => 'meta_value',
-		'order' => 'ASC', 
+		'order' => 'DESC', 
      );
 } ?>    
 <?php   
