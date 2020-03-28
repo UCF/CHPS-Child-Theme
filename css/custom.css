@@ -521,12 +521,15 @@ article blockquote p {
 .grantResult {
 	border-bottom:1px solid #EBEBEB;
 }
+.grantResult h3{
+	font-size:20px;
+}
 .grantSmall {
 	padding-left:30px;
 	font-size:14px !important; 
 }
 .grantSmall h3{
-	font-size:16px !important; 
+	font-size:17px !important; 
 }
 .grant-unit {
 	background-color:#ffcc00;
