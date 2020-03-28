@@ -150,11 +150,9 @@ add_action( 'widgets_init', 'faq_sidebar' );
 add_action( 'pre_get_posts', 'my_change_sort_order'); 
     function my_change_sort_order($query){
         if( is_post_type_archive( 'grants' ) ):
-         //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
-           //Set the order ASC or DESC
-           $query->set( 'order', 'ASC' );
-           //Set the orderby
-           $query->set( 'orderby', 'title' );
+           $query->set( 'order', 'DESC' );
+           $query->set( 'orderby', 'meta_value' );
+		   $query->set( 'orderby', 'grant_start_date' );
         endif;    
     };
 
