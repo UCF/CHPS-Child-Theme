@@ -2,6 +2,7 @@
     <h6 class="mb-1 mt-3"><?php the_title(); ?></h6>
     <div>
         <?php 
+		$money_output = get_field('grant_money');
         while(has_sub_field('grant_people')):
         $grant_facultymember = get_sub_field( 'grant_faculty' ); 
         ?>
