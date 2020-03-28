@@ -633,6 +633,7 @@ while($loop->have_posts()) : $loop->the_post();
 $money_output = get_field('grant_money'); 
 $listgrants = '<div class="nobullets pl-3 pb-3" style="font-size:14px !important; border-bottom:1px solid #EBEBEB;">';
 $listgrants .= '<h6 class="mb-1 mt-3">' . get_the_title() . '</h6><div>';
+wp_reset_query();
 return $listgrants;
 ?>
     <h6 class="mb-1 mt-3"><?php the_title(); ?></h6>
