@@ -1,4 +1,4 @@
-<div class="mb-3 grantHide">
+<div class="mb-1 grantHide">
 <?php 
 $terms = get_the_terms( $post->ID , 'grant_units' );
 	foreach ( $terms as $term ) {
