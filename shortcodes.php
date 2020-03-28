@@ -635,7 +635,7 @@ $money_output = get_field('grant_money', $post->ID);
 $gmoney = number_format($money_output, 0, '.', ',');
 
 $listgrants = '<div class="nobullets pl-3 pb-3" style="font-size:14px !important; border-bottom:1px solid #EBEBEB;">';
-$listgrants .= '<h6 class="mb-1 mt-3">' . $post->post_title . '</h6><div>';
+$listgrants .= '<h6 class="mb-1 mt-3">' . get_the_title() . '</h6><div>';
 	while(has_sub_field('grant_people')):
 	$grant_facultymember = get_sub_field( 'grant_faculty' ); 
 $listgrants .= '<li><strong>' . the_sub_field('title', $post->ID) . ':</strong> ' . the_sub_field('regular_person') . '';
