@@ -309,7 +309,7 @@ $grantlist = array(
 									</ul>
 								<?php endif; ?>
                                 <div class="mb-4 pt-3">
-                                    	<h5>Recent Grants</h5>							
+                                    	<h5 class="mb-0">Recent Grants</h5>							
 <?php
 // filter
 function my_posts_where( $where ) {
