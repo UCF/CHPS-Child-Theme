@@ -588,4 +588,80 @@ return $listrc;
 }
 add_shortcode( 'rootcode', 'rootcodevar' );	
 //  ------------------------------------------------------------------------
+?><?php
+//  ------------------------------------------------------------------------
+// SHORTCODE TO DISPLAY GRANTS
+// [showgrants unit="" num=""]
+function grantlistvar( $atts ) {
+    $g = shortcode_atts( array(
+        'unit' => '',
+		'num' => '-1',
+    ), $atts ); ?>
+<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+if (!empty($g['unit'])) { 
+$args = array(
+		'post_type' => 'grants',
+	    'post_status' => 'publish',
+		'posts_per_page' => $g['num'],
+	    'paged' => $paged,
+		'meta_key' => 'grant_start_date',
+		'orderby' => 'meta_value',
+		'order' => 'ASC', 
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'grant_units',
+                'field' => 'slug',
+                'terms' => $g['unit'],
+            ),
+        ),
+     );
+}
+else {
+	$args = array(
+		'post_type' => 'grants',
+	    'post_status' => 'publish',
+		'posts_per_page' => $g['num'],
+	    'paged' => $paged,
+		'meta_key' => 'grant_start_date',
+		'orderby' => 'meta_value',
+		'order' => 'ASC', 
+     );
+} ?>    
+<?php   
+$loop = new WP_Query($args);
+while($loop->have_posts()) : $loop->the_post(); 
+?><?php
+$money_output = get_field('grant_money', $post->ID); 
+$gmoney = number_format($money_output, 0, '.', ',');
+
+$listgrants = '<div class="nobullets pl-3 pb-3" style="font-size:14px !important; border-bottom:1px solid #EBEBEB;">';
+$listgrants .= '<h6 class="mb-1 mt-3">' . $post->post_title . '</h6><div>';
+	while(has_sub_field('grant_people')):
+	$grant_facultymember = get_sub_field( 'grant_faculty' ); 
+$listgrants .= '<li><strong>' . the_sub_field('title', $post->ID) . ':</strong> ' . the_sub_field('regular_person') . '';
+	foreach( $grant_facultymember as $post_object):
+$listgrants .= '<a href="' . get_the_permalink() . '">' . get_the_title() . '</a>';
+	endforeach;
+$listgrants .= '</li>';
+	endwhile;
+$listgrants .= '<strong>Amount:</strong> $' . $gmoney . '';
+	if( get_field('grant_start_date', $post->ID)) {     
+$listgrants .= ' | <strong>Timeframe:</strong> ' . the_field('grant_start_date', $post->ID) . ''; 
+	if( get_field('grant_end_date')) {  
+$listgrants .= '-' . the_field('grant_end_date', $post->ID) . ''; 
+	}} 
+$listgrants .= '<div><strong>Categories:</strong>'; 
+	$terms = get_the_terms( $post->ID , 'grant_cats' );
+		foreach ( $terms as $term ) {
+		echo $term->name;
+	} 
+$listgrants .= '</div><div><strong>Funding Agency:</strong> ' . the_field('grant_agency', $post->ID) . '</div></div></div>';
+	endwhile;
+	return $listgrants;	
+?>
+<div class="mt-5">
+	<?php wpbeginner_numeric_posts_nav(); ?>
+</div>
+<?php } add_shortcode( 'showgrants', 'grantlistvar' );
+//  ------------------------------------------------------------------------
 ?>
