@@ -1,7 +1,7 @@
 <?php 
 $terms = get_the_terms( $post->ID , 'grant_units' );
 	foreach ( $terms as $term ) {
-	echo '<span class="grant-unit pb-3">' . $term->name . '</span>';
+	echo '<span class="grant-unit mb-3">' . $term->name . '</span>';
 } ?>
 <div class="nobullets">
     <h3 class="mb-1"><?php the_title(); ?></h3>
