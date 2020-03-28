@@ -531,6 +531,9 @@ article blockquote p {
 .grantSmall h3{
 	font-size:17px !important; 
 }
+.grantSmall .grantHide {
+	display:none !important;
+}
 .grant-unit {
 	background-color:#ffcc00;
 	font-size:12px;
