@@ -43,8 +43,8 @@ $deadlineShort = date("Ymd", strtotime($deadline));
             <?php } ?>
             <?php if (get_field('research_exclusion')){ ?>
             <h2 class="mb-0">Exclusion Qualifications:</h2> <!-- style this size -->
-            	<span class="pb-2" style="font-size:14px;">You may not participate in this research opportunity if any of the following applies to you:</span>
-			<div class="mb-4 researchOpp-exquals">
+            	<span style="font-size:14px;">You may not participate in this research opportunity if any of the following applies to you:</span>
+			<div class="mb-4 mt-2 researchOpp-exquals">
 				<?php the_field('research_exclusion'); ?>
 			</div>
             <?php } ?>
