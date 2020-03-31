@@ -77,12 +77,12 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                         if ( ! empty( $categories ) ) {
                             foreach( $categories as $category ) {
 							if ( !in_array($category->name, array('Homepage','UCF News'), true ) ) {	
-                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS">' . esc_html( $category->name ) . '</a>' . $separator;
+                                $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $category->name ) ) . '" class="chpsTAGS" id="chpsnewstags">' . esc_html( $category->name ) . '</a>' . $separator;
                             } 
 						}
 						if ( ! empty( $tags ) ) { 
 						foreach ( $tags as $tag ) {
-						$output .= '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '" class="chpsTAGS">' . esc_html( $tag->name ) . '</a>' . $separator;
+						$output .= '<a href="' . esc_url( get_tag_link( $tag->term_id ) ) . '" alt="' . esc_attr( sprintf( __( 'View all posts in %s', 'textdomain' ), $tag->name ) ) . '" class="chpsTAGS" id="chpsnewstags">' . esc_html( $tag->name ) . '</a>' . $separator;
                             }	
 						}
                             echo trim( $output, $separator );
