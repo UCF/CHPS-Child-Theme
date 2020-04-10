@@ -254,11 +254,15 @@ $grantlist = array(
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
                             <?php
-							if (!$grantlist) {
-								echo "No players";
-							} else {
-								echo "Explode stuff...";
-							}
+							$EmptyTestArray = array_filter($grantlist);
+								if (!empty($EmptyTestArray))
+								  {
+									echo "Explode stuff...";
+								  }
+								else
+								  {
+									echo "No players";
+								  }
 							?>
 								<span class="mb-4"><?php the_field('biography'); ?></span>
 								<?php if (have_rows('degrees') ) { 	?>
