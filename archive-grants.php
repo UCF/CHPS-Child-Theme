@@ -116,7 +116,7 @@
 	width:120px;
 }
 .sf-date-postfix {
-	padding-right:8px;
+	padding-right:5px;
 }
 .searchandfilter li.sf-field-reset{
 	clear: both;
