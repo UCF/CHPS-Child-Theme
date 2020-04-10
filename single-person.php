@@ -242,7 +242,6 @@ $grantlist = array(
 		),
 	)
 );
-$nate = get_posts($grantlist);
 ?>    				
 				</aside>
 			</div>
@@ -254,12 +253,6 @@ $nate = get_posts($grantlist);
 					<div class="vc_tta-panel vc_active" id="biography" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#biography" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Biography</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
-                            <?php
-							if(count($nate) == 0) 
-								echo "Array is empty"; 
-							else
-								echo "Array is not empty"; 
-							?>
 								<span class="mb-4"><?php the_field('biography'); ?></span>
 								<?php if (have_rows('degrees') ) { 	?>
 									<div class="mb-4">
