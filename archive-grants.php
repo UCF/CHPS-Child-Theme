@@ -110,8 +110,8 @@
 	margin-bottom: 15px;
 }	
 .sf_date_field li {
-	float: right;
-	width:30%;
+	float: left;
+	width:50%;
 }
 .searchandfilter li.sf-field-reset{
 	clear: both;
