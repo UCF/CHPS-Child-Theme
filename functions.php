@@ -147,14 +147,15 @@ function faq_sidebar() {
 add_action( 'widgets_init', 'faq_sidebar' );
 
 // CHANGE SORT ORDER OF GRANTS ARCHIVE
-add_action( 'pre_get_posts', 'my_change_sort_order'); 
-    function my_change_sort_order($query){
-        if( is_post_type_archive( 'grants' ) ):
-           $query->set( 'order', 'DESC' );
-           $query->set( 'orderby', 'meta_value' );
-		   $query->set( 'orderby', 'grant_start_date' );
-        endif;    
-    };
+function sort_cars_archive_loop($query) { 
+    if ($query->is_post_type_archive('grants') && $query->is_main_query()) {
+    $query->set('order', 'DESC');
+    $query->set('meta_key', 'grant_start_date');
+    $query->set('orderby', 'meta_value_date');
+    }
+}
+add_action('pre_get_posts', 'sort_cars_archive_loop');
+	
 
 // Adding Custom Theme Settings To Better Control Global Aspects
 if( function_exists('acf_add_options_page') ) {
