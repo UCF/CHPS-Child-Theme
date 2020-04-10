@@ -147,7 +147,7 @@ function faq_sidebar() {
 add_action( 'widgets_init', 'faq_sidebar' );
 
 // CHANGE SORT ORDER OF GRANTS ARCHIVE
-function sort_cars_archive_loop($query) { 
+function sort_grants_archive_loop($query) { 
     if ($query->is_post_type_archive('grants') && $query->is_main_query()) {
     $query->set('order', 'DESC');
     $query->set('meta_key', 'grant_start_date');
@@ -155,7 +155,7 @@ function sort_cars_archive_loop($query) {
     $query->set('orderby', 'meta_value');
     }
 }
-add_action('pre_get_posts', 'sort_cars_archive_loop');
+add_action('pre_get_posts', 'sort_grants_archive_loop');
 	
 
 // Adding Custom Theme Settings To Better Control Global Aspects
