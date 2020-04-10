@@ -111,7 +111,7 @@
 }	
 .sf_date_field li {
 	float: left;
-	width:50%;
+	width:30%;
 }
 .searchandfilter li.sf-field-reset{
 	clear: both;
