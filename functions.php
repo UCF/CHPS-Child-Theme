@@ -152,7 +152,7 @@ function sort_cars_archive_loop($query) {
     $query->set('order', 'DESC');
     $query->set('meta_key', 'grant_start_date');
 	$query->set('meta_type', 'DATE');
-    $query->set('orderby', 'meta_value_date');
+    $query->set('orderby', 'meta_value_num');
     }
 }
 add_action('pre_get_posts', 'sort_cars_archive_loop');
