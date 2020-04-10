@@ -228,7 +228,7 @@ $posts = get_posts(array(
 			  )
 		 )
 ));
-$grantlist = array(
+$grantlist = get_posts(array(
 	'posts_per_page' => 10,
 	'post_type'	 => 'grants',
 	'meta_key' => 'grant_start_date',
@@ -241,7 +241,7 @@ $grantlist = array(
 			'compare' => 'LIKE'
 		),
 	)
-);
+));
 ?>    				
 				</aside>
 			</div>
