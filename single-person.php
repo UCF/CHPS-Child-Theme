@@ -254,8 +254,13 @@ $grantlist = array(
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
                             <?php
+							foreach ($grantlist as $key => $value) {
+								if (empty($value)) {
+								   unset($grantlist[$key]);
+								}
+							}
 							if (empty($grantlist)) {
-								echo "array is empty\n";
+							   echo "array is empty\n";
 							} else {
 								echo "array is not empty\n";
 							}
