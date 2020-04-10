@@ -115,6 +115,9 @@
 .sf_date_field li input{
 	width:120px;
 }
+.sf-date-postfix {
+	padding-right:8px;
+}
 .searchandfilter li.sf-field-reset{
 	clear: both;
 }	
