@@ -255,11 +255,10 @@ $nate = get_posts($grantlist);
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
                             <?php
-							if (empty($nate)) {
-								echo "array1 is empty\n";
-							} else {
-								echo "array1 is not empty\n";
-							}
+							if(count($nate) == 0) 
+								echo "Array is empty"; 
+							else
+								echo "Array is not empty"; 
 							?>
 								<span class="mb-4"><?php the_field('biography'); ?></span>
 								<?php if (have_rows('degrees') ) { 	?>
