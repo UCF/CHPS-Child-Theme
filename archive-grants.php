@@ -111,6 +111,7 @@
 }	
 .sf_date_field li {
 	float: left;
+	margin-bottom: 15px;
 }
 .sf_date_field li input{
 	width:120px;
