@@ -109,6 +109,10 @@
 	width:50%;
 	margin-bottom: 15px;
 }	
+.sf_date_field li {
+	float: right;
+	width:30%;
+}
 .searchandfilter li.sf-field-reset{
 	clear: both;
 }	
