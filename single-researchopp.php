@@ -147,14 +147,14 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
+            <?php if ( $research_tag_terms ): ?>
             <div class="researchOpp-dblock"> 
-				<?php if ( $research_tag_terms ): ?>
 					<i class="fa fa-tags icongrey"></i> <strong>Related Tags:</strong><br>
 					<?php foreach ( $research_tag_terms as $research_tag_term ): ?>
 						<a href="<?php echo get_term_link($research_tag_term); ?>"><?php echo $research_tag_term->name; ?></a><br>
 					<?php endforeach; ?>
-				<?php endif; ?>
 			</div>
+            <?php endif; ?>
 			<div class="researchOpp-dblock"> 
 				<div class="btnhover-black">
 					<a href="https://healthprofessions.ucf.edu/irb-resource" title="What it means to be a research participant" class="blackBTN-full" target="_blank" rel="nofollow external noopener noreferrer">What does it means to be a<br><span style="color:#ffcc00;font-size:25px;font-weight:bold;">Research Participant?</span></a>
