@@ -42,8 +42,8 @@
 				$payment = get_field('research_money'); 
 				?>
                 <div class="row mb-1">
-                    <header class="">
-                        <h2 class="h5"><i class="fa fa-tags icongrey"></i> Tag: <?php single_cat_title(); ?></h2>
+                    <header class="icongrey">
+                        <h2 class="h5"><i class="fa fa-tags"></i> Tag: <?php single_cat_title(); ?></h2>
                     </header>
                 </div>
 				<div class="row mb-1">
