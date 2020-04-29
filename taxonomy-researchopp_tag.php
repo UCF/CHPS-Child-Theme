@@ -43,7 +43,7 @@
 				?>
                 <div class="row mb-1">
                     <header class="">
-                        <h4 class="heading-underline"><i class="fa fa-tags icongrey"></i> Tag: <?php single_cat_title(); ?></h5>
+                        <h5 class="heading-underline"><i class="fa fa-tags icongrey"></i> Tag: <?php single_cat_title(); ?></h5>
                     </header>
                 </div>
 				<div class="row mb-1">
