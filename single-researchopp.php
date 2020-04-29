@@ -149,9 +149,9 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			</div>
             <div class="researchOpp-dblock"> 
 				<?php if ( $research_tag_terms ): ?>
-					<i class="fa fa-briefcase icongrey"></i> <strong>Associated Tags:</strong><br>
+					<i class="fa fa-tags icongrey"></i> <strong>Related Tags:</strong><br>
 					<?php foreach ( $research_tag_terms as $research_tag_term ): ?>
-						<?php echo $research_tag_term->name; ?><br>
+						<a href="<?php echo get_permalink( $research_tag_term ); ?>"><?php echo $research_tag_term->name; ?></a><br>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
