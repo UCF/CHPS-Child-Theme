@@ -42,8 +42,8 @@
 				$payment = get_field('research_money'); 
 				?>
                 <div class="row mb-1">
-                    <header class="archive-header">
-                        <h2 class="archive-title heading-underline">Filtered By: <?php single_cat_title(); ?></h2>
+                    <header class="">
+                        <h4 class="heading-underline">Filtered By: <?php single_cat_title(); ?></h5>
                     </header>
                 </div>
 				<div class="row mb-1">
