@@ -6,6 +6,7 @@ $postTerm = get_term( $primary_term_id );
 $thumb_id = get_post_thumbnail_id(get_the_ID());
 $research_facultymember = get_field( 'research_facultymember' );
 $research_unit_terms = get_field( 'research_unit' );
+$research_tag_terms = get_field( 'research_tag' );
 $today = date("Ymd"); 
 $deadline = get_field( 'research_enddate' );
 $deadlineShort = date("Ymd", strtotime($deadline));	
@@ -140,9 +141,17 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 			<?php } ?>
 			<div class="researchOpp-dblock"> 
 				<?php if ( $research_unit_terms ): ?>
-					<i class="fa fa-briefcase icongrey"></i> <strong>Associated Unit:</strong><br>
+					<i class="fa fa-briefcase icongrey"></i> <strong>Associated Units:</strong><br>
 					<?php foreach ( $research_unit_terms as $research_unit_term ): ?>
 						<?php echo $research_unit_term->name; ?><br>
+					<?php endforeach; ?>
+				<?php endif; ?>
+			</div>
+            <div class="researchOpp-dblock"> 
+				<?php if ( $research_tag_terms ): ?>
+					<i class="fa fa-briefcase icongrey"></i> <strong>Associated Tags:</strong><br>
+					<?php foreach ( $research_tag_terms as $research_tag_term ): ?>
+						<?php echo $research_tag_term->name; ?><br>
 					<?php endforeach; ?>
 				<?php endif; ?>
 			</div>
