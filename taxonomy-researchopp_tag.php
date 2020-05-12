@@ -30,6 +30,11 @@
 
 		<div class="row">
 			<div class="col-lg-8 col-md-12 pt-4">
+            	<div class="row mb-1">
+                    <header>
+                        <h2 class="h5"><i class="fa fa-tags icongrey"></i> Tag: <?php single_cat_title(); ?></h2>
+                    </header>
+                </div>
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
@@ -41,11 +46,6 @@
 				$deadlineShort = date("M j, Y", strtotime($deadline));
 				$payment = get_field('research_money'); 
 				?>
-                <div class="row mb-1">
-                    <header>
-                        <h2 class="h5"><i class="fa fa-tags icongrey"></i> Tag: <?php single_cat_title(); ?></h2>
-                    </header>
-                </div>
 				<div class="row mb-1">
 					<div class="col-lg-12 p-3" style="border-bottom: 1px solid #EBEBEB"> 
 						<h2 class="h4 mt-2"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
