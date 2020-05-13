@@ -731,6 +731,77 @@ a.fk-socialicon {
     font-weight: 700;
     line-height: 1;
 }
+/* = FOOTER STLYES
+-------------------------------------------------------------- */
+#footerSUBSCRIBE {
+    background: #ffcc00;
+}
+#footerSUBSCRIBE h3 { 
+  text-align:center !important;
+  font-size: 20px !important;
+  font-weight:normal;
+ }
+#footerSUBSCRIBE p { 
+  text-align:center !important;
+  font-size: 14px !important;
+  color:#b18500;
+ } 
+#footerSUBSCRIBE #gform_wrapper { 
+  max-width: 50%;
+  margin: 0 auto;
+ }
+#footerSUBSCRIBE .gform_button {
+    background-color: #ffcc00;
+    border: 0px solid;
+    padding: 8px 30px;
+    margin: 0px;
+    cursor: pointer;
+    -o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+} 
+#footerSUBSCRIBE .gform_button:hover {
+    background-color: #cca12e;
+    color: #fff;
+}
+#footerSUBSCRIBE .gf_simple_horizontal {
+    max-width: 65% !important;
+    margin: 0 auto !important;
+    background:#fff;
+    padding:5px;
+}
+#footerSUBSCRIBE .gform_wrapper li input {
+    margin-top: 0px !important;
+    border: 0px solid !important;
+}
+#footerSUBSCRIBE .gform_body {
+width:640px;
+}
+@media (max-width: 640px) {
+	#footerSUBSCRIBE .gform_button {
+    background-color: #000;
+    color: #fff;
+    } 
+    #footerSUBSCRIBE .gform_button:hover {
+        background-color: #404040;
+    }
+    #footerSUBSCRIBE .gform_body {
+    width:100%;
+    }
+    #footerSUBSCRIBE .gf_simple_horizontal {
+    max-width: 85% !important;
+    background:#ffcc00;
+    }
+    #footerSUBSCRIBE .gform_footer, #footerSUBSCRIBE .gform_wrapper {
+    margin: 0px !important;
+    }
+    #footerSUBSCRIBE .gf_simple_horizontal {
+    padding:0px !important;
+    }
+}
+
 /* = PAGINATION STYLE, paging
 -------------------------------------------------------------- */
 .navigation li a,
