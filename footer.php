@@ -3,10 +3,10 @@
 <div id="footerSUBSCRIBE">
     <div class="container">
         <div class="row">
-        	<div>
+        	<div class="col-lg-12">
             	<h3>Subscribe to our newsletter</h3>
             </div>
-            <div>
+            <div class="col-lg-12">
             	<p>Be the first to hear about new things happening in the college!</p>
         	</div>
         </div>
