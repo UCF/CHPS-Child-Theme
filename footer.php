@@ -1,5 +1,15 @@
 </main>
-<?php switch_to_blog(2);?>	
+<?php switch_to_blog(2);?>
+<div id="footerSUBSCRIBE">
+    <div class="container">
+        <div class="row">
+        	<h3>Subscribe to our newsletter</h3>
+            <p>Be the first to hear about new things happening in the college!</p>
+        </div>
+	</div>
+</div>
+
+	
 		<footer class="site-footer bg-inverse">
 			<div class="container">
 				<div class="row">
