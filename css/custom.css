@@ -746,6 +746,7 @@ a.fk-socialicon {
   text-align:center !important;
   font-size: 14px !important;
   color:#b18500;
+  margin-bottom:0px !important;
  } 
 #footerSUBSCRIBE #gform_wrapper { 
   max-width: 50%;
