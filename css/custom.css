@@ -823,10 +823,10 @@ a.ucf-footer-nav{
 	font-size:inherit;
 	font-weight:inherit;
 }
-ucf-footer-nav a, .ucf-footer-title a{
+ucf-footer-nav a{
 	color:#fff;
 }
-.ucf-footer-nav a:hover, .ucf-footer-title a:hover {
+.ucf-footer-nav a:hover, a.ucf-footer-title:hover {
 	color:#ffcc00;
 }
 .ucf-social-icons .ucf-social-link.grey {
