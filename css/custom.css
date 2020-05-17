@@ -826,7 +826,7 @@ a.ucf-footer-nav{
 ucf-footer-nav a{
 	color:#fff;
 }
-.ucf-footer-nav a:hover, a.ucf-footer-title:hover {
+.ucf-footer-nav a:hover, a.ucf-footer-title:hover, .ucf-footer-address a:hover {
 	color:#ffcc00;
 }
 .ucf-social-icons .ucf-social-link.grey {
