@@ -327,6 +327,7 @@ add_shortcode( 'searchme', 'searchmevar' );	?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO DISPLAY SOCIAL MEDIA ICONS 
 // [minisocial fb="" tw="" ig="" yt="" in="" fk="" align="" size="fa-lg"]
+// Size Options: fa-sm, fa-lg, fa-2x, fa-3x 
 function minisocialvar( $atts ) {
     $s = shortcode_atts( array(
         'id' => 'minisocial',
