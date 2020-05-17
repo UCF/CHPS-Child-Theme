@@ -1,7 +1,5 @@
 </main>
-<?php switch_to_blog(2);
-$subscribeFORM = get_field( 'footer_subscription_formid', 'option' );
-?>
+<?php switch_to_blog(2);?>
 <div id="footerSUBSCRIBE">
     <div class="container">
         <div class="row">
@@ -12,7 +10,7 @@ $subscribeFORM = get_field( 'footer_subscription_formid', 'option' );
             	<p>Be the first to hear about new things happening in the college!</p>
         	</div>
             <div class="col-lg-12">
-            	<?php echo do_shortcode('[gravityform id="'.$subscribeFORM.'" title="false" description="false"]'); ?>
+            	<?php echo do_shortcode('[gravityform id="'.get_field( 'footer_subscription_formid', 'option' ).'" title="false" description="false"]'); ?>
         	</div>
         </div>
 	</div>
