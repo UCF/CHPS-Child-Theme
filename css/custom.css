@@ -823,12 +823,11 @@ a.ucf-footer-nav{
 	font-size:inherit;
 	font-weight:inherit;
 }
-a.ucf-footer-nav{
+ucf-footer-nav a{
 	color:#fff;
 }
-a.ucf-footer-nav:active,a.ucf-footer-nav:focus,a.ucf-footer-nav:hover{
-	text-decoration:underline;
-	color:#ffcc00 !important;
+.ucf-footer-nav a:hover {
+	color:#ffcc00;
 }
 .ucf-social-icons .ucf-social-link.grey {
 	color: #3e3e3e;
