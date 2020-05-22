@@ -146,6 +146,22 @@ function faq_sidebar() {
 }
 add_action( 'widgets_init', 'faq_sidebar' );
 
+// ADDING HEALTH TIPS SIDEBAR
+function healthtips_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Health Tips' ),
+            'id' => 'healthtips-sidebar',
+            'description' => __( 'This is sidebar for Health Tips' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'healthtips_sidebar' );
+
 // CHANGE SORT ORDER OF GRANTS ARCHIVE
 function sort_grants_archive_loop($query) { 
     if ($query->is_post_type_archive('grants') && $query->is_main_query()) {
