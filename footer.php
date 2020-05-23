@@ -97,10 +97,9 @@
   	background-size: cover;
 }
 </style>		
-<?php the_field('bonus_scripts', 'option'); ?>		
-<!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
-<?php restore_current_blog(); ?>		
-		<?php wp_footer(); ?>
+<?php the_field('bonus_scripts', 'option'); ?>	
+
+<?php if ( get_field( 'enablehotjar', 'option' ) == 1 ) { ?>
 <!-- Hotjar Tracking Code for https://healthprofessions.ucf.edu -->
 <script>
     (function(h,o,t,j,a,r){
@@ -112,5 +111,9 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
+<?php } ?>
+<!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
+<?php restore_current_blog(); ?>		
+		<?php wp_footer(); ?>
 	</body>
 </html>
