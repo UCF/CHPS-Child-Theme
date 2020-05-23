@@ -99,7 +99,7 @@
 </style>		
 <?php the_field('bonus_scripts', 'option'); ?>	
 
-<?php if ( get_field( 'enablehotjar', 'option' ) == 1 ):  ?>
+<?php if ( get_field( 'enablehotjar', 'option' ) ):  ?>
 <!-- Hotjar Tracking Code for https://healthprofessions.ucf.edu -->
 <script>
     (function(h,o,t,j,a,r){
