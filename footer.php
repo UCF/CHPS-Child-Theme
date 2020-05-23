@@ -99,6 +99,7 @@
 </style>		
 <?php the_field('bonus_scripts', 'option'); ?>	
 
+<?php if ( get_field( 'enablehotjar', 'option' ) == 'Yes' ):  ?>
 <!-- Hotjar Tracking Code for https://healthprofessions.ucf.edu -->
 <script>
     (function(h,o,t,j,a,r){
@@ -110,7 +111,7 @@
         a.appendChild(r);
     })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
 </script>
-
+<?php endif; ?>
 <!-- END OF CODE - DAVID JANOSIK REPLICATING UCF FOOTER --> 	
 <?php restore_current_blog(); ?>		
 		<?php wp_footer(); ?>
