@@ -927,6 +927,7 @@ ucf-footer-nav a{
 }
 .navigation li {
     display: inline;
+	margin:0px 2px;
 }
 .navigation li a,
 .navigation li a:hover,
@@ -937,7 +938,6 @@ ucf-footer-nav a{
     cursor: pointer;
     padding: 12px;
     padding: 0.75rem;
-	margin-right:5px;
 }
 .navigation li a:hover,
 .navigation li.active a {
