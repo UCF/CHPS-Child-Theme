@@ -949,10 +949,6 @@ ucf-footer-nav a{
 	.navbar-brand {
 		font-size: 11px !important;
 	}	
-	.cat-border {
-		margin-right:15px;
-		margin-left:15px;
-	}
 }
 @media (max-width: 991px) {
 	.extraprofile, .profilesidebar, .hidemobile {
@@ -969,6 +965,10 @@ ucf-footer-nav a{
 	#imgRight-medium {
 		max-width: 100% !important;
 		margin: 0px 0px 20px 0px !important;
+	}
+	.cat-border {
+		margin-right:15px !important;
+		margin-left:15px !important;
 	}
 	article blockquote {
 		float: none;
