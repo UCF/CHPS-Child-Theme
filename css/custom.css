@@ -973,6 +973,7 @@ ucf-footer-nav a{
 		padding-top: 12px;
 		padding-bottom: 12px;
 		width: 100%;
+		color:red;
 	}
 }	
 @media (max-width: 1200px) and (min-width: 768px)  {
