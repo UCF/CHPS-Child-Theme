@@ -12,7 +12,6 @@
 			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
 	</div>				
-<div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
         <div class="col-md-9">
         	<?php while ( have_posts() ) : the_post(); 
@@ -67,7 +66,6 @@
 			<?php endif; ?>
         </div>
     </div>
-</div>
 	</article>
 </div>
 <style>
