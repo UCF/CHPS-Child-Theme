@@ -1,5 +1,5 @@
 <?php $display_name = get_the_author_meta( 'display_name', $post->post_author ); get_header();?>
-<div class="container mb-5 mt-3 mt-lg-5">
+<div class="container mb-5 mt-3 mt-lg-5 pr-0">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<?php if ( have_posts() ) : ?>
 	<div class="row mb-4">
@@ -12,7 +12,7 @@
 			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
 	</div>				
-<div class="container mb-5 mt-3 mt-lg-4 pr-0">
+<div class="container mb-5 mt-3 mt-lg-4">
     <div class="row">
         <div class="col-md-9">
         	<?php while ( have_posts() ) : the_post(); 
