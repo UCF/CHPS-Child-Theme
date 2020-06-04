@@ -973,6 +973,9 @@ ucf-footer-nav a{
 		width: 100%;
 		text-align:center;
 	}
+	.navigation li {
+		font-size:10px;
+	}
 }	
 @media (max-width: 1200px) and (min-width: 768px)  {
     .lookingfor .evc-st-title {
