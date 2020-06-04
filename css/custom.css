@@ -951,6 +951,7 @@ ucf-footer-nav a{
 	}	
 	.cat-border {
 		margin-right:15px;
+		margin-left:15px;
 	}
 }
 @media (max-width: 991px) {
