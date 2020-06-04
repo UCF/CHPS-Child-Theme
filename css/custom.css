@@ -973,6 +973,9 @@ ucf-footer-nav a{
 		width: 100%;
 		text-align:center;
 	}
+	.navigation ul {
+		padding-left:0px;
+	}
 	.navigation li {
 		font-size:11px;
 	}
