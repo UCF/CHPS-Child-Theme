@@ -975,6 +975,7 @@ ucf-footer-nav a{
 	}
 	.navigation ul {
 		padding-left:0px;
+		margin-bottom:10px;
 	}
 	.navigation li {
 		font-size:12px;
