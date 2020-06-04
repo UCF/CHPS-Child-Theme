@@ -937,6 +937,7 @@ ucf-footer-nav a{
     cursor: pointer;
     padding: 12px;
     padding: 0.75rem;
+	margin-right:8px;
 }
 .navigation li a:hover,
 .navigation li.active a {
