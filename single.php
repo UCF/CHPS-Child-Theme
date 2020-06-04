@@ -147,7 +147,7 @@ endforeach;
 wp_reset_postdata(); ?>
 </div></div>        
        		<div class="row mt-5">
-				<div class="col-md-6 recborder">
+				<div class="col-md-6 recborder mb-3">
 					<h5 class="mb-4">Recent CHPS News</h5>
 					<?php echo do_shortcode('[recentlist number="5"]'); ?>
 				</div>
