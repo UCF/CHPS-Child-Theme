@@ -974,7 +974,7 @@ ucf-footer-nav a{
 		text-align:center;
 	}
 	article .cat-border img {
-    	vertical-align: top !important;
+    	display:none;
 	}
 	.navigation ul {
 		padding-left:0px;
