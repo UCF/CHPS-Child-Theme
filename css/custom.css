@@ -973,8 +973,8 @@ ucf-footer-nav a{
 		width: 100%;
 		text-align:center;
 	}
-	article .catlist-photo img {
-    	vertical-align: top;
+	article .cat-border img {
+    	vertical-align: top !important;
 	}
 	.navigation ul {
 		padding-left:0px;
