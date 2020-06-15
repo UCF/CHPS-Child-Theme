@@ -240,16 +240,17 @@ a.ft-gallery-link-popup {
 .ft-gallery-share-wrap a.ft-galleryfacebook-icon, .ft-gallery-share-wrap a.ft-gallerytwitter-icon, .ft-gallery-share-wrap a.ft-gallerygoogle-icon, .ft-gallery-share-wrap a.ft-gallerylinkedin-icon, .ft-gallery-share-wrap a.ft-galleryemail-icon {
     color: #ffcc00 !important;
 }
-
 .ft-gallery-share-wrap a.ft-galleryfacebook-icon:hover, .ft-gallery-share-wrap a.ft-gallerytwitter-icon:hover, .ft-gallery-share-wrap a.ft-gallerygoogle-icon:hover, .ft-gallery-share-wrap a.ft-gallerylinkedin-icon:hover, .ft-gallery-share-wrap a.ft-galleryemail-icon:hover {
     color: #cca12e !important;
 }
-
 .ft-gallery-share-wrap {
     background: #000000 !important;
 }
 .fts-fb-load-more-wrapper .fts-fb-load-more {
     background: #eeeeee !important;
+}
+.fts-jal-fb-name {
+    color: #0275d8 !important;
 }
 
 /* = NAVIGATION
