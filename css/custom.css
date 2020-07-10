@@ -634,6 +634,7 @@ figcaption, .featcaption {
 ul.personResearchList {
 	list-style: none !important;
 	padding-left: 6px;
+	text-transform:capitalize;
 }
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
