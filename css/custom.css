@@ -734,6 +734,76 @@ a.fk-socialicon {
     font-weight: 700;
     line-height: 1;
 }
+/* = SUBSCRIBE AND GIFT
+-------------------------------------------------------------- */
+#subscribeGIFT img {
+    width: 100%;
+    max-width:420px;
+}
+#subscribeGIFT .gform_wrapper { 
+  max-width: 100%;
+  margin: 0 auto;
+ }
+#subscribeGIFT .gform_button {
+    background-color: #ffcc00;
+    border: 0px solid;
+    padding: 8px 30px;
+    margin: 0px;
+    cursor: pointer;
+    -o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+} 
+#subscribeGIFT .gform_button:hover {
+    background-color: #cca12e;
+    color: #fff;
+}
+#subscribeGIFT .gf_simple_horizontal {
+    width: 100% !important;
+    margin: 0px 0px !important;
+    background:#fff;
+    padding:5px;
+}
+#subscribeGIFT .gform_wrapper li input {
+    margin-top: 0px !important;
+    border: 0px solid !important;
+}
+#subscribeGIFT .gform_body {
+	width:100%;
+}
+@media (max-width: 640px) {
+	#subscribeGIFT img {
+    width: 100%;
+    max-width:350px;
+    }
+	#subscribeGIFT .gform_button {
+    background-color: #ffcc00;
+    color: #000;
+    } 
+    #subscribeGIFT .gform_wrapper .top_label div.ginput_container {
+    margin-top: 0px;
+    }
+    #subscribeGIFT .gform_button:hover {
+        background-color: #cca12e;
+    }
+    #subscribeGIFT .gform_body {
+    width:100%;
+    }
+    #subscribeGIFT .gform_body .gfield{
+    margin-top: 0px;
+    }
+    #subscribeGIFT .gf_simple_horizontal {
+    width: 100% !important;
+    margin: 0px;
+    padding:0px !important;
+    background-color: rgba(0, 0, 0, 0.0) !important;
+    }
+    #subscribeGIFT .gform_footer, #subscribeGIFT .gform_wrapper {
+    margin: 0px !important;
+    }
+}
 /* = FOOTER STLYES
 -------------------------------------------------------------- */
 #footerSUBSCRIBE {
