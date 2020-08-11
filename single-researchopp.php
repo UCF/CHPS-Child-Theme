@@ -400,8 +400,10 @@ html {
 }
 .shareResearchQR {
 	text-align:center;
-	width:80%;
 	margin:0px auto;
+}
+.shareResearchQR img {
+	max-width:60%;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
