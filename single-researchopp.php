@@ -10,6 +10,7 @@ $research_tag_terms = get_field( 'research_tags' );
 $today = date("Ymd"); 
 $deadline = get_field( 'research_enddate' );
 $deadlineShort = date("Ymd", strtotime($deadline));	
+$postid = get_the_ID();
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
@@ -79,6 +80,7 @@ $deadlineShort = date("Ymd", strtotime($deadline));
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
+                <br><br>Share URL: https://chps.ucf.edu/study/<?php echo $postid; ?>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
