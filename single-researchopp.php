@@ -165,7 +165,7 @@ $postid = get_the_ID();
                 <div class="shareResearch">
                     <i class="fa fa-share-alt-square icongrey"></i> <strong>Short URL:</strong> chps.ucf.edu/study/<?php echo $postid; ?>				
                 </div>
-                <div>
+                <div class="shareResearchQR">
 					<img src="https://chart.googleapis.com/chart?chs=300x300&amp;cht=qr&amp;chl=https%3A%2F%2Fchps.ucf.edu%2Fstudy%2F12345&amp;choe=UTF-8" alt="QR code">          </div>
             </div>
 		</div>
@@ -397,6 +397,11 @@ html {
 	color:#666;
 	border-radius: 5px;
 	padding:8px;
+}
+.shareResearchQR {
+	text-align:center;
+	width:80%;
+	margin:0px auto;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
