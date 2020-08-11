@@ -83,7 +83,7 @@ $postid = get_the_ID();
                 <br><br>
                 <div class="shareResearch">
                 	<i class="fa fa-share-alt-square icongrey"></i> <strong>Short URL:</strong> chps.ucf.edu/study/<?php echo $postid; ?>				
-                </div
+                </div>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
