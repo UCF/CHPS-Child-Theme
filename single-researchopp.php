@@ -389,8 +389,9 @@ html {
 	line-height: 13px;
 }
 .shareResearch {
-	background-color: #999;
-	font-size:11px;
+	background-color: #CCC;
+	font-size:13px;
+	color:#666;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
