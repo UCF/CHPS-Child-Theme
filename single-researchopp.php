@@ -82,7 +82,7 @@ $postid = get_the_ID();
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
                 <br><br>
                 <div class="shareResearch">
-                	<i class="fa fa-share-alt-square icongrey"></i> Share URL: chps.ucf.edu/study/<?php echo $postid; ?>				
+                	<i class="fa fa-share-alt-square icongrey"></i> <strong>Short URL:</strong> chps.ucf.edu/study/<?php echo $postid; ?>				
                 </div
 				<?php } ?>
 			</div>
@@ -389,7 +389,7 @@ html {
 	line-height: 13px;
 }
 .shareResearch {
-	background-color: #CCC;
+	background-color: #e1e1e1;
 	font-size:13px;
 	color:#666;
 	border-radius: 5px;
