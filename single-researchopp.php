@@ -392,6 +392,9 @@ html {
 	background-color: #CCC;
 	font-size:13px;
 	color:#666;
+	border-radius: 5px;
+	padding:8px;
+	margin-bottom:15px;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
