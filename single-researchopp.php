@@ -80,7 +80,10 @@ $postid = get_the_ID();
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
-                <br><br><i class="fa fa-share-alt-square icongrey"></i> Share URL: chps.ucf.edu/study/<?php echo $postid; ?>
+                <br><br>
+                <div class="shareResearch">
+                	<i class="fa fa-share-alt-square icongrey"></i> Share URL: chps.ucf.edu/study/<?php echo $postid; ?>				
+                </div
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
@@ -384,6 +387,10 @@ html {
 	font-size: 11px;
 	font-style: italic;
 	line-height: 13px;
+}
+.shareResearch {
+	background-color: #999;
+	font-size:11px;
 }
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
