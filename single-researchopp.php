@@ -80,7 +80,7 @@ $postid = get_the_ID();
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
-                <br><br>Share URL: https://chps.ucf.edu/study/<?php echo $postid; ?>
+                <br><br><i class="fa fa-share-alt-square icongrey"></i> Share URL: chps.ucf.edu/study/<?php echo $postid; ?>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
