@@ -80,10 +80,6 @@ $postid = get_the_ID();
 				<strong>PI:</strong> <?php the_field('research_pi'); ?>
 				<?php if (get_field('research_expireDate')){ ?>
 				<br><strong>IRB Expiration</strong> <?php the_field('research_expireDate'); ?>
-                <br><br>
-                <div class="shareResearch">
-                	<i class="fa fa-share-alt-square icongrey"></i> <strong>Short URL:</strong> chps.ucf.edu/study/<?php echo $postid; ?>				
-                </div>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock hidemobile"> 
@@ -165,6 +161,9 @@ $postid = get_the_ID();
 					<a href="https://healthprofessions.ucf.edu/irb-resource" title="What it means to be a research participant" class="blackBTN-full" target="_blank" rel="nofollow external noopener noreferrer">What does it means to be a<br><span style="color:#ffcc00;font-size:25px;font-weight:bold;">Research Participant?</span></a>
 				</div>
 			</div>
+            <div class="shareResearch">
+                <i class="fa fa-share-alt-square icongrey"></i> <strong>Short URL:</strong> chps.ucf.edu/study/<?php echo $postid; ?>				
+            </div>
 		</div>
 	</div>	
 		<?php
