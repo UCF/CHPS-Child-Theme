@@ -398,7 +398,6 @@ html {
 	color:#666;
 	border-radius: 5px;
 	padding:8px;
-	margin-bottom:15px;
 }
 .shareResearchQR {
 	text-align:center;
