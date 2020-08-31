@@ -650,10 +650,18 @@ ul.personResearchList {
 	margin-left: 0px !important;
 }
 .w-20 {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 20% !important;
-          flex: 0 0 20% !important;
-  max-width: 20%;
+  	-webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  	max-width: 20%;
+}
+@media (max-width: 640px) {
+	.w-20 {
+  		-webkit-box-flex: 0;
+      	-ms-flex: 0 0 33%,
+        flex: 0 0 33%,
+  		max-width: 33%;
+	}
 }
 .UCFassistants {
 	font-size: 12px;
