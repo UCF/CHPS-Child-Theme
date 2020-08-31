@@ -654,7 +654,8 @@ ul.personResearchList {
 	font-size: 14px;
 }
 .UCFassistants-photo {
-	height: 50px;
+	height: 150px;
+	width: 150px;
 	border-radius: 50% !important;
 }
 /* = Profile Directory Single Person
