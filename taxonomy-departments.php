@@ -101,7 +101,7 @@ $tax = $wp_query->get_queried_object();
 					if( $getassistants->have_posts() ) :
 					?>
 					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
-					<div class="row UCFassistants">   
+					<div class="UCFassistants">   
                     <div class="d-flex flex-wrap">
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
@@ -132,7 +132,6 @@ $tax = $wp_query->get_queried_object();
                                         
                                     </div>
                                 </div>
-                            
 								<?php endwhile;
 						  		wp_reset_postdata(); ?>
                         	</div>
