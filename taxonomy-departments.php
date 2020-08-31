@@ -109,7 +109,7 @@ $tax = $wp_query->get_queried_object();
                           
                          
                         
-                                <div class="w-20 mb-3">
+                                <div class="w-20 mb-4">
                         
                                     <div class="p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
 										<?php if ( has_post_thumbnail()) { ?>
