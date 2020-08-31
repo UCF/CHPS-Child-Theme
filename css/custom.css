@@ -658,6 +658,14 @@ ul.personResearchList {
 @media (max-width: 991px) {
 	.w-20 {
   		-webkit-box-flex: 0;
+      	-ms-flex: 0 0 33% !important;
+        flex: 0 0 33% !important;
+  		max-width: 33% !important;
+	}
+}
+@media (max-width: 641px) {
+	.w-20 {
+  		-webkit-box-flex: 0;
       	-ms-flex: 0 0 50% !important;
         flex: 0 0 50% !important;
   		max-width: 50% !important;
