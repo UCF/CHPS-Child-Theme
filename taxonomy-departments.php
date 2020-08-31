@@ -103,7 +103,7 @@ $tax = $wp_query->get_queried_object();
 					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
 					<div class="row UCFassistants">   
                     <div class="container-fluid assistantsLEFT">
-                            <div class="row">
+                            <div class="row row-cols-5">
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
