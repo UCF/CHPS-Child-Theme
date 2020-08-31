@@ -105,6 +105,46 @@ $tax = $wp_query->get_queried_object();
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
+                         <div class="container-fluid">
+
+                            <h2>Bootstrap 4 Five Columns</h2>
+                        
+                            <h5>Full-width (within .container-fluid)</h5>
+                        
+                            <div class="row">
+                        
+                                <div class="col">
+                        
+                                    <img src="//placehold.it/640x480" class="img-fluid">
+                        
+                                </div>
+                        
+                                <div class="col">
+                        
+                                    <img src="//placehold.it/640x480" class="img-fluid">
+                        
+                                </div>
+                        
+                                <div class="col">
+                        
+                                    <img src="//placehold.it/640x480" class="img-fluid">
+                        
+                                </div>
+                        
+                                <div class="col">
+                        
+                                    <img src="//placehold.it/640x480" class="img-fluid">
+                        
+                                </div>
+                        
+                                <div class="col">
+                        
+                                    <img src="//placehold.it/640x480" class="img-fluid">
+                        
+                                </div>
+                        
+                            </div>
+                        </div>
 						<div class="col-md-2 col-sm-4 col-xs-4 col-4 mb-4">
 							<div class="col-10 col-xs-8 col-sm-10 p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
 								<?php if ( has_post_thumbnail()) { ?>
