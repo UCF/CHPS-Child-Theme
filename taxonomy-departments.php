@@ -105,7 +105,7 @@ $tax = $wp_query->get_queried_object();
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
-						<div class="col-md-3 col-sm-6 col-xs-6 col-6 mb-4">
+						<div class="col-md-2 col-sm-4 col-xs-4 col-4 mb-4">
 							<div class="col-10 col-xs-8 col-sm-10 p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
 								<?php if ( has_post_thumbnail()) { ?>
 									<img src="<?php echo $getAssistimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
