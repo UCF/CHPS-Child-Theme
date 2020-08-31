@@ -100,7 +100,7 @@ $tax = $wp_query->get_queried_object();
 					$getassistants = new WP_Query( $argsAssist );				
 					if( $getassistants->have_posts() ) :
 					?>
-					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
+					<h1 class="archive-title heading-underline mt-5 mb-4">Graduate Assistants</h1>
 					<div class="UCFassistants">   
                     <div class="d-flex flex-wrap">
 						<?php while( $getassistants->have_posts() ) :
