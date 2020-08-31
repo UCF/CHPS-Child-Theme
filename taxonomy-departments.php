@@ -102,7 +102,7 @@ $tax = $wp_query->get_queried_object();
 					?>
 					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
 					<div class="row UCFassistants">   
-                    <div class="container-fluid">
+                    <div class="container-fluid assistantsLEFT">
                             <div class="row">
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();

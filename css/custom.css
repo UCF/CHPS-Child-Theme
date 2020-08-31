@@ -646,6 +646,9 @@ ul.personResearchList {
 .parttime-photo {
 	height: 200px;
 }
+.assistantsLEFT {
+	margin-left: 0px !important;
+}
 .UCFassistants {
 	font-size: 12px;
 	text-align: center;
