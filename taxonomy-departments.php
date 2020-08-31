@@ -119,7 +119,7 @@ $tax = $wp_query->get_queried_object();
                                         <?php } ?>
                                     </div>
                                     <strong><?php the_title(); ?></strong></br>
-										<?php the_field('jobtitle'); ?>
+										<?php the_field('kind'); ?>
                                     <div class="mt-2">
                                         <?php if(get_field('email')){ ?>
                                             <div class="person-label">
