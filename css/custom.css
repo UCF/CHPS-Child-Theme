@@ -636,6 +636,26 @@ ul.personResearchList {
 	padding-left: 6px;
 	text-transform:capitalize;
 }
+.parttimers {
+	font-size: 14px;
+	text-align: center;
+}	
+.parttimers strong {
+	font-size: 16px;
+}
+.parttime-photo {
+	height: 200px;
+}
+.UCFassistants {
+	font-size: 12px;
+	text-align: center;
+}	
+.UCFassistants strong {
+	font-size: 14px;
+}
+.UCFassistants-photo {
+	height: 200px;
+}
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
 .profile-social-web {

@@ -101,7 +101,7 @@ $tax = $wp_query->get_queried_object();
 					if( $getassistants->have_posts() ) :
 					?>
 					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
-					<div class="row parttimers">   
+					<div class="row UCFassistants">   
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
@@ -141,16 +141,6 @@ $tax = $wp_query->get_queried_object();
 .site-header .container h1 {
 	display: none !important;
 }	
-.parttimers {
-	font-size: 14px;
-	text-align: center;
-}	
-.parttimers strong {
-	font-size: 16px;
-}
-.parttime-photo {
-	height: 200px;
-}
 .iconlink {
 	font-size: 20px !important;
 }
