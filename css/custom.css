@@ -649,6 +649,12 @@ ul.personResearchList {
 .assistantsLEFT {
 	margin-left: 0px !important;
 }
+.w-20 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 20% !important;
+          flex: 0 0 20% !important;
+  max-width: 20%;
+}
 .UCFassistants {
 	font-size: 12px;
 	text-align: center;

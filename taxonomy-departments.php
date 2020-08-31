@@ -102,15 +102,14 @@ $tax = $wp_query->get_queried_object();
 					?>
 					<h1 class="archive-title heading-underline mt-5 mb-4">Assistants</h1>
 					<div class="row UCFassistants">   
-                    <div class="container-fluid assistantsLEFT">
-                            <div class="row row-cols-5">
+                    <div class="d-flex flex-wrap">
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
                           
                          
                         
-                                <div class="col">
+                                <div class="w-20">
                         
                                     <div class="p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
 										<?php if ( has_post_thumbnail()) { ?>
@@ -134,7 +133,6 @@ $tax = $wp_query->get_queried_object();
 						  		wp_reset_postdata(); ?>
                         	</div>
                     	</div>
-					</div>
 					<?php endif; ?>
 <!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
