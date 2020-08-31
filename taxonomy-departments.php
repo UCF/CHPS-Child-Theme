@@ -124,9 +124,10 @@ $tax = $wp_query->get_queried_object();
                                         <?php if(get_field('email')){ ?>
                                             <div class="person-label">
                                                 <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
+                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-file-text iconlink"></i></a>
+                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-linkedin-square iconlink"></i></a>
+                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-facebook-square iconlink"></i></a>
+                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-twitter-square iconlink"></i></a>
                                             </div>
                                         <?php }	?>
                                     </div>
