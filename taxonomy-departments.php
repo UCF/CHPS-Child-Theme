@@ -121,15 +121,15 @@ $tax = $wp_query->get_queried_object();
                                     <strong><?php the_title(); ?></strong></br>
 										<?php the_field('kind'); ?>
                                     <div class="mt-2">
-                                        <?php if(get_field('email')){ ?>
+                                        
                                             <div class="person-label">
-                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('research_link'); ?>"><i class="fa fa-file-text iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('linkedin_link'); ?>"><i class="fa fa-linkedin-square iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('facebook_link'); ?>"><i class="fa fa-facebook-square iconlink"></i></a>
-                                                <a href="mailto:<?php the_field('twitter_link'); ?>"><i class="fa fa-twitter-square iconlink"></i></a>
+                                                <?php if(get_field('email')){ ?><a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a><?php }?>
+                                                <?php if(get_field('research_link')){ ?><a href="mailto:<?php the_field('research_link'); ?>"><i class="fa fa-file-text iconlink"></i></a><?php }?>
+                                                <?php if(get_field('linkedin_link')){ ?><a href="mailto:<?php the_field('linkedin_link'); ?>"><i class="fa fa-linkedin-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('facebook_link')){ ?><a href="mailto:<?php the_field('facebook_link'); ?>"><i class="fa fa-facebook-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('twitter_link')){ ?><a href="mailto:<?php the_field('twitter_link'); ?>"><i class="fa fa-twitter-square iconlink"></i></a><?php }?>
                                             </div>
-                                        <?php }	?>
+                                        
                                     </div>
                                 </div>
                             
