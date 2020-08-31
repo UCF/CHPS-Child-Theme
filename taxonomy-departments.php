@@ -105,19 +105,32 @@ $tax = $wp_query->get_queried_object();
 						<?php while( $getassistants->have_posts() ) :
 						  $getassistants->the_post();
 						  $getAssistimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
+                          
                          <div class="container-fluid">
-
-                            <h2>Bootstrap 4 Five Columns</h2>
-                        
-                            <h5>Full-width (within .container-fluid)</h5>
-                        
                             <div class="row">
                         
                                 <div class="col">
                         
-                                    <img src="//placehold.it/640x480" class="img-fluid">
-                        
+                                    <div class="p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
+										<?php if ( has_post_thumbnail()) { ?>
+                                            <img src="<?php echo $getAssistimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+                                            <?php } else { ?> 
+                                                    <img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
+                                        <?php } ?>
+                                    </div>
+                                    <strong><?php the_title(); ?></strong></br>
+										<?php the_field('jobtitle'); ?>
+                                    <div class="mt-2">
+                                        <?php if(get_field('email')){ ?>
+                                            <div class="person-label">
+                                                <a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
+                                            </div>
+                                        <?php }	?>
+                                    </div>
                                 </div>
+                        
+                        
+                        
                         
                                 <div class="col">
                         
