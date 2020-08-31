@@ -124,10 +124,10 @@ $tax = $wp_query->get_queried_object();
                                         
                                             <div class="person-label">
                                                 <?php if(get_field('email')){ ?><a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a><?php }?>
-                                                <?php if(get_field('research_link')){ ?><a href="mailto:<?php the_field('research_link'); ?>" target="_blank"><i class="fa fa-file-text iconlink"></i></a><?php }?>
-                                                <?php if(get_field('linkedin_link')){ ?><a href="mailto:<?php the_field('linkedin_link'); ?>" target="_blank"><i class="fa fa-linkedin-square iconlink"></i></a><?php }?>
-                                                <?php if(get_field('facebook_link')){ ?><a href="mailto:<?php the_field('facebook_link'); ?>" target="_blank"><i class="fa fa-facebook-square iconlink"></i></a><?php }?>
-                                                <?php if(get_field('twitter_link')){ ?><a href="mailto:<?php the_field('twitter_link'); ?>" target="_blank"><i class="fa fa-twitter-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('research_link')){ ?><a href="<?php the_field('research_link'); ?>" target="_blank"><i class="fa fa-file-text iconlink"></i></a><?php }?>
+                                                <?php if(get_field('linkedin_link')){ ?><a href="<?php the_field('linkedin_link'); ?>" target="_blank"><i class="fa fa-linkedin-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('facebook_link')){ ?><a href="<?php the_field('facebook_link'); ?>" target="_blank"><i class="fa fa-facebook-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('twitter_link')){ ?><a href="<?php the_field('twitter_link'); ?>" target="_blank"><i class="fa fa-twitter-square iconlink"></i></a><?php }?>
                                             </div>
                                         
                                     </div>
