@@ -658,6 +658,14 @@ ul.personResearchList {
 	padding:3px 10px;
 	color:#fff;
 }
+.becomeGA a:hover{
+	color: #ffcc00;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
 .w-20 {
   	-webkit-box-flex: 0;
     -ms-flex: 0 0 20%;
