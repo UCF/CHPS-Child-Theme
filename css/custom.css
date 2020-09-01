@@ -651,13 +651,13 @@ ul.personResearchList {
 }
 .becomeGA {
 	text-align:right;
+	padding-top:20px;
 }
 .becomeGA a{
 	background:#000;
 	border-radius: 5px !important;
 	padding:3px 10px;
 	color:#fff;
-	margin-top:20px;
 }
 .becomeGA a:hover{
 	color: #ffcc00;
