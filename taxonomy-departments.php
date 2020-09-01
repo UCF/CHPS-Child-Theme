@@ -112,14 +112,18 @@ $tax = $wp_query->get_queried_object();
                                 <div class="w-20 mb-4">
                         
                                     <div class="p-0 mb-2 media-background-container UCFassistants-photo mx-auto">
+                                    <?php if ( get_the_content() ) { ?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><?php } ?>
 										<?php if ( has_post_thumbnail()) { ?>
                                             <img src="<?php echo $getAssistimageURL; ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php the_title(); ?>" class="media-background object-fit-cover">
                                             <?php } else { ?> 
                                                     <img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
                                         <?php } ?>
+                                        <?php if ( get_the_content() ) { ?></a><?php } ?>
                                     </div>
                                     <?php if ( get_the_content() ) { ?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><?php } ?>
-									<strong><?php the_title(); ?></strong></a></br>
+									<strong><?php the_title(); ?></strong>
+                                    <?php if ( get_the_content() ) { ?></a><?php } ?>
+                                    </br>
 										<?php the_field('kind'); ?>
                                     <div class="mt-2">
                                         
