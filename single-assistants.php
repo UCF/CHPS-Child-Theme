@@ -104,14 +104,6 @@ $ids = get_the_ID();
 <?php }
 ?>
 <style>
-.profileIMG {
-	text-align: center;
-	margin: 0px auto;
-	height: 150px;
-	width: 150px;
-	border-radius: 50% !important;
-	/**box-shadow: 0 0 5px rgba(0,0,0,.1); */
-}
 .site-header .container h1 {
 	display: none !important;
 }	
