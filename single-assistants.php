@@ -11,7 +11,7 @@ $ids = get_the_ID();
 			</header>
 		</div>
         <div class="col-lg-6 becomeGA">	
-			<a href="#"><i class="fa fa-user-plus icongrey"></i> Become a Graduate Assistant</a>
+			<a href="#"><i class="fa fa-user-plus iconyellow"></i> Become a Graduate Assistant</a>
 		</div>
 	</div>
 <article class="<?php echo $post->post_status; ?> post-list-item">
