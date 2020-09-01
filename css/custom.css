@@ -657,6 +657,7 @@ ul.personResearchList {
 	border-radius: 5px !important;
 	padding:3px 10px;
 	color:#fff;
+	margin-top:20px;
 }
 .becomeGA a:hover{
 	color: #ffcc00;
