@@ -683,6 +683,11 @@ ul.personResearchList {
 	width: 150px;
 	border-radius: 50% !important;
 }
+.UCFassistants-LGphoto {
+	height: 250px;
+	width: 250px;
+	border-radius: 50% !important;
+}
 /* = Profile Directory Single Person
 -------------------------------------------------------------- */
 .profile-social-web {
