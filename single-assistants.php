@@ -84,37 +84,6 @@ $ids = get_the_ID();
 	</div>
 	<hr class="my-2">
 <?php }	?>	
-<?php if(get_field('building')){ ?>
-<div class="row">
-		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			Location
-		</div>
-		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<a href="<?php 
-		if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
-		if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
-		if ($buildingMap == 'HS I') {echo 'https://www.ucf.edu/location/health-sciences-i/';}
-		if ($buildingMap == 'HS II') {echo 'https://www.ucf.edu/location/health-sciences-ii/';}
-		if ($buildingMap == 'Education Complex') {echo 'https://www.ucf.edu/location/education-complex-and-gym/';}
-		if ($buildingMap == 'Orlando Tech Center') {echo 'https://www.ucf.edu/location/orlando-tech-center-building-300/';}
-		if ($buildingMap == 'Research Pavilion') {echo 'https://www.ucf.edu/location/research-pavilion/';}
-		if ($buildingMap == 'Partnership 1') {echo 'https://www.ucf.edu/location/partnership-1/';}
-		if ($buildingMap == 'Partnership 2') {echo 'https://www.ucf.edu/location/partnership-2/';}	 
-		if ($buildingMap == 'Innovative Center') {echo 'https://www.ucf.edu/location/innovative-center/';}
-		if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
-		if ($buildingMap == 'Classroom Building I') {echo 'https://www.ucf.edu/location/classroom-building-i/';}
-		?>" target="_blank" title="Map to <?php the_field('building'); ?>"><?php the_field('building'); ?></a>
-			<?php if(get_field('room_number')){ ?>
-			<span>
-				<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
-			</span>
-			<?php }
-			?>	
-		</div>
-	</div>
-	<hr class="my-2">			
-<?php }
-?>	
 <?php if(get_field('email_address')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
@@ -135,39 +104,19 @@ $ids = get_the_ID();
 	<hr class="my-2">			
 <?php }
 ?>	
-<?php if(get_field('phone_number')){ ?>
-<div class="row">
-		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			Phone
-		</div>
-		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<a href="tel:<?php the_field('phone_number'); ?>">
-				<?php the_field('phone_number'); ?>
-			</a>
-		</div>
-	</div>
-	<hr class="my-2">			
-<?php }
-?>
-<?php if(get_field('facebook_url')||get_field('twitter_url')||get_field('instagram_url')||get_field('youtube_url')||get_field('linkedin_url')){ ?>
+<?php if(get_field('facebook_link')||get_field('twitter_link')||get_field('linkedin_link')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Connect
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<?php if (get_field('facebook_url')): ?><a href="<?php the_field('facebook_url'); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack">
+			<?php if (get_field('facebook_link')): ?><a href="<?php the_field('facebook_link'); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-fb"></i>
 				  <i class="fa fa-facebook fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('twitter_url')): ?><a href="<?php the_field('twitter_url'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('twitter_link')): ?><a href="<?php the_field('twitter_link'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-tw"></i>
 				  <i class="fa fa-twitter fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('instagram_url')): ?><a href="<?php the_field('instagram_url'); ?>" title="Follow me on Instagram" target="_blank"><span class="fa-stack">
-				  <i class="fa fa-circle fa-stack-2x profile-social-ig"></i>
-				  <i class="fa fa-instagram fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('youtube_url')): ?><a href="<?php the_field('youtube_url'); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack">
-				  <i class="fa fa-circle fa-stack-2x profile-social-yt"></i>
-				  <i class="fa fa-youtube fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('linkedin_url')): ?><a href="<?php the_field('linkedin_url'); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('linkedin_link')): ?><a href="<?php the_field('linkedin_link'); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-lk"></i>
 				  <i class="fa fa-linkedin fa-stack-1x profile-social-icon"></i>
 				</span></a>
@@ -177,24 +126,6 @@ $ids = get_the_ID();
 	<hr class="my-2">			
 <?php }
 ?>
-<?php if (have_rows('additional_links') ) { 	?>
-<div class="row">
-		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
-			Links
-		</div>
-		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<ul class="list-unstyled mb-0">
-				<?php while (have_rows('additional_links') ): the_row(); ?> 
-					<li>
-						<a href="<?php the_sub_field('link_url'); ?>" target="_blank" title="<?php the_sub_field('link_title');?>"><?php the_sub_field('link_title');?></a>
-					</li>
-				<?php endwhile; ?>
-			</ul>
-		</div>
-	</div>
-	<hr class="my-2">			
-<?php }
-?>	
 <style>
 #profileIMG {
 	text-align: center;
