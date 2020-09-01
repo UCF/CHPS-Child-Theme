@@ -672,6 +672,9 @@ ul.personResearchList {
 	}
 }
 @media (max-width: 641px) {
+	.becomeGA {
+		text-align:center;
+	}
 	.w-20 {
   		-webkit-box-flex: 0;
       	-ms-flex: 0 0 50% !important;
