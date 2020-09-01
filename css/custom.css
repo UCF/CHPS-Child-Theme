@@ -650,7 +650,7 @@ ul.personResearchList {
 	margin-left: 0px !important;
 }
 .becomeGA {
-	text-align:right;
+	float:right;
 	background:#f2f2f2;
 	border-radius: 5px !important;
 }
