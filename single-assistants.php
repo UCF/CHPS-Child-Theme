@@ -109,8 +109,8 @@ $ids = get_the_ID();
 .profileIMG {
 	text-align: center;
 	margin: 0px auto;
-	height: 250px;
-	width: 250px;
+	height: 150px;
+	width: 150px;
 	border-radius: 50% !important;
 	/**box-shadow: 0 0 5px rgba(0,0,0,.1); */
 }
