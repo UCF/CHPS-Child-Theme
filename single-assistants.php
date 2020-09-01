@@ -60,10 +60,10 @@ $ids = get_the_ID();
 							</div>
 						<?php }	?>
 					</div>
-					<?php if (get_field('google_scholar')): ?>	
+					<?php if (get_field('research_link')): ?>	
 						<div class="row mt-3 mb-5">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
-								<a href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank" class="btn btn-primary btn-block"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
+								<a href="<?php the_field('research_link'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank" class="btn btn-primary btn-block"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
 							</div>
 						</div>
 					<?php endif; ?>	
@@ -84,21 +84,15 @@ $ids = get_the_ID();
 	</div>
 	<hr class="my-2">
 <?php }	?>	
-<?php if(get_field('email_address')){ ?>
+<?php if(get_field('email')){ ?>
 <div class="row">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			E-mail
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<?php if( get_field( 'hide_email' )) {  ?>
-			<a href="mailto:<?php the_field('alternate_email'); ?>">
-				<?php the_field('alternate_email'); ?>
-			</a>			
-			<? } else { ?>
-			<a href="mailto:<?php the_field('email_address'); ?>">
-				<?php the_field('email_address'); ?>
+			<a href="mailto:<?php the_field('email'); ?>">
+				<?php the_field('email'); ?>
 			</a>	
-			<?php } ?>
 		</div>
 	</div>
 	<hr class="my-2">			
