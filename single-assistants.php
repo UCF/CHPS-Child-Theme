@@ -108,10 +108,11 @@ $ids = get_the_ID();
 <style>
 #profileIMG {
 	text-align: center;
-	max-width: 250px;
 	margin: 0px auto;
-	padding: 6px;
 	box-shadow: 0 0 5px rgba(0,0,0,.1);
+	height: 250px;
+	width: 250px;
+	border-radius: 50% !important;
 }
 .site-header .container h1 {
 	display: none !important;
