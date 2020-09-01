@@ -118,7 +118,8 @@ $tax = $wp_query->get_queried_object();
                                                     <img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
                                         <?php } ?>
                                     </div>
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" ><strong><?php the_title(); ?></strong></a></br>
+                                    <?php if ( !empty($the_content) ) {?><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><?php } ?>
+									<strong><?php the_title(); ?></strong></a></br>
 										<?php the_field('kind'); ?>
                                     <div class="mt-2">
                                         
