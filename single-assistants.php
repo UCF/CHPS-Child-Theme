@@ -17,13 +17,11 @@ $ids = get_the_ID();
 			<div class="col-md-4 mb-5">
 				<aside class="person-contact-container">
 					<div class="mb-4" style="text-align: center;">
-<div class="profileIMG">
+<div class="media-background-container UCFassistants-photo mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
-		<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo get_person_name( $post ); ?> at UCF" ><img width="100%" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php echo $getimageURL ?>" /></a>
+		<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo get_person_name( $post ); ?> at UCF" ><img width="100%" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php echo $getimageURL ?>" class="media-background object-fit-cover"/></a>
 		<?php } else { ?> 
-		<?php switch_to_blog(2);?>
-			<img width="100%" title="<?php $post->post_title; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php the_field('default_profile_image', 'option'); ?>" />
-		<?php restore_current_blog(); ?>	
+			<img width="100%" title="<?php $post->post_title; ?>" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php the_field('default_profile_image', 'option'); ?>" class="media-background object-fit-cover"/>
 	<?php } ?>
 </div>
 					</div>
