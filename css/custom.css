@@ -649,6 +649,11 @@ ul.personResearchList {
 .assistantsLEFT {
 	margin-left: 0px !important;
 }
+.becomeGA {
+	text-align:right;
+	background:#f2f2f2;
+	border-radius: 5px !important;
+}
 .w-20 {
   	-webkit-box-flex: 0;
     -ms-flex: 0 0 20%;

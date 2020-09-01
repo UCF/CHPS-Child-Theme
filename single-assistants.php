@@ -10,7 +10,7 @@ $ids = get_the_ID();
 				<h1 class="archive-title heading-underline">Graduate Assistant</h1>
 			</header>
 		</div>
-        <div class="col-lg-6" style="text-align:right;">	
+        <div class="col-lg-6 becomeGA">	
 			<a href="#"><i class="fa fa-user-plus icongrey"></i> Become a Graduate Assistant</a>
 		</div>
 	</div>
