@@ -1,21 +1,14 @@
 <?php get_header(); the_post(); 
 $project_depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
-$buildingMap = get_field('building');
 $ids = get_the_ID();
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
-		<div class="col-lg-6">	
+		<div class="col-lg-12">	
 			<header class="archive-header">
 				<h1 class="archive-title heading-underline">Graduate Assistant</h1>
 			</header>
-		</div>
-		<div class="col-lg-6">	
-			<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
-		</div>
-		<div class="col-lg-12 pt-2">	
-			<a href="/directory/" title="Back to the Directory"><i class="fa fa-chevron-circle-left icongrey"></i><span class="searchresults">Back to the Full Directory</strong></span></a>
 		</div>
 	</div>
 <article class="<?php echo $post->post_status; ?> post-list-item">
