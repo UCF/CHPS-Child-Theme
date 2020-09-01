@@ -17,7 +17,7 @@ $ids = get_the_ID();
 			<div class="col-md-4 mb-5">
 				<aside class="person-contact-container">
 					<div class="mb-4" style="text-align: center;">
-<div class="media-background-container UCFassistants-photo mx-auto">
+<div class="media-background-container UCFassistants-LGphoto mx-auto">
 	<?php if ( has_post_thumbnail()) { ?>
 		<a href="<?php echo $getimageURL ?>" rel="lightbox" title ="<?php echo get_person_name( $post ); ?> at UCF" ><img width="100%" alt="<?php echo get_person_name( $post ); ?>'s profile picture at UCF" src="<?php echo $getimageURL ?>" class="media-background object-fit-cover"/></a>
 		<?php } else { ?> 
