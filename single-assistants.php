@@ -10,8 +10,8 @@ $ids = get_the_ID();
 				<h1 class="archive-title heading-underline">Graduate Assistant</h1>
 			</header>
 		</div>
-        <div class="col-lg-6 becomeGA">	
-			<a href="#"><i class="fa fa-user-plus icongrey"></i> Become a Graduate Assistant</a>
+        <div class="col-lg-6">	
+			<a href="#" class="becomeGA"><i class="fa fa-user-plus icongrey"></i> Become a Graduate Assistant</a>
 		</div>
 	</div>
 <article class="<?php echo $post->post_status; ?> post-list-item">
