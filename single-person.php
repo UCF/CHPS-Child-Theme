@@ -300,7 +300,7 @@ $grantlist = array(
 								<?php the_field('research_info'); ?>
 								<?php $termswer = get_field('research_interests');
 									if( $termswer ): 
-										echo '<h5>Research Interests</h5>';
+										echo '<h5 class="heading-underline">Research Interests</h5>';
 								?>
 									<ul id="capitalText" class="mb-3">
 										<?php foreach( $termswer as $term ): ?>
