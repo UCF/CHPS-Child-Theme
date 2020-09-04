@@ -133,6 +133,7 @@ $tax = $wp_query->get_queried_object();
                                                 <?php if(get_field('linkedin_link')){ ?><a href="<?php the_field('linkedin_link'); ?>" target="_blank"><i class="fa fa-linkedin-square iconlink"></i></a><?php }?>
                                                 <?php if(get_field('facebook_link')){ ?><a href="<?php the_field('facebook_link'); ?>" target="_blank"><i class="fa fa-facebook-square iconlink"></i></a><?php }?>
                                                 <?php if(get_field('twitter_link')){ ?><a href="<?php the_field('twitter_link'); ?>" target="_blank"><i class="fa fa-twitter-square iconlink"></i></a><?php }?>
+                                                <?php if(get_field('instagram_link')){ ?><a href="<?php the_field('instagram_link'); ?>" target="_blank"><i class="fa fa-instagram-square iconlink"></i></a><?php }?>
                                             </div>
                                         
                                     </div>
