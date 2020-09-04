@@ -18,7 +18,7 @@
 						<div class="col-xl-10">
 							<div class="header-title-wrapper">
 								<h1 class="header-title">Recent Grants</h1>
-								<p class="header-subtitle">College of Health Professions and Sciences</p>
+								<p class="header-subtitle">UCF College of Health Professions and Sciences</p>
 							</div>
 						</div>
 					</div>
