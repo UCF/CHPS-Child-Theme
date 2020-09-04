@@ -99,8 +99,10 @@ $ids = get_the_ID();
 				</span></a><?php endif; ?><?php if (get_field('linkedin_link')): ?><a href="<?php the_field('linkedin_link'); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-lk"></i>
 				  <i class="fa fa-linkedin fa-stack-1x profile-social-icon"></i>
-				</span></a>
-			<?php endif; ?>
+				</span></a><?php endif; ?><?php if (get_field('instagram_link')): ?><a href="<?php the_field('instagram_link'); ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack">
+				  <i class="fa fa-circle fa-stack-2x profile-social-ig"></i>
+				  <i class="fa fa-instagram fa-stack-1x profile-social-icon"></i>
+				</span></a><?php endif; ?>
 		</div>
 	</div>
 	<hr class="my-2">			
