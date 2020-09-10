@@ -5,14 +5,15 @@ $ids = get_the_ID();
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
-		<div class="col-lg-6">	
+		<div class="col-lg-12">	
 			<header class="archive-header">
 				<h1 class="archive-title heading-underline">Graduate Assistant</h1>
 			</header>
 		</div>
+        <!--Will need to change columns of 12 to 6 above if activated
         <div class="col-lg-6 becomeGA">	
 			<a href="/become-a-graduate-assistant/"><i class="fa fa-user-plus iconyellow"></i> Become a Graduate Assistant</a>
-		</div>
+		</div>-->
 	</div>
 <article class="<?php echo $post->post_status; ?> post-list-item">
 	<div class="container">
