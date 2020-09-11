@@ -68,7 +68,7 @@ $category_id = get_cat_ID($a['category']);
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => $a['tag'],
+						'terms'    => array($a['tag']),
 					),
 				),
                 )
