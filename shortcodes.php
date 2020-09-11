@@ -54,6 +54,11 @@ function newsvisualvar( $atts ) {
         'column' => '4',
 		'showcats' => '',
     ), $atts );
+if ( strpos( $a['tag'], ',' ) !== false ) {
+      $terms = explode( $a['tag'] );
+   } else {
+      $terms = $a['tag'];
+   }	
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
 	if (!empty($a['tag'])) { 	
@@ -68,7 +73,7 @@ $category_id = get_cat_ID($a['category']);
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => array($a['tag']),
+						'terms'    => $terms,
 					),
 				),
                 )
