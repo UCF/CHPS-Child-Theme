@@ -55,12 +55,7 @@ function newsvisualvar( $atts ) {
 		'showcats' => '',
     ), $atts );
 switch_to_blog(2);
-$category_id = get_cat_ID($a['category']);
-if ( strpos( $a['tag'], ',' ) !== false ) {
-      $terms = explode( $a['tag'] );
-   } else {
-      $terms = $a['tag'];
-   }	  
+$category_id = get_cat_ID($a['category']);  
 	if (!empty($a['tag'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'post',
@@ -73,7 +68,7 @@ if ( strpos( $a['tag'], ',' ) !== false ) {
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => $terms,
+						'terms'    => $a['tag'],
 					),
 				),
                 )
