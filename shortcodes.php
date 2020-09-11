@@ -57,6 +57,11 @@ function newsvisualvar( $atts ) {
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
 	if (!empty($a['tag'])) { 	
+		if ( strpos( $a['tag'], ',' ) !== false ) {
+		  $tagterms = explode( $a['tag'] );
+	   } else {
+		  $tagterms = $a['tag'];
+	   }
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'post',
                 'post_status' => 'publish',
@@ -68,7 +73,7 @@ $category_id = get_cat_ID($a['category']);
 					array(
 						'taxonomy' => 'post_tag',
 						'field'    => 'name',
-						'terms'    => $a['tag'],
+						'terms'    => $tagterms,
 					),
 				),
                 )
