@@ -54,13 +54,13 @@ function newsvisualvar( $atts ) {
         'column' => '4',
 		'showcats' => '',
     ), $atts );
+switch_to_blog(2);
+$category_id = get_cat_ID($a['category']);
 if ( strpos( $a['tag'], ',' ) !== false ) {
       $terms = explode( $a['tag'] );
    } else {
       $terms = $a['tag'];
-   }	
-switch_to_blog(2);
-$category_id = get_cat_ID($a['category']);  
+   }	  
 	if (!empty($a['tag'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'post',
