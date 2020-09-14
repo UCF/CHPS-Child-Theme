@@ -620,8 +620,8 @@ $args = array(
 		'meta_query' => array( // WordPress has all the results, now, return only the events after today's date
         	array(
             'key' => 'grant_end_date', // Check the start date field
-            'value' => date("m/d/Y"), // Set today's date (note the similar format)
-            'compare' => '>', // Return the ones greater than or equal to today's date
+            'value' => date("Y-m-d"), // Set today's date (note the similar format)
+            'compare' => '>=', // Return the ones greater than or equal to today's date
             'type' => 'DATE' // Let WordPress know we're working with date
         	)
     	),
@@ -643,7 +643,7 @@ $loop = new WP_Query($args);
 while($loop->have_posts()) : $loop->the_post(); 
 ?>
 <div class="pt-3 pb-3 grantResult <?php echo $g['style']; ?>">
-order<?php get_template_part( 'grant-results'); ?>
+date<?php get_template_part( 'grant-results'); ?>
 </div>
 <?php endwhile; ?>
 <div class="mt-5">
