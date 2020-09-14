@@ -322,7 +322,7 @@ add_filter('posts_where', 'my_posts_where');
 	$the_query = new WP_Query( $grantlist );
 	?>
 	<?php if( $the_query->have_posts() ): ?>
-    <h5 class="mb-0 heading-underline">Recent Grants</h5>
+    <h5 class="mb-0 heading-underline">Research Grants</h5>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="pt-3 pb-3 grantResult grantSmall">
         <?php get_template_part( 'grant-results'); ?>

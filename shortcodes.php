@@ -610,6 +610,12 @@ $args = array(
 		'meta_key' => 'grant_start_date',
 		'orderby' => 'meta_value',
 		'order' => 'DESC', 
+		'meta_query' => array(
+        	'meta_key' => 'grant_end_date',
+        	'type' => 'DATE',  // You can also try changing it to TIME or DATE if it doesn't work
+        	'meta_value' => date( "Y-m-d" ),
+        	'meta_compare' => '>',
+    	),
         'tax_query' => array(
             array(
                 'taxonomy' => 'grant_units',
