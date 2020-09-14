@@ -612,7 +612,7 @@ $args = array(
 		//'order' => 'DESC', 
 		'meta_query' => array(
         	'meta_key' => 'grant_end_date',
-        	'type' => 'DATETIME',  // You can also try changing it to TIME or DATE if it doesn't work
+        	'type' => 'DATE',  // You can also try changing it to TIME or DATE if it doesn't work
         	'meta_value' => date( "m/d/Y" ),
         	'meta_compare' => '>=',
     	),
@@ -641,7 +641,7 @@ $loop = new WP_Query($args);
 while($loop->have_posts()) : $loop->the_post(); 
 ?>
 <div class="pt-3 pb-3 grantResult <?php echo $g['style']; ?>">
-DATETIME<?php get_template_part( 'grant-results'); ?>
+DATE<?php get_template_part( 'grant-results'); ?>
 </div>
 <?php endwhile; ?>
 <div class="mt-5">
