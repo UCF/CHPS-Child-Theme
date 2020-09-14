@@ -641,7 +641,7 @@ $loop = new WP_Query($args);
 while($loop->have_posts()) : $loop->the_post(); 
 ?>
 <div class="pt-3 pb-3 grantResult <?php echo $g['style']; ?>">
-<?php get_template_part( 'grant-results'); ?>
+HELLO<?php get_template_part( 'grant-results'); ?>
 </div>
 <?php endwhile; ?>
 <div class="mt-5">
