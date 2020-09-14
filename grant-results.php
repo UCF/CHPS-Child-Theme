@@ -23,7 +23,7 @@ $terms = get_the_terms( $post->ID , 'grant_units' );
             | <strong>Timeframe:</strong> <?php the_field('grant_start_date'); ?> <?php if( get_field('grant_end_date')) {  ?>- <?php the_field('grant_end_date'); ?><?php } ?>
         <?php } ?>
         <div>
-            <strong>Categories:</strong> <?php 
+            <strong>Funding Type:</strong> <?php 
         $terms = get_the_terms( $post->ID , 'grant_cats' );
             foreach ( $terms as $term ) {
             echo $term->name;
