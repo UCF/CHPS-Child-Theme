@@ -229,7 +229,7 @@ $posts = get_posts(array(
 		 )
 ));
 $grantlist = array(
-	'posts_per_page' => 10,
+	'posts_per_page' => 0,
 	'post_type'	 => 'grants',
 	'meta_key' => 'grant_start_date',
 	'orderby' => 'meta_value',
