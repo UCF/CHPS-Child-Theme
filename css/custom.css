@@ -518,6 +518,7 @@ article blockquote p {
 }
 .listpersonGroup:hover {
   background: #eee;
+  text-decoration:none;
 }
 .listpersonGroup strong{
   font-weight:600;
