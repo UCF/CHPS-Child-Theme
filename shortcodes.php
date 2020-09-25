@@ -738,10 +738,10 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '';
-	if( get_field('degrees', $post->ID) ) {
-	while ( have_rows('degrees', $post->ID) ) : the_row();
-	if (!get_sub_field('degree_aftername', $post->ID)) { continue; }
-	 $array[] = get_sub_field('degree_select', $post->ID); 
+	if( get_field('degrees') ) {
+	while ( have_rows('degrees') ) : the_row();
+	if (!get_sub_field('degree_aftername')) { continue; }
+	 $array[] = get_sub_field('degree_select'); 
 	endwhile;
 	$foo = implode(', ', array_column($array, 'label'));
    $listnews .= '<span class"">, ' . $foo . '</span>';
