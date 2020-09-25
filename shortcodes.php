@@ -737,7 +737,17 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		$listnews .= '<div class="mb-2"><span class="category-title" href="' . $category_link . '">' . $category_name . '</span></div>';
 	}
 	else { }
-	$listnews .= '' . get_the_title() . '</div></div></a></div>';
+	$listnews .= '' . get_the_title() . '';
+	if( get_field('degrees') ) {
+							while ( have_rows('degrees') ) : the_row();
+							if (!get_sub_field('degree_aftername', $post->ID)) { continue; }
+							 $array[] = get_sub_field('degree_select'); 
+							endwhile;
+							$foo = implode(', ', array_column($array, 'label'));
+							$listnews .= '<span class"">, ' . $foo . '</span>';
+							}	
+	$listnews .= '</div></div></a></div>';													
+					
 endwhile;
 $listnews .= '</div></div>';	
 wp_reset_query();
