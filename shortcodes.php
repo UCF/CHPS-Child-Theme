@@ -737,7 +737,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		$listnews .= '<div class="mb-2"><span class="category-title" href="' . $category_link . '">' . $category_name . '</span></div>';
 	}
 	else { }
-	$listnews .= '' . get_the_title() . '';
+	$listnews .= '<strong>' . get_the_title() . '</strong><br>';
 	if(get_field('job_titles_tax', $post->ID)){	
 	// Get a list of terms for this post's custom taxonomy.
 	$project_cats = get_the_terms($post->ID, 'job_titles');
