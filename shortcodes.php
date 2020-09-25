@@ -694,7 +694,7 @@ $category_id = get_cat_ID($a['category']);
                 )
             ); 
 	}
-$listnews = '<div class="d-flex flex-wrap"><div class="person-20">';
+$listnews = '<div class="d-flex flex-wrap"><div class="container">';
 while($visualnews->have_posts()) : $visualnews->the_post();
 	$primary_term_id = yoast_get_primary_term_id('category');
 	$postTerm = get_term( $primary_term_id );
@@ -711,7 +711,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	//end new code
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '3') {	
-		$listnews .= '<div class="">';
+		$listnews .= '<div class="person-20 mb-4">';
 			if ( get_field( 'updatenewstype' ) == 1 ) { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
 			} else { 
@@ -719,7 +719,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			}
 		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG-pic mx-auto">';
 	} else {	
-		$listnews .= '<div class="">';
+		$listnews .= '<div class="person-20 mb-4">';
 			if ( get_field( 'updatenewstype' ) == 1 ) { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
 			} else { 
