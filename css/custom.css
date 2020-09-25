@@ -512,16 +512,17 @@ article blockquote p {
   padding: 0px; 
   color: #000;
   border: solid 1px #ddd;
-  line-height:17px;
-  font-size: 15px !important;
+  line-height:18px;
+  font-size: 14px;
   text-align:center;
 }
 .listpersonGroup:hover {
   background: #eee;
-  text-decoration:none;
+  text-decoration:none !important;
 }
 .listpersonGroup strong{
   font-weight:600;
+  font-size: 17px;
 }
 /* = Websupport Website 
 -------------------------------------------------------------- */
