@@ -744,7 +744,6 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		$foo = implode(', ', array_column($array, 'label'));
 		$listnews .= '<span class"">, ' . $foo . '</span>';
 }
-break;
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
 			$listnews .= '<br>';
