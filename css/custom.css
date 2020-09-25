@@ -505,6 +505,23 @@ article blockquote p {
 .lBorder {
 	border-left: solid 2px #eee;
 }
+/* = LIST PEOPLE GROUP SHORTCODE 
+-------------------------------------------------------------- */
+.listpersonGroup {
+  height: 100%;
+  padding: 0px; 
+  color: #000;
+  border: solid 1px #ddd;
+  line-height:17px;
+  font-size: 15px !important;
+  text-align:center;
+}
+.listpersonGroup:hover {
+  background: #eee;
+}
+.listpersonGroup strong{
+  font-weight:500;
+}
 /* = Websupport Website 
 -------------------------------------------------------------- */
 .disclaimerText {
