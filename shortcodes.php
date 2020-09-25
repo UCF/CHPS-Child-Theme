@@ -735,12 +735,13 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
 		$rows = get_field('degrees');
+		
 		if($rows)
 		{
-		foreach($rows as $row)
-			{
-				$listnews .= '' . $row['degree_select'] . '';
-			}
+		$expertise = get_sub_field('degree_select');
+		foreach( $expertise as $value ): 
+			$listnews .= $value; 
+		 endforeach;
 		}
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
