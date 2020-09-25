@@ -538,7 +538,7 @@ article blockquote p {
     -ms-flex: 0 0 20%;
     flex: 0 0 20%;
   	max-width: 20%;
-	margin: 0px 25px 24px 0px;
+	margin-bottom:24px;
 }
 @media (max-width: 1200px) {
 	.person-20 {
