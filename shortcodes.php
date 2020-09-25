@@ -738,13 +738,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '';
-	
-	
-	
-	
-	
 	if(get_field('job_titles_tax', $post->ID)){	
-	$listnews .= '<div class="profilejobtitle">';	
 	// Get a list of terms for this post's custom taxonomy.
 	$project_cats = get_the_terms($post->ID, 'job_titles');
 	// Renumber array.
@@ -757,7 +751,6 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			$listnews .= ', ';	 
 		}
 	}	
-$listpeeps .= '</div>';	
 }	
 	$listnews .= '</div></div></a></div>';													
 					
