@@ -651,4 +651,98 @@ while($loop->have_posts()) : $loop->the_post();
 </div>
 <?php } add_shortcode( 'showgrants', 'grantlistvar' );
 //  ------------------------------------------------------------------------
+?><?php
+//  ----------------------------------------------------
+// SHORTCODE TO LIST FACULTY BY GROUP 
+// [listfaculty number="4" category="" tag="" column="4" showcats="Yes"]
+function listfacultyvar( $atts ) {
+    $a = shortcode_atts( array(
+        'number' => '4',
+        'category' => '',
+		'tag' => '',
+        'column' => '4',
+		'showcats' => '',
+    ), $atts );
+switch_to_blog(2);
+$category_id = get_cat_ID($a['category']);  
+	if (!empty($a['tag'])) { 	
+	 $visualnews = new WP_Query(array(
+                'post_type' => 'person',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
+                'cat' => $category_id,
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'post_tag',
+						'field'    => 'name',
+						'terms'    => $a['tag'],
+					),
+				),
+                )
+            ); 	
+	}
+	else {
+	 $visualnews = new WP_Query(array(
+                'post_type' => 'person',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
+                'cat' => $category_id,
+                )
+            ); 
+	}
+$listnews = '<div class="container newsmedia"><div class="row narrow-gutter row-flex">';
+while($visualnews->have_posts()) : $visualnews->the_post();
+	$primary_term_id = yoast_get_primary_term_id('category');
+	$postTerm = get_term( $primary_term_id );
+	//here is the new code
+	$perma_cat = yoast_get_primary_term_id('category');
+  if ( $perma_cat != null ) {
+    $category = get_term( $perma_cat );
+  } else {
+    $categories = get_the_category();
+    $category = $categories[0];
+  }
+  $category_link = get_category_link($category);
+  $category_name = $category->name; 
+	//end new code
+	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+	if ($a['column'] == '3') {	
+		$listnews .= '<div class="col-lg-4 col-sm-6 col-xs-12">';
+			if ( get_field( 'updatenewstype' ) == 1 ) { 
+				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+			} else { 
+				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+			}
+		$listnews .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	} else {	
+		$listnews .= '<div class="col-lg-3 col-sm-6 col-xs-12">';
+			if ( get_field( 'updatenewstype' ) == 1 ) { 
+				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '" target="_blank">';
+			} else { 
+				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
+			}
+		$listnews .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
+	}	
+	if ( has_post_thumbnail()) {	
+		$listnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	} else { 	
+		$listnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
+	}	
+	$listnews .= '</div><div class="p-3">';
+	if ( !empty($a['showcats'])) {
+		$listnews .= '<div class="mb-2"><span class="category-title" href="' . $category_link . '">' . $category_name . '</span></div>';
+	}
+	else { }
+	$listnews .= '' . get_the_title() . '</div></div></a></div>';
+endwhile;
+$listnews .= '</div></div>';	
+wp_reset_query();
+restore_current_blog();
+return $listnews;		
+}
+add_shortcode( 'listfaculty', 'listfacultyvar' );	
 ?>
