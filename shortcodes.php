@@ -738,14 +738,27 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}
 	else { }
 	$listnews .= '' . get_the_title() . '';
-	if( get_field('degrees') ) {
-	while ( have_rows('degrees') ) : the_row();
-	if (!get_sub_field('degree_aftername')) { continue; }
-	 $array[] = get_sub_field('degree_select'); 
-	endwhile;
-	$foo = implode(', ', array_column($array, 'label'));
-   $listnews .= '<span class"">, ' . $foo . '</span>';
-}
+	
+	
+	
+	
+	
+	if(get_field('job_titles_tax', $post->ID)){	
+	$listnews .= '<div class="profilejobtitle">';	
+	// Get a list of terms for this post's custom taxonomy.
+	$project_cats = get_the_terms($post->ID, 'job_titles');
+	// Renumber array.
+	$project_cats = array_values($project_cats);
+	for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
+		// Each array item is an object. Display its 'name' value.
+		$listnews .= $project_cats[$cat_count]->name;	 
+		// If there is more than one term, comma separate them.
+		if ($cat_count<count($project_cats)-1){
+			$listnews .= ', ';	 
+		}
+	}	
+$listpeeps .= '</div>';	
+}	
 	$listnews .= '</div></div></a></div>';													
 					
 endwhile;
