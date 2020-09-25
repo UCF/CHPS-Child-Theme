@@ -743,7 +743,6 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	endwhile;
 		$foo = implode(', ', array_column($array, 'label'));
 		$listnews .= '<span class"">, ' . $foo . '</span>';
-	break 1;    /* You could also write 'break 1;' here. */
 }
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
