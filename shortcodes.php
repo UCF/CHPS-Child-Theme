@@ -755,10 +755,18 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		}
 	}
 	else { }		
-	$listnews .= '</div></div></a></div>';													
-					
+	$listnews .= '</div></div></a></div>';				
 endwhile;
-$listnews .= '</div></div>';	
+$listnews .= '</div></div>';
+$listnews .= '<div class="container-fluid">
+    <div class="row show-grid">
+		<div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">(1) sm-6 md-1-5 lg-1-5</span></div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">(2) sm-6 md-1-5 lg-1-5</span></div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">(3) sm-6 md-1-5 lg-1-5</span></div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">(4) sm-6 md-1-5 lg-1-5</span></div>
+        <div class="col-sm-6 col-md-1-5 col-lg-1-5"><span class="">(5) sm-6 md-1-5 lg-1-5</span></div>
+	</div>
+</div>';	
 wp_reset_query();
 restore_current_blog();
 return $listnews;		
