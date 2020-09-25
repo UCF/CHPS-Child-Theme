@@ -734,7 +734,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}	
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
-			if( get_field('degrees') ):
+			if( get_field('degrees') ) {
 			while ( have_rows('degrees') ) : the_row();
 				  if (!get_sub_field('degree_aftername')) {
 					continue;
@@ -743,7 +743,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			endwhile;
 				$foo = implode(', ', array_column($array, 'label'));
 				echo '<span class"">, ' . $foo . '</span>';
-			endif;
+		}
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
 			$listnews .= '<br>';
