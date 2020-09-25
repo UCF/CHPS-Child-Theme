@@ -742,8 +742,8 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	 $array[] = get_sub_field('degree_select'); 
 	endwhile;
 		$foo = implode(', ', array_column($array, 'label'));
-		break 1;    /* You could also write 'break 1;' here. */
 		$listnews .= '<span class"">, ' . $foo . '</span>';
+	break 1;    /* You could also write 'break 1;' here. */
 }
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
