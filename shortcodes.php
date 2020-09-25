@@ -108,7 +108,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			} else { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 			}
-		$listnews .= '<div class="visnews"><div class="media-background-container listpersonG-pic mx-auto">';
+		$listnews .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
 	} else {	
 		$listnews .= '<div class="col-lg-3 col-sm-6 col-xs-12">';
 			if ( get_field( 'updatenewstype' ) == 1 ) { 
@@ -116,7 +116,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			} else { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 			}
-		$listnews .= '<div class="visnews"><div class="media-background-container listpersonG-pic mx-auto">';
+		$listnews .= '<div class="visnews"><div class="media-background-container visnews-photo mx-auto">';
 	}	
 	if ( has_post_thumbnail()) {	
 		$listnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
@@ -717,7 +717,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			} else { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 			}
-		$listnews .= '<div class="listpersonGroup"><div class="media-background-container visnews-photo mx-auto">';
+		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG-pic mx-auto">';
 	} else {	
 		$listnews .= '<div class="col-lg-3 col-sm-6 col-xs-6">';
 			if ( get_field( 'updatenewstype' ) == 1 ) { 
@@ -725,7 +725,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			} else { 
 				 $listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 			}
-		$listnews .= '<div class="listpersonGroup"><div class="media-background-container visnews-photo mx-auto">';
+		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG-pic mx-auto">';
 	}	
 	if ( has_post_thumbnail()) {	
 		$listnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
