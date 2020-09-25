@@ -533,6 +533,29 @@ article blockquote p {
 		height:475px;
 	}
 }
+.person-20 {
+  	-webkit-box-flex: 0;
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+  	max-width: 20%;
+	margin: 0px 25px 24px 0px;
+}
+@media (max-width: 1200px) {
+	.person-20 {
+  		-webkit-box-flex: 0;
+      	-ms-flex: 0 0 33% !important;
+        flex: 0 0 33% !important;
+  		max-width: 33% !important;
+	}
+}
+@media (max-width: 641px) {
+	.person-20 {
+  		-webkit-box-flex: 0;
+      	-ms-flex: 0 0 50% !important;
+        flex: 0 0 50% !important;
+  		max-width: 50% !important;
+	}
+}
 /* = Websupport Website 
 -------------------------------------------------------------- */
 .disclaimerText {
