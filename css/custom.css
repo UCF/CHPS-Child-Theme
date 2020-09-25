@@ -525,7 +525,7 @@ article blockquote p {
   font-size: 17px;
 }
 .listpersonG-pic {
-    height: 400px;
+    height: 200px;
 }
 @media screen and (max-width: 992px) {
 	.listpersonG-pic {
