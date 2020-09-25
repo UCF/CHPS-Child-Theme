@@ -734,15 +734,16 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	}	
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
-		$rows = get_field('degrees');
-		
-		if($rows)
-		{
-		$expertise = get_sub_field('degree_select');
-		foreach( $expertise as $value ): 
-			$listnews .= $value; 
-		 endforeach;
-		}
+			if( get_field('degrees') ):
+			while ( have_rows('degrees') ) : the_row();
+				  if (!get_sub_field('degree_aftername')) {
+					continue;
+				  }
+			 $array[] = get_sub_field('degree_select'); 
+			endwhile;
+				$foo = implode(', ', array_column($array, 'label'));
+				echo '<span class"">, ' . $foo . '</span>';
+			endif;
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
 			$listnews .= '<br>';
