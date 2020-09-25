@@ -654,14 +654,14 @@ while($loop->have_posts()) : $loop->the_post();
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST FACULTY BY GROUP 
-// [listfaculty number="4" category="" tag="" column="4" showcats="Yes"]
+// [listfaculty number="4" category="" tag="" column="4" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '',
 		'tag' => '',
         'column' => '4',
-		'showcats' => '',
+		'showjob' => '',
     ), $atts );
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
@@ -733,25 +733,25 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		$listnews .= '<img src="' . get_field('default_profile_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	}	
 	$listnews .= '</div><div class="p-3">';
-	if ( !empty($a['showcats'])) {
-		$listnews .= '<div class="mb-2"><span class="category-title" href="' . $category_link . '">' . $category_name . '</span></div>';
-	}
-	else { }
-	$listnews .= '<strong>' . get_the_title() . '</strong><br>';
-	if(get_field('job_titles_tax', $post->ID)){	
-	// Get a list of terms for this post's custom taxonomy.
-	$project_cats = get_the_terms($post->ID, 'job_titles');
-	// Renumber array.
-	$project_cats = array_values($project_cats);
-	for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
-		// Each array item is an object. Display its 'name' value.
-		$listnews .= $project_cats[$cat_count]->name;	 
-		// If there is more than one term, comma separate them.
-		if ($cat_count<count($project_cats)-1){
-			$listnews .= ', ';	 
+	$listnews .= '<strong>' . get_the_title() . '</strong>';
+	if ( !empty($a['showjob'])) {
+			if(get_field('job_titles_tax', $post->ID)){	
+			$listnews .= '<br>';
+			// Get a list of terms for this post's custom taxonomy.
+			$project_cats = get_the_terms($post->ID, 'job_titles');
+			// Renumber array.
+			$project_cats = array_values($project_cats);
+			for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
+				// Each array item is an object. Display its 'name' value.
+				$listnews .= $project_cats[$cat_count]->name;	 
+				// If there is more than one term, comma separate them.
+				if ($cat_count<count($project_cats)-1){
+					$listnews .= ', ';	 
+				}
+			}	
 		}
-	}	
-}	
+	}
+	else { }		
 	$listnews .= '</div></div></a></div>';													
 					
 endwhile;
