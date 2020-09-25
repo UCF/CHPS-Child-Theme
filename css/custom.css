@@ -524,6 +524,15 @@ article blockquote p {
   font-weight:600;
   font-size: 17px;
 }
+.listpersonG-pic {
+    height: 200px;
+}
+@media screen and (max-width: 992px) {
+	.listpersonG-pic {
+		width: 100%;
+		height:225px;
+	}
+}
 /* = Websupport Website 
 -------------------------------------------------------------- */
 .disclaimerText {
