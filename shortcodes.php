@@ -735,19 +735,17 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		}
 	}
 	else { }
-	if(get_the_terms('departments', $post->ID)){ 
-		$listnews .= '<br>';
-		// Get a list of terms for this post's custom taxonomy.
-		$project_depts = get_the_terms($post->ID, 'departments');
-		// Renumber array.
-		$project_depts = array_values($project_depts);
-		for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
-			// Each array item is an object. Display its 'name' value.
-			$listnews .= $project_depts[$dept_count]->name;
-			// If there is more than one term, comma separate them.
-			if ($dept_count<count($project_depts)-1){
-				$listnews .= ', ';
-			}
+	$listnews .= '<br>';
+	// Get a list of terms for this post's custom taxonomy.
+	$project_units = get_the_terms($post->ID, 'departments');
+	// Renumber array.
+	$project_units = array_values($project_units);
+	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
+		// Each array item is an object. Display its 'name' value.
+		$listnews .= $project_units[$unit_count]->name;	 
+		// If there is more than one term, comma separate them.
+		if ($unit_count<count($project_units)-1){
+			$listnews .= ', ';	 
 		}
 	}
 	$listnews .= '</div></div></a></div>';				
