@@ -515,7 +515,10 @@ article blockquote p {
   line-height:18px;
   font-size: 12px;
   text-align:center;
-  text-decoration:none !important;
+  
+}
+.listpersonGroup .p-3 {
+	text-decoration:none !important;
 }
 .listpersonGroup:hover {
   background: #eee;
