@@ -676,7 +676,7 @@ $category_id = get_cat_ID($a['category']);
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'departments',
-						'field' => 'slug',
+						'field' => 'name',
 						'terms' => $r['department'],
 					),
 				),
