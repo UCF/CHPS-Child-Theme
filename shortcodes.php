@@ -711,9 +711,9 @@ switch_to_blog(2);
 $listnews = '<div class="container"><div class="d-flex flex-wrap">';
 while($visualnews->have_posts()) : $visualnews->the_post(); 
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-	if ($a['column'] == '3') {	
+	if ($a['column'] == '4') {	
 	//STILL NEED TO MODIFY COLUMNS HERE 5 and ???4
-		$listnews .= '<div class="person-5 mb-4">';
+		$listnews .= '<div class="person-4 mb-4">';
 		$listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG-pic mx-auto">';
 	} else {	
