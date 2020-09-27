@@ -654,17 +654,16 @@ while($loop->have_posts()) : $loop->the_post();
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST FACULTY BY GROUP 
-// [listfaculty number="4" category="" unit="" column="4" showjob="Yes"]
+// [listfaculty number="12" unit="" specialty="" column="5" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
-        'category' => '',
+        'specialty' => '',
 		'unit' => '',
         'column' => '4',
 		'showjob' => '',
     ), $atts );
 switch_to_blog(2);
-$category_id = get_cat_ID($a['category']);  
 	if (!empty($a['unit'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
@@ -672,7 +671,6 @@ $category_id = get_cat_ID($a['category']);
                 'orderby' => 'publish_date',
                 'order' => 'DESC',
                 'posts_per_page' => $a['number'],
-                'cat' => $category_id,
 				'tax_query' => array(
 					array(
 						'taxonomy' => 'departments',
@@ -690,7 +688,6 @@ $category_id = get_cat_ID($a['category']);
                 'orderby' => 'publish_date',
                 'order' => 'DESC',
                 'posts_per_page' => $a['number'],
-                'cat' => $category_id,
                 )
             ); 
 	}
