@@ -519,6 +519,8 @@ article blockquote p {
 }
 .listpersonGroup .p-3 {
 	text-decoration:none !important;
+	text-decoration:line-through;
+	color:red;
 }
 .listpersonGroup:hover {
   background: #eee;
