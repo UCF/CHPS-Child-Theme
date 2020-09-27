@@ -515,18 +515,14 @@ article blockquote p {
   line-height:18px;
   font-size: 12px;
   text-align:center;
+  text-decoration:none !important;
 }
 .listpersonGroup:hover {
   background: #eee;
-  text-decoration:none !important;
-}
-.listpersonGroup a:hover {
-  text-decoration:none !important;
 }
 .listpersonGroup strong{
   font-weight:600;
   font-size: 15px;
-  text-decoration:none !important;
 }
 .listpersonG-pic {
     height: 230px;
