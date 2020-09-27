@@ -660,7 +660,7 @@ function listfacultyvar( $atts ) {
         'number' => '4',
         'specialty' => '',
 		'unit' => '',
-        'column' => '4',
+        'column' => '5',
 		'showjob' => '',
     ), $atts );
 switch_to_blog(2);
@@ -688,6 +688,13 @@ switch_to_blog(2);
                 'orderby' => 'publish_date',
                 'order' => 'DESC',
                 'posts_per_page' => $a['number'],
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'specialty_unit',
+						'field' => 'name',
+						'terms' => $a['specialty'],
+					),
+				),
                 )
             ); 
 	}
