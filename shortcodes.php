@@ -677,7 +677,7 @@ $category_id = get_cat_ID($a['category']);
 					array(
 						'taxonomy' => 'departments',
 						'field' => 'name',
-						'terms' => $a['department'],
+						'terms' => $a['unit'],
 					),
 				),
                 )
