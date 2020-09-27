@@ -654,18 +654,18 @@ while($loop->have_posts()) : $loop->the_post();
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST FACULTY BY GROUP 
-// [listfaculty number="4" category="" tag="" column="4" showjob="Yes"]
+// [listfaculty number="4" category="" unit="" column="4" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '4',
         'category' => '',
-		'tag' => '',
+		'unit' => '',
         'column' => '4',
 		'showjob' => '',
     ), $atts );
 switch_to_blog(2);
 $category_id = get_cat_ID($a['category']);  
-	if (!empty($a['tag'])) { 	
+	if (!empty($a['unit'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
@@ -675,9 +675,9 @@ $category_id = get_cat_ID($a['category']);
                 'cat' => $category_id,
 				'tax_query' => array(
 					array(
-						'taxonomy' => 'post_tag',
-						'field'    => 'name',
-						'terms'    => $a['tag'],
+						'taxonomy' => 'departments',
+						'field' => 'slug',
+						'terms' => $r['department'],
 					),
 				),
                 )
@@ -734,7 +734,22 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			}	
 		}
 	}
-	else { }		
+	else { }
+	if(get_the_terms('departments', $post->ID)){ 
+		$listnews .= '<br>';
+		// Get a list of terms for this post's custom taxonomy.
+		$project_depts = get_the_terms($post->ID, 'departments');
+		// Renumber array.
+		$project_depts = array_values($project_depts);
+		for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
+			// Each array item is an object. Display its 'name' value.
+			$listnews .= $project_depts[$dept_count]->name;
+			// If there is more than one term, comma separate them.
+			if ($dept_count<count($project_depts)-1){
+				$listnews .= ', ';
+			}
+		}
+	}
 	$listnews .= '</div></div></a></div>';				
 endwhile;
 $listnews .= '</div></div>';	
