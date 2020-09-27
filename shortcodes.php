@@ -681,7 +681,7 @@ switch_to_blog(2);
                 )
             ); 	
 	}
-	if (!empty($a['specialty'])) { 	
+	elseif (!empty($a['specialty'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
