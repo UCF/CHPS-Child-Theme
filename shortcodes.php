@@ -755,10 +755,10 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$project_units = array_values($project_units);
 	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
 		// Each array item is an object. Display its 'name' value.
-		$listnews .= $project_units[$unit_count]->name;	 
+//$listnews .= $project_units[$unit_count]->name;	 
 		// If there is more than one term, comma separate them.
 		if ($unit_count<count($project_units)-1){
-			$listnews .= ', ';	 
+//$listnews .= ', ';	 
 		}
 	}
 	$listnews .= '</div></div></a></div>';				
