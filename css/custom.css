@@ -529,6 +529,9 @@ article blockquote p {
 .listpersonG-pic {
     height: 230px;
 }
+.listpersonG4-pic {
+    height: 300px;
+}
 .person-5 {
   	-webkit-box-flex: 0;
     -ms-flex: 0 0 20%;
@@ -554,7 +557,7 @@ article blockquote p {
 	}
 }
 @media (max-width: 992px) {
-	.listpersonG-pic {
+	.listpersonG-pic, .listpersonG4-pic {
 		width: 100%;
 	}
 	.person-5, .person-4 {
