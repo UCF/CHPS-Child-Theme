@@ -529,6 +529,9 @@ article blockquote p {
 .listpersonG-pic {
     height: 230px;
 }
+.listpersonG-pic img {
+  object-position: 0 -15px !important; /* positioned top left of the content box */
+}
 .listpersonG4-pic {
     height: 300px;
 }
