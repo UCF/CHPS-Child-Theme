@@ -657,7 +657,7 @@ while($loop->have_posts()) : $loop->the_post();
 // [listfaculty number="12" unit="" specialty="" column="5" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
-        'number' => '4',
+        'number' => '0',
         'specialty' => '',
 		'unit' => '',
         'column' => '5',
