@@ -533,7 +533,7 @@ article blockquote p {
     height: 300px;
 }
 .listpersonG4-pic img {
-  object-position: 0 0; /* positioned top left of the content box */
+  object-position: 0 0 !important; /* positioned top left of the content box */
 }
 .person-5 {
   	-webkit-box-flex: 0;
