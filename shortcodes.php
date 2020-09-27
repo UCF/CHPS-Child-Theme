@@ -654,7 +654,7 @@ while($loop->have_posts()) : $loop->the_post();
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST FACULTY BY GROUP 
-// [listfaculty number="12" unit="" specialty="" column="5" showjob="Yes"]
+// [listfaculty number="12" unit="" specialty="" column="5 or 4" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '-1',
@@ -712,7 +712,6 @@ $listnews = '<div class="container"><div class="d-flex flex-wrap">';
 while($visualnews->have_posts()) : $visualnews->the_post(); 
 	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '4') {	
-	//STILL NEED TO MODIFY COLUMNS HERE 5 and ???4
 		$listnews .= '<div class="person-4 mb-4">';
 		$listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG4-pic mx-auto">';
