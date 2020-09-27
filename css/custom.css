@@ -519,7 +519,7 @@ article blockquote p {
 .listpersonGroup:hover {
   background: #eee;
 }
-.listpersonGroup a {
+.listpersonGroup a:hover {
   text-decoration:none !important;
 }
 .listpersonGroup strong{
