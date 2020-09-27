@@ -681,7 +681,7 @@ switch_to_blog(2);
                 )
             ); 	
 	}
-	else {
+	if (!empty($a['specialty'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
@@ -695,6 +695,16 @@ switch_to_blog(2);
 						'terms' => $a['specialty'],
 					),
 				),
+                )
+            );	
+	}
+	else {
+	 $visualnews = new WP_Query(array(
+                'post_type' => 'person',
+                'post_status' => 'publish',
+                'orderby' => 'publish_date',
+                'order' => 'DESC',
+                'posts_per_page' => $a['number'],
                 )
             ); 
 	}
