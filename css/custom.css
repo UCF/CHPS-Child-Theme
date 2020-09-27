@@ -517,9 +517,8 @@ article blockquote p {
   text-align:center;
   
 }
-.listpersonGroup .p-3 {
-	text-decoration:line-through;
-	color:red;
+.noDecoration {
+	text-decoration:none !important;
 }
 .listpersonGroup:hover {
   background: #eee;
