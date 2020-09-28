@@ -734,15 +734,8 @@ if( get_field('degrees', $post->ID) ) {
 				continue;
 			  }
 		 $selectMe = get_sub_field_object('degree_select', $post->ID);
-		 $f = acf_get_sub_field( 'degree_select', $post->ID, $row['label'] );
-		 $valueMe = $selectMe['choices'];	
-		 
-		   
-		 $listnews .= ', ' . $f . '';
-		 
-			$listnews .= '<pre>';
-				print_r($selectMe);
-			$listnews .= '</pre>';
+		 $valueMe = $selectMe['value'];	
+		 $listnews .= ', ' . $valueMe . '';
 		endwhile;
 		}
 	//END DEGREES
