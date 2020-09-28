@@ -733,11 +733,8 @@ if( get_field('degrees', $post->ID) ) {
 			  if (!get_sub_field('degree_aftername', $post->ID)) {
 				continue;
 			  }
-		 $array[] = get_sub_field('degree_select'); 
-		
-			$foo = implode(', ', array_column($array, 'label'));
-			$listnews .= '<span class"">, ' . $foo . '</span>';
-			endwhile;
+		 $listnews .= '<li>' . get_sub_field('degree_select', $post->ID) . '</li>';
+		endwhile;
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
