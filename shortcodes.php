@@ -738,13 +738,12 @@ if( get_field('degrees', $post->ID) ) {
 		 $listnews .= ', ' . $value . '';
 		 
 		 
-		 $array[] = get_sub_field('degree_select');
+		 $array[] = get_sub_field('degree_select', $post->ID);
 		 $foo = array_column($array, 'label');
 		 
    		 $listnews .=  '<li>' . $foo . '</li>';
 	
 		endwhile;
-		$listnews .=  print_r($select);
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
