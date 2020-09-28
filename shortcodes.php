@@ -737,11 +737,11 @@ if( get_field('degrees', $post->ID) ) {
 		 $value = $select['value'];	
 		 $listnews .= ', ' . $value . '';
 		 
-		 
-		 $array = get_sub_field('degree_select');
+		 $test = array();
+		 $test[] = get_sub_field('degree_select', $post->ID);
 		endwhile;
-			$foo = implode(', ', array_column($array, 'label'));
-			$listnews .= '<span class"">, ' . $foo . '</span>';
+			$foo = implode(', ', array_column($test, 'label'));
+			$listnews .= '<li>, ' . $foo . '</li>';
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
