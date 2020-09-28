@@ -736,6 +736,13 @@ if( get_field('degrees', $post->ID) ) {
 		 $select = get_sub_field_object('degree_select', $post->ID);
 		 $value = $select['value'];	
 		 $listnews .= ', ' . $value . '';
+		 
+		 
+		 $array[] = get_sub_field('degree_select');
+		 $foo = implode(', ', array_column($array['label']));
+		 
+   		 $listnews .=  '<li>' . $foo . '</li>';
+	
 		endwhile;
 		}
 	//END DEGREES
