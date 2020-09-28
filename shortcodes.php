@@ -654,7 +654,7 @@ while($loop->have_posts()) : $loop->the_post();
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST FACULTY BY GROUP 
-// [listfaculty number="12" unit="" specialty="" column="5 or 4" showjob="Yes"]
+// [listfaculty number="-1" unit="" specialty="" column="5 or 4" showjob="Yes"]
 function listfacultyvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '-1',
@@ -735,7 +735,9 @@ if( get_field('degrees', $post->ID) ) {
 			  }
 		 $select = get_sub_field_object('degree_select', $post->ID);
 		 $value = $select['value'];	
-		 $listnews .= ', ' . $value . '';
+		 $giveME = array_column($select, 'label');
+		 $listnews .= ', ' . $giveME . '';
+	
 		endwhile;
 		}
 	//END DEGREES
