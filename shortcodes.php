@@ -740,7 +740,7 @@ if( get_field('degrees', $post->ID) ) {
 		 
 		 $array[] = get_sub_field('degree_select');
 		endwhile;
-			$foo = implode(', ', array_column($array, 'label'));
+			$foo = implode(', ', array_column($array, 'label', $post->ID));
 			$listnews .= '<span class"">, ' . $foo . '</span>';
 		}
 	//END DEGREES
