@@ -734,7 +734,7 @@ if( get_field('degrees', $post->ID) ) {
 				continue;
 			  }
 		 $selectMe = get_sub_field_object('degree_select', $post->ID);
-		 $valueMe = $selectMe['value'];	
+		 $valueMe = $selectMe['label'];	
 		 
 		   
 		 $listnews .= ', ' . $valueMe . '';
