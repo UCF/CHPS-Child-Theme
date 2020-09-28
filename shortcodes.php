@@ -728,16 +728,23 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
 	//INSERT DEGREES
-	if( get_field('degrees', $post->ID) ) :
-		while ( have_rows('degrees', $post->ID) ) : the_row();
-			  if (!get_sub_field('degree_aftername', $post->ID)) {
-				continue;
-			  }
-		 $array[] = get_sub_field('degree_select'); 
-		endwhile;
-			$foo = implode(', ', array_column($array, 'label'));
-			$listnews .= '<span class"">, ' . $foo . '</span>';
-		endif;
+if( have_rows('degrees', $post->ID) ): 
+    while( have_rows('degrees', $post->ID) ): the_row(); 
+       
+        // Get the sub field called "select".
+        $select = get_sub_field_object('degree_select');
+
+        $value = $select['name'];
+
+
+             foreach( $select['choices'] as $k => $v ): 
+                 $listnews .=  ($k === $value) ? 'class="selected"' : ''; 
+                 $listnews .=  $v; 
+                
+             endforeach;
+
+endwhile; 
+endif; 
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
