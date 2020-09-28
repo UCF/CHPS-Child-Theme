@@ -740,7 +740,7 @@ if( get_field('degrees', $post->ID) ) {
 		 $project_cats = array_values($select);
 			for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
 				// Each array item is an object. Display its 'name' value.
-				$listnews .= $project_cats[$cat_count]->name;	 
+				$listnews .= $project_cats[$cat_count]->value;	 
 				// If there is more than one term, comma separate them.
 				if ($cat_count<count($project_cats)-1){
 					$listnews .= ', ';	 
