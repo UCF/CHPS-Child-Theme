@@ -733,16 +733,11 @@ if( get_field('degrees', $post->ID) ) {
 			  if (!get_sub_field('degree_aftername', $post->ID)) {
 				continue;
 			  }
-		 $select = get_sub_field_object('degree_select', $post->ID);
-		 $value = $select['value'];	
-		 //$listnews .= ', ' . $value . '';
-		 
-		 $test = array();
-		 $test[] = get_sub_field('degree_select');
-		 $foo = implode(', ', array_column($test, 'label'));
+		 $showDegree = array();
+		 $showDegree[] = get_sub_field('degree_select');
+		 $foo = implode(', ', array_column($showDegree, 'label'));
 			$listnews .= ', ' . $foo . '';
 		endwhile;
-			
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
