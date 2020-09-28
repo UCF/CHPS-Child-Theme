@@ -728,7 +728,16 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
 	//INSERT DEGREES
-	//
+	if( get_field('degrees', $post->ID) ) {
+		while ( have_rows('degrees', $post->ID) ) : the_row();
+			  if (!get_sub_field('degree_aftername', $post->ID)) {
+				continue;
+			  }
+		 $array[] = get_sub_field('degree_select', $post->ID); 
+		endwhile;
+			$foo = implode(', ', array_column($array, 'label'));
+			$listnews .= '<span class"">, ' . $foo . '</span>';
+		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
