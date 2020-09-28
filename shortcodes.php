@@ -738,18 +738,10 @@ if( get_field('degrees', $post->ID) ) {
 		 $listnews .= ', ' . $value . '';
 		 
 		 
-		 $project_cats = get_sub_field_object('degree_select', $post->ID);
-			// Renumber array.
-			$project_cats = array_values($project_cats);
-			for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
-				// Each array item is an object. Display its 'name' value.
-				$listnews .= $project_cats[$cat_count]->value;	 
-				// If there is more than one term, comma separate them.
-				if ($cat_count<count($project_cats)-1){
-					$listnews .= ', ';	 
-				}
-			}
+		 $array[] = get_sub_field('degree_select', $post->ID);
 		endwhile;
+			$foo = implode(', ', array_column($array, 'label'));
+			$listnews .= '<span class"">, ' . $foo . '</span>';
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
