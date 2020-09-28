@@ -733,7 +733,11 @@ if( get_field('degrees', $post->ID) ) {
 			  if (!get_sub_field('degree_aftername', $post->ID)) {
 				continue;
 			  }
-		 $listnews .= ', ' . get_sub_field('degree_select', $post->ID) . '';
+		 $selectMe = get_sub_field_object('degree_select', $post->ID);
+		 $valueMe = $selectMe['label'];	
+		 
+		   
+		 $listnews .= ', ' . $valueMe . '';
 		endwhile;
 		}
 	//END DEGREES
