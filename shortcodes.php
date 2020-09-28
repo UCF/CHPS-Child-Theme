@@ -734,7 +734,7 @@ if( have_rows('degrees', $post->ID) ):
         // Get the sub field called "select".
         $select = get_sub_field_object('degree_select');
 
-        $value = $select['name'];
+        $value = $select['value'];
 
 
              foreach( $select['choices'] as $k => $v ): 
