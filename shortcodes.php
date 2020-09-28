@@ -733,7 +733,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 			  if (!get_sub_field('degree_aftername')) {
 				continue;
 			  }
-		 $array[] = get_sub_field('degree_select'); 
+		 $array[] = get_sub_field('degree_select', $post->ID); 
 		endwhile;
 			$foo = implode(', ', array_column($array, 'label'));
 			$listnews .= '<span class"">, ' . $foo . '</span>';
