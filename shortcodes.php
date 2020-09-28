@@ -739,7 +739,7 @@ if( get_field('degrees', $post->ID) ) {
 		 
 		 
 		 $array[] = get_sub_field('degree_select', $post->ID);
-		 $foo = array_column($array, 'label');
+		 $foo = array_column($array['label']);
 		 
    		 $listnews .=  '<li>' . $foo . '</li>';
 	
