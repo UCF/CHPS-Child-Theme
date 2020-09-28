@@ -737,7 +737,10 @@ if( get_field('degrees', $post->ID) ) {
 		 $value = $select['value'];	
 		 $listnews .= ', ' . $value . '';
 		 
-		 $project_cats = array_values($select);
+		 
+		 $project_cats = get_sub_field_object('degree_select', $post->ID);
+			// Renumber array.
+			$project_cats = array_values($project_cats);
 			for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
 				// Each array item is an object. Display its 'name' value.
 				$listnews .= $project_cats[$cat_count]->value;	 
