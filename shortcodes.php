@@ -738,8 +738,8 @@ if( get_field('degrees', $post->ID) ) {
 		 $listnews .= ', ' . $value . '';
 		 
 		 
-		 $arrayME[] = get_sub_field_object('degree_select', $post->ID);
-		 $foo = array_column($arrayME, 'label');
+		 $arrayME[] = get_sub_field('degree_select');
+		 $foo = array_column($arrayME, 'label', $post->ID);
    		 $listnews .=  '<li>' . $foo . '</li>';
 	
 		endwhile;
