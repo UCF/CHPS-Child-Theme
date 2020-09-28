@@ -738,6 +738,10 @@ if( get_field('degrees', $post->ID) ) {
 		 
 		   
 		 $listnews .= ', ' . $valueMe . '';
+		 
+			$listnews .= '<pre>';
+				print_r($selectMe);
+			$listnews .= '</pre>';
 		endwhile;
 		}
 	//END DEGREES
