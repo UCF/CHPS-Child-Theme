@@ -759,7 +759,7 @@ if( get_field('degrees', $post->ID) ) {
 		}
 	}
 	else { }
-	$listnews .= '<br>';
+//$listnews .= '<br>';
 	// Get a list of terms for this post's custom taxonomy.
 	$project_units = get_the_terms($post->ID, 'departments');
 	// Renumber array.
