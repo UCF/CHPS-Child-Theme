@@ -668,8 +668,9 @@ switch_to_blog(2);
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
-                'orderby' => 'publish_date',
-                'order' => 'DESC',
+                'meta_key' => 'profile_L_name',
+				'orderby' => 'meta_value',
+				'order' => 'ASC', 
                 'posts_per_page' => $a['number'],
 				'tax_query' => array(
 					array(
@@ -685,8 +686,9 @@ switch_to_blog(2);
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
-                'orderby' => 'publish_date',
-                'order' => 'DESC',
+                'meta_key' => 'profile_L_name',
+				'orderby' => 'meta_value',
+				'order' => 'ASC',
                 'posts_per_page' => $a['number'],
 				'tax_query' => array(
 					array(
@@ -702,8 +704,9 @@ switch_to_blog(2);
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
                 'post_status' => 'publish',
-                'orderby' => 'publish_date',
-                'order' => 'DESC',
+                'meta_key' => 'profile_L_name',
+				'orderby' => 'meta_value',
+				'order' => 'ASC',
                 'posts_per_page' => $a['number'],
                 )
             ); 
