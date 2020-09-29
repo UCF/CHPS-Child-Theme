@@ -742,7 +742,7 @@ if( get_field('degrees', $post->ID) ) {
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
 			if(get_field('job_titles_tax', $post->ID)){	
-			$listnews .= '<br>';
+			$listnews .= '<span style="display:block; margin-top:50px;">';
 			// Get a list of terms for this post's custom taxonomy.
 			$project_cats = get_the_terms($post->ID, 'job_titles');
 			// Renumber array.
@@ -754,7 +754,8 @@ if( get_field('degrees', $post->ID) ) {
 				if ($cat_count<count($project_cats)-1){
 					$listnews .= ', ';	 
 				}
-			}	
+			}
+			$listnews .= '</span>';	
 		}
 	}
 	else { }
