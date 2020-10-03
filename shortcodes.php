@@ -783,4 +783,65 @@ restore_current_blog();
 return $listnews;		
 }
 add_shortcode( 'listfaculty', 'listfacultyvar' );	
+?><?php
+//  ----------------------------------------------------
+// SHORTCODE TO LIST LABS BY DEPARTMENT 
+// [showlabs number="-1" unit=""]
+function showlabsvar( $atts ) {
+    $a = shortcode_atts( array(
+        'number' => '-1',
+		'unit' => '',
+    ), $atts );
+switch_to_blog(2);
+	if (!empty($a['unit'])) { 	
+	 $showlabs = new WP_Query(array(
+                'post_type' => 'lab',
+                'post_status' => 'publish',
+				'orderby' => 'title',
+				'order' => 'ASC', 
+                'posts_per_page' => $a['number'],
+				'tax_query' => array(
+					array(
+						'taxonomy' => 'departments',
+						'field' => 'name',
+						'terms' => $a['unit'],
+					),
+				),
+                )
+            ); 	
+	}
+	else {
+	 $showlabs = new WP_Query(array(
+                'post_type' => 'lab',
+                'post_status' => 'publish',
+				'orderby' => 'title',
+				'order' => 'ASC',
+                'posts_per_page' => $a['number'],
+                )
+            ); 
+	}
+while($showlabs->have_posts()) : $showlabs->the_post(); 
+$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+
+$listlabs = '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
+$listlabs .= '<a href="https://cfl.ucf-card.org">';
+$listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
+$listlabs .= '</a>';
+$listlabs .= '</div><div class="col-12 col-md-8"><h4>';
+$listlabs .= '<a href="https://cfl.ucf-card.org" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
+$listlabs .= get_the_title();
+$listlabs .= '</a>';
+$listlabs .= '</h4>';
+$listlabs .= get_the_content();
+$listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left" >';
+$listlabs .= '<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-square vc_btn3-style-custom" href="https://cfl.ucf-card.org" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external">Visit the Labs Website</a>';
+$listlabs .= '</div></div></div></div>';
+
+			
+endwhile;
+wp_reset_query();
+restore_current_blog();
+return $listnews;		
+}
+add_shortcode( 'showlabs', 'showlabsvar' );	
 ?>
