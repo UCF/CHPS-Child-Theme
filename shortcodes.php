@@ -820,8 +820,8 @@ switch_to_blog(2);
                 )
             ); 
 	}
-$loop = new WP_Query($showlabs);
-while($loop->have_posts()) : $loop->the_post();	
+$looplabs = new WP_Query($showlabs);
+while($looplabs->have_posts()) : $looplabs->the_post();	
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $listlabs = '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
 $listlabs .= '<a href="https://cfl.ucf-card.org">';
