@@ -841,7 +841,7 @@ $listlabs .= '</div></div></div></div>';
 endwhile;
 wp_reset_query();
 restore_current_blog();
-return $listnews;		
+return $listlabs;		
 }
 add_shortcode( 'showlabs', 'showlabsvar' );	
 ?>
