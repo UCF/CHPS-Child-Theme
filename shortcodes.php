@@ -789,7 +789,7 @@ add_shortcode( 'listfaculty', 'listfacultyvar' );
 // [showlabs number="-1" unit=""]
 function showlabsvar( $atts ) {
     $a = shortcode_atts( array(
-        'number' => '-1',
+        'number' => '99',
 		'unit' => '',
     ), $atts );
 switch_to_blog(2);
