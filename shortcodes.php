@@ -794,7 +794,7 @@ function showlabsvar( $atts ) {
     ), $atts );
 switch_to_blog(2);
 	if (!empty($a['unit'])) { 	
-	 $showlabs = new WP_Query(array(
+	 $args = new WP_Query(array(
                 'post_type' => 'lab',
                 'post_status' => 'publish',
 				'orderby' => 'title',
@@ -811,7 +811,7 @@ switch_to_blog(2);
             ); 	
 	}
 	else {
-	 $showlabs = new WP_Query(array(
+	 $args = new WP_Query(array(
                 'post_type' => 'lab',
                 'post_status' => 'publish',
 				'orderby' => 'title',
@@ -820,9 +820,11 @@ switch_to_blog(2);
                 )
             ); 
 	}
-$looplabs = new WP_Query($showlabs);
-while($looplabs->have_posts()) : $looplabs->the_post();	
+	
+$showlabs = new WP_Query($args);	
+while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+
 $listlabs = '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
 $listlabs .= '<a href="https://cfl.ucf-card.org">';
 $listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
@@ -835,7 +837,9 @@ $listlabs .= '</h4>';
 $listlabs .= get_the_content();
 $listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >';
 $listlabs .= '<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-square vc_btn3-style-custom" href="https://cfl.ucf-card.org" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external">Visit the Labs Website</a>';
-$listlabs .= '</div></div></div></div>';		
+$listlabs .= '</div></div></div></div>';
+
+			
 endwhile;
 wp_reset_query();
 restore_current_blog();
