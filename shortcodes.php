@@ -834,7 +834,7 @@ $listlabs .= '</a>';
 $listlabs .= '</h4>';
 $listlabs .= get_the_content();
 $listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >';
-$listlabs .= '<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-square vc_btn3-style-custom" href="https://cfl.ucf-card.org" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external">Visit the Labs Website</a>';
+$listlabs .= '<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-sm vc_btn3-shape-square vc_btn3-style-custom" href="https://cfl.ucf-card.org" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Labs Website</a>';
 $listlabs .= '</div></div></div></div>';
 endwhile;
 $listlabs .= '</div>';
