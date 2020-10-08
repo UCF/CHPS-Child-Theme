@@ -117,7 +117,7 @@ animation: flash 1s;
 }
 .archiveYellBTN {
 	font-size: 14px;
-	padding: 14px 20px 14px 28px;
+	padding: 14px 20px 14px 20px;
 	background-color:#ffcc00; 
 	color:#000000;
 	text-decoration:none !important;
@@ -126,6 +126,7 @@ animation: flash 1s;
     font-size: 16px !important;
     height: 14px;
     line-height: 14px !important;
+	margin-right:8px;
 }
 /* = Homepage Title
 -------------------------------------------------------------- */
