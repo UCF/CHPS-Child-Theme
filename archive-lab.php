@@ -27,12 +27,12 @@
 		</div>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
-		<div class="row">
+		<div class="vc_column-inner">
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				?>
-				<div>
+<!--START-->	<div>
 					<?php $getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );?>
 					<div class="mb-5 pb-5 labStyle container">
                     	<div class="row">
@@ -49,147 +49,18 @@
 							<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >
                             	<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="<?php the_field('website_url'); ?>" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
                             </div>
-                       </div>
-                  </div>
-                </div>
+                        </div>
+                	</div>
+  <!--END-->	</div>
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
 				<?php else : ?>
-            Sorry No Grants Match Your Search
+            Sorry No Labs Match Your Search
         <?php endif; ?>
 		</div>
 	</article>
 </div>
-<style>	
-.container {
-    margin-top: 0px !important;
-}
-.container h1.mt-sm-4 {
-    display: none !important;
-}
-
-.header-title-wrapper {
-    max-width: 600px;
-}
-@media (min-width: 576px) {
-    .header-media-default {
-        min-height: 500px;
-    }
-}
-.searchandfilter ul {
-	margin-left: 0px !important;		
-}	
-.searchandfilter .sf-field-search label {
-	width: 100% !important;	
-}
-.searchandfilter input[name="_sf_search[]"]{
-	font-size: 16px !important;
-	padding:8px !important;
-	border: 0px solid #f2f2f2 !important;
-	width: 100% !important;	
-	margin-bottom: 15px;
-}	
-.searchandfilter li[data-sf-field-input-type="select"] label{
-	width: 100% !important;	
-	margin-bottom: 15px;
-}
-.searchandfilter li[data-sf-field-input-type="select"] label select{
-	width: 100% !important;
-	font-size: 16px !important;
-	padding:8px !important;
-}
-.searchandfilter li.sf-field-post-meta-research_sex {
-	float: left;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_money {
-	float: right;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_format {
-	float: left;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_minage {
-	float: right;
-	width:50%;
-	margin-bottom: 15px;
-}	
-li.sf-field-reset {
-	margin-top: 15px;
-}
-.sf_date_field li {
-	float: left;
-}
-.sf_date_field li input{
-	width:120px;
-}
-.sf-date-postfix {
-	padding-right:5px;
-}
-.searchandfilter li.sf-field-reset{
-	clear: both;
-}	
-.searchandfilter li.sf-field-reset input{
-	font-size: 14px;
-	padding: 5px 30px;
-	background-color: #ccc;
-	color: #000;
-	border: 0px solid !important;
-}
-.searchandfilter ul li li {
-	padding: 0px !important;
-}	
-.yellowBTN-full {
-	line-height: 20px;
-}		
-.yellowBTN-full strong {
-	font-size:20px;
-}	
-/*overwrite header styling */	
-.header-title-wrapper {
-    max-width: 1100px !important;
-}	
-.header-media-default {
-    min-height: 350px !important;
-}	
-/* repeated CSS code */
-.researchOpp-quals ul {
-	list-style-type: none;
-}
-.yellowBTN-full {
-	display: block; 
-	font-size: 16px;  
-	padding: 18px 25px; 
-	text-align: center; 
-	background-color:#ffcc00; 
-	color:#000000;
-}
-.yellowBTN-full:hover {
-	text-decoration: none;
-}
-.blackBTN-full {
-	display: block; 
-	font-size: 16px;  
-	line-height: 20px;
-	padding: 18px 25px; 
-	text-align: center; 
-	background-color:#000; 
-	color:#fff;
-}
-.blackBTN-full:hover {
-	text-decoration: none;
-}
-.btnhover-black a:hover {
-    background: #222 !important;
-	background-image: none !important;
-	color:#fff;
-}		
-</style>
 <?php get_footer(); ?>
