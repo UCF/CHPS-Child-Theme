@@ -824,26 +824,26 @@ $listlabs = '<div>';
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
-$listlabs .= '<a href="https://cfl.ucf-card.org">';
+$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '">';
 $listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
 $listlabs .= '</a>';
 $listlabs .= '</div><div class="col-12 col-md-8"><div class="mb-1 grantHide">';
 // Get a list of terms for this post's custom taxonomy.
-	$project_units = get_the_terms($post->ID, 'departments');
-	// Renumber array.
-	$project_units = array_values($project_units);
-	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
-		// Each array item is an object. Display its 'name' value.
+$project_units = get_the_terms($post->ID, 'departments');
+// Renumber array.
+$project_units = array_values($project_units);
+for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
+// Each array item is an object. Display its 'name' value.
 $listlabs .= '<span class="grant-unit">';			
 $listlabs .= $project_units[$unit_count]->name;	
 $listlabs .= '</span>'; 
-		// If there is more than one term, comma separate them.
-		if ($unit_count<count($project_units)-1){
+// If there is more than one term, comma separate them.
+if ($unit_count<count($project_units)-1){
 $listlabs .= ', ';	 
 		}
 	}
 $listlabs .= '</div><h4>';
-$listlabs .= '<a href="https://cfl.ucf-card.org" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
+$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
 $listlabs .= get_the_title();
 $listlabs .= '</a>';
 $listlabs .= '</h4>';
