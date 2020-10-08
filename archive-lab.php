@@ -28,7 +28,6 @@
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row">
-			<div class="col-lg-8 col-md-12 pt-4">
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
@@ -39,17 +38,17 @@
 					<div class="mb-5 pb-5 labStyle container">
                     	<div class="row">
                         	<div class="col-12 col-md-4 mb-3">
-                            <a href="<?php get_field('website_url', $post->ID); ?>">
+                            <a href="<?php the_field('website_url'); ?>">
                             	<img class="flashIMG" width="100%" src="<?php $getimgURL; ?>" alt=""/>
                             </a>
                         </div>
                         <div class="col-12 col-md-8">
                         	<h4>
-                            	<a href="<?php get_field('website_url', $post->ID); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><?php the_title(); ?></a>
+                            	<a href="<?php the_field('website_url'); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><?php the_title(); ?></a>
                             </h4>
-							<?php get_the_content(); ?>
+							<?php the_content(); ?>
 							<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >
-                            	<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="<?php get_field('website_url', $post->ID); ?>" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
+                            	<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="<?php the_field('website_url'); ?>" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
                             </div>
                        </div>
                   </div>
@@ -62,10 +61,6 @@
 				<?php else : ?>
             Sorry No Grants Match Your Search
         <?php endif; ?>
-			</div>
-			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'grants-sidebar' ); ?>
-			</div>
 		</div>
 	</article>
 </div>
