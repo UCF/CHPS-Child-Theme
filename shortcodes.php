@@ -803,7 +803,7 @@ switch_to_blog(2);
                 'posts_per_page' => $a['number'],
 				'tax_query' => array(
 					array(
-						'taxonomy' => 'departments',
+						'taxonomy' => 'lab_tax',
 						'field' => 'name',
 						'terms' => $a['unit'],
 					),
