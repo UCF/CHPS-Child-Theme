@@ -123,11 +123,9 @@ animation: flash 1s;
 	text-decoration:none !important;
 }
 .archiveYellBTN-icon { 
-    font-size: 16px;
+    font-size: 16px !important;
     height: 14px;
-    line-height: 14px;
-	left: 20px;
-	vertical-align: top;
+    line-height: 14px !important;
 }
 /* = Homepage Title
 -------------------------------------------------------------- */
