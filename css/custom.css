@@ -643,8 +643,8 @@ article blockquote p {
     border-bottom: 1px solid #ddd;
 }
 .lab-unit {
-	background-color:#ddd;
-	font-size:12px;
+	background-color:#eee;
+	font-size:11px;
 	padding:3px 8px;
 	margin-right:8px;
 }
