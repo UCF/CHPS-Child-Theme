@@ -33,8 +33,26 @@
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				?>
-				<div class="pt-3 pb-3 grantResult">
-					<?php get_template_part( 'grant-results'); ?>
+				<div>
+                <!-- ??????? -->
+					<?php $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];?>
+					<div class="mb-5 pb-5 labStyle container">
+                    	<div class="row">
+                        	<div class="col-12 col-md-4 mb-3">
+                            <a href="<?php get_field('website_url', $post->ID); ?>">
+                            	<img class="flashIMG" width="100%" src="<?php $getimgURL; ?>" alt=""/>
+                            </a>
+                        </div>
+                        <div class="col-12 col-md-8">
+                        	<h4>
+                            	<a href="<?php get_field('website_url', $post->ID); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><?php the_title(); ?></a>
+                            </h4>
+							<?php get_the_content(); ?>
+							<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >
+                            	<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="<?php get_field('website_url', $post->ID); ?>" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
+                            </div>
+                       </div>
+                  </div>
                 </div>
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
