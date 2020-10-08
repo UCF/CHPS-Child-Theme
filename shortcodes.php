@@ -786,11 +786,12 @@ add_shortcode( 'listfaculty', 'listfacultyvar' );
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST LABS BY DEPARTMENT 
-// [showlabs number="-1" unit=""]
+// [showlabs number="" unit="" showUnit="No"]
 function showlabsvar( $atts ) {
     $a = shortcode_atts( array(
-        'number' => '99',
+        'number' => '-1',
 		'unit' => '',
+		'showUnit' => '',
     ), $atts );
 switch_to_blog(2);
 	if (!empty($a['unit'])) { 	
@@ -823,18 +824,23 @@ switch_to_blog(2);
 $listlabs = '<div>';	
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8"><div class="mb-2">';
-// Get a list of terms for this post's custom taxonomy.
-$project_units = get_the_terms($post->ID, 'departments');
-// Renumber array.
-$project_units = array_values($project_units);
-for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
-// Each array item is an object. Display its 'name' value.
-$listlabs .= '<span class="lab-unit">';			
-$listlabs .= $project_units[$unit_count]->name;	
-$listlabs .= '</span>'; 
+$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8">';
+if ( !empty($a['showUnit'])) {
+	$listlabs .= '<div class="mb-2">';
+	// Get a list of terms for this post's custom taxonomy.
+	$project_units = get_the_terms($post->ID, 'departments');
+	// Renumber array.
+	$project_units = array_values($project_units);
+	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
+	// Each array item is an object. Display its 'name' value.
+	$listlabs .= '<span class="lab-unit">';			
+	$listlabs .= $project_units[$unit_count]->name;	
+	$listlabs .= '</span>'; 
+	}
+	$listlabs .= '</div>';
 }
-$listlabs .= '</div><h4><a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
+	else { }	
+$listlabs .= '<h4><a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
 $listlabs .= get_the_title();
 $listlabs .= '</a></h4>';
 $listlabs .= get_the_content();
