@@ -824,7 +824,7 @@ switch_to_blog(2);
 $listlabs = '<div>';	
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8">';
+$listlabs .= '<div class="mb-5 pb-5 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8">';
 if ( !empty($a['showunit'])) { }
 	else { 
 	$listlabs .= '<div class="mb-2">';
