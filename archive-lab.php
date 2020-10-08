@@ -33,8 +33,7 @@
 				while ( have_posts() ) : the_post();
 				?>
 				<div>
-                <!-- ??????? -->
-					<?php $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];?>
+					<?php $getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );?>
 					<div class="mb-5 pb-5 labStyle container">
                     	<div class="row">
                         	<div class="col-12 col-md-4 mb-3">
