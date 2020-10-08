@@ -786,12 +786,12 @@ add_shortcode( 'listfaculty', 'listfacultyvar' );
 ?><?php
 //  ----------------------------------------------------
 // SHORTCODE TO LIST LABS BY DEPARTMENT 
-// [showlabs number="" unit="" showUnit="No"]
+// [showlabs number="" unit="" showunit="No"]
 function showlabsvar( $atts ) {
     $a = shortcode_atts( array(
         'number' => '-1',
 		'unit' => '',
-		'showUnit' => '',
+		'showunit' => '',
     ), $atts );
 switch_to_blog(2);
 	if (!empty($a['unit'])) { 	
@@ -825,7 +825,7 @@ $listlabs = '<div>';
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8">';
-if ( !empty($a['showUnit'])) { }
+if ( !empty($a['showunit'])) { }
 	else { 
 	$listlabs .= '<div class="mb-2">';
 	// Get a list of terms for this post's custom taxonomy.
