@@ -823,14 +823,14 @@ switch_to_blog(2);
 $listlabs = '<div>';	
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8"><div class="mb-1 grantHide">';
+$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8"><div class="mb-1">';
 // Get a list of terms for this post's custom taxonomy.
 $project_units = get_the_terms($post->ID, 'departments');
 // Renumber array.
 $project_units = array_values($project_units);
 for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
 // Each array item is an object. Display its 'name' value.
-$listlabs .= '<span class="grant-unit">';			
+$listlabs .= '<span class="lab-unit">';			
 $listlabs .= $project_units[$unit_count]->name;	
 $listlabs .= '</span>'; 
 }

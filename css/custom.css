@@ -101,6 +101,20 @@ h2 {
     font-size:18px !important;
     font-weight:normal !important;
 }
+/* Flashing */
+@-webkit-keyframes flash {
+0% { opacity: .3; }
+100% { opacity: 1; }
+}
+@keyframes flash {
+0% { opacity: .3; }
+100% { opacity: 1; }
+}
+.flashIMG:hover {
+opacity: 1;
+-webkit-animation: flash 1s;
+animation: flash 1s;
+}
 /* = Homepage Title
 -------------------------------------------------------------- */
 .mainHomeTitle .evc-st-title {
@@ -619,6 +633,17 @@ article blockquote p {
 }
 .grant-unit {
 	background-color:#ffcc00;
+	font-size:12px;
+	padding:3px 8px;
+	margin-right:8px;
+}
+/* = LAB DISPLAYS 
+-------------------------------------------------------------- */
+.labStyle {
+    border-bottom: 1px solid #ddd;
+}
+.lab-unit {
+	background-color:#ddd;
 	font-size:12px;
 	padding:3px 8px;
 	margin-right:8px;
