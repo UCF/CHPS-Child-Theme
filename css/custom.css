@@ -122,6 +122,16 @@ animation: flash 1s;
 	color:#000000;
 	text-decoration:none !important;
 }
+.archiveYellBTN-icon {
+    font-size: 16px;
+    height: 14px;
+    line-height: 14px;
+	left: 20px;
+	vertical-align: top;
+	display: block;
+    position: absolute;
+    top: 50%;
+}
 /* = Homepage Title
 -------------------------------------------------------------- */
 .mainHomeTitle .evc-st-title {

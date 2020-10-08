@@ -49,7 +49,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
                             </h4>
 							<?php the_content(); ?>
 							<div class="btnhover-yellow mt-4">
-                            	<a class="archiveYellBTN" href="<?php the_field('website_url'); ?>" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
+                            	<a class="archiveYellBTN" href="<?php the_field('website_url'); ?>" title="" target="_blank"><i class="archiveYellBTN-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
                             </div>
                         </div>
                 	</div>
