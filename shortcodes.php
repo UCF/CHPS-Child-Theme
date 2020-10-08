@@ -829,7 +829,7 @@ if ( !empty($a['showunit'])) { }
 	else { 
 	$listlabs .= '<div class="mb-2">';
 	// Get a list of terms for this post's custom taxonomy.
-	$project_units = get_the_terms($post->ID, 'departments');
+	$project_units = get_the_terms($post->ID, 'lab_tax');
 	// Renumber array.
 	$project_units = array_values($project_units);
 	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
