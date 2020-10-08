@@ -18,7 +18,7 @@
 						<div class="col-xl-10">
 							<div class="header-title-wrapper">
 								<h1 class="header-title">CHPS Research Labs</h1>
-								<p class="header-subtitle">UCF <?php echo post_type_archive_title( '', false );?></p>
+								<p class="header-subtitle">UCF <?php echo "$s"; ?></p>
 							</div>
 						</div>
 					</div>
