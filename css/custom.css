@@ -128,9 +128,6 @@ animation: flash 1s;
     line-height: 14px;
 	left: 20px;
 	vertical-align: top;
-	display: block;
-    position: absolute;
-    top: 50%;
 }
 /* = Homepage Title
 -------------------------------------------------------------- */
