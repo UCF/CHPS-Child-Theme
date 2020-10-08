@@ -64,9 +64,6 @@
 	</article>
 </div>
 <style>	
-.container {
-    margin-top: 0px !important;
-}
 .container h1.mt-sm-4 {
     display: none !important;
 }
@@ -78,12 +75,6 @@
         min-height: 500px;
     }
 }
-.yellowBTN-full {
-	line-height: 20px;
-}		
-.yellowBTN-full strong {
-	font-size:20px;
-}	
 /*overwrite header styling */	
 .header-title-wrapper {
     max-width: 1100px !important;
@@ -91,34 +82,5 @@
 .header-media-default {
     min-height: 350px !important;
 }	
-
-.yellowBTN-full {
-	display: block; 
-	font-size: 16px;  
-	padding: 18px 25px; 
-	text-align: center; 
-	background-color:#ffcc00; 
-	color:#000000;
-}
-.yellowBTN-full:hover {
-	text-decoration: none;
-}
-.blackBTN-full {
-	display: block; 
-	font-size: 16px;  
-	line-height: 20px;
-	padding: 18px 25px; 
-	text-align: center; 
-	background-color:#000; 
-	color:#fff;
-}
-.blackBTN-full:hover {
-	text-decoration: none;
-}
-.btnhover-black a:hover {
-    background: #222 !important;
-	background-image: none !important;
-	color:#fff;
-}		
 </style>
 <?php get_footer(); ?>
