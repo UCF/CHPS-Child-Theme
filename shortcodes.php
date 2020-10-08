@@ -823,11 +823,7 @@ switch_to_blog(2);
 $listlabs = '<div>';	
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
-$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '">';
-$listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
-$listlabs .= '</a>';
-$listlabs .= '</div><div class="col-12 col-md-8"><div class="mb-1 grantHide">';
+$listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8"><div class="mb-1 grantHide">';
 // Get a list of terms for this post's custom taxonomy.
 $project_units = get_the_terms($post->ID, 'departments');
 // Renumber array.
@@ -837,20 +833,12 @@ for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
 $listlabs .= '<span class="grant-unit">';			
 $listlabs .= $project_units[$unit_count]->name;	
 $listlabs .= '</span>'; 
-// If there is more than one term, comma separate them.
-if ($unit_count<count($project_units)-1){
-$listlabs .= ', ';	 
-		}
-	}
-$listlabs .= '</div><h4>';
-$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
+}
+$listlabs .= '</div><h4><a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
 $listlabs .= get_the_title();
-$listlabs .= '</a>';
-$listlabs .= '</h4>';
+$listlabs .= '</a></h4>';
 $listlabs .= get_the_content();
-$listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" >';
-$listlabs .= '<a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="' . get_field('website_url', $post->ID) . '" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Labs Website</a>';
-$listlabs .= '</div></div></div></div>';
+$listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" ><a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="' . get_field('website_url', $post->ID) . '" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Labs Website</a></div></div></div></div>';
 endwhile;
 $listlabs .= '</div>';
 wp_reset_query();
