@@ -115,6 +115,13 @@ opacity: 1;
 -webkit-animation: flash 1s;
 animation: flash 1s;
 }
+.archiveYellBTN {
+	font-size: 14px;
+	padding: 14px 20px 14px 28px;
+	background-color:#ffcc00; 
+	color:#000000;
+	text-decoration:none !important;
+}
 /* = Homepage Title
 -------------------------------------------------------------- */
 .mainHomeTitle .evc-st-title {
