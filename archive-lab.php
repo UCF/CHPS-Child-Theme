@@ -38,7 +38,7 @@
                     	<div class="row">
                         	<div class="col-12 col-md-4 mb-3">
                             <a href="<?php the_field('website_url'); ?>">
-                            	<img class="flashIMG" width="100%" src="<?php $getimgURL; ?>" alt=""/>
+                            	<img class="flashIMG" width="100%" src="<?php echo $getimgURL; ?>" alt=""/>
                             </a>
                         </div>
                         <div class="col-12 col-md-8">
