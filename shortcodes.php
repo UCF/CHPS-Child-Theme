@@ -844,7 +844,7 @@ $listlabs .= '<h4><a href="' . get_field('website_url', $post->ID) . '" target="
 $listlabs .= get_the_title();
 $listlabs .= '</a></h4>';
 $listlabs .= get_the_content();
-$listlabs .= '<div class="archiveYellBTN btnhover-yellow mt-3" ><a class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="' . get_field('website_url', $post->ID) . '" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a></div></div></div></div>';
+$listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" ><a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="' . get_field('website_url', $post->ID) . '" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a></div></div></div></div>';
 endwhile;
 $listlabs .= '</div>';
 wp_reset_query();
