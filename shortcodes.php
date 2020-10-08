@@ -825,7 +825,8 @@ $listlabs = '<div>';
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $listlabs .= '<div class="mb-5 pb-4 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3"><a href="' . get_field('website_url', $post->ID) . '"><img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/></a></div><div class="col-12 col-md-8">';
-if ( empty($a['showUnit'])) {
+if ( !empty($a['showUnit'])) { }
+	else { 
 	$listlabs .= '<div class="mb-2">';
 	// Get a list of terms for this post's custom taxonomy.
 	$project_units = get_the_terms($post->ID, 'departments');
@@ -838,8 +839,7 @@ if ( empty($a['showUnit'])) {
 	$listlabs .= '</span>'; 
 	}
 	$listlabs .= '</div>';
-}
-	else { }	
+	}	
 $listlabs .= '<h4><a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
 $listlabs .= get_the_title();
 $listlabs .= '</a></h4>';
