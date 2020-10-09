@@ -1,8 +1,6 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-
-
 <div class="header-media header-media-content-block header-media-short media-background-container mb-0 d-flex flex-column">
 	<picture class="media-background-picture ">
 		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" media="(min-width: 1200px)">
@@ -10,7 +8,6 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-991x400.jpg" media="(min-width: 768px)">
 		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-767x400.jpg" media="(min-width: 576px)">
 		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg" media="(max-width: 575px)">
-		
 		<img class="media-background object-fit-cover" src="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" alt="">
 	</picture>
 	<div class="header-content">
@@ -19,7 +16,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 				<div class="col-xl-6 col-lg-8 col-md-10">
 					<div class="header-title-wrapper">
 						<h1 class="header-title">CHPS Research Labs</h1>
-						<p class="header-subtitle">UCF College of Health Professions and Sciences</p>
+						<p class="header-subtitle">UCF <?php echo $term->name; ?></p>
 					</div>
 				</div>
 			</div>
