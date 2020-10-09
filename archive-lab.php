@@ -19,7 +19,16 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	</div>
 </div>
 <div style="height:58px;background:#f2f2f2;">
-<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
+	<div class="container d-flex align-items-center align-items-sm-end">
+    	<div class="row no-gutters w-100">
+        	<div class="col-sm-6">
+            	return to full labs page
+            </div>
+            <div class="col-sm-6">
+				<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div class="container mb-5 mt-3 mt-lg-5">
