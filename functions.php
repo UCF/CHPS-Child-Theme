@@ -162,7 +162,16 @@ function healthtips_sidebar() {
 }
 add_action( 'widgets_init', 'healthtips_sidebar' );
 
-
+// CHANGE SORT ORDER OF GRANTS ARCHIVE
+function sort_grants_archive_loop($query) { 
+    if ($query->is_post_type_archive('grants') && $query->is_main_query()) {
+    $query->set('order', 'DESC');
+    $query->set('meta_key', 'grant_start_date');
+	$query->set('meta_type', 'DATE');
+    $query->set('orderby', 'meta_value');
+    }
+}
+add_action('pre_get_posts', 'sort_grants_archive_loop');
 
 // CHANGE SORT ORDER OF LABS ARCHIVE
 add_filter( 'posts_orderby' , 'custom_cpt_order' );
