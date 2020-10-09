@@ -52,7 +52,14 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	</article>
 </div>
 <link rel='stylesheet' id='duplicate-post-css'  href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1602189880899{background-color: #f2f2f2 !important;}.vc_custom_1527858038636{padding-right: 80px !important;}label, select {
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1602189880899{background-color: #f2f2f2 !important;}.vc_custom_1527858038636{padding-right: 80px !important;}
+.container {
+    margin-top: 0px !important;
+}
+header .container h1 {
+    display: none !important;
+}
+label, select {
     display: block;
     width: 100% !important;
     font-size: 18px;
