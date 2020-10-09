@@ -3,6 +3,11 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 ?>
 <div class="header-media header-media-content-block header-media-short media-background-container mb-0 d-flex flex-column">
 	<picture class="media-background-picture ">
+    	<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" media="(min-width: 1200px)">
+        <source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1199x400.jpg" media="(min-width: 992px)">
+        <source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-991x400.jpg" media="(min-width: 768px)">
+        <source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-767x400.jpg" media="(min-width: 576px)">
+        <source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg" media="(max-width: 575px)">
 		<img class="media-background object-fit-cover" src="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" alt="">
 	</picture>
 	<div class="header-content">
