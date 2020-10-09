@@ -1,6 +1,8 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
+<?php echo do_shortcode( '[vc_section full_width="stretch_row" content_placement="middle" css=".vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="mb-4"][vc_row][vc_column width="3/4" css=".vc_custom_1527858038636{padding-right: 80px !important;}"][evc_section_title text_alignment="left" title_tag="h1" custom_class="mainHomeTitle" title="CHPS Research Labs" title_color="#000000"][evc_section_title text_alignment="left" title_tag="h2" custom_class="mainHomeSubtitle" title="UCF College of Health Professions and Sciences" title_color="#ffffff"][/vc_column][vc_column width="1/4"][/vc_column][/vc_row][/vc_section]' );?>
+
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
 				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants-3.webm" type="video/webm">
