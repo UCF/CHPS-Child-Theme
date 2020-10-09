@@ -170,9 +170,11 @@ function sort_grants_archive_loop($query) {
 	$query->set('meta_type', 'DATE');
     $query->set('orderby', 'meta_value');
     }
-	if ($query->is_post_type_archive('lab') && $query->is_main_query()) {
+	elseif ($query->is_post_type_archive('lab') && $query->is_main_query()) {
     $query->set('orderby', 'title');
 	$query->set('order', 'ASC');
+    }
+	else {
     }
 }
 add_action('pre_get_posts', 'sort_grants_archive_loop');
