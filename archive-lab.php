@@ -1,18 +1,21 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-<div class="container mb-5 mt-3 mt-lg-5">
-	<article class="<?php echo $post->post_status; ?> post-list-item">
 
-<section data-vc-full-width="true" data-vc-full-width-init="true" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff">UCF <?php echo $term->name; ?></h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
+
+<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff">UCF <?php echo $term->name; ?></h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
 
 <div class="vc_row-full-width vc_clearfix"></div>
 
-<section data-vc-full-width="true" data-vc-full-width-init="true" class="vc_section mb-5 pt-0 filterSearch vc_custom_1602189880899 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_text_column wpb_content_element  mb-0" ><div class="wpb_wrapper">
+<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-5 pt-0 filterSearch vc_custom_1602189880899 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_text_column wpb_content_element  mb-0" ><div class="wpb_wrapper">
 <?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
 </div></div></div></div></div></div></section>
 
+<div class="vc_row-full-width vc_clearfix"></div>
 
+
+<div class="container mb-5 mt-3 mt-lg-5">
+	<article class="<?php echo $post->post_status; ?> post-list-item">
 
 
 		<div class="vc_column-inner">
