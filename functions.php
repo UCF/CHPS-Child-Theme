@@ -165,13 +165,16 @@ add_action( 'widgets_init', 'healthtips_sidebar' );
 
 
 // CHANGE SORT ORDER OF LABS ARCHIVE
-add_action( 'pre_get_posts', 'my_change_sort_order'); 
-    function my_change_sort_order($query){
-        if(is_post_type_archive($post_types = 'lab')):
-           $query->set( 'order', 'ASC' );
-           $query->set( 'orderby', 'title' );
-        endif;    
-    };	
+add_filter( 'posts_orderby' , 'custom_cpt_order' );
+function custom_cpt_order( $orderby ) {
+	global $wpdb;
+	// Check if the query is for an archive
+	if ( is_archive() && get_query_var("post_type") == "lab" ) {
+		// Query was for archive, then set order
+		return "$wpdb->posts.post_title ASC";
+	}
+	return $orderby;
+}
 
 // Adding Custom Theme Settings To Better Control Global Aspects
 if( function_exists('acf_add_options_page') ) {
