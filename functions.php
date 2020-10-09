@@ -170,16 +170,20 @@ function sort_grants_archive_loop($query) {
 	$query->set('meta_type', 'DATE');
     $query->set('orderby', 'meta_value');
     }
-	elseif ($query->is_post_type_archive('lab') && $query->is_main_query()) {
-    $query->set('orderby', 'title');
-	$query->set('order', 'DESC');
-    }
-	else {
-    }
 }
 add_action('pre_get_posts', 'sort_grants_archive_loop');
 
-	
+// CHANGE SORT ORDER OF LABS ARCHIVE
+add_action( 'pre_get_posts', 'my_change_sort_order'); 
+    function my_change_sort_order($query){
+        if(is_post_type_archive('lab')):
+         //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
+           //Set the order ASC or DESC
+           $query->set( 'order', 'ASC' );
+           //Set the orderby
+           $query->set( 'orderby', 'title' );
+        endif;    
+    };	
 
 // Adding Custom Theme Settings To Better Control Global Aspects
 if( function_exists('acf_add_options_page') ) {
