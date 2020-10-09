@@ -1,7 +1,10 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-<?php echo do_shortcode( '[vc_section full_width="stretch_row" content_placement="middle" css=".vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}" el_class="mb-4"][vc_row][vc_column width="3/4" css=".vc_custom_1527858038636{padding-right: 80px !important;}"][evc_section_title text_alignment="left" title_tag="h1" custom_class="mainHomeTitle" title="CHPS Research Labs" title_color="#000000"][evc_section_title text_alignment="left" title_tag="h2" custom_class="mainHomeSubtitle" title="UCF College of Health Professions and Sciences" title_color="#ffffff"][/vc_column][vc_column width="1/4"][/vc_column][/vc_row][/vc_section]' );?>
+
+
+<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff"> UCF College of Health Professions and Sciences</h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
+
 
 		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
 			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
