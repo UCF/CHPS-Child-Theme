@@ -170,17 +170,13 @@ function sort_grants_archive_loop($query) {
 	$query->set('meta_type', 'DATE');
     $query->set('orderby', 'meta_value');
     }
-}
-add_action('pre_get_posts', 'sort_grants_archive_loop');
-
-// CHANGE SORT ORDER OF LABS ARCHIVE
-function sort_labs_archive_loop($query) { 
-    if ($query->is_post_type_archive('lab') && $query->is_main_query()) {
+	if ($query->is_post_type_archive('lab') && $query->is_main_query()) {
     $query->set('orderby', 'title');
 	$query->set('order', 'DESC');
     }
 }
-add_action('pre_get_posts', 'sort_labs_archive_loop');
+add_action('pre_get_posts', 'sort_grants_archive_loop');
+
 	
 
 // Adding Custom Theme Settings To Better Control Global Aspects
