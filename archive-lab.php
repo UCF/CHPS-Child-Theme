@@ -3,15 +3,29 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 ?>
 
 
-<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff">UCF <?php echo $term->name; ?></h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
-
-<div class="vc_row-full-width vc_clearfix"></div>
-
-<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-5 pt-0 filterSearch vc_custom_1602189880899 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_text_column wpb_content_element  mb-0" ><div class="wpb_wrapper">
-<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
-</div></div></div></div></div></div></section>
-
-<div class="vc_row-full-width vc_clearfix"></div>
+<div class="header-media header-media-content-block header-media-short media-background-container mb-0 d-flex flex-column">
+	<picture class="media-background-picture ">
+		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" media="(min-width: 1200px)">
+		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1199x400.jpg" media="(min-width: 992px)">
+		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-991x400.jpg" media="(min-width: 768px)">
+		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-767x400.jpg" media="(min-width: 576px)">
+		<source srcset="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg" media="(max-width: 575px)">
+		
+		<img class="media-background object-fit-cover" src="https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" alt="">
+	</picture>
+	<div class="header-content">
+		<div class="container d-flex align-items-center align-items-sm-end">
+			<div class="row no-gutters w-100">
+				<div class="col-xl-6 col-lg-8 col-md-10">
+					<div class="header-title-wrapper">
+						<h1 class="header-title">CHPS Research Labs</h1>
+						<p class="header-subtitle">UCF College of Health Professions and Sciences</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 
 <div class="container mb-5 mt-3 mt-lg-5">
@@ -55,12 +69,11 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	</article>
 </div>
 <link rel='stylesheet' id='duplicate-post-css'  href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1602189880899{background-color: #f2f2f2 !important;}.vc_custom_1527858038636{padding-right: 80px !important;}
+<style type="text/css" data-type="vc_shortcodes-custom-css">
+.vc_custom_1602189880899{background-color: #f2f2f2 !important;}
+.vc_custom_1527858038636{padding-right: 80px !important;}
 .container {
     margin-top: 0px !important;
-}
-header .container h1 {
-    display: none !important;
 }
 label, select {
     display: block;
