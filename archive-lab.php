@@ -26,10 +26,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 <div style="background:#f2f2f2;" class="mb-5">
 	<div class="container d-flex align-items-center align-items-sm-end">
     	<div class="row no-gutters w-100">
-        	<div class="col-sm-6" style="display:flex;justify-content:left;align-items:center;">
+        	<div class="column" style="display:flex;justify-content:left;align-items:center;">
             	<a href="../"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> View All Research Labs</a>
             </div>
-            <div class="col-sm-6">
+            <div class="column">
 				<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
 			</div>
 		</div>
