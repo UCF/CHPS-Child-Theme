@@ -1,13 +1,7 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
-<link rel='stylesheet' id='duplicate-post-css'  href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
-<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1602189880899{background-color: #f2f2f2 !important;}.vc_custom_1527858038636{padding-right: 80px !important;}label, select {
-    display: block;
-    width: 100% !important;
-    font-size: 18px;
-    padding:6px;
- }</style>
+
 
 <section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff">UCF <?php echo $term->name; ?></h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
 
@@ -57,24 +51,11 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		</div>
 	</article>
 </div>
-<style>	
-.container h1.mt-sm-4 {
-    display: none !important;
-}
-.header-title-wrapper {
-    max-width: 600px;
-}
-@media (min-width: 576px) {
-    .header-media-default {
-        min-height: 500px;
-    }
-}
-/*overwrite header styling */	
-.header-title-wrapper {
-    max-width: 1100px !important;
-}	
-.header-media-default {
-    min-height: 350px !important;
-}	
-</style>
+<link rel='stylesheet' id='duplicate-post-css'  href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
+<style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1590163440237{margin-bottom: 0px !important;padding-top: 100px !important;padding-bottom: 100px !important;background-image: url(https://healthchpscmsdev.smca.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4.jpg?id=19383) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1602189880899{background-color: #f2f2f2 !important;}.vc_custom_1527858038636{padding-right: 80px !important;}label, select {
+    display: block;
+    width: 100% !important;
+    font-size: 18px;
+    padding:6px;
+ }</style>
 <?php get_footer(); ?>
