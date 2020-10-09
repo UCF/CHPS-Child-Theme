@@ -172,7 +172,7 @@ function sort_grants_archive_loop($query) {
     }
 	elseif ($query->is_post_type_archive('lab') && $query->is_main_query()) {
     $query->set('orderby', 'title');
-	$query->set('order', 'ASC');
+	$query->set('order', 'DESC');
     }
 	else {
     }
