@@ -18,7 +18,9 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		</div>
 	</div>
 </div>
-
+<div style="height:58px;background:#f2f2f2;">
+<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
+</div>
 
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
