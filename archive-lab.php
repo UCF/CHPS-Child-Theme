@@ -12,32 +12,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 </div></div></div></div></div></div></section>
 
 
-		<div class="header-media  header-media-default media-background-container mb-0 d-flex flex-column">
-			<video class="hidden-xs-down media-background media-background-video object-fit-cover" autoplay muted playsinline loop>
-				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants-3.webm" type="video/webm">
-				<source src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/03/grants3.mp4" type="video/mp4">
-			</video>
-			<button class="media-background-video-toggle btn play-enabled hidden-xs-up" type="button" data-toggle="button" aria-pressed="false" aria-label="Play or pause background videos">
-				<span class="fa fa-pause media-background-video-pause" aria-hidden="true"></span>
-				<span class="fa fa-play media-background-video-play" aria-hidden="true"></span>
-			</button>
-			<picture class="media-background-picture ">
-				<source srcset="https://i1.wp.com/healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/09/COHPA-building-BG.jpg?resize=575%2C575&ssl=1" media="(max-width: 575px)">
-				<img class="media-background object-fit-cover" src="https://i1.wp.com/healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/09/COHPA-building-BG.jpg?resize=1600%2C525&ssl=1" alt="">
-			</picture>
-			<div class="header-content">
-				<div class="container d-flex align-items-center align-items-sm-end">
-					<div class="row no-gutters w-100">
-						<div class="col-xl-10">
-							<div class="header-title-wrapper">
-								<h1 class="header-title">CHPS Research Labs</h1>
-								<p class="header-subtitle">UCF <?php echo $term->name; ?></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="vc_column-inner">
