@@ -18,7 +18,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 		</div>
 	</div>
 </div>
-<div style="height:58px;background:#f2f2f2;">
+<div style="background:#f2f2f2;padding:20px 0px;">
 	<div class="container d-flex align-items-center align-items-sm-end">
     	<div class="row no-gutters w-100">
         	<div class="col-sm-6">
