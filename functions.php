@@ -167,7 +167,7 @@ add_action( 'widgets_init', 'healthtips_sidebar' );
 // CHANGE SORT ORDER OF LABS ARCHIVE
 add_action( 'pre_get_posts', 'my_change_sort_order'); 
     function my_change_sort_order($query){
-        if(is_post_type_archive('lab')):
+        if(is_post_type_archive($post_type = 'lab')):
            $query->set( 'order', 'ASC' );
            $query->set( 'orderby', 'title' );
         endif;    
