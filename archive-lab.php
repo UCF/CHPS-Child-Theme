@@ -2,15 +2,43 @@
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
-	<article class="<?php echo $post->post_status; ?> post-list-item">
+	<article class="publish post-list-item">
+		<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left">
+	<div class="evc-st-inner">
+					<h1 class="evc-st-title" style="color: #000000">
+				CHPS Research Labs			</h1>
+									</div>
+</div>
+<div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left">
+	<div class="evc-st-inner">
+					<h2 class="evc-st-title" style="color: #ffffff">
+				UCF College of Health Professions and Sciences			</h2>
+									</div>
+</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section><div class="vc_row-full-width vc_clearfix"></div><section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-5 pt-0 filterSearch vc_custom_1602189880899 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper">
+	<div class="wpb_text_column wpb_content_element  mb-0" >
+		<div class="wpb_wrapper">
+			<form data-sf-form-id='19570' data-is-rtl='0' data-maintain-state='' data-ajax-form-url='https://healthchpscmsdev.smca.ucf.edu/?sfid=19570&amp;sf_action=get_data&amp;sf_data=form' data-display-result-method='post_type_archive' data-use-history-api='1' data-template-loaded='0' data-taxonomy-archives='1' data-lang-code='' data-ajax='0' data-init-paged='1' data-auto-update='1' action='' method='post' class='searchandfilter' id='search-filter-form-19570' autocomplete='off' data-instance-count='1'><ul><li class="sf-field-taxonomy-lab_tax" data-sf-field-name="_sft_lab_tax" data-sf-field-type="taxonomy" data-sf-field-input-type="select" data-sf-term-rewrite='["https:\/\/healthchpscmsdev.smca.ucf.edu\/research\/labs\/[0]\/"]'>		<label>
 
-<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-4 vc_custom_1590163440237 vc_section-has-fill vc_section-o-content-middle vc_section-flex"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-9"><div class="vc_column-inner vc_custom_1527858038636"><div class="wpb_wrapper"><div class="evc-section-title evc-shortcode mainHomeTitle" style="text-align: left"><div class="evc-st-inner"><h1 class="evc-st-title" style="color: #000000"> CHPS Research Labs</h1></div></div><div class="evc-section-title evc-shortcode mainHomeSubtitle" style="text-align: left"><div class="evc-st-inner"><h2 class="evc-st-title" style="color: #ffffff">UCF <?php echo $term->name; ?></h2></div></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-3"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div></div></section>
+				<select name="_sft_lab_tax[]" class="sf-input-select" title="">
 
-<div class="vc_row-full-width vc_clearfix"></div>
+			
 
-<section data-vc-full-width="true" data-vc-full-width-init="false" class="vc_section mb-5 pt-0 filterSearch vc_custom_1602189880899 vc_section-has-fill"><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"></div></div></div><div class="wpb_column vc_column_container vc_col-sm-6"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="wpb_text_column wpb_content_element  mb-0" ><div class="wpb_wrapper">
-<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
-</div></div></div></div></div></div></section>
+						<option class="sf-level-0 sf-item-0 sf-option-active" selected="selected" data-sf-count="0" data-sf-depth="0" value="">Filter by Unit</option>
+
+						<option class="sf-level-0 sf-item-162" data-sf-count="2" data-sf-depth="0" value="athletic-training">Athletic Training&nbsp;&nbsp;(2)</option>
+
+						<option class="sf-level-0 sf-item-166" data-sf-count="1" data-sf-depth="0" value="physical-therapy">Physical Therapy&nbsp;&nbsp;(1)</option>
+
+						<option class="sf-level-0 sf-item-167" data-sf-count="1" data-sf-depth="0" value="social-work">Social Work&nbsp;&nbsp;(1)</option>
+
+					</select>
+
+		</label>		</li></ul></form>
+
+		</div>
+	</div>
+</div></div></div></div></section><div class="vc_row-full-width vc_clearfix"></div>
 
 
 
