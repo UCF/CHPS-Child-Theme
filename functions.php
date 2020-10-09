@@ -162,25 +162,13 @@ function healthtips_sidebar() {
 }
 add_action( 'widgets_init', 'healthtips_sidebar' );
 
-// CHANGE SORT ORDER OF GRANTS ARCHIVE
-function sort_grants_archive_loop($query) { 
-    if ($query->is_post_type_archive('grants') && $query->is_main_query()) {
-    $query->set('order', 'DESC');
-    $query->set('meta_key', 'grant_start_date');
-	$query->set('meta_type', 'DATE');
-    $query->set('orderby', 'meta_value');
-    }
-}
-add_action('pre_get_posts', 'sort_grants_archive_loop');
+
 
 // CHANGE SORT ORDER OF LABS ARCHIVE
 add_action( 'pre_get_posts', 'my_change_sort_order'); 
     function my_change_sort_order($query){
         if(is_post_type_archive('lab')):
-         //If you wanted it for the archive of a custom post type use: is_post_type_archive( $post_type )
-           //Set the order ASC or DESC
            $query->set( 'order', 'ASC' );
-           //Set the orderby
            $query->set( 'orderby', 'title' );
         endif;    
     };	
