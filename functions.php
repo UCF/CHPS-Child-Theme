@@ -172,6 +172,15 @@ function sort_grants_archive_loop($query) {
     }
 }
 add_action('pre_get_posts', 'sort_grants_archive_loop');
+
+// CHANGE SORT ORDER OF LABS ARCHIVE
+function sort_labs_archive_loop($query) { 
+    if ($query->is_post_type_archive('lab') && $query->is_main_query()) {
+    $query->set('order', 'ASC');
+    $query->set('orderby', 'title');
+    }
+}
+add_action('pre_get_posts', 'sort_labs_archive_loop');
 	
 
 // Adding Custom Theme Settings To Better Control Global Aspects
