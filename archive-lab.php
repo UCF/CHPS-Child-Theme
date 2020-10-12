@@ -50,13 +50,23 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 					<div class="mb-5 pb-5 labStyle container">
                     	<div class="row">
                         	<div class="col-12 col-md-4 mb-3">
-                            <a href="<?php the_field('website_url'); ?>">
+                            <?php if( the_field('website_url', $post->ID) ) { ?>
+                            	<a href="<?php the_field('website_url'); ?>">
+                            <?php } ?>    
                             	<img class="flashIMG" width="100%" src="<?php echo $getimgURL; ?>" alt=""/>
-                            </a>
+                            <?php if( the_field('website_url', $post->ID) ) { ?>
+                            	</a>
+                            <?php } ?>    
                         </div>
                         <div class="col-12 col-md-8">
                         	<h4>
-                            	<a href="<?php the_field('website_url'); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><?php the_title(); ?></a>
+                            	<?php if( the_field('website_url', $post->ID) ) { ?>
+                                    <a href="<?php the_field('website_url'); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">
+                                <?php } ?>
+                                        <?php the_title(); ?>
+                                <?php if( the_field('website_url', $post->ID) ) { ?>
+                                	</a>
+                                <?php } ?>
                             </h4>
 							<?php the_content(); ?>
                             <?php if( the_field('website_url', $post->ID) ) { ?>
