@@ -59,9 +59,11 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
                             	<a href="<?php the_field('website_url'); ?>" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external"><?php the_title(); ?></a>
                             </h4>
 							<?php the_content(); ?>
+                            <?php if( the_field('website_url', $post->ID) ) { ?>
 							<div class="btnhover-yellow mt-4">
                             	<a class="archiveYellBTN" href="<?php the_field('website_url'); ?>" title="" target="_blank"><i class="archiveYellBTN-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a>
                             </div>
+                            <?php } ?>
                         </div>
                 	</div>
   <!--END-->	</div>
