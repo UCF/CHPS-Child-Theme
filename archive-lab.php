@@ -41,14 +41,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
 		<div class="vc_column-inner">
-				<?php if ( have_posts() ) : ?>
-				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				while ( have_posts() ) : the_post();
-				?>
+	
 <?php 
 echo do_shortcode("[showlabs unit=\"$term->name\"]")
 ?>
-				<?php endwhile; ?>
 				<!-- then the pagination links -->
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
