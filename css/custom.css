@@ -112,6 +112,7 @@ h2 {
 }
 .flashIMG {
 width:100% !important;
+height: auto !important;
 }
 .flashIMG:hover {
 opacity: 1;
