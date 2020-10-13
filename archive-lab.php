@@ -45,7 +45,10 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
 				?>
-<?php echo do_shortcode( '[showlabs number="-1" unit=\"$term->name;\" showunit="No"]' ); ?>
+<?php 
+$short = '[showlabs number="-1" unit="'. $term->name; .'" showunit="No"]';
+echo do_shortcode($short); 
+?>
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
 				<div class="mt-5">
