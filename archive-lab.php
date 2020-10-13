@@ -49,11 +49,8 @@ label, select {
 		</div>
 	</div>
 </div>
-
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
-
-
 		<div class="vc_column-inner">
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
