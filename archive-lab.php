@@ -46,8 +46,7 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 				while ( have_posts() ) : the_post();
 				?>
 <?php 
-$short = '[showlabs number="-1" unit="'. $term->name; .'" showunit="No"]';
-echo do_shortcode($short); 
+echo do_shortcode("[showlabs unit=\"$term->name\"]")
 ?>
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
