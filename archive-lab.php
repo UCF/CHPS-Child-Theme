@@ -41,7 +41,8 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 
 
 		<div class="vc_column-inner">
-	
+				<?php if ( have_posts() ) : ?>
+				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;?>
 <?php 
 echo do_shortcode("[showlabs unit=\"$term->name\"]")
 ?>
