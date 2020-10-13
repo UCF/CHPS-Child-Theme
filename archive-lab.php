@@ -1,6 +1,20 @@
 <?php get_header(); 
 $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' ) );
 ?>
+<style type="text/css" data-type="vc_shortcodes-custom-css">
+.container {
+    margin-top: 0px !important;
+}
+header .container h1 {
+    display: none !important;
+}
+label, select {
+    display: block;
+    width: 100% !important;
+    font-size: 18px;
+    padding:6px;
+ }
+ </style>
 <div class="header-media header-media-content-block header-media-short media-background-container mb-0 d-flex flex-column">
 	<picture class="media-background-picture ">
     	<source srcset="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2020/05/healthTips4-1500x400.jpg" media="(min-width: 1200px)">
@@ -55,17 +69,4 @@ $term = get_term_by( 'slug', get_query_var( 'term' ), get_query_var( 'taxonomy' 
 	</article>
 </div>
 <link rel='stylesheet' id='duplicate-post-css'  href='/wp-content/plugins/js_composer/assets/css/js_composer.min.css' type='text/css' media='all' />
-<style type="text/css" data-type="vc_shortcodes-custom-css">
-.container {
-    margin-top: 0px !important;
-}
-header .container h1 {
-    display: none !important;
-}
-label, select {
-    display: block;
-    width: 100% !important;
-    font-size: 18px;
-    padding:6px;
- }</style>
 <?php get_footer(); ?>
