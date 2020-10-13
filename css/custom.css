@@ -110,6 +110,9 @@ h2 {
 0% { opacity: .3; }
 100% { opacity: 1; }
 }
+.flashIMG {
+width:100% !important;
+}
 .flashIMG:hover {
 opacity: 1;
 -webkit-animation: flash 1s;
