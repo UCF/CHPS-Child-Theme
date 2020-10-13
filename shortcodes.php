@@ -834,7 +834,6 @@ if ( has_post_thumbnail()) {
 	} else { 	
 		$listlabs .= '<img class="flashIMG" width="100%" src="' . get_field('default_lab_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">';
 	}	
-$listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
 if( get_field('website_url', $post->ID) ) {	
 	$listlabs .= '</a>';
 }
