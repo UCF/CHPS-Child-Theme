@@ -829,6 +829,11 @@ $listlabs .= '<div class="mb-5 pb-5 labStyle container"><div class="row"><div cl
 if( get_field('website_url', $post->ID) ) {	
 	$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '">';
 }
+if ( has_post_thumbnail()) {	
+		$listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '"/>';
+	} else { 	
+		$listlabs .= '<img class="flashIMG" width="100%" src="' . get_field('default_lab_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">';
+	}	
 $listlabs .= '<img class="flashIMG" width="100%" src="' . $getimgURL . '" alt=""/>';
 if( get_field('website_url', $post->ID) ) {	
 	$listlabs .= '</a>';
