@@ -664,6 +664,7 @@ function listfacultyvar( $atts ) {
 		'showjob' => '',
     ), $atts );
 switch_to_blog(2);
+$special = $a['specialty'];
 	if (!empty($a['unit'])) { 	
 	 $visualnews = new WP_Query(array(
                 'post_type' => 'person',
@@ -694,7 +695,7 @@ switch_to_blog(2);
 					array(
 						'taxonomy' => 'specialty_unit',
 						'field' => 'name',
-						'terms' => $a['specialty'],
+						'terms' => $special,
 					),
 				),
                 )
