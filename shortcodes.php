@@ -689,6 +689,7 @@ switch_to_blog(2);
                 'meta_key' => 'profile_L_name',
 				'orderby' => 'meta_value',
 				'order' => 'ASC',
+				'suppress_filters' => 'FALSE',
                 'posts_per_page' => $a['number'],
 				'tax_query' => array(
 					array(
