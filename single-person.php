@@ -228,6 +228,19 @@ $posts = get_posts(array(
 			  )
 		 )
 ));
+$labs = get_posts(array(
+	'numberposts'	=> 10,
+	'post_type'		=> 'lab',
+	'order'         => 'DESC',
+	'orderby'       => 'title',
+	'meta_query' => array(
+		array(  
+			'key' => 'lab_facultymember', // slug of custom field
+			'value' => $ids, // keep this to match current profile
+			'compare' => 'LIKE'
+			  )
+		 )
+));
 $grantlist = array(
 	'posts_per_page' => 0,
 	'post_type'	 => 'grants',
@@ -308,8 +321,27 @@ $grantlist = array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-                                <div class="mb-4 pt-3">
-                                    								
+                                
+                                
+                                
+<?php 
+foreach( $labs as $lab ): 
+	setup_postdata( $lab );
+?>
+<li class="listnone mb-4">
+<h5><?php the_title(); ?></h5>
+<br>
+<?php 			
+$content = get_the_content();
+$content = preg_replace('#\[[^\]]+\]#', '',$content);
+$content = apply_filters('the_content', $content);
+echo wp_trim_words( $content, 30, '...' );
+?>
+</li>
+<?php endforeach; ?>                             
+                                
+                                
+ <div class="mb-4 pt-3">                                   								
 <?php
 // filter
 function my_posts_where( $where ) {
