@@ -329,7 +329,7 @@ foreach( $labs as $lab ):
 	setup_postdata( $lab );
 ?>
 <li class="listnone mb-4">
-<h5><?php the_title(); ?></h5>
+<h5><?php get_the_title(); ?></h5>
 <br>
 <?php 			
 $content = get_the_content();
