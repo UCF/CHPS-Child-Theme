@@ -337,7 +337,28 @@ $content = apply_filters('the_content', $content);
 echo wp_trim_words( $content, 30, '...' );
 ?>
 </li>
-<?php endforeach; ?>                             
+<?php endforeach; ?>   
+<?php
+	// query
+	$the_labquery = new WP_Query( $labs );
+	?>
+	<?php if( $the_labquery->have_posts() ): ?>
+    <h5 class="mb-0 heading-underline">Research Labs</h5>
+		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
+        <div class="pt-3 pb-3">
+        	<li>
+                <h5><?php the_title(); ?></h5>
+                <?php 			
+				$content = get_the_content();
+				$content = preg_replace('#\[[^\]]+\]#', '',$content);
+				$content = apply_filters('the_content', $content);
+				echo wp_trim_words( $content, 30, '...' );
+				?>
+    		</li>
+        </div>
+		<?php endwhile; ?>
+	<?php endif; ?>
+	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                          
                                 
                                 
  <div class="mb-4 pt-3">                                   								
