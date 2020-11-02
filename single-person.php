@@ -228,7 +228,7 @@ $posts = get_posts(array(
 			  )
 		 )
 ));
-$labs = get_posts(array(
+$labs = array(
 	'numberposts'	=> 10,
 	'post_type'		=> 'lab',
 	'order'         => 'DESC',
@@ -240,7 +240,7 @@ $labs = get_posts(array(
 			'compare' => 'LIKE'
 			  )
 		 )
-));
+);
 $grantlist = array(
 	'posts_per_page' => 0,
 	'post_type'	 => 'grants',
