@@ -329,7 +329,7 @@ $grantlist = array(
     <h5 class="mb-0 heading-underline">Research Labs</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <div class="pt-3 pb-3">
-        	<li><h5><?php the_title(); ?></h5>
+        	<li><strong><?php the_title(); ?></strong>
                 <?php 			
 				$content = get_the_content();
 				$content = preg_replace('#\[[^\]]+\]#', '',$content);
