@@ -329,7 +329,13 @@ $grantlist = array(
     <h5 class="mb-0 heading-underline">Research Labs</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <div class="pt-3 pb-3 grantResult grantSmall">
+        <?php if(get_field('website_url')) { ?>
+				<a href="<?php the_field('website_url'); ?>" target="_blank">
+		<?php }?>
         	<h3><?php the_title(); ?></h3>
+        <?php if(get_field('website_url')) { ?>
+				</a>
+		<?php }?>    
                 <?php 			
 				$content = get_the_content();
 				$content = preg_replace('#\[[^\]]+\]#', '',$content);
