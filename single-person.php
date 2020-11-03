@@ -231,7 +231,7 @@ $posts = get_posts(array(
 $labs = array(
 	'numberposts'	=> 10,
 	'post_type'		=> 'lab',
-	'order'         => 'DESC',
+	'order'         => 'ASC',
 	'orderby'       => 'title',
 	'meta_query' => array(
 		array(  
@@ -328,7 +328,7 @@ $grantlist = array(
 	<?php if( $the_labquery->have_posts() ): ?>
     <h5 class="mb-0 heading-underline">Research Labs</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
-        <div class="pt-3 pb-3">
+        <div class="pt-3 pb-3 grantResult grantSmall">
         	<li><strong><?php the_title(); ?></strong>
                 <?php 			
 				$content = get_the_content();

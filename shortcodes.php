@@ -458,7 +458,7 @@ else {
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO INDIVIDUAL PERSON
-// [showperson name="" column="" pic=""]
+// [showperson name="" column="" pic="false"]
 function showpersonvar( $atts ) {
     $r = shortcode_atts( array(
         'name' => '',
