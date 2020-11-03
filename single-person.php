@@ -308,7 +308,7 @@ $show_grants = get_posts( $grantlist );
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (($show_grants)||($show_labs)||get_field('research_info')||get_field('research_interests')): ?> <!-- THIS NEEDS FIXING tax? -->
+					<?php if ($show_grants||$show_labs||get_field('research_info')||get_field('research_interests')): ?> <!-- THIS NEEDS FIXING tax? -->
 					<div class="vc_tta-panel" id="research" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#research" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">Research</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
