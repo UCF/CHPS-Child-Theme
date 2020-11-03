@@ -329,14 +329,13 @@ $grantlist = array(
     <h5 class="mb-0 heading-underline">Research Labs</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <div class="pt-3 pb-3 grantResult grantSmall">
-        	<li><strong><?php the_title(); ?></strong>
+        	<h3><?php the_title(); ?></h3>
                 <?php 			
 				$content = get_the_content();
 				$content = preg_replace('#\[[^\]]+\]#', '',$content);
 				$content = apply_filters('the_content', $content);
 				echo wp_trim_words( $content, 30, '...' );
 				?>
-    		</li>
         </div>
 		<?php endwhile; ?>
 	<?php endif; ?>
