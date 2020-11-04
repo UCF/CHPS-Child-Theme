@@ -124,7 +124,7 @@ leftborder <?php } ?>">
 			<?php endif; ?>
             <?php if (get_field('curriculum_vitae')): ?>
 			<div class="person-label">
-				<i class="fa fa-file-text icongrey"></i> <a href="<?php the_field('curriculum_vitae'); ?>" target="_blank">View CV</a>
+				<i class="fa fa-file-text icongrey"></i> <a href="<?php the_field('curriculum_vitae'); ?>" target="_blank">Curriculum Vitae</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('linkedin_url')): ?>
