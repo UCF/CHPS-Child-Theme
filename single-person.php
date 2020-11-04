@@ -82,7 +82,7 @@ $ids = get_the_ID();
 						</div>
 					<?php endif; ?>		
 <?php if(get_field('department_tax')){ ?>
-	<div class="row mt-5">
+	<div class="row mt-4">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Unit<?php if ( count( $project_depts ) > 1 ) { echo 's'; } ?>
 		</div>
