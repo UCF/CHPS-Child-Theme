@@ -74,10 +74,10 @@ $ids = get_the_ID();
 							</div>
 						</div>
 					<?php endif; ?>
-                    <?php if (get_field('cv')): ?>	
+                    <?php if (get_field('curriculum_vitae')): ?>	
 						<div class="row mt-2 mb-4">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
-								<a href="<?php the_field('cv'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Curriculum Vitae" target="_blank" class="btn blackLarge-BTN btn-block"><i class="vc_btn3-icon fa fa-file-text" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Curriculum Vitae</a>
+								<a href="<?php the_field('curriculum_vitae'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Curriculum Vitae" target="_blank" class="btn blackLarge-BTN btn-block"><i class="vc_btn3-icon fa fa-file-text" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Curriculum Vitae</a>
 							</div>
 						</div>
 					<?php endif; ?>		
