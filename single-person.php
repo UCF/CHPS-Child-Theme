@@ -70,7 +70,7 @@ $ids = get_the_ID();
 					<?php if (get_field('google_scholar')): ?>	
 						<div class="row mt-3 mb-1">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
-								<a href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank" class="btn profileY-BTN btn-block"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
+								<a href="<?php the_field('google_scholar'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Publications" target="_blank" class="btn profileY-BTN btn-block btnhover-yellow"><i class="vc_btn3-icon fa fa-bookmark" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Publications</a>
 							</div>
 						</div>
 					<?php endif; ?>
