@@ -75,14 +75,14 @@ $ids = get_the_ID();
 						</div>
 					<?php endif; ?>
                     <?php if (get_field('curriculum_vitae')): ?>	
-						<div class="row mt-2 mb-4">
+						<div class="row mt-2 mb-0">
 							<div class="col-md offset-md-0 col-8 offset-2 my-1">
 								<a href="<?php the_field('curriculum_vitae'); ?>" title="View <?php echo get_person_name( $post ); ?>'s Curriculum Vitae" target="_blank" class="btn blackLarge-BTN btn-block"><i class="vc_btn3-icon fa fa-file-text" style="font-size: 20px; height: 16px; line-height: 16px; margin-right: 15px;"></i> View Curriculum Vitae</a>
 							</div>
 						</div>
 					<?php endif; ?>		
 <?php if(get_field('department_tax')){ ?>
-	<div class="row">
+	<div class="row mt-4">
 		<div class="col-xl-4 col-md-12 col-sm-4 person-label">
 			Unit<?php if ( count( $project_depts ) > 1 ) { echo 's'; } ?>
 		</div>
