@@ -336,7 +336,7 @@ $grantlist = array(
 								?>
 									<ul id="capitalText" class="mb-3">
 										<?php foreach( $labtag as $labme ): ?>
-											<li><?php echo $labme->post_title; ?></li>
+											<li><a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank"><?php echo $labme->post_title; ?></a></li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
