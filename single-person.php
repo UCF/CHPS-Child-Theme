@@ -336,12 +336,11 @@ $grantlist = array(
 								?>
 									<ul id="capitalText" class="mb-3">
 										<?php foreach( $labtag as $labme ): ?>
-											<li><a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank"><?php echo $labme->post_title; ?></a></li>
+											<li><a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank"><?php echo $labme->post_title; ?>: <?php the_field('website_url'); ?></a></li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-                                <!-- END REVERSE OPTION -->
-                                
+                                <!-- END REVERSE OPTION -->  
 <?php
 	// query
 	$the_labquery = new WP_Query( $labs );
