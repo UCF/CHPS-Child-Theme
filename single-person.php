@@ -329,6 +329,19 @@ $grantlist = array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
+                                <!-- HERE IS REVERSE OPTION -->
+                                <?php $labtag = get_field('lab_affiliations');
+									if( $labtag ): 
+										echo '<h5 class="heading-underline">Research Interests V2</h5>';
+								?>
+									<ul id="capitalText" class="mb-3">
+										<?php foreach( $labtag as $term ): ?>
+											<li><?php echo $term->name; ?></li>
+										<?php endforeach; ?>
+									</ul>
+								<?php endif; ?>
+                                <!-- END REVERSE OPTION -->
+                                
 <?php
 	// query
 	$the_labquery = new WP_Query( $labs );
