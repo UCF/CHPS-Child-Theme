@@ -335,8 +335,8 @@ $grantlist = array(
 										echo '<h5 class="heading-underline">Research Interests V2</h5>';
 								?>
 									<ul id="capitalText" class="mb-3">
-										<?php foreach( $labtag as $term ): ?>
-											<li><?php echo $term->name; ?></li>
+										<?php foreach( $labtag as $labme ): ?>
+											<li><?php echo $labme->name; ?></li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
