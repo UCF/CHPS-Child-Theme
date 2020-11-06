@@ -342,10 +342,8 @@ $grantlist = array(
 		<?php } else { ?>
         		<a href="/research/labs/#<?php the_ID(); ?>" target="_blank">
         <?php } ?>
-        	<h3><?php the_title(); ?></h3>
-        <?php if(get_field('website_url')) { ?>
-				</a>
-		<?php }?>    
+        			<h3><?php the_title(); ?></h3>
+				</a>   
                 <?php 			
 				//$content = get_the_content();
 				//$content = preg_replace('#\[[^\]]+\]#', '',$content);
