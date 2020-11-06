@@ -334,7 +334,7 @@ $grantlist = array(
 	$the_labquery = new WP_Query( $labs );
 	?>
 	<?php if( $the_labquery->have_posts() ): ?>
-    <h5 class="mb-0 heading-underline">Research Labs</h5>
+    <h5 class="mb-0 heading-underline">Research Lab Affiliations</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <div class="pt-3 pb-3 grantResult grantSmall">
         <?php if(get_field('website_url')) { ?>
@@ -345,18 +345,16 @@ $grantlist = array(
 				</a>
 		<?php }?>    
                 <?php 			
-				$content = get_the_content();
-				$content = preg_replace('#\[[^\]]+\]#', '',$content);
-				$content = apply_filters('the_content', $content);
-				echo wp_trim_words( $content, 30, '...' );
+				//$content = get_the_content();
+				//$content = preg_replace('#\[[^\]]+\]#', '',$content);
+				//$content = apply_filters('the_content', $content);
+				//echo wp_trim_words( $content, 30, '...' );
 				?>
         </div>
 		<?php endwhile; ?>
 	<?php endif; ?>
-	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                          
-                                
-                                
- <div class="mb-4 pt-3">                                   								
+	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                                                
+<div class="mb-4 pt-3">                                   								
 <?php
 // filter
 function my_posts_where( $where ) {
