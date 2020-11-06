@@ -323,7 +323,7 @@ $grantlist = array(
 									if( $termswer ): 
 										echo '<h5 class="heading-underline">Research Interests</h5>';
 								?>
-									<ul id="capitalText" class="mb-3">
+									<ul id="capitalText" class="mb-4">
 										<?php foreach( $termswer as $term ): ?>
 											<li><?php echo $term->name; ?></li>
 										<?php endforeach; ?>
@@ -334,9 +334,17 @@ $grantlist = array(
 									if( $labtag ): 
 										echo '<h5 class="heading-underline">Research Interests V2</h5>';
 								?>
-									<ul id="capitalText" class="mb-3">
+									<ul class="mb-3">
 										<?php foreach( $labtag as $labme ): ?>
-											<li><a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank"><?php echo $labme->post_title; ?>// <?php echo $labme->website_url; ?></a></li>
+											<li>
+                                            <?php if($labme->website_url) { ?>
+                                                    <a href="<?php echo $labme->website_url; ?>" target="_blank">
+                                            <?php } else { ?>
+                                                    <a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank">
+                                            <?php } ?>
+													<?php echo $labme->post_title; ?>
+                                                </a>
+                                            </li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
