@@ -336,7 +336,7 @@ $grantlist = array(
 								?>
 									<ul id="capitalText" class="mb-3">
 										<?php foreach( $labtag as $labme ): ?>
-											<li><?php echo get_the_title(); ?></li>
+											<li><?php echo $labme->post_title; ?></li>
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
