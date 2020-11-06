@@ -826,7 +826,7 @@ $listlabs = '<div>';
 while($showlabs->have_posts()) : $showlabs->the_post(); 
 $getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $content = apply_filters( 'the_content', get_the_content() );
-$listlabs .= '<div id="' . get_the_ID() . '" class="mb-5 pb-5 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
+$listlabs .= '<div id="#' . get_the_ID() . '" class="mb-5 pb-5 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
 if( get_field('website_url', $post->ID) ) {	
 	$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '">';
 }
