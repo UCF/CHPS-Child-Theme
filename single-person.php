@@ -336,13 +336,13 @@ $grantlist = array(
 	<?php if( $the_labquery->have_posts() ): ?>
     <h5 class="mb-0 heading-underline">Research Lab Affiliations</h5>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
-        <div class="pt-3 pb-3 grantResult grantSmall">
+        <li>
         <?php if(get_field('website_url')) { ?>
 				<a href="<?php the_field('website_url'); ?>" target="_blank">
 		<?php } else { ?>
         		<a href="/research/labs/#lab<?php the_ID(); ?>" target="_blank">
         <?php } ?>
-        			<h3><?php the_title(); ?></h3>
+        			<?php the_title(); ?>
 				</a>   
                 <?php 			
 				//$content = get_the_content();
@@ -350,7 +350,7 @@ $grantlist = array(
 				//$content = apply_filters('the_content', $content);
 				//echo wp_trim_words( $content, 30, '...' );
 				?>
-        </div>
+        </li>
 		<?php endwhile; ?>
 	<?php endif; ?>
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                                                
