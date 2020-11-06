@@ -339,7 +339,9 @@ $grantlist = array(
         <div class="pt-3 pb-3 grantResult grantSmall">
         <?php if(get_field('website_url')) { ?>
 				<a href="<?php the_field('website_url'); ?>" target="_blank">
-		<?php }?>
+		<?php } else { ?>
+        		<a href="/research/labs/#<?php the_ID(); ?>" target="_blank">
+        <?php } ?>
         	<h3><?php the_title(); ?></h3>
         <?php if(get_field('website_url')) { ?>
 				</a>
