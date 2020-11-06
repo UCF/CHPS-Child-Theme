@@ -335,6 +335,7 @@ $grantlist = array(
 	?>
 	<?php if( $the_labquery->have_posts() ): ?>
     <h5 class="mb-0 heading-underline">Research Lab Affiliations</h5>
+    <ul>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <li>
         <?php if(get_field('website_url')) { ?>
@@ -352,6 +353,7 @@ $grantlist = array(
 				?>
         </li>
 		<?php endwhile; ?>
+     </ul>   
 	<?php endif; ?>
 	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                                                
 <div class="mb-4 pt-3">                                   								
