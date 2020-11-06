@@ -334,7 +334,7 @@ $grantlist = array(
 	$the_labquery = new WP_Query( $labs );
 	?>
 	<?php if( $the_labquery->have_posts() ): ?>
-    <h5 class="mb-0 heading-underline">Research Lab Affiliations</h5>
+    <h5 class="heading-underline">Research Lab Affiliations</h5>
     <ul>
 		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
         <li>
