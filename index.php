@@ -11,7 +11,7 @@
                 <?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
             </div>
             <div class="col-lg-12 pt-2">
-                <!--<i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php //echo "$s"; ?></strong></span>-->
+                <i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php esc_html( stripslashes( get_search_query() ) ); ?></strong></span>
             </div>
         </div>           
 		<div class="row">
