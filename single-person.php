@@ -332,7 +332,7 @@ $grantlist = array(
                                 <!-- HERE IS REVERSE OPTION -->
                                 <?php $labtag = get_field('lab_affiliations');
 									if( $labtag ): 
-										echo '<h5 class="heading-underline">Research Interests V2</h5>';
+										echo '<h5 class="heading-underline">Research Lab Affiliations</h5>';
 								?>
 									<ul class="mb-3">
 										<?php foreach( $labtag as $labme ): ?>
@@ -348,34 +348,7 @@ $grantlist = array(
 										<?php endforeach; ?>
 									</ul>
 								<?php endif; ?>
-                                <!-- END REVERSE OPTION -->  
-<?php
-	// query
-	$the_labquery = new WP_Query( $labs );
-	?>
-	<?php if( $the_labquery->have_posts() ): ?>
-    <h5 class="heading-underline">Research Lab Affiliations</h5>
-    <ul>
-		<?php while ( $the_labquery->have_posts() ) : $the_labquery->the_post(); ?>
-        <li>
-        <?php if(get_field('website_url')) { ?>
-				<a href="<?php the_field('website_url'); ?>" target="_blank">
-		<?php } else { ?>
-        		<a href="/research/labs/#lab<?php the_ID(); ?>" target="_blank">
-        <?php } ?>
-        			<?php the_title(); ?>
-				</a>   
-                <?php 			
-				//$content = get_the_content();
-				//$content = preg_replace('#\[[^\]]+\]#', '',$content);
-				//$content = apply_filters('the_content', $content);
-				//echo wp_trim_words( $content, 30, '...' );
-				?>
-        </li>
-		<?php endwhile; ?>
-     </ul>   
-	<?php endif; ?>
-	<?php wp_reset_query();	 // Restore global post data stomped by the_post(). ?>                                                
+                                <!-- END REVERSE OPTION -->                                                  
 <div class="mb-4 pt-3">                                   								
 <?php
 // filter
