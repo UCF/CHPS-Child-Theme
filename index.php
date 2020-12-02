@@ -9,7 +9,7 @@
 			</header>
 		</div>
 		<div class="col-lg-6">	
-
+			<?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">
 
