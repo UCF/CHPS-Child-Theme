@@ -2,7 +2,19 @@
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 
-            
+ <div class="row mb-4">
+		<div class="col-lg-6">	
+			<header class="archive-header">
+				<h1 class="archive-title heading-underline">Search Results</h1>
+			</header>
+		</div>
+		<div class="col-lg-6">	
+
+		</div>
+		<div class="col-lg-12 pt-2">
+
+		</div>
+	</div>           
             
             
             
