@@ -1,4 +1,7 @@
-<?php get_header();?>
+<?php get_header();
+$searchName = $s;
+$html = esc_html( $searchName );
+?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
         <div class="row mb-4">
@@ -11,7 +14,7 @@
                 <?php echo do_shortcode( ' [searchme posttype="post" size="large" placeholder="Search News"] ' ); ?>
             </div>
             <div class="col-lg-12 pt-2">
-                <i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php esc_html( stripslashes( get_search_query() ) ); ?></strong></span>
+                <i class="fa fa-search icongrey"></i><span class="searchresults">Search Result for: <strong><?php echo $html; ?></strong></span>
             </div>
         </div>           
 		<div class="row">
