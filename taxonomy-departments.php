@@ -141,9 +141,7 @@ $tax = $wp_query->get_queried_object();
 					<?php endif; ?>
 <!-- END PART TIME FACULTY -->
 					<?php //wpbeginner_numeric_posts_nav(); ?>
-				</div>
-				<!-- then the pagination links -->
-				<div class="mt-5 pt-3">
+				</div>				
 				<!-- START EMERITUS FACULTY -->
 					<?php
 					$argsEmeritus = array(
@@ -163,6 +161,7 @@ $tax = $wp_query->get_queried_object();
 					$emeritus = new WP_Query( $argsEmeritus );				
 					if( $emeritus->have_posts() ) :
 					?>
+                    <div class="mt-5 pt-3">
 					<h1 class="archive-title heading-underline mt-5 mb-4">Emeritus Faculty</h1>
 					<div class="row parttimers">   
 						<?php while( $emeritus->have_posts() ) :
@@ -182,10 +181,9 @@ $tax = $wp_query->get_queried_object();
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
 					</div>
+                </div>   
 					<?php endif; ?>
-<!-- END EMERITUS FACULTY -->
-					<?php //wpbeginner_numeric_posts_nav(); ?>
-				</div>                
+<!-- END EMERITUS FACULTY -->				             
 			</div>
 			<div class="col-lg-3 profilesidebar">
 				<?php dynamic_sidebar( 'directory-sidebar' ); ?>
