@@ -175,6 +175,9 @@ $tax = $wp_query->get_queried_object();
 							</div>
 							<strong><?php the_title(); ?></strong></br>
 								<?php the_field('jobtitle'); ?>
+                                <?php if ( get_field( 'dead' ) == 1 ) : ?>
+									<?php echo '</br>true'; ?>
+                                <?php endif; ?>
 						</div>
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
