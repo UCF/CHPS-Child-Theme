@@ -25,7 +25,6 @@ $tax = $wp_query->get_queried_object();
 				<?php get_template_part( 'person-result'); ?>	
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
-				<div class="mt-5 pt-3">
 				<!-- START PART TIME FACULTY -->
 					<?php
 					$argsPT = array(
@@ -45,6 +44,7 @@ $tax = $wp_query->get_queried_object();
 					$parttimers = new WP_Query( $argsPT );				
 					if( $parttimers->have_posts() ) :
 					?>
+                    <div class="mt-5 pt-3">
 					<h1 class="archive-title heading-underline mt-5 mb-4">Part Time Faculty</h1>
 					<div class="row parttimers">   
 						<?php while( $parttimers->have_posts() ) :
@@ -76,11 +76,9 @@ $tax = $wp_query->get_queried_object();
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
 					</div>
+                </div>
 					<?php endif; ?>
-<!-- END PART TIME FACULTY -->
-					<?php //wpbeginner_numeric_posts_nav(); ?>
-				</div>
-                <div class="mt-5 pt-3">
+<!-- END PART TIME FACULTY -->				
 				<!-- START ASSISTANTS -->
 					<?php
 					$argsAssist = array(
@@ -100,6 +98,7 @@ $tax = $wp_query->get_queried_object();
 					$getassistants = new WP_Query( $argsAssist );				
 					if( $getassistants->have_posts() ) :
 					?>
+                    <div class="mt-5 pt-3">
 					<h1 class="archive-title heading-underline mt-5 mb-4">Graduate Assistants</h1>
 					<div class="UCFassistants">   
                     <div class="d-flex flex-wrap">
@@ -138,10 +137,9 @@ $tax = $wp_query->get_queried_object();
 						  		wp_reset_postdata(); ?>
                         	</div>
                     	</div>
+                    </div>	
 					<?php endif; ?>
 <!-- END PART TIME FACULTY -->
-					<?php //wpbeginner_numeric_posts_nav(); ?>
-				</div>				
 				<!-- START EMERITUS FACULTY -->
 					<?php
 					$argsEmeritus = array(
