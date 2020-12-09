@@ -176,7 +176,7 @@ $tax = $wp_query->get_queried_object();
 							<strong><?php the_title(); ?></strong></br>
 								<?php the_field('jobtitle'); ?>
                                 <?php if ( get_field( 'dead' ) == 1 ) : ?>
-									<?php echo '</br>true'; ?>
+									<?php echo '</br>*deceased'; ?>
                                 <?php endif; ?>
 						</div>
 						<?php endwhile;
