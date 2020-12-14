@@ -56,7 +56,7 @@ function my_customblog_sidebar() {
             'name' => __( 'Blog Post Sidebar' ),
             'id' => 'custom-side-bar',
             'description' => __( 'This is displayed on Blog Posts' ),
-            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix newsSearcher">',
 			'after_widget' => '</div>',
 			'before_title'  => '<h2 class="h5 heading-underline">',
 			'after_title'   => '</h2>',
