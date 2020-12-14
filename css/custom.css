@@ -539,7 +539,7 @@ article blockquote p {
 .newsSearcher .searchandfilter select {
     width: 100% !important;
  }
-.newsSearcher .searchandfilter input[type="submit" i] {
+.newsSearcher .searchandfilter input[type="submit"] {
 background: #ffcc00 !important;	 
  }
 
