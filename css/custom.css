@@ -533,7 +533,7 @@ article blockquote p {
 	padding: 0px 0px 15px 0px !important;
 	margin-bottom: 10px !important;
 }
-.newsSearcher .searchandfilter select {
+.newsSearcher .searchandfilter select.sf-input-select {
  width:100% !important;
 }
 
