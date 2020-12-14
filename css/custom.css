@@ -530,7 +530,7 @@ article blockquote p {
 	background: #f2f2f2;
 }
 .newsSearcher .searchandfilter ul li{
-	padding: 0px 0px 15px 0px !important;
+	padding: 0px 10px 15px 0px !important;
 	margin-bottom: 10px !important;
 }
 .newsSearcher .searchandfilter label {
