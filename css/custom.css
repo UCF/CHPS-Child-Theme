@@ -526,6 +526,10 @@ article blockquote p {
     font-weight: 400;
     line-height: 1.4;
 }   
+.newsSearcher .searchandfilter {
+	background:red;
+}
+
 /* = RECENT LIST TEXT SHORTCODE 
 -------------------------------------------------------------- */
 .recentlist li {
