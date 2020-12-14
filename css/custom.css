@@ -527,7 +527,10 @@ article blockquote p {
     line-height: 1.4;
 }   
 .newsSearcher .searchandfilter {
-	background:red;
+
+}
+.newsSearcher .searchandfilter ul li{
+	padding: 20px 0px !important;
 }
 
 /* = RECENT LIST TEXT SHORTCODE 
