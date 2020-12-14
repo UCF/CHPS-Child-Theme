@@ -534,7 +534,7 @@ article blockquote p {
 	margin-bottom: 10px !important;
 }
 .newsSearcher .searchandfilter select {
- width:100%; 
+ width:100% !important;
 }
 
 /* = RECENT LIST TEXT SHORTCODE 
