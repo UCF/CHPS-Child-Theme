@@ -534,7 +534,7 @@ article blockquote p {
 	margin-bottom: 10px !important;
 }
 .newsSearcher .searchandfilter label {
-    width: 245px !important;
+    width: 100% !important;
  }
 .newsSearcher .searchandfilter select {
     width: 100% !important;
