@@ -539,6 +539,9 @@ article blockquote p {
 .newsSearcher .searchandfilter select {
     width: 100% !important;
  }
+.newsSearcher .searchandfilter input[type="submit" i] {
+background: #ffcc00 !important;	 
+ }
 
 /* = RECENT LIST TEXT SHORTCODE 
 -------------------------------------------------------------- */
