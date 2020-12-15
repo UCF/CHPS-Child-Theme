@@ -536,6 +536,7 @@ article blockquote p {
 .newsSearcher .searchandfilter label {
     width: 100% !important;
 	font-size:18px;
+	padding: 8px;
  }
 .newsSearcher .searchandfilter select {
     width: 100% !important;
