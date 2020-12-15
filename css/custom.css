@@ -542,7 +542,21 @@ article blockquote p {
 	padding: 8px;
  }
 .newsSearcher .searchandfilter input[type="submit"] {
-background: #ffcc00 !important;	 
+	background: #fecb2f;
+    border: 0px solid #fecb2f;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: .1em;
+    -o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+ }
+ .newsSearcher .searchandfilter input[type="submit"]:hover {
+	background: #cca12e;
+    color:#fff;
  }
 
 /* = RECENT LIST TEXT SHORTCODE 
