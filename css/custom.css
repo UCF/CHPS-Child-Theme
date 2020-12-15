@@ -545,18 +545,20 @@ article blockquote p {
 	background: #fecb2f;
     border: 0px solid #fecb2f;
     cursor: pointer;
+	padding:8px 15px;
+	font-size:16px;
     font-weight: 600;
     text-align: center;
     letter-spacing: .1em;
-    -o-transition: .2s;
-    -ms-transition: .2s;
-    -moz-transition: .2s;
-    -webkit-transition: .2s;
-    transition: .2s;
  }
  .newsSearcher .searchandfilter input[type="submit"]:hover {
 	background: #cca12e;
     color:#fff;
+	-o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
  }
 
 /* = RECENT LIST TEXT SHORTCODE 
