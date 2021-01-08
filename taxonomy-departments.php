@@ -166,8 +166,7 @@ $tax = $wp_query->get_queried_object();
 						  $emeritus->the_post();
 						  $getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
 						<div class="col-md-3 col-sm-6 col-xs-6 col-6 mb-4">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></br>
-								<?php the_field('jobtitle'); ?>
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a>
 						</div>
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
