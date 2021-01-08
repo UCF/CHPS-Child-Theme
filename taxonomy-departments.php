@@ -142,18 +142,17 @@ $tax = $wp_query->get_queried_object();
 <!-- END PART TIME FACULTY -->
 <!-- START ASHA FELLOWS -->
 					<?php
-					$mystorename = 'ASHA Fellow';
 					$argsFellows = array(
-					  'post_type'   => 'person',
+					  'post_type'   => 'emeritus',
 					  'posts_per_page' => -1,	
 					  'meta_key' => 'lname',
 					  'orderby' => 'meta_value',
 					  'order' => 'ASC',
 					  'tax_query'   => array(
 						array(
-							'taxonomy' => 'specialty_unit',
+							'taxonomy' => 'departments',
 							'field'    => 'name',
-							'terms'    => $mystorename,
+							'terms'    => $tax->name
 						)
 					  )
 					 );
