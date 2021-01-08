@@ -143,16 +143,17 @@ $tax = $wp_query->get_queried_object();
 <!-- START ASHA FELLOWS -->
 					<?php
 					$argsFellows = array(
-					  'post_type'   => 'emeritus',
+					  'post_type'   => 'person',
+					  'post_status' => 'publish',
 					  'posts_per_page' => -1,	
-					  'meta_key' => 'lname',
+					  'meta_key' => 'profile_L_name',
 					  'orderby' => 'meta_value',
 					  'order' => 'ASC',
 					  'tax_query'   => array(
 						array(
-							'taxonomy' => 'departments',
+							'taxonomy' => 'specialty_unit',
 							'field'    => 'name',
-							'terms'    => $tax->name
+							'terms'    => 'ASHA Fellow',
 						)
 					  )
 					 );
