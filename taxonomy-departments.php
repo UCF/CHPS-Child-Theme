@@ -142,7 +142,7 @@ $tax = $wp_query->get_queried_object();
 <!-- END PART TIME FACULTY -->
 <!-- START ASHA FELLOWS -->
 					<?php
-					$argsEmeritus = array(
+					$argsFellows = array(
 					  'post_type'   => 'emeritus',
 					  'posts_per_page' => -1,	
 					  'meta_key' => 'lname',
@@ -156,7 +156,7 @@ $tax = $wp_query->get_queried_object();
 						)
 					  )
 					 );
-					$emeritus = new WP_Query( $argsEmeritus );				
+					$emeritus = new WP_Query( $argsFellows );				
 					if( $emeritus->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
