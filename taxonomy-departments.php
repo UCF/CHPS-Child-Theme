@@ -140,6 +140,42 @@ $tax = $wp_query->get_queried_object();
                     </div>	
 					<?php endif; ?>
 <!-- END PART TIME FACULTY -->
+<!-- START ASHA FELLOWS -->
+					<?php
+					$argsEmeritus = array(
+					  'post_type'   => 'emeritus',
+					  'posts_per_page' => -1,	
+					  'meta_key' => 'lname',
+					  'orderby' => 'meta_value',
+					  'order' => 'ASC',
+					  'tax_query'   => array(
+						array(
+							'taxonomy' => 'departments',
+							'field'    => 'name',
+							'terms'    => $tax->name
+						)
+					  )
+					 );
+					$emeritus = new WP_Query( $argsEmeritus );				
+					if( $emeritus->have_posts() ) :
+					?>
+                    <div class="mt-5 pt-3">
+					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h1>
+					<div class="row parttimers">   
+						<?php while( $emeritus->have_posts() ) :
+						  $emeritus->the_post();
+						  $getPTimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); ?>
+						<div class="col-md-3 col-sm-6 col-xs-6 col-6 mb-4">
+							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></br>
+								<?php the_field('jobtitle'); ?>
+						</div>
+						<?php endwhile;
+						  wp_reset_postdata(); ?>
+					</div>
+                </div>   
+					<?php endif; ?>
+<!-- END ASHA FELLOWS -->
+
 				<!-- START EMERITUS FACULTY -->
 					<?php
 					$argsEmeritus = array(
