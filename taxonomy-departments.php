@@ -150,6 +150,12 @@ $tax = $wp_query->get_queried_object();
 					  'orderby' => 'meta_value',
 					  'order' => 'ASC',
 					  'tax_query'   => array(
+					  	'relation' => 'AND',
+						array(
+							'taxonomy' => 'departments',
+							'field'    => 'name',
+							'terms'    => $tax->name
+						),
 						array(
 							'taxonomy' => 'specialty_unit',
 							'field'    => 'name',
@@ -161,7 +167,7 @@ $tax = $wp_query->get_queried_object();
 					if( $ashafellows->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows 2</h1>
+					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows 3</h1>
 					<div class="row parttimers">   
 						<?php while( $ashafellows->have_posts() ) :
 						  $ashafellows->the_post();
