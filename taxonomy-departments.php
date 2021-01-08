@@ -173,7 +173,7 @@ $tax = $wp_query->get_queried_object();
 						<?php while( $ashafellows->have_posts() ) :
 						  $ashafellows->the_post();
 					 	?>
-						<div class="col mb-4">
+						<div class="col">
 							<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></li>
 						</div>
 						<?php endwhile;
