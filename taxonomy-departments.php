@@ -156,14 +156,14 @@ $tax = $wp_query->get_queried_object();
 						)
 					  )
 					 );
-					$emeritus = new WP_Query( $argsFellows );				
-					if( $emeritus->have_posts() ) :
+					$ashafellows = new WP_Query( $argsFellows );				
+					if( $ashafellows->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h1>
+					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows 2</h1>
 					<div class="row parttimers">   
-						<?php while( $emeritus->have_posts() ) :
-						  $emeritus->the_post();
+						<?php while( $ashafellows->have_posts() ) :
+						  $ashafellows->the_post();
 					 	?>
 						<div class="col-md-3 col-sm-6 col-xs-6 col-6 mb-4">
 							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a>
