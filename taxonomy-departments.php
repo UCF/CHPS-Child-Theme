@@ -167,16 +167,18 @@ $tax = $wp_query->get_queried_object();
 					if( $ashafellows->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows 3</h1>
-					<div class="row parttimers">   
+					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h1>
+					<div class="row">
+                    	<ul>   
 						<?php while( $ashafellows->have_posts() ) :
 						  $ashafellows->the_post();
 					 	?>
 						<div class="col-md-3 col-sm-6 col-xs-6 col-6 mb-4">
-							<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a>
+							<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></li>
 						</div>
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
+                    	</ul>
 					</div>
                 </div>   
 					<?php endif; ?>
