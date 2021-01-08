@@ -142,6 +142,49 @@ $tax = $wp_query->get_queried_object();
 <!-- END PART TIME FACULTY -->
 <!-- START ASHA FELLOWS -->
 					<?php
+					$argsAshaHonors = array(
+					  'post_type'   => 'person',
+					  'post_status' => 'publish',
+					  'posts_per_page' => -1,	
+					  'meta_key' => 'profile_L_name',
+					  'orderby' => 'meta_value',
+					  'order' => 'ASC',
+					  'tax_query'   => array(
+					  	'relation' => 'AND',
+						array(
+							'taxonomy' => 'departments',
+							'field'    => 'name',
+							'terms'    => $tax->name
+						),
+						array(
+							'taxonomy' => 'specialty_unit',
+							'field'    => 'name',
+							'terms'    => 'ASHA Honors',
+						)
+					  )
+					 );
+					$ashaHonors = new WP_Query( $argsAshaHonors );				
+					if( $ashaHonors->have_posts() ) :
+					?>
+                    <div class="mt-5 pt-3">
+					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Honors of the Association</h1>
+					<div class="row">
+                    	<ul>   
+						<?php while( $ashaHonors->have_posts() ) :
+						  $ashaHonors->the_post();
+					 	?>
+						<div class="col">
+							<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></li>
+						</div>
+						<?php endwhile;
+						  wp_reset_postdata(); ?>
+                    	</ul>
+					</div>
+                </div>   
+					<?php endif; ?>
+<!-- END ASHA FELLOWS -->
+<!-- START ASHA FELLOWS -->
+					<?php
 					$argsFellows = array(
 					  'post_type'   => 'person',
 					  'post_status' => 'publish',
