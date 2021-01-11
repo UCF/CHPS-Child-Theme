@@ -207,7 +207,7 @@ $tax = $wp_query->get_queried_object();
 					  )
 					 );
 					$ashafellows = new WP_Query( $argsFellows );				
-					if( $ashafellows->have_posts() && $tax = 'Health Professions' ) :
+					if( $ashafellows->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
 					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h1>
