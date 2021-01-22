@@ -933,6 +933,9 @@ a.in-socialicon {
 a.fk-socialicon {
 	color: #ff0084;
 }
+a.fk-socialicon {
+	color: #666;
+}
 #minisocial a:hover {
 	color:#fc0;
 }
