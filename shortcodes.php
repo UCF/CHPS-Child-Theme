@@ -337,6 +337,7 @@ function minisocialvar( $atts ) {
 		'yt' => '',
 		'in' => '',
 		'fk' => '',
+		'em' => '',
 		'align' => 'left',
 		'size' => '',
     ), $atts ); 
@@ -347,7 +348,7 @@ if (!empty($s['ig'])) { $list .= '<a href="' . $s['ig'] . '" title="Follow Us On
 if (!empty($s['yt'])) { $list .= '<a href="' . $s['yt'] . '" title="Watch Us On YouTube" target="_blank" class="yt-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-youtube fa-stack-1x fa-inverse"></i></span></a>'; } 
 if (!empty($s['in'])) { $list .= '<a href="' . $s['in'] . '" title="Join Us On LinkedIn" target="_blank" class="in-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></span></a>'; } 
 if (!empty($s['fk'])) { $list .= '<a href="' . $s['fk'] . '" title="View Us On Flickr" target="_blank" class="fk-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-flickr fa-stack-1x fa-inverse"></i></span></a>'; }
-if (!empty($s['fk'])) { $list .= '<a href="mailto:' . $s['em'] . '" title="Email Me" target="_blank" class="em-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></a>'; }  
+if (!empty($s['em'])) { $list .= '<a href="mailto:' . $s['em'] . '" title="Email Me" target="_blank" class="em-socialicon"><span class="fa-stack ' . $s['size'] . '"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-envelope fa-stack-1x fa-inverse"></i></span></a>'; }  
 $list .= '</div>'; 
 return $list;
 }
