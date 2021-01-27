@@ -222,7 +222,7 @@ function ag_yoast_seo_fb_share_images( $img ) {
 	if( is_post_type_archive( 'researchopp') ) {
 		$img = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
 	}
-	if( is_post_type( 'researchopp') ) {
+	if( is_singular( 'researchopp') ) {
 		$img = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
 	}
 	return $img;
