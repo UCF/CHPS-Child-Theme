@@ -12,6 +12,13 @@ $deadline = get_field( 'research_enddate' );
 $deadlineShort = date("Ymd", strtotime($deadline));	
 $postid = get_the_ID();
 ?>
+<meta property="og:image" content="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg" />
+<meta property="og:image:secure_url" content="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg" />
+<meta property="og:image:width" content="750" />
+<meta property="og:image:height" content="500" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="<?php the_title(); ?>" />
+<meta name="twitter:image" content="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg" /> 
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="publish post-list-item">
 	<div class="row">
