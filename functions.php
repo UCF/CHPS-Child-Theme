@@ -215,6 +215,18 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
+/* Add custom Facebook Social Share images for Yoast SEO for Archive pages
+----------------------------------------------------------------------------------------*/
+add_filter( 'wpseo_opengraph_image', 'ag_yoast_seo_fb_share_images', 10, 1 );
+function ag_yoast_seo_fb_share_images( $img ) {
+	if( is_post_type_archive( 'researchopp') ) {
+		$img = get_stylesheet_directory_uri().'/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
+	}
+	if( is_category( 'categoryname') ) {
+		$img = get_stylesheet_directory_uri().'/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
+	}
+	return $img;
+};
 
 
 
