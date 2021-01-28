@@ -218,7 +218,7 @@ if( function_exists('acf_add_options_page') ) {
 function fb_opengraph() {
     global $post;
  
-    if(is_singular( 'researchopp' )) {
+    if(is_singular( 'researchopp' ) OR is_post_type_archive( 'researchopp' )) {
         if(has_post_thumbnail($post->ID)) {
 			/** do nothing */
         } else {
