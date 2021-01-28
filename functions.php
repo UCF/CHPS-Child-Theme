@@ -219,13 +219,12 @@ function my_wpseo_opengraph() {
     global $post;
     if (isset($post)) {
         $og_image = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
-        if (is_post_type('researchopp')) {
+        if ($og_image) {
             $image_url = $og_image['sizes']['large'];
             $GLOBALS['wpseo_og']->image_output($image_url);
         }
     }
 }
-
 add_action('wpseo_opengraph', 'my_wpseo_opengraph', 29);
 function wpbeginner_numeric_posts_nav() {
  
