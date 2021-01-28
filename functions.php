@@ -217,7 +217,6 @@ if( function_exists('acf_add_options_page') ) {
 }
 function fb_opengraph() {
     global $post;
- 
     if(is_singular( 'researchopp' ) OR is_post_type_archive( 'researchopp' )) {
         if(has_post_thumbnail($post->ID)) {
 			/** do nothing */
@@ -227,6 +226,12 @@ $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01
 <?php
 		}
     } else {
+        return;
+    }
+if(is_post_type_archive( 'researchopp' )) {
+$img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';?>
+<meta property="og:image" content="<?php echo $img_src; ?>"/>
+<?php
         return;
     }
 }
