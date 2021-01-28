@@ -215,6 +215,14 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
+add_filter('wpseo_opengraph_image', 'category_image');
+function category_image($image) {
+   global $post;
+   if( is_post_type( 'researchopp' ) ) {
+       $image = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
+   } 
+   return $image;
+}
 function wpbeginner_numeric_posts_nav() {
  
     if( is_singular() )
