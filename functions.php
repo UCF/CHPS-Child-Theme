@@ -222,11 +222,10 @@ function fb_opengraph() {
         if(has_post_thumbnail($post->ID)) {
 			/** do nothing */
         } else {
-            $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
-		}
-        ?>
-    <meta property="og:image" content="<?php echo $img_src; ?>"/>
+            $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';?>
+			<meta property="og:image" content="<?php echo $img_src; ?>"/>
 <?php
+		}
     } else {
         return;
     }
