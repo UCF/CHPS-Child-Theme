@@ -215,15 +215,18 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
-add_filter('wpseo_opengraph_image', 'og_image');
-function og_image($image) {
+function my_wpseo_opengraph() {
     global $post;
- 
-    if (is_post_type( 'researchopp' )) {
-        $image = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg'; 
+    if (isset($post)) {
+        $og_image = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';
+        if (is_post_type('researchopp')) {
+            $image_url = $og_image['sizes']['large'];
+            $GLOBALS['wpseo_og']->image_output($image_url);
+        }
     }
-    return $image;
 }
+
+add_action('wpseo_opengraph', 'my_wpseo_opengraph', 29);
 function wpbeginner_numeric_posts_nav() {
  
     if( is_singular() )
