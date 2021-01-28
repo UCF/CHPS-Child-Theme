@@ -215,14 +215,6 @@ if( function_exists('acf_add_options_page') ) {
 	));
 	
 }
-/* Add custom Facebook Social Share images for Yoast SEO for Archive pages
-----------------------------------------------------------------------------------------*/
-add_action( 'wp_head', 'prefix_add_og_image', 10, 1 );
-function prefix_add_og_image( $img ) {
-    if( is_post_type( 'researchopp' ) ) {
-	    echo '<meta property="og:image" content="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg" />';
-    }
-}
 function wpbeginner_numeric_posts_nav() {
  
     if( is_singular() )
