@@ -235,7 +235,7 @@ $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01
         return;
     }
 }
-add_action('wp_head', 'fb_opengraph', 1);
+add_action('wp_head', 'fb_opengraph', 2);
 function wpbeginner_numeric_posts_nav() {
  
     if( is_singular() )
