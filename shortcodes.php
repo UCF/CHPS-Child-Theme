@@ -747,10 +747,10 @@ if( get_field('degrees') ) {
 		}
 	//END DEGREES
 	if ( !empty($a['showjob'])) {
-			if(get_field('job_titles_tax', $post->ID)){	
+			if(get_field('job_titles_tax')){	
 			$listnews .= '<span class="mt-2" style="display:block;">';
 			// Get a list of terms for this post's custom taxonomy.
-			$project_cats = get_the_terms($post->ID, 'job_titles');
+			$project_cats = get_the_terms('job_titles');
 			// Renumber array.
 			$project_cats = array_values($project_cats);
 			for($cat_count=0; $cat_count<count($project_cats); $cat_count++) {
@@ -767,7 +767,7 @@ if( get_field('degrees') ) {
 	else { }
 //$listnews .= '<br>';
 	// Get a list of terms for this post's custom taxonomy.
-	$project_units = get_the_terms($post->ID, 'departments');
+	$project_units = get_the_terms('departments');
 	// Renumber array.
 	$project_units = array_values($project_units);
 	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
