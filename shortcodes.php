@@ -823,7 +823,7 @@ if ( has_post_thumbnail()) {
 	} else { 	
 		$listlabs .= '<img class="flashIMG" src="' . get_field('default_lab_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">';
 	}	
-if( get_field('website_url', $post->ID) ) {	
+if( get_field('website_url') ) {	
 	$listlabs .= '</a>';
 }
 $listlabs .= '</div><div class="col-12 col-md-8">';
@@ -843,16 +843,16 @@ if ( !empty($a['showunit'])) { }
 	$listlabs .= '</div>';
 	}
 $listlabs .= '<h4>';	
-if( get_field('website_url', $post->ID) ) {		
+if( get_field('website_url') ) {		
 	$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '" target="_blank" rel="noopener noreferrer nofollow external" data-wpel-link="external">';
 	}
 $listlabs .= get_the_title();
-if( get_field('website_url', $post->ID) ) {	
+if( get_field('website_url') ) {	
 	$listlabs .= '</a>';
 	}
 $listlabs .= '</h4>';
 $listlabs .= $content;
-if( get_field('website_url', $post->ID) ) {	
+if( get_field('website_url') ) {	
 	$listlabs .= '<div class="vc_btn3-container  btnhover-yellow vc_btn3-left mt-3" ><a style="background-color:#ffcc00; color:#000000;" class="vc_general vc_btn3 vc_btn3-size-md vc_btn3-shape-square vc_btn3-style-custom vc_btn3-icon-left" href="' . get_field('website_url', $post->ID) . '" title="" target="_blank" rel="nofollow external noopener noreferrer" data-wpel-link="external"><i class="vc_btn3-icon fa fa-external-link"></i> Visit the Lab&apos;s Website</a></div>';
 }
 $listlabs .= '</div></div></div>';
