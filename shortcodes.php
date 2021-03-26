@@ -716,7 +716,6 @@ switch_to_blog(2);
 	}
 $listnews = '<div class="container"><div class="d-flex flex-wrap">';
 while($visualnews->have_posts()) : $visualnews->the_post(); 
-	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	if ($a['column'] == '4') {	
 		$listnews .= '<div class="person-4 mb-4">';
 		$listnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" class="noDecoration" title="' . get_the_title() . '">';
@@ -727,6 +726,7 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 		$listnews .= '<div class="listpersonGroup"><div class="media-background-container listpersonG-pic mx-auto">';
 	}	
 	if ( has_post_thumbnail()) {	
+		$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 		$listnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
 	} else { 	
 		$listnews .= '<img src="' . get_field('default_profile_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
