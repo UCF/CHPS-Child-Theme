@@ -767,7 +767,7 @@ if( get_field('degrees') ) {
 	else { }
 //$listnews .= '<br>';
 	// Get a list of terms for this post's custom taxonomy.
-	$project_units = get_the_terms('departments');
+	$project_units = get_the_terms($post->ID, 'departments');
 	// Renumber array.
 	$project_units = array_values($project_units);
 	for($unit_count=0; $unit_count<count($project_units); $unit_count++) {
