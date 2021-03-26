@@ -219,18 +219,27 @@ if( function_exists('acf_add_options_page') ) {
 ----------------------------------------------------------------------------------------*/
 function fb_opengraph() {
     global $post;
-    if(is_singular( 'researchopp' ) || is_post_type_archive( 'researchopp' )) {
-        if(has_post_thumbnail($post->ID)) {
-			/** do nothing */
-        } else {
-$def_social_image = get_field('social_image_researchopps', 'option');
-?>			
-<meta property="og:image" content="<?php echo $def_social_image; ?>"/>
-<?php
-		}
-    } else {
+	//insert all variables
+	$socialUp_researchOpps = get_field('social_image_researchopps', 'option');
+	$socialUp_pages = get_field('social_image_pages', 'option');
+	//start singular page types
+	//SINGLE RESEARCH OPPS
+    if(is_singular( 'researchopp' )) {
+        if(has_post_thumbnail($post->ID)) { /** do nothing */
+        } else { ?>			
+		<meta property="og:image" content="<?php echo $socialUp_researchOpps; ?>"/>
+	<?php } } 
+	//SINGLE REGULAR PAGE
+	if(is_page()) {
+        if(has_post_thumbnail($post->ID)) { /** do nothing */
+        } else { ?>			
+		<meta property="og:image" content="<?php echo $socialUp_pages; ?>"/>
+	<?php } } 
+//END REPEATER	
+	else {
         return;
     }
+//START ARCHIVES SECTION	
 if(is_post_type_archive( 'researchopp' )) {
 $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';?>
 <meta property="og:image" content="<?php echo $img_src; ?>"/>
