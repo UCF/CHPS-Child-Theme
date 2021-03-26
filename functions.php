@@ -234,7 +234,7 @@ $def_social_image = get_field('def_social_image', 'option');
     }
 if(is_post_type_archive( 'researchopp' )) {
 $img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';?>
-<meta property="og:image" content="<?php echo $img_src; ?>"/>
+<meta property="og:image" content="<?php echo $def_social_image; ?>"/>
 <?php
         return;
     }
