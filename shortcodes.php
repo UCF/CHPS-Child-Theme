@@ -764,7 +764,13 @@ if( get_field('degrees') ) {
 			$listnews .= '</span>';	
 		}
 	}
-	else { }
+//TESTING ENDS HERE		
+$post_categories = get_the_terms( $post->ID, 'job_titles' );
+if ( ! empty( $post_categories ) && ! is_wp_error( $post_categories ) ) {
+    $categories = wp_list_pluck( $post_categories, 'name' );
+}
+$listnews .= $categories;	
+//TESTING ENDS HERE	
 	$listnews .= '</div></div></a></div>';				
 endwhile;
 $listnews .= '</div></div>';	
