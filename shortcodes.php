@@ -812,13 +812,13 @@ switch_to_blog(2);
 	}
 $listlabs = '<div>';	
 while($showlabs->have_posts()) : $showlabs->the_post(); 
-$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 $content = apply_filters( 'the_content', get_the_content() );
 $listlabs .= '<div id="lab' . get_the_ID() . '" class="mb-5 pb-5 labStyle container"><div class="row"><div class="col-12 col-md-4 mb-3">';
 if( get_field('website_url', $post->ID) ) {	
 	$listlabs .= '<a href="' . get_field('website_url', $post->ID) . '">';
 }
 if ( has_post_thumbnail()) {	
+		$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 		$listlabs .= '<img class="flashIMG" src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '"/>';
 	} else { 	
 		$listlabs .= '<img class="flashIMG" src="' . get_field('default_lab_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '">';
