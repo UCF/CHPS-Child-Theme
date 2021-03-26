@@ -233,7 +233,6 @@ $cat3_id = get_cat_ID($c['cat3']);
 	}
 $listhnews = '<div class="container"><div class="row">';
 while($chpsnews->have_posts()) : $chpsnews->the_post();
-	$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 	$display_name = get_the_author_meta( 'display_name')[0];
 	$categories = get_the_category();
 	$primary_term_id = yoast_get_primary_term_id('category');
@@ -246,6 +245,7 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 		 $listhnews .= '<a href="' . get_the_permalink() . '" rel="bookmark" title="' . get_the_title() . '">';
 	}
 	if ( has_post_thumbnail()) {	
+		$getimgURL = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 		$listhnews .= '<img src="' . $getimgURL . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';	
 	} else { 
 		$listhnews .= '<img src="' . get_field('default_news_image', 'option') . '" alt="' . get_the_title() . '" title="' . get_the_title() . '" class="media-background object-fit-cover">';
