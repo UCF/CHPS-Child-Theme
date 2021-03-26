@@ -240,9 +240,8 @@ function fb_opengraph() {
         return;
     }
 //START ARCHIVES SECTION	
-if(is_post_type_archive( 'researchopp' )) {
-$img_src = 'https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/01/researchOpps-social.jpg';?>
-<meta property="og:image" content="<?php echo $img_src; ?>"/>
+if(is_post_type_archive( 'researchopp' )) { ?>
+<meta property="og:image" content="<?php echo $socialUp_researchOpps ?>"/>
 <?php
         return;
     }

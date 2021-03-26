@@ -734,9 +734,9 @@ while($visualnews->have_posts()) : $visualnews->the_post();
 	$listnews .= '</div><div class="p-3">';
 	$listnews .= '<strong>' . get_the_title() . '</strong>';
 	//INSERT DEGREES
-if( get_field('degrees', $post->ID) ) {
-		while ( have_rows('degrees', $post->ID) ) : the_row();
-			  if (!get_sub_field('degree_aftername', $post->ID)) {
+if( get_field('degrees') ) {
+		while ( have_rows('degrees') ) : the_row();
+			  if (!get_sub_field('degree_aftername')) {
 				continue;
 			  }
 		 $showDegree = array();
