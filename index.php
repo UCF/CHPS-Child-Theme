@@ -88,7 +88,7 @@ $searchName = esc_html( $s );
 							<?php } else { ?>
 							 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 							<?php } ?>
-							<?php the_title(); ?></a>
+							XX<?php the_title(); ?></a>
 						</h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 						<div class="entry">
