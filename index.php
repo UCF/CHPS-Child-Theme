@@ -78,17 +78,19 @@ $searchName = esc_html( $s );
 					</div>
 					<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>> 
 						<?php 
-							if ( ! empty( $categories ) ) {
-								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-							}
-						?>
+								if ( $postTerm && ! is_wp_error( $postTerm ) ) {
+									echo '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
+								} else { 
+									echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
+								}
+							?>
 						<h2 class="h5 pt-2 mainnews">
 							<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
 							 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
 							<?php } else { ?>
 							 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 							<?php } ?>
-							XX<?php the_title(); ?></a>
+							<?php the_title(); ?></a>
 						</h2>
 						<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { echo $display_name; }?> | <?php the_time('F j, Y'); ?></span>
 						<div class="entry">
