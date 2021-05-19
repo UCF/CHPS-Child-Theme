@@ -24,6 +24,8 @@ $searchName = esc_html( $s );
 				$getimgURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
 				$display_name = get_the_author_meta( 'display_name', $post->post_author );
 				$categories = get_the_category();
+				$primary_term_id = yoast_get_primary_term_id('category');
+				$postTerm = get_term( $primary_term_id );
 				?>
 				<?php if( 'person' == get_post_type() ) { ?>      
 					<?php get_template_part( 'person-result'); ?>
@@ -44,10 +46,12 @@ $searchName = esc_html( $s );
 					</div>
 					<div class="col-lg-9 p-4"> 
 						<?php 
-							if ( ! empty( $categories ) ) {
-								echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-							}
-						?>
+								if ( $postTerm && ! is_wp_error( $postTerm ) ) {
+									echo '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
+								} else { 
+									echo '<a class="category-title" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
+								}
+							?>
 						<h2 class="h5 pt-2 mainnews"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
 						<span class="authortext">Last Updated: <?php the_modified_time('F jS, Y'); ?></span>
 						<div class="entry">
