@@ -460,12 +460,13 @@ else {
 ?><?php
 //  ------------------------------------------------------------------------
 // SHORTCODE TO INDIVIDUAL PERSON
-// [showperson name="" column="" pic="false"]
+// [showperson name="" column="" pic="false" info="false"]
 function showpersonvar( $atts ) {
     $r = shortcode_atts( array(
         'name' => '',
 		'column' =>'1',
 		'pic' => 'true',
+		'info' => 'true',
 	), $atts );
 switch_to_blog(2);	
 $post = get_page_by_title( $r['name'], OBJECT, 'person' );
