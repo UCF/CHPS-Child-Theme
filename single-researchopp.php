@@ -158,7 +158,7 @@ $postid = get_the_ID();
             <?php endif; ?>
 			<div class="researchOpp-dblock"> 
 				<div class="btnhover-black">
-					<a href="https://healthprofessions.ucf.edu/irb-resource" title="What it means to be a research participant" class="blackBTN-full" target="_blank" rel="nofollow external noopener noreferrer">What does it means to be a<br><span style="color:#ffcc00;font-size:25px;font-weight:bold;">Research Participant?</span></a>
+					<a href="https://healthprofessions.ucf.edu/irb-resource" title="What it mean to be a research participant" class="blackBTN-full" target="_blank" rel="nofollow external noopener noreferrer">What does it mean to be a<br><span style="color:#ffcc00;font-size:25px;font-weight:bold;">Research Participant?</span></a>
 				</div>
 			</div>
             <div class="researchOpp-dblock">
