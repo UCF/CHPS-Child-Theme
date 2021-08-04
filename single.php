@@ -127,7 +127,6 @@ $args = array(
 // Query posts
 $wpex_query = new wp_query( $args );
 // Loop through posts ?>
-<hr class="mb-5" />
 <h2 class="text-center h6 text-uppercase mb-4 pb-2">Related News Articles</h2>
 <div class="container newsmedia"><div class="row narrow-gutter row-flex">
 <?php
