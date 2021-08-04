@@ -94,7 +94,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 ?>
 			</article> 
 <div style="background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 50px 0px;">
-	<div style="width: 550px; margin: 0 auto; border: 1px solid #333;">
+	<div style="width: 550px; margin: 0 auto;">
 		<div style="width: 200px; float: left;">
 			pic here
 		</div>
