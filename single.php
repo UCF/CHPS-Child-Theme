@@ -94,9 +94,12 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 ?>
 			</article> 
 <div style="text-align: center;background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 50px 0px;">
-	<div style="font-size: 40px; font-weight: 900;">GIVE A GIFT</div>
-	<div>To help fund student scholarships, faculty excellence and innovative programming.</div>
-	<div style="background-color: #d3bc5f; border-radius: 6px; padding: 8px 20px;"><a href="#">SUPPORT CHPS</a></div>	
+	<div style="width: 600px; margin: 0 auto;">
+		<div style="width: 150px; float: left;">pic here</div>
+		<div style="widthL450px; float: left; font-size: 40px; font-weight: 900;">GIVE A GIFT</div>
+		<div>To help fund student scholarships, faculty excellence and innovative programming.</div>
+		<div style="background-color: #d3bc5f; border-radius: 6px; padding: 8px 20px;"><a href="#">SUPPORT CHPS</a></div>
+	</div>
 </div>			
 			
 <?php
