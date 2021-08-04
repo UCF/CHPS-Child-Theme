@@ -93,10 +93,10 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
-<div style="text-align: center;">
-GIVE A GIFT
-To help fund student scholarships, faculty excellence and innovative programming.
-<a href="#">SUPPORT CHPS</a>	
+<div style="text-align: center;background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF);">
+	<div>GIVE A GIFT</div>
+	<div>To help fund student scholarships, faculty excellence and innovative programming.</div>
+	<div><a href="#">SUPPORT CHPS</a></div>	
 </div>			
 			
 <?php
