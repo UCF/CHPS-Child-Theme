@@ -99,8 +99,8 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			pic here
 		</div>
 		<div style="width: 400px; float: left;">
-			<div style="font-size: 30px; font-weight: 800;">GIVE A GIFT</div>
-			<div style="font-size: 15px; line-height: 16px; margin-bottom: 15px; color: #666;">To help fund student scholarships, faculty excellence and innovative programming.</div>
+			<div style="font-size: 34px; font-weight: 900;">GIVE A GIFT</div>
+			<div style="font-size: 14px; line-height: 16px; margin-bottom: 20px; color: #666;">To help fund student scholarships, faculty excellence and innovative programming.</div>
 			<div><a href="#" style="background-color: #d3bc5f; border-radius: 4px; padding: 6px 25px; text-decoration: none; font-weight: 600; color: #fff;">SUPPORT CHPS</a></div>
 		</div>
 		<div style="clear: both;"></div>
