@@ -560,7 +560,38 @@ article blockquote p {
     -webkit-transition: .2s;
     transition: .2s;
  }
-
+#donatetoCHPS {
+	background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); 
+	padding: 35px 0px; 
+	margin-bottom: 50px;
+}
+#donatetoCHPS .donatTitle {
+	font-size: 34px; 
+	font-weight: 900; 
+	line-height: 35px;
+}
+#donatetoCHPS .donatText {
+	font-size: 14px; 
+	line-height: 16px; 
+	margin-bottom: 20px; 
+	color: #888;
+}
+#donatetoCHPS a {
+	background-color: #d3bc5f; 
+	border-radius: 4px; 
+	padding: 6px 25px; 
+	text-decoration: none; 
+	font-weight: 700; 
+	color: #fff;
+}
+#donatetoCHPS a:hover {
+	background-color: #000;
+	-o-transition: .2s;
+    -ms-transition: .2s;
+    -moz-transition: .2s;
+    -webkit-transition: .2s;
+    transition: .2s;
+}
 /* = RECENT LIST TEXT SHORTCODE 
 -------------------------------------------------------------- */
 .recentlist li {
