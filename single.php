@@ -96,7 +96,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <div style="background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 50px 0px;">
 	<div style="width: 550px; margin: 0 auto;">
 		<div style="width: 200px; float: left;">
-			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="100%">
+			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="160px">
 		</div>
 		<div style="width: 350px; float: left;">
 			<div style="font-size: 34px; font-weight: 900;">GIVE A GIFT</div>
