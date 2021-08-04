@@ -94,9 +94,9 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 ?>
 			</article> 
 <div id="donatetoCHPS">
-	<div style="width: 530px; margin: 0 auto;">
-		<div style="width: 180px; float: left;">
-			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="160px">
+	<div style="width: 510px; margin: 0 auto;">
+		<div style="width: 160px; float: left;">
+			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="140px">
 		</div>
 		<div style="width: 350px; float: left; margin-top: 20px;">
 			<div class="donatTitle">GIVE A GIFT</div>
