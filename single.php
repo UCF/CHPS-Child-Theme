@@ -99,9 +99,9 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="160px">
 		</div>
 		<div style="width: 350px; float: left; margin-top: 10px;">
-			<div style="font-size: 34px; font-weight: 900;">GIVE A GIFT</div>
-			<div style="font-size: 14px; line-height: 16px; margin-bottom: 20px; color: #666;">To help fund student scholarships, faculty excellence and innovative programming.</div>
-			<div><a href="#" style="background-color: #d3bc5f; border-radius: 4px; padding: 6px 25px; text-decoration: none; font-weight: 600; color: #fff;">SUPPORT CHPS</a></div>
+			<div style="font-size: 34px; font-weight: 900; line-height: 25px;">GIVE A GIFT</div>
+			<div style="font-size: 14px; line-height: 16px; margin-bottom: 20px; color: #888;">To help fund student scholarships, faculty excellence and innovative programming.</div>
+			<div><a href="#" style="background-color: #d3bc5f; border-radius: 4px; padding: 6px 25px; text-decoration: none; font-weight: 700; color: #fff;">SUPPORT CHPS</a></div>
 		</div>
 		<div style="clear: both;"></div>
 	</div>
