@@ -131,7 +131,6 @@ $wpex_query = new wp_query( $args );
 <div class="container newsmedia"><div class="row narrow-gutter row-flex">
 <?php
 foreach( $wpex_query->posts as $post ) : setup_postdata( $post ); 
-$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 ?>
   	<div class="col-lg-4 col-sm-6 col-xs-12">        
         <?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
@@ -141,7 +140,9 @@ $getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', 
 		<?php } ?>
         	<div class="visnews">
             	<div class="media-background-container visnews-photo mx-auto">
-                	<?php if ( has_post_thumbnail()) { ?>
+                	<?php if ( has_post_thumbnail()) { 
+					$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+					?>
 						<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
                     	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
