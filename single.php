@@ -93,7 +93,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
-<div style="background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 40px 0px;">
+<div style="background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 40px 0px; margin-bottom: 50px;">
 	<div style="width: 530px; margin: 0 auto;">
 		<div style="width: 180px; float: left;">
 			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="160px">
