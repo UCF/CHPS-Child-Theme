@@ -93,15 +93,15 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
-<div style="text-align: center;background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 50px 0px;">
+<div style="background-image: linear-gradient(to right, #FFF,#f2f2f2,#FFF); padding: 50px 0px;">
 	<div style="width: 600px; margin: 0 auto;">
 		<div style="width: 150px; float: left;">
 			pic here
 		</div>
-		<div style="width: 450px; float: left;">
-			<div style="font-size: 40px; font-weight: 900;">GIVE A GIFT</div>
+		<div style="width: 450px; clear: both;">
+			<div style="font-size: 30px; font-weight: 700;">GIVE A GIFT</div>
 			<div>To help fund student scholarships, faculty excellence and innovative programming.</div>
-			<div style="background-color: #d3bc5f; border-radius: 6px; padding: 8px 20px;"><a href="#">SUPPORT CHPS</a></div>
+			<div><a href="#" style="background-color: #d3bc5f; border-radius: 4px; padding: 6px 20px;">SUPPORT CHPS</a></div>
 		</div>
 	</div>
 </div>			
