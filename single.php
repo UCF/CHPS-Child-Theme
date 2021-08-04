@@ -93,6 +93,12 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
                 	wp_reset_query(); //resetting the page query
                 ?>
 			</article> 
+<div style="text-align: center;">
+GIVE A GIFT
+To help fund student scholarships, faculty excellence and innovative programming.
+<a href="#">SUPPORT CHPS</a>	
+</div>			
+			
 <?php
 // set the category ID (or multiple category IDs)
 // you want to ignore in the following array
