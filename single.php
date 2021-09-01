@@ -101,7 +101,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 		<div style="width: 350px; float: left; margin-top: 20px;">
 			<div class="donatTitle">GIVE A GIFT</div>
 			<div class="donatText">To help fund student scholarships, faculty excellence and innovative programming.</div>
-			<div><a href="https://www.ucffoundation.org/givetochps" target="_blank">SUPPORT CHPS</a></div>
+			<div><a href="https://foundation.ucf.edu/givetochps" target="_blank">SUPPORT CHPS</a></div>
 		</div>
 		<div style="clear: both;"></div>
 	</div>
