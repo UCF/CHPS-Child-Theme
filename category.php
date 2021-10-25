@@ -131,4 +131,11 @@ div.widget-content ul li {
     background-color: #3C8DC5;
 }	
 </style>
+<script>
+$(document).ready(function() {
+    $('.entry').each(function(){
+        $(this).html($(this).html().replace(/&nbsp;/gi,' '));
+    });
+});	
+</script>		
 <?php get_footer(); ?>
