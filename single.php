@@ -209,7 +209,7 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 <script>
 $(document).ready(function() {
     $('#storyPost p').each(function(){
-        $(this).html($(this).html().replace(/&nbsp;/gi,''));
+        $(this).html($(this).html().replace(/&nbsp;/gi,' '));
     });
 });	
 </script>
