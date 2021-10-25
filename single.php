@@ -206,4 +206,11 @@ article h3 { font-size: 20px; margin-bottom: 16px;}
 </style>
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5ae1f19edbbe0111" async="async"></script>
+<script>
+$(document).ready(function() {
+    $('#storyPost p').each(function(){
+        $(this).html($(this).html().replace(/&nbsp;/gi,''));
+    });
+});	
+</script>
 <?php get_footer(); ?>
