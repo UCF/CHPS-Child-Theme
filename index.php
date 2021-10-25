@@ -140,4 +140,11 @@ div.widget-content ul li {
 	font-size: 14px !important;
 }
 </style>
+<script>
+$(document).ready(function() {
+    $('.entry').each(function(){
+        $(this).html($(this).html().replace(/&nbsp;/gi,' '));
+    });
+});	
+</script>		
 <?php get_footer(); ?>
