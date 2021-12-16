@@ -3,6 +3,7 @@ $project_depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
+$postPeople = explode(", ", $ids);
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
@@ -231,8 +232,8 @@ $posts = get_posts(array(
 	'meta_query' => array(
 		array(  
 			'key' => 'tag_person', // slug of custom field
-			'value' => $ids, // keep this to match current profile
-			'compare' => 'LIKE'
+			'value' => $postPeople, // keep this to match current profile
+			'compare' => 'IN'
 			  )
 		 )
 ));
