@@ -233,7 +233,7 @@ $peepargs  = get_posts(array(
 		array(  
 			'key' => 'tag_person', // slug of custom field
 			'value' => $ids, // keep this to match current profile
-			'compare' => 'LIKE'
+			'compare' => 'IN'
 			  )
 		 )
 ));
