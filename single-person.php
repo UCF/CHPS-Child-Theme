@@ -232,7 +232,7 @@ $posts = get_posts(array(
 		array(  
 			'key' => 'tag_person', // slug of custom field
 			'value' => $ids, // keep this to match current profile
-			'compare' => '='
+			'compare' => 'LIKE'
 			  )
 		 )
 ));
@@ -245,7 +245,7 @@ $labs = array(
 		array(  
 			'key' => 'lab_facultymember', // slug of custom field
 			'value' => $ids, // keep this to match current profile
-			'compare' => '='
+			'compare' => 'LIKE'
 			  )
 		 )
 );
@@ -260,7 +260,7 @@ $grantlist = array(
 		array(
 			'key' => 'grant_people_%_grant_faculty', // this is repeater field and then the sub field
 			'value' => $ids, // keep this to match current profile
-			'compare' => '='
+			'compare' => 'LIKE'
 		),
 	)
 );
