@@ -229,13 +229,8 @@ $posts = get_posts(array(
 	'post_type'		=> 'post',
 	'order'         => 'DESC',
 	'orderby'       => 'date',
-	'meta_query' => array(
-		array(  
-			'key' => 'tag_person', // slug of custom field
-			'value' => array(18461, 0), // keep this to match current profile
-			'compare' => 'IN'
-			  )
-		 )
+	'meta_key'		=> 'tag_person',
+	'meta_value'	=> $ids,
 ));
 $labs = array(
 	'numberposts'	=> 10,
