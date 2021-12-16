@@ -232,7 +232,7 @@ $posts = get_posts(array(
 		array(  
 			'key' => 'tag_person', // slug of custom field
 			'value' => array($ids), // keep this to match current profile
-			'compare' => 'IN'
+			'compare' => 'LIKE'
 			  )
 		 )
 ));
