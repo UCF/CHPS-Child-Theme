@@ -130,6 +130,22 @@ function grants_sidebar() {
 }
 add_action( 'widgets_init', 'grants_sidebar' );
 
+// ADDING EVENTS SIDEBAR
+function events_sidebar() {
+    register_sidebar(
+        array (
+            'name' => __( 'Events' ),
+            'id' => 'events-sidebar',
+            'description' => __( 'This is sidebar for the Events Archive' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'events_sidebar' );
+
 // ADDING FAQ SIDEBAR
 function faq_sidebar() {
     register_sidebar(

@@ -17,7 +17,7 @@
 					<div class="row no-gutters w-100">
 						<div class="col-xl-10">
 							<div class="header-title-wrapper">
-								<h1 class="header-title">Awarded Research Grants</h1>
+								<h1 class="header-title">Graduate Programs Admission Events</h1>
 								<p class="header-subtitle">UCF College of Health Professions and Sciences</p>
 							</div>
 						</div>
@@ -34,7 +34,7 @@
 				while ( have_posts() ) : the_post();
 				?>
 				<div class="pt-3 pb-3 grantResult">
-					<?php get_template_part( 'grant-results'); ?>
+					<?php get_template_part( 'event-results'); ?>
                 </div>
 				<?php endwhile; ?>
 				<!-- then the pagination links -->
@@ -42,11 +42,11 @@
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
 				<?php else : ?>
-            Sorry No Grants Match Your Search
+            Sorry No Events Match Your Search
         <?php endif; ?>
 			</div>
 			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'grants-sidebar' ); ?>
+				<?php dynamic_sidebar( 'events-sidebar' ); ?>
 			</div>
 		</div>
 	</article>
