@@ -3,6 +3,7 @@ $project_depts = get_the_terms($post->ID, 'departments');
 $getimageURL = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
 $buildingMap = get_field('building');
 $ids = get_the_ID();
+$postPeople = explode(", ", $ids);
 ?>
 <div class="container mb-5 mt-3 mt-lg-5">
 	<div class="row mb-4">
@@ -223,7 +224,7 @@ header .container .h1, header .container .lead {
 }	
 </style>
 <?php 
-$posts = get_posts(array(
+$peepargs  = get_posts(array(
 	'numberposts'	=> 10,
 	'post_type'		=> 'post',
 	'order'         => 'DESC',
@@ -232,10 +233,12 @@ $posts = get_posts(array(
 		array(  
 			'key' => 'tag_person', // slug of custom field
 			'value' => $ids, // keep this to match current profile
-			'compare' => 'LIKE'
+			'compare' => '='
 			  )
 		 )
 ));
+// query
+$people_query = new WP_Query( $peepargs );
 $labs = array(
 	'numberposts'	=> 10,
 	'post_type'		=> 'lab',
@@ -396,13 +399,12 @@ add_filter('posts_where', 'my_posts_where');
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (($posts)||get_field('external_news')): ?>
+					<?php if (($people_query->have_posts())||get_field('external_news')): ?>
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
 								<?php 
-								foreach( $posts as $post ): 
-									setup_postdata( $post );
+								while ( $people_query->have_posts() ) : $people_query->the_post();
 								?>
 								<li class="listnone mb-4">
 									<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
@@ -421,7 +423,7 @@ add_filter('posts_where', 'my_posts_where');
 								echo wp_trim_words( $content, 30, '...' );
 								?>
 								</li>
-								<?php endforeach; ?>
+								<?php endwhile; ?>
 								<?php wp_reset_postdata(); ?>
 								<?php if (have_rows('external_news') ) { 	?>
 									
