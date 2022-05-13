@@ -14,7 +14,7 @@ $getTime = strtotime( get_field('start_date') );
   <tbody>
     <tr>
       <td><?php the_title(); ?></td>
-      <td><?php echo date('F j, Y', $getDate); ?></td>
+      <td><?php echo date('F j, Y', $getDate); ?> </td>
       <td><?php echo date('g:i a', $getDate); ?></td>
       <td><a href="<?php the_field('url'); ?>" target="_blank">REGISTER</a></td>
     </tr>
