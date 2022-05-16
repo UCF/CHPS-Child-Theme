@@ -37,14 +37,9 @@
 <p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
 				
 				<?php if ( have_posts() ) : ?>
-				
-				<?php 
-				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$today = date("Ymd");
-				$event_posts = new WP_Query($query_string."&meta_key=start_date&value='$today'&compare=>=&orderby=meta_value&order=ASC");
-				while($event_posts->have_posts()) : $event_posts->the_post();
+				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				while ( have_posts() ) : the_post();
 				?>
-				
 				<div class="pt-3 pb-3 grantResult">
 					<?php get_template_part( 'event-results'); ?>
                 </div>
