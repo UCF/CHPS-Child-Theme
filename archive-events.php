@@ -38,8 +38,10 @@
 				
 				<?php if ( have_posts() ) : ?>
 				
-				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$event_posts = new WP_Query($query_string."&meta_key=start_date&orderby=meta_value&order=ASC");
+				<?php 
+				$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+				$today = date("Ymd");
+				$event_posts = new WP_Query($query_string."&meta_key=start_date&value='$today'&compare=>=&orderby=meta_value&order=ASC");
 				while($event_posts->have_posts()) : $event_posts->the_post();
 				?>
 				
