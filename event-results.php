@@ -9,7 +9,7 @@ for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {
 	echo $project_depts[$dept_count]->name;
 	// If there is more than one term, comma separate them.
 	if ($dept_count<count($project_depts)-1){
-		echo ', ';
+		//echo ', ';
 	}
 }?>
 </div>
