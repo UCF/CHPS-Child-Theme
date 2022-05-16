@@ -114,6 +114,22 @@ function research_participation() {
 }
 add_action( 'widgets_init', 'research_participation' );
 
+// ADDING EVENTS SIDEBAR
+function events_sidbar() {
+    register_sidebar(
+        array (
+            'name' => __( 'SLATE Events' ),
+            'id' => 'events_sidebar',
+            'description' => __( 'This is sidebar for the SLATE Events' ),
+            'before_widget' => '<div id="%1$s" class="widget %2$s widgetFix">',
+			'after_widget' => '</div>',
+			'before_title'  => '<h2 class="h5 heading-underline">',
+			'after_title'   => '</h2>',
+        )
+    );
+}
+add_action( 'widgets_init', 'events_sidbar' );
+
 // ADDING GRANTS SIDEBAR
 function grants_sidebar() {
     register_sidebar(
