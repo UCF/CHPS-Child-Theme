@@ -48,6 +48,7 @@
 					'orderby' => 'meta_value',
 					'order' => 'ASC'
 				);
+				$wp_query = new WP_Query($eventargs);
 				while($eventargs->have_posts()) : $eventargs->the_post();
 				?>
 				<div class="pt-3 pb-3 grantResult">
