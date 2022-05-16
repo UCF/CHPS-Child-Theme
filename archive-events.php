@@ -57,9 +57,6 @@
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
-				<?php else : ?>
-            Sorry No Events Match Your Search
-        <?php endif; ?>
 			</div>
 			<div class="col-lg-3 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'events_sidebar' ); ?>
