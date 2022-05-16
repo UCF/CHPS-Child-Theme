@@ -46,7 +46,7 @@
         <?php endif; ?>
 			</div>
 			<div class="col-lg-3 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'events-sidebar' ); ?>
+				<?php dynamic_sidebar( 'events_sidebar' ); ?>
 			</div>
 		</div>
 	</article>
