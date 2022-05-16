@@ -28,7 +28,7 @@
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row">
-			<div class="col-lg-8 col-md-12 pt-4">
+			<div class="col-lg-9 col-md-12 pt-4">
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
@@ -45,7 +45,7 @@
             Sorry No Events Match Your Search
         <?php endif; ?>
 			</div>
-			<div class="col-lg-4 profilesidebar pt-5" style="background-color: #f2f2f2;">
+			<div class="col-lg-3 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'events-sidebar' ); ?>
 			</div>
 		</div>
