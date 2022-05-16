@@ -36,18 +36,9 @@
 <h4>Upcoming Events</h4>
 <p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
 				
+				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$args = array( 
-					'post_type' => 'events', 
-					'post_status' => 'publish',
-					'posts_per_page' => 10, 
-					'paged' => $paged,
-					'meta_key' => 'start_date',
-					'orderby' => 'meta_value',
-					'order' => 'ASC'
-				);
-				$wp_query = new WP_Query($args);
-				while ( have_posts() ) : the_post(); 
+				while ( have_posts() ) : the_post();
 				?>
 				<div class="pt-3 pb-3 grantResult">
 					<?php get_template_part( 'event-results'); ?>
@@ -57,6 +48,9 @@
 				<div class="mt-5">
 					<?php wpbeginner_numeric_posts_nav(); ?>
 				</div>
+				<?php else : ?>
+            Sorry No Events Match Your Search
+        <?php endif; ?>
 			</div>
 			<div class="col-lg-3 profilesidebar pt-5" style="background-color: #f2f2f2;">
 				<?php dynamic_sidebar( 'events_sidebar' ); ?>
