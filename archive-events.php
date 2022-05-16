@@ -38,7 +38,17 @@
 				
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				while ( have_posts() ) : the_post();
+				$today = date("Ymd");
+				$eventargs = array( 
+					'post_type' => 'events', 
+					'post_status' => 'publish',
+					'posts_per_page' => 10, 
+					'paged' => $paged,
+					'key' => 'start_date',
+					'orderby' => 'meta_value',
+					'order' => 'ASC'
+				);
+				while($eventargs->have_posts()) : $eventargs->the_post();
 				?>
 				<div class="pt-3 pb-3 grantResult">
 					<?php get_template_part( 'event-results'); ?>
