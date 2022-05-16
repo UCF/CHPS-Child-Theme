@@ -38,8 +38,7 @@
 				
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-				$people_posts = new WP_Query($query_string."&meta_key=start_date&orderby=meta_value&order=ASC");
-				while($people_posts->have_posts()) : $people_posts->the_post();
+				while ( have_posts() ) : the_post();
 				?>
 				<div class="pt-3 pb-3 grantResult">
 					<?php get_template_part( 'event-results'); ?>
