@@ -28,7 +28,7 @@
 <div class="container mb-5 mt-3 mt-lg-5">
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row">
-			<div class="col-lg-9 col-md-12 pt-4">
+			<div class="col-lg-12 col-md-12 pt-4">
 				
 <h3>ATTEND AN ADMISSION EVENT</h3>
 <p>The College of Health Professions and Sciences offers a variety of opportunities for a candidate to learn more about UCF and specialized graduate programs. Our admission events listed below provide detailed information about the specific program including curriculum, learning outcomes, program format and schedule, admission requirements, application process, as well as an opportunity to visit the location of the program.</p>
@@ -53,9 +53,6 @@
 				<?php else : ?>
             Sorry No Events Match Your Search
         <?php endif; ?>
-			</div>
-			<div class="col-lg-3 profilesidebar pt-5" style="background-color: #f2f2f2;">
-				<?php dynamic_sidebar( 'events_sidebar' ); ?>
 			</div>
 		</div>
 	</article>
