@@ -30,7 +30,7 @@
 		<div class="row">
 			<div class="col-lg-9 col-md-12 pt-4">
 				
-<h2>ATTEND AN ADMISSION EVENT</h2>
+<h3>ATTEND AN ADMISSION EVENT</h3>
 <p>The College of Health Professions and Sciences offers a variety of opportunities for a candidate to learn more about UCF and specialized graduate programs. Our admission events listed below provide detailed information about the specific program including curriculum, learning outcomes, program format and schedule, admission requirements, application process, as well as an opportunity to visit the location of the program.</p>
 
 <h4>Upcoming Events</h4>
