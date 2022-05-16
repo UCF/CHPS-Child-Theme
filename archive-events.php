@@ -35,6 +35,8 @@
 
 <h4>Upcoming Events</h4>
 <p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
+
+<?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
 				
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
