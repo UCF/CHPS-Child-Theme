@@ -29,7 +29,7 @@
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 pt-5">
-<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2022/05/Kinesiology-MS-Circle-1.png" class="" alt="" align="right">
+<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2022/05/Kinesiology-MS-Circle-1.png" class="eventPic" alt="" align="right">
 <h3>Graduate Programs in CHPS</h3>
 <p>The College of Health Professions and Sciences offers a number of graduate degrees in health disciplines:</p>
 	<ul>
@@ -143,7 +143,9 @@
 	color: #fff;
 	font-weight: 800;
 }
-	
+.eventPic {
+	max-width: 500px;
+}	
 	
 	
 	
