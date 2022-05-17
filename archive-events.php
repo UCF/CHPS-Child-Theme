@@ -96,7 +96,6 @@ Filter by Unit:
 	font-size: 16px !important;
 	padding:8px !important;
 }	
-	
 .registerBTN-full {
 	display: block;
 	background-color: #ffcc00;
@@ -104,7 +103,10 @@ Filter by Unit:
 	font-weight: 800;
 	text-align: center;
 	padding: 10px 0px;
-}		
+}
+.registerBTN-full:hover {
+	text-decoration: none;
+}
 
 	
 	
