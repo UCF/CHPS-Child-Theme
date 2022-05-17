@@ -29,24 +29,25 @@
 	<article class="<?php echo $post->post_status; ?> post-list-item">
 		<div class="row">
 			<div class="col-lg-12 col-md-12 pt-5">
-<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2022/05/Kinesiology-MS-Circle-1.png" class="eventPic" alt="" align="right">
-<h3>Graduate Programs in CHPS</h3>
-<p>The College of Health Professions and Sciences offers a number of graduate degrees in health disciplines:</p>
-	<ul>
-		<li>MA in Communication Sciences and Disorders</li>
-		<li>MA in Athletic Training</li>
-		<li>MA in Kinesiology</li>
-		<li>MSW in Social Work</li>
-		<li>DPT in Physical Therapy</li>
-		<li>PhD in Kinesiology</li>
-	</ul>
-<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successfully application process.</p>				
-				
-<h3>Attend an Admissions Event</h3>
-<p>The College of Health Professions and Sciences offers a variety of opportunities for candidates to learn more about UCF and our specialized graduate programs. Our admission events listed below provide detailed information about the specific program including curriculum, learning outcomes, program format and schedule, admission requirements, application process, as well as an opportunity to visit the location of the program. Please register for an upcoming event.</p>
+				<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2022/05/Kinesiology-MS-Circle-1.png" class="eventPic" alt="" align="right">
+				<h3>Graduate Programs in CHPS</h3>
+				<p>The College of Health Professions and Sciences offers a number of graduate degrees in health disciplines:</p>
+					<ul>
+						<li>MA in Communication Sciences and Disorders</li>
+						<li>MA in Athletic Training</li>
+						<li>MA in Kinesiology</li>
+						<li>MSW in Social Work</li>
+						<li>DPT in Physical Therapy</li>
+						<li>PhD in Kinesiology</li>
+					</ul>
+				<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successfully application process.</p>
+			</div>
+			<div class="col-lg-12 col-md-12 pt-5">	
+				<h3>Attend an Admissions Event</h3>
+				<p>The College of Health Professions and Sciences offers a variety of opportunities for candidates to learn more about UCF and our specialized graduate programs. Our admission events listed below provide detailed information about the specific program including curriculum, learning outcomes, program format and schedule, admission requirements, application process, as well as an opportunity to visit the location of the program. Please register for an upcoming event.</p>
 
-<h4>Upcoming Events</h4>
-<p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
+				<h4>Upcoming Events</h4>
+				<p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
 
 			</div>
 
