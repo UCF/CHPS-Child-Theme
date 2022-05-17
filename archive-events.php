@@ -42,7 +42,7 @@
 					</ul>
 				<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successfully application process.</p>
 			</div>
-			<div class="col-lg-12 col-md-12 pt-5">	
+			<div class="col-lg-12 col-md-12 pt-3">	
 				<h3>Attend an Admissions Event</h3>
 				<p>The College of Health Professions and Sciences offers a variety of opportunities for candidates to learn more about UCF and our specialized graduate programs. Our admission events listed below provide detailed information about the specific program including curriculum, learning outcomes, program format and schedule, admission requirements, application process, as well as an opportunity to visit the location of the program. Please register for an upcoming event.</p>
 
