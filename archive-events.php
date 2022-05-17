@@ -70,7 +70,6 @@ Filter by Unit:
 .container h1.mt-sm-4 {
     display: none !important;
 }
-
 .header-title-wrapper {
     max-width: 600px;
 }
@@ -80,18 +79,12 @@ Filter by Unit:
     }
 }
 .searchandfilter ul {
-	margin-left: 0px !important;		
+	margin-left: 0px !important;
+	padding-left:0px !important;
 }	
-.searchandfilter .sf-field-search label {
-	width: 100% !important;	
-}
-.searchandfilter input[name="_sf_search[]"]{
-	font-size: 16px !important;
-	padding:8px !important;
-	border: 0px solid #f2f2f2 !important;
-	width: 100% !important;	
-	margin-bottom: 15px;
-}	
+	
+
+	
 .searchandfilter li[data-sf-field-input-type="select"] label{
 	width: 100% !important;	
 	margin-bottom: 15px;
@@ -100,26 +93,6 @@ Filter by Unit:
 	width: 100% !important;
 	font-size: 16px !important;
 	padding:8px !important;
-}
-.searchandfilter li.sf-field-post-meta-research_sex {
-	float: left;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_money {
-	float: right;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_format {
-	float: left;
-	width:50%;
-	margin-bottom: 15px;
-}
-.searchandfilter li.sf-field-post-meta-research_minage {
-	float: right;
-	width:50%;
-	margin-bottom: 15px;
 }	
 li.sf-field-reset {
 	margin-top: 15px;
@@ -133,9 +106,6 @@ li.sf-field-reset {
 .sf-date-postfix {
 	padding-right:5px;
 }
-.searchandfilter li.sf-field-reset{
-	clear: both;
-}	
 .searchandfilter li.sf-field-reset input{
 	font-size: 14px;
 	padding: 5px 30px;
