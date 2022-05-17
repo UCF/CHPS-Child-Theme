@@ -38,12 +38,12 @@
 
 			</div>
 			<div class="col-lg-2 col-md-12 pt-3 pb-3" style="text-align: center; background-color:#f2f2f2;">
-Filter by Unit	
+Filter by Unit:	
 			</div>
 			<div class="col-lg-10 col-md-12 pt-3 pb-3" style="text-align: center; background-color:#f2f2f2;">
 <?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
 			</div>
-			<div class="col-lg-12 col-md-12 pt-5">
+			<div class="col-lg-12 col-md-12 pt-2">
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
