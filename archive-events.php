@@ -50,7 +50,7 @@
 			</div>
 
 			<div class="col-lg-2 col-md-12 pt-3 pb-3" style="text-align: center; background-color:#f2f2f2;">
-				<div style="padding-top: 18px; font-weight: 600;"><i class="fa-solid fa-filter-list"></i> Filter by Unit:</div>
+				<div style="padding-top: 18px; font-weight: 600;"><i class="fa-solid fa-filter"></i> Filter by Unit:</div>
 			</div>
 			<div class="col-lg-10 col-md-12 pt-3 pb-3" style="text-align: center; background-color:#f2f2f2;">
 				<?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
