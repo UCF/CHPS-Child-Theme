@@ -37,10 +37,10 @@
 <p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
 
 			</div>
-			<div class="col-lg-2 col-md-12 pt-5">
+			<div class="col-lg-1 col-md-12 pt-5">
 Filter by Unit	
 			</div>
-			<div class="col-lg-10 col-md-12 pt-5">
+			<div class="col-lg-11 col-md-12 pt-5">
 <?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
 			</div>
 			<div class="col-lg-12 col-md-12 pt-5">
