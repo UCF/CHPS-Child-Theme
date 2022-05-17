@@ -135,7 +135,7 @@
 	background: #cca12e !important;
 	color: #fff !important;
 }
-.tableHeader tr {
+.tableHeader {
 	background-color: #000;
 	color: #fff;
 	font-weight: 800;
