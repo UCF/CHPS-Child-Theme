@@ -96,34 +96,23 @@ Filter by Unit:
 	font-size: 16px !important;
 	padding:8px !important;
 }	
-li.sf-field-reset {
-	margin-top: 15px;
-}
-.sf_date_field li {
-	float: left;
-}
-.sf_date_field li input{
-	width:120px;
-}
-.sf-date-postfix {
-	padding-right:5px;
-}
-.searchandfilter li.sf-field-reset input{
-	font-size: 14px;
-	padding: 5px 30px;
-	background-color: #ccc;
+	
+.registerBTN-full {
+	display: block;
+	background-color: #ffcc00;
 	color: #000;
-	border: 0px solid !important;
-}
-.searchandfilter ul li li {
-	padding: 0px !important;
-}	
-.yellowBTN-full {
-	line-height: 20px;
+	font-weight: 800;
+	text-align: center;
+	padding: 10px 0px;
 }		
-.yellowBTN-full strong {
-	font-size:20px;
-}	
+
+	
+	
+	
+	
+	
+	
+	
 /*overwrite header styling */	
 .header-title-wrapper {
     max-width: 1100px !important;
