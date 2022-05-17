@@ -100,7 +100,7 @@ Filter by Unit:
 	display: block;
 	background-color: #ffcc00;
 	color: #000;
-	font-weight: 800;
+	font-weight: 600;
 	text-align: center;
 	padding: 10px 0px;
 	-o-transition:.2s;
