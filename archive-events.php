@@ -129,7 +129,7 @@ li.sf-field-reset {
     max-width: 1100px !important;
 }	
 .header-media-default {
-    min-height: 350px !important;
+    min-height: 500px !important;
 }	
 /* repeated CSS code */
 .researchOpp-quals ul {
