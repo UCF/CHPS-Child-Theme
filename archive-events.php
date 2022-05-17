@@ -56,8 +56,8 @@
 				<?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
 			</div>
 
-			<div class="col-lg-12 col-md-12 pt-2">
-				<table width="100%" border="0" class="tableHeader">
+			<div class="col-lg-12 col-md-12 pt-2 tableHeader">
+				<table width="100%" border="0">
 				  <tbody>
 					<tr>
 					  <td width="60%">Event Title</td>
@@ -67,6 +67,8 @@
 					</tr>
 				  </tbody>
 				</table>
+			</div>	
+			<div class="col-lg-12 col-md-12 pt-2">	
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
