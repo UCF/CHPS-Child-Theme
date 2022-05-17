@@ -33,12 +33,12 @@
 				<h3>Graduate Programs in CHPS</h3>
 				<p>The College of Health Professions and Sciences offers a number of graduate degrees in health disciplines:</p>
 					<ul>
-						<li>MA in Communication Sciences and Disorders</li>
-						<li>MA in Athletic Training</li>
-						<li>MA in Kinesiology</li>
-						<li>MSW in Social Work</li>
-						<li>DPT in Physical Therapy</li>
-						<li>PhD in Kinesiology</li>
+						<li><a href="https://healthprofessions.ucf.edu/communication-sciences-disorders/masters/" target="_blank">MA in Communication Sciences and Disorders</a></li>
+						<li><a href="https://healthprofessions.ucf.edu/athletictraining/masters/" target="_blank">MA in Athletic Training</a></li>
+						<li><a href="https://healthprofessions.ucf.edu/kinesiology/master/" target="_blank">MA in Kinesiology</a></li>
+						<li><a href="https://healthprofessions.ucf.edu/socialwork/master/" target="_blank">MSW in Social Work</a></li>
+						<li><a href="https://healthprofessions.ucf.edu/physicaltherapy/" target="_blank">DPT in Physical Therapy</a></li>
+						<li><a href="https://healthprofessions.ucf.edu/kinesiology/phd/" target="_blank">PhD in Kinesiology</a></li>
 					</ul>
 				<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successfully application process.</p>
 			</div>
