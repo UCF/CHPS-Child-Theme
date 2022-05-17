@@ -144,7 +144,7 @@
 	font-weight: 800;
 }
 .eventPic {
-	max-width: 500px;
+	max-width: 400px;
 }	
 	
 	
