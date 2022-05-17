@@ -24,7 +24,7 @@ $getTime = strtotime( get_field('start_date') );
       <td width="60%"><?php the_title(); ?></td>
       <td width="15%"><?php echo date('F j, Y', $getDate); ?> </td>
       <td width="10%"><?php echo date('g:i a', $getDate); ?></td>
-      <td width="15%"><a href="<?php the_field('url'); ?>" target="_blank">REGISTER</a></td>
+      <td width="15%" ><a href="<?php the_field('url'); ?>" target="_blank" class="registerBTN-full">REGISTER</a></td>
     </tr>
   </tbody>
 </table>
