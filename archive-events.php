@@ -103,9 +103,16 @@ Filter by Unit:
 	font-weight: 800;
 	text-align: center;
 	padding: 10px 0px;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
 }
 .registerBTN-full:hover {
 	text-decoration: none;
+	background: #cca12e !important;
+	color: #fff !important;
 }
 
 	
