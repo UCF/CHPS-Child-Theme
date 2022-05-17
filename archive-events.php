@@ -82,7 +82,9 @@ Filter by Unit:
 	margin-left: 0px !important;
 	padding-left:0px !important;
 }	
-	
+.searchandfilter ul li label{
+	margin-bottom: 0px !important;
+}	
 
 	
 .searchandfilter li[data-sf-field-input-type="select"] label{
