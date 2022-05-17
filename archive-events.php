@@ -57,6 +57,16 @@
 			</div>
 
 			<div class="col-lg-12 col-md-12 pt-2">
+				<table width="100%" border="0">
+				  <tbody>
+					<tr>
+					  <td width="60%">Event Title</td>
+					  <td width="15%">Date</td>
+					  <td width="10%">Time</td>
+					  <td width="15%" >Register</td>
+					</tr>
+				  </tbody>
+				</table>
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
