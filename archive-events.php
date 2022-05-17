@@ -56,7 +56,7 @@
 				<?php echo do_shortcode( '[searchandfilter slug="slate-events"]' );?>	
 			</div>
 
-			<div class="col-lg-12 col-md-12 pt-2 tableHeader">
+			<div class="col-lg-12 col-md-12 pt-2 pb-2 tableHeader">
 				<table width="100%" border="0">
 				  <tbody>
 					<tr>
