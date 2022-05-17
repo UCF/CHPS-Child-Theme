@@ -37,7 +37,7 @@
 <p>Each information session provides detailed information about the graduate program, application process and admission process. Participants have the opportunity to ask questions, meet admissions staff, faculty and alumni.</p>
 
 			</div>
-			<div class="pt-3 pb-3" style="background-color:#f2f2f2;">
+			<div class="col-lg-12 pt-3 pb-3" style="background-color:#f2f2f2;">
 				<div class="col-lg-2 col-md-12" style="text-align: center;">
 					Filter by Unit:	
 				</div>
