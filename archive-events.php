@@ -57,7 +57,7 @@
 			</div>
 
 			<div class="col-lg-12 col-md-12 pt-2">
-				<table width="100%" border="0">
+				<table width="100%" border="0" class="tableHeader">
 				  <tbody>
 					<tr>
 					  <td width="60%">Event Title</td>
@@ -135,7 +135,11 @@
 	background: #cca12e !important;
 	color: #fff !important;
 }
-
+.tableHeader tr {
+	background-color: #000;
+	color: #fff;
+	font-weight: 800;
+}
 	
 	
 	
