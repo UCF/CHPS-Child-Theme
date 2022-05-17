@@ -68,7 +68,7 @@
 				  </tbody>
 				</table>
 			</div>	
-			<div class="col-lg-12 col-md-12 pt-2">	
+			<div class="col-lg-12 col-md-12">	
 				<?php if ( have_posts() ) : ?>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 				while ( have_posts() ) : the_post();
