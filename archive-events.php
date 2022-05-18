@@ -40,7 +40,7 @@
 						<li><a href="https://healthprofessions.ucf.edu/physicaltherapy/" target="_blank">DPT in Physical Therapy</a></li>
 						<li><a href="https://healthprofessions.ucf.edu/kinesiology/phd/" target="_blank">PhD in Kinesiology</a></li>
 					</ul>
-				<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successfully application process.</p>
+				<p>These programs have their own unique admission cycles and requirements. Students are advised to seek information about their program of interest prior to applying to ensure a complete and successful application process.</p>
 			</div>
 			<div class="col-lg-12 col-md-12 pt-3 mb-4">	
 				<h3>Attend an Admissions Event</h3>
