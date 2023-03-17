@@ -58,8 +58,10 @@ $tax = $wp_query->get_queried_object();
 											<img src="<?php the_field('default_profile_image', 'option'); ?>" alt="<?php the_title(); ?>'s profile picture at UCF" title="<?php $post->post_title; ?>" class="media-background object-fit-cover">
 								<?php } ?>
 							</div>
-							<strong><?php the_title(); ?></strong></br>
-								<?php the_field('jobtitle'); ?>
+							<strong><?php the_title(); ?></strong> <?php the_field('degrees'); ?></br>
+								<?php the_field('jobtitle'); ?></br>
+								<?php the_field('business'); ?></br>
+								<?php the_field('specialty'); ?></br>
 							<div class="mt-2">
 								<?php if(get_field('email')){ ?>
 									<div class="person-label">
