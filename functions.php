@@ -37,6 +37,10 @@ function remove_rss_feed_link_for_custom_post_type() {
 	}
 }
 
+// Remove Really Simple Discovery Link
+remove_action('wp_head', 'rsd_link');
+
+
 /* Change Excerpt length */
 function custom_excerpt_length( $length ) {
 	return 30;
