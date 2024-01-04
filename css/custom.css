@@ -12,7 +12,7 @@ Light Yellow:                 #fff5dc;
 h2 {
     text-transform: none !important;
 }
-a {
+.wpb_wrapper a {
 	color:#025197;
 	text-decoration: none;
 }
