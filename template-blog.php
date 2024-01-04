@@ -89,12 +89,6 @@ Template Name: Blog
 .site-header .container h1 {
 	display: none !important;
 }
-.authortext {
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #777;
-	margin-top: 20px;
-}
 h3.widget-title {
 	font-size: 18px;
 }
