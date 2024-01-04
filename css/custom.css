@@ -750,7 +750,7 @@ article blockquote p {
 	color: #fdc831;
 }
 .authortext {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	font-size: 12px;
 	color: #595959;
 	margin-top: 20px;
