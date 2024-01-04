@@ -12,6 +12,10 @@ Light Yellow:                 #fff5dc;
 h2 {
     text-transform: none !important;
 }
+a {
+	color:#025197;
+	text-decoration: none;
+}
 /* = USED GLOBALLY 
 -------------------------------------------------------------- */
 .icongrey {
@@ -29,7 +33,7 @@ h2 {
     margin-bottom:0px;
 }
 .largeGreyLink a {
-    color: #a0a0a0;
+    color: #595959;
     font-size:16px;
     font-weight:bold;
     text-align:right;
@@ -293,12 +297,12 @@ a.ft-gallery-link-popup {
 -------------------------------------------------------------- */
 .breadcrumbnav {
 	background: #2f2f2f;
-	color: #929292;
+	color: #C4C4C4;
 	font-size:11px;
 	padding:8px 0px;
 }
 .breadcrumbnav a{
-	color: #929292;
+	color: #C4C4C4;
 }
 .breadcrumbnav a.yellow{
 	color: #fecb2f;
@@ -1107,7 +1111,7 @@ a.em-socialicon {
 #footerSUBSCRIBE p { 
   text-align:center !important;
   font-size: 14px !important;
-  color:#b18500;
+  color:#4D3800;
   margin-bottom:0px !important;
  } 
 #footerSUBSCRIBE #gform_wrapper { 
