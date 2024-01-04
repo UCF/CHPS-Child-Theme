@@ -27,6 +27,16 @@ function themeslug_enqueue_script() { // This is for any 'Colleges-Theme' javasc
 }
 add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 
+
+/* REMOVE /FEED/ Link in all profile pages */
+add_action( 'wp', 'remove_rss_feed_link_for_custom_post_type' );
+function remove_rss_feed_link_for_custom_post_type() {
+	$post_type = 'person';
+	if ( is_post_type_archive( $post_type ) ) {
+		remove_action('wp_head', 'feed_links_extra', 3 );
+	}
+}
+
 /* Change Excerpt length */
 function custom_excerpt_length( $length ) {
 	return 30;
