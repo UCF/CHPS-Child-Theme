@@ -56,7 +56,7 @@
 			<div class="row">
 				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
 				<?php $termswer = get_field('research_interests');?>
-					<ul id="researchIntList" class="mt-2">
+					<ul class="researchIntList mt-2">
 						<?php foreach( $termswer as $term ): ?>
 							<li><i class="fa fa-check fa-lg iconyellow"></i> <?php echo $term->name; ?></li>
 						<?php endforeach; ?>

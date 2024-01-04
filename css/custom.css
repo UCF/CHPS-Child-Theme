@@ -402,10 +402,10 @@ span.searchresults	{
 		height:225px;
 	}
 }
-#researchIntList {
+.researchIntList {
 	padding-left: 0px;
 }
-#researchIntList li{
+.researchIntList li{
 	list-style: none;
 	font-size: 15px;
 	margin-bottom: 6px;
