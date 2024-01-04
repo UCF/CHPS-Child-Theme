@@ -63,7 +63,7 @@
 					  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
 					</span></a><?php endif; ?><?php if( get_field('sm_twitter_url', 'option') ): ?><a href="<?php the_field( 'sm_twitter_url', 'option' ); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
 					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-					  <i class="fa fa-twitter fa-stack-1x footer-social-icon"></i>
+					  <i class="fa-brands fa-x-twitter fa-stack-1x footer-social-icon"></i>
 					</span></a><?php endif; ?><?php if( get_field('sm_instagram_url', 'option') ): ?><a href="<?php the_field( 'sm_instagram_url', 'option' ); ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
 					  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 					  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
