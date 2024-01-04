@@ -1157,7 +1157,8 @@ a.em-socialicon {
 	width:100%;
 }
 .ucf-footer a,.ucf-footer p,.ucf-footer-title,.ucf-footer span{
-	color:#fff;font-family:"Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color:#fff;
+	font-family:"Gotham SSm 3r","Gotham SSm A","Gotham SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
 	-moz-osx-font-smoothing:auto;
 	-webkit-font-smoothing:auto;
 }
@@ -1190,6 +1191,7 @@ a.ucf-footer-nav{
 }
 ucf-footer-nav a{
 	color:#fff;
+	text-decoration: underline;
 }
 .ucf-footer-nav a:hover, a.ucf-footer-title:hover, .ucf-footer-address a:hover {
 	color:#ffcc00;
