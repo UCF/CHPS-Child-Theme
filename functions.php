@@ -32,7 +32,7 @@ add_action( 'wp_enqueue_scripts', 'themeslug_enqueue_script' );
 add_action( 'wp', 'remove_rss_feed_link_for_custom_post_type' );
 function remove_rss_feed_link_for_custom_post_type() {
 	$post_type = 'person';
-	if ( is_post_type_archive( $post_type ) ) {
+	if ( is_singular( $post_type ) ) {
 		remove_action('wp_head', 'feed_links_extra', 3 );
 	}
 }
