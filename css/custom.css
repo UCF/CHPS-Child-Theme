@@ -1191,9 +1191,9 @@ a.ucf-footer-nav{
 .ucf-footer-nav a{
 	color:#fff;
 	text-decoration: underline;
-	-webkit-text-decoration-color: #555; /* Safari */  
-  	text-decoration-color: #555;
-	text-underline-offset: 3px;
+	-webkit-text-decoration-color: #666; /* Safari */  
+  	text-decoration-color: #666;
+	text-underline-offset: 3px !important;
 }
 .ucf-footer-nav a:hover, a.ucf-footer-title:hover, .ucf-footer-address a:hover {
 	color:#ffcc00;
