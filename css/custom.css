@@ -1148,7 +1148,7 @@ a.em-socialicon {
 	width:640px;
 }
 .ucf-footer{
-	background-color:#3e3e3e;
+	background-color:#000;
 	box-sizing:border-box;
 	display:block;
 	margin:0;
@@ -1191,6 +1191,8 @@ a.ucf-footer-nav{
 .ucf-footer-nav a{
 	color:#fff;
 	text-decoration: underline;
+	-webkit-text-decoration-color: #333; /* Safari */  
+  	text-decoration-color: #333;
 }
 .ucf-footer-nav a:hover, a.ucf-footer-title:hover, .ucf-footer-address a:hover {
 	color:#ffcc00;
