@@ -1193,6 +1193,7 @@ a.ucf-footer-nav{
 	text-decoration: underline;
 	-webkit-text-decoration-color: #555; /* Safari */  
   	text-decoration-color: #555;
+	text-underline-offset: 3px;
 }
 .ucf-footer-nav a:hover, a.ucf-footer-title:hover, .ucf-footer-address a:hover {
 	color:#ffcc00;
