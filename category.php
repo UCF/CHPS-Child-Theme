@@ -88,18 +88,6 @@ div.widget-content ul li {
 	padding:6px 0px;
 	font-size: 14px !important;
 }
-.cat-border {
-	border: solid 1px #ddd;
-}
-.catlist-photo {
-    width: 55px;
-}
-@media screen and (max-width: 992px) {
-	.catlist-photo {
-		width: 100%;
-		height:225px;
-	}
-}
 </style>
 <script>
 $(document).ready(function() {
