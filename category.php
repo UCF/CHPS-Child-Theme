@@ -72,12 +72,6 @@
 .site-header .container h1 {
 	display: none !important;
 }
-.authortext {
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #777;
-	margin-top: 20px;
-}
 h3.widget-title {
 	font-size: 18px;
 }
@@ -106,30 +100,6 @@ div.widget-content ul li {
 		height:225px;
 	}
 }
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-    color: #fff;
-    text-decoration:none;
-}
-.navigation li {
-    display: inline;
-}
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-    background-color: #6FB7E9;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 12px;
-    padding: 0.75rem;
-}
-.navigation li a:hover,
-.navigation li.active a {
-    background-color: #3C8DC5;
-}	
 </style>
 <script>
 $(document).ready(function() {
