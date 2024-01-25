@@ -144,7 +144,6 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
 					$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 					$attachment_meta = get_post(get_post_thumbnail_id());
 					$img_alt =  get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
-	
 					?>
 						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $img_alt ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
