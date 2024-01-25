@@ -145,9 +145,9 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
 					$image_alt = get_post_meta( $getrelatedIMG->id, '_wp_attachment_image_alt', true);
 	
 					?>
-						<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" alt="<?php echo $image_alt ?>" class="media-background object-fit-cover">
+						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $image_alt ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
-                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
+                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php echo $image_alt ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
                     <?php } ?>
             	</div>
                 <div class="p-3">
