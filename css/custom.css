@@ -530,6 +530,27 @@ article blockquote p {
     font-weight: 400;
     line-height: 1.4;
 }   
+
+article a {
+    color: #025197;
+    text-decoration: none;
+}
+article a {
+    background-attachment: scroll;
+    background-image: linear-gradient(to top,rgba(255,204,0,0.4) 0,rgba(255,204,0,0.4) 0.5em,transparent 0.5em,transparent 110%),linear-gradient(to top,rgba(255,204,0,0.4) 0,rgba(255,204,0,0.4) 2px,transparent 2px,transparent 100%);
+    background-repeat: no-repeat;
+    background-position: 0 0.5em,0 0;
+    position: relative;
+    -webkit-transition: 0.2s background-position ease-out;
+    transition: 0.2s background-position ease-out;
+    font-weight: 300;
+    text-decoration: none;
+    z-index: 1;
+    text-decoration: none;
+}
+article a:hover {
+    background-position: 0 0,1000px 2px;
+} 
 .newsSearcher {
 	
 }
