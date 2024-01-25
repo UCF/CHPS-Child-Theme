@@ -143,11 +143,12 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
                 	<?php if ( has_post_thumbnail()) { 
 					$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
 					$attachment_meta = get_post(get_post_thumbnail_id());
+					$img_alt =  get_post_meta(get_post_thumbnail_id(), '_wp_attachment_image_alt', true);
 	
 					?>
-						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $attachment_meta->post_excerpt ?>" class="media-background object-fit-cover">
+						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $img_alt ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
-                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php echo $attachment_meta->post_excerpt ?>" class="noTEST media-background object-fit-cover">
+                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php echo $img_alt ?>" class="noTEST media-background object-fit-cover">
                     <?php } ?>
             	</div>
                 <div class="p-3">
