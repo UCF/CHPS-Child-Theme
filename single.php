@@ -96,7 +96,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 <div id="donatetoCHPS">
 	<div style="width: 510px; margin: 0 auto;">
 		<div style="width: 160px; float: left;">
-			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" width="140px">
+			<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2021/08/chps-donation.png" alt="gift box" width="140px">
 		</div>
 		<div style="width: 350px; float: left; margin-top: 20px;">
 			<div class="donatTitle">GIVE A GIFT</div>
@@ -142,8 +142,9 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
             	<div class="media-background-container visnews-photo mx-auto">
                 	<?php if ( has_post_thumbnail()) { 
 					$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
+					$image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', TRUE);
 					?>
-						<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="media-background object-fit-cover">
+						<img src="<?php echo $getrelatedIMG ?>" alt="<?php the_title(); ?>" alt="<?php echo $image_alt ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
                     	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php the_title(); ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
                     <?php } ?>
