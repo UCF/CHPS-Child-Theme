@@ -142,12 +142,12 @@ foreach( $wpex_query->posts as $post ) : setup_postdata( $post );
             	<div class="media-background-container visnews-photo mx-auto">
                 	<?php if ( has_post_thumbnail()) { 
 					$getrelatedIMG = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large', false )[0];
-					$image_alt = get_post_meta( $getrelatedIMG, '_wp_attachment_image_alt', true);
+					$attachment_meta = get_post(get_post_thumbnail_id());
 	
 					?>
-						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $image_alt ?>" class="media-background object-fit-cover">
+						<img src="<?php echo $getrelatedIMG ?>" alt="<?php echo $attachment_meta->post_excerpt ?>" class="media-background object-fit-cover">
                     <?php } else {  ?>
-                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php echo $image_alt ?>" title="<?php the_title(); ?>" class="noTEST media-background object-fit-cover">
+                    	<img src="<?php the_field('default_news_image', 'option') ?>" alt="<?php echo $attachment_meta->post_excerpt ?>" class="noTEST media-background object-fit-cover">
                     <?php } ?>
             	</div>
                 <div class="p-3">
