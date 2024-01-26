@@ -395,7 +395,7 @@ html {
 .shareResearch {
 	background-color: #e1e1e1;
 	font-size:13px;
-	color:#666;
+	color:#474747;
 	border-radius: 5px;
 	padding:8px;
 }
