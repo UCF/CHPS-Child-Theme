@@ -92,7 +92,7 @@ $postid = get_the_ID();
 						<div class="btnhover-red">
 							<a href="../" title="Recruitment Has Ended" class="redBTN-full">Recruitment Has Ended</a>
 						</div>
-						<div class="missedOut">Please consider <a href="#getStarted">subscribing to get notified</a> about future research participation opportunities</div>
+						<div class="missedOut">Please consider <a href="#getStarted" class="darklink">subscribing to get notified</a> about future research participation opportunities</div>
 				<?php } ?>
 			</div>
 			<div class="researchOpp-dblock"> 
@@ -136,7 +136,7 @@ $postid = get_the_ID();
 				<div class="researchOpp-dblock"> 
 					<i class="fa fa-user iconyellow"></i> <strong>Faculty Advisors:</strong><br>
 					<?php foreach ( $research_facultymember as $p ): ?>
-						<a href="<?php echo get_permalink( $p ); ?>"><?php echo get_the_title( $p ); ?></a><br>
+						<a href="<?php echo get_permalink( $p ); ?>" class="darklink"><?php echo get_the_title( $p ); ?></a><br>
 					<?php endforeach; ?>
 				</div>
 			<?php } ?>
@@ -152,7 +152,7 @@ $postid = get_the_ID();
             <div class="researchOpp-dblock"> 
 					<i class="fa fa-tags icongrey"></i> <strong>Related Tags:</strong><br>
 					<?php foreach ( $research_tag_terms as $research_tag_term ): ?>
-						<a href="<?php echo get_term_link($research_tag_term); ?>"><?php echo $research_tag_term->name; ?></a><br>
+						<a href="<?php echo get_term_link($research_tag_term); ?>" class="darklink"><?php echo $research_tag_term->name; ?></a><br>
 					<?php endforeach; ?>
 			</div>
             <?php endif; ?>
