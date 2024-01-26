@@ -41,7 +41,7 @@ label, select {
 	<div class="container d-flex align-items-center align-items-sm-end">
     	<div class="row no-gutters w-100">
         	<div class="col" style="display:flex;justify-content:left;align-items:center;">
-            	<a href="../"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> View All Research Labs</a>
+            	<a href="../" class="darklink"><i class="fa fa-arrow-circle-left" aria-hidden="true"></i> View All Research Labs</a>
             </div>
             <div class="col">
 				<?php echo do_shortcode( '[searchandfilter slug="labs"]' ); ?>
