@@ -593,7 +593,7 @@ article p a:hover {
 	font-size: 13px; 
 	line-height: 15px; 
 	margin-bottom: 20px; 
-	color: #888;
+	color: #595959;
 }
 #donatetoCHPS a {
 	background-color: #d3bc5f; 
@@ -601,10 +601,11 @@ article p a:hover {
 	padding: 6px 25px; 
 	text-decoration: none; 
 	font-weight: 700; 
-	color: #fff;
+	color: #000;
 }
 #donatetoCHPS a:hover {
 	background-color: #000;
+	color: #fff;
 	-o-transition: .2s;
     -ms-transition: .2s;
     -moz-transition: .2s;
@@ -754,7 +755,7 @@ article p a:hover {
 /* = SINGLE NEWS STORY POST 
 -------------------------------------------------------------- */
 .cattitle-single {
-	color: #999;
+	color: #595959;
 	font-size: 16px;
 	font-weight: 700;
 	letter-spacing: .5;
