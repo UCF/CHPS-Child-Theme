@@ -102,29 +102,5 @@ div.widget-content ul li {
 		height:225px;
 	}
 }
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-    color: #fff;
-    text-decoration:none;
-}
-.navigation li {
-    display: inline;
-}
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-    background-color: #6FB7E9;
-    border-radius: 3px;
-    cursor: pointer;
-    padding: 12px;
-    padding: 0.75rem;
-}
-.navigation li a:hover,
-.navigation li.active a {
-    background-color: #3C8DC5;
-}	
 </style>
 <?php get_footer(); ?>
