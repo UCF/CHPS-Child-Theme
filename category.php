@@ -5,7 +5,7 @@
 	<div class="row mb-4">
 		<div class="col-lg-7">	
 			<header class="archive-header">
-				<h2 class="archive-title heading-underline">News: <?php single_cat_title(); ?></h2>
+				<h1 class="archive-title heading-underline">News: <?php single_cat_title(); ?></h1>
 			</header>
 		</div>
 		<div class="col-lg-5">	
