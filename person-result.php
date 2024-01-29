@@ -135,7 +135,7 @@ leftborder <?php } ?>">
 			<?php endif; ?>
 			<?php if (get_field('twitter_url')): ?>
 			<div class="person-label">
-				<i class="fa fa-twitter-square icongrey"></i> <a href="<?php the_field('twitter_url'); ?>">Twitter</a>
+				<i class="fa-brands fa-square-x-twitter icongrey"></i> <a href="<?php the_field('twitter_url'); ?>">X</a>
 			</div>
 			<?php endif; ?>
 		</div>
