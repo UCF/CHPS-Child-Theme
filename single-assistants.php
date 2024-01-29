@@ -96,7 +96,7 @@ $ids = get_the_ID();
 				  <i class="fa fa-facebook fa-stack-1x profile-social-icon"></i>
 				</span></a><?php endif; ?><?php if (get_field('twitter_link')): ?><a href="<?php the_field('twitter_link'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-tw"></i>
-				  <i class="fa fa-twitter fa-stack-1x profile-social-icon"></i>
+				  <i class="fa-brands fa-x-twitter fa-stack-1x profile-social-icon"></i>
 				</span></a><?php endif; ?><?php if (get_field('linkedin_link')): ?><a href="<?php the_field('linkedin_link'); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-lk"></i>
 				  <i class="fa fa-linkedin fa-stack-1x profile-social-icon"></i>
