@@ -16,6 +16,9 @@ h2 {
 	color:#025197;
 	text-decoration: none;
 }
+.header-subtitle {
+    line-height: 1.5 !important;
+}
 /* = USED GLOBALLY 
 -------------------------------------------------------------- */
 .icongrey {
