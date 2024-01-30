@@ -76,7 +76,7 @@ $searchName = esc_html( $s );
 						<?php } ?>
 						   </a>
 					</div>
-					<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>> 
+					<div class="col-lg-9 p-4 <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'exLinkIcon'; }  ?>"> 
 						<?php 
 								if ( $postTerm && ! is_wp_error( $postTerm ) ) {
 									echo '<a class="category-title" href="' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
