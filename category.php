@@ -33,7 +33,7 @@
 						<?php } ?>
 				   </a>
 				</div>
-				<div class="col-lg-9 p-4" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>>
+				<div class="col-lg-9 p-4 <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'exLinkIcon'; }  ?>" <?php if ( get_field( 'updatenewstype' ) == 1 ) { echo 'id="exLinkIcon"'; }  ?>>
 					<h2 class="h5 mainnews">
 					<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
 					 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
