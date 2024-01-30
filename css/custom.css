@@ -990,7 +990,7 @@ a.fk-socialicon {
 a.em-socialicon {
 	color: #666;
 }
-#minisocial a:hover {
+.minisocial a:hover {
 	color:#fc0;
 }
 /* = Widgets
