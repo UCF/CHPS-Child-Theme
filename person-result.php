@@ -120,22 +120,22 @@ $buildingMap = get_field('building');
 leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
 			<div class="person-label">
-				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View <span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Publications</a>
+				<i class="fa fa-bookmark icongrey"></i> <a class="darklink" href="<?php the_field('google_scholar'); ?>" target="_blank">View <span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Publications</a>
 			</div>
 			<?php endif; ?>
             <?php if (get_field('curriculum_vitae')): ?>
 			<div class="person-label">
-				<i class="fa fa-file-text icongrey"></i> <a href="<?php the_field('curriculum_vitae'); ?>" alt="Link to <?php echo get_person_name( $post ); ?>'s CV" target="_blank"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Curriculum Vitae</a>
+				<i class="fa fa-file-text icongrey"></i> <a class="darklink" href="<?php the_field('curriculum_vitae'); ?>" alt="Link to <?php echo get_person_name( $post ); ?>'s CV" target="_blank"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Curriculum Vitae</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('linkedin_url')): ?>
 			<div class="person-label">
-				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Linkedin</a>
+				<i class="fa fa-linkedin-square icongrey"></i> <a class="darklink" href="<?php the_field('linkedin_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Linkedin</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('twitter_url')): ?>
 			<div class="person-label">
-				<i class="fa-brands fa-square-x-twitter icongrey"></i> <a href="<?php the_field('twitter_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> X</a>
+				<i class="fa-brands fa-square-x-twitter icongrey"></i> <a class="darklink" href="<?php the_field('twitter_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> X</a>
 			</div>
 			<?php endif; ?>
 		</div>
