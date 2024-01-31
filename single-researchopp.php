@@ -340,7 +340,13 @@ html {
     margin-bottom:0px !important;
 }
 #researchOpp-particiForm .gfield_label {
-    display:none;
+   clip-path: inset(100%);
+   clip: rect(1px, 1px, 1px, 1px);
+   height: 1px;
+   overflow: hidden;
+   position: absolute;
+   white-space: nowrap;
+   width: 1px;
 }
 #researchOpp-particiForm .gform_button {
     padding: 10px 35px;
