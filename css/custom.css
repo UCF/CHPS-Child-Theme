@@ -29,7 +29,7 @@ h2 {
    width: 1px;
 }
 .navbar-inverse .navbar-nav .active>.nav-link, .navbar-inverse .navbar-nav .nav-link.active, .navbar-inverse .navbar-nav .nav-link.open, .navbar-inverse .navbar-nav .nav-link:active, .navbar-inverse .navbar-nav .nav-link:hover, .navbar-inverse .navbar-nav .open>.nav-link, .navbar-inverse .navbar-nav .show>.nav-link, .navbar-inverse .navbar-nav .twitter-typeahead .tt-open>.nav-link, .twitter-typeahead .navbar-inverse .navbar-nav .tt-open>.nav-link {
-    background-color: #595959;
+    background-color: #595959 !important;
 }
 /* = USED GLOBALLY 
 -------------------------------------------------------------- */
