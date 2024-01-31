@@ -171,19 +171,19 @@ $postPeople = explode(", ", $ids);
 			Connect
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<?php if (get_field('facebook_url')): ?><a href="<?php the_field('facebook_url'); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack">
+			<?php if (get_field('facebook_url')): ?><a href="<?php the_field('facebook_url'); ?>" title="Follow <?php echo get_person_name( $post ); ?> On Facebook" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-fb"></i>
 				  <i class="fa fa-facebook fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('twitter_url')): ?><a href="<?php the_field('twitter_url'); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('twitter_url')): ?><a href="<?php the_field('twitter_url'); ?>" title="Follow <?php echo get_person_name( $post ); ?> On Twitter" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-tw"></i>
 				  <i class="fa-brands fa-x-twitter fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('instagram_url')): ?><a href="<?php the_field('instagram_url'); ?>" title="Follow me on Instagram" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('instagram_url')): ?><a href="<?php the_field('instagram_url'); ?>" title="Follow <?php echo get_person_name( $post ); ?> on Instagram" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-ig"></i>
 				  <i class="fa fa-instagram fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('youtube_url')): ?><a href="<?php the_field('youtube_url'); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('youtube_url')): ?><a href="<?php the_field('youtube_url'); ?>" title="Watch <?php echo get_person_name( $post ); ?> On YouTube" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-yt"></i>
 				  <i class="fa fa-youtube fa-stack-1x profile-social-icon"></i>
-				</span></a><?php endif; ?><?php if (get_field('linkedin_url')): ?><a href="<?php the_field('linkedin_url'); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack">
+				</span></a><?php endif; ?><?php if (get_field('linkedin_url')): ?><a href="<?php the_field('linkedin_url'); ?>" title="Join <?php echo get_person_name( $post ); ?> On LinkedIn" target="_blank"><span class="fa-stack">
 				  <i class="fa fa-circle fa-stack-2x profile-social-lk"></i>
 				  <i class="fa fa-linkedin fa-stack-1x profile-social-icon"></i>
 				</span></a>
