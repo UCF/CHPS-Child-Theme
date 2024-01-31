@@ -571,7 +571,7 @@ article p a, article ul li a, a.darklink, #menu-directory-departments li a, .rec
     text-decoration: none;
     z-index: 1;
 }
-article p a:hover, a.darklink:hover {
+article p a:hover, article ul li a:hover, a.darklink:hover, #menu-directory-departments li a:hover, .recentlist ul li a:hover, .postmission p a:hover {
     background-position: 0 0,1000px 2px;
 } 
 .newsSearcher {
