@@ -78,7 +78,7 @@ $buildingMap = get_field('building');
 				if ($buildingMap == 'Barbara Ying Center - CMMS') {echo 'https://www.ucf.edu/location/barbara-ying-center-cmms/';}
 				if ($buildingMap == 'Classroom Building I') {echo 'https://www.ucf.edu/location/classroom-building-i/';}
 				if ($buildingMap == 'Health Center & Pharmacy') {echo 'https://www.ucf.edu/location/health-center-pharmacy/';}
-				?>" target="_blank" title="Map to <?php the_field('building'); ?>"><?php the_field('building'); ?></a>
+				?>" target="_blank" class="darklink" title="Map to <?php the_field('building'); ?>"><?php the_field('building'); ?></a>
 					<?php if(get_field('room_number')){ ?>
 					<span>
 						<?php the_field('office_type'); ?>: <?php the_field('room_number'); ?>
@@ -91,14 +91,14 @@ $buildingMap = get_field('building');
 		<?php if(get_field('email_address')){ ?>
 			<div class="row">
 				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-					<i class="fa fa-envelope icongrey"></i> E-mail: <?php if( get_field( 'hide_email' )) { ?><a href="mailto:<?php the_field('alternate_email'); ?>"><?php the_field('alternate_email'); ?></a><? } else { ?><a href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a><?php } ?>
+					<i class="fa fa-envelope icongrey"></i> E-mail: <?php if( get_field( 'hide_email' )) { ?><a class="darklink" href="mailto:<?php the_field('alternate_email'); ?>"><?php the_field('alternate_email'); ?></a><? } else { ?><a class="darklink" href="mailto:<?php the_field('email_address'); ?>"><?php the_field('email_address'); ?></a><?php } ?>
 				</div>
 			</div>
 		<?php }	?>	
 		<?php if(get_field('phone_number')){ ?>
 			<div class="row">
 				<div class="col-xl-12 col-md-12 col-sm-12 person-label">
-					<i class="fa fa-phone icongrey"></i> Phone: <a href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
+					<i class="fa fa-phone icongrey"></i> Phone: <a class="darklink" href="tel:<?php the_field('phone_number'); ?>"><?php the_field('phone_number'); ?></a>
 				</div>
 			</div>
 		<?php }	?>
