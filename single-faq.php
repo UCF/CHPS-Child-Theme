@@ -66,12 +66,6 @@ $categories = get_the_category();
 .cattitle-single:hover {
 	color: #fdc831;
 }
-.authortext {
-	text-transform: uppercase;
-	font-size: 12px;
-	color: #777;
-	margin-top: 20px;
-}
 #postIMG {
 	margin-bottom: 20px;
 }
