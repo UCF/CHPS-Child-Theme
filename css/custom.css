@@ -559,7 +559,7 @@ article blockquote p {
     font-weight: 400;
     line-height: 1.5;
 }   
-article p a, article ul li a, a.darklink, #menu-directory-departments li a {
+article p a, article ul li a, a.darklink, #menu-directory-departments li a, .recentlist ul li a, .postmission p a {
 	color: #025197;
     background-attachment: scroll;
     background-image: linear-gradient(to top,rgba(255,204,0,0.4) 0,rgba(255,204,0,0.4) 0.5em,transparent 0.5em,transparent 110%),linear-gradient(to top,rgba(255,204,0,0.4) 0,rgba(255,204,0,0.4) 2px,transparent 2px,transparent 100%);
