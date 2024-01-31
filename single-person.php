@@ -16,7 +16,7 @@ $postPeople = explode(", ", $ids);
 			<?php echo do_shortcode( ' [searchme posttype="person" size="large" placeholder="Search by Name"] ' ); ?>
 		</div>
 		<div class="col-lg-12 pt-2">	
-			<a href="/directory/" title="Back to the Directory"><i class="fa fa-chevron-circle-left icongrey"></i><span class="searchresults">Back to the Full Directory</strong></span></a>
+			<a class="darklink" href="/directory/" title="Back to the Directory"><i class="fa fa-chevron-circle-left icongrey"></i><span class="searchresults">Back to the Full Directory</strong></span></a>
 		</div>
 	</div>
 <article class="<?php echo $post->post_status; ?> post-list-item">
@@ -92,7 +92,7 @@ $postPeople = explode(", ", $ids);
 				<?php
 				$project_depts = array_values($project_depts);
 				for($dept_count=0; $dept_count<count($project_depts); $dept_count++) {  
-					echo '<li><a href="'.get_term_link($project_depts[$dept_count]).'">'.$project_depts[$dept_count]->name.'</a></li>';
+					echo '<li><a class="darklink" href="'.get_term_link($project_depts[$dept_count]).'">'.$project_depts[$dept_count]->name.'</a></li>';
 				} ?>
 			</ul>
 		</div>
@@ -105,7 +105,7 @@ $postPeople = explode(", ", $ids);
 			Location
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<a href="<?php 
+			<a class="darklink" href="<?php 
 		if ($buildingMap == 'HPA I') {echo 'https://www.ucf.edu/location/health-public-affairs-i/';}
 		if ($buildingMap == 'HPA II') {echo 'https://www.ucf.edu/location/health-public-affairs-ii/';}
 		if ($buildingMap == 'HS I') {echo 'https://www.ucf.edu/location/health-sciences-i/';}
@@ -138,11 +138,11 @@ $postPeople = explode(", ", $ids);
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
 			<?php if( get_field( 'hide_email' )) {  ?>
-			<a href="mailto:<?php the_field('alternate_email'); ?>">
+			<a class="darklink" href="mailto:<?php the_field('alternate_email'); ?>">
 				<?php the_field('alternate_email'); ?>
 			</a>			
 			<? } else { ?>
-			<a href="mailto:<?php the_field('email_address'); ?>">
+			<a class="darklink" href="mailto:<?php the_field('email_address'); ?>">
 				<?php the_field('email_address'); ?>
 			</a>	
 			<?php } ?>
@@ -157,7 +157,7 @@ $postPeople = explode(", ", $ids);
 			Phone
 		</div>
 		<div class="col-xl-8 col-md-12 col-sm-8 person-attr">
-			<a href="tel:<?php the_field('phone_number'); ?>">
+			<a class="darklink" href="tel:<?php the_field('phone_number'); ?>">
 				<?php the_field('phone_number'); ?>
 			</a>
 		</div>
