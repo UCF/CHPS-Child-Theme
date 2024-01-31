@@ -120,7 +120,7 @@ $buildingMap = get_field('building');
 leftborder <?php } ?>">
 			<?php if (get_field('google_scholar')): ?>
 			<div class="person-label">
-				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View Publications</a>
+				<i class="fa fa-bookmark icongrey"></i> <a href="<?php the_field('google_scholar'); ?>" target="_blank">View <span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Publications</a>
 			</div>
 			<?php endif; ?>
             <?php if (get_field('curriculum_vitae')): ?>
@@ -130,12 +130,12 @@ leftborder <?php } ?>">
 			<?php endif; ?>
 			<?php if (get_field('linkedin_url')): ?>
 			<div class="person-label">
-				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>">Linkedin</a>
+				<i class="fa fa-linkedin-square icongrey"></i> <a href="<?php the_field('linkedin_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> Linkedin</a>
 			</div>
 			<?php endif; ?>
 			<?php if (get_field('twitter_url')): ?>
 			<div class="person-label">
-				<i class="fa-brands fa-square-x-twitter icongrey"></i> <a href="<?php the_field('twitter_url'); ?>">X</a>
+				<i class="fa-brands fa-square-x-twitter icongrey"></i> <a href="<?php the_field('twitter_url'); ?>"><span class="visually-hidden"><?php echo get_person_name( $post ); ?>'s</span> X</a>
 			</div>
 			<?php endif; ?>
 		</div>
