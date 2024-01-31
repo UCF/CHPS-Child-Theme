@@ -80,6 +80,20 @@ h2 {
 #yellow-textlinks a:hover {
 	color: #cca12e;
 }
+.yellow-textlinks {
+	color: #fff !important;
+}
+.yellow-textlinks a {
+	color: #fecb2f !important;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+}
+.yellow-textlinks a:hover {
+	color: #cca12e;
+}
 .megaTITLE .evc-st-title {
 	font-size: 45px !important;
     font-weight: 700 !important;
