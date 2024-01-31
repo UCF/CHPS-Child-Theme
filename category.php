@@ -54,7 +54,7 @@
 			</div>
 			<?php endwhile; 
 			else: ?>
-			<p>Sorry, no posts matched your criteria.</p>
+			<h1>Sorry, no posts matched your criteria.</h1>
 			<?php endif; ?>
 			<div class="mt-5">
 				<?php wpbeginner_numeric_posts_nav(); ?>
