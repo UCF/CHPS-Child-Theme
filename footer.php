@@ -57,22 +57,22 @@
 <footer class="ucf-footer">
 	<a class="ucf-footer-title" href="/"><?php the_field('footer_college_name', 'option'); ?></a>
 		<div class="ucf-social-icons">
-			<?php if( get_field('sm_facebook_url', 'option') ): ?><a href="<?php the_field( 'sm_facebook_url', 'option' ); ?>" title="Follow Us On Facebook" target="_blank"><span class="fa-stack fa-lg">
+			<?php if( get_field('sm_facebook_url', 'option') ): ?><a href="<?php the_field( 'sm_facebook_url', 'option' ); ?>" title="Follow UCF CHPS On Facebook" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa fa-facebook fa-stack-1x footer-social-icon"></i>
-			</span></a><?php endif; ?><?php if( get_field('sm_twitter_url', 'option') ): ?><a href="<?php the_field( 'sm_twitter_url', 'option' ); ?>" title="Follow Us On Twitter" target="_blank"><span class="fa-stack fa-lg">
+			</span></a><?php endif; ?><?php if( get_field('sm_twitter_url', 'option') ): ?><a href="<?php the_field( 'sm_twitter_url', 'option' ); ?>" title="Follow UCF CHPS On Twitter" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa-brands fa-x-twitter fa-stack-1x footer-social-icon"></i>
-			</span></a><?php endif; ?><?php if( get_field('sm_instagram_url', 'option') ): ?><a href="<?php the_field( 'sm_instagram_url', 'option' ); ?>" title="Follow Us On Instagram" target="_blank"><span class="fa-stack fa-lg">
+			</span></a><?php endif; ?><?php if( get_field('sm_instagram_url', 'option') ): ?><a href="<?php the_field( 'sm_instagram_url', 'option' ); ?>" title="Follow UCF CHPS On Instagram" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa fa-instagram fa-stack-1x footer-social-icon"></i>
-			</span></a><?php endif; ?><?php if( get_field('sm_youtube_url', 'option') ): ?><a href="<?php the_field( 'sm_youtube_url', 'option' ); ?>" title="Watch Us On YouTube" target="_blank"><span class="fa-stack fa-lg">
+			</span></a><?php endif; ?><?php if( get_field('sm_youtube_url', 'option') ): ?><a href="<?php the_field( 'sm_youtube_url', 'option' ); ?>" title="Watch UCF CHPS On YouTube" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa fa-youtube fa-stack-1x footer-social-icon"></i>
-			</span></a><?php endif; ?><?php if( get_field('sm_linkedin_url', 'option') ): ?><a href="<?php the_field( 'sm_linkedin_url', 'option' ); ?>" title="Join Us On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
+			</span></a><?php endif; ?><?php if( get_field('sm_linkedin_url', 'option') ): ?><a href="<?php the_field( 'sm_linkedin_url', 'option' ); ?>" title="Join UCF CHPS On LinkedIn" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa fa-linkedin fa-stack-1x footer-social-icon"></i>
-			</span></a><?php endif; ?><?php if( get_field('sm_flickr_url', 'option') ): ?><a href="<?php the_field( 'sm_flickr_url', 'option' ); ?>" title="View Us On Flickr" target="_blank"><span class="fa-stack fa-lg">
+			</span></a><?php endif; ?><?php if( get_field('sm_flickr_url', 'option') ): ?><a href="<?php the_field( 'sm_flickr_url', 'option' ); ?>" title="View UCF CHPS On Flickr" target="_blank"><span class="fa-stack fa-lg">
 			  <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
 			  <i class="fa fa-flickr fa-stack-1x footer-social-icon"></i>
 			</span></a><?php endif; ?>
