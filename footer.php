@@ -89,8 +89,7 @@
 <style>
 .site-footer {
     padding-bottom: 2.5rem !important;
-	background-color: #000;
-	background-image: url(<?php the_field('footer_background', 'option'); ?>) no-repeat top center fixed; 
+	background: url(<?php the_field('footer_background', 'option'); ?>) no-repeat top center fixed, #000; 
   	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
