@@ -65,7 +65,7 @@ $tax = $wp_query->get_queried_object();
 							<div class="mt-2">
 								<?php if(get_field('email')){ ?>
 									<div class="person-label">
-										<a href="mailto:<?php the_field('email'); ?>"><i class="fa fa-envelope iconlink"></i></a>
+										<a href="mailto:<?php the_field('email'); ?>" aria-label="<?php the_title(); ?>'s Email"><i class="fa fa-envelope iconlink"></i></a>
 									</div>
 								<?php }	?>
 								<?php if(get_field('phone')){ ?>
