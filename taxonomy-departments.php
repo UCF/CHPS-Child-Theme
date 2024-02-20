@@ -59,9 +59,9 @@ $tax = $wp_query->get_queried_object();
 								<?php } ?>
 							</div>
 							<strong><?php the_title(); ?></strong> <?php the_field('degrees'); ?></br>
-								<?php the_field('jobtitle'); ?></br>
-								<?php the_field('business'); ?></br>
-								<?php the_field('specialty'); ?></br>
+								<?php if(get_field('jobtitle')){ the_field('jobtitle');?></br><?php } ?>
+								<?php if(get_field('business')){ the_field('business');?></br><?php } ?>
+								<?php if(get_field('specialty')){ the_field('specialty');?></br><?php }	?>
 							<div class="mt-2">
 								<?php if(get_field('email')){ ?>
 									<div class="person-label">
