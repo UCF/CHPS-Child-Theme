@@ -256,9 +256,9 @@ while($chpsnews->have_posts()) : $chpsnews->the_post();
 	}
 	$listhnews .= '>';
 	if ( $postTerm && ! is_wp_error( $postTerm ) ) {
-		$listhnews .= '<a class="category-title" href="/news/' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
+		$listhnews .= '<a class="category-title" href="hello' . esc_url( get_term_link( $postTerm->term_id ) ) . '">' . $postTerm->name . '</a>';
 	} else { 
-		$listhnews .= '<a class="category-title" href="/news/' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
+		$listhnews .= '<a class="category-title" href="goodbye' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . $categories[0]->name . '</a>';
 	}
 	$listhnews .= '<h2 class="h5 pt-2 mainnews">';
 	if ( get_field( 'updatenewstype' ) == 1 ) { 
