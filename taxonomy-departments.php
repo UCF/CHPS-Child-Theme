@@ -45,7 +45,7 @@ $tax = $wp_query->get_queried_object();
 					if( $parttimers->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">Part Time Faculty</h1>
+					<h2 class="archive-title heading-underline mt-5 mb-4">Part Time Faculty</h2>
 					<div class="row parttimers">   
 						<?php while( $parttimers->have_posts() ) :
 						  $parttimers->the_post();
@@ -101,7 +101,7 @@ $tax = $wp_query->get_queried_object();
 					if( $getassistants->have_posts() ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">Graduate Assistants</h1>
+					<h2 class="archive-title heading-underline mt-5 mb-4">Graduate Assistants</h2>
 					<div class="UCFassistants">   
                     <div class="d-flex flex-wrap">
 						<?php while( $getassistants->have_posts() ) :
@@ -169,7 +169,7 @@ $tax = $wp_query->get_queried_object();
 					if( $ashaHonors->have_posts() && is_tax( 'departments', 'communication-sciences-and-disorders' ) ) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Honors of the Association</h1>
+					<h2 class="archive-title heading-underline mt-5 mb-4">ASHA Honors of the Association</h2>
 					<div class="row">
                     	<ul>   
 						<?php while( $ashaHonors->have_posts() ) :
@@ -212,15 +212,13 @@ $tax = $wp_query->get_queried_object();
 					if( $ashafellows->have_posts() && is_tax( 'departments', 'communication-sciences-and-disorders' )) :
 					?>
                     <div class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h1>
+					<h2 class="archive-title heading-underline mt-5 mb-4">ASHA Fellows</h2>
 					<div class="row">
                     	<ul>   
 						<?php while( $ashafellows->have_posts() ) :
 						  $ashafellows->the_post();
 					 	?>
-						<div class="col">
 							<li><a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>'s Profile" ><strong><?php the_title(); ?></strong></a></li>
-						</div>
 						<?php endwhile;
 						  wp_reset_postdata(); ?>
                     	</ul>
@@ -249,7 +247,7 @@ $tax = $wp_query->get_queried_object();
 					if( $emeritus->have_posts() ) :
 					?>
                     <div id="emeritus" class="mt-5 pt-3">
-					<h1 class="archive-title heading-underline mt-5 mb-4">Emeritus Faculty</h1>
+					<h2 class="archive-title heading-underline mt-5 mb-4">Emeritus Faculty</h2>
 					<div class="row parttimers">   
 						<?php while( $emeritus->have_posts() ) :
 						  $emeritus->the_post();
