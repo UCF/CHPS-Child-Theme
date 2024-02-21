@@ -415,6 +415,7 @@ a.ft-gallery-link-popup {
 -------------------------------------------------------------- */
 .cat-border {
 	border: solid 1px #ddd;
+	background-color: #fff;
 }
 .cat-border h2 {
 	text-transform: none !important;
