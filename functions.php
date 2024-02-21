@@ -366,35 +366,35 @@ function get_header_markup_dave() {
 
 ?>
 <nav class="navbar navbar-toggleable-md navbar-inverse site-navbar" role="navigation">
-			<div class="container">
-				<?php if ( is_front_page() ): ?>
-				<a href="/asdasdad" class="text-decoration-none">
-					<h1 class="navbar-brand mb-0">
-						HELLO
-					</h1>
-				</a>
-				<?php else: ?>
-				<a href="/asdasd" class="navbar-brand">
-					Goodbye
-				</a>
-				<?php endif; ?>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#header-menu" aria-controls="header-menu" aria-expanded="false" aria-label="Toggle navigation">
-					<span class="navbar-toggler-icon"></span>
-				</button>
-				<?php
-					wp_nav_menu( array(
-						'theme_location'  => 'header-menu',
-						'depth'           => 2,
-						'container'       => 'div',
-						'container_class' => 'collapse navbar-collapse',
-						'container_id'    => 'header-menu',
-						'menu_class'      => 'nav navbar-nav ml-md-auto',
-						'fallback_cb'     => 'bs4Navwalker::fallback',
-						'walker'          => new bs4Navwalker()
-					) );
-				?>
-			</div>
-		</nav>
+	<div class="container">
+		<?php if ( is_front_page() ): ?>
+		<a href="<?php echo bloginfo( 'url' ); ?>/" class="text-decoration-none">
+			<h1 class="navbar-brand mb-0">
+				<?php echo get_sitename_formatted(); ?>
+			</h1>
+		</a>
+		<?php else: ?>
+		<a href="<?php echo bloginfo( 'url' ); ?>/" class="navbar-brand">
+			<?php echo get_sitename_formatted(); ?>
+		</a>
+		<?php endif; ?>
+		<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#header-menu" aria-controls="header-menu" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<?php
+			wp_nav_menu( array(
+				'theme_location'  => 'header-menu',
+				'depth'           => 2,
+				'container'       => 'div',
+				'container_class' => 'collapse navbar-collapse',
+				'container_id'    => 'header-menu',
+				'menu_class'      => 'nav navbar-nav ml-md-auto',
+				'fallback_cb'     => 'bs4Navwalker::fallback',
+				'walker'          => new bs4Navwalker()
+			) );
+		?>
+	</div>
+</nav>
 <?php 
 if ( get_field( 'breadcrumb', 'option' ) == 1 ) { ?>
 <div class="breadcrumbnav">
