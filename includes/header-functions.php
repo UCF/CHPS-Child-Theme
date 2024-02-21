@@ -31,12 +31,12 @@ if( !function_exists( 'get_nav_markup' ) ) {
 				<?php if ( is_front_page() ): ?>
 				<a href="/asdasdad" class="text-decoration-none">
 					<h1 class="navbar-brand mb-0">
-						<?php echo get_sitename_formatted(); ?>
+						HELLO
 					</h1>
 				</a>
 				<?php else: ?>
 				<a href="/asdasd" class="navbar-brand">
-					<?php echo get_sitename_formatted(); ?>
+					Goodbye
 				</a>
 				<?php endif; ?>
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#header-menu" aria-controls="header-menu" aria-expanded="false" aria-label="Toggle navigation">
