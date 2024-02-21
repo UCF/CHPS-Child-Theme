@@ -452,6 +452,7 @@ span.searchresults	{
 }
 .exLinkIcon { 
   background-image: url('https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2019/10/exLinkIconGrey.png');
+  background-color: #FFF;
   background-repeat: no-repeat;
   background-position: top right; 
 }
