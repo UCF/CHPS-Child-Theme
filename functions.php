@@ -369,9 +369,9 @@ function get_header_markup_dave() {
 	<div class="container">
 		<?php if ( is_front_page() ): ?>
 		<a href="<?php echo bloginfo( 'url' ); ?>/" class="text-decoration-none">
-			<h1 class="navbar-brand mb-0">
+			<span class="navbar-brand mb-0">
 				<?php echo get_sitename_formatted(); ?>
-			</h1>
+			</span>
 		</a>
 		<?php else: ?>
 		<a href="<?php echo bloginfo( 'url' ); ?>/" class="navbar-brand">
