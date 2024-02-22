@@ -397,6 +397,7 @@ html {
 	font-size: 11px;
 	font-style: italic;
 	line-height: 13px;
+	color:#3B3D45;
 }
 .shareResearch {
 	background-color: #e1e1e1;
