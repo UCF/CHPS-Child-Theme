@@ -429,8 +429,25 @@ if ( $hero['activation'] == 1 ) { ?>
 	if ( $videos || $images ) {
 		echo get_header_media_markup( $obj, $videos, $images );
 	}
-	else {
-		echo get_header_default_markup( $obj );
-	}
+	else {  ?>
+		<div class="container">
+		<?php
+		// Don't print multiple h1's on the page for person templates
+		if ( is_single() && $obj->post_type === 'person' && $obj->post_type === 'post' ):
+		?>
+		<strong class="h1 d-block mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></strong>
+		<?php else: ?>
+		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></h1>
+		<?php endif; ?>
+
+		<?php if ( $subtitle ): ?>
+		<p class="lead mb-4 mb-md-5"><?php echo $subtitle; ?></p>
+		<?php endif; ?>
+
+		<?php if ( $extra_content ): ?>
+		<div class="mb-4 mb-md-5"><?php echo $extra_content; ?></div>
+		<?php endif; ?>
+	</div>
+<?php }
 }
 ?>
