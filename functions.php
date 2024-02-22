@@ -439,14 +439,6 @@ if ( $hero['activation'] == 1 ) { ?>
 		<?php else: ?>
 		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></h1>
 		<?php endif; ?>
-
-		<?php if ( $subtitle ): ?>
-		<p class="lead mb-4 mb-md-5"><?php echo $subtitle; ?></p>
-		<?php endif; ?>
-
-		<?php if ( $extra_content ): ?>
-		<div class="mb-4 mb-md-5"><?php echo $extra_content; ?></div>
-		<?php endif; ?>
 	</div>
 <?php }
 }
