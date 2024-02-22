@@ -433,11 +433,11 @@ if ( $hero['activation'] == 1 ) { ?>
 		<div class="container">
 		<?php
 		// Don't print multiple h1's on the page for person templates
-		if ( is_single() && $obj->post_type === 'person' && $obj->post_type === 'post' ):
+		if ( is_single() && $obj->post_type === 'person' ):
 		?>
-		<strong class="h1 d-block mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></strong>
+		<strong class="h1 d-block mt-3 mt-sm-4 mt-md-5 mb-3"><?php the_title(); ?></strong>
 		<?php else: ?>
-		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php echo $title; ?></h1>
+		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php the_title(); ?></h1>
 		<?php endif; ?>
 	</div>
 <?php }
