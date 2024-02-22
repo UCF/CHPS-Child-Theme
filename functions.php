@@ -435,8 +435,7 @@ if ( $hero['activation'] == 1 ) { ?>
 		// Don't print multiple h1's on the page for person templates
 		if ( is_singular( array( 'post', 'person' ) ) ) {}
 		elseif ( is_category() ) {}
-		?>
-		<?php else { ?>
+		else { ?>
 		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php the_title(); ?></h1>
 		<?php } ?>
 	</div>
