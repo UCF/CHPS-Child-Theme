@@ -9,7 +9,7 @@ $postPeople = explode(", ", $ids);
 	<div class="row mb-4">
 		<div class="col-lg-6">	
 			<header class="archive-header">
-				<h1 class="archive-title heading-underline">Faculty and Staff</h1>
+				<span class="archive-title heading-underline">Faculty and Staff</span>
 			</header>
 		</div>
 		<div class="col-lg-6">	
