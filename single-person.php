@@ -281,7 +281,7 @@ $grantlist = array(
 								<span class="mb-4"><?php the_field('biography'); ?></span>
 								<?php if (have_rows('degrees') ) { 	?>
 									<div class="mb-4">
-										<h5>Credentials</h5>
+										<h2 class="h5">Credentials</h2>
 										<ul>
 											<?php while (have_rows('degrees') ): the_row(); ?> 
 											<?php $value = get_sub_field('degree_select'); ?>
@@ -298,7 +298,7 @@ $grantlist = array(
 								<?php }?>
 								<?php if (have_rows('accolades') ) { ?>
 									<div class="mb-4">
-										<h5>Accolades</h5>
+										<h2 class="h5">Accolades</h2>
 										<ul>
 										<?php while (have_rows('accolades') ): the_row(); ?> 
 												<li><?php the_sub_field('accolade');?></li>
@@ -307,7 +307,7 @@ $grantlist = array(
 									</div>
 								<?php }?>
 								<?php if (have_rows('affiliations') ) { ?>
-									<h5>Affiliations</h5>
+									<h2 class="h5">Affiliations</h2>
 										<ul>
 										<?php while (have_rows('affiliations') ): the_row(); ?> 
 												<li><?php if(get_sub_field('aff_url')) { ?><a href="<?php the_sub_field('aff_url'); ?>" title="<?php the_sub_field('aff_name'); ?>" target="_blank"><?php the_sub_field('aff_name'); ?></a><?php }	else {the_sub_field('aff_name');}?></li>
@@ -366,7 +366,7 @@ add_filter('posts_where', 'my_posts_where');
 	$the_query = new WP_Query( $grantlist );
 	?>
 	<?php if( $the_query->have_posts() ): ?>
-    <h5 class="mb-0 heading-underline">Research Grants</h5>
+    <h2 class="h5 mb-0 heading-underline">Research Grants</h2>
 		<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
         <div class="pt-3 pb-3 grantResult grantSmall">
         <?php get_template_part( 'grant-results'); ?>
@@ -388,7 +388,7 @@ add_filter('posts_where', 'my_posts_where');
 											<?php if(get_sub_field('course_url')) { ?>
 												<a href="<?php the_sub_field('course_url'); ?>" target="_blank">
 													<?php }?>
-														<h5 class="mb-0"><?php the_sub_field('course_number'); ?>: <?php the_sub_field('course_name'); ?></h5>
+														<h2 class="h5 mb-0"><?php the_sub_field('course_number'); ?>: <?php the_sub_field('course_name'); ?></h2>
 															<?php if(get_sub_field('course_url')) { ?>
 												</a>
 											 <?php }?>
@@ -428,7 +428,7 @@ add_filter('posts_where', 'my_posts_where');
 								<?php if (have_rows('external_news') ) { 	?>
 									
 								<div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
-									<h5>External News Media</h5>
+									<h2 class="h5">External News Media</h2>
 									<ul>
 										<?php while (have_rows('external_news') ): the_row(); ?> 
 

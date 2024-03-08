@@ -164,11 +164,11 @@ wp_reset_postdata(); ?>
 </div></div>        
        		<div class="row mt-5">
 				<div class="col-md-6 recborder mb-3">
-					<h5 class="mb-4">Recent CHPS News</h5>
+					<h3 class="h5 mb-4">Recent CHPS News</h3>
 					<?php echo do_shortcode('[recentlist number="5"]'); ?>
 				</div>
 				<div class="col-md-6">
-					<h5 class="mb-4">Our Mission</h5>
+					<h3 class="h5 mb-4">Our Mission</h3>
 					<span class="postmission"><?php the_field('mission_statement', 'option'); ?></span>
 				</div>
 			</div>
