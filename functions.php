@@ -433,7 +433,7 @@ if ( $hero['activation'] == 1 ) { ?>
 		<div class="container">
 		<?php
 		// Don't print multiple h1's on the page for person templates
-		if ( is_singular( array( 'post', 'person', 'researchopp' ) ) ) {}
+		if ( is_singular( array( 'post', 'person', 'researchopp', 'assistants' ) ) ) {}
 		elseif ( is_category() ) {}
 		elseif ( is_tax() ) {}
 		elseif ( is_tag() ) {}
