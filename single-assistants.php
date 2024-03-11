@@ -29,7 +29,7 @@ $ids = get_the_ID();
 	<?php } ?>
 </div>
 					</div>
-					<h1 class="h4 person-title text-center mb-2">
+					<h2 class="h4 person-title text-center mb-2">
 						<?php echo get_person_name( $post ); ?><?php if( get_field('degrees') ) {
 							while ( have_rows('degrees') ) : the_row();
 								  if (!get_sub_field('degree_aftername')) {
@@ -41,7 +41,7 @@ $ids = get_the_ID();
 								echo '<span class"">, ' . $foo . '</span>';
 							}								
 						?>	
-					</h1>
+					</h2>
 					<div class="person-job-title text-center mb-4">
 							<div class="profilejobtitle">
 								<?php the_field('kind'); ?>
