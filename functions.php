@@ -437,6 +437,7 @@ if ( $hero['activation'] == 1 ) { ?>
 		elseif ( is_category() ) {}
 		elseif ( is_tax() ) {}
 		elseif ( is_tag() ) {}
+		elseif ( is_paged() ) {}
 		else { ?>
 		<h1 class="mt-3 mt-sm-4 mt-md-5 mb-3"><?php the_title(); ?></h1>
 		<?php } ?>
