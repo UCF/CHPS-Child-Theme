@@ -98,7 +98,7 @@
 </style>		
 <?php the_field('bonus_scripts', 'option'); ?>	
 <?php if ( get_field( 'enablepopdom', 'option' ) == 1 ):  ?>
-	<script src='https://cdn1.pdmntn.com/a/Byg7AfczV.js'></script>
+	<script src='https://cdn1.pdmntn.com/a/SkwpKFVgR.js'></script>
 <?php endif; ?>	
 <?php if ( get_field( 'enablehotjar', 'option' ) == 1 ):  ?>
     <script>
