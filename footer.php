@@ -5,7 +5,7 @@
         <div class="row">
 			<div class="col-md-1">
 			</div>
-			<div class="col-md-4 text-right p-2">
+			<div class="col-md-3 text-right p-2">
 				<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2024/04/ucf-GiftBox.jpg" width="150" alt="Gift box icon">
 			</div>
 			<div class="col-md-5">
@@ -13,7 +13,7 @@
 				<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
 				<a class="giveBTN mt-3" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF CSD</a>
 			</div>
-			<div class="col-md-2">
+			<div class="col-md-3">
 			</div>
         </div>
 	</div>
