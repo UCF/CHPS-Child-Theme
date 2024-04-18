@@ -6,6 +6,7 @@
 			<div class="col-md-2">
 			</div>
 			<div class="col-md-3">
+				<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2024/04/ucf-GiftBox.jpg" width="300" alt="Gift box icon">
 			</div>
 			<div class="col-md-5">
 				<h2>GIVE A GIFT</h2>
