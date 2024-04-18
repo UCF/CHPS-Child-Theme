@@ -166,6 +166,21 @@ animation: flash 1s;
 	margin-right:8px;
 	margin-top:1px;
 }
+.giveBTN {
+	background-color:#000;
+	border-radius: 5px;
+	-o-transition:.2s;
+	-ms-transition:.2s;
+	-moz-transition:.2s;
+	-webkit-transition:.2s;
+	transition:.2s;
+	padding:8px;
+	width: 100%;
+	display: block;
+}
+.giveBTN:hover {
+	background-color: #ddd !important;
+}
 /* = Homepage Title
 -------------------------------------------------------------- */
 .mainHomeTitle .evc-st-title {
