@@ -11,7 +11,7 @@
 			<div class="col-md-5">
 				<h2>GIVE A GIFT</h2>
 				<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
-				<a class="giveBTN mt-3" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF CSD</a>
+				<a class="giveBTN mt-3" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF Health Science</a>
 			</div>
 			<div class="col-md-3">
 			</div>
