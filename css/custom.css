@@ -177,7 +177,7 @@ animation: flash 1s;
 	padding:8px;
 	width: 100%;
 	display: block;
-	text-color: #fff !important;
+	color: #fff !important;
 	text-decoration: none !important;
 	text-align: center;
 }
