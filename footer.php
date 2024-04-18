@@ -11,14 +11,13 @@
 			<div class="col-md-5 text-md-left text-center">
 				<h2>GIVE A GIFT</h2>
 				<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
-				<a class="giveBTN mt-3" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF Health Science</a>
+				<a class="giveBTN mt-3" href="<?php the_field('giving_btn_url', 'option'); ?>" target="_blank"><i class="fa-solid fa-heart"></i> <?php the_field('giving_btn_text', 'option'); ?></a>
 			</div>
 			<div class="col-md-3">
 			</div>
         </div>
 	</div>
 </div>
-
 <footer class="site-footer bg-inverse">
 	<div class="container">
 		<div class="row">
