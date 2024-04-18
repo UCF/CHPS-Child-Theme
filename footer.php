@@ -1,6 +1,6 @@
 </main>
 <?php switch_to_blog(2);?>
-<div id="footerSUBSCRIBE" role="region" aria-label="Newsletter Subscription">
+<div id="footerGIVE" role="region" aria-label="Newsletter Subscription">
     <div class="container">
         <div class="row">
 			<div class="col-md-2">
