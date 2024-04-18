@@ -177,6 +177,7 @@ animation: flash 1s;
 	padding:8px;
 	width: 100%;
 	display: block;
+	text-decoration-color: #fff;
 }
 .giveBTN:hover {
 	background-color: #ddd !important;
