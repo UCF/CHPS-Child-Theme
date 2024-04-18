@@ -3,22 +3,17 @@
 <div id="footerSUBSCRIBE" role="region" aria-label="Newsletter Subscription">
     <div class="container">
         <div class="row">
-			
-			
-			<div>GIVE A GIFT</div>
-			<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
-			<a class="giveBTN" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF Athletic Training</a>
-			
-			
-        	<div class="col-lg-12">
-            	<h3>Subscribe to the CHPS newsletter</h3>
-            </div>
-            <div class="col-lg-12">
-            	<p>Be the first to hear about new things happening in the college!</p>
-        	</div>
-            <div class="col-lg-12">
-            	<?php echo do_shortcode('[gravityform id="'.get_field( 'footer_subscription_formid', 'option' ).'" title="false" description="false"]'); ?>
-        	</div>
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-3">
+			</div>
+			<div class="col-md-3">
+				<div>GIVE A GIFT</div>
+				<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
+				<a class="giveBTN" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF Athletic Training</a>
+			</div>
+			<div class="col-md-3">
+			</div>
         </div>
 	</div>
 </div>
