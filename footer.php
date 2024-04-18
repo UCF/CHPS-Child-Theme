@@ -3,6 +3,13 @@
 <div id="footerSUBSCRIBE" role="region" aria-label="Newsletter Subscription">
     <div class="container">
         <div class="row">
+			
+			
+			<div>GIVE A GIFT</div>
+			<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
+			<a class="giveBTN" href="https://www.ucffoundation.org/athletictraining" target="_blank"><i class="fa-solid fa-heart"></i> Support UCF Athletic Training</a>
+			
+			
         	<div class="col-lg-12">
             	<h3>Subscribe to the CHPS newsletter</h3>
             </div>
