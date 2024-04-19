@@ -1,5 +1,4 @@
 </main>
-<?php switch_to_blog(2);?>
 <div id="footerGIVE" role="region" aria-label="Newsletter Subscription">
     <div class="container">
         <div class="row">
@@ -18,6 +17,7 @@
         </div>
 	</div>
 </div>
+<?php switch_to_blog(2);?>
 <footer class="site-footer bg-inverse">
 	<div class="container">
 		<div class="row">
