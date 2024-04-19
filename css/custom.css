@@ -172,6 +172,7 @@ animation: flash 1s;
 }
 #footerGIVE h2 {
     margin-bottom:0px;
+	font-size:26px;
 }
 .giveBTN {
 	background-color:#000;
