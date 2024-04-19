@@ -5,7 +5,7 @@
 			<div class="col-md-1">
 			</div>
 			<div class="col-md-3 text-md-right text-center p-2">
-				<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2024/04/ucf-GiftBox.jpg" width="135" alt="Gift box icon">
+				<img src="https://healthprofessions.ucf.edu/wp-content/uploads/sites/2/2024/04/ucf-GiftBox.jpg" width="120" height="120" alt="Gift box icon">
 			</div>
 			<div class="col-md-5 text-md-left text-center">
 				<h2>GIVE A GIFT</h2>
