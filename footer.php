@@ -10,7 +10,13 @@
 			<div class="col-md-5 text-md-left text-center">
 				<h2>GIVE A GIFT</h2>
 				<div>To help fund student scholarships, faculty excellence and innovative programing.</div>
-				<a class="giveBTN mt-3" href="<?php the_field('giving_btn_url', 'option'); ?>" target="_blank"><i class="fa-solid fa-heart"></i> <?php the_field('giving_btn_text', 'option'); ?></a>
+				<?php if ( get_field('giving_btn_url', 'option')) { ?>
+					<a class="giveBTN mt-3" href="<?php the_field('giving_btn_url', 'option'); ?>" target="_blank"><i class="fa-solid fa-heart"></i> <?php the_field('giving_btn_text', 'option'); ?></a>
+				<?php } else { ?>
+					<?php switch_to_blog(2);?>
+					<a class="giveBTN mt-3" href="<?php the_field('giving_btn_url', 'option'); ?>" target="_blank"><i class="fa-solid fa-heart"></i> <?php the_field('giving_btn_text', 'option'); ?></a>
+					<?php restore_current_blog(); ?>
+				<?php } ?>
 			</div>
 			<div class="col-md-3">
 			</div>
