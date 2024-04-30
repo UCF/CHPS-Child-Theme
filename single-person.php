@@ -225,18 +225,16 @@ header .container .h1, header .container .lead {
 </style>
 <?php 
 $peepargs  = get_posts(array(
-	'numberposts'	=> 10,
-	'post_type'		=> 'post',
-	'order'         => 'DESC',
-	'orderby'       => 'date',
-	'meta_query' => array(
-		array(  
-			'key' => 'tag_person', // slug of custom field
-			'value' => $ids, // keep this to match current profile
-			'compare' => '='
-			  )
-		 )
-));
+    'posts_per_page'    => 7,
+    'post_type'         => 'post',
+	'meta_query'    => array(
+        array(
+            'key'       => 'tag_person',
+            'value'     => $ids,
+            'compare'   => 'LIKE'
+        ),
+    )
+));					
 // query
 $people_query = new WP_Query( $peepargs );
 $labs = array(
