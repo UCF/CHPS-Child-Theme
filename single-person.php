@@ -472,7 +472,6 @@ add_filter('posts_where', 'my_posts_where');
                             <?php foreach( $doctors as $doctor ): ?>
                                 <li>
                                     <a href="<?php echo get_permalink( $doctor->ID ); ?>">
-                                        <img src="<?php echo $photo['url']; ?>" alt="<?php echo $photo['alt']; ?>" width="30" />
                                         <?php echo get_the_title( $doctor->ID ); ?>
                                     </a>
                                 </li>
