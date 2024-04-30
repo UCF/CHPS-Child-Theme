@@ -35,6 +35,7 @@ $alt = get_post_meta($thumb_id, '_wp_attachment_image_alt', true);
 					}
 				?>
 				<h1 class="posttitle"><?php the_title(); ?></h1>
+				<?php the_field('tag_person'); ?>
 			</div>
         	<div>
 				<?php if ( ! has_excerpt() ) {
