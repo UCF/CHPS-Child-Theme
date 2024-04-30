@@ -451,20 +451,14 @@ add_filter('posts_where', 'my_posts_where');
 			
 			
 			<!-- HERE IS REVERSE OPTION -->
-			<?php $labtag = get_field('lab_affiliations');
-				if( $labtag ): 
+			<?php $personNews = get_field('tag_person');
+				if( $personNews ): 
 					echo '<h5 class="heading-underline">Research Lab Affiliations</h5>';
 			?>
 				<ul class="mb-3">
-					<?php foreach( $labtag as $labme ): ?>
+					<?php foreach( $personNews as $personStory): ?>
 						<li>
-						<?php if($labme->website_url) { ?>
-								<a href="<?php echo $labme->website_url; ?>" target="_blank">
-						<?php } else { ?>
-								<a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank">
-						<?php } ?>
-								<?php echo $labme->post_title; ?>
-							</a>
+						<?php echo $personStory->post_title; ?>
 						</li>
 					<?php endforeach; ?>
 				</ul>
