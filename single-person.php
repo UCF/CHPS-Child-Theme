@@ -441,48 +441,6 @@ add_filter('posts_where', 'my_posts_where');
 					</div></div>
 					<?php endif; ?>
 				</section>
-			
-			
-			
-			
-			
-			 <?php 
-
-                        /*
-                        *  Query posts for a relationship value.
-                        *  This method uses the meta_query LIKE to match the string "123" to the database value a:1:{i:0;s:3:"123";} (serialized array)
-                        */
-
-                        $doctors = get_posts(array(
-                            'post_type' => 'post',
-                            'meta_query' => array(
-                                array(
-                                    'key' => 'tag_person', // name of custom field
-                                    'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
-                                    'compare' => 'LIKE'
-                                )
-                            )
-                        ));
- ?>
-                        <?php if( $peepargs ): ?>
-                            <ul>
-                            <?php foreach( $peepargs as $peeparg ): ?>
-                                <li>
-                                    <a href="<?php echo get_permalink( $peeparg->ID ); ?>">
-                                        <?php echo get_the_title( $peeparg->ID ); ?>
-                                    </a>
-                                </li>
-                            <?php endforeach; ?>
-                            </ul>
-                        <?php endif; ?>
-			
-			
-			
-			
-			
-			
-			
-			
 			</div>
 		</div>
 			<script>
