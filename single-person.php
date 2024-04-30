@@ -453,8 +453,13 @@ add_filter('posts_where', 'my_posts_where');
 $posts = get_posts(array(
     'posts_per_page'    => 7,
     'post_type'         => 'post',
-	'meta_key'          => 'tag_person',
-	'meta_value'    => '22'
+	'meta_query'    => array(
+        array(
+            'key'       => 'tag_person',
+            'value'     => '22',
+            'compare'   => 'LIKE'
+        ),
+    )
 ));
 if( $posts ): ?>
     <ul>
