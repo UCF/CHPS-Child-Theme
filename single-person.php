@@ -232,8 +232,8 @@ $peepargs  = get_posts(array(
 	'meta_query'    => array(
         array(
             'key'       => 'tag_person',
-            'value'     => '22',
-            'compare'   => 'LIKE'
+            'value'     => array( 22, 4 ),
+            'compare'   => 'IN'
         ),
     )
 ));					
@@ -444,33 +444,6 @@ add_filter('posts_where', 'my_posts_where');
 					</div></div>
 					<?php endif; ?>
 				</section>
-			
-			
-			
-			
-			
-			
-			<!-- HERE IS REVERSE OPTION -->
-			<?php $personNews = get_field('tag_person');
-				if( $personNews ): 
-					echo '<h5 class="heading-underline">Research Lab Affiliations</h5>';
-			?>
-				<ul class="mb-3">
-					<?php foreach( $personNews as $personStory): ?>
-						<li>
-						<?php echo $personStory->post_title; ?>
-						</li>
-					<?php endforeach; ?>
-				</ul>
-			<?php endif; ?>
-			
-			
-			
-			
-			
-			
-			
-			
 			</div>
 		</div>
 			<script>
