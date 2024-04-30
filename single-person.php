@@ -456,7 +456,7 @@ $posts = get_posts(array(
 	'meta_query'    => array(
         array(
             'key'       => 'tag_person',
-            'value'     => '22',
+            'value'     => $ids,
             'compare'   => 'LIKE'
         ),
     )
