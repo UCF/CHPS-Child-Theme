@@ -266,21 +266,7 @@ $grantlist = array(
 			'compare' => 'LIKE'
 		),
 	)
-);
-					
-$storylist = array(
-	'posts_per_page' => 10,
-	'post_type'	 => 'posts',
-	'order' => 'DESC',
-	'orderby' => 'date',
-	'meta_query' => array(
-		array(
-			'key' => 'tag_person', // this is repeater field and then the sub field
-			'value' => $ids, // keep this to match current profile
-			'compare' => '='
-		),
-	)
-);					
+);				
 ?>    				
 				</aside>
 			</div>
@@ -463,12 +449,22 @@ add_filter('posts_where', 'my_posts_where');
 			
 			
 			
-<?php $story_query = new WP_Query( $storylist ); ?>
-<?php if( $story_query->have_posts() ): ?>
-    <h2 class="h5 mb-0 heading-underline">New Stories</h2>
-	<?php while ( $story_query->have_posts() ) : $story_query->the_post(); ?>
-		<li><?php the_title(); ?></li>
-	<?php endwhile; ?>
+<?php 
+$posts = get_posts(array(
+    'posts_per_page'    => -1,
+    'post_type'         => 'post'
+));
+if( $posts ): ?>
+    <ul>
+    <?php foreach( $posts as $post ): 
+        setup_postdata( $post );
+        ?>
+        <li>
+            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+        </li>
+    <?php endforeach; ?>
+    </ul>
+    <?php wp_reset_postdata(); ?>
 <?php endif; ?>
 			
 			
