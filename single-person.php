@@ -457,7 +457,7 @@ add_filter('posts_where', 'my_posts_where');
                         */
 
                         $doctors = get_posts(array(
-                            'post_type' => 'posts',
+                            'post_type' => 'post',
                             'meta_query' => array(
                                 array(
                                     'key' => 'tag_person', // name of custom field
