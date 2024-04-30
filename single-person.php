@@ -227,13 +227,16 @@ header .container .h1, header .container .lead {
 $peepargs  = get_posts(array(
     'posts_per_page'    => 7,
     'post_type'         => 'post',
-	'meta_key'      => 'tag_person',
-    'meta_value'    => $ids
+	'meta_query'    => array(
+        array(
+            'key'       => 'tag_person',
+            'value'     => $ids,
+            'compare'   => 'LIKE'
+        ),
+    )
 ));					
 // query
 $people_query = new WP_Query( $peepargs );
-					
-					
 $labs = array(
 	'numberposts'	=> 10,
 	'post_type'		=> 'lab',
