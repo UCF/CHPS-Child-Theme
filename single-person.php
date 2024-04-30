@@ -453,13 +453,8 @@ add_filter('posts_where', 'my_posts_where');
 $posts = get_posts(array(
     'posts_per_page'    => 7,
     'post_type'         => 'post',
-	'meta_query' => array(
-		array(  
-			'key' => 'tag_person', // slug of custom field
-			'value' => '22', // keep this to match current profile
-			'compare' => '='
-			  )
-		 )
+	'meta_key'          => 'tag_person',
+	'meta_value'    => '22'
 ));
 if( $posts ): ?>
     <ul>
