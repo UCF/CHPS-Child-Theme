@@ -410,7 +410,7 @@ add_filter('posts_where', 'my_posts_where');
 										<?php } else { ?>
 										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 									<?php } ?>
-											<span><strong><?php the_title(); ?></strong></span>
+											<div><strong><?php the_title(); ?></strong></div>
 										 </a>
 								<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { the_author(); }?> | <?php the_time('F j, Y'); ?></span>
 								<br>
