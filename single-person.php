@@ -231,7 +231,7 @@ $peepargs  = get_posts(array(
         array(
             'key'       => 'tag_person',
             'value'     => $ids,
-            'compare'   => 'LIKE'
+            'compare'   => '='
         ),
     )
 ));					
