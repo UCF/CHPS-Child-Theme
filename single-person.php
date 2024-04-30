@@ -225,7 +225,7 @@ header .container .h1, header .container .lead {
 </style>
 <?php 
 $peepargs  = get_posts(array(
-    'posts_per_page'    => 7,
+    'posts_per_page'    => 15,
     'post_type'         => 'post',
 	'meta_query'    => array(
         array(
