@@ -464,12 +464,12 @@ add_filter('posts_where', 'my_posts_where');
                             )
                         ));
  ?>
-                        <?php if( $doctors ): ?>
+                        <?php if( $peepargs ): ?>
                             <ul>
-                            <?php foreach( $doctors as $doctor ): ?>
+                            <?php foreach( $peepargs as $peeparg ): ?>
                                 <li>
-                                    <a href="<?php echo get_permalink( $doctor->ID ); ?>">
-                                        <?php echo get_the_title( $doctor->ID ); ?>
+                                    <a href="<?php echo get_permalink( $peeparg->ID ); ?>">
+                                        <?php echo get_the_title( $peeparg->ID ); ?>
                                     </a>
                                 </li>
                             <?php endforeach; ?>
