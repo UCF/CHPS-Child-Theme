@@ -227,6 +227,8 @@ header .container .h1, header .container .lead {
 $peepargs  = get_posts(array(
     'posts_per_page'    => 15,
     'post_type'         => 'post',
+	'order'             => 'DESC',
+	'orderby'           => 'date',
 	'meta_query'    => array(
         array(
             'key'       => 'tag_person',
@@ -442,6 +444,39 @@ add_filter('posts_where', 'my_posts_where');
 					</div></div>
 					<?php endif; ?>
 				</section>
+			
+			
+			
+			
+			
+			
+			<!-- HERE IS REVERSE OPTION -->
+			<?php $labtag = get_field('lab_affiliations');
+				if( $labtag ): 
+					echo '<h5 class="heading-underline">Research Lab Affiliations</h5>';
+			?>
+				<ul class="mb-3">
+					<?php foreach( $labtag as $labme ): ?>
+						<li>
+						<?php if($labme->website_url) { ?>
+								<a href="<?php echo $labme->website_url; ?>" target="_blank">
+						<?php } else { ?>
+								<a href="/research/labs/#lab<?php echo $labme->ID; ?>" target="_blank">
+						<?php } ?>
+								<?php echo $labme->post_title; ?>
+							</a>
+						</li>
+					<?php endforeach; ?>
+				</ul>
+			<?php endif; ?>
+			
+			
+			
+			
+			
+			
+			
+			
 			</div>
 		</div>
 			<script>
