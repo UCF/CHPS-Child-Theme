@@ -458,6 +458,25 @@ add_filter('posts_where', 'my_posts_where');
 					</div></div>
 					<?php endif; ?>
 				</section>
+			
+			
+			
+			
+			
+<?php $story_query = new WP_Query( $storylist ); ?>
+<?php if( $story_query->have_posts() ): ?>
+    <h2 class="h5 mb-0 heading-underline">New Stories</h2>
+	<?php while ( $story_query->have_posts() ) : $story_query->the_post(); ?>
+		<li><?php the_title(); ?></li>
+	<?php endwhile; ?>
+<?php endif; ?>
+			
+			
+			
+			
+			
+			
+			
 			</div>
 		</div>
 			<script>
