@@ -412,7 +412,7 @@ add_filter('posts_where', 'my_posts_where');
 								<span class="authortext">Written By: <?php if(get_field('overwrite_author', $peeparg->ID)){ echo get_field('overwrite_author', $peeparg->ID);} else { echo get_the_author(); }?> | <?php echo get_the_time('F j, Y', $peeparg->ID); ?></span>
 								<br>
 								<?php 			
-								$content = get_the_content();
+								$content = get_the_content($peeparg->ID);
 								$content = preg_replace('#\[[^\]]+\]#', '',$content);
 								$content = apply_filters('the_content', $content);
 								echo wp_trim_words( $content, 30, '...' );
