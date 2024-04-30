@@ -444,6 +444,32 @@ add_filter('posts_where', 'my_posts_where');
 					</div></div>
 					<?php endif; ?>
 				</section>
+			
+			<?php if ($people_query->have_posts()): ?>
+			<?php 
+			while ( $people_query->have_posts() ) : $people_query->the_post();
+			?>
+			<li class="listnone mb-4">
+				<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
+					 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
+					<?php } else { ?>
+					 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+				<?php } ?>
+						<h5><?php the_title(); ?></h5>
+					 </a>
+			<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { the_author(); }?> | <?php the_time('F j, Y'); ?></span>
+			<br>
+			<?php 			
+			$content = get_the_content();
+			$content = preg_replace('#\[[^\]]+\]#', '',$content);
+			$content = apply_filters('the_content', $content);
+			echo wp_trim_words( $content, 30, '...' );
+			?>
+			</li>
+			<?php endwhile; ?>
+			<?php wp_reset_postdata(); ?>
+									
+									
 			</div>
 		</div>
 			<script>
