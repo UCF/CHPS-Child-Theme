@@ -225,18 +225,15 @@ header .container .h1, header .container .lead {
 </style>
 <?php 
 $peepargs  = get_posts(array(
-    'posts_per_page'    => 15,
-    'post_type'         => 'post',
-	'order'             => 'DESC',
-	'orderby'           => 'date',
-	'meta_query'    => array(
-        array(
-            'key'       => 'tag_person',
-            'value'     => '22',
-            'compare'   => 'LIKE'
-        ),
-    )
-));					
+	'post_type' => 'post',
+	'meta_query' => array(
+		array(
+			'key' => 'tag_person', // name of custom field
+			'value' => '"' . get_the_ID() . '"', // matches exactly "123", not just 123. This prevents a match for "1234"
+			'compare' => 'LIKE'
+		)
+	)
+));				
 // query
 $people_query = new WP_Query( $peepargs );
 $labs = array(
