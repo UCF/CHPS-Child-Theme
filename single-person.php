@@ -230,7 +230,7 @@ $peepargs  = get_posts(array(
 	'meta_query'    => array(
         array(
             'key'       => 'tag_person',
-            'value'     => $ids,
+            'value'     => '22',
             'compare'   => 'LIKE'
         ),
     )
