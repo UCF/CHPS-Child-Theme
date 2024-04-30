@@ -409,9 +409,7 @@ add_filter('posts_where', 'my_posts_where');
 									<?php } ?>
 											<h2 class="h5 mb-0"><?php echo get_the_title( $peeparg->ID ); ?></h2>
 										 </a>
-								<span class="authortext">Written By: <?php if(get_field('overwrite_author', $peeparg->ID)){ echo get_field('overwrite_author', $peeparg->ID);} else { echo get_the_author_meta( 'display_name', $peeparg->ID ); }?> | <?php echo get_the_time('F j, Y', $peeparg->ID); ?></span>
-								<span class="authortext">Written By: <?php echo get_the_author();?> XXX <?php echo get_the_author( $peeparg->ID );?></span>
-
+								<span class="authortext">Written By: <?php if(get_field('overwrite_author', $peeparg->ID)){ echo get_field('overwrite_author', $peeparg->ID);} else { echo get_the_author(); }?> | <?php echo get_the_time('F j, Y', $peeparg->ID); ?></span>
 								<br>
 								<?php 			
 								$content = get_the_content();
