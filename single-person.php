@@ -399,31 +399,7 @@ add_filter('posts_where', 'my_posts_where');
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (($people_query->have_posts())||get_field('external_news')): ?>
-						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
-						<div class="wpb_text_column wpb_content_element " >
-							<div class="wpb_wrapper">
-								<?php 
-								while ( $people_query->have_posts() ) : $people_query->the_post();
-								?>
-								<li class="listnone mb-4">
-									<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
-										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
-										<?php } else { ?>
-										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-									<?php } ?>
-											<h5><?php the_title(); ?></h5>
-										 </a>
-								<span class="authortext">Written By: <?php if(get_field('overwrite_author')){ the_field('overwrite_author');} else { the_author(); }?> | <?php the_time('F j, Y'); ?></span>
-								<br>
-								<?php 			
-								$content = get_the_content();
-								$content = preg_replace('#\[[^\]]+\]#', '',$content);
-								$content = apply_filters('the_content', $content);
-								echo wp_trim_words( $content, 30, '...' );
-								?>
-								</li>
-								<?php endwhile; ?>
+					
 								<?php wp_reset_postdata(); ?>
 								<?php if (have_rows('external_news') ) { 	?>
 									
@@ -442,7 +418,7 @@ add_filter('posts_where', 'my_posts_where');
 							</div>
 						</div>
 					</div></div>
-					<?php endif; ?>
+					
 				</section>
 			
 			<?php if ($people_query->have_posts()): ?>
@@ -468,7 +444,7 @@ add_filter('posts_where', 'my_posts_where');
 			</li>
 			<?php endwhile; ?>
 			<?php wp_reset_postdata(); ?>
-									
+			<?php endif; ?>						
 									
 			</div>
 		</div>
