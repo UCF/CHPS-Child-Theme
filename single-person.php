@@ -451,7 +451,7 @@ add_filter('posts_where', 'my_posts_where');
 			
 <?php 
 $posts = get_posts(array(
-    'posts_per_page'    => -1,
+    'posts_per_page'    => 7,
     'post_type'         => 'post'
 ));
 if( $posts ): ?>
