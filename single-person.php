@@ -396,13 +396,11 @@ add_filter('posts_where', 'my_posts_where');
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if ($people_query->have_posts()): ?>
+					<?php if( $peepargs ): ?>
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
-								<?php 
-								while ( $people_query->have_posts() ) : $people_query->the_post();
-								?>
+								<?php foreach( $peepargs as $peeparg ): ?>
 								<li class="listnone mb-4">
 									<?php if ( get_field( 'updatenewstype' ) == 1 ) { ?>
 										 <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>" target="_blank">
@@ -420,8 +418,8 @@ add_filter('posts_where', 'my_posts_where');
 								echo wp_trim_words( $content, 30, '...' );
 								?>
 								</li>
-								<?php endwhile; ?>
-								<?php wp_reset_postdata(); ?>
+								<?php endforeach; ?>
+								
 								<?php if (have_rows('external_news') ) { 	?>
 									
 								<div class="mb-4 pt-3" style="border-top: 1px #ddd solid; ">
