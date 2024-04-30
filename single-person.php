@@ -230,7 +230,7 @@ $peepargs  = get_posts(array(
 	'meta_query'    => array(
         array(
             'key'       => 'tag_person',
-            'value'     => '22',
+            'value'     => array('22'),
             'compare'   => 'IN'
         ),
     )
