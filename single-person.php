@@ -397,7 +397,7 @@ add_filter('posts_where', 'my_posts_where');
 						</div>
 					</div></div>
 					<?php endif; ?>
-					<?php if (($people_query->have_posts()): ?>
+					<?php if ($people_query->have_posts()): ?>
 						<div class="vc_tta-panel" id="news" data-vc-content=".vc_tta-panel-body"><div class="vc_tta-panel-heading"><h4 class="vc_tta-panel-title"><a href="#news" data-vc-accordion data-vc-container=".vc_tta-container"><span class="vc_tta-title-text">News</span></a></h4></div><div class="vc_tta-panel-body">
 						<div class="wpb_text_column wpb_content_element " >
 							<div class="wpb_wrapper">
