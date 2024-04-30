@@ -272,12 +272,12 @@ $storylist = array(
 	'posts_per_page' => 10,
 	'post_type'	 => 'posts',
 	'order' => 'DESC',
-	'orderby'       => 'date',
+	'orderby' => 'date',
 	'meta_query' => array(
 		array(
 			'key' => 'tag_person', // this is repeater field and then the sub field
 			'value' => $ids, // keep this to match current profile
-			'compare' => 'LIKE'
+			'compare' => '='
 		),
 	)
 );					
